@@ -63,6 +63,7 @@ const components: Record<string, () => Promise<{ default: ComponentType<{ params
   "growth-geojson-validator": () => import("./GrowthTools").then((m) => ({ default: m.GeoJsonValidatorTool })),
   "growth-gpx-csv": () => import("./GrowthTools").then((m) => ({ default: m.GpxToCsvTool })),
   "growth-gpx-merger": () => import("./GrowthTools").then((m) => ({ default: m.GpxMergerTool })),
+  longtail: () => import("./LongtailTools"),
 };
 
 export const toolComponents: Record<string, ComponentType<{ params?: Record<string, unknown> }>> = Object.fromEntries(
