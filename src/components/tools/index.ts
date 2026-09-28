@@ -1,7 +1,6 @@
 "use client";
 import { lazy, type ComponentType } from "react";
 
-// Lazy per-tool bundles: every tool page only loads what it needs.
 const components: Record<string, () => Promise<{ default: ComponentType<{ params?: Record<string, unknown> }> }>> = {
   radius: () => import("./RadiusTool"),
   distance: () => import("./DistanceTool"),
@@ -66,6 +65,7 @@ const components: Record<string, () => Promise<{ default: ComponentType<{ params
   longtail: () => import("./LongtailTools"),
   longtail2: () => import("./LongtailTools2"),
   longtail3: () => import("./LongtailTools3"),
+  longtail4: () => import("./LongtailTools4"),
 };
 
 export const toolComponents: Record<string, ComponentType<{ params?: Record<string, unknown> }>> = Object.fromEntries(
