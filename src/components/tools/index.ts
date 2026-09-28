@@ -64,6 +64,7 @@ const components: Record<string, () => Promise<{ default: ComponentType<{ params
   "growth-gpx-csv": () => import("./GrowthTools").then((m) => ({ default: m.GpxToCsvTool })),
   "growth-gpx-merger": () => import("./GrowthTools").then((m) => ({ default: m.GpxMergerTool })),
   longtail: () => import("./LongtailTools"),
+  longtail2: () => import("./LongtailTools2"),
 };
 
 export const toolComponents: Record<string, ComponentType<{ params?: Record<string, unknown> }>> = Object.fromEntries(
