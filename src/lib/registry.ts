@@ -13,6 +13,7 @@ import { LONGTAIL_TOOLS_4 } from "@/data/toolsLongtail4";
 import { LONGTAIL_TOOLS_5 } from "@/data/toolsLongtail5";
 import { LONGTAIL_TOOLS_6 } from "@/data/toolsLongtail6";
 import { LONGTAIL_TOOLS_7 } from "@/data/toolsLongtail7";
+import { LONGTAIL_TOOLS_8 } from "@/data/toolsLongtail8";
 
 export type CategoryId =
   | "location" | "distance" | "radius" | "routing" | "coordinates"
@@ -64,6 +65,7 @@ const RAW_TOOLS: ToolDef[] = [
   ...LONGTAIL_TOOLS_5,
   ...LONGTAIL_TOOLS_6,
   ...LONGTAIL_TOOLS_7,
+  ...LONGTAIL_TOOLS_8,
 ];
 
 const canonicalTools = new Map<string, ToolDef>();
