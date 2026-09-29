@@ -11,6 +11,7 @@ import { LONGTAIL_TOOLS_2 } from "@/data/toolsLongtail2";
 import { LONGTAIL_TOOLS_3 } from "@/data/toolsLongtail3";
 import { LONGTAIL_TOOLS_4 } from "@/data/toolsLongtail4";
 import { LONGTAIL_TOOLS_6 } from "@/data/toolsLongtail6";
+import { LONGTAIL_TOOLS_7 } from "@/data/toolsLongtail7";
 
 export type CategoryId =
   | "location" | "distance" | "radius" | "routing" | "coordinates"
@@ -57,6 +58,7 @@ export const TOOLS: ToolDef[] = [
   ...LONGTAIL_TOOLS_3,
   ...LONGTAIL_TOOLS_4,
   ...LONGTAIL_TOOLS_6,
+  ...LONGTAIL_TOOLS_7,
 ];
 
 export const toolBySlug = new Map(TOOLS.map((t) => [t.slug, t]));

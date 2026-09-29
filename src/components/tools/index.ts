@@ -67,6 +67,7 @@ const components: Record<string, () => Promise<{ default: ComponentType<{ params
   longtail3: () => import("./LongtailTools3"),
   longtail4: () => import("./LongtailTools4"),
   longtail6: () => import("./LongtailTools6"),
+  longtail7: () => import("./LongtailTools7"),
 };
 
 export const toolComponents: Record<string, ComponentType<{ params?: Record<string, unknown> }>> = Object.fromEntries(
