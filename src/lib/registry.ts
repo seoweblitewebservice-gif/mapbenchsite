@@ -10,6 +10,7 @@ import { LONGTAIL_TOOLS_1 } from "@/data/toolsLongtail1";
 import { LONGTAIL_TOOLS_2 } from "@/data/toolsLongtail2";
 import { LONGTAIL_TOOLS_3 } from "@/data/toolsLongtail3";
 import { LONGTAIL_TOOLS_4 } from "@/data/toolsLongtail4";
+import { LONGTAIL_TOOLS_5 } from "@/data/toolsLongtail5";
 import { LONGTAIL_TOOLS_6 } from "@/data/toolsLongtail6";
 import { LONGTAIL_TOOLS_7 } from "@/data/toolsLongtail7";
 
@@ -57,9 +58,20 @@ export const TOOLS: ToolDef[] = [
   ...LONGTAIL_TOOLS_2,
   ...LONGTAIL_TOOLS_3,
   ...LONGTAIL_TOOLS_4,
+  ...LONGTAIL_TOOLS_5,
   ...LONGTAIL_TOOLS_6,
   ...LONGTAIL_TOOLS_7,
 ];
+
+const seenToolSlugs = new Set<string>();
+const duplicateToolSlugs = new Set<string>();
+for (const tool of TOOLS) {
+  if (seenToolSlugs.has(tool.slug)) duplicateToolSlugs.add(tool.slug);
+  seenToolSlugs.add(tool.slug);
+}
+if (duplicateToolSlugs.size) {
+  throw new Error(`Duplicate tool slugs detected: ${[...duplicateToolSlugs].join(", ")}`);
+}
 
 export const toolBySlug = new Map(TOOLS.map((t) => [t.slug, t]));
 export const popularTools = TOOLS.filter((t) => t.popular);
