@@ -46,7 +46,10 @@ export interface ToolDef {
   faq: [string, string][]; howTo: string[]; related: string[]; method?: string;
 }
 
-export const TOOLS: ToolDef[] = [
+// Registry order is deliberate: later, more focused definitions replace older
+// legacy entries that share the same canonical slug. Only one tool per slug is
+// exposed to routes, sitemap, internal linking and structured data.
+const RAW_TOOLS: ToolDef[] = [
   ...(CORE_TOOLS as unknown as ToolDef[]),
   ...EXTRA_TOOLS,
   ...TIER_A_TOOLS,
@@ -63,16 +66,10 @@ export const TOOLS: ToolDef[] = [
   ...LONGTAIL_TOOLS_7,
 ];
 
-const seenToolSlugs = new Set<string>();
-const duplicateToolSlugs = new Set<string>();
-for (const tool of TOOLS) {
-  if (seenToolSlugs.has(tool.slug)) duplicateToolSlugs.add(tool.slug);
-  seenToolSlugs.add(tool.slug);
-}
-if (duplicateToolSlugs.size) {
-  throw new Error(`Duplicate tool slugs detected: ${[...duplicateToolSlugs].join(", ")}`);
-}
+const canonicalTools = new Map<string, ToolDef>();
+for (const tool of RAW_TOOLS) canonicalTools.set(tool.slug, tool);
 
+export const TOOLS: ToolDef[] = [...canonicalTools.values()];
 export const toolBySlug = new Map(TOOLS.map((t) => [t.slug, t]));
 export const popularTools = TOOLS.filter((t) => t.popular);
 export const toolsByCategory = (id: CategoryId) => TOOLS.filter((t) => t.category === id);
