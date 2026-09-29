@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { TOOLS } from "@/lib/registry";
 
-// Compact, professional footer: popular tools + key destinations + legal.
-// The tool count is derived from the registry so it cannot drift as tools are added.
 const POPULAR: [string, string][] = [
   ["/tools/find-my-location", "Find My Location"],
   ["/tools/what-county-am-i-in", "What County Am I In?"],
@@ -13,7 +11,6 @@ const POPULAR: [string, string][] = [
   ["/tools/fuel-cost-calculator", "Fuel Cost Calculator"],
   ["/tools/gpx-viewer", "GPX Viewer"],
   ["/tools/csv-to-map", "CSV to Map"],
-  ["/tools/nearest-mcdonalds-starbucks", "Nearest McDonald's / Starbucks"],
 ];
 
 const MAPS: [string, string][] = [
@@ -32,6 +29,7 @@ const RESOURCES: [string, string][] = [
   ["/guides", "Blog"],
   ["/methodology", "Methodology"],
   ["/data-sources", "Data sources"],
+  ["/editorial-policy", "Editorial policy"],
   ["/about", "About"],
   ["/contact", "Contact"],
 ];
@@ -43,17 +41,18 @@ export default function Footer() {
         <div className="lg:col-span-1">
           <div className="font-display text-lg font-bold text-[#f3edda]">map<span className="text-[#7cc39d]">bench</span></div>
           <p className="mt-3 font-serif text-sm leading-relaxed text-[#a89f8c]">
-            Free interactive map tools and printable blank maps, built on open data. No accounts, no uploads.
+            Free geographic tools and practical mapping guides built on documented methods and open data.
           </p>
         </div>
         <FooterCol title="Popular tools" links={POPULAR} more={["/tools", "All tools →"]} />
         <FooterCol title="Blank maps" links={MAPS} more={["/maps", "All maps →"]} />
         <FooterCol title="Resources" links={RESOURCES} />
         <FooterCol
-          title="Legal"
+          title="Legal & trust"
           links={[
             ["/privacy", "Privacy Policy"],
             ["/terms", "Terms of Use"],
+            ["/editorial-policy", "Editorial Policy"],
             ["/contact", "Contact"],
           ]}
         />
@@ -61,7 +60,7 @@ export default function Footer() {
       <div className="border-t border-[#3a3428] py-4">
         <div className="container-sf flex flex-col items-center justify-between gap-2 font-serif text-xs text-[#8d8574] sm:flex-row">
           <span>© {new Date().getFullYear()} MapBench · Free geographic tools for everyone.</span>
-          <span>Data: US Census Bureau · Natural Earth · OpenStreetMap</span>
+          <span>Data sources and licences are documented on-site.</span>
         </div>
       </div>
     </footer>
