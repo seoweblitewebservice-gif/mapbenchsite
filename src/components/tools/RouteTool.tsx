@@ -95,7 +95,7 @@ export default function RouteTool({ params }: { params?: Record<string, unknown>
         { type: "Feature" as const, properties: { name: "Route" }, geometry: { type: "LineString" as const, coordinates: result.shape.map((p) => [p.lng, p.lat]) } },
       ],
     };
-    downloadText("mapforge-route.gpx", geojsonToGpx(fc, "MapForge route"), "application/gpx+xml");
+    downloadText("mapbench-route.gpx", geojsonToGpx(fc, "MapBench route"), "application/gpx+xml");
   };
 
   useEffect(() => { draw(result); /* eslint-disable-next-line react-hooks/exhaustive-deps */ }, [stops.length]);
@@ -103,26 +103,18 @@ export default function RouteTool({ params }: { params?: Record<string, unknown>
   return (
     <div className="grid gap-4 lg:grid-cols-[400px,1fr]">
       <div className="card order-2 space-y-4 p-4 lg:order-1">
-        {!compare && (
-          <Seg options={MODES} value={mode} onChange={(m) => { setMode(m); if (result) calc(m); }} ariaLabel="Travel mode" />
-        )}
+        {!compare && <Seg options={MODES} value={mode} onChange={(m) => { setMode(m); if (result) calc(m); }} ariaLabel="Travel mode" />}
         <div className="space-y-3">
           {stops.map((s, i) => (
             <div key={i} className="flex items-start gap-2">
               <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full" style={{ background: i === 0 ? "#1d6e63" : "#d95d32" }} aria-hidden />
-              <div className="flex-1">
-                <PlaceField label={i === 0 ? "Start" : multi ? `Stop ${i + 1}` : "Destination"} value={s} onChange={(v) => setStop(i, v)} />
-              </div>
-              {(multi || stops.length > 2) && stops.length > 2 && (
-                <button type="button" className="btn btn-ghost btn-sm mt-5" aria-label={`Remove stop ${i + 1}`} onClick={() => setStops((s2) => s2.filter((_, j) => j !== i))}>✕</button>
-              )}
+              <div className="flex-1"><PlaceField label={i === 0 ? "Start" : multi ? `Stop ${i + 1}` : "Destination"} value={s} onChange={(v) => setStop(i, v)} /></div>
+              {(multi || stops.length > 2) && stops.length > 2 && <button type="button" className="btn btn-ghost btn-sm mt-5" aria-label={`Remove stop ${i + 1}`} onClick={() => setStops((s2) => s2.filter((_, j) => j !== i))}>✕</button>}
             </div>
           ))}
         </div>
         <div className="flex flex-wrap gap-2">
-          {multi && stops.length < 12 && (
-            <button type="button" className="btn btn-ghost btn-sm" onClick={() => setStops((s) => [...s, null as any])}>+ Add stop</button>
-          )}
+          {multi && stops.length < 12 && <button type="button" className="btn btn-ghost btn-sm" onClick={() => setStops((s) => [...s, null as any])}>+ Add stop</button>}
           <button type="button" className="btn btn-ghost btn-sm" disabled={valid.length < 2 || valid.length !== stops.length} onClick={() => setStops([...valid.reverse()] as PlaceValue[])}>Reverse</button>
           {(multi || optimize) && <button type="button" className="btn btn-ghost btn-sm" onClick={doOptimize} disabled={busy}>⚡ Optimize order</button>}
         </div>
@@ -135,12 +127,7 @@ export default function RouteTool({ params }: { params?: Record<string, unknown>
           <div className="space-y-2">
             {(["driving", "walking", "cycling"] as TravelMode[]).map((m) => {
               const r = compareResults[m];
-              return (
-                <div key={m} className="flex items-center justify-between rounded-lg border border-line px-3 py-2.5 text-sm">
-                  <span className="font-semibold capitalize">{m}</span>
-                  {r ? <span className="text-mute">{fmtDist(r.distanceKm, "km")} · <strong className="text-ink">{fmtDuration(r.durationS)}</strong></span> : <span className="text-mute">—</span>}
-                </div>
-              );
+              return <div key={m} className="flex items-center justify-between rounded-lg border border-line px-3 py-2.5 text-sm"><span className="font-semibold capitalize">{m}</span>{r ? <span className="text-mute">{fmtDist(r.distanceKm, "km")} · <strong className="text-ink">{fmtDuration(r.durationS)}</strong></span> : <span className="text-mute">—</span>}</div>;
             })}
           </div>
         ) : result && (
@@ -152,19 +139,10 @@ export default function RouteTool({ params }: { params?: Record<string, unknown>
             {multi && result.legs.length > 1 && (
               <details>
                 <summary className="cursor-pointer text-sm font-semibold text-brand-strong">Per-leg breakdown</summary>
-                <table className="tbl mt-2">
-                  <thead><tr><th>Leg</th><th className="text-right">Distance</th><th className="text-right">Time</th></tr></thead>
-                  <tbody>
-                    {result.legs.map((l, i) => (
-                      <tr key={i}><td className="text-mute">{i + 1} → {i + 2}</td><td className="text-right">{fmtDist(l.distanceKm, "km")}</td><td className="text-right">{fmtDuration(l.durationS)}</td></tr>
-                    ))}
-                  </tbody>
-                </table>
+                <table className="tbl mt-2"><thead><tr><th>Leg</th><th className="text-right">Distance</th><th className="text-right">Time</th></tr></thead><tbody>{result.legs.map((l, i) => <tr key={i}><td className="text-mute">{i + 1} → {i + 2}</td><td className="text-right">{fmtDist(l.distanceKm, "km")}</td><td className="text-right">{fmtDuration(l.durationS)}</td></tr>)}</tbody></table>
               </details>
             )}
-            <div className="flex flex-wrap gap-2">
-              <button type="button" className="btn btn-primary btn-sm" onClick={exportGpx}>Export GPX</button>
-            </div>
+            <div className="flex flex-wrap gap-2"><button type="button" className="btn btn-primary btn-sm" onClick={exportGpx}>Export GPX</button></div>
             <p className="text-xs text-mute">Times are free-flow estimates from the road network — not live traffic.</p>
           </div>
         )}
