@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Contact MapBench",
-  description: "Contact MapBench about geographic tools, map data, bugs, accessibility or privacy questions.",
+  description: "Contact MapBench about geographic tools, map data, bugs, editorial corrections, accessibility or privacy questions.",
   alternates: { canonical: "/contact" },
   robots: { index: true, follow: true },
 };
@@ -18,16 +18,15 @@ export default function ContactPage() {
       </nav>
       <h1 className="font-display text-3xl font-bold tracking-tight">Contact MapBench</h1>
       <p className="mt-3">
-        Use this page to report a broken tool, inaccurate result, accessibility problem, map-data issue or privacy concern.
-        Clear reports help us reproduce problems and improve the site for everyone.
+        Use this page to report a broken tool, inaccurate result, editorial error, accessibility problem, map-data issue or privacy concern.
+        MapBench currently uses a public issue tracker for reproducible reports so fixes and their status remain transparent.
       </p>
 
       <section className="mt-8">
-        <h2 className="sect-h">Technical and data issues</h2>
+        <h2 className="sect-h">Report a technical, data or content issue</h2>
         <p className="mt-3">
-          MapBench maintains a public issue tracker for reproducible bugs and data problems. Include the exact MapBench URL,
-          what you entered, what you expected and what happened instead. Screenshots or a small sample coordinate/file can help,
-          provided they contain no private or confidential information.
+          Include the exact MapBench URL, what you entered or read, what you expected and what happened instead. For factual or editorial corrections,
+          include the sentence or claim in question and, when possible, the authoritative reference you are comparing it with.
         </p>
         <p className="mt-4">
           <a
@@ -44,24 +43,32 @@ export default function ContactPage() {
       <section className="mt-8">
         <h2 className="sect-h">What to include</h2>
         <ul className="mt-3 list-disc space-y-2 pl-5">
-          <li>The URL of the affected page or tool.</li>
-          <li>A short description of the problem and the result you expected.</li>
+          <li>The URL of the affected page, tool or guide.</li>
+          <li>A short description of the problem and the result or wording you expected.</li>
           <li>Your browser/device when the issue appears to be technical.</li>
-          <li>The relevant data source or location when reporting a geographic-data problem.</li>
+          <li>The relevant source, coordinate or dataset when reporting a geographic-data problem.</li>
         </ul>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="sect-h">Editorial corrections</h2>
+        <p className="mt-3">
+          MapBench reviews valid factual and technical corrections. Our standards for original content, source transparency and corrections are described in the{" "}
+          <Link href="/editorial-policy" className="font-bold text-brand-strong hover:underline">Editorial Policy &amp; Corrections</Link>.
+        </p>
       </section>
 
       <section className="mt-8">
         <h2 className="sect-h">Privacy and sensitive information</h2>
         <p className="mt-3">
           Review the <Link href="/privacy" className="font-bold text-brand-strong hover:underline">Privacy Policy</Link> before sharing any information.
-          Do not post passwords, private addresses, personal identifiers, confidential files or other sensitive data in a public issue.
-          If a report can be demonstrated with a generic example, please use that instead.
+          The issue tracker is public, so do not post passwords, private addresses, personal identifiers, confidential files or other sensitive data.
+          Use a generic reproduction example whenever possible.
         </p>
       </section>
 
       <section className="mt-8 rounded-lg border border-line p-5">
-        <h2 className="sect-h">More about MapBench</h2>
+        <h2 className="sect-h">Methods and sources</h2>
         <p className="mt-3">
           For how calculations are performed and where geographic data comes from, see our{" "}
           <Link href="/methodology" className="font-bold text-brand-strong hover:underline">Methodology</Link> and{" "}

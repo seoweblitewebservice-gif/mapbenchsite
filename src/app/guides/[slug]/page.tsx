@@ -1,16 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import type { ReactNode } from "react";
 import { type GuideBlock } from "@/data/guides";
 import { ALL_GUIDES, allGuideBySlug } from "@/data/allGuides";
-import { toolBySlug, CATEGORIES } from "@/lib/registry";
-import { TOOL_COPY } from "@/data/toolCopy";
-import { CATEGORY_ESSAYS } from "@/data/categoryEssays";
-import { GUIDE2 } from "@/data/categoryGuide2";
-import { LIMITS } from "@/data/categoryGuide4";
-import { GUIDE3 } from "@/data/categoryGuide3";
-import { CATEGORY_TIPS, CATEGORY_GLOSSARY } from "@/data/categoryExtras";
+import { toolBySlug } from "@/lib/registry";
 
 interface Props { params: Promise<{ slug: string }> }
 
@@ -26,7 +19,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: g.title,
     description: g.description,
     alternates: { canonical: `/guides/${g.slug}` },
-    keywords: [g.title, "map guide", "geography guide", "GPS", "mapping"],
     robots: { index: true, follow: true },
     openGraph: { title: g.title, description: g.description, type: "article", url: `/guides/${g.slug}`, siteName: "MapBench" },
     twitter: { card: "summary", title: g.title, description: g.description },
@@ -65,7 +57,6 @@ export default async function GuidePage({ params }: Props) {
   const { slug } = await params;
   const g = allGuideBySlug.get(slug);
   if (!g) notFound();
-  const others = ALL_GUIDES.filter((x) => x.slug !== slug);
 
   const bodyWords = g.blocks.reduce((acc, b) => {
     if (b.t === "p" || b.t === "h2" || b.t === "note") return acc + words(b.text);
@@ -75,113 +66,8 @@ export default async function GuidePage({ params }: Props) {
 
   const toolboxSlugs = g.blocks.filter((b) => b.t === "toolbox").flatMap((b) => (b as { slugs: string[] }).slugs);
   const related = ALL_GUIDES.filter((x) => x.slug !== slug && x.blocks.some((b) => b.t === "toolbox" && b.slugs.some((s) => toolboxSlugs.includes(s))));
-  const firstTool = toolBySlug.get(toolboxSlugs[0] ?? "");
-  const cat = CATEGORIES.find((c) => c.id === (firstTool?.category ?? "location")) ?? CATEGORIES[0];
-
-  const sections: { w: number; node: ReactNode }[] = [];
-
-  if (toolboxSlugs.length) {
-    const deep = toolboxSlugs.map((s) => toolBySlug.get(s)).filter((t) => t && TOOL_COPY[t.slug]);
-    const text = deep.map((t) => `${t!.name} ${t!.short} ${TOOL_COPY[t!.slug].paras.join(" ")}`).join(" ");
-    sections.push({
-      w: words(text),
-      node: (
-        <section aria-label="The toolkit, in depth">
-          <h2>The toolkit behind this post, in depth</h2>
-          {deep.map((t) => (
-            <div key={t!.slug} className="mt-4">
-              <h3><Link href={`/tools/${t!.slug}`} className="toollink">{t!.name}</Link></h3>
-              {TOOL_COPY[t!.slug].paras.map((p, i) => <p key={i}>{p}</p>)}
-            </div>
-          ))}
-        </section>
-      ),
-    });
-  }
-
-  const essay = CATEGORY_ESSAYS[cat.id];
-  sections.push({
-    w: words(essay.title) + essay.paras.reduce((a, p) => a + words(p), 0),
-    node: (
-      <section aria-label="Wider context">
-        <h2>{essay.title}</h2>
-        {essay.paras.map((p, i) => <p key={i}>{p}</p>)}
-      </section>
-    ),
-  });
-
-  const g2 = GUIDE2[cat.id];
-  sections.push({
-    w: words(g2.title) + g2.paras.reduce((a, p) => a + words(p), 0) + g2.pros.reduce((a, p) => a + words(p), 0),
-    node: (
-      <section aria-label="Professional practice">
-        <h2>{g2.title}</h2>
-        {g2.paras.map((p, i) => <p key={i}>{p}</p>)}
-        <ul>{g2.pros.map((p) => <li key={p}>{p}</li>)}</ul>
-      </section>
-    ),
-  });
-
-  const lim = LIMITS[cat.id];
-  sections.push({
-    w: lim.paras.reduce((a, p) => a + words(p), 0) + lim.escalate.reduce((a, p) => a + words(p), 0),
-    node: (
-      <section aria-label="Honest limits">
-        <h2>Honest limits &amp; when to escalate</h2>
-        {lim.paras.map((p, i) => <p key={i}>{p}</p>)}
-        <ul>{lim.escalate.map((e) => <li key={e}>{e}</li>)}</ul>
-      </section>
-    ),
-  });
-
-  const g3 = GUIDE3[cat.id];
-  sections.push({
-    w: g3.master.reduce((a, [t, b]) => a + words(t) + words(b), 0) + words(g3.regional),
-    node: (
-      <section aria-label="Masterclass">
-        <h2>Step-by-step masterclass</h2>
-        <ol>{g3.master.map(([t, b]) => <li key={t}><strong>{t} — </strong>{b}</li>)}</ol>
-        <p>{g3.regional}</p>
-      </section>
-    ),
-  });
-
-  const tips = CATEGORY_TIPS[cat.id];
-  sections.push({
-    w: tips.reduce((a, p) => a + words(p), 0),
-    node: (
-      <section aria-label="Tips and common mistakes">
-        <h2>Tips &amp; common mistakes</h2>
-        {tips.map((p, i) => <p key={i}>{p}</p>)}
-      </section>
-    ),
-  });
-
-  const gloss = CATEGORY_GLOSSARY[cat.id];
-  sections.push({
-    w: gloss.reduce((a, [t, d]) => a + words(t) + words(d), 0) + g3.qa.reduce((a, [q, an]) => a + words(q) + words(an), 0),
-    node: (
-      <section aria-label="Glossary and quick answers">
-        <h2>Quick glossary</h2>
-        <ul>{gloss.map(([t, d]) => <li key={t}><strong>{t}:</strong> {d}</li>)}</ul>
-        <h2>Two more questions, answered</h2>
-        {g3.qa.map(([q, an]) => (
-          <div key={q}><h3>{q}</h3><p>{an}</p></div>
-        ))}
-      </section>
-    ),
-  });
-
-  let acc = bodyWords;
-  const chosen: ReactNode[] = [];
-  for (const s of sections) {
-    if (acc >= 2000 && acc + s.w > 2500) continue;
-    chosen.push(s.node);
-    acc += s.w;
-    if (acc >= 2000 && acc > 2300) break;
-  }
-
   const guideUrl = `https://www.mapbench.site/guides/${g.slug}`;
+
   const jsonLd = [
     {
       "@context": "https://schema.org",
@@ -193,7 +79,7 @@ export default async function GuidePage({ params }: Props) {
       dateModified: g.date,
       inLanguage: "en",
       isAccessibleForFree: true,
-      author: { "@type": "Organization", name: "MapBench", url: "https://www.mapbench.site" },
+      author: { "@type": "Organization", name: "MapBench Editorial", url: "https://www.mapbench.site/editorial-policy" },
       publisher: {
         "@type": "Organization",
         name: "MapBench",
@@ -201,7 +87,7 @@ export default async function GuidePage({ params }: Props) {
         logo: { "@type": "ImageObject", url: "https://www.mapbench.site/icon.svg" },
       },
       mainEntityOfPage: { "@type": "WebPage", "@id": guideUrl },
-      wordCount: acc,
+      wordCount: bodyWords,
       timeRequired: `PT${g.readMins}M`,
     },
     {
@@ -219,25 +105,28 @@ export default async function GuidePage({ params }: Props) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <article className="doc mx-auto max-w-3xl">
-      <nav aria-label="Breadcrumb" className="mb-4 font-sans text-xs text-mute">
-        <Link href="/" className="hover:text-brand-strong">Home</Link> / <Link href="/guides" className="hover:text-brand-strong">Blog</Link> / <span className="font-semibold text-ink">{g.title}</span>
-      </nav>
-      <p className="font-sans text-xs font-bold uppercase tracking-wide text-mute">{new Date(g.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })} · {g.readMins} min read · MapBench editorial</p>
-      <h1 className="mt-2 font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl">{g.title}</h1>
-      <div className="mt-6">
-        {g.blocks.map((b, i) => <Block key={i} b={b} />)}
-      </div>
-      <div className="mt-8 space-y-8 border-t border-line pt-8">
-        {chosen}
-      </div>
-      <div className="mt-10 border-t border-line pt-6 font-sans">
-        <h2 className="font-display text-lg font-bold">Keep reading</h2>
-        <ul className="mt-3 space-y-2">
-          {related.slice(0, 4).map((o) => (
-            <li key={o.slug}><Link href={`/guides/${o.slug}`} className="text-sm font-bold text-brand-strong hover:underline">→ {o.title}</Link><span className="ml-2 text-xs text-mute">Related guide</span></li>
-          ))}
-        </ul>
-      </div>
+        <nav aria-label="Breadcrumb" className="mb-4 font-sans text-xs text-mute">
+          <Link href="/" className="hover:text-brand-strong">Home</Link> / <Link href="/guides" className="hover:text-brand-strong">Blog</Link> / <span className="font-semibold text-ink">{g.title}</span>
+        </nav>
+        <p className="font-sans text-xs font-bold uppercase tracking-wide text-mute">{new Date(g.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })} · {g.readMins} min read · MapBench editorial</p>
+        <h1 className="mt-2 font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl">{g.title}</h1>
+        <p className="mt-4 text-sm leading-relaxed text-mute">{g.description}</p>
+        <div className="mt-6">
+          {g.blocks.map((b, i) => <Block key={i} b={b} />)}
+        </div>
+        <div className="mt-10 rounded-xl border border-line bg-card p-4 font-sans text-sm text-mute">
+          <strong className="text-ink">Editorial note:</strong> This guide is written and reviewed for MapBench. We correct factual or technical errors when they are reported. See our <Link href="/editorial-policy" className="font-bold text-brand-strong hover:underline">editorial policy</Link>.
+        </div>
+        {related.length > 0 && (
+          <div className="mt-10 border-t border-line pt-6 font-sans">
+            <h2 className="font-display text-lg font-bold">Keep reading</h2>
+            <ul className="mt-3 space-y-2">
+              {related.slice(0, 4).map((o) => (
+                <li key={o.slug}><Link href={`/guides/${o.slug}`} className="text-sm font-bold text-brand-strong hover:underline">→ {o.title}</Link><span className="ml-2 text-xs text-mute">Related guide</span></li>
+              ))}
+            </ul>
+          </div>
+        )}
       </article>
     </>
   );

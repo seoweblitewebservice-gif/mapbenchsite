@@ -1,8 +1,7 @@
 "use client";
-import { Suspense } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { toolBySlug, CATEGORIES, type ToolDef } from "@/lib/registry";
-import { USER_FAQS } from "@/data/userFaqs";
 import ToolContent from "./ToolContent";
 import { toolComponents } from "./tools";
 import { Spinner } from "./ui";
@@ -31,7 +30,7 @@ export default function ToolClient({ slug, locale }: { slug: string; locale?: Lo
   const category = CATEGORIES.find((c) => c.id === tool.category);
   const Component = toolComponents[tool.component];
   const related = tool.related.map((s) => toolBySlug.get(s)).filter((t): t is ToolDef => !!t && t.slug !== slug).slice(0, 6);
-  const faqs: [string, string][] = localized ? localized.faq : [...tool.faq, ...(USER_FAQS[tool.category] ?? [])];
+  const faqs: [string, string][] = localized ? localized.faq : tool.faq;
 
   return (
     <div>
@@ -63,11 +62,6 @@ export default function ToolClient({ slug, locale }: { slug: string; locale?: Lo
           <Component params={tool.props} />
         </Suspense>
       )}
-
-      {/* Reserved ad slot — never overlays controls or results */}
-      <div className="mt-6 flex h-16 items-center justify-center rounded-xl border border-dashed border-line text-[10px] font-bold uppercase tracking-widest text-mute/70" aria-label={ui?.advertisement ?? "Advertisement"}>
-        {ui?.advertisement ?? "Advertisement"}
-      </div>
 
       <div className="mt-10">
         {localized ? (
@@ -105,19 +99,21 @@ export default function ToolClient({ slug, locale }: { slug: string; locale?: Lo
             </section>
           )}
 
-          <section aria-labelledby="faq">
-            <h2 id="faq" className="font-display text-xl font-bold">{ui?.faq ?? "Frequently asked questions"}</h2>
-            <div className="mt-3 space-y-2">
-              {faqs.map(([q, a]) => (
-                <details key={q} className="card group px-4 py-3">
-                  <summary className="cursor-pointer list-none text-sm font-semibold marker:hidden">
-                    <span className="mr-2 text-brand-strong" aria-hidden>+</span>{q}
-                  </summary>
-                  <p className="mt-2 border-t border-line pt-2 text-sm leading-relaxed text-mute">{a}</p>
-                </details>
-              ))}
-            </div>
-          </section>
+          {faqs.length > 0 && (
+            <section aria-labelledby="faq">
+              <h2 id="faq" className="font-display text-xl font-bold">{ui?.faq ?? "Frequently asked questions"}</h2>
+              <div className="mt-3 space-y-2">
+                {faqs.map(([q, a]) => (
+                  <details key={q} className="card group px-4 py-3">
+                    <summary className="cursor-pointer list-none text-sm font-semibold marker:hidden">
+                      <span className="mr-2 text-brand-strong" aria-hidden>+</span>{q}
+                    </summary>
+                    <p className="mt-2 border-t border-line pt-2 text-sm leading-relaxed text-mute">{a}</p>
+                  </details>
+                ))}
+              </div>
+            </section>
+          )}
 
           <section aria-labelledby="related">
             <h2 id="related" className="font-display text-xl font-bold">{ui?.relatedTools ?? "Related tools"}</h2>
@@ -136,22 +132,18 @@ export default function ToolClient({ slug, locale }: { slug: string; locale?: Lo
           <div className="card p-4">
             <div className="label">{ui?.dataPrivacy ?? "Data & privacy"}</div>
             <ul className="mt-1 space-y-2 text-xs leading-relaxed text-mute">
-              {locale ? null : <><li>✓ Coordinates &amp; files processed in your browser</li><li>✓ Map tiles © OpenStreetMap via OpenFreeMap</li><li>✓ No account, no tracking of your locations</li><li>✓ See <Link href="/data-sources" className="font-semibold text-brand-strong hover:underline">data sources</Link> &amp; <Link href="/privacy" className="font-semibold text-brand-strong hover:underline">privacy</Link></li></>}{locale && <li>✓ {ui?.dataPrivacy}</li>}
+              {locale ? null : <><li>✓ Browser-first processing where the tool supports it</li><li>✓ Map data and external services are documented</li><li>✓ No account required for public tools</li><li>✓ See <Link href="/data-sources" className="font-semibold text-brand-strong hover:underline">data sources</Link> &amp; <Link href="/privacy" className="font-semibold text-brand-strong hover:underline">privacy</Link></li></>}{locale && <li>✓ {ui?.dataPrivacy}</li>}
             </ul>
           </div>
           <div className="card p-4">
             <div className="label">{ui?.category ?? "Category"}</div>
             {category && (
               <>
-                <div className="mt-1 flex items-center gap-2 text-sm font-bold"><span className="h-2.5 w-2.5 rounded-full" style={{ background: category.tone }} />{locale ? CATEGORY_LABELS[locale][category.id] ?? category.label : category.label}</div>
+                <div className="mt-1 flex items-center gap-2 text-sm font-bold"><span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ background: category.tone }} />{locale ? CATEGORY_LABELS[locale][category.id] ?? category.label : category.label}</div>
                 {!locale && <p className="mt-2 text-xs leading-relaxed text-mute">{category.short}</p>}
                 <Link href={prefix + "/tools?cat=" + category.id} className="mt-2 inline-block text-xs font-bold text-brand-strong hover:underline">{ui?.browseAll ?? "Browse all"} {locale ? CATEGORY_LABELS[locale][category.id] ?? category.label : category.label} →</Link>
               </>
             )}
-          </div>
-          <div className="card p-4">
-            <div className="label">{ui?.shareTool ?? "Share this tool"}</div>
-            <p className="mt-1 text-xs leading-relaxed text-mute">{locale ? ui?.browseDirectory : "Every result state is stored in the URL — copy the address bar to share your exact map setup."}</p>
           </div>
         </aside>
       </div>
