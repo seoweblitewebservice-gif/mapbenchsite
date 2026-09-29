@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+const CONTACT_EMAIL = "contact@mapbench.site";
+
 export default function EditorialPolicyPage() {
   return (
     <div className="doc mx-auto max-w-3xl">
@@ -31,7 +33,10 @@ export default function EditorialPolicyPage() {
       <p>MapBench is designed for everyday analysis, learning and planning. Unless a page explicitly says otherwise, results are not a substitute for licensed surveying, legal boundary determination, emergency response systems, aviation or maritime navigation, or other safety-critical professional work.</p>
 
       <h2>How to report a problem</h2>
-      <p>Use the <Link href="/contact" className="font-bold text-brand-strong hover:underline">Contact page</Link> and include the affected URL, the input or example, the result you saw and the result you expected. Avoid posting private information in public reports.</p>
+      <p>
+        Email <a href={`mailto:${CONTACT_EMAIL}`} className="font-bold text-brand-strong hover:underline">{CONTACT_EMAIL}</a> or use the{" "}
+        <Link href="/contact" className="font-bold text-brand-strong hover:underline">Contact page</Link>. Include the affected URL, the input or example, the result you saw and the result you expected.
+      </p>
     </div>
   );
 }
