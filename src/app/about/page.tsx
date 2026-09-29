@@ -19,33 +19,43 @@ export default function AboutPage() {
           require a GIS license, a subscription, or handing your data to an unknown server.
         </p>
         <p>
-          We built a platform of <strong>{TOOLS.length} free tools</strong> that run directly in your browser. Distances use proper
-          spherical geometry rather than flat-map shortcuts. Routing follows real road networks. File viewers parse KML, GPX,
-          GeoJSON and CSV locally whenever the tool supports local processing, so sensitive files do not need to be uploaded just to inspect them.
+          MapBench currently maintains <strong>{TOOLS.length} free tools</strong>. Some calculations run entirely in your browser;
+          tools that need live routing, geocoding, elevation or place data use the external services documented on our Data Sources page.
+          We describe those dependencies rather than presenting every result as locally computed or authoritative.
         </p>
+
         <h2>What we optimise for</h2>
         <ul>
-          <li><strong>Correctness</strong> — geodesic math, honest data labels, visible methodology.</li>
+          <li><strong>Correctness</strong> — appropriate geographic math, clear assumptions and visible methodology.</li>
           <li><strong>Privacy</strong> — no account is required for the public tools, and file-processing behaviour is explained where relevant.</li>
-          <li><strong>Speed</strong> — each tool has its own focused page and loads only the functionality it needs.</li>
-          <li><strong>Open data</strong> — we rely on sources such as OpenStreetMap, Natural Earth, the US Census Bureau and other documented providers.</li>
+          <li><strong>Clarity</strong> — focused pages, readable outputs and explanations written for the specific question a tool answers.</li>
+          <li><strong>Open data</strong> — sources such as OpenStreetMap, Natural Earth, the US Census Bureau and other documented providers are identified and attributed.</li>
         </ul>
+
+        <h2>Editorial standards and corrections</h2>
+        <p>
+          Our guides and tool explanations are created for MapBench. We do not publish scraped articles or spun copies of third-party material.
+          Technical claims are checked against the implemented method and the relevant source data, and we correct valid factual or calculation errors when they are reported.
+          Read the full <Link href="/editorial-policy" className="font-semibold text-brand-strong hover:underline">Editorial Policy &amp; Corrections</Link>.
+        </p>
+
         <h2>Honesty by design</h2>
         <p>
-          Where a number is an estimate, we say so. Population figures carry their vintage year. Routing times are labelled
-          free-flow when live traffic is not available. The full details live on the
-          {" "}<Link href="/methodology" className="font-semibold text-brand-strong hover:underline">methodology</Link> and{" "}
-          <Link href="/data-sources" className="font-semibold text-brand-strong hover:underline">data sources</Link> pages.
+          Where a number is an estimate, we say so. Routing times are labelled as estimates when live traffic is unavailable, and geographic boundaries from open datasets are not presented as legal survey determinations.
+          The details live on the <Link href="/methodology" className="font-semibold text-brand-strong hover:underline">Methodology</Link> and{" "}
+          <Link href="/data-sources" className="font-semibold text-brand-strong hover:underline">Data Sources</Link> pages.
         </p>
+
         <h2>Why the name MapBench?</h2>
         <p>
           A workbench is where useful tools are kept within reach. MapBench brings practical mapping, measurement and geographic
-          utilities together in one place so you can answer a question, inspect data or make a map without setting up specialist GIS software.
+          utilities together so you can answer a question, inspect data or make a map without setting up specialist GIS software.
         </p>
       </div>
       <div className="mt-8 flex flex-wrap gap-2">
         <Link href="/tools" className="btn btn-primary">Explore the tools</Link>
-        <Link href="/privacy" className="btn btn-ghost">Privacy policy</Link>
+        <Link href="/editorial-policy" className="btn btn-ghost">Editorial policy</Link>
+        <Link href="/contact" className="btn btn-ghost">Contact</Link>
       </div>
     </div>
   );
