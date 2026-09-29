@@ -10,6 +10,7 @@ import { LONGTAIL_TOOLS_1 } from "@/data/toolsLongtail1";
 import { LONGTAIL_TOOLS_2 } from "@/data/toolsLongtail2";
 import { LONGTAIL_TOOLS_3 } from "@/data/toolsLongtail3";
 import { LONGTAIL_TOOLS_4 } from "@/data/toolsLongtail4";
+import { LONGTAIL_TOOLS_5 } from "@/data/toolsLongtail5";
 import { LONGTAIL_TOOLS_6 } from "@/data/toolsLongtail6";
 import { LONGTAIL_TOOLS_7 } from "@/data/toolsLongtail7";
 
@@ -45,7 +46,10 @@ export interface ToolDef {
   faq: [string, string][]; howTo: string[]; related: string[]; method?: string;
 }
 
-export const TOOLS: ToolDef[] = [
+// Registry order is deliberate: later, more focused definitions replace older
+// legacy entries that share the same canonical slug. Only one tool per slug is
+// exposed to routes, sitemap, internal linking and structured data.
+const RAW_TOOLS: ToolDef[] = [
   ...(CORE_TOOLS as unknown as ToolDef[]),
   ...EXTRA_TOOLS,
   ...TIER_A_TOOLS,
@@ -57,10 +61,15 @@ export const TOOLS: ToolDef[] = [
   ...LONGTAIL_TOOLS_2,
   ...LONGTAIL_TOOLS_3,
   ...LONGTAIL_TOOLS_4,
+  ...LONGTAIL_TOOLS_5,
   ...LONGTAIL_TOOLS_6,
   ...LONGTAIL_TOOLS_7,
 ];
 
+const canonicalTools = new Map<string, ToolDef>();
+for (const tool of RAW_TOOLS) canonicalTools.set(tool.slug, tool);
+
+export const TOOLS: ToolDef[] = [...canonicalTools.values()];
 export const toolBySlug = new Map(TOOLS.map((t) => [t.slug, t]));
 export const popularTools = TOOLS.filter((t) => t.popular);
 export const toolsByCategory = (id: CategoryId) => TOOLS.filter((t) => t.category === id);
