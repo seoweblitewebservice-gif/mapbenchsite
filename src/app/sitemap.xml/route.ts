@@ -14,7 +14,7 @@ export const revalidate = 86400;
  * links as authority grows.
  */
 const BASE = "https://www.mapbench.site";
-const LASTMOD = "2026-09-24";
+const LASTMOD = "2026-09-29";
 
 function escapeXml(s: string) {
   return s
@@ -68,12 +68,13 @@ function buildUrls(): UrlRow[] {
   add("/privacy", "yearly", "0.3");
   add("/terms", "yearly", "0.3");
 
-  // All English tools (unique content)
+  // All canonical English tools from the registry. The registry already
+  // collapses legacy duplicate slugs, so each tool URL appears only once.
   for (const t of TOOLS) {
     add(`/tools/${t.slug}`, "monthly", t.popular ? "0.9" : "0.75");
   }
 
-  // All guides (editorial)
+  // All editorial guides
   for (const g of ALL_GUIDES) {
     const lm = g.date ? String(g.date).slice(0, 10) : LASTMOD;
     add(`/guides/${g.slug}`, "monthly", "0.65", lm);
