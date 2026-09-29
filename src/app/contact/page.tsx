@@ -9,6 +9,8 @@ export const metadata: Metadata = {
 };
 
 const ISSUE_TRACKER = "https://github.com/seoweblitewebservice-gif/mapbenchsite/issues";
+const SUPPORT_EMAIL = "support@mapbench.site";
+const CONTACT_EMAIL = "contact@mapbench.site";
 
 export default function ContactPage() {
   return (
@@ -18,9 +20,22 @@ export default function ContactPage() {
       </nav>
       <h1 className="font-display text-3xl font-bold tracking-tight">Contact MapBench</h1>
       <p className="mt-3">
-        Use this page to report a broken tool, inaccurate result, editorial error, accessibility problem, map-data issue or privacy concern.
-        MapBench currently uses a public issue tracker for reproducible reports so fixes and their status remain transparent.
+        Contact us about broken tools, inaccurate results, editorial corrections, accessibility, map data, privacy or general questions.
+        For reproducible technical issues, you can also use the public issue tracker.
       </p>
+
+      <section className="mt-8 grid gap-4 sm:grid-cols-2">
+        <div className="card p-5">
+          <h2 className="sect-h">Support</h2>
+          <p className="mt-2 text-sm text-mute">Tool bugs, data problems, access issues and technical support.</p>
+          <a href={`mailto:${SUPPORT_EMAIL}`} className="mt-3 inline-block font-bold text-brand-strong hover:underline">{SUPPORT_EMAIL}</a>
+        </div>
+        <div className="card p-5">
+          <h2 className="sect-h">General &amp; editorial</h2>
+          <p className="mt-2 text-sm text-mute">General enquiries, editorial corrections, partnerships and privacy questions.</p>
+          <a href={`mailto:${CONTACT_EMAIL}`} className="mt-3 inline-block font-bold text-brand-strong hover:underline">{CONTACT_EMAIL}</a>
+        </div>
+      </section>
 
       <section className="mt-8">
         <h2 className="sect-h">Report a technical, data or content issue</h2>
@@ -29,12 +44,7 @@ export default function ContactPage() {
           include the sentence or claim in question and, when possible, the authoritative reference you are comparing it with.
         </p>
         <p className="mt-4">
-          <a
-            href={ISSUE_TRACKER}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex rounded-md border border-line px-4 py-2 font-bold text-brand-strong transition-colors hover:border-brand"
-          >
+          <a href={ISSUE_TRACKER} target="_blank" rel="noopener noreferrer" className="inline-flex rounded-md border border-line px-4 py-2 font-bold text-brand-strong transition-colors hover:border-brand">
             Open the MapBench issue tracker →
           </a>
         </p>
@@ -53,7 +63,7 @@ export default function ContactPage() {
       <section className="mt-8">
         <h2 className="sect-h">Editorial corrections</h2>
         <p className="mt-3">
-          MapBench reviews valid factual and technical corrections. Our standards for original content, source transparency and corrections are described in the{" "}
+          MapBench reviews valid factual and technical corrections. Email <a href={`mailto:${CONTACT_EMAIL}`} className="font-bold text-brand-strong hover:underline">{CONTACT_EMAIL}</a> or review our{" "}
           <Link href="/editorial-policy" className="font-bold text-brand-strong hover:underline">Editorial Policy &amp; Corrections</Link>.
         </p>
       </section>
@@ -62,8 +72,7 @@ export default function ContactPage() {
         <h2 className="sect-h">Privacy and sensitive information</h2>
         <p className="mt-3">
           Review the <Link href="/privacy" className="font-bold text-brand-strong hover:underline">Privacy Policy</Link> before sharing any information.
-          The issue tracker is public, so do not post passwords, private addresses, personal identifiers, confidential files or other sensitive data.
-          Use a generic reproduction example whenever possible.
+          Do not send passwords, payment details, confidential files or other unnecessary sensitive data. The GitHub issue tracker is public, so use email for private enquiries.
         </p>
       </section>
 
