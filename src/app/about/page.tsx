@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
 };
 
+const SUPPORT_EMAIL = "support@mapbench.site";
+const CONTACT_EMAIL = "contact@mapbench.site";
+
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-3xl">
@@ -37,6 +40,12 @@ export default function AboutPage() {
           Our guides and tool explanations are created for MapBench. We do not publish scraped articles or spun copies of third-party material.
           Technical claims are checked against the implemented method and the relevant source data, and we correct valid factual or calculation errors when they are reported.
           Read the full <Link href="/editorial-policy" className="font-semibold text-brand-strong hover:underline">Editorial Policy &amp; Corrections</Link>.
+        </p>
+
+        <h2>Contact MapBench</h2>
+        <p>
+          Technical support and tool issues: <a href={`mailto:${SUPPORT_EMAIL}`} className="font-semibold text-brand-strong hover:underline">{SUPPORT_EMAIL}</a>.<br />
+          General, editorial and privacy enquiries: <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold text-brand-strong hover:underline">{CONTACT_EMAIL}</a>.
         </p>
 
         <h2>Honesty by design</h2>

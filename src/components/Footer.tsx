@@ -43,6 +43,10 @@ export default function Footer() {
           <p className="mt-3 font-serif text-sm leading-relaxed text-[#a89f8c]">
             Free geographic tools and practical mapping guides built on documented methods and open data.
           </p>
+          <div className="mt-4 space-y-1 text-xs text-[#a89f8c]">
+            <a href="mailto:support@mapbench.site" className="block hover:text-[#7cc39d] hover:underline">support@mapbench.site</a>
+            <a href="mailto:contact@mapbench.site" className="block hover:text-[#7cc39d] hover:underline">contact@mapbench.site</a>
+          </div>
         </div>
         <FooterCol title="Popular tools" links={POPULAR} more={["/tools", "All tools →"]} />
         <FooterCol title="Blank maps" links={MAPS} more={["/maps", "All maps →"]} />
