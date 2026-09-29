@@ -19,12 +19,28 @@ const countries = feature(
 const countryFeatures = countries.features.filter((f) => f.properties?.name) as CountryFeature[];
 const countryNames = Array.from(new Set(countryFeatures.map((f) => f.properties!.name!))).sort((a, b) => a.localeCompare(b));
 
+// Keep the strongest/highest-demand country map pages indexable while the
+// wider template library remains available to users and crawlable via links.
+const INDEXABLE_MAPS = new Set([
+  "world",
+  "united-states-of-america",
+  "india",
+  "united-kingdom",
+  "canada",
+  "australia",
+  "germany",
+  "france",
+  "brazil",
+  "japan",
+  "mexico",
+  "spain",
+  "italy",
+  "china",
+  "russia",
+]);
+
 function getCountryFeature(slug: string) {
   return countryFeatures.find((f) => slugify(f.properties!.name!) === slug);
-}
-
-function fmtCoord(value: number) {
-  return Math.abs(value).toFixed(2) + (value < 0 ? "°S/W" : "°N/E");
 }
 
 function countryStats(country: CountryFeature) {
@@ -42,10 +58,12 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ country: string }> }): Promise<Metadata> {
   const { country } = await params;
   const name = getCountryFeature(country)?.properties?.name ?? country.replace(/-/g, " ");
+  const indexable = INDEXABLE_MAPS.has(country);
   return {
     title: `${name} Blank Map — SVG & PNG`,
     description: `Free printable ${name} blank map with SVG and high-resolution PNG exports. Explore outline, labeled, colored and city map variants.`,
     alternates: { canonical: `/maps/blank/${country}` },
+    robots: { index: indexable, follow: true },
     openGraph: {
       title: `${name} Blank Map — SVG & PNG | MapBench`,
       description: `Explore and export a printable ${name} map in your browser.`,
@@ -84,10 +102,11 @@ export default async function CountryMapPage({ params }: { params: Promise<{ cou
   const jsonLd = [
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      headline: `${name} Blank Map — SVG & PNG`,
+      "@type": "WebPage",
+      name: `${name} Blank Map — SVG & PNG`,
       description: `Printable ${name} outline map with browser-based SVG and PNG export options.`,
-      mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
+      url: pageUrl,
+      isPartOf: { "@type": "WebSite", name: "MapBench", url: "https://www.mapbench.site" },
       publisher: { "@type": "Organization", name: "MapBench", url: "https://www.mapbench.site" },
     },
     {
@@ -98,19 +117,6 @@ export default async function CountryMapPage({ params }: { params: Promise<{ cou
         { "@type": "ListItem", position: 2, name: "Maps", item: "https://www.mapbench.site/maps" },
         { "@type": "ListItem", position: 3, name: `${name} Blank Map`, item: pageUrl },
       ],
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        ["Can I print the blank map?", "Yes. SVG is scalable for print and PNG is convenient for documents, slides and quick sharing."],
-        ["Is this a legal boundary map?", "No. It is an educational and reference map based on generalized geographic boundary data, not a cadastral or legal survey."],
-        ["Do I need an account?", "No. The map interface and browser-based export workflow do not require an account."],
-      ].map(([q, a]) => ({
-        "@type": "Question",
-        name: `${name} — ${q}`,
-        acceptedAnswer: { "@type": "Answer", text: a },
-      })),
     },
   ];
 
