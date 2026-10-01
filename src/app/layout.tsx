@@ -4,12 +4,12 @@ import { Fraunces, Manrope, Source_Serif_4 } from "next/font/google";
 import Header, { Footer } from "@/components/Header";
 import SearchPalette from "@/components/SearchPalette";
 import LanguageSuggestion from "@/components/LanguageSuggestion";
+import FullSiteTranslator from "@/components/FullSiteTranslator";
 import "./globals.css";
 
 const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", display: "swap", preload: true, weight: ["600", "700"] });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope", display: "swap", preload: true, weight: ["400", "500", "600", "700", "800"] });
 const sourceSerif = Source_Serif_4({ subsets: ["latin"], variable: "--font-source-serif", display: "swap", preload: true, weight: ["400", "600"] });
-
 
 export const metadata: Metadata = {
   verification: {
@@ -71,6 +71,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Footer />
         <SearchPalette />
         <LanguageSuggestion />
+        <div className="fixed -left-[10000px] top-0 h-px w-px overflow-hidden" aria-hidden="true">
+          <FullSiteTranslator />
+        </div>
       </body>
     </html>
   );
