@@ -44,7 +44,8 @@ function setGoogleLanguage(code: string) {
   }
 }
 
-export default function LanguageSwitcher() {
+export default function LanguageSwitcher({ locale: _locale }: { locale?: string } = {}) {
+  void _locale;
   const pathname = usePathname() || "/";
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState("en");
