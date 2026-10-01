@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CATEGORIES, TOOLS } from "@/lib/registry";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export function Logo() {
   return (
@@ -152,10 +153,12 @@ export default function Header() {
           <Link href="/guides" className="rounded px-2.5 py-1.5 text-[13px] font-bold hover:text-brand-strong">Blog</Link>
           <Link href="/about" className="rounded px-2.5 py-1.5 text-[13px] font-bold hover:text-brand-strong">About</Link>
           <button type="button" className="ml-2 rounded border border-line px-2.5 py-1 text-[12px] font-bold text-mute hover:border-brand hover:text-brand-strong" onClick={() => window.dispatchEvent(new CustomEvent("sf-open-search"))}>Search <kbd className="ml-1 text-[10px]">⌘K</kbd></button>
+          <LanguageSwitcher />
           <ThemeToggle />
         </nav>
 
         <div className="ml-auto flex items-center gap-1 md:hidden">
+          <LanguageSwitcher />
           <ThemeToggle />
           <button type="button" className="btn btn-ghost btn-sm" aria-expanded={open} aria-label="Toggle menu" onClick={() => setOpen((v) => !v)}>
             {open ? "×" : "☰"}
