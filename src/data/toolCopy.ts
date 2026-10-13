@@ -11,6 +11,7 @@ import { COPY9 } from "./toolCopy9";
 import { COPY_BATCH } from "./toolCopyBatch";
 import { COPY_BULK } from "./toolCopyBulk";
 import { GROWTH_COPY } from "./growthCopy";
+import { PREMIUM_TOOL_COPY } from "./premiumToolCopy";
 
 export interface ToolCopy { h2: string; paras: string[] }
 
@@ -29,4 +30,5 @@ export const TOOL_COPY: Record<string, ToolCopy> = {
   ...COPY_BATCH,
   ...COPY_BULK,
   ...GROWTH_COPY,
+  ...PREMIUM_TOOL_COPY,
 };
