@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { TOOLS } from "@/lib/registry";
 import { ALL_GUIDES } from "@/data/allGuides";
+import { STUDIES } from "@/data/studies";
 
 const BASE = "https://www.mapbench.site";
 
@@ -9,6 +10,7 @@ const STATIC_PATHS = [
   "/tools",
   "/maps",
   "/guides",
+  "/studies",
   "/about",
   "/contact",
   "/methodology",
@@ -42,7 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE}${path || "/"}`,
     lastModified: now,
     changeFrequency: path === "" ? "weekly" : "monthly",
-    priority: path === "" ? 1 : path === "/tools" || path === "/maps" || path === "/guides" ? 0.9 : 0.6,
+    priority: path === "" ? 1 : ["/tools", "/maps", "/guides", "/studies"].includes(path) ? 0.9 : 0.6,
   }));
 
   const toolEntries: MetadataRoute.Sitemap = TOOLS.map((tool) => ({
@@ -59,6 +61,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
+  const studyEntries: MetadataRoute.Sitemap = STUDIES.map((study) => ({
+    url: `${BASE}/studies/${study.slug}`,
+    lastModified: new Date(study.date),
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
   const mapEntries: MetadataRoute.Sitemap = INDEXABLE_MAPS.map((slug) => ({
     url: `${BASE}/maps/blank/${slug}`,
     lastModified: now,
@@ -66,5 +75,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.65,
   }));
 
-  return [...staticEntries, ...toolEntries, ...guideEntries, ...mapEntries];
+  return [...staticEntries, ...toolEntries, ...guideEntries, ...studyEntries, ...mapEntries];
 }
