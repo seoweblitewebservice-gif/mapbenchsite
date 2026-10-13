@@ -17,6 +17,7 @@ import { LONGTAIL_TOOLS_8 } from "@/data/toolsLongtail8";
 import { GAP_A_TOOLS } from "@/data/toolsGapA";
 import { GAP_B_TOOLS } from "@/data/toolsGapB";
 import { GAP_C_TOOLS } from "@/data/toolsGapC";
+import { FLAGSHIP_TOOLS } from "@/data/toolsFlagship";
 
 export type CategoryId =
   | "location" | "distance" | "radius" | "routing" | "coordinates"
@@ -72,6 +73,7 @@ const RAW_TOOLS: ToolDef[] = [
   ...GAP_A_TOOLS,
   ...GAP_B_TOOLS,
   ...GAP_C_TOOLS,
+  ...FLAGSHIP_TOOLS,
 ];
 
 const canonicalTools = new Map<string, ToolDef>();
