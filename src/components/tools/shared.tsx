@@ -2,6 +2,7 @@
 import dynamic from "next/dynamic";
 import { useState } from "react";
 import type { LatLng } from "@/lib/geo";
+import { geolocation } from "@/lib/geocode";
 import LocationSearch from "@/components/LocationSearch";
 
 // MapLibre must never render on the server.
@@ -20,27 +21,56 @@ export function PlaceField({ label, value, onChange, placeholder }: {
   placeholder?: string;
 }) {
   const [manual, setManual] = useState("");
+  const [locating, setLocating] = useState(false);
+  const [geoError, setGeoError] = useState<string | null>(null);
+
+  const useMyLocation = async () => {
+    setGeoError(null);
+    setLocating(true);
+    try {
+      const pos = await geolocation();
+      setManual("");
+      onChange({ lat: pos.lat, lng: pos.lng, label: "My location" });
+    } catch (error) {
+      setGeoError(error instanceof Error ? error.message : "Could not determine your location.");
+    } finally {
+      setLocating(false);
+    }
+  };
+
   return (
     <div>
       <span className="label">{label}</span>
-      <div className="flex gap-2">
-        <div className="flex-1">
-          <LocationSearch
-            placeholder={placeholder ?? "Search a place…"}
-            initialValue={value?.label ?? ""}
-            onSelect={(h) => onChange({ lat: h.lat, lng: h.lng, label: h.label })}
-          />
-        </div>
+      <div className="grid gap-2 sm:grid-cols-[1fr_auto]">
+        <LocationSearch
+          placeholder={placeholder ?? "Search a place…"}
+          initialValue={value?.label ?? ""}
+          onSelect={(h) => {
+            setManual("");
+            setGeoError(null);
+            onChange({ lat: h.lat, lng: h.lng, label: h.label });
+          }}
+        />
+        <button
+          type="button"
+          className="btn btn-primary whitespace-nowrap"
+          onClick={useMyLocation}
+          disabled={locating}
+        >
+          {locating ? "Locating…" : "⌖ Use my location"}
+        </button>
       </div>
-      <div className="mt-1.5 flex items-center gap-2">
+      <div className="mt-2 grid gap-2 sm:grid-cols-[1fr_auto]">
         <input
-          className="input flex-1 !py-1.5 text-xs"
-          placeholder="…or paste lat, lng"
+          className="input !py-2 text-xs"
+          placeholder="…or paste coordinates, e.g. 28.6139, 77.2090"
           aria-label={`${label} coordinates`}
-          value={value && !manual ? `${value.lat.toFixed(5)}, ${value.lng.toFixed(5)}` : manual}
+          value={value && !manual && !value.label ? `${value.lat.toFixed(5)}, ${value.lng.toFixed(5)}` : manual}
           onChange={(e) => {
-            setManual(e.target.value);
-            const m = e.target.value.match(/^\s*(-?\d+(?:\.\d+)?)\s*[, ]\s*(-?\d+(?:\.\d+)?)\s*$/);
+            const next = e.target.value;
+            setManual(next);
+            setGeoError(null);
+            const m = next.match(/^\s*(-?\d+(?:\.\d+)?)\s*[, ]\s*(-?\d+(?:\.\d+)?)\s*$/);
             if (m) {
               const lat = parseFloat(m[1]), lng = parseFloat(m[2]);
               if (Math.abs(lat) <= 90 && Math.abs(lng) <= 180) onChange({ lat, lng });
@@ -48,9 +78,23 @@ export function PlaceField({ label, value, onChange, placeholder }: {
           }}
         />
         {value && (
-          <button type="button" className="btn btn-ghost btn-sm" onClick={() => { setManual(""); onChange(null); }} aria-label={`Clear ${label}`}>✕</button>
+          <button
+            type="button"
+            className="btn btn-ghost btn-sm whitespace-nowrap"
+            onClick={() => { setManual(""); setGeoError(null); onChange(null); }}
+            aria-label={`Clear ${label}`}
+          >
+            Clear
+          </button>
         )}
       </div>
+      {value && (
+        <div className="mt-2 flex flex-wrap items-center gap-2 text-[11px] text-mute">
+          <span className="rounded-md bg-brand-soft px-2 py-1 font-semibold text-brand-strong">Selected</span>
+          <span>{value.label || `${value.lat.toFixed(5)}, ${value.lng.toFixed(5)}`}</span>
+        </div>
+      )}
+      {geoError && <p className="mt-2 text-xs leading-relaxed text-ember">{geoError}</p>}
     </div>
   );
 }
