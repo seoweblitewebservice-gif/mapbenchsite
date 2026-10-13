@@ -1,0 +1,58 @@
+import type { ToolDef } from "@/lib/registry";
+
+export const FLAGSHIP_TOOLS: ToolDef[] = [
+  {
+    slug: "google-maps-embed-code-generator",
+    name: "Google Maps Embed Code Generator",
+    short: "Generate a responsive Google Maps iframe for a place, address or coordinates.",
+    intro: "Enter a location, choose zoom and height, preview the result and copy ready-to-paste iframe code without configuring an API key.",
+    category: "creation",
+    scope: "Worldwide",
+    component: "gmapembed",
+    keywords: ["google maps embed code generator", "google maps iframe", "embed google map"],
+    popular: true,
+    faq: [
+      ["Do I need a Google Maps API key?", "This tool builds a standard Google Maps iframe URL and does not ask you for an API key."],
+      ["Can I embed coordinates?", "Yes. Enter latitude and longitude as the location query."],
+      ["Is the generated map hosted by MapBench?", "No. The iframe loads Google Maps directly from Google."],
+    ],
+    howTo: ["Enter a place, address or coordinates.", "Choose zoom and iframe height.", "Preview the map and copy the generated iframe code."],
+    related: ["share-location-link-generator", "pin-map-maker", "latitude-longitude-finder"],
+    method: "Builds a Google Maps iframe URL from the user-entered query and display options. MapBench does not proxy map content.",
+  },
+  {
+    slug: "share-location-link-generator",
+    name: "Share Location Link Generator",
+    short: "Create shareable Google Maps, OpenStreetMap and Bing Maps links from coordinates.",
+    intro: "Enter WGS84 latitude and longitude once, then copy provider-specific links for sharing the same map point across major map services.",
+    category: "creation",
+    scope: "Worldwide",
+    component: "sharelinks",
+    keywords: ["share location link", "google maps coordinate link", "openstreetmap link generator"],
+    faq: [
+      ["Are the coordinates changed?", "No. The same WGS84 latitude and longitude are inserted into each provider's URL format."],
+      ["Does a shared link prove an address?", "No. It shares a map point; address and boundary interpretation still depends on the map provider and source data."],
+    ],
+    howTo: ["Enter latitude and longitude.", "Set a useful zoom level.", "Open or copy the generated provider links."],
+    related: ["google-maps-embed-code-generator", "latitude-longitude-finder", "plus-code-finder"],
+    method: "Validates coordinate ranges and formats provider-specific public map URLs in the browser.",
+  },
+  {
+    slug: "coordinate-distance-table-generator",
+    name: "Coordinate Distance Table Generator",
+    short: "Turn up to 20 latitude/longitude points into a pairwise great-circle distance table.",
+    intro: "Paste labeled coordinates and get a full distance matrix in kilometres, with CSV copy and download options for analysis or planning.",
+    category: "distance",
+    scope: "Worldwide",
+    component: "disttable",
+    keywords: ["coordinate distance table", "distance matrix coordinates", "pairwise distance calculator"],
+    faq: [
+      ["Are these driving distances?", "No. The table uses straight-line great-circle distance between coordinates."],
+      ["How many points can I use?", "The browser tool accepts up to 20 valid points per table to keep the matrix readable."],
+      ["Can I export the table?", "Yes. Copy the CSV or download it directly."],
+    ],
+    howTo: ["Paste one point per line as label,latitude,longitude.", "Review the generated matrix.", "Copy or download the CSV."],
+    related: ["distance-matrix-calculator", "distance-between-two-places", "latitude-longitude-finder"],
+    method: "Calculates haversine great-circle distance on a mean Earth radius of 6,371.0088 km for every unique pair.",
+  },
+];
