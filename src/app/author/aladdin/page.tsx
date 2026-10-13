@@ -50,7 +50,7 @@ export default function AladdinAuthorPage() {
         <h2 className="font-display text-2xl font-bold">Original studies</h2>
         <p className="mt-2 text-sm text-mute">Studies published under Aladdin&apos;s editorial oversight.</p>
         <div className="mt-5 grid gap-3 sm:grid-cols-2">
-          {STUDIES.slice(0, 8).map((study) => <Link key={study.slug} href={`/studies/${study.slug}`} className="card p-4"><div className="font-display font-bold">{study.title}</div><div className="mt-1 text-xs text-mute">{study.date}</div></Link>)}
+          {STUDIES.map((study) => <Link key={study.slug} href={`/studies/${study.slug}`} className="card p-4"><div className="font-display font-bold">{study.title}</div><div className="mt-1 text-xs text-mute">{study.date}</div></Link>)}
         </div>
       </section>
 
