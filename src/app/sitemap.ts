@@ -79,7 +79,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const referenceEntries: MetadataRoute.Sitemap = REFERENCE_COUNTRIES.map((country) => ({
     url: `${BASE}/reference/${country.slug}`,
-    changeFrequency: "quarterly",
+    changeFrequency: "monthly",
     priority: 0.72,
   }));
 
