@@ -52,10 +52,19 @@ export const viewport: Viewport = {
 
 const themeScript = `(function(){try{var t=localStorage.getItem("sf-theme");var d=t? t==="dark" : false;document.documentElement.classList.toggle("dark",d);}catch(e){}})();`;
 
+const googleAnalyticsScript = `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9FHWG8223G');
+`;
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning className={`${fraunces.variable} ${manrope.variable} ${sourceSerif.variable}`}>
       <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9FHWG8223G" />
+        <script dangerouslySetInnerHTML={{ __html: googleAnalyticsScript }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@graph": [
