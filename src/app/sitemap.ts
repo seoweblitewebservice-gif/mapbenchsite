@@ -1,5 +1,8 @@
 import type { MetadataRoute } from "next";
+import { feature } from "topojson-client";
+import countriesTopo from "world-atlas/countries-110m.json";
 import { CATEGORIES, TOOLS } from "@/lib/registry";
+import { LOCALES } from "@/lib/i18n";
 import { ALL_GUIDES } from "@/data/allGuides";
 import { STUDIES } from "@/data/studies";
 
@@ -20,22 +23,23 @@ const STATIC_PATHS = [
   "/terms",
 ];
 
-const INDEXABLE_MAPS = [
-  "united-states-of-america",
-  "india",
-  "united-kingdom",
-  "canada",
-  "australia",
-  "germany",
-  "france",
-  "brazil",
-  "japan",
-  "mexico",
-  "spain",
-  "italy",
-  "china",
-  "russia",
-];
+function slugify(value: string) {
+  return value.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+}
+
+const countries = feature(
+  countriesTopo as any,
+  (countriesTopo as any).objects.countries,
+) as unknown as GeoJSON.FeatureCollection<GeoJSON.Geometry, { name?: string }>;
+
+const ALL_COUNTRY_MAP_SLUGS = Array.from(
+  new Set(
+    countries.features
+      .map((f) => f.properties?.name)
+      .filter((name): name is string => Boolean(name))
+      .map(slugify),
+  ),
+).sort();
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -75,12 +79,45 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const mapEntries: MetadataRoute.Sitemap = INDEXABLE_MAPS.map((slug) => ({
+  const mapEntries: MetadataRoute.Sitemap = ALL_COUNTRY_MAP_SLUGS.map((slug) => ({
     url: `${BASE}/maps/blank/${slug}`,
     lastModified: now,
     changeFrequency: "yearly",
     priority: 0.65,
   }));
 
-  return [...staticEntries, ...categoryEntries, ...toolEntries, ...guideEntries, ...studyEntries, ...mapEntries];
+  const localeHubEntries: MetadataRoute.Sitemap = LOCALES.flatMap((locale) => [
+    {
+      url: `${BASE}/${locale}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
+    {
+      url: `${BASE}/${locale}/tools`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.62,
+    },
+  ]);
+
+  const localizedToolEntries: MetadataRoute.Sitemap = LOCALES.flatMap((locale) =>
+    TOOLS.map((tool) => ({
+      url: `${BASE}/${locale}/tools/${tool.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.55,
+    })),
+  );
+
+  return [
+    ...staticEntries,
+    ...categoryEntries,
+    ...toolEntries,
+    ...guideEntries,
+    ...studyEntries,
+    ...mapEntries,
+    ...localeHubEntries,
+    ...localizedToolEntries,
+  ];
 }
