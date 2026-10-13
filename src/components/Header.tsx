@@ -120,7 +120,7 @@ export default function Header() {
                   <div>
                     <div className="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-mute">Browse by category</div>
                     <ul className="grid gap-1.5 sm:grid-cols-2">
-                      {CATEGORIES.map((c) => <li key={c.id}><Link href={`/tools?cat=${c.id}`} className="text-[13px] font-semibold hover:text-brand-strong hover:underline">{c.label}</Link></li>)}
+                      {CATEGORIES.map((c) => <li key={c.id}><Link href={`/tools/category/${c.id}`} className="text-[13px] font-semibold hover:text-brand-strong hover:underline">{c.label}</Link></li>)}
                     </ul>
                   </div>
                 </div>
@@ -187,7 +187,7 @@ export default function Header() {
             <div>
               <div className="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-mute">Categories</div>
               <ul className="grid grid-cols-2 gap-2">
-                {CATEGORIES.map((c) => <li key={c.id}><Link href={`/tools?cat=${c.id}`} className="text-sm font-semibold hover:text-brand-strong">{c.label}</Link></li>)}
+                {CATEGORIES.map((c) => <li key={c.id}><Link href={`/tools/category/${c.id}`} className="text-sm font-semibold hover:text-brand-strong">{c.label}</Link></li>)}
               </ul>
             </div>
           </div>
