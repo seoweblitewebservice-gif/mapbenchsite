@@ -1,5 +1,6 @@
 import { MAJOR_CITIES } from "./cities";
 import { distanceKm, normLng } from "@/lib/geo";
+import { countryStudyExport } from "./countryStudies";
 
 export type StudySlug =
   | "most-isolated-major-cities"
@@ -9,7 +10,10 @@ export type StudySlug =
   | "farthest-major-city-pairs"
   | "major-cities-closest-to-equator"
   | "major-cities-closest-to-prime-meridian"
-  | "major-city-population-within-1000km";
+  | "major-city-population-within-1000km"
+  | "largest-country-geometries"
+  | "widest-country-longitude-spans"
+  | "northernmost-country-centroids";
 
 export interface StudyMeta {
   slug: StudySlug;
@@ -75,6 +79,27 @@ export const STUDIES: StudyMeta[] = [
     description: "We sum the approximate populations attached to peer cities inside a fixed 1,000 km great-circle radius.",
     date: "2026-10-14",
     question: "Which city has the largest summed peer-city population within 1,000 km in this dataset?",
+  },
+  {
+    slug: "largest-country-geometries",
+    title: "Largest Country Geometries in the MapBench World Dataset",
+    description: "A reproducible ranking of country polygon areas calculated from the generalized world-atlas/Natural Earth geometry used by MapBench maps.",
+    date: "2026-10-14",
+    question: "Which country polygons have the largest spherical area in the MapBench world geometry dataset?",
+  },
+  {
+    slug: "widest-country-longitude-spans",
+    title: "Which Countries Span the Most Longitude?",
+    description: "We compare country bounding boxes in the world-atlas/Natural Earth geometry dataset and rank the widest non-antimeridian longitude spans.",
+    date: "2026-10-14",
+    question: "Which country geometries span the greatest number of longitude degrees in this generalized world dataset?",
+  },
+  {
+    slug: "northernmost-country-centroids",
+    title: "Which Countries Have the Northernmost Geographic Centroids?",
+    description: "We calculate spherical centroids from generalized country polygons and rank the highest centroid latitudes.",
+    date: "2026-10-14",
+    question: "Which country geometries have the most northerly spherical centroid in the MapBench world dataset?",
   },
 ];
 
@@ -170,6 +195,8 @@ export function population1000Rows(limit = 25) {
 }
 
 export function studyExport(slug: string) {
+  const countryExport = countryStudyExport(slug);
+  if (countryExport) return countryExport;
   switch (slug) {
     case "most-isolated-major-cities":
       return { headers: ["rank","city","country","nearest_city","distance_km"], rows: isolationRows(100).map((r,i)=>[i+1,r.city.name,r.city.country,r.nearest.name,Math.round(r.km)]) };
