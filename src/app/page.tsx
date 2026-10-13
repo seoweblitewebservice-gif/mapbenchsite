@@ -14,9 +14,7 @@ export const metadata: Metadata = {
     languages: {
       en: "https://www.mapbench.site/",
       "x-default": "https://www.mapbench.site/",
-      ...Object.fromEntries(
-        ["es", "de", "fr", "it", "pt", "nl", "pl", "ru", "sv", "da", "no", "fi", "cs", "ro", "el", "hu", "tr", "uk", "ar", "ja", "ko", "zh", "hi"].map((l) => [l, `https://www.mapbench.site/${l}`]),
-      ),
+      es: "https://www.mapbench.site/es",
     },
   },
 };
@@ -109,7 +107,7 @@ export default function HomePage() {
               const count = TOOLS.filter((t) => t.category === cat.id).length;
               if (!count) return null;
               return (
-                <Link key={cat.id} href={`/tools?cat=${cat.id}`} className="card group p-5 transition-colors hover:border-brand">
+                <Link key={cat.id} href={`/tools/category/${cat.id}`} className="card group p-5 transition-colors hover:border-brand">
                   <div className="flex items-center justify-between gap-3">
                     <h3 className="font-display text-lg font-bold group-hover:text-brand-strong">{cat.label}</h3>
                     <span className="chip">{count} tools</span>
