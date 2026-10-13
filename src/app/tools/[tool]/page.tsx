@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { toolBySlug, TOOLS, CATEGORIES } from "@/lib/registry";
 import ToolClient from "@/components/ToolClient";
+import { getEnhancedFaqs } from "@/lib/toolFaqs";
 
 interface Props { params: Promise<{ tool: string }> }
 
@@ -49,6 +50,7 @@ export default async function ToolPage({ params }: Props) {
   const category = CATEGORIES.find((c) => c.id === tool.category);
   const absoluteUrl = `https://www.mapbench.site/tools/${tool.slug}`;
   const author = { "@type": "Person", "@id": "https://www.mapbench.site/author/aladdin#person", name: "Aladdin", url: "https://www.mapbench.site/author/aladdin" };
+  const faqs = getEnhancedFaqs(tool);
 
   const jsonLd = [
     {
@@ -86,10 +88,10 @@ export default async function ToolPage({ params }: Props) {
         { "@type": "ListItem", position: category ? 4 : 3, name: tool.name, item: absoluteUrl },
       ],
     },
-    ...(tool.faq.length ? [{
+    ...(faqs.length ? [{
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      mainEntity: tool.faq.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
+      mainEntity: faqs.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
     }] : []),
     {
       "@context": "https://schema.org",
