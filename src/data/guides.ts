@@ -5,6 +5,7 @@ export type GuideBlock =
   | { t: "p"; text: string }
   | { t: "ul"; items: string[] }
   | { t: "note"; text: string }
+  | { t: "table"; headers: string[]; rows: string[][] }
   | { t: "toolbox"; slugs: string[] };
 
 export interface Guide {
