@@ -9,6 +9,7 @@ import { MAJOR_CITIES } from "@/data/cities";
 import { distanceKm, bearingBetween, compassPoint, fmt, normLng } from "@/lib/geo";
 import { formatDms, latLngToUtm, formatUtm, latLngToMgrs } from "@/lib/coords";
 import { sunTimes, fmtDurationHours } from "@/lib/astronomy";
+import RelatedReading from "@/components/RelatedReading";
 
 interface Example { lead: string; body: string }
 
@@ -213,6 +214,8 @@ export default function ToolContent({ tool }: { tool: ToolDef }) {
           </dl>
         </section>
       )}
+
+      <RelatedReading tool={tool} />
 
       {related.length > 0 && (
         <section aria-label="Related tools in context">
