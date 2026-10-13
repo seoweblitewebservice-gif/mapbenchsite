@@ -50,6 +50,30 @@ function Block({ b }: { b: GuideBlock }) {
         </div>
       );
     }
+    case "table": {
+      return (
+        <div className="my-5 overflow-x-auto rounded-xl border border-line">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-card">
+                {b.headers.map((h) => (
+                  <th key={h} className="border-b border-line px-3 py-2 text-left font-sans text-xs font-bold uppercase tracking-wide text-mute">{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {b.rows.map((r, i) => (
+                <tr key={i} className="border-b border-line last:border-0">
+                  {r.map((c, j) => (
+                    <td key={j} className="px-3 py-2 align-top">{c}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+    }
   }
 }
 
@@ -61,6 +85,7 @@ export default async function GuidePage({ params }: Props) {
   const bodyWords = g.blocks.reduce((acc, b) => {
     if (b.t === "p" || b.t === "h2" || b.t === "note") return acc + words(b.text);
     if (b.t === "ul") return acc + b.items.reduce((a, i) => a + words(i), 0);
+    if (b.t === "table") return acc + b.headers.reduce((a, h) => a + words(h), 0) + b.rows.reduce((a, r) => a + r.reduce((x, c) => x + words(c), 0), 0);
     return acc;
   }, 0);
 
