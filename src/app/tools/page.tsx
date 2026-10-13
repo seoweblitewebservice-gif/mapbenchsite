@@ -1,6 +1,8 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
+import Link from "next/link";
 import ToolsDirectory from "@/components/ToolsDirectory";
+import { CATEGORIES, TOOLS } from "@/lib/registry";
 
 export const metadata: Metadata = {
   title: "All Free Map & Geographic Tools",
@@ -13,9 +15,35 @@ export default function ToolsPage() {
     <div>
       <h1 className="font-display text-3xl font-bold tracking-tight">All tools</h1>
       <p className="mt-2 max-w-2xl text-sm leading-relaxed text-mute">
-        Every tool is free, works worldwide unless marked otherwise, and runs in your browser. Search by keyword or filter by category.
+        Every tool is free, works worldwide unless marked otherwise, and runs in your browser. Search by keyword, filter the full directory, or start with an editorial category hub that explains the method and common mistakes.
       </p>
-      <div className="mt-6">
+
+      <section className="mt-8" aria-labelledby="tool-category-hubs">
+        <div className="flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <h2 id="tool-category-hubs" className="font-display text-2xl font-bold tracking-tight">Explore by geographic task</h2>
+            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-mute">These category pages group related tools with methodology notes, key terms, practical guidance and links to relevant MapBench guides and studies.</p>
+          </div>
+          <span className="font-sans text-xs font-bold text-mute">{TOOLS.length} tools across {CATEGORIES.length} categories</span>
+        </div>
+        <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {CATEGORIES.map((category) => {
+            const count = TOOLS.filter((tool) => tool.category === category.id).length;
+            return (
+              <Link key={category.id} href={`/tools/category/${category.id}`} className="card group p-4 transition-colors hover:border-brand">
+                <div className="flex items-center justify-between gap-3">
+                  <h3 className="font-display text-lg font-bold group-hover:text-brand-strong">{category.label}</h3>
+                  <span className="chip">{count}</span>
+                </div>
+                <p className="mt-2 text-sm leading-relaxed text-mute">{category.short}</p>
+                <span className="mt-3 block font-sans text-xs font-extrabold text-brand-strong">Open category guide →</span>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
+      <div className="mt-10 border-t border-line pt-8">
         <Suspense fallback={<div className="card p-10 text-center text-sm text-mute">Loading directory…</div>}>
           <ToolsDirectory />
         </Suspense>
