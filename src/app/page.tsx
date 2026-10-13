@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CATEGORIES, TOOLS, popularTools } from "@/lib/registry";
 import { ALL_GUIDES } from "@/data/allGuides";
+import { STUDIES } from "@/data/studies";
 import BlankMapsHomeGrid from "@/components/BlankMapsHomeGrid";
 
 export const metadata: Metadata = {
@@ -32,7 +33,7 @@ const POPULAR_QUESTIONS: { q: string; href: string }[] = [
 ];
 
 const HOME_FAQ: [string, string][] = [
-  ["What is MapBench?", "MapBench is a free collection of interactive map tools, geographic calculators, printable blank maps and practical mapping guides. Use it for distance, radius, drive time, coordinates, elevation, GPS files, location questions and more."],
+  ["What is MapBench?", "MapBench is a free collection of interactive map tools, geographic calculators, printable blank maps, original geographic studies and practical mapping guides. Use it for distance, radius, drive time, coordinates, elevation, GPS files, location questions and more."],
   ["Are the tools really free?", "Yes. Public MapBench tools are free to use and do not require an account."],
   ["Do the tools work on mobile?", "Yes. MapBench is responsive and most tools work in modern mobile browsers. Location tools can use device location when you grant permission."],
   ["What data sources does MapBench use?", "MapBench uses documented public and open geographic sources including OpenStreetMap-based mapping and geocoding, public routing services, Natural Earth, US Census data and Copernicus elevation data where relevant."],
@@ -58,11 +59,11 @@ export default function HomePage() {
             Map Tools That Explain the Answer
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-[15px] leading-relaxed text-mute sm:text-base">
-            {TOOLS.length} interactive geographic tools, printable blank maps and practical mapping guides. Measure distance, compare drive time, draw radius areas, work with coordinates, inspect GPS files and understand the method behind the result.
+            {TOOLS.length} interactive geographic tools, printable blank maps, original geographic studies and practical mapping guides. Measure distance, compare drive time, draw radius areas, work with coordinates, inspect GPS files and understand the method behind the result.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3 font-sans">
             <Link href="/tools" className="btn btn-primary px-6 py-3 text-[15px]">Explore All {TOOLS.length} Tools</Link>
-            <Link href="/guides" className="btn btn-ghost bg-card/80 px-6 py-3 text-[15px] backdrop-blur-sm">Read Mapping Guides</Link>
+            <Link href="/studies" className="btn btn-ghost bg-card/80 px-6 py-3 text-[15px] backdrop-blur-sm">Explore Original Studies</Link>
           </div>
         </div>
       </section>
@@ -140,6 +141,29 @@ export default function HomePage() {
           <p className="mt-3 max-w-3xl">Clean outline maps rendered from public geographic geometry for worksheets, presentations and design work. Download available formats without watermarks.</p>
           <div className="mt-5"><BlankMapsHomeGrid /></div>
           <p className="mt-4 font-sans text-sm"><Link href="/maps" className="font-extrabold text-brand-strong hover:underline">Browse all blank maps →</Link></p>
+        </div>
+      </section>
+
+      <section aria-labelledby="studies" className="border-t border-line py-12">
+        <div className="mx-auto max-w-5xl px-4">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="font-sans text-[11px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">Original MapBench research</p>
+              <h2 id="studies" className="sect-h mt-2">Geographic studies built from transparent calculations</h2>
+              <p className="mt-3 max-w-3xl">These studies use MapBench datasets and documented geographic methods to answer questions that go beyond a single calculator. Each page explains the dataset, formula, ranking method and limitations so the result can be checked rather than treated as a black box.</p>
+            </div>
+            <Link href="/studies" className="font-sans text-sm font-extrabold text-brand-strong hover:underline">Browse all studies →</Link>
+          </div>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {STUDIES.slice(0, 3).map((study) => (
+              <Link key={study.slug} href={`/studies/${study.slug}`} className="card group p-5 transition-colors hover:border-brand">
+                <div className="text-[10px] font-extrabold uppercase tracking-wide text-mute">Data study · {study.date}</div>
+                <h3 className="mt-2 font-display text-[17px] font-bold leading-snug group-hover:text-brand-strong">{study.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-mute">{study.description}</p>
+                <span className="mt-4 block font-sans text-sm font-extrabold text-brand-strong">Read study →</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
