@@ -45,7 +45,7 @@ export default function ToolClient({ slug, locale }: { slug: string; locale?: Lo
         </ol>
       </nav>
 
-      <section className="relative mb-6 overflow-hidden rounded-2xl border border-line bg-gradient-to-br from-white via-white to-brand-soft/40 p-5 shadow-[0_14px_45px_rgba(15,23,42,0.07)] sm:p-7">
+      <section className="relative mb-5 overflow-hidden rounded-2xl border border-line bg-gradient-to-br from-white via-white to-brand-soft/35 p-5 shadow-[0_12px_36px_rgba(15,23,42,0.06)] sm:p-7">
         <div className="pointer-events-none absolute -right-16 -top-20 h-56 w-56 rounded-full bg-brand-soft/70 blur-3xl" />
         <div className="relative flex flex-wrap items-start justify-between gap-5">
           <div className="max-w-3xl">
@@ -61,72 +61,79 @@ export default function ToolClient({ slug, locale }: { slug: string; locale?: Lo
               <span className="rounded-lg border border-line bg-white/80 px-2.5 py-1.5">✓ Shareable results</span>
             </div>
           </div>
-          <div className="flex shrink-0 flex-wrap gap-2">
-            <ShareControls locale={locale} />
-          </div>
+          <div className="flex shrink-0 flex-wrap gap-2"><ShareControls locale={locale} /></div>
         </div>
       </section>
 
       {Component && (
-        <section className="relative overflow-hidden rounded-2xl border border-line bg-white shadow-[0_16px_55px_rgba(15,23,42,0.08)]">
+        <section className="relative overflow-hidden rounded-2xl border border-line bg-white shadow-[0_14px_42px_rgba(15,23,42,0.07)]">
           <div className="flex items-center justify-between border-b border-line bg-gradient-to-r from-well/60 to-white px-4 py-3 sm:px-5">
             <div className="flex items-center gap-2">
               <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-soft text-brand-strong" aria-hidden>⌁</span>
-              <div>
-                <div className="text-xs font-extrabold uppercase tracking-[0.12em] text-ink">Tool workspace</div>
-                <div className="text-[11px] text-mute">Change inputs and results update here</div>
-              </div>
+              <div><div className="text-xs font-extrabold uppercase tracking-[0.12em] text-ink">Tool workspace</div><div className="text-[11px] text-mute">Set your inputs, inspect the map and read the result</div></div>
             </div>
             <div className="hidden items-center gap-2 text-[11px] text-mute sm:flex"><span className="h-2 w-2 rounded-full bg-emerald-500" />Ready</div>
           </div>
           <div className="p-4 sm:p-5 lg:p-6">
-            <Suspense fallback={<div className="flex h-80 items-center justify-center"><Spinner label="Loading tool…" /></div>}>
-              <Component params={tool.props} />
-            </Suspense>
+            <Suspense fallback={<div className="flex h-80 items-center justify-center"><Spinner label="Loading tool…" /></div>}><Component params={tool.props} /></Suspense>
           </div>
         </section>
       )}
 
-      <div className="mt-10">
-        {localized ? (
-          <section className="doc space-y-6" aria-label="Tool explanation">
-            <section><h2 className="sect-h">{ui?.quickAnswer ?? "Quick answer"}</h2><p className="mt-3 text-mute">{localized.quickAnswer}</p></section>
-            <section><h2 className="sect-h">{localized.longForm.title}</h2>{localized.longForm.paras.map((paragraph, i) => <p key={i} className="mt-3 text-mute leading-relaxed">{paragraph}</p>)}</section>
-          </section>
-        ) : <ToolContent tool={tool} />}
-      </div>
+      <div className="mx-auto mt-8 max-w-4xl">
+        <nav aria-label="On this page" className="rounded-xl border border-line bg-white px-4 py-3 shadow-sm">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+            <span className="font-extrabold text-ink">On this page</span>
+            <a href="#how-to-use" className="font-semibold text-brand-strong hover:underline">How to use</a>
+            <a href="#tool-guide" className="font-semibold text-brand-strong hover:underline">Guide &amp; examples</a>
+            {faqs.length > 0 && <a href="#faq" className="font-semibold text-brand-strong hover:underline">FAQ</a>}
+            <a href="#trust" className="font-semibold text-brand-strong hover:underline">Sources &amp; privacy</a>
+          </div>
+        </nav>
 
-      <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_320px]">
-        <div className="min-w-0 space-y-8">
-          <section aria-labelledby="howto" className="rounded-2xl border border-line bg-white p-5 shadow-sm">
-            <h2 id="howto" className="font-display text-xl font-bold">{ui?.howTo ?? "How to use"}</h2>
-            <ol className="mt-4 grid gap-3 sm:grid-cols-2">
-              {(localized?.howTo ?? tool.howTo).map((step, i) => (
-                <li key={i} className="flex gap-3 rounded-xl bg-well/55 p-3 text-sm leading-relaxed text-mute">
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-brand-soft text-xs font-extrabold text-brand-strong">{i + 1}</span>{step}
-                </li>
-              ))}
-            </ol>
-          </section>
+        <section id="how-to-use" aria-labelledby="howto" className="mt-8 rounded-2xl border border-line bg-white p-5 shadow-sm sm:p-6">
+          <div className="mb-4"><div className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">Simple workflow</div><h2 id="howto" className="mt-1 font-display text-2xl font-bold">{ui?.howTo ?? "How to use this tool"}</h2></div>
+          <ol className="grid gap-3 md:grid-cols-3">
+            {(localized?.howTo ?? tool.howTo).map((step, i) => (
+              <li key={i} className="flex gap-3 rounded-xl border border-line bg-well/35 p-4 text-sm leading-relaxed text-mute">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand text-xs font-extrabold text-white">{i + 1}</span><span className="pt-1">{step}</span>
+              </li>
+            ))}
+          </ol>
+        </section>
 
-          {tool.method && (!locale || localized?.method) && (
-            <section aria-labelledby="method" className="rounded-2xl border border-line bg-white p-5 shadow-sm">
-              <h2 id="method" className="font-display text-xl font-bold">{ui?.methodology ?? "Methodology & accuracy"}</h2>
-              <p className="mt-2 text-sm leading-relaxed text-mute">{localized?.method ?? tool.method} Read more on the <Link href={prefix + "/methodology"} className="font-semibold text-brand-strong hover:underline">methodology page</Link>.</p>
+        <div id="tool-guide" className="mt-10">
+          {localized ? (
+            <section className="doc space-y-8" aria-label="Tool explanation">
+              <section><h2 className="sect-h">{ui?.quickAnswer ?? "Quick answer"}</h2><p className="mt-3 text-mute">{localized.quickAnswer}</p></section>
+              <section><h2 className="sect-h">{localized.longForm.title}</h2>{localized.longForm.paras.map((paragraph, i) => <p key={i} className="mt-3 text-mute leading-relaxed">{paragraph}</p>)}</section>
+              {tool.method && localized.method && <section><h2 className="sect-h">{ui?.methodology ?? "Methodology & accuracy"}</h2><p className="mt-3 text-mute">{localized.method}</p></section>}
             </section>
-          )}
-
-          {faqs.length > 0 && (
-            <section aria-labelledby="faq"><h2 id="faq" className="font-display text-xl font-bold">{ui?.faq ?? "Frequently asked questions"}</h2><div className="mt-3 space-y-2">{faqs.map(([q, a]) => <details key={q} className="card group rounded-xl px-4 py-3"><summary className="cursor-pointer list-none text-sm font-semibold marker:hidden"><span className="mr-2 text-brand-strong" aria-hidden>+</span>{q}</summary><p className="mt-2 border-t border-line pt-2 text-sm leading-relaxed text-mute">{a}</p></details>)}</div></section>
-          )}
-
-          <section aria-labelledby="related"><h2 id="related" className="font-display text-xl font-bold">{ui?.relatedTools ?? "Related tools"}</h2><div className="mt-3 grid gap-3 sm:grid-cols-2">{(locale ? related.filter(r => !!getLocalizedTool(locale, r.slug)) : related).map((r) => <Link key={r.slug} href={prefix + "/tools/" + r.slug} className="card group rounded-xl p-4 transition-all hover:-translate-y-0.5 hover:border-brand hover:shadow-md"><div className="text-sm font-bold group-hover:text-brand-strong">{locale ? getLocalizedTool(locale, r.slug)?.name : r.name}</div><div className="mt-1 line-clamp-2 text-xs leading-relaxed text-mute">{locale ? getLocalizedTool(locale, r.slug)?.short : r.short}</div></Link>)}</div></section>
+          ) : <ToolContent tool={tool} />}
         </div>
 
-        <aside className="space-y-4">
-          <div className="card rounded-2xl p-4"><div className="label">{ui?.dataPrivacy ?? "Data & privacy"}</div><ul className="mt-2 space-y-2 text-xs leading-relaxed text-mute">{locale ? null : <><li>✓ Browser-first processing where supported</li><li>✓ External data sources are documented</li><li>✓ No account required</li><li>✓ See <Link href="/data-sources" className="font-semibold text-brand-strong hover:underline">data sources</Link> &amp; <Link href="/privacy" className="font-semibold text-brand-strong hover:underline">privacy</Link></li></>}{locale && <li>✓ {ui?.dataPrivacy}</li>}</ul></div>
-          <div className="card rounded-2xl p-4"><div className="label">{ui?.category ?? "Category"}</div>{category && <><div className="mt-2 flex items-center gap-2 text-sm font-bold"><span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ background: category.tone }} />{locale ? CATEGORY_LABELS[locale][category.id] ?? category.label : category.label}</div>{!locale && <p className="mt-2 text-xs leading-relaxed text-mute">{category.short}</p>}<Link href={prefix + "/tools/category/" + category.id} className="mt-3 inline-block text-xs font-bold text-brand-strong hover:underline">{ui?.browseAll ?? "Browse all"} {locale ? CATEGORY_LABELS[locale][category.id] ?? category.label : category.label} →</Link></>}</div>
-        </aside>
+        {faqs.length > 0 && (
+          <section id="faq" aria-labelledby="faq-heading" className="mt-10">
+            <div className="max-w-3xl"><div className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">Common questions</div><h2 id="faq-heading" className="mt-1 font-display text-2xl font-bold">{ui?.faq ?? "Frequently asked questions"}</h2><p className="mt-2 text-sm leading-relaxed text-mute">Clear answers about the calculation, accuracy and appropriate use.</p></div>
+            <div className="mt-4 divide-y divide-line overflow-hidden rounded-2xl border border-line bg-white shadow-sm">
+              {faqs.map(([q, a]) => (
+                <details key={q} className="group px-5 py-4 open:bg-well/30">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-bold marker:hidden"><span>{q}</span><span className="text-xl font-light text-brand-strong transition-transform group-open:rotate-45" aria-hidden>+</span></summary>
+                  <p className="max-w-3xl pt-3 text-sm leading-7 text-mute">{a}</p>
+                </details>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {locale && related.length > 0 && (
+          <section className="mt-10" aria-labelledby="related"><h2 id="related" className="font-display text-2xl font-bold">{ui?.relatedTools ?? "Related tools"}</h2><div className="mt-4 grid gap-3 sm:grid-cols-2">{related.filter(r => !!getLocalizedTool(locale, r.slug)).map((r) => <Link key={r.slug} href={prefix + "/tools/" + r.slug} className="card group rounded-xl p-4 transition-all hover:-translate-y-0.5 hover:border-brand hover:shadow-md"><div className="text-sm font-bold group-hover:text-brand-strong">{getLocalizedTool(locale, r.slug)?.name}</div><div className="mt-1 line-clamp-2 text-xs leading-relaxed text-mute">{getLocalizedTool(locale, r.slug)?.short}</div></Link>)}</div></section>
+        )}
+
+        <section id="trust" className="mt-10 grid gap-3 sm:grid-cols-2">
+          <div className="rounded-2xl border border-line bg-white p-5 shadow-sm"><div className="label">{ui?.dataPrivacy ?? "Data & privacy"}</div><ul className="mt-3 space-y-2 text-sm leading-relaxed text-mute">{locale ? <li>✓ {ui?.dataPrivacy}</li> : <><li>✓ Browser-first processing where supported</li><li>✓ External data sources are documented</li><li>✓ No account required for public tools</li><li>✓ <Link href="/data-sources" className="font-semibold text-brand-strong hover:underline">Data sources</Link> and <Link href="/privacy" className="font-semibold text-brand-strong hover:underline">privacy policy</Link></li></>}</ul></div>
+          <div className="rounded-2xl border border-line bg-white p-5 shadow-sm"><div className="label">{ui?.category ?? "Category"}</div>{category && <><div className="mt-3 flex items-center gap-2 text-sm font-bold"><span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ background: category.tone }} />{locale ? CATEGORY_LABELS[locale][category.id] ?? category.label : category.label}</div>{!locale && <p className="mt-2 text-sm leading-relaxed text-mute">{category.short}</p>}<Link href={prefix + "/tools/category/" + category.id} className="mt-3 inline-block text-sm font-bold text-brand-strong hover:underline">{ui?.browseAll ?? "Browse all"} {locale ? CATEGORY_LABELS[locale][category.id] ?? category.label : category.label} →</Link></>}</div>
+        </section>
       </div>
     </div>
   );
