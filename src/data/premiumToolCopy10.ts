@@ -1,4 +1,4 @@
-import type { ToolCopy } from "./toolCopy";
+import type { ToolCopy } from "./toolCopyTypes";
 
 export const PREMIUM_TOOL_COPY_10: Record<string, ToolCopy> = {
   "lat-lon-to-web-mercator": { h2: "Web Mercator conversion is a projection step, not a change in the physical location", paras: ["Converting WGS84 latitude/longitude to EPSG:3857 produces projected X/Y values in metres used by most web-map tile systems. The same real-world point is being represented in a different coordinate system so it can be drawn efficiently on a flat map.","Web Mercator stretches distances and areas increasingly toward the poles and is undefined at 90° latitude, which is why implementations clamp near ±85.0511°. Use it for web mapping, not legal area or survey measurements."] },
