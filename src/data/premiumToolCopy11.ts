@@ -1,4 +1,4 @@
-import type { ToolCopy } from "./toolCopy";
+import type { ToolCopy } from "./toolCopyTypes";
 
 export const PREMIUM_TOOL_COPY_11: Record<string, ToolCopy> = {
   "csv-coordinate-validator": { h2: "Coordinate CSV validation should happen before the file reaches a map", paras: ["A coordinate spreadsheet can look normal while still containing missing headers, swapped fields, text values or out-of-range latitude and longitude. Catching those issues before import prevents markers from disappearing, landing in the wrong hemisphere or breaking downstream processing.","Range checks only prove that numbers are plausible, not that they describe the intended locations. A row can contain valid-looking coordinates for the wrong place, so spot-check known records after structural validation."] },
