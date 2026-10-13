@@ -70,14 +70,12 @@ const components: Record<string, () => Promise<{ default: ComponentType<{ params
   longtail6: () => import("./LongtailTools6"),
   longtail7: () => import("./LongtailTools7"),
   longtail8: () => import("./LongtailTools8"),
-  // Gap-fill batch A — map makers & data visualisation
   mapdrawer: () => import("./MapMakers").then((m) => ({ default: m.MapDrawerTool })),
   maplegend: () => import("./MapMakers").then((m) => ({ default: m.MapLegendTool })),
   colormap: () => import("./MapMakers").then((m) => ({ default: m.ColorMapTool })),
   countycolor: () => import("./MapMakers").then((m) => ({ default: m.CountyChoroplethTool })),
   zipmap: () => import("./MapMakers").then((m) => ({ default: m.ZipMapTool })),
   sizecmp: () => import("./MapMakers").then((m) => ({ default: m.CountrySizeTool })),
-  // Gap-fill batch B — location & reference
   natpark: () => import("./GapGeo").then((m) => ({ default: m.NationalParkTool })),
   maptunnel: () => import("./GapGeo").then((m) => ({ default: m.MapTunnelTool })),
   geocenter: () => import("./GapGeo").then((m) => ({ default: m.GeoCenterTool })),
@@ -87,13 +85,15 @@ const components: Record<string, () => Promise<{ default: ComponentType<{ params
   dateline: () => import("./GapGeo").then((m) => ({ default: m.DateLineTool })),
   zipdist: () => import("./GapGeo").then((m) => ({ default: m.ZipDistanceTool })),
   citydist: () => import("./GapGeo").then((m) => ({ default: m.CityDistanceTool })),
-  // Gap-fill batch C — coordinates, time & polar
   latlngplot: () => import("./GapGeo2").then((m) => ({ default: m.LatLngPlotTool })),
   randloc: () => import("./GapGeo2").then((m) => ({ default: m.RandomLocationTool })),
   ustzmap: () => import("./GapGeo2").then((m) => ({ default: m.UsTimezoneTool })),
   myelev: () => import("./GapGeo2").then((m) => ({ default: m.MyElevationTool })),
   arctic: () => import("./GapGeo2").then((m) => ({ default: m.ArcticTool })),
   antarctic: () => import("./GapGeo2").then((m) => ({ default: m.AntarcticTool })),
+  gmapembed: () => import("./FlagshipTools").then((m) => ({ default: m.GoogleMapsEmbedTool })),
+  sharelinks: () => import("./FlagshipTools").then((m) => ({ default: m.ShareLocationLinkTool })),
+  disttable: () => import("./FlagshipTools").then((m) => ({ default: m.CoordinateDistanceTableTool })),
 };
 
 export const toolComponents: Record<string, ComponentType<{ params?: Record<string, unknown> }>> = Object.fromEntries(
