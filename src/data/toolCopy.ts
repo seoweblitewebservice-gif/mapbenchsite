@@ -17,6 +17,7 @@ import { PREMIUM_TOOL_COPY_3 } from "./premiumToolCopy3";
 import { PREMIUM_TOOL_COPY_4 } from "./premiumToolCopy4";
 import { PREMIUM_TOOL_COPY_5 } from "./premiumToolCopy5";
 import { PREMIUM_TOOL_COPY_6 } from "./premiumToolCopy6";
+import { PREMIUM_TOOL_COPY_7 } from "./premiumToolCopy7";
 
 export interface ToolCopy { h2: string; paras: string[] }
 
@@ -41,4 +42,5 @@ export const TOOL_COPY: Record<string, ToolCopy> = {
   ...PREMIUM_TOOL_COPY_4,
   ...PREMIUM_TOOL_COPY_5,
   ...PREMIUM_TOOL_COPY_6,
+  ...PREMIUM_TOOL_COPY_7,
 };
