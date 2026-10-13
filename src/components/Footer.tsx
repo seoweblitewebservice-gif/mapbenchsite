@@ -26,7 +26,8 @@ const MAPS: [string, string][] = [
 const RESOURCES: [string, string][] = [
   ["/tools", `All ${TOOLS.length} tools`],
   ["/maps", "Blank map library"],
-  ["/guides", "Blog"],
+  ["/studies", "Original studies"],
+  ["/guides", "Mapping guides"],
   ["/methodology", "Methodology"],
   ["/data-sources", "Data sources"],
   ["/editorial-policy", "Editorial policy"],
@@ -41,7 +42,7 @@ export default function Footer() {
         <div className="lg:col-span-1">
           <div className="font-display text-lg font-bold text-[#f3edda]">map<span className="text-[#7cc39d]">bench</span></div>
           <p className="mt-3 font-serif text-sm leading-relaxed text-[#a89f8c]">
-            Free geographic tools and practical mapping guides built on documented methods and open data.
+            Free geographic tools, original data studies and practical mapping guides built on documented methods and open data.
           </p>
           <div className="mt-4 space-y-1 text-xs text-[#a89f8c]">
             <a href="mailto:support@mapbench.site" className="block hover:text-[#7cc39d] hover:underline">support@mapbench.site</a>
