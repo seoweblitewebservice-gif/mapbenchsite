@@ -5,6 +5,7 @@ import { CATEGORIES, TOOLS } from "@/lib/registry";
 import { LOCALES } from "@/lib/i18n";
 import { ALL_GUIDES } from "@/data/allGuides";
 import { STUDIES } from "@/data/studies";
+import { REFERENCE_COUNTRIES } from "@/data/referenceCountries";
 
 const BASE = "https://www.mapbench.site";
 
@@ -14,6 +15,8 @@ const STATIC_PATHS = [
   "/maps",
   "/guides",
   "/studies",
+  "/reference",
+  "/author/aladdin",
   "/about",
   "/contact",
   "/methodology",
@@ -45,7 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries: MetadataRoute.Sitemap = STATIC_PATHS.map((path) => ({
     url: `${BASE}${path || "/"}`,
     changeFrequency: path === "" ? "weekly" : "monthly",
-    priority: path === "" ? 1 : ["/tools", "/maps", "/guides", "/studies"].includes(path) ? 0.9 : 0.6,
+    priority: path === "" ? 1 : ["/tools", "/maps", "/guides", "/studies", "/reference"].includes(path) ? 0.9 : 0.6,
   }));
 
   const categoryEntries: MetadataRoute.Sitemap = CATEGORIES.map((category) => ({
@@ -72,6 +75,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(study.date),
     changeFrequency: "monthly",
     priority: 0.8,
+  }));
+
+  const referenceEntries: MetadataRoute.Sitemap = REFERENCE_COUNTRIES.map((country) => ({
+    url: `${BASE}/reference/${country.slug}`,
+    changeFrequency: "quarterly",
+    priority: 0.72,
   }));
 
   const mapEntries: MetadataRoute.Sitemap = ALL_COUNTRY_MAP_SLUGS.map((slug) => ({
@@ -107,6 +116,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...toolEntries,
     ...guideEntries,
     ...studyEntries,
+    ...referenceEntries,
     ...mapEntries,
     ...localeHubEntries,
     ...localizedToolEntries,
