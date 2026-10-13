@@ -13,7 +13,9 @@ export async function generateMetadata({params}:{params:Promise<{locale:string}>
   if(!isLocale(locale))return{};
   const ui=getLocaleUI(locale);
   const languages: Record<string,string>={en:`${BASE}/tools`,"x-default":`${BASE}/tools`};
-  for(const l of LOCALES) languages[l]=`${BASE}/${l}/tools`;
+  for(const l of LOCALES){
+    if(localizedToolSlugs(l).length>0) languages[l]=`${BASE}/${l}/tools`;
+  }
   return {
     title:`${ui.mapTools} · MapBench`,
     description:ui.browseDirectory,
