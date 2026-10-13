@@ -150,7 +150,8 @@ export default function Header() {
             )}
           </div>
 
-          <Link href="/guides" className="rounded px-2.5 py-1.5 text-[13px] font-bold hover:text-brand-strong">Blog</Link>
+          <Link href="/studies" className="rounded px-2.5 py-1.5 text-[13px] font-bold hover:text-brand-strong">Studies</Link>
+          <Link href="/guides" className="rounded px-2.5 py-1.5 text-[13px] font-bold hover:text-brand-strong">Guides</Link>
           <Link href="/about" className="rounded px-2.5 py-1.5 text-[13px] font-bold hover:text-brand-strong">About</Link>
           <button type="button" className="ml-2 rounded border border-line px-2.5 py-1 text-[12px] font-bold text-mute hover:border-brand hover:text-brand-strong" onClick={() => window.dispatchEvent(new CustomEvent("sf-open-search"))}>Search <kbd className="ml-1 text-[10px]">⌘K</kbd></button>
           <LanguageSwitcher />
@@ -172,7 +173,8 @@ export default function Header() {
             <div className="flex flex-wrap gap-4 text-sm font-extrabold">
               <Link href="/tools" className="text-brand-strong">All tools</Link>
               <Link href="/maps" className="text-brand-strong">Maps</Link>
-              <Link href="/guides" className="text-brand-strong">Blog</Link>
+              <Link href="/studies" className="text-brand-strong">Studies</Link>
+              <Link href="/guides" className="text-brand-strong">Guides</Link>
               <Link href="/about" className="text-brand-strong">About</Link>
             </div>
             <button type="button" className="btn btn-ghost btn-sm w-full" onClick={() => window.dispatchEvent(new CustomEvent("sf-open-search"))}>Search tools…</button>
