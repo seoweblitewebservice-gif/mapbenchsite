@@ -42,25 +42,20 @@ const ALL_COUNTRY_MAP_SLUGS = Array.from(
 ).sort();
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-
   const staticEntries: MetadataRoute.Sitemap = STATIC_PATHS.map((path) => ({
     url: `${BASE}${path || "/"}`,
-    lastModified: now,
     changeFrequency: path === "" ? "weekly" : "monthly",
     priority: path === "" ? 1 : ["/tools", "/maps", "/guides", "/studies"].includes(path) ? 0.9 : 0.6,
   }));
 
   const categoryEntries: MetadataRoute.Sitemap = CATEGORIES.map((category) => ({
     url: `${BASE}/tools/category/${category.id}`,
-    lastModified: now,
     changeFrequency: "monthly",
     priority: 0.82,
   }));
 
   const toolEntries: MetadataRoute.Sitemap = TOOLS.map((tool) => ({
     url: `${BASE}/tools/${tool.slug}`,
-    lastModified: now,
     changeFrequency: "monthly",
     priority: tool.popular ? 0.9 : 0.7,
   }));
@@ -81,7 +76,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const mapEntries: MetadataRoute.Sitemap = ALL_COUNTRY_MAP_SLUGS.map((slug) => ({
     url: `${BASE}/maps/blank/${slug}`,
-    lastModified: now,
     changeFrequency: "yearly",
     priority: 0.65,
   }));
@@ -89,13 +83,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const localeHubEntries: MetadataRoute.Sitemap = LOCALES.flatMap((locale) => [
     {
       url: `${BASE}/${locale}`,
-      lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.6,
     },
     {
       url: `${BASE}/${locale}/tools`,
-      lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.62,
     },
@@ -104,7 +96,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const localizedToolEntries: MetadataRoute.Sitemap = LOCALES.flatMap((locale) =>
     TOOLS.map((tool) => ({
       url: `${BASE}/${locale}/tools/${tool.slug}`,
-      lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.55,
     })),
