@@ -22,8 +22,8 @@ import { PREMIUM_TOOL_COPY_8 } from "./premiumToolCopy8";
 import { PREMIUM_TOOL_COPY_9 } from "./premiumToolCopy9";
 import { PREMIUM_TOOL_COPY_10 } from "./premiumToolCopy10";
 import { PREMIUM_TOOL_COPY_11 } from "./premiumToolCopy11";
-
-export interface ToolCopy { h2: string; paras: string[] }
+import type { ToolCopy } from "./toolCopyTypes";
+export type { ToolCopy } from "./toolCopyTypes";
 
 /** Unique on-page content per tool slug — written for usefulness, not keyword stuffing. */
 export const TOOL_COPY: Record<string, ToolCopy> = {
