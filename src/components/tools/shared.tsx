@@ -2,7 +2,7 @@
 import dynamic from "next/dynamic";
 import { useState } from "react";
 import type { LatLng } from "@/lib/geo";
-import { geolocation } from "@/lib/geocode";
+import { geolocation, ipGeolocation } from "@/lib/geocode";
 import LocationSearch from "@/components/LocationSearch";
 
 // MapLibre must never render on the server.
@@ -22,17 +22,35 @@ export function PlaceField({ label, value, onChange, placeholder }: {
 }) {
   const [manual, setManual] = useState("");
   const [locating, setLocating] = useState(false);
-  const [geoError, setGeoError] = useState<string | null>(null);
+  const [geoNote, setGeoNote] = useState<string | null>(null);
 
   const useMyLocation = async () => {
-    setGeoError(null);
+    setGeoNote(null);
     setLocating(true);
     try {
       const pos = await geolocation();
       setManual("");
-      onChange({ lat: pos.lat, lng: pos.lng, label: "My location" });
-    } catch (error) {
-      setGeoError(error instanceof Error ? error.message : "Could not determine your location.");
+      onChange({ lat: pos.lat, lng: pos.lng, label: "My precise location" });
+    } catch {
+      // If browser/device GPS is blocked, gracefully fall back to an approximate
+      // network/IP location instead of leaving the user with a blocking error.
+      try {
+        const approx = await ipGeolocation();
+        if (approx) {
+          const labelParts = [approx.city, approx.region, approx.country].filter(Boolean);
+          setManual("");
+          onChange({
+            lat: approx.lat,
+            lng: approx.lng,
+            label: labelParts.length ? `${labelParts.join(", ")} (approx.)` : "Approximate location",
+          });
+          setGeoNote("Precise location is blocked, so an approximate network location was used instead. You can still search or paste exact coordinates.");
+        } else {
+          setGeoNote("Precise location is blocked. Search a place, click the map, or paste coordinates instead.");
+        }
+      } catch {
+        setGeoNote("Precise location is blocked. Search a place, click the map, or paste coordinates instead.");
+      }
     } finally {
       setLocating(false);
     }
@@ -47,7 +65,7 @@ export function PlaceField({ label, value, onChange, placeholder }: {
           initialValue={value?.label ?? ""}
           onSelect={(h) => {
             setManual("");
-            setGeoError(null);
+            setGeoNote(null);
             onChange({ lat: h.lat, lng: h.lng, label: h.label });
           }}
         />
@@ -69,7 +87,7 @@ export function PlaceField({ label, value, onChange, placeholder }: {
           onChange={(e) => {
             const next = e.target.value;
             setManual(next);
-            setGeoError(null);
+            setGeoNote(null);
             const m = next.match(/^\s*(-?\d+(?:\.\d+)?)\s*[, ]\s*(-?\d+(?:\.\d+)?)\s*$/);
             if (m) {
               const lat = parseFloat(m[1]), lng = parseFloat(m[2]);
@@ -81,7 +99,7 @@ export function PlaceField({ label, value, onChange, placeholder }: {
           <button
             type="button"
             className="btn btn-ghost btn-sm whitespace-nowrap"
-            onClick={() => { setManual(""); setGeoError(null); onChange(null); }}
+            onClick={() => { setManual(""); setGeoNote(null); onChange(null); }}
             aria-label={`Clear ${label}`}
           >
             Clear
@@ -94,7 +112,11 @@ export function PlaceField({ label, value, onChange, placeholder }: {
           <span>{value.label || `${value.lat.toFixed(5)}, ${value.lng.toFixed(5)}`}</span>
         </div>
       )}
-      {geoError && <p className="mt-2 text-xs leading-relaxed text-ember">{geoError}</p>}
+      {geoNote && (
+        <div className="mt-2 rounded-lg border border-line bg-well/50 px-3 py-2 text-[11px] leading-relaxed text-mute">
+          {geoNote}
+        </div>
+      )}
     </div>
   );
 }
