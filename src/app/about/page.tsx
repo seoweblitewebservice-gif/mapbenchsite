@@ -15,9 +15,9 @@ export default function AboutPage() {
   const personJsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "@id": "https://www.mapbench.site/about#aladdin",
+    "@id": "https://www.mapbench.site/author/aladdin#person",
     name: "Aladdin",
-    url: "https://www.mapbench.site/about",
+    url: "https://www.mapbench.site/author/aladdin",
     jobTitle: "Founder & Editor of MapBench",
     worksFor: { "@type": "Organization", name: "MapBench", url: "https://www.mapbench.site" },
     knowsAbout: ["Geographic tools", "Mapping", "Coordinate systems", "Geodesic calculations", "GIS data", "Web mapping"],
@@ -40,7 +40,7 @@ export default function AboutPage() {
 
         <h2>Founder and editor</h2>
         <p>
-          <strong>Aladdin</strong> is the founder and editor of MapBench. He is responsible for the site&apos;s tool direction, editorial standards,
+          <Link href="/author/aladdin" className="font-semibold text-brand-strong hover:underline">Aladdin</Link> is the founder and editor of MapBench. He is responsible for the site&apos;s tool direction, editorial standards,
           methodology review and corrections process. MapBench content is written to explain what each calculation means, what data it depends on,
           and where a result should be verified with an official or professional source.
         </p>
@@ -85,6 +85,7 @@ export default function AboutPage() {
       </div>
       <div className="mt-8 flex flex-wrap gap-2">
         <Link href="/tools" className="btn btn-primary">Explore the tools</Link>
+        <Link href="/author/aladdin" className="btn btn-ghost">Meet Aladdin</Link>
         <Link href="/editorial-policy" className="btn btn-ghost">Editorial policy</Link>
         <Link href="/contact" className="btn btn-ghost">Contact</Link>
       </div>
