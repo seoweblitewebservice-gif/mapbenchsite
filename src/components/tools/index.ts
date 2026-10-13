@@ -31,7 +31,7 @@ const components: Record<string, () => Promise<{ default: ComponentType<{ params
   fuel: () => import("./TripTools").then((m) => ({ default: m.FuelCostTool })),
   walkingtime: () => import("./TripTools").then((m) => ({ default: m.WalkingTimeTool })),
   nearestairport: () => import("./TripTools").then((m) => ({ default: m.NearestAirportTool })),
-  tztool: () => import("./TimeExtra").then((m) => ({ default: m.TimezoneTool })),
+  tztool: () => import("./TimezoneProTool"),
   meeting: () => import("./TimeExtra").then((m) => ({ default: m.MeetingTool })),
   daylight: () => import("./TimeExtra").then((m) => ({ default: m.DaylightChartTool })),
   golden: () => import("./TimeExtra").then((m) => ({ default: m.GoldenHourTool })),
