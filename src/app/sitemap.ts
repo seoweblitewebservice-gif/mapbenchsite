@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { TOOLS } from "@/lib/registry";
+import { CATEGORIES, TOOLS } from "@/lib/registry";
 import { ALL_GUIDES } from "@/data/allGuides";
 import { STUDIES } from "@/data/studies";
 
@@ -47,6 +47,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: path === "" ? 1 : ["/tools", "/maps", "/guides", "/studies"].includes(path) ? 0.9 : 0.6,
   }));
 
+  const categoryEntries: MetadataRoute.Sitemap = CATEGORIES.map((category) => ({
+    url: `${BASE}/tools/category/${category.id}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.82,
+  }));
+
   const toolEntries: MetadataRoute.Sitemap = TOOLS.map((tool) => ({
     url: `${BASE}/tools/${tool.slug}`,
     lastModified: now,
@@ -75,5 +82,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.65,
   }));
 
-  return [...staticEntries, ...toolEntries, ...guideEntries, ...studyEntries, ...mapEntries];
+  return [...staticEntries, ...categoryEntries, ...toolEntries, ...guideEntries, ...studyEntries, ...mapEntries];
 }
