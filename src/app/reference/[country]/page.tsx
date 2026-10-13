@@ -61,6 +61,7 @@ export default async function CountryReferencePage({ params }: { params: Promise
   const s = stats(geo);
   const northSouth = s.lat >= 0 ? "Northern Hemisphere" : "Southern Hemisphere";
   const eastWest = s.lon >= 0 ? "Eastern Hemisphere" : "Western Hemisphere";
+  const blankMapSlug = country === "united-states" ? "united-states-of-america" : country;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -102,7 +103,7 @@ export default async function CountryReferencePage({ params }: { params: Promise
       <section className="mt-10 rounded-xl border border-line bg-well/40 p-5">
         <h2 className="font-display text-xl font-bold">Explore {meta.name} with MapBench</h2>
         <div className="mt-4 flex flex-wrap gap-2">
-          <Link href={`/maps/blank/${meta.slug}`} className="btn btn-ghost">Blank map</Link>
+          <Link href={`/maps/blank/${blankMapSlug}`} className="btn btn-ghost">Blank map</Link>
           <Link href="/tools/map-area-calculator" className="btn btn-ghost">Measure map area</Link>
           <Link href="/tools/distance-between-two-places" className="btn btn-ghost">Distance tool</Link>
           <Link href="/guides/map-projections-explained" className="btn btn-ghost">Map projections guide</Link>
