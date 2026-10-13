@@ -1,15 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
-import { Fraunces, Manrope, Source_Serif_4 } from "next/font/google";
 import Header, { Footer } from "@/components/Header";
 import SearchPalette from "@/components/SearchPalette";
 import LanguageSuggestion from "@/components/LanguageSuggestion";
 import FullSiteTranslator from "@/components/FullSiteTranslator";
 import "./globals.css";
-
-const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", display: "swap", preload: true, weight: ["600", "700"] });
-const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope", display: "swap", preload: true, weight: ["400", "500", "600", "700", "800"] });
-const sourceSerif = Source_Serif_4({ subsets: ["latin"], variable: "--font-source-serif", display: "swap", preload: true, weight: ["400", "600"] });
 
 export const metadata: Metadata = {
   verification: {
@@ -38,8 +33,8 @@ export const metadata: Metadata = {
     description: "Free browser-first geographic tools: distance, radius, routing, coordinates, map files and more.",
   },
   robots: { index: true, follow: true },
-  authors: [{ name: "MapBench" }],
-  creator: "MapBench",
+  authors: [{ name: "Aladdin", url: "https://www.mapbench.site/author/aladdin" }],
+  creator: "Aladdin",
   publisher: "MapBench",
 };
 
@@ -61,7 +56,7 @@ const googleAnalyticsScript = `
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${fraunces.variable} ${manrope.variable} ${sourceSerif.variable}`}>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-9FHWG8223G" />
         <script dangerouslySetInnerHTML={{ __html: googleAnalyticsScript }} />
