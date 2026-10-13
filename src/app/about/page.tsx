@@ -4,7 +4,7 @@ import { TOOLS } from "@/lib/registry";
 
 export const metadata: Metadata = {
   title: "About MapBench",
-  description: "MapBench is a free, browser-first platform of geographic tools: distance and area calculators, routing, coordinate converters, map file viewers and map makers.",
+  description: "MapBench is a free, browser-first platform of geographic tools maintained and edited by Aladdin: distance and area calculators, routing, coordinate converters, map file viewers and map makers.",
   alternates: { canonical: "/about" },
 };
 
@@ -12,6 +12,17 @@ const SUPPORT_EMAIL = "support@mapbench.site";
 const CONTACT_EMAIL = "contact@mapbench.site";
 
 export default function AboutPage() {
+  const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://www.mapbench.site/about#aladdin",
+    name: "Aladdin",
+    url: "https://www.mapbench.site/about",
+    jobTitle: "Founder & Editor of MapBench",
+    worksFor: { "@type": "Organization", name: "MapBench", url: "https://www.mapbench.site" },
+    knowsAbout: ["Geographic tools", "Mapping", "Coordinate systems", "Geodesic calculations", "GIS data", "Web mapping"],
+  };
+
   return (
     <div className="mx-auto max-w-3xl">
       <h1 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">About MapBench</h1>
@@ -27,6 +38,17 @@ export default function AboutPage() {
           We describe those dependencies rather than presenting every result as locally computed or authoritative.
         </p>
 
+        <h2>Founder and editor</h2>
+        <p>
+          <strong>Aladdin</strong> is the founder and editor of MapBench. He is responsible for the site&apos;s tool direction, editorial standards,
+          methodology review and corrections process. MapBench content is written to explain what each calculation means, what data it depends on,
+          and where a result should be verified with an official or professional source.
+        </p>
+        <p>
+          Aladdin&apos;s editorial focus covers practical web mapping, geographic calculations, coordinate systems, location data, routing concepts,
+          open geographic datasets and browser-based GIS workflows. Technical claims are checked against the implemented method and documented source data.
+        </p>
+
         <h2>What we optimise for</h2>
         <ul>
           <li><strong>Correctness</strong> — appropriate geographic math, clear assumptions and visible methodology.</li>
@@ -37,7 +59,7 @@ export default function AboutPage() {
 
         <h2>Editorial standards and corrections</h2>
         <p>
-          Our guides and tool explanations are created for MapBench. We do not publish scraped articles or spun copies of third-party material.
+          Our guides and tool explanations are created for MapBench under Aladdin&apos;s editorial oversight. We do not publish scraped articles or spun copies of third-party material.
           Technical claims are checked against the implemented method and the relevant source data, and we correct valid factual or calculation errors when they are reported.
           Read the full <Link href="/editorial-policy" className="font-semibold text-brand-strong hover:underline">Editorial Policy &amp; Corrections</Link>.
         </p>
@@ -66,6 +88,7 @@ export default function AboutPage() {
         <Link href="/editorial-policy" className="btn btn-ghost">Editorial policy</Link>
         <Link href="/contact" className="btn btn-ghost">Contact</Link>
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }} />
     </div>
   );
 }
