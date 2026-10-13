@@ -4,13 +4,19 @@ import Link from "next/link";
 import { CATEGORIES, toolBySlug, type ToolDef } from "@/lib/registry";
 import { TOOL_COPY } from "@/data/toolCopy";
 import { LIMITS } from "@/data/categoryGuide4";
-import { CATEGORY_DATA_NOTE } from "@/data/categoryExtras";
+import { CATEGORY_DATA_NOTE, CATEGORY_GLOSSARY, CATEGORY_TIPS } from "@/data/categoryExtras";
 import { MAJOR_CITIES } from "@/data/cities";
 import { distanceKm, bearingBetween, compassPoint, fmt, normLng } from "@/lib/geo";
 import { formatDms, latLngToUtm, formatUtm, latLngToMgrs } from "@/lib/coords";
 import { sunTimes, fmtDurationHours } from "@/lib/astronomy";
 
 interface Example { lead: string; body: string }
+
+function rotate<T>(items: T[], seed: string, count: number): T[] {
+  if (!items.length) return [];
+  const n = [...seed].reduce((sum, ch) => sum + ch.charCodeAt(0), 0) % items.length;
+  return [...items.slice(n), ...items.slice(0, n)].slice(0, count);
+}
 
 function buildExamples(tool: ToolDef): Example[] {
   const NYC = { lat: 40.7128, lng: -74.006 };
@@ -100,15 +106,41 @@ function buildExamples(tool: ToolDef): Example[] {
   }
 }
 
+function fallbackAbout(tool: ToolDef) {
+  const subject = tool.keywords[0] || tool.name.toLowerCase();
+  const second = tool.keywords[1] || "map analysis";
+  return {
+    h2: `What ${tool.name} is designed to answer`,
+    paras: [
+      `${tool.name} is built for people who need a practical answer about ${subject} without opening a full GIS package. ${tool.intro} The result is most useful as a transparent planning or reference output: you can see the inputs, inspect the map where relevant, and compare the answer with related MapBench tools before treating it as a decision.`,
+      `This page focuses specifically on ${subject} and ${second}. That distinction matters because nearby tools may use a different geographic model — for example straight-line geometry, road-network travel time, an administrative boundary or a public dataset. Use the method and limitations sections below to understand what the number or map represents before reusing it in a report.`,
+    ],
+  };
+}
+
+function useCases(tool: ToolDef): string[] {
+  const k = tool.keywords.filter(Boolean);
+  const cases = [
+    `Answer a one-off question about ${k[0] || tool.name.toLowerCase()} and keep the result tied to a visible map or explicit input.`,
+    `Compare two or more scenarios involving ${k[1] || "locations"} without creating an account or installing desktop software.`,
+    `Use the output as a planning or teaching reference, then move to an official or specialist source if the result affects legal, safety, engineering or financial decisions.`,
+    tool.scope === "Worldwide" ? "Run the same workflow for locations in different countries while keeping units and assumptions consistent." : `Use the page within its stated coverage (${tool.scope}) rather than assuming equivalent data quality everywhere.`,
+  ];
+  return rotate(cases, tool.slug, 3);
+}
+
 export default function ToolContent({ tool }: { tool: ToolDef }) {
   const category = CATEGORIES.find((c) => c.id === tool.category)!;
-  const copy = TOOL_COPY[tool.slug];
+  const copy = TOOL_COPY[tool.slug] || fallbackAbout(tool);
   const examples = useMemo(() => buildExamples(tool), [tool]);
   const limits = LIMITS[tool.category];
   const related = (tool.related || [])
     .map((s) => toolBySlug.get(s))
     .filter((t): t is ToolDef => !!t && t.slug !== tool.slug)
     .slice(0, 4);
+  const tips = rotate(CATEGORY_TIPS[tool.category] || [], tool.slug, 2);
+  const glossary = rotate(CATEGORY_GLOSSARY[tool.category] || [], tool.slug + tool.name, 2);
+  const cases = useCases(tool);
 
   return (
     <div className="doc mx-auto max-w-3xl space-y-8">
@@ -116,15 +148,22 @@ export default function ToolContent({ tool }: { tool: ToolDef }) {
         <p className="!mb-0 text-[15px]"><strong>Quick answer:</strong> {tool.short} Coverage: {tool.scope}. No account is required.</p>
       </section>
 
-      {copy && (
-        <section aria-label="About this tool" data-content-type="tool-explanation">
-          <h2 className="font-display text-2xl font-bold tracking-tight">{copy.h2}</h2>
-          {copy.paras.map((p, i) => <p key={i} className="mt-3">{p}</p>)}
-        </section>
-      )}
+      <section aria-label="About this tool" data-content-type="tool-explanation">
+        <h2 className="font-display text-2xl font-bold tracking-tight">{copy.h2}</h2>
+        {copy.paras.map((p, i) => <p key={i} className="mt-3">{p}</p>)}
+      </section>
+
+      <section aria-label="When this tool is useful">
+        <h2 className="font-display text-2xl font-bold tracking-tight">When this tool is useful</h2>
+        <p className="mt-3">Use {tool.name} when the question matches the method the page actually uses. Typical workflows include:</p>
+        <ul className="mt-3 list-disc space-y-2 pl-6">
+          {cases.map((item) => <li key={item}>{item}</li>)}
+        </ul>
+      </section>
 
       <section aria-label="Worked examples">
         <h2 className="font-display text-2xl font-bold tracking-tight">Worked examples</h2>
+        <p className="mt-3">These examples are meant to show how to interpret this kind of output, not to replace the values produced from your own inputs.</p>
         <ul className="mt-3 space-y-3">
           {examples.map((e) => (
             <li key={e.lead} className="rounded-lg border border-line bg-card px-4 py-3">
@@ -134,6 +173,16 @@ export default function ToolContent({ tool }: { tool: ToolDef }) {
           ))}
         </ul>
       </section>
+
+      {tips.length > 0 && (
+        <section aria-label="Common mistakes and interpretation">
+          <h2 className="font-display text-2xl font-bold tracking-tight">How to interpret the result</h2>
+          <p className="mt-3">The most common errors come from using a correct result to answer the wrong geographic question. Keep these points in mind for {tool.name}:</p>
+          <ul className="mt-3 list-disc space-y-2 pl-6">
+            {tips.map((tip) => <li key={tip}>{tip}</li>)}
+          </ul>
+        </section>
+      )}
 
       {limits && (
         <section aria-label="Limits and appropriate use">
@@ -151,9 +200,24 @@ export default function ToolContent({ tool }: { tool: ToolDef }) {
         <p className="mt-2 text-sm text-mute">For source details, licences and model limitations, see <Link href="/data-sources" className="font-bold text-brand-strong hover:underline">Data Sources</Link> and <Link href="/methodology" className="font-bold text-brand-strong hover:underline">Methodology</Link>.</p>
       </section>
 
+      {glossary.length > 0 && (
+        <section aria-label="Key terms">
+          <h2 className="font-display text-2xl font-bold tracking-tight">Key terms worth knowing</h2>
+          <dl className="mt-3 space-y-3">
+            {glossary.map(([term, definition]) => (
+              <div key={term} className="rounded-lg border border-line bg-card px-4 py-3">
+                <dt className="font-sans text-sm font-extrabold text-ink">{term}</dt>
+                <dd className="mt-1 text-sm leading-relaxed text-mute">{definition}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+      )}
+
       {related.length > 0 && (
         <section aria-label="Related tools in context">
           <h2 className="font-display text-2xl font-bold tracking-tight">Related tools</h2>
+          <p className="mt-3">If this page answers only part of your question, these tools use a nearby but different method or dataset.</p>
           <div className="mt-3 grid gap-3 sm:grid-cols-2">
             {related.map((r) => (
               <Link key={r.slug} href={`/tools/${r.slug}`} className="rounded-lg border border-line bg-card px-4 py-3 hover:border-brand">
@@ -164,6 +228,10 @@ export default function ToolContent({ tool }: { tool: ToolDef }) {
           </div>
         </section>
       )}
+
+      <section aria-label="Editorial guidance" className="rounded-lg border border-line bg-well/50 px-4 py-3">
+        <p className="!mb-0 text-sm text-mute"><strong className="text-ink">Editorial guidance:</strong> MapBench explains the method and limitations so the tool can be used as a transparent reference, not as a black-box answer. For legal boundaries, safety-critical routing, surveying, engineering, regulated decisions or official statistics, verify the result with the responsible authority or a qualified professional.</p>
+      </section>
 
       <p className="text-xs text-mute">Category: {category.label}. Results are intended for everyday analysis and planning unless a page explicitly states otherwise.</p>
     </div>
