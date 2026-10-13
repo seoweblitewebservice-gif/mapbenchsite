@@ -37,18 +37,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: [...tool.keywords, tool.name, "free", "map tool", "no sign-up"],
     alternates: { canonical: url },
     robots: { index: true, follow: true },
-    openGraph: {
-      type: "website",
-      title: `${tool.name} — Free Online Tool | MapBench`,
-      description,
-      url,
-      siteName: "MapBench",
-    },
-    twitter: {
-      card: "summary",
-      title: `${tool.name} · MapBench`,
-      description,
-    },
+    openGraph: { type: "website", title: `${tool.name} — Free Online Tool | MapBench`, description, url, siteName: "MapBench" },
+    twitter: { card: "summary", title: `${tool.name} · MapBench`, description },
   };
 }
 
@@ -58,6 +48,7 @@ export default async function ToolPage({ params }: Props) {
   if (!tool) notFound();
   const category = CATEGORIES.find((c) => c.id === tool.category);
   const absoluteUrl = `https://www.mapbench.site/tools/${tool.slug}`;
+  const author = { "@type": "Person", "@id": "https://www.mapbench.site/author/aladdin#person", name: "Aladdin", url: "https://www.mapbench.site/author/aladdin" };
 
   const jsonLd = [
     {
@@ -74,12 +65,8 @@ export default async function ToolPage({ params }: Props) {
       inLanguage: "en",
       offers: { "@type": "Offer", price: "0", priceCurrency: "USD", availability: "https://schema.org/InStock" },
       featureList: tool.howTo,
-      provider: {
-        "@type": "Organization",
-        name: "MapBench",
-        url: "https://www.mapbench.site",
-        logo: { "@type": "ImageObject", url: "https://www.mapbench.site/icon.svg" },
-      },
+      author,
+      provider: { "@type": "Organization", name: "MapBench", url: "https://www.mapbench.site", logo: { "@type": "ImageObject", url: "https://www.mapbench.site/icon.svg" } },
     },
     {
       "@context": "https://schema.org",
@@ -87,12 +74,7 @@ export default async function ToolPage({ params }: Props) {
       name: `How to use ${tool.name}`,
       description: tool.short,
       inLanguage: "en",
-      step: tool.howTo.map((text, i) => ({
-        "@type": "HowToStep",
-        position: i + 1,
-        name: `Step ${i + 1}`,
-        text,
-      })),
+      step: tool.howTo.map((text, i) => ({ "@type": "HowToStep", position: i + 1, name: `Step ${i + 1}`, text })),
     },
     {
       "@context": "https://schema.org",
@@ -100,18 +82,14 @@ export default async function ToolPage({ params }: Props) {
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mapbench.site/" },
         { "@type": "ListItem", position: 2, name: "Tools", item: "https://www.mapbench.site/tools" },
-        ...(category ? [{ "@type": "ListItem", position: 3, name: category.label, item: `https://www.mapbench.site/tools?cat=${category.id}` }] : []),
+        ...(category ? [{ "@type": "ListItem", position: 3, name: category.label, item: `https://www.mapbench.site/tools/category/${category.id}` }] : []),
         { "@type": "ListItem", position: category ? 4 : 3, name: tool.name, item: absoluteUrl },
       ],
     },
     ...(tool.faq.length ? [{
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      mainEntity: tool.faq.map(([q, a]) => ({
-        "@type": "Question",
-        name: q,
-        acceptedAnswer: { "@type": "Answer", text: a },
-      })),
+      mainEntity: tool.faq.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
     }] : []),
     {
       "@context": "https://schema.org",
@@ -120,15 +98,12 @@ export default async function ToolPage({ params }: Props) {
       url: absoluteUrl,
       name: tool.name,
       description: tool.short,
+      author,
+      reviewedBy: author,
       isPartOf: { "@type": "WebSite", name: "MapBench", url: "https://www.mapbench.site" },
       about: { "@id": `${absoluteUrl}#tool` },
     },
   ];
 
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ToolClient slug={tool.slug} />
-    </>
-  );
+  return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /><ToolClient slug={tool.slug} /></>;
 }
