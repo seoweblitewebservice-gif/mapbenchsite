@@ -26,8 +26,10 @@ const MAPS: [string, string][] = [
 const RESOURCES: [string, string][] = [
   ["/tools", `All ${TOOLS.length} tools`],
   ["/maps", "Blank map library"],
+  ["/reference", "Country reference library"],
   ["/studies", "Original studies"],
   ["/guides", "Mapping guides"],
+  ["/author/aladdin", "Aladdin — Founder & Editor"],
   ["/methodology", "Methodology"],
   ["/data-sources", "Data sources"],
   ["/editorial-policy", "Editorial policy"],
@@ -58,6 +60,7 @@ export default function Footer() {
             ["/privacy", "Privacy Policy"],
             ["/terms", "Terms of Use"],
             ["/editorial-policy", "Editorial Policy"],
+            ["/author/aladdin", "Author: Aladdin"],
             ["/contact", "Contact"],
           ]}
         />
