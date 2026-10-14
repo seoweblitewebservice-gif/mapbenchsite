@@ -26,6 +26,17 @@ const START_HERE = [
   },
 ];
 
+const wordCount = (text: string) => text.trim().split(/\s+/).filter(Boolean).length;
+function guideReadMins(g: (typeof ALL_GUIDES)[number]) {
+  const words = g.blocks.reduce((sum, block) => {
+    if (block.t === "p" || block.t === "h2" || block.t === "note") return sum + wordCount(block.text);
+    if (block.t === "ul") return sum + block.items.reduce((n, item) => n + wordCount(item), 0);
+    if (block.t === "table") return sum + block.headers.reduce((n, h) => n + wordCount(h), 0) + block.rows.reduce((n, row) => n + row.reduce((x, cell) => x + wordCount(cell), 0), 0);
+    return sum;
+  }, 0);
+  return Math.max(3, Math.ceil(words / 220));
+}
+
 export default function GuidesPage() {
   return (
     <div className="doc">
@@ -68,7 +79,7 @@ export default function GuidesPage() {
           {ALL_GUIDES.map((g) => (
             <Link key={g.slug} href={`/guides/${g.slug}`} className="card group flex flex-col p-5 transition-colors hover:border-brand">
               <div className="text-xs font-bold uppercase tracking-wide text-mute">
-                {new Date(g.date).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })} · {g.readMins} min read
+                {new Date(g.date).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })} · {guideReadMins(g)} min read
               </div>
               <h3 className="mt-2 font-display text-lg font-bold leading-snug group-hover:text-brand-strong">{g.title}</h3>
               <p className="mt-2 line-clamp-4 text-sm leading-relaxed text-mute">{g.description}</p>
