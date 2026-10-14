@@ -50,7 +50,7 @@ const PRIORITY_TOOL_SLUGS = [
   "gpx-viewer",
 ] as const;
 
-const priorityIndex = new Map(PRIORITY_TOOL_SLUGS.map((slug, index) => [slug, index]));
+const priorityIndex = new Map<string, number>(PRIORITY_TOOL_SLUGS.map((slug, index) => [slug, index]));
 
 function slugify(value: string) {
   return value.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
@@ -73,7 +73,7 @@ const ALL_COUNTRY_MAP_SLUGS = Array.from(
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries: MetadataRoute.Sitemap = STATIC_PATHS.map((path) => ({
     url: `${BASE}${path || "/"}`,
-    changeFrequency: path === "" ? "weekly" : path === "/corrections" ? "monthly" : "monthly",
+    changeFrequency: path === "" ? "weekly" : "monthly",
     priority: path === "" ? 1 : ["/tools", "/maps", "/states", "/guides", "/studies", "/reference"].includes(path) ? 0.9 : path === "/studies/state-capital-radius" ? 0.84 : 0.6,
   }));
 
