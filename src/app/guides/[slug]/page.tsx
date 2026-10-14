@@ -111,6 +111,7 @@ export default async function GuidePage({ params }: Props) {
   const toolboxSlugs = g.blocks.filter((b) => b.t === "toolbox").flatMap((b) => (b as { slugs: string[] }).slugs);
   const related = ALL_GUIDES.filter((x) => x.slug !== slug && x.blocks.some((b) => b.t === "toolbox" && b.slugs.some((s) => toolboxSlugs.includes(s))));
   const guideUrl = `https://www.mapbench.site/guides/${g.slug}`;
+  const author = { "@type": "Person", "@id": "https://www.mapbench.site/author/aryan-khan#person", name: "Aryan Khan", url: "https://www.mapbench.site/author/aryan-khan", sameAs: ["https://www.linkedin.com/in/aryan-khan-b77438438/"] };
 
   const jsonLd = [
     {
@@ -123,8 +124,8 @@ export default async function GuidePage({ params }: Props) {
       dateModified: g.date,
       inLanguage: "en",
       isAccessibleForFree: true,
-      author: { "@type": "Person", "@id": "https://www.mapbench.site/author/aladdin#person", name: "Aladdin", url: "https://www.mapbench.site/author/aladdin" },
-      reviewedBy: { "@type": "Person", "@id": "https://www.mapbench.site/author/aladdin#person", name: "Aladdin", url: "https://www.mapbench.site/author/aladdin" },
+      author,
+      reviewedBy: author,
       publisher: {
         "@type": "Organization",
         name: "MapBench",
@@ -160,7 +161,7 @@ export default async function GuidePage({ params }: Props) {
           <p className="mt-5 max-w-3xl text-lg leading-8 text-mute sm:text-xl">{g.description}</p>
 
           <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 font-sans text-sm text-mute">
-            <Link href="/author/aladdin" className="font-extrabold text-ink hover:text-brand-strong">Aladdin</Link>
+            <Link href="/author/aryan-khan" className="font-extrabold text-ink hover:text-brand-strong">Aryan Khan</Link>
             <span aria-hidden>·</span>
             <span>{new Date(g.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</span>
             <span aria-hidden>·</span>
@@ -186,12 +187,13 @@ export default async function GuidePage({ params }: Props) {
 
             <section className="mt-14 border-t border-line pt-8">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-soft font-display text-lg font-bold text-brand-strong">A</div>
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-soft font-display text-lg font-bold text-brand-strong">AK</div>
                 <div>
                   <h2 className="font-display text-xl font-bold">About the author</h2>
-                  <p className="mt-2 max-w-2xl text-sm leading-7 text-mute">Aladdin edits MapBench with a focus on practical map calculations, coordinate systems, routing concepts, open geographic data and clear limitations. Guides are written to help a reader make a better decision, not just to repeat a definition.</p>
+                  <p className="mt-2 max-w-2xl text-sm leading-7 text-mute">Aryan Khan edits MapBench with a focus on practical map calculations, coordinate systems, routing concepts, open geographic data and clear limitations. Guides are written to help a reader make a better decision, not just to repeat a definition.</p>
                   <div className="mt-3 flex flex-wrap gap-4 text-sm font-bold">
-                    <Link href="/author/aladdin" className="text-brand-strong hover:underline">Author profile →</Link>
+                    <Link href="/author/aryan-khan" className="text-brand-strong hover:underline">Author profile →</Link>
+                    <a href="https://www.linkedin.com/in/aryan-khan-b77438438/" target="_blank" rel="me noopener noreferrer" className="text-brand-strong hover:underline">LinkedIn ↗</a>
                     <Link href="/editorial-policy" className="text-brand-strong hover:underline">Editorial policy →</Link>
                     <Link href="/methodology" className="text-brand-strong hover:underline">Methodology →</Link>
                   </div>
