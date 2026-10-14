@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import type { Map as MLMap, GeoJSONSource } from "maplibre-gl";
 import { bearingBetween, compassPoint, distanceKm, fmtDist, fmt, midpoint, UNITS, type LatLng, type UnitKey } from "@/lib/geo";
 import { readUrlParams, syncUrl, Field } from "@/components/ui";
@@ -12,7 +12,7 @@ function parsePair(s: string | null): LatLng | null {
   return Number.isFinite(lat) && Number.isFinite(lng) ? { lat, lng } : null;
 }
 
-function Card({ label, value, sub, accent = false }: { label: string; value: React.ReactNode; sub?: React.ReactNode; accent?: boolean }) {
+function Card({ label, value, sub, accent = false }: { label: string; value: ReactNode; sub?: ReactNode; accent?: boolean }) {
   return <div className={`rounded-2xl border p-4 ${accent ? "border-brand/30 bg-brand-soft/60" : "border-line bg-white"}`}><div className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-mute">{label}</div><div className={`mt-1 font-display text-2xl font-bold ${accent ? "text-brand-strong" : "text-ink"}`}>{value}</div>{sub ? <div className="mt-1 text-xs leading-relaxed text-mute">{sub}</div> : null}</div>;
 }
 
@@ -23,9 +23,15 @@ export default function DistanceTool({ params }: { params?: Record<string, unkno
   const [b, setB] = useState<PlaceValue | null>(() => { const p = parsePair(readUrlParams().get("b")); return p ? { ...p, label: "Point B" } : null; });
   const [knots, setKnots] = useState(10);
   const [nextPoint, setNextPoint] = useState<"a" | "b">("a");
+  const nextPointRef = useRef<"a" | "b">("a");
   const mapRef = useRef<MLMap | null>(null);
   const libRef = useRef<any>(null);
   const markersRef = useRef<any[]>([]);
+
+  const chooseNext = (value: "a" | "b") => {
+    nextPointRef.current = value;
+    setNextPoint(value);
+  };
 
   const result = useMemo(() => {
     if (!a || !b) return null;
@@ -57,15 +63,15 @@ export default function DistanceTool({ params }: { params?: Record<string, unkno
   }, [a, b]);
 
   const isNautical = emphasize === "nautical";
-  const swap = () => { setA(b); setB(a); };
+  const swap = () => { setA(b); setB(a); chooseNext("a"); };
 
   return (
     <div className="space-y-4">
       <section className="rounded-2xl border border-line bg-gradient-to-br from-white to-well/30 p-4 sm:p-5">
         <div className="grid gap-3 lg:grid-cols-[1fr_auto_1fr] lg:items-end">
-          <PlaceField label="From" value={a} onChange={(v) => { setA(v); if (v) setNextPoint("b"); }} placeholder={emphasize === "zip" ? "ZIP code or place…" : emphasize === "city" ? "City name…" : "Search place or address…"} />
+          <PlaceField label="From" value={a} onChange={(v) => { setA(v); if (v) chooseNext("b"); }} placeholder={emphasize === "zip" ? "ZIP code or place…" : emphasize === "city" ? "City name…" : "Search place or address…"} />
           <button type="button" className="btn btn-ghost mb-0.5 h-10 self-end whitespace-nowrap" onClick={swap} aria-label="Swap origin and destination">⇄ Swap</button>
-          <PlaceField label="To" value={b} onChange={(v) => { setB(v); if (v) setNextPoint("a"); }} placeholder={emphasize === "zip" ? "ZIP code or place…" : emphasize === "city" ? "City name…" : "Search place or address…"} />
+          <PlaceField label="To" value={b} onChange={(v) => { setB(v); if (v) chooseNext("a"); }} placeholder={emphasize === "zip" ? "ZIP code or place…" : emphasize === "city" ? "City name…" : "Search place or address…"} />
         </div>
         <div className="mt-4 flex flex-wrap items-end justify-between gap-3 border-t border-line pt-4">
           <div className="w-full sm:w-48"><Field label="Display unit"><select className="select" value={unit} onChange={(e) => setUnit(e.target.value as UnitKey)}>{Object.entries(UNITS).map(([k, v]) => <option key={k} value={k}>{v.label}</option>)}</select></Field></div>
@@ -83,8 +89,13 @@ export default function DistanceTool({ params }: { params?: Record<string, unkno
             map.addLayer({ id: "dist-line-l", type: "line", source: "dist-line", paint: { "line-color": "#1d6e63", "line-width": 3, "line-dasharray": [2, 1.5] } });
             map.on("click", (e) => {
               const point = { lat: e.lngLat.lat, lng: e.lngLat.lng, label: `Map point ${e.lngLat.lat.toFixed(4)}, ${e.lngLat.lng.toFixed(4)}` };
-              if (!a || nextPoint === "a") { setA(point); setNextPoint("b"); }
-              else { setB(point); setNextPoint("a"); }
+              if (nextPointRef.current === "a") {
+                setA(point);
+                chooseNext("b");
+              } else {
+                setB(point);
+                chooseNext("a");
+              }
             });
           }}
         />
