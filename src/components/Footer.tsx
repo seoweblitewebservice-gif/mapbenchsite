@@ -8,33 +8,33 @@ const POPULAR: [string, string][] = [
   ["/tools/drive-time-map", "Drive Time Map"],
   ["/tools/map-radius", "Map Radius Tool"],
   ["/tools/latitude-longitude-finder", "Lat & Long Finder"],
-  ["/tools/fuel-cost-calculator", "Fuel Cost Calculator"],
-  ["/tools/gpx-viewer", "GPX Viewer"],
+  ["/tools/population-within-radius", "Population Within Radius"],
+  ["/tools/us-county-demographic-explorer", "County Demographic Explorer"],
   ["/tools/csv-to-map", "CSV to Map"],
 ];
 
 const MAPS: [string, string][] = [
-  ["/maps?map=us", "United States"],
-  ["/maps?map=world", "World"],
-  ["/maps?map=cont-europe", "Europe"],
-  ["/maps?map=s-California", "California"],
-  ["/maps?map=c-India", "India"],
-  ["/maps?map=c-Japan", "Japan"],
-  ["/maps?map=c-Australia", "Australia"],
+  ["/states", "US States & County Maps"],
+  ["/maps/blank/us/california", "California County Map"],
+  ["/maps/blank/us/texas", "Texas County Map"],
+  ["/maps/blank/us/illinois", "Illinois County Map"],
+  ["/maps/blank/india", "India Blank Map"],
+  ["/maps/blank/pakistan", "Pakistan Blank Map"],
+  ["/maps/blank/australia", "Australia Blank Map"],
 ];
 
 const RESOURCES: [string, string][] = [
   ["/tools", `All ${TOOLS.length} tools`],
+  ["/states", "US states hub"],
   ["/maps", "Blank map library"],
   ["/reference", "Country reference library"],
   ["/studies", "Original studies"],
+  ["/studies/state-capital-radius", "State capital geography study"],
   ["/guides", "Mapping guides"],
-  ["/author/aladdin", "Aladdin — Founder & Editor"],
+  ["/author/aryan-khan", "Aryan Khan — Founder & Editor"],
   ["/methodology", "Methodology"],
   ["/data-sources", "Data sources"],
-  ["/editorial-policy", "Editorial policy"],
-  ["/about", "About"],
-  ["/contact", "Contact"],
+  ["/corrections", "Corrections & change log"],
 ];
 
 export default function Footer() {
@@ -60,7 +60,9 @@ export default function Footer() {
             ["/privacy", "Privacy Policy"],
             ["/terms", "Terms of Use"],
             ["/editorial-policy", "Editorial Policy"],
-            ["/author/aladdin", "Author: Aladdin"],
+            ["/corrections", "Corrections"],
+            ["/author/aryan-khan", "Author: Aryan Khan"],
+            ["/about", "About"],
             ["/contact", "Contact"],
           ]}
         />
@@ -68,7 +70,7 @@ export default function Footer() {
       <div className="border-t border-[#3a3428] py-4">
         <div className="container-sf flex flex-col items-center justify-between gap-2 font-serif text-xs text-[#8d8574] sm:flex-row">
           <span>© {new Date().getFullYear()} MapBench · Free geographic tools for everyone.</span>
-          <span>Data sources and licences are documented on-site.</span>
+          <span><Link href="/data-sources" className="hover:text-[#7cc39d] hover:underline">Data sources</Link> · <Link href="/methodology" className="hover:text-[#7cc39d] hover:underline">Methodology</Link> · <Link href="/corrections" className="hover:text-[#7cc39d] hover:underline">Corrections</Link></span>
         </div>
       </div>
     </footer>
