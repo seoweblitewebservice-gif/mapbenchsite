@@ -2,6 +2,31 @@ export const dynamic = "force-dynamic";
 
 type CensusRow = Record<string, string>;
 
+type CountyMetrics = {
+  geoid: string;
+  stateFips: string;
+  countyFips: string;
+  name: string;
+  population: number | null;
+  medianHouseholdIncome: number | null;
+  medianAge: number | null;
+  povertyRate: number | null;
+  bachelorsOrHigherRate: number | null;
+  medianHomeValue: number | null;
+  housingUnits: number | null;
+  landAreaSqMi: number | null;
+  waterAreaSqMi: number | null;
+  populationDensityPerSqMi: number | null;
+  centroidLat: number | null;
+  centroidLng: number | null;
+};
+
+type CountyFeature = {
+  type: "Feature";
+  geometry: unknown;
+  properties: CountyMetrics;
+};
+
 function num(value: unknown) {
   const n = Number(value);
   return Number.isFinite(n) && n > -999999000 ? n : null;
@@ -49,10 +74,10 @@ export async function GET(request: Request) {
 
     const acsRows = rows(await acsRes.json());
     const tigerJson = await tigerRes.json();
-    const features = Array.isArray(tigerJson?.features) ? tigerJson.features : [];
-    const acsByGeoid = new Map(acsRows.map((r) => [`${r.state}${r.county}`, r]));
+    const features: any[] = Array.isArray(tigerJson?.features) ? tigerJson.features : [];
+    const acsByGeoid = new Map<string, CensusRow>(acsRows.map((r) => [`${r.state}${r.county}`, r]));
 
-    const countyFeatures = features.map((feature: any) => {
+    const countyFeatures: CountyFeature[] = features.map((feature: any): CountyFeature => {
       const p = feature?.properties ?? {};
       const geoid = String(p.GEOID ?? `${p.STATE ?? state}${p.COUNTY ?? ""}`);
       const r = acsByGeoid.get(geoid);
@@ -60,12 +85,12 @@ export async function GET(request: Request) {
       const povertyUniverse = num(r?.B17001_001E);
       const povertyBelow = num(r?.B17001_002E);
       const educationUniverse = num(r?.B15003_001E);
-      const bachelors = ["B15003_022E", "B15003_023E", "B15003_024E", "B15003_025E"].reduce((sum, key) => sum + (num(r?.[key]) ?? 0), 0);
+      const bachelors = ["B15003_022E", "B15003_023E", "B15003_024E", "B15003_025E"].reduce((sum: number, key: string) => sum + (num(r?.[key]) ?? 0), 0);
       const landM2 = num(p.AREALAND);
       const waterM2 = num(p.AREAWATER);
       const landAreaSqMi = landM2 === null ? null : landM2 / 2_589_988.110336;
       const waterAreaSqMi = waterM2 === null ? null : waterM2 / 2_589_988.110336;
-      const density = population !== null && landAreaSqMi && landAreaSqMi > 0 ? population / landAreaSqMi : null;
+      const density = population !== null && landAreaSqMi !== null && landAreaSqMi > 0 ? population / landAreaSqMi : null;
       return {
         type: "Feature",
         geometry: feature.geometry,
@@ -78,7 +103,7 @@ export async function GET(request: Request) {
           medianHouseholdIncome: num(r?.B19013_001E),
           medianAge: num(r?.B01002_001E),
           povertyRate: pct(povertyBelow, povertyUniverse),
-          bachelorsOrHigherRate: educationUniverse && educationUniverse > 0 ? (bachelors / educationUniverse) * 100 : null,
+          bachelorsOrHigherRate: educationUniverse !== null && educationUniverse > 0 ? (bachelors / educationUniverse) * 100 : null,
           medianHomeValue: num(r?.B25077_001E),
           housingUnits: num(r?.B25001_001E),
           landAreaSqMi,
@@ -90,10 +115,10 @@ export async function GET(request: Request) {
       };
     });
 
-    const counties = countyFeatures.map((f: any) => f.properties);
-    const byPopulation = [...counties].filter((x) => x.population !== null).sort((a, b) => b.population - a.population);
-    const byIncome = [...counties].filter((x) => x.medianHouseholdIncome !== null).sort((a, b) => b.medianHouseholdIncome - a.medianHouseholdIncome);
-    const byArea = [...counties].filter((x) => x.landAreaSqMi !== null).sort((a, b) => b.landAreaSqMi - a.landAreaSqMi);
+    const counties: CountyMetrics[] = countyFeatures.map((f) => f.properties);
+    const byPopulation = [...counties].filter((x) => x.population !== null).sort((a, b) => (b.population ?? 0) - (a.population ?? 0));
+    const byIncome = [...counties].filter((x) => x.medianHouseholdIncome !== null).sort((a, b) => (b.medianHouseholdIncome ?? 0) - (a.medianHouseholdIncome ?? 0));
+    const byArea = [...counties].filter((x) => x.landAreaSqMi !== null).sort((a, b) => (b.landAreaSqMi ?? 0) - (a.landAreaSqMi ?? 0));
     const stateName = acsRows[0]?.NAME?.replace(/, .+$/, "") || "Selected state";
 
     return Response.json({
@@ -101,8 +126,8 @@ export async function GET(request: Request) {
       state: { fips: state, name: stateName },
       summary: {
         countyCount: counties.length,
-        totalPopulation: counties.reduce((sum, x) => sum + (x.population ?? 0), 0),
-        totalHousingUnits: counties.reduce((sum, x) => sum + (x.housingUnits ?? 0), 0),
+        totalPopulation: counties.reduce((sum: number, x: CountyMetrics) => sum + (x.population ?? 0), 0),
+        totalHousingUnits: counties.reduce((sum: number, x: CountyMetrics) => sum + (x.housingUnits ?? 0), 0),
         largestPopulationCounty: byPopulation[0] ?? null,
         highestIncomeCounty: byIncome[0] ?? null,
         largestAreaCounty: byArea[0] ?? null,
