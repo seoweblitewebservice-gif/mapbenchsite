@@ -38,6 +38,17 @@ const MAP_FAQS: [string, string][] = [
   ["Do I need to credit MapBench?", "No attribution is required for public-domain data. A credit line is appreciated but never obligatory."],
 ];
 
+const POPULAR_MAPS: Array<{ slug: string; name: string; href: string; blurb: string }> = [
+  { slug: "texas", name: "Texas", href: "/maps/blank/us/texas", blurb: "County map" },
+  { slug: "california", name: "California", href: "/maps/blank/us/california", blurb: "County map" },
+  { slug: "florida", name: "Florida", href: "/maps/blank/us/florida", blurb: "County map" },
+  { slug: "new-york", name: "New York", href: "/maps/blank/us/new-york", blurb: "County map" },
+  { slug: "india", name: "India", href: "/maps/blank/india", blurb: "Country map" },
+  { slug: "japan", name: "Japan", href: "/maps/blank/japan", blurb: "Country map" },
+  { slug: "france", name: "France", href: "/maps/blank/france", blurb: "Country map" },
+  { slug: "united-kingdom", name: "United Kingdom", href: "/maps/blank/united-kingdom", blurb: "Country map" },
+];
+
 interface MapsPageProps {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 }
@@ -67,6 +78,28 @@ export default async function MapsPage({ searchParams }: MapsPageProps) {
       <p className="doc mt-3 max-w-3xl">
         Download printable maps for the world, all 50 US states plus DC, and 170+ countries. US state pages include county-equivalent boundaries, labeled and colored variants, SVG and PNG downloads, and browser-ready PDF printing. Country pages provide separate canonical URLs with their own map downloads and geographic reference notes.
       </p>
+
+      <section id="popular-maps" className="mt-8" aria-labelledby="popular-maps-heading">
+        <div className="max-w-3xl">
+          <p className="font-sans text-[11px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">Most downloaded</p>
+          <h2 id="popular-maps-heading" className="mt-2 font-display text-2xl font-bold">Popular blank maps</h2>
+          <p className="mt-2 text-sm leading-relaxed text-mute">The maps people download most — classroom favorites, presentation staples and quiz-night essentials. Every one prints cleanly and downloads as SVG or PNG.</p>
+        </div>
+        <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {POPULAR_MAPS.map((m) => (
+            <Link key={m.slug} href={m.href} className="group overflow-hidden rounded-2xl border border-line bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-brand hover:shadow-md">
+              <img src={`/map-thumbs/${m.slug}.svg`} alt={`Blank map of ${m.name}`} width={320} height={200} loading="lazy" className="aspect-[8/5] w-full object-cover" />
+              <div className="flex items-center justify-between px-4 py-3">
+                <div>
+                  <div className="font-sans text-sm font-extrabold text-ink group-hover:text-brand-strong">{m.name}</div>
+                  <div className="mt-0.5 text-[11px] font-medium text-mute">{m.blurb} · SVG · PNG · PDF</div>
+                </div>
+                <span className="text-lg text-brand-strong transition group-hover:translate-x-0.5" aria-hidden>→</span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
 
       <section id="us-states" className="mt-8 rounded-2xl border border-line bg-card p-5 sm:p-6" aria-labelledby="us-state-maps-heading">
         <div className="max-w-3xl">
