@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import MapsClient from "@/components/MapsClient";
 import { geoArea, geoBounds, geoCentroid } from "d3-geo";
 import { feature } from "topojson-client";
@@ -26,7 +27,9 @@ export function generateStaticParams() { return countryNames.map((name) => ({ co
 
 export async function generateMetadata({ params }: { params: Promise<{ country: string }> }): Promise<Metadata> {
   const { country } = await params;
-  const name = getCountryFeature(country)?.properties?.name ?? country.replace(/-/g, " ");
+  const mapFeature = getCountryFeature(country);
+  if (!mapFeature) return { robots: { index: false, follow: false } };
+  const name = mapFeature.properties!.name!;
   return {
     title: `${name} Blank Map — Printable SVG & PNG`,
     description: `Free printable ${name} blank map with SVG and high-resolution PNG exports, geographic facts, extent, centroid and source notes.`,
@@ -44,7 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
 export default async function CountryMapPage({ params }: { params: Promise<{ country: string }> }) {
   const { country } = await params;
   const mapFeature = getCountryFeature(country);
-  if (!mapFeature) return <div className="doc mx-auto max-w-3xl py-12"><h1 className="font-display text-3xl font-bold">Map not found</h1><p className="mt-3 text-mute">This blank-map page is not available.</p><Link href="/maps" className="mt-5 inline-block font-sans text-sm font-extrabold text-brand-strong hover:underline">Browse all maps →</Link></div>;
+  if (!mapFeature) notFound();
 
   const name = mapFeature.properties!.name!;
   const stats = countryStats(mapFeature);
