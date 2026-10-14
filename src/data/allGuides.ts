@@ -5,12 +5,13 @@ import { GUIDES4 } from "./guides4";
 import { GUIDES5 } from "./guides5";
 import { GUIDES6 } from "./guides6";
 import { GUIDES7 } from "./guides7";
+import { GUIDES8 } from "./guides8";
 import { GUIDE_ENRICHMENT } from "./guideEnrichment";
 import { GUIDE_DEEP_ENRICHMENT } from "./guideDeepEnrichment";
 import { GUIDE_DEEP_ENRICHMENT_2 } from "./guideDeepEnrichment2";
 import { GUIDE_DEEP_ENRICHMENT_3 } from "./guideDeepEnrichment3";
 
-const baseGuides: Guide[] = [...GUIDES, ...GUIDES2, ...GUIDES3, ...GUIDES4, ...GUIDES5, ...GUIDES6, ...GUIDES7];
+const baseGuides: Guide[] = [...GUIDES, ...GUIDES2, ...GUIDES3, ...GUIDES4, ...GUIDES5, ...GUIDES6, ...GUIDES7, ...GUIDES8];
 
 export const ALL_GUIDES: Guide[] = baseGuides
   .map((guide) => {
