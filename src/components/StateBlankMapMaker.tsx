@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { geoCentroid, geoContains, geoMercator, geoPath, type GeoPermissibleObjects } from "d3-geo";
 import { feature } from "topojson-client";
@@ -143,13 +144,14 @@ export default function StateBlankMapMaker({ stateName, stateFips, slug, divisio
             <button type="button" className="btn btn-primary w-full" onClick={downloadSvg}>Download SVG</button>
             <button type="button" className="btn btn-ghost w-full" onClick={downloadPng}>Download PNG · 2400 px</button>
             <button type="button" className="btn btn-ghost w-full" onClick={() => window.print()}>Print / Save as PDF</button>
+            <Link href={`/states/${slug}/counties`} className="btn btn-ghost w-full">View all {stateName} {divisionLabel}</Link>
             <div className="rounded-lg bg-well px-3 py-2.5 text-xs leading-relaxed text-mute">SVG stays sharp at any size. PNG is convenient for documents and slides. Use your browser&apos;s print dialog to save a PDF.</div>
           </aside>
         </div>
       </div>
 
       <div className="grid gap-3 sm:grid-cols-3">
-        <div className="card p-4"><div className="text-xs font-extrabold uppercase text-mute">County equivalents</div><div className="mt-1 font-display text-2xl font-bold">{data.counties.length}</div></div>
+        <div className="card p-4"><div className="text-xs font-extrabold uppercase text-mute">County equivalents</div><div className="mt-1 font-display text-2xl font-bold">{data.counties.length}</div><div className="mt-2 text-xs"><Link href={`/states/${slug}/counties`} className="font-extrabold text-brand-strong hover:underline">Browse names & FIPS →</Link></div></div>
         <div className="card p-4"><div className="text-xs font-extrabold uppercase text-mute">State FIPS</div><div className="mt-1 font-display text-2xl font-bold">{stateFips}</div></div>
         <div className="card p-4"><div className="text-xs font-extrabold uppercase text-mute">Map centroid</div><div className="mt-1 font-display text-lg font-bold">{centroidLat.toFixed(2)}°, {centroidLng.toFixed(2)}°</div></div>
       </div>
