@@ -4,7 +4,7 @@ import { TOOLS } from "@/lib/registry";
 
 export const metadata: Metadata = {
   title: "About MapBench",
-  description: "MapBench is a free, browser-first platform of geographic tools maintained and edited by Aladdin: distance and area calculators, routing, coordinate converters, map file viewers and map makers.",
+  description: "MapBench is a free, browser-first platform of geographic tools maintained and edited by Aryan Khan: distance and area calculators, routing, coordinate converters, map file viewers and map makers.",
   alternates: { canonical: "/about" },
 };
 
@@ -15,9 +15,10 @@ export default function AboutPage() {
   const personJsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "@id": "https://www.mapbench.site/author/aladdin#person",
-    name: "Aladdin",
-    url: "https://www.mapbench.site/author/aladdin",
+    "@id": "https://www.mapbench.site/author/aryan-khan#person",
+    name: "Aryan Khan",
+    url: "https://www.mapbench.site/author/aryan-khan",
+    sameAs: ["https://www.linkedin.com/in/aryan-khan-b77438438/"],
     jobTitle: "Founder & Editor of MapBench",
     worksFor: { "@type": "Organization", name: "MapBench", url: "https://www.mapbench.site" },
     knowsAbout: ["Geographic tools", "Mapping", "Coordinate systems", "Geodesic calculations", "GIS data", "Web mapping"],
@@ -27,27 +28,12 @@ export default function AboutPage() {
     <div className="mx-auto max-w-3xl">
       <h1 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">About MapBench</h1>
       <div className="prose-sf mt-6">
-        <p>
-          MapBench exists for one simple reason: geographic questions are everyday questions. <em>How far apart are these two towns?
-          What county am I standing in? How big is this field? What&apos;s inside my delivery radius?</em> Answering them shouldn&apos;t
-          require a GIS license, a subscription, or handing your data to an unknown server.
-        </p>
-        <p>
-          MapBench currently maintains <strong>{TOOLS.length} free tools</strong>. Some calculations run entirely in your browser;
-          tools that need live routing, geocoding, elevation or place data use the external services documented on our Data Sources page.
-          We describe those dependencies rather than presenting every result as locally computed or authoritative.
-        </p>
+        <p>MapBench exists for one simple reason: geographic questions are everyday questions. <em>How far apart are these two towns? What county am I standing in? How big is this field? What&apos;s inside my delivery radius?</em> Answering them shouldn&apos;t require a GIS license, a subscription, or handing your data to an unknown server.</p>
+        <p>MapBench currently maintains <strong>{TOOLS.length} free tools</strong>. Some calculations run entirely in your browser; tools that need live routing, geocoding, elevation or place data use the external services documented on our Data Sources page.</p>
 
         <h2>Founder and editor</h2>
-        <p>
-          <Link href="/author/aladdin" className="font-semibold text-brand-strong hover:underline">Aladdin</Link> is the founder and editor of MapBench. He is responsible for the site&apos;s tool direction, editorial standards,
-          methodology review and corrections process. MapBench content is written to explain what each calculation means, what data it depends on,
-          and where a result should be verified with an official or professional source.
-        </p>
-        <p>
-          Aladdin&apos;s editorial focus covers practical web mapping, geographic calculations, coordinate systems, location data, routing concepts,
-          open geographic datasets and browser-based GIS workflows. Technical claims are checked against the implemented method and documented source data.
-        </p>
+        <p><Link href="/author/aryan-khan" className="font-semibold text-brand-strong hover:underline">Aryan Khan</Link> is the founder and editor of MapBench. He is responsible for the site&apos;s tool direction, editorial standards, methodology review and corrections process. MapBench content is written to explain what each calculation means, what data it depends on, and where a result should be verified with an official or professional source.</p>
+        <p>Aryan&apos;s editorial focus covers practical web mapping, geographic calculations, coordinate systems, location data, routing concepts, open geographic datasets and browser-based GIS workflows. <a href="https://www.linkedin.com/in/aryan-khan-b77438438/" target="_blank" rel="me noopener noreferrer" className="font-semibold text-brand-strong hover:underline">View Aryan Khan on LinkedIn ↗</a>.</p>
 
         <h2>What we optimise for</h2>
         <ul>
@@ -58,34 +44,20 @@ export default function AboutPage() {
         </ul>
 
         <h2>Editorial standards and corrections</h2>
-        <p>
-          Our guides and tool explanations are created for MapBench under Aladdin&apos;s editorial oversight. We do not publish scraped articles or spun copies of third-party material.
-          Technical claims are checked against the implemented method and the relevant source data, and we correct valid factual or calculation errors when they are reported.
-          Read the full <Link href="/editorial-policy" className="font-semibold text-brand-strong hover:underline">Editorial Policy &amp; Corrections</Link>.
-        </p>
+        <p>Our guides and tool explanations are created for MapBench under Aryan Khan&apos;s editorial oversight. We do not publish scraped articles or spun copies of third-party material. Technical claims are checked against the implemented method and the relevant source data, and we correct valid factual or calculation errors when they are reported. Read the full <Link href="/editorial-policy" className="font-semibold text-brand-strong hover:underline">Editorial Policy &amp; Corrections</Link>.</p>
 
         <h2>Contact MapBench</h2>
-        <p>
-          Technical support and tool issues: <a href={`mailto:${SUPPORT_EMAIL}`} className="font-semibold text-brand-strong hover:underline">{SUPPORT_EMAIL}</a>.<br />
-          General, editorial and privacy enquiries: <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold text-brand-strong hover:underline">{CONTACT_EMAIL}</a>.
-        </p>
+        <p>Technical support and tool issues: <a href={`mailto:${SUPPORT_EMAIL}`} className="font-semibold text-brand-strong hover:underline">{SUPPORT_EMAIL}</a>.<br />General, editorial and privacy enquiries: <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold text-brand-strong hover:underline">{CONTACT_EMAIL}</a>.</p>
 
         <h2>Honesty by design</h2>
-        <p>
-          Where a number is an estimate, we say so. Routing times are labelled as estimates when live traffic is unavailable, and geographic boundaries from open datasets are not presented as legal survey determinations.
-          The details live on the <Link href="/methodology" className="font-semibold text-brand-strong hover:underline">Methodology</Link> and{" "}
-          <Link href="/data-sources" className="font-semibold text-brand-strong hover:underline">Data Sources</Link> pages.
-        </p>
+        <p>Where a number is an estimate, we say so. Routing times are labelled as estimates when live traffic is unavailable, and geographic boundaries from open datasets are not presented as legal survey determinations. The details live on the <Link href="/methodology" className="font-semibold text-brand-strong hover:underline">Methodology</Link> and <Link href="/data-sources" className="font-semibold text-brand-strong hover:underline">Data Sources</Link> pages.</p>
 
         <h2>Why the name MapBench?</h2>
-        <p>
-          A workbench is where useful tools are kept within reach. MapBench brings practical mapping, measurement and geographic
-          utilities together so you can answer a question, inspect data or make a map without setting up specialist GIS software.
-        </p>
+        <p>A workbench is where useful tools are kept within reach. MapBench brings practical mapping, measurement and geographic utilities together so you can answer a question, inspect data or make a map without setting up specialist GIS software.</p>
       </div>
       <div className="mt-8 flex flex-wrap gap-2">
         <Link href="/tools" className="btn btn-primary">Explore the tools</Link>
-        <Link href="/author/aladdin" className="btn btn-ghost">Meet Aladdin</Link>
+        <Link href="/author/aryan-khan" className="btn btn-ghost">Meet Aryan Khan</Link>
         <Link href="/editorial-policy" className="btn btn-ghost">Editorial policy</Link>
         <Link href="/contact" className="btn btn-ghost">Contact</Link>
       </div>
