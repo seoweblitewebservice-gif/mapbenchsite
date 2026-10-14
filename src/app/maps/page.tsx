@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { permanentRedirect } from "next/navigation";
 import { feature } from "topojson-client";
 import countriesTopo from "world-atlas/countries-110m.json";
 import MapsClient from "@/components/MapsClient";
@@ -24,6 +25,9 @@ const COUNTRY_LINKS = Array.from(
   new Set(countryFeatureCollection.features.map((item) => item.properties?.name).filter((name): name is string => Boolean(name))),
 ).sort((a, b) => a.localeCompare(b));
 
+const COUNTRY_SLUGS = new Set(COUNTRY_LINKS.map(slugify));
+const STATE_BY_NAME = new Map(US_BLANK_MAP_STATES.map((state) => [state.name.toLowerCase(), state]));
+
 const MAP_FAQS: [string, string][] = [
   ["Are these maps really free to use?", "Yes — completely free, including commercial use. The boundary data comes from Natural Earth and the US Census Bureau, both public domain, and the outlines are generated in your browser with no watermark or branding."],
   ["What's the difference between the four variants?", "Blank is a clean outline for worksheets and quizzes; Labeled adds region or country names; Colored fills each region with a soft tint for presentations; With cities overlays major-city dots from our curated dataset. Every variant downloads in both SVG and PNG."],
@@ -34,7 +38,26 @@ const MAP_FAQS: [string, string][] = [
   ["Do I need to credit MapBench?", "No attribution is required for public-domain data. A credit line is appreciated but never obligatory."],
 ];
 
-export default function MapsPage() {
+interface MapsPageProps {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}
+
+export default async function MapsPage({ searchParams }: MapsPageProps) {
+  const params = await searchParams;
+  const mapParam = Array.isArray(params.map) ? params.map[0] : params.map;
+
+  // Historical map selector URLs used a query parameter. Dedicated map pages are
+  // now the canonical destination, so consolidate the old duplicates while
+  // preserving every actual map and download page.
+  if (mapParam?.startsWith("c-")) {
+    const slug = slugify(mapParam.slice(2));
+    if (COUNTRY_SLUGS.has(slug)) permanentRedirect(`/maps/blank/${slug}`);
+  }
+  if (mapParam?.startsWith("s-")) {
+    const state = STATE_BY_NAME.get(mapParam.slice(2).trim().toLowerCase());
+    if (state) permanentRedirect(`/maps/blank/us/${state.slug}`);
+  }
+
   return (
     <div>
       <nav aria-label="Breadcrumb" className="mb-3 text-xs text-mute">
