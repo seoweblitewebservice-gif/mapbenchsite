@@ -1,0 +1,161 @@
+import type { GuideBlock } from "./guides";
+
+export const GUIDE_DEEP_ENRICHMENT_3: Record<string, GuideBlock[]> = {
+  "find-my-location-gps-vs-ip-vs-vpn": [
+    { t: "h2", text: "Why two correct systems can disagree by hundreds of kilometres" },
+    { t: "p", text: "A browser can know your device position and your network exit at the same time. Those are not competing answers. GPS and Wi-Fi positioning estimate where the device physically is. IP geolocation estimates where the public network address is associated. A corporate VPN, mobile carrier gateway or cloud security service can move that network exit far away from the person holding the phone." },
+    { t: "p", text: "This matters because many websites quietly fall back to IP when precise location permission is denied. The result can look polished — city, region, country, even a marker — while still being only a network-level approximation. A useful interface should label that difference rather than making an approximate city look like a precise GPS fix." },
+    { t: "linkp", parts: ["On MapBench, ", { href: "/tools/find-my-location", text: "Find My Location" }, " should be used for the device-position question, while ", { href: "/tools/what-is-my-public-ip", text: "What Is My Public IP" }, " and ", { href: "/tools/ip-address-lookup", text: "IP Address Lookup" }, " answer the network question."] },
+    { t: "h2", text: "A quick test that shows the difference clearly" },
+    { t: "ul", items: [
+      "Check your device location with browser permission enabled and note the coordinates.",
+      "Check your public IP location without changing anything.",
+      "Turn on a VPN in another city or country and refresh the IP result.",
+      "Compare again with browser geolocation permission still enabled.",
+      "The GPS/device result may stay near you while the IP result follows the VPN exit."
+    ] },
+    { t: "h2", text: "Why mobile networks are especially confusing" },
+    { t: "p", text: "Mobile carriers often route traffic through centralized gateways and reuse public addresses for many subscribers. The public IP may therefore map to a nearby major city rather than your actual suburb, or occasionally to another region. Carrier-grade NAT makes this normal. IP databases are useful for broad region and security context, but they should not be treated like a street-level locator." },
+    { t: "h2", text: "What happens when browser location permission is denied" },
+    { t: "p", text: "A good location tool should not become useless when precise location is blocked. It can still let you search an address, paste coordinates or click a map. An approximate IP fallback can be helpful if clearly labeled. The important part is that users can tell which source produced the answer and can switch to a more precise method when they need one." },
+    { t: "linkp", parts: ["If you already know an address, ", { href: "/tools/address-to-coordinates", text: "Address to Coordinates" }, " is usually better than relying on IP fallback. If you know the coordinate but need a place label, ", { href: "/tools/reverse-geocoder", text: "Reverse Geocoder" }, " answers that different question."] },
+    { t: "h2", text: "Privacy: precision should be optional" },
+    { t: "p", text: "Precise location can reveal home, work, travel and routine. Browser geolocation exists behind a permission prompt for a reason. If a task can be completed by searching a place instead, the user should not be forced to share live coordinates. A trustworthy location tool explains what it needs and still works in a useful way when permission is refused." },
+    { t: "h2", text: "Which result should you trust?" },
+    { t: "table", headers: ["Question", "Best source"], rows: [
+      ["Where is this device physically located?", "Browser/device geolocation with permission, checked against the map"],
+      ["Where does my internet connection appear to come from?", "Public IP geolocation"],
+      ["Where is this address?", "Geocoding the address"],
+      ["What place is near these coordinates?", "Reverse geocoding"],
+      ["What location is legally authoritative?", "Relevant official or survey source"]
+    ] },
+  ],
+
+  "drive-time-map-vs-radius-circle": [
+    { t: "h2", text: "The clean circle is attractive because it hides complexity" },
+    { t: "p", text: "A radius is easy to explain and easy to print. That is exactly why it gets overused. The circle treats every direction equally even when the real network does not. A bridge, motorway entrance, toll road, ferry or one-way system can make accessibility strongly directional. If the decision is about travel, the irregular isochrone is often the more honest shape." },
+    { t: "linkp", parts: ["Run the same centre through ", { href: "/tools/map-radius", text: "Map Radius" }, " and ", { href: "/tools/drive-time-map", text: "Drive Time Map" }, ". Seeing the two shapes together is one of the fastest ways to explain why equal distance and equal access are not the same."] },
+    { t: "h2", text: "Delivery areas: policy language decides the right map" },
+    { t: "p", text: "If a business promises delivery within 10 miles, a radius matches the written rule, though a road-distance policy may still be more operationally sensible. If the promise is delivery within 30 minutes, a drive-time model is closer to the question. Mixing a time promise with a distance circle creates hidden service failures around barriers and slow roads." },
+    { t: "h2", text: "Store catchments need people, not just polygons" },
+    { t: "p", text: "A larger drive-time polygon is not automatically a better store location. One site may reach empty land; another may reach dense neighborhoods. After mapping access, add population, customer locations or demand data. The isochrone is the geographic filter; the business decision needs another layer." },
+    { t: "linkp", parts: ["For rough demographic context, compare the result with ", { href: "/tools/population-within-radius", text: "Population Within Radius" }, " while remembering that a radius population estimate is not the same as population inside a road-time polygon."] },
+    { t: "h2", text: "Walking and cycling make the contrast even stronger" },
+    { t: "p", text: "A pedestrian can use footpaths, crossings and bridges that cars cannot. A cyclist may avoid motorways but benefit from dedicated trails. The right network and travel mode therefore matter as much as the contour time. A car-based isochrone should never be reused as though it represented walking access." },
+    { t: "h2", text: "Traffic is the missing layer in many free tools" },
+    { t: "p", text: "Many public routing services estimate travel from road type and expected speeds rather than live congestion. A 20-minute polygon generated at noon may overstate access during rush hour. For planning, that can still be useful if the assumption is stated. For a contractual delivery promise, you may need historical or live traffic data and operational testing." },
+    { t: "h2", text: "A practical decision framework" },
+    { t: "table", headers: ["Decision", "Preferred map"], rows: [
+      ["Fixed legal or policy buffer in miles/km", "Radius circle"],
+      ["Who can reach a site in X minutes", "Drive-time / isochrone"],
+      ["How far apart are two coordinates", "Straight-line distance"],
+      ["How long is the actual road trip", "Routing / driving distance"],
+      ["Compare multiple service sites", "Same-mode isochrones plus demand/population layers"]
+    ] },
+    { t: "linkp", parts: ["For the broader comparison, read ", { href: "/guides/radius-vs-drive-time-vs-straight-line-distance", text: "Radius vs. Drive Time vs. Straight-Line Distance" }, ", which separates all three measurements before they get mixed into one service-area decision."] },
+  ],
+
+  "how-to-find-latitude-longitude-of-any-place": [
+    { t: "h2", text: "Search results are convenient, but a map click can be more honest" },
+    { t: "p", text: "An address search returns the point chosen by the geocoding provider. For a normal house that may be excellent. For a park, factory, university campus or rural property, the returned point may be a label position or centroid rather than the exact gate or building you care about. If the task is 'this exact place on the ground,' zoom in and click it deliberately." },
+    { t: "linkp", parts: ["The ", { href: "/tools/latitude-longitude-finder", text: "Latitude & Longitude Finder" }, " is useful because you can search first and then refine the pin. For an address-only workflow, compare with ", { href: "/tools/address-to-coordinates", text: "Address to Coordinates" }, "."] },
+    { t: "h2", text: "Coordinate order is the mistake that survives validation" },
+    { t: "p", text: "A swapped pair can still consist of two valid numbers. 40, -74 makes sense as latitude/longitude; -74, 40 also falls inside the legal numeric ranges. Range validation alone therefore cannot catch every swap. Plotting the point is the best sanity check. If a batch dataset suddenly moves from New York to the southern Indian Ocean or another plausible-but-wrong place, coordinate order is one of the first things to inspect." },
+    { t: "h2", text: "Place names need disambiguation" },
+    { t: "p", text: "There are many Springfields, Richmonds and San Joses. Search with city plus state, province or country when the name is not unique. For landmarks, add the city. For rural addresses, include postal code where available. The more context you provide, the less likely the geocoder is to choose the wrong feature with the same name." },
+    { t: "h2", text: "How to share coordinates without creating confusion" },
+    { t: "ul", items: [
+      "Write the labels: latitude first, longitude second, unless the receiving system specifies another order.",
+      "Keep the minus signs and avoid replacing them with hemisphere letters unless the format requires it.",
+      "Include a map link when the recipient is not working in GIS software.",
+      "For field work, include a human place description as a second check.",
+      "Do not claim survey precision for a point selected from consumer imagery."
+    ] },
+    { t: "linkp", parts: ["For easy sharing, the ", { href: "/tools/share-location-link-generator", text: "Share Location Link Generator" }, " can turn a coordinate into a usable link rather than forcing somebody to retype numbers."] },
+    { t: "h2", text: "When you need another coordinate system" },
+    { t: "p", text: "Latitude/longitude is excellent for global interoperability, but projected grids can be easier for local measurement. UTM divides the world into zones and represents positions in metres. MGRS builds a grid reference on top of UTM/UPS for compact location notation. Conversion is useful, but the zone, hemisphere and datum still matter." },
+    { t: "linkp", parts: ["Use the ", { href: "/tools/utm-converter", text: "UTM Converter" }, " or ", { href: "/tools/mgrs-converter", text: "MGRS Converter" }, " when the receiving workflow requires a grid rather than decimal degrees."] },
+    { t: "h2", text: "A reliable final check" },
+    { t: "p", text: "Before pasting coordinates into a form you cannot easily undo, open them on a map and ask three simple questions: Is the point in the right country? Is it in the right neighborhood? Is it on the specific feature I intended? Those checks catch more real errors than adding another decimal place." },
+  ],
+
+  "what-county-am-i-in-how-it-works": [
+    { t: "h2", text: "County lookup is geometry, not nearest-name matching" },
+    { t: "p", text: "A proper county lookup starts with a coordinate and asks which administrative polygon contains it. That distinction matters near county seats and large cities. The nearest famous city can sit in a different county, and a postal address can use a city name that crosses or ignores the administrative boundary people assume." },
+    { t: "linkp", parts: ["Use ", { href: "/tools/what-county-am-i-in", text: "What County Am I In?" }, " with a deliberate map point or accurate device location, then compare with ", { href: "/tools/what-city-am-i-in", text: "What City Am I In?" }, " instead of expecting the two labels to represent the same layer."] },
+    { t: "h2", text: "Independent cities and county-equivalents complicate US data" },
+    { t: "p", text: "Most of the United States uses counties, but not every county-equivalent behaves the same way. Louisiana has parishes, Alaska uses boroughs and census areas, and some independent cities are treated as county-equivalents for statistical purposes. A good lookup should preserve the actual administrative label rather than forcing every result into the word 'county.'" },
+    { t: "h2", text: "Boundary updates can lag across datasets" },
+    { t: "p", text: "Administrative boundaries can be adjusted, annexed or redefined. Open map and statistical datasets update on different schedules. For casual orientation, a recent open dataset is usually sufficient. For taxes, voting, property records or legal jurisdiction, verify against the responsible government authority because the official source controls the decision." },
+    { t: "h2", text: "GPS uncertainty matters most near the line" },
+    { t: "p", text: "If you are kilometres inside one county, a 20-metre location error changes nothing. If you are standing beside the boundary, the same error can flip the answer. That is why county tools should show the point on a map and allow users to search or reposition it. The boundary result is only as good as the coordinate used for the point-in-polygon test." },
+    { t: "linkp", parts: ["If browser GPS is weak or blocked, search the address or use ", { href: "/tools/address-to-coordinates", text: "Address to Coordinates" }, " rather than relying on a rough IP-based city estimate."] },
+    { t: "h2", text: "County, ZIP and school district are different datasets" },
+    { t: "p", text: "It is tempting to assume a ZIP Code belongs neatly to one county or that county boundaries define school attendance. In reality, postal areas can cross administrative boundaries, and school districts use their own polygons. If the question is specifically about schools, taxes, courts or elections, use the dataset built for that purpose rather than deriving the answer from a county name." },
+    { t: "h2", text: "When to trust the web result and when to verify" },
+    { t: "table", headers: ["Use case", "Recommended confidence level"], rows: [
+      ["Travel, curiosity, general orientation", "Open-map lookup is usually sufficient"],
+      ["Sales territory planning", "Useful, but document dataset/source and boundary date"],
+      ["Property, tax, voting or legal filing", "Verify with official authority"],
+      ["Emergency dispatch", "Use official emergency systems and procedures"],
+      ["Research dataset", "Record the boundary source and vintage for reproducibility"]
+    ] },
+  ],
+
+  "free-printable-blank-maps-for-school-and-work": [
+    { t: "h2", text: "The right blank map depends on what the learner is supposed to do" },
+    { t: "p", text: "A blank outline works when the exercise is identification: label the states, shade the countries, mark a river or draw a trade route. A labeled map is better when geography is context rather than the skill being tested. If students spend the whole lesson guessing where the labels belong, the map has become the assignment instead of supporting it." },
+    { t: "h2", text: "Outline, labeled and colored maps serve different jobs" },
+    { t: "table", headers: ["Map style", "Best use"], rows: [
+      ["Blank outline", "Quizzes, labeling exercises, custom annotations and coloring"],
+      ["Labeled boundaries", "Reference sheets and lessons where place names are context"],
+      ["Colored regions", "Presentations, grouping, sales territories and category maps"],
+      ["City/point variant", "Travel, urban geography and location exercises"],
+      ["SVG/vector", "Editing, high-quality print and design work"],
+      ["PNG/raster", "Quick documents, slides and simple printing"]
+    ] },
+    { t: "linkp", parts: ["Browse the ", { href: "/maps", text: "MapBench blank map library" }, " when you need a country or region outline, and use the ", { href: "/tools/color-a-map", text: "Color a Map tool" }, " when the task is to create your own categories rather than print an empty worksheet."] },
+    { t: "h2", text: "Why SVG is worth using for worksheets" },
+    { t: "p", text: "SVG is a vector format, so boundaries remain sharp when the map is enlarged for a poster or reduced for a worksheet. Text and styling can also be edited in vector or design software. PNG is simpler for ordinary office documents, but enlarging a small raster image can make lines and labels fuzzy." },
+    { t: "h2", text: "Print design needs more whitespace than screen design" },
+    { t: "p", text: "A map that looks elegant on a laptop can become cramped on paper. Leave room around the outline for labels, arrows and handwriting. Avoid very thin boundary lines that disappear on inexpensive printers. If students are expected to color regions, use enough line contrast that neighboring areas stay visible after pencil or marker is added." },
+    { t: "h2", text: "For work, a blank map is often a communication layer" },
+    { t: "p", text: "Sales, logistics and operations teams use blank maps differently from classrooms. The map becomes a background for territories, branches, market areas or project status. In that setting, simplicity is useful because the business information should be more prominent than the base geography." },
+    { t: "linkp", parts: ["For numeric territory work, combine a blank reference map with tools such as ", { href: "/tools/map-radius", text: "Map Radius" }, " or ", { href: "/tools/service-area-map", text: "Service Area Map" }, " rather than drawing operational boundaries freehand."] },
+    { t: "h2", text: "Source and boundary caveats still matter" },
+    { t: "p", text: "Printable outlines are usually generalized for visual clarity. They are not legal boundary surveys. Coastlines, disputed borders and small islands may be simplified. For classroom and presentation use that is usually an advantage; for official boundary questions it is a reason to use the appropriate government or authoritative GIS source instead." },
+    { t: "h2", text: "A simple worksheet checklist" },
+    { t: "ul", items: [
+      "Choose the smallest geographic area that fits the lesson.",
+      "Remove labels only when students are expected to supply them.",
+      "Leave enough margin for handwriting and a legend.",
+      "Print one test page before producing a full class set.",
+      "Keep the source map link in the teacher notes or project file for attribution and reproducibility."
+    ] },
+  ],
+
+  "will-it-grow-here": [
+    { t: "h2", text: "Hardiness is mostly about winter survival, not total plant performance" },
+    { t: "p", text: "A hardiness zone is useful because extreme winter cold can kill perennial plants outright. But surviving the coldest night is only one part of growing well. A plant can be hardy enough for the zone and still fail because summers are too hot, rainfall arrives in the wrong season, soil stays waterlogged or spring frosts damage new growth." },
+    { t: "linkp", parts: ["Use the ", { href: "/tools/hardiness-zone-finder", text: "Hardiness Zone Finder" }, " as a first filter, then compare broader climate context with the ", { href: "/tools/climate-zone-finder", text: "Climate Zone Finder" }, ". Neither replaces local horticultural advice."] },
+    { t: "h2", text: "Microclimates can move the practical answer within one garden" },
+    { t: "p", text: "A south-facing brick wall can store heat and shelter plants from wind. A low hollow can collect cold air on clear nights. Raised beds drain faster than compacted clay. A rooftop or exposed balcony can be much windier than the official weather station. These differences are why experienced gardeners often learn more from one winter on their property than from a zone number alone." },
+    { t: "h2", text: "Elevation changes temperature quickly over short horizontal distances" },
+    { t: "p", text: "Two gardens only a few kilometres apart can sit hundreds of metres apart vertically. Higher ground is often cooler, but local inversions can make valley bottoms colder on calm nights. Elevation therefore adds context that a broad regional zone map cannot capture." },
+    { t: "linkp", parts: ["Check site height with the ", { href: "/tools/elevation-finder", text: "Elevation Finder" }, " and compare that with nearby official weather stations rather than assuming the nearest town's climate perfectly describes the property."] },
+    { t: "h2", text: "Day length is predictable; weather is not" },
+    { t: "p", text: "Latitude controls seasonal daylight with astronomical precision. That affects flowering, growth cycles and how long plants receive potential sunlight, though actual light still depends on cloud, shade and aspect. This is a useful example of combining a predictable geographic variable with messy local conditions." },
+    { t: "linkp", parts: ["The ", { href: "/tools/daylight-hours-calculator", text: "Daylight Hours Calculator" }, " can compare seasonal day length between locations, but use a site visit or shade study to understand how much of that daylight reaches the plant."] },
+    { t: "h2", text: "A better plant-selection workflow" },
+    { t: "ul", items: [
+      "Check hardiness zone for cold tolerance.",
+      "Check summer heat and rainfall pattern, not only winter minima.",
+      "Look at soil drainage, pH and irrigation availability.",
+      "Observe sun, wind and frost pockets on the actual property.",
+      "Use local extension services, nurseries or horticultural references for species-specific advice."
+    ] },
+    { t: "h2", text: "Climate datasets have dates and methods" },
+    { t: "p", text: "Zone maps and climate normals are built from a period of observations. Updated datasets can shift boundaries because the climate period, station network or interpolation method changes. That does not mean the previous map was fraudulent; it means the reference period changed. When a plant choice matters financially, note the source and vintage instead of treating the zone as a timeless property of the address." },
+    { t: "p", text: "The useful mindset is to treat maps as evidence layers. Hardiness answers one question, climate classification another, elevation another, and local gardening experience ties them together. A plant that is technically hardy still needs a site where its full set of requirements can be met." },
+  ],
+};
