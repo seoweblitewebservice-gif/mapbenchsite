@@ -27,7 +27,18 @@ export function generateStaticParams() { return countryNames.map((name) => ({ co
 export async function generateMetadata({ params }: { params: Promise<{ country: string }> }): Promise<Metadata> {
   const { country } = await params;
   const name = getCountryFeature(country)?.properties?.name ?? country.replace(/-/g, " ");
-  return { title: `${name} Blank Map — SVG & PNG`, description: `Free printable ${name} blank map with SVG and high-resolution PNG exports, geographic facts, extent, centroid and source notes.`, alternates: { canonical: `/maps/blank/${country}` }, robots: { index: true, follow: true }, openGraph: { title: `${name} Blank Map — SVG & PNG | MapBench`, description: `Explore and export a printable ${name} map in your browser.`, type: "website" } };
+  return {
+    title: `${name} Blank Map — Printable SVG & PNG`,
+    description: `Free printable ${name} blank map with SVG and high-resolution PNG exports, geographic facts, extent, centroid and source notes.`,
+    alternates: { canonical: `/maps/blank/${country}` },
+    robots: { index: true, follow: true },
+    openGraph: {
+      title: `${name} Blank Map — Printable SVG & PNG | MapBench`,
+      description: `Explore and export a printable ${name} map in your browser.`,
+      type: "website",
+      url: `https://www.mapbench.site/maps/blank/${country}`,
+    },
+  };
 }
 
 export default async function CountryMapPage({ params }: { params: Promise<{ country: string }> }) {
@@ -44,14 +55,14 @@ export default async function CountryMapPage({ params }: { params: Promise<{ cou
     ["How is the area calculated?", "MapBench estimates spherical area from the source geometry. The result is useful for geographic context, not an official land-area statistic."],
   ];
   const jsonLd = [
-    { "@context":"https://schema.org","@type":"WebPage",name:`${name} Blank Map`,description:`Free printable ${name} blank map with browser-based SVG and PNG export options.`,url:`https://www.mapbench.site/maps/blank/${country}`,author:{"@type":"Person",name:"Aladdin",url:"https://www.mapbench.site/about"},isPartOf:{"@type":"WebSite",name:"MapBench",url:"https://www.mapbench.site"} },
+    { "@context":"https://schema.org","@type":"WebPage",name:`${name} Blank Map`,description:`Free printable ${name} blank map with browser-based SVG and PNG export options.`,url:`https://www.mapbench.site/maps/blank/${country}`,author:{"@type":"Person",name:"Aryan Khan",url:"https://www.mapbench.site/author/aryan-khan"},isPartOf:{"@type":"WebSite",name:"MapBench",url:"https://www.mapbench.site"} },
     { "@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"MapBench",item:"https://www.mapbench.site"},{"@type":"ListItem",position:2,name:"Maps",item:"https://www.mapbench.site/maps"},{"@type":"ListItem",position:3,name:`${name} Blank Map`}]},
     { "@context":"https://schema.org","@type":"FAQPage",mainEntity:faqs.map(([q,a])=>({"@type":"Question",name:q,acceptedAnswer:{"@type":"Answer",text:a}})) },
   ];
 
   return <div className="doc mx-auto max-w-5xl py-8">
     <nav className="mb-5 text-xs text-mute"><Link href="/">Home</Link> / <Link href="/maps">Maps</Link> / <span>{name}</span></nav>
-    <header className="max-w-3xl"><p className="font-sans text-[11px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">Printable blank map</p><h1 className="mt-2 font-display text-4xl font-bold tracking-tight">{name} Blank Map</h1><p className="mt-4 text-lg leading-relaxed text-mute">Explore a clean outline of {name}, inspect geographic reference facts, and export a map for worksheets, presentations, labeling or design work.</p><p className="mt-3 text-sm text-mute">Reference page edited by <Link href="/about" className="font-semibold text-brand-strong">Aladdin</Link>.</p></header>
+    <header className="max-w-3xl"><p className="font-sans text-[11px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">Printable blank map</p><h1 className="mt-2 font-display text-4xl font-bold tracking-tight">{name} Blank Map</h1><p className="mt-4 text-lg leading-relaxed text-mute">Explore a clean outline of {name}, inspect geographic reference facts, and export a map for worksheets, presentations, labeling or design work.</p><p className="mt-3 text-sm text-mute">Reference page edited by <Link href="/author/aryan-khan" className="font-semibold text-brand-strong hover:underline">Aryan Khan</Link> · <Link href="/data-sources" className="font-semibold text-brand-strong hover:underline">data sources</Link>.</p></header>
 
     <section className="mt-8"><MapsClient initialMapSlug={`c-${name}`} /></section>
 
