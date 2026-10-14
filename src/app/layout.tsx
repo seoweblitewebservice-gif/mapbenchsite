@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     description: "Free browser-first geographic tools: distance, radius, routing, coordinates, map files and more.",
   },
   robots: { index: true, follow: true },
-  authors: [{ name: "Aladdin", url: "https://www.mapbench.site/author/aladdin" }],
-  creator: "Aladdin",
+  authors: [{ name: "Aryan Khan", url: "https://www.mapbench.site/author/aryan-khan" }],
+  creator: "Aryan Khan",
   publisher: "MapBench",
 };
 
@@ -64,7 +64,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           "@context": "https://schema.org",
           "@graph": [
             { "@type": "WebSite", "@id": "https://www.mapbench.site/#website", name: "MapBench", url: "https://www.mapbench.site", description: "Free browser-based map and geographic tools." },
-            { "@type": "Organization", "@id": "https://www.mapbench.site/#organization", name: "MapBench", url: "https://www.mapbench.site", logo: { "@type": "ImageObject", url: "https://www.mapbench.site/icon.svg" } }
+            { "@type": "Organization", "@id": "https://www.mapbench.site/#organization", name: "MapBench", url: "https://www.mapbench.site", logo: { "@type": "ImageObject", url: "https://www.mapbench.site/icon.svg" }, founder: { "@type": "Person", "@id": "https://www.mapbench.site/author/aryan-khan#person", name: "Aryan Khan", url: "https://www.mapbench.site/author/aryan-khan", sameAs: ["https://www.linkedin.com/in/aryan-khan-b77438438/"] } }
           ]
         }) }} />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
