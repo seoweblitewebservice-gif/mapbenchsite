@@ -60,25 +60,25 @@ const TOOL_GROUPS = CATEGORIES.map((category) => ({
 
 const MAPS_MENU: { title: string; links: [string, string][]; more?: [string, string] }[] = [
   {
-    title: "Popular maps",
+    title: "Blank map library",
     links: [
-      ["/maps?map=world", "World"],
-      ["/maps?map=us", "United States"],
-      ["/maps?map=c-India", "India"],
-      ["/maps?map=c-United-Kingdom", "United Kingdom"],
-      ["/maps?map=c-Japan", "Japan"],
-      ["/maps?map=c-Australia", "Australia"],
+      ["/maps", "All blank maps"],
+      ["/states", "US states & county lists"],
+      ["/maps/blank/us/california", "California county map"],
+      ["/maps/blank/us/texas", "Texas county map"],
+      ["/maps/blank/india", "India blank map"],
+      ["/maps/blank/united-kingdom", "United Kingdom blank map"],
     ],
-    more: ["/maps", "Browse all maps →"],
+    more: ["/maps", "Browse the complete map library →"],
   },
   {
     title: "Region tools",
     links: [
       ["/tools/what-county-am-i-in", "What County Am I In?"],
+      ["/tools/us-county-demographic-explorer", "County Demographic Explorer"],
       ["/tools/cities-within-radius", "Cities Within Radius"],
       ["/tools/population-within-radius", "Population Within Radius"],
       ["/tools/map-area-calculator", "Map Area Calculator"],
-      ["/tools/service-area-map", "Service Area Map"],
       ["/tools/multi-radius-map", "Multiple Radius Tool"],
     ],
     more: ["/tools", "All tools →"],
@@ -197,6 +197,7 @@ export default function Header() {
             )}
           </div>
 
+          <Link href="/states" className="rounded px-2.5 py-1.5 text-[13px] font-bold hover:text-brand-strong">States</Link>
           <Link href="/studies" className="rounded px-2.5 py-1.5 text-[13px] font-bold hover:text-brand-strong">Studies</Link>
           <Link href="/guides" className="rounded px-2.5 py-1.5 text-[13px] font-bold hover:text-brand-strong">Guides</Link>
           <Link href="/about" className="rounded px-2.5 py-1.5 text-[13px] font-bold hover:text-brand-strong">About</Link>
@@ -220,6 +221,7 @@ export default function Header() {
             <div className="flex flex-wrap gap-4 text-sm font-extrabold">
               <Link href="/tools" className="text-brand-strong">All tools</Link>
               <Link href="/maps" className="text-brand-strong">Maps</Link>
+              <Link href="/states" className="text-brand-strong">States</Link>
               <Link href="/studies" className="text-brand-strong">Studies</Link>
               <Link href="/guides" className="text-brand-strong">Guides</Link>
               <Link href="/about" className="text-brand-strong">About</Link>
