@@ -18,6 +18,7 @@ const components: Record<string, () => Promise<{ default: ComponentType<{ params
   csv: () => import("./CsvMapTool"),
   pinmap: () => import("./PinMapTool"),
   cities: () => import("./CitiesRadiusProTool"),
+  countyexplorer: () => import("./CountyExplorerTool"),
   zipradius: () => import("./ZipRadiusTool"),
   nearby: () => import("./NearbyTool"),
   elevation: () => import("./ElevationTool"),
