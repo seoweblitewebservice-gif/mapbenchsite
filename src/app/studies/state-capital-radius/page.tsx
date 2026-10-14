@@ -30,28 +30,71 @@ const rows = US_STATE_CAPITALS.map((capital) => {
 
 const averageKm = rows.reduce((sum, row) => sum + row.km, 0) / Math.max(rows.length, 1);
 const medianKm = rows.length ? [...rows].sort((a, b) => a.km - b.km)[Math.floor(rows.length / 2)].km : 0;
+const closest = rows.length ? [...rows].sort((a, b) => a.km - b.km)[0] : null;
+const farthest = rows[0] ?? null;
 
 export default function StateCapitalRadiusStudy() {
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: "How Far Is Each US State Capital From the Geographic Center of Its State?",
+      description: "Original MapBench study measuring great-circle distance between each US state capital and the geographic centroid of its state polygon.",
+      datePublished: "2026-10-14",
+      dateModified: "2026-10-14",
+      mainEntityOfPage: "https://www.mapbench.site/studies/state-capital-radius",
+      author: { "@type": "Person", name: "Aryan Khan", url: "https://www.mapbench.site/author/aryan-khan" },
+      publisher: { "@type": "Organization", name: "MapBench", url: "https://www.mapbench.site" },
+      about: ["US state capitals", "geographic centroid", "great-circle distance", "US state geography"],
+      isPartOf: { "@type": "CollectionPage", name: "MapBench Studies", url: "https://www.mapbench.site/studies" },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      name: "US State Capital to Geographic Centroid Distance Ranking",
+      description: "Fifty-state ranking calculated by MapBench from state polygon centroids and public state-capital coordinates.",
+      url: "https://www.mapbench.site/studies/state-capital-radius",
+      creator: { "@type": "Person", name: "Aryan Khan", url: "https://www.mapbench.site/author/aryan-khan" },
+      dateModified: "2026-10-14",
+      spatialCoverage: "United States",
+      temporalCoverage: "2026",
+      variableMeasured: ["State capital latitude", "State capital longitude", "State polygon centroid latitude", "State polygon centroid longitude", "Great-circle distance in kilometers"],
+      measurementTechnique: "Geographic centroid calculation followed by great-circle distance between coordinates",
+      isBasedOn: ["https://github.com/topojson/us-atlas", "https://vega.github.io/vega-datasets/data/us-state-capitals.json"],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "MapBench", item: "https://www.mapbench.site" },
+        { "@type": "ListItem", position: 2, name: "Studies", item: "https://www.mapbench.site/studies" },
+        { "@type": "ListItem", position: 3, name: "State Capital Geography Study", item: "https://www.mapbench.site/studies/state-capital-radius" },
+      ],
+    },
+  ];
+
   return (
     <div className="doc mx-auto max-w-6xl">
       <nav aria-label="Breadcrumb" className="mb-4 text-xs text-mute"><Link href="/" className="hover:text-brand-strong">Home</Link> / <Link href="/studies" className="hover:text-brand-strong">Studies</Link> / State capital geography</nav>
       <p className="font-sans text-[11px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">Original MapBench study · 14 Oct 2026</p>
       <h1 className="mt-2 max-w-4xl font-display text-3xl font-bold tracking-tight sm:text-4xl">How Far Is Each US State Capital From the Geographic Center of Its State?</h1>
       <p className="mt-4 max-w-4xl text-base leading-relaxed text-mute">For each of the 50 states, MapBench calculates the geographic centroid of the Census-derived state geometry, then measures the great-circle distance from that centroid to the state-capital coordinates. This is a geometric comparison, not a claim about population balance, driving distance or political representation.</p>
+      <p className="mt-3 text-sm text-mute">Research by <Link href="/author/aryan-khan" className="font-semibold text-brand-strong hover:underline">Aryan Khan</Link> · <Link href="/methodology" className="font-semibold text-brand-strong hover:underline">methodology</Link> · <Link href="/data-sources" className="font-semibold text-brand-strong hover:underline">data sources</Link> · <Link href="/corrections" className="font-semibold text-brand-strong hover:underline">corrections</Link></p>
 
-      <section className="mt-8 grid gap-4 sm:grid-cols-3">
+      <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <div className="card p-5"><div className="text-xs font-extrabold uppercase text-mute">States compared</div><div className="mt-1 font-display text-3xl font-bold">{rows.length}</div></div>
         <div className="card p-5"><div className="text-xs font-extrabold uppercase text-mute">Average separation</div><div className="mt-1 font-display text-3xl font-bold">{Math.round(averageKm)} km</div></div>
-        <div className="card p-5"><div className="text-xs font-extrabold uppercase text-mute">Median separation</div><div className="mt-1 font-display text-3xl font-bold">{Math.round(medianKm)} km</div></div>
+        <div className="card p-5"><div className="text-xs font-extrabold uppercase text-mute">Farthest capital</div><div className="mt-1 font-display text-xl font-bold">{farthest?.city ?? "—"}</div><div className="mt-1 text-xs text-mute">{farthest ? `${farthest.state} · ${Math.round(farthest.km)} km` : "—"}</div></div>
+        <div className="card p-5"><div className="text-xs font-extrabold uppercase text-mute">Closest capital</div><div className="mt-1 font-display text-xl font-bold">{closest?.city ?? "—"}</div><div className="mt-1 text-xs text-mute">{closest ? `${closest.state} · ${Math.round(closest.km)} km` : "—"}</div></div>
       </section>
 
       <section className="mt-10" aria-labelledby="ranking">
         <h2 id="ranking" className="sect-h">Ranking: capital-to-state-centroid distance</h2>
         <p className="mt-3 max-w-4xl text-sm leading-relaxed text-mute">Longer distances indicate that the capital is farther from the centroid of the generalized state polygon. Coastal shape, islands, panhandles and irregular boundaries can move a polygon centroid substantially, so the ranking should be read as a geometry study rather than a measure of accessibility.</p>
         <div className="mt-5 overflow-x-auto rounded-xl border border-line bg-card">
-          <table className="tbl min-w-[760px]">
-            <thead><tr><th>Rank</th><th>State</th><th>Capital</th><th className="text-right">Distance</th><th className="text-right">Capital coordinates</th></tr></thead>
-            <tbody>{rows.map((row, index) => <tr key={row.state}><td>{index + 1}</td><td>{row.slug ? <Link href={`/maps/blank/us/${row.slug}`} className="font-bold text-brand-strong hover:underline">{row.state}</Link> : row.state}</td><td>{row.city}</td><td className="text-right font-semibold">{Math.round(row.km)} km</td><td className="whitespace-nowrap text-right text-xs text-mute">{row.lat.toFixed(3)}°, {row.lng.toFixed(3)}°</td></tr>)}</tbody>
+          <table className="tbl min-w-[860px]">
+            <thead><tr><th>Rank</th><th>State</th><th>Capital</th><th className="text-right">Distance</th><th className="text-right">Capital coordinates</th><th>State resources</th></tr></thead>
+            <tbody>{rows.map((row, index) => <tr key={row.state}><td>{index + 1}</td><td className="font-semibold">{row.state}</td><td>{row.city}</td><td className="text-right font-semibold">{Math.round(row.km)} km</td><td className="whitespace-nowrap text-right text-xs text-mute">{row.lat.toFixed(3)}°, {row.lng.toFixed(3)}°</td><td className="whitespace-nowrap">{row.slug ? <><Link href={`/states/${row.slug}/counties`} className="text-xs font-bold text-brand-strong hover:underline">Counties</Link><span className="mx-1 text-mute">·</span><Link href={`/maps/blank/us/${row.slug}`} className="text-xs font-bold text-brand-strong hover:underline">Map</Link></> : "—"}</td></tr>)}</tbody>
           </table>
         </div>
       </section>
@@ -61,9 +104,11 @@ export default function StateCapitalRadiusStudy() {
         <div className="card p-6"><h2 className="font-display text-2xl font-bold">What this study does not measure</h2><ul className="mt-4 list-disc space-y-2 pl-6 text-sm leading-relaxed"><li>It does not measure driving distance or travel time.</li><li>It does not use population-weighted centers.</li><li>It does not decide whether a capital is well located for residents.</li><li>It does not use legal survey-grade state boundaries.</li><li>State polygon centroids can fall in unintuitive places for irregular or multipart geometry.</li></ul></div>
       </section>
 
-      <section className="mt-12 rounded-xl border border-line bg-well/40 p-6"><h2 className="font-display text-2xl font-bold">Reproduce or explore the result</h2><p className="mt-3">Use the <Link href="/tools/map-radius" className="font-bold text-brand-strong hover:underline">Map Radius Tool</Link> to draw a geographic radius around any capital, the <Link href="/tools/distance-between-two-places" className="font-bold text-brand-strong hover:underline">Distance Between Two Places</Link> tool to compare coordinates, or browse the <Link href="/states" className="font-bold text-brand-strong hover:underline">US States hub</Link> for state maps and Census tools.</p><p className="mt-4 font-sans text-sm"><Link href="/methodology" className="font-extrabold text-brand-strong hover:underline">Methodology →</Link><span className="mx-2 text-mute">·</span><Link href="/data-sources" className="font-extrabold text-brand-strong hover:underline">Data sources →</Link><span className="mx-2 text-mute">·</span><Link href="/corrections" className="font-extrabold text-brand-strong hover:underline">Corrections →</Link></p></section>
+      <section className="mt-12 rounded-xl border border-line bg-well/40 p-6"><h2 className="font-display text-2xl font-bold">Reproduce or explore the result</h2><p className="mt-3">Use the <Link href="/tools/map-radius" className="font-bold text-brand-strong hover:underline">Map Radius Tool</Link> to draw a geographic radius around any capital, the <Link href="/tools/distance-between-two-places" className="font-bold text-brand-strong hover:underline">Distance Between Two Places</Link> tool to compare coordinates, or browse the <Link href="/states" className="font-bold text-brand-strong hover:underline">US States hub</Link> for state maps, county reference pages and Census tools.</p><p className="mt-4 font-sans text-sm"><Link href="/methodology" className="font-extrabold text-brand-strong hover:underline">Methodology →</Link><span className="mx-2 text-mute">·</span><Link href="/data-sources" className="font-extrabold text-brand-strong hover:underline">Data sources →</Link><span className="mx-2 text-mute">·</span><Link href="/corrections" className="font-extrabold text-brand-strong hover:underline">Corrections →</Link></p></section>
 
       <section className="mt-12 border-t border-line pt-10"><h2 className="sect-h">Source note</h2><p className="mt-3 max-w-4xl">State geometry comes from the Census-derived <code>us-atlas</code> state dataset already used by MapBench blank maps. Capital coordinates are stored as a public reference dataset in MapBench from the Vega project&apos;s US state-capitals data. The ranking is calculated by MapBench from those inputs; no competitor ranking or percentages are copied.</p></section>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </div>
   );
 }
