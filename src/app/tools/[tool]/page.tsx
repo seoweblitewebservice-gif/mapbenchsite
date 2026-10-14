@@ -33,11 +33,14 @@ const TITLE_OVERRIDES: Record<string, string> = {
 function seoTitle(slug: string, name: string, keywords: string[]) {
   if (TITLE_OVERRIDES[slug]) return TITLE_OVERRIDES[slug];
   const primary = keywords[0]?.trim();
+  let t = name;
   if (primary && primary.length <= 42) {
     const p = primary.replace(/^./, (c) => c.toUpperCase());
-    if (!name.toLowerCase().includes(primary.toLowerCase())) return `${name}: ${p}`;
+    if (!name.toLowerCase().includes(primary.toLowerCase())) t = `${name}: ${p}`;
   }
-  return name;
+  // Keep the rendered "<title> · MapBench" descriptive: pad very short titles
+  if (t.length < 30 && !t.toLowerCase().includes("free")) t = `${t} — Free Online Tool`;
+  return t;
 }
 
 function seoDescription(tool: { name: string; short: string; intro: string; scope: string }) {
@@ -61,7 +64,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: { canonical: url },
     robots: { index: true, follow: true },
     openGraph: { type: "website", title, description, url, siteName: "MapBench" },
-    twitter: { card: "summary", title, description },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 

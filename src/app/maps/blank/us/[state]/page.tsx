@@ -4,6 +4,9 @@ import { notFound } from "next/navigation";
 import StateBlankMapMaker from "@/components/StateBlankMapMaker";
 import { US_BLANK_MAP_STATES, US_BLANK_MAP_STATE_BY_SLUG } from "@/data/usBlankMapStates";
 import { STATE_FACTS, fmtInt } from "@/data/stateFacts";
+import { stateNeighbors, stateCounties } from "@/data/stateGeo";
+
+const STATE_SLUG_BY_NAME = new Map(US_BLANK_MAP_STATES.map((s) => [s.name, s.slug]));
 
 export function generateStaticParams() {
   return US_BLANK_MAP_STATES.map((state) => ({ state: state.slug }));
@@ -42,6 +45,8 @@ export default async function StateBlankMapPage({ params }: { params: Promise<{ 
   const divisionSingular = state.name === "Louisiana" ? "parish" : state.name === "Alaska" ? "borough or census area" : "county";
   const divisionTitle = state.name === "Louisiana" ? "Parish" : state.name === "Alaska" ? "Borough & Census Area" : "County";
   const facts = STATE_FACTS[state.name] ?? { capital: "", largestCity: "", population2024: 0, landAreaSqMi: 0, counties: 0, densityPerSqMi: 0 };
+  const neighbors = stateNeighbors[state.name] ?? [];
+  const counties = stateCounties[state.name] ?? [];
   const faqs: [string, string][] = [
     [`Can I print this ${state.name} ${divisionSingular} map?`, `Yes. Download the SVG or PNG, or use your browser's print dialog to save a PDF. The blank variant is designed for worksheets, reports and labeling exercises.`],
     [`Is this ${state.name} map really free?`, `Yes — completely free, including commercial use. The boundary geometry comes from public US Census cartographic data, and the map is generated in your browser with no watermark, no signup and no attribution required.`],
@@ -52,7 +57,7 @@ export default async function StateBlankMapPage({ params }: { params: Promise<{ 
     [`What is the capital of ${state.name}?`, `The capital of ${state.name} is ${facts.capital}.`],
     [`Can I use this map in a YouTube video or presentation?`, `Yes. Public-domain geometry means you can use the map in videos, thumbnails, slides and commercial presentations without permission or credit — though a credit line is always appreciated.`],
     [`What size will it print at?`, `The SVG has no fixed resolution, so it prints sharply at any size — from a worksheet to a classroom poster. For PNG, export at the highest resolution offered and avoid enlarging it beyond its native pixel size.`],
-    [`Does the map include neighboring states?`, `The focus is the ${state.name} outline with its internal ${divisionSingular} boundaries. Neighboring states appear only as context where the generator includes them; for a multi-state view, open each state's page or use the national county map.`],
+    [`Does the map include neighboring states?`, `The focus is the ${state.name} outline with its internal ${divisionSingular} boundaries. ${state.name} borders ${neighbors.length > 0 ? neighbors.join(", ") : "no other states"}. The neighboring states section below links to each bordering state's blank map.`],
   ];
 
   const jsonLd = [
@@ -80,6 +85,20 @@ export default async function StateBlankMapPage({ params }: { params: Promise<{ 
       "@type": "FAQPage",
       mainEntity: faqs.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
     },
+    {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      name: `Blank ${state.name} ${divisionTitle} Map — boundary dataset`,
+      description: `${divisionTitle}-level boundary geometry for ${state.name} (${facts.counties} ${divisionSingular}s), derived from US Census cartographic boundaries and available as SVG and PNG downloads.`,
+      url: `https://www.mapbench.site/maps/blank/us/${state.slug}`,
+      creator: { "@type": "Organization", name: "MapBench", url: "https://www.mapbench.site" },
+      license: "https://creativecommons.org/publicdomain/zero/1.0/",
+      spatialCoverage: { "@type": "Place", name: `${state.name}, United States` },
+      distribution: [
+        { "@type": "DataDownload", encodingFormat: "image/svg+xml", contentUrl: `https://www.mapbench.site/maps/blank/us/${state.slug}` },
+        { "@type": "DataDownload", encodingFormat: "image/png", contentUrl: `https://www.mapbench.site/maps/blank/us/${state.slug}` },
+      ],
+    },
   ];
 
   return (
@@ -105,6 +124,8 @@ export default async function StateBlankMapPage({ params }: { params: Promise<{ 
         <div className="mt-2 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
           <a href="#about" className="text-brand-strong hover:underline">About this map</a>
           <a href="#factsheet" className="text-brand-strong hover:underline">{state.name} factsheet</a>
+          <a href="#neighbors" className="text-brand-strong hover:underline">Neighboring states</a>
+          <a href="#counties" className="text-brand-strong hover:underline">All {facts.counties} {divisionSingular}s</a>
           <a href="#variants" className="text-brand-strong hover:underline">The 4 variants explained</a>
           <a href="#uses" className="text-brand-strong hover:underline">Common uses</a>
           <a href="#classroom" className="text-brand-strong hover:underline">Classroom ideas</a>
@@ -132,6 +153,27 @@ export default async function StateBlankMapPage({ params }: { params: Promise<{ 
           </table>
         </div>
         <p className="mt-3 text-xs text-mute">Population: US Census Vintage 2024 estimates. Land area: US Census 2024 Gazetteer. County counts computed from Census geography.</p>
+      </section>
+
+      <section id="neighbors" className="mt-12 border-t border-line pt-10" aria-labelledby="neighbors-h">
+        <h2 id="neighbors-h" className="sect-h">States neighboring {state.name}</h2>
+        {neighbors.length > 0 ? (
+          <>
+            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-mute">{state.name} shares a land border with {neighbors.length} {neighbors.length === 1 ? "state" : "states"}. Each neighboring state has its own blank map page with the same four variants and downloads.</p>
+            <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
+              {neighbors.map((n) => {
+                const sl = STATE_SLUG_BY_NAME.get(n);
+                return sl ? (
+                  <Link key={n} href={`/maps/blank/us/${sl}`} className="rounded-lg border border-line bg-well/35 px-3 py-2.5 text-sm font-semibold text-ink transition hover:border-brand hover:text-brand-strong">
+                    {n} blank map
+                  </Link>
+                ) : null;
+              })}
+            </div>
+          </>
+        ) : (
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-mute">{state.name} shares no land border with any other state.</p>
+        )}
       </section>
 
       <section id="variants" className="mt-12 border-t border-line pt-10" aria-labelledby="variants-h">
@@ -187,6 +229,16 @@ export default async function StateBlankMapPage({ params }: { params: Promise<{ 
           <p><strong className="text-ink">Best quality:</strong> download the SVG and print from a vector-aware program (Illustrator, Inkscape, or even a browser). Vector lines stay razor-sharp at poster size; avoid enlarging the PNG beyond its native resolution.</p>
           <p><strong className="text-ink">For worksheets:</strong> the blank variant prints well in black and white. If your copier lightens thin lines, print the SVG and bump the stroke width slightly in any vector editor first.</p>
         </div>
+      </section>
+
+      <section id="counties" className="mt-12 border-t border-line pt-10" aria-labelledby="counties-h">
+        <h2 id="counties-h" className="sect-h">All {facts.counties} {divisionSingular}s of {state.name}</h2>
+        <p className="mt-3 max-w-3xl text-sm leading-relaxed text-mute">The complete list of {state.name} {divisionSingular}s drawn on this map, from US Census 2024 geography. Use the labeled variant above to find each one.</p>
+        <ul className="mt-5 columns-2 gap-6 text-sm leading-relaxed text-mute sm:columns-3 md:columns-4">
+          {counties.map((c) => (
+            <li key={c} className="break-inside-avoid py-0.5">{c}</li>
+          ))}
+        </ul>
       </section>
 
       <section id="all-states" className="mt-12 border-t border-line pt-10">
