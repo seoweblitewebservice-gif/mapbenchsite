@@ -6,20 +6,22 @@ import { GUIDES5 } from "./guides5";
 import { GUIDES6 } from "./guides6";
 import { GUIDES7 } from "./guides7";
 import { GUIDE_ENRICHMENT } from "./guideEnrichment";
+import { GUIDE_DEEP_ENRICHMENT } from "./guideDeepEnrichment";
 
 const baseGuides: Guide[] = [...GUIDES, ...GUIDES2, ...GUIDES3, ...GUIDES4, ...GUIDES5, ...GUIDES6, ...GUIDES7];
 
 export const ALL_GUIDES: Guide[] = baseGuides
   .map((guide) => {
-    const enrichment = GUIDE_ENRICHMENT[guide.slug];
-    if (!enrichment?.length) return guide;
+    const enrichment = GUIDE_ENRICHMENT[guide.slug] ?? [];
+    const deepEnrichment = GUIDE_DEEP_ENRICHMENT[guide.slug] ?? [];
+    if (!enrichment.length && !deepEnrichment.length) return guide;
 
     const toolbox = guide.blocks.filter((b) => b.t === "toolbox");
     const coreBlocks = guide.blocks.filter((b) => b.t !== "toolbox");
 
     return {
       ...guide,
-      blocks: [...coreBlocks, ...enrichment, ...toolbox],
+      blocks: [...coreBlocks, ...enrichment, ...deepEnrichment, ...toolbox],
     };
   })
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
