@@ -3,6 +3,7 @@ import { feature } from "topojson-client";
 import countriesTopo from "world-atlas/countries-110m.json";
 import { CATEGORIES, TOOLS } from "@/lib/registry";
 import { LOCALES } from "@/lib/i18n";
+import { localizedToolSlugs } from "@/data/localizedTools";
 import { ALL_GUIDES } from "@/data/allGuides";
 import { STUDIES } from "@/data/studies";
 import { REFERENCE_COUNTRIES } from "@/data/referenceCountries";
@@ -89,7 +90,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.65,
   }));
 
-  const localeHubEntries: MetadataRoute.Sitemap = LOCALES.flatMap((locale) => [
+  const activeLocales = LOCALES.filter((locale) => localizedToolSlugs(locale).length > 0);
+  const localeHubEntries: MetadataRoute.Sitemap = activeLocales.flatMap((locale) => [
     {
       url: `${BASE}/${locale}`,
       changeFrequency: "monthly" as const,
@@ -102,9 +104,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]);
 
-  const localizedToolEntries: MetadataRoute.Sitemap = LOCALES.flatMap((locale) =>
-    TOOLS.map((tool) => ({
-      url: `${BASE}/${locale}/tools/${tool.slug}`,
+  const localizedToolEntries: MetadataRoute.Sitemap = activeLocales.flatMap((locale) =>
+    localizedToolSlugs(locale).map((slug) => ({
+      url: `${BASE}/${locale}/tools/${slug}`,
       changeFrequency: "monthly" as const,
       priority: 0.55,
     })),
