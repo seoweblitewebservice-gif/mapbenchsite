@@ -10,7 +10,7 @@ import HomeToolFinder from "@/components/HomeToolFinder";
 export const metadata: Metadata = {
   title: "Free Map Tools, Geographic Calculators & Blank Maps",
   description:
-    "Free map tools and geographic calculators for radius, distance, drive time, coordinates, counties, ZIP codes, elevation, GPS files and printable blank maps. No sign-up required.",
+    "Free map tools: radius, distance, drive time, coordinates, counties, ZIP codes, elevation, GPS files and printable blank maps. No sign-up.",
   alternates: { canonical: "/" },
 };
 
