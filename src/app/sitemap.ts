@@ -118,6 +118,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.72,
   }));
 
+  const stateCountyEntries: MetadataRoute.Sitemap = US_BLANK_MAP_STATES.map((state) => ({
+    url: `${BASE}/states/${state.slug}/counties`,
+    changeFrequency: "monthly",
+    priority: 0.84,
+  }));
+
   const stateMapEntries: MetadataRoute.Sitemap = US_BLANK_MAP_STATES.map((state) => ({
     url: `${BASE}/maps/blank/us/${state.slug}`,
     changeFrequency: "yearly",
@@ -134,6 +140,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticEntries,
     ...categoryEntries,
     ...toolEntries,
+    ...stateCountyEntries,
     ...stateMapEntries,
     ...countryMapEntries,
     ...guideEntries,
