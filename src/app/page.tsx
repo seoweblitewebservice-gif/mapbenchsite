@@ -10,14 +10,7 @@ export const metadata: Metadata = {
   title: "Free Map Tools, Geographic Calculators & Blank Maps",
   description:
     "Free browser-based map and geographic tools for distance, radius, drive time, coordinates, elevation, GPS files and printable blank maps, plus practical mapping guides.",
-  alternates: {
-    canonical: "/",
-    languages: {
-      en: "https://www.mapbench.site/",
-      "x-default": "https://www.mapbench.site/",
-      es: "https://www.mapbench.site/es",
-    },
-  },
+  alternates: { canonical: "/" },
 };
 
 const POPULAR_QUESTIONS: { q: string; href: string }[] = [
