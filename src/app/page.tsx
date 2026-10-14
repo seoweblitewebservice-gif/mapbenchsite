@@ -5,13 +5,35 @@ import { ALL_GUIDES } from "@/data/allGuides";
 import { STUDIES } from "@/data/studies";
 import BlankMapsHomeGrid from "@/components/BlankMapsHomeGrid";
 import HomeToolIndex from "@/components/HomeToolIndex";
+import HomeToolFinder from "@/components/HomeToolFinder";
 
 export const metadata: Metadata = {
   title: "Free Map Tools, Geographic Calculators & Blank Maps",
   description:
-    "Free browser-based map and geographic tools for distance, radius, drive time, coordinates, elevation, GPS files and printable blank maps, plus practical mapping guides.",
+    "Free map tools and geographic calculators for radius, distance, drive time, coordinates, counties, ZIP codes, elevation, GPS files and printable blank maps. No sign-up required.",
   alternates: { canonical: "/" },
 };
+
+const HOME_PRIORITY_SLUGS = [
+  "map-radius",
+  "what-county-am-i-in",
+  "drive-time-map",
+  "halfway-between-two-places",
+  "coordinate-converter",
+  "elevation-finder",
+  "timezone-map-finder",
+  "population-within-radius",
+  "distance-between-two-places",
+  "what-zip-code-am-i-in",
+  "what-state-am-i-in",
+  "csv-to-map",
+  "latitude-longitude-finder",
+  "cities-within-radius",
+  "driving-distance-calculator",
+  "kml-viewer",
+  "geojson-viewer",
+  "gpx-viewer",
+] as const;
 
 const POPULAR_QUESTIONS: { q: string; href: string }[] = [
   { q: "What county am I in?", href: "/tools/what-county-am-i-in" },
@@ -36,24 +58,47 @@ const HOME_FAQ: [string, string][] = [
 ];
 
 export default function HomePage() {
-  const featured = (popularTools.length ? popularTools : TOOLS).slice(0, 12);
+  const priorityTools = HOME_PRIORITY_SLUGS
+    .map((slug) => TOOLS.find((tool) => tool.slug === slug))
+    .filter((tool): tool is NonNullable<typeof tool> => Boolean(tool));
+
+  const featured = [
+    ...priorityTools,
+    ...popularTools.filter((tool) => !HOME_PRIORITY_SLUGS.includes(tool.slug as (typeof HOME_PRIORITY_SLUGS)[number])),
+  ].slice(0, 12);
+
+  const compact = (tool: (typeof TOOLS)[number]) => ({
+    slug: tool.slug,
+    name: tool.name,
+    short: tool.short,
+    category: tool.category,
+    categoryLabel: CATEGORIES.find((category) => category.id === tool.category)?.label ?? tool.category,
+    scope: tool.scope,
+    keywords: tool.keywords,
+  });
+
+  const searchTools = TOOLS.map(compact);
+  const suggested = priorityTools.slice(0, 8).map(compact);
 
   return (
     <div className="doc">
-      <section className="hero-map relative overflow-hidden border-b border-line">
+      <section className="hero-map relative overflow-visible border-b border-line">
         <div className="hero-map-bg" aria-hidden />
         <div className="hero-map-fade" aria-hidden />
-        <div className="relative z-[1] mx-auto max-w-3xl px-4 py-14 text-center sm:py-20">
+        <div className="relative z-[1] mx-auto max-w-5xl px-4 py-14 text-center sm:py-20">
           <p className="mb-3 font-sans text-[11px] font-extrabold uppercase tracking-[0.16em] text-brand-strong">
             Free · No sign-up · Methods explained
           </p>
           <h1 className="font-display text-4xl font-bold leading-[1.12] tracking-tight text-ink sm:text-5xl md:text-[3.25rem]">
-            Map Tools That Explain the Answer
+            Free Map Tools & Geographic Calculators
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-[15px] leading-relaxed text-mute sm:text-base">
-            {TOOLS.length} interactive geographic tools, printable blank maps, original geographic studies and practical mapping guides. Measure distance, compare drive time, draw radius areas, work with coordinates, inspect GPS files and understand the method behind the result.
+          <p className="mx-auto mt-5 max-w-3xl text-[15px] leading-relaxed text-mute sm:text-base">
+            Search {TOOLS.length} interactive tools for radius maps, counties, distance, drive time, coordinates, elevation, Census data and GPS files. Each important tool explains the method, data source and limitations behind the result.
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3 font-sans">
+
+          <HomeToolFinder tools={searchTools} suggested={suggested} />
+
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3 font-sans">
             <Link href="/tools" className="btn btn-primary px-6 py-3 text-[15px]">Explore All {TOOLS.length} Tools</Link>
             <Link href="/studies" className="btn btn-ghost bg-card/80 px-6 py-3 text-[15px] backdrop-blur-sm">Explore Original Studies</Link>
           </div>
@@ -62,8 +107,8 @@ export default function HomePage() {
 
       <section aria-labelledby="popular-q" className="border-b border-line py-12">
         <div className="mx-auto max-w-3xl px-4">
-          <h2 id="popular-q" className="text-center font-display text-2xl font-bold tracking-tight sm:text-[1.65rem]">Start with a real question</h2>
-          <p className="mx-auto mt-3 max-w-2xl text-center text-sm leading-relaxed text-mute">MapBench is organized around tasks people actually need to solve, not just a long list of calculators.</p>
+          <h2 id="popular-q" className="text-center font-display text-2xl font-bold tracking-tight sm:text-[1.65rem]">Start with a real geographic question</h2>
+          <p className="mx-auto mt-3 max-w-2xl text-center text-sm leading-relaxed text-mute">These common tasks link straight to the focused calculator or lookup instead of making you browse a generic directory first.</p>
           <div className="mt-7 grid gap-3 sm:grid-cols-2">
             {POPULAR_QUESTIONS.map((item) => (
               <Link key={item.href} href={item.href} className="rounded-lg border border-line bg-card px-4 py-3.5 text-left font-sans text-sm font-semibold text-ink shadow-sm transition hover:border-brand hover:bg-brand-soft/40 hover:text-brand-strong">{item.q}</Link>
@@ -76,7 +121,7 @@ export default function HomePage() {
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <h2 id="featured-tools" className="sect-h">Popular map tools</h2>
-            <p className="mt-3 max-w-2xl">A focused starting point for common mapping, location and geographic questions. The complete directory remains available on the tools page.</p>
+            <p className="mt-3 max-w-2xl">A search-focused starting set for high-demand location, measurement, routing, Census and coordinate tasks. The complete directory remains available on the tools page.</p>
           </div>
           <Link href="/tools" className="font-sans text-sm font-extrabold text-brand-strong hover:underline">Browse all {TOOLS.length} tools →</Link>
         </div>
