@@ -10,12 +10,34 @@ export function generateStaticParams() {
   return TOOLS.map((t) => ({ tool: t.slug }));
 }
 
-function seoTitle(name: string, keywords: string[]) {
-  const primary = keywords[0];
-  if (primary && primary.length < 40 && !name.toLowerCase().includes(primary.toLowerCase())) {
-    return `${name} — Free Online ${primary.replace(/^./, (c) => c.toUpperCase())} Tool`;
+const TITLE_OVERRIDES: Record<string, string> = {
+  "distance-between-two-places": "Distance Between Two Places: Miles, Km & Bearing",
+  "halfway-between-two-places": "Halfway Between Two Places: Midpoint & Meeting Point",
+  "cities-within-radius": "Cities Within a Radius: Find Nearby US Cities & Towns",
+  "population-within-radius": "Population Within a Radius: Census Demographics & Income",
+  "zip-codes-within-radius": "ZIP Codes Within a Radius: Census ZCTA Finder",
+  "coordinate-converter": "GPS Coordinate Converter: DD, DMS, DMM, UTM, MGRS & Geohash",
+  "bearing-calculator": "Bearing Calculator: Compass Direction Between Two Points",
+  "map-radius": "Map Radius Tool: Draw a Radius Around Any Location",
+  "drive-time-map": "Drive Time Map: See How Far You Can Travel",
+  "driving-distance-calculator": "Driving Distance Calculator: Road Miles & Travel Time",
+  "what-county-am-i-in": "What County Am I In? Census County & FIPS Lookup",
+  "what-state-am-i-in": "What State Am I In? State Boundary & FIPS Lookup",
+  "what-zip-code-am-i-in": "What ZIP Code Am I In? Postcode & Census ZCTA Lookup",
+  "us-county-demographic-explorer": "US County Demographics Explorer: Population, Income & Maps",
+  "world-time-zone-map": "World Time Zone Map: Live Local Time, UTC Offset & DST",
+  "magnetic-declination": "Magnetic Declination Calculator: WMM 2025 Compass Correction",
+  "moonrise-moonset": "Moonrise & Moonset Calculator by Location and Date",
+};
+
+function seoTitle(slug: string, name: string, keywords: string[]) {
+  if (TITLE_OVERRIDES[slug]) return TITLE_OVERRIDES[slug];
+  const primary = keywords[0]?.trim();
+  if (primary && primary.length <= 42) {
+    const p = primary.replace(/^./, (c) => c.toUpperCase());
+    if (!name.toLowerCase().includes(primary.toLowerCase())) return `${name}: ${p}`;
   }
-  return `${name} — Free Online Map Tool`;
+  return name;
 }
 
 function seoDescription(tool: { name: string; short: string; intro: string; scope: string }) {
@@ -30,7 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const tool = toolBySlug.get(slug);
   if (!tool) return {};
   const url = `/tools/${tool.slug}`;
-  const title = seoTitle(tool.name, tool.keywords);
+  const title = seoTitle(tool.slug, tool.name, tool.keywords);
   const description = seoDescription(tool);
   return {
     title,
@@ -38,8 +60,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: [...tool.keywords, tool.name, "free", "map tool", "no sign-up"],
     alternates: { canonical: url },
     robots: { index: true, follow: true },
-    openGraph: { type: "website", title: `${tool.name} — Free Online Tool | MapBench`, description, url, siteName: "MapBench" },
-    twitter: { card: "summary", title: `${tool.name} · MapBench`, description },
+    openGraph: { type: "website", title, description, url, siteName: "MapBench" },
+    twitter: { card: "summary", title, description },
   };
 }
 
