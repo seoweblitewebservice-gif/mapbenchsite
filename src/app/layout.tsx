@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import Header, { Footer } from "@/components/Header";
 import SearchPalette from "@/components/SearchPalette";
-import LanguageSuggestion from "@/components/LanguageSuggestion";
 import FullSiteTranslator from "@/components/FullSiteTranslator";
 import "./globals.css";
 
@@ -74,7 +73,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <main id="main" className="container-sf py-6 sm:py-8">{children}</main>
         <Footer />
         <SearchPalette />
-        <LanguageSuggestion />
         <div className="fixed -left-[10000px] top-0 h-px w-px overflow-hidden" aria-hidden="true">
           <FullSiteTranslator />
         </div>
