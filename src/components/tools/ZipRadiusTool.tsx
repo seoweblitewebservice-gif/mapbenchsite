@@ -111,7 +111,7 @@ export default function ZipRadiusTool() {
           const res = await fetch(`/api/us-radius-census?lat=${encodeURIComponent(center.lat)}&lng=${encodeURIComponent(center.lng)}&radiusKm=${encodeURIComponent(radiusKm)}`);
           const json = await res.json() as CensusRadiusPayload | { ok?: false; message?: string };
           if (res.ok && json.ok && Array.isArray(json.zctas) && json.zctas.length > 0) {
-            const list: ZipHit[] = json.zctas.map((z) => ({
+            const list = json.zctas.map<ZipHit>((z) => ({
               zip: z.zcta,
               name: `Census ZCTA ${z.zcta}`,
               country: "US",
