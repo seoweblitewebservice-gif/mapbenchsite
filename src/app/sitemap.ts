@@ -13,8 +13,10 @@ const STATIC_PATHS = [
   "",
   "/tools",
   "/maps",
+  "/states",
   "/guides",
   "/studies",
+  "/studies/state-capital-radius",
   "/reference",
   "/author/aryan-khan",
   "/about",
@@ -22,6 +24,7 @@ const STATIC_PATHS = [
   "/methodology",
   "/data-sources",
   "/editorial-policy",
+  "/corrections",
   "/privacy",
   "/terms",
 ];
@@ -70,8 +73,8 @@ const ALL_COUNTRY_MAP_SLUGS = Array.from(
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries: MetadataRoute.Sitemap = STATIC_PATHS.map((path) => ({
     url: `${BASE}${path || "/"}`,
-    changeFrequency: path === "" ? "weekly" : "monthly",
-    priority: path === "" ? 1 : ["/tools", "/maps", "/guides", "/studies", "/reference"].includes(path) ? 0.9 : 0.6,
+    changeFrequency: path === "" ? "weekly" : path === "/corrections" ? "monthly" : "monthly",
+    priority: path === "" ? 1 : ["/tools", "/maps", "/states", "/guides", "/studies", "/reference"].includes(path) ? 0.9 : path === "/studies/state-capital-radius" ? 0.84 : 0.6,
   }));
 
   const categoryEntries: MetadataRoute.Sitemap = CATEGORIES.map((category) => ({
