@@ -1,10 +1,15 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { permanentRedirect } from "next/navigation";
 import ToolsDirectory from "@/components/ToolsDirectory";
 import { CATEGORIES, TOOLS } from "@/lib/registry";
 
-export async function generateMetadata({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
+interface ToolsPageProps {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}
+
+export async function generateMetadata({ searchParams }: ToolsPageProps): Promise<Metadata> {
   const params = await searchParams;
   const hasFilter = Boolean(params.cat || params.q);
   return {
@@ -15,7 +20,19 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   };
 }
 
-export default function ToolsPage() {
+export default async function ToolsPage({ searchParams }: ToolsPageProps) {
+  const params = await searchParams;
+  const catParam = Array.isArray(params.cat) ? params.cat[0] : params.cat;
+  const qParam = Array.isArray(params.q) ? params.q[0] : params.q;
+  const category = catParam ? CATEGORIES.find((item) => item.id === catParam) : undefined;
+
+  // Old filtered URLs were discoverable as /tools?cat=files etc. The dedicated
+  // category hubs now contain stronger unique content and direct tool links, so
+  // consolidate those duplicate query URLs permanently without removing tools.
+  if (category && !qParam) {
+    permanentRedirect(`/tools/category/${category.id}`);
+  }
+
   return (
     <div>
       <h1 className="font-display text-3xl font-bold tracking-tight">All tools</h1>
