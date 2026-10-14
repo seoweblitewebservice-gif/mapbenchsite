@@ -34,6 +34,7 @@ const components: Record<string, () => Promise<{ default: ComponentType<{ params
   walkingtime: () => import("./TripTools").then((m) => ({ default: m.WalkingTimeTool })),
   nearestairport: () => import("./TripTools").then((m) => ({ default: m.NearestAirportTool })),
   tztool: () => import("./TimezoneProTool"),
+  worldtzmap: () => import("./WorldTimeZoneMapTool"),
   meeting: () => import("./TimeExtra").then((m) => ({ default: m.MeetingTool })),
   daylight: () => import("./TimeExtra").then((m) => ({ default: m.DaylightChartTool })),
   golden: () => import("./TimeExtra").then((m) => ({ default: m.GoldenHourTool })),
