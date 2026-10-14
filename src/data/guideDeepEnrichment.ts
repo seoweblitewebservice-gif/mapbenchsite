@@ -1,0 +1,140 @@
+import type { GuideBlock } from "./guides";
+
+export const GUIDE_DEEP_ENRICHMENT: Record<string, GuideBlock[]> = {
+  "understanding-gps-coordinates": [
+    { t: "h2", text: "A coordinate is only as trustworthy as its source" },
+    { t: "p", text: "When somebody sends you a pair of coordinates, the first useful question is not how many decimals they contain. It is where they came from. A point copied from a phone GPS fix, a survey drawing, a geocoded street address and a hand-clicked map marker can all be written to six decimal places, yet they represent very different levels of confidence. The digits describe the stored number; the source describes the evidence behind it." },
+    { t: "p", text: "A geocoder usually returns the location associated with an address record or mapped feature. That might be a building centroid, a parcel approximation, an entrance, a road interpolation or another provider-specific point. A phone fix is a sensor estimate with an uncertainty radius. A survey coordinate may be tied to a formal control network and datum. Treating those inputs as interchangeable is how a clean-looking spreadsheet becomes misleading." },
+    { t: "linkp", parts: ["If you only have an address, start with the ", { href: "/tools/address-to-coordinates", text: "Address to Coordinates tool" }, ", then inspect the returned pin instead of copying the first number blindly. If you already have a coordinate and want human-readable context, use ", { href: "/tools/coordinates-to-address", text: "Coordinates to Address" }, " as a separate reverse-geocoding step. Keeping those two operations conceptually separate makes data cleanup much easier."] },
+    { t: "h2", text: "Why longitude precision changes with latitude" },
+    { t: "p", text: "The familiar 'five decimals is about a metre' rule is only a rough latitude-based shortcut. Lines of latitude stay roughly parallel, but lines of longitude converge toward the poles. One degree of longitude spans about 111 km at the Equator, around 79 km at 45° latitude, and much less close to the poles. That means the east-west ground distance represented by a decimal place depends on where you are." },
+    { t: "p", text: "For ordinary map work this does not mean you need a custom decimal rule for every location. It means you should avoid presenting decimal digits as a universal accuracy guarantee. Store enough numeric detail to avoid introducing extra rounding error, then carry the real-world accuracy or source quality separately when it matters." },
+    { t: "h2", text: "A practical QA routine before importing thousands of points" },
+    { t: "ul", items: [
+      "Check the minimum and maximum latitude/longitude values. One outlier can reveal swapped columns or a missing minus sign.",
+      "Plot a small sample on a map before importing the full file into another system.",
+      "Look for suspicious duplicates: many identical coordinates can mean a geocoder fell back to a city centroid.",
+      "Keep the original text fields alongside normalized numeric coordinates until the dataset is verified.",
+      "Record the coordinate reference system or datum when the source is anything other than a normal consumer web map."
+    ] },
+    { t: "linkp", parts: ["For batch work, the ", { href: "/tools/csv-coordinate-validator", text: "CSV Coordinate Validator" }, " is useful for catching range and formatting problems before mapping, while the ", { href: "/tools/csv-coordinate-deduplicator", text: "CSV Coordinate Deduplicator" }, " can help identify repeated points that deserve a closer look."] },
+    { t: "h2", text: "When coordinate conversion becomes a professional problem" },
+    { t: "p", text: "Most casual web workflows live comfortably in latitude/longitude on WGS84-compatible maps. Problems become more serious when coordinates come from cadastral surveys, engineering drawings, local grid systems, historic maps or legacy government datasets. A datum label that looks like minor metadata can correspond to a meaningful positional shift. In those cases, a proper coordinate transformation is not the same thing as changing notation from DMS to decimal degrees." },
+    { t: "p", text: "If money, safety, legal ownership or construction depends on the result, confirm the source CRS and use a transformation appropriate to that dataset. MapBench is useful for inspection and everyday conversions, but it should not replace the formal survey or GIS workflow required by the decision." },
+  ],
+
+  "kml-vs-geojson-vs-gpx": [
+    { t: "h2", text: "Think about the next user, not just the current file" },
+    { t: "p", text: "Choosing a format is easier when you start from the next person or system in the workflow. A field team may need a GPX track on a handheld device. A web developer may need GeoJSON because properties must be filtered in JavaScript. A client reviewing a project in Google Earth may prefer KML because folders, labels and styles are visible without specialist software. The best format is therefore often the one that preserves the information your next step actually uses." },
+    { t: "p", text: "This also explains why there is no universally superior format. GeoJSON is elegant for web data, but a long GPS track with timestamps and device extensions may be more naturally represented as GPX. KML can be verbose, but it is good at presentation. The mistake is forcing every dataset into one favorite format and discovering the lost detail later." },
+    { t: "h2", text: "Example: converting a recorded hike" },
+    { t: "p", text: "Suppose a hiking watch exports GPX containing a track with timestamps and elevation. You want to show the route on a website. Converting the geometry to GeoJSON is reasonable because the web map can draw the line easily and attach summary properties. But if you discard the original GPX, you may lose the point-by-point timing or device-specific metadata needed later for pace or elevation analysis." },
+    { t: "linkp", parts: ["A safer workflow is to inspect the original in the ", { href: "/tools/gpx-viewer", text: "GPX Viewer" }, ", record the track and waypoint counts, then create the web-friendly version. If a developer later needs a simpler interchange file, ", { href: "/tools/geojson-viewer", text: "GeoJSON Viewer" }, " provides a quick visual sanity check after conversion."] },
+    { t: "h2", text: "Example: a styled Google Earth project" },
+    { t: "p", text: "A KML file can contain placemark icons, line colors, folder hierarchy, descriptions and ground overlays. Exporting its geometry to GeoJSON may preserve points and lines perfectly while flattening the presentation logic that made the project readable. If the objective is analysis, that trade-off might be acceptable. If the objective is to hand the project to another Google Earth user, KML is probably the better delivery format." },
+    { t: "h2", text: "Validation checks that catch most conversion problems" },
+    { t: "ul", items: [
+      "Feature count before and after conversion.",
+      "Geometry types: points, lines and polygons should not unexpectedly disappear or change meaning.",
+      "Bounding box: the output should occupy the same general part of the world as the source.",
+      "Attributes: spot-check names, IDs, timestamps, elevation and category fields.",
+      "Coordinate order: GeoJSON uses longitude, latitude; CSV sources are frequently the opposite.",
+      "Character encoding: place names with accents or non-Latin scripts should survive intact."
+    ] },
+    { t: "linkp", parts: ["For tabular sources, the ", { href: "/tools/csv-to-map", text: "CSV to Map tool" }, " is a useful intermediate check because a bad longitude sign or swapped column is visually obvious. For KML, open the source first with the ", { href: "/tools/kml-viewer", text: "KML Viewer" }, " before deciding what can safely be simplified."] },
+    { t: "h2", text: "Storage size is not the only performance question" },
+    { t: "p", text: "A huge GeoJSON file can be slow in a browser because the entire structure may need to be parsed and drawn at once. GPX and KML can also become large, especially with dense tracks or embedded metadata. For production mapping, you may eventually need simplification, tiling, server-side filtering or a spatial database. File conversion is only the first layer of the architecture." },
+    { t: "p", text: "For a one-off map, keeping the original and one convenient working copy is usually enough. For a repeatable pipeline, document what you remove, how you transform coordinates and which fields are considered authoritative. That documentation is more valuable than arguing about file extensions in isolation." },
+  ],
+
+  "how-distance-calculation-works": [
+    { t: "h2", text: "The same two points can have several correct distances" },
+    { t: "p", text: "People often ask for 'the distance' as though geography has one universal answer. Between the same two places you can measure a spherical great-circle distance, an ellipsoidal geodesic, a road-network distance, a walking route, a flight itinerary, a nautical route or even a projected planar distance inside a local coordinate system. Each is correct for a different question." },
+    { t: "linkp", parts: ["MapBench separates those questions deliberately. Use ", { href: "/tools/distance-between-two-places", text: "Distance Between Two Places" }, " for straight-line surface separation, ", { href: "/tools/driving-distance-calculator", text: "Driving Distance" }, " when roads matter, and ", { href: "/tools/drive-time-map", text: "Drive Time Map" }, " when accessibility in minutes is the real decision."] },
+    { t: "h2", text: "What the haversine formula is doing in plain English" },
+    { t: "p", text: "Latitude and longitude are angles measured from the Earth's centre and reference meridian. Haversine converts the difference between two pairs of those angles into a central angle on a sphere. Multiply that angle by the chosen Earth radius and you get the length of the corresponding great-circle arc. The formula is popular because it is simple, stable for ordinary inputs and easy to reproduce." },
+    { t: "p", text: "The choice of radius matters slightly because the real Earth does not have one exact spherical radius. A mean radius such as 6,371.0088 km is a documented compromise. If you use a different radius, you should expect a slightly different result even though the formula itself is the same." },
+    { t: "h2", text: "Why an ellipsoid changes the answer" },
+    { t: "p", text: "Earth is wider around the Equator than pole-to-pole. Ellipsoidal geodesic algorithms account for that flattening and solve the shortest path on the reference ellipsoid rather than on a perfect sphere. The difference is often small enough that a casual user will never notice, but it becomes relevant when distances are long, precision requirements are strict, or the result is being compared with a professional geodesic source." },
+    { t: "h2", text: "A good way to sanity-check a result" },
+    { t: "ul", items: [
+      "Confirm both pins are actually at the intended locations, not just city centroids with similar names.",
+      "Compare miles and kilometres using a known conversion rather than re-running a different method.",
+      "If a road distance is shorter than the straight-line distance, investigate the inputs or routing output; that should not happen for the same endpoints.",
+      "For very short distances, ask whether input-coordinate accuracy is larger than the difference you are trying to measure.",
+      "For global routes, do not judge correctness by the apparent straightness of a line on a Mercator map."
+    ] },
+    { t: "h2", text: "Where local planar distance still makes sense" },
+    { t: "p", text: "Not every geographic measurement needs global geodesics. Engineers and GIS analysts often work in a projected coordinate system designed for a particular region. Within its intended area, measuring x/y coordinates on that projection can be accurate and convenient. The key is that the projection is chosen deliberately for the location and scale, not that latitude and longitude are treated like ordinary Cartesian metres." },
+    { t: "linkp", parts: ["If the visual appearance of a flat map is causing confusion, the guide on ", { href: "/guides/map-projections-explained", text: "map projections and distortion" }, " explains why a route can look curved even when it is the shortest path on the globe."] },
+    { t: "h2", text: "What to report with the number" },
+    { t: "p", text: "A useful distance result should name the method, units and endpoints. '2,440 miles' is less informative than 'approximately 2,440 miles great-circle distance between these selected coordinates using a spherical Earth model.' That sentence tells another person what can and cannot be inferred. Good geographic work is not only about producing a number; it is about making the assumptions visible enough that somebody else can reproduce it." },
+  ],
+
+  "crow-flies-when-it-lies": [
+    { t: "h2", text: "A bridge can matter more than ten kilometres" },
+    { t: "p", text: "Imagine two homes on opposite sides of a wide river. Their straight-line separation is 4 km. If the nearest bridge is 12 km upstream, the road route may become 25 km. For a delivery company, the crow-flies figure is almost useless for pricing that trip. For a radio link or a geographic proximity filter, the 4 km figure may be exactly the measurement needed. The landscape did not change; the question did." },
+    { t: "p", text: "This distinction is especially important in coastal cities, around reservoirs and in mountain regions where roads funnel through passes. A map can make two places look adjacent while the transport network forces a long detour." },
+    { t: "linkp", parts: ["A quick way to expose that difference is to compare ", { href: "/tools/crow-flies-distance", text: "Crow-Flies Distance" }, " with the ", { href: "/tools/driving-distance-calculator", text: "Driving Distance Calculator" }, " using the same endpoints. The gap between them is often more informative than either number alone."] },
+    { t: "h2", text: "Detour ratios are useful, but do not turn them into a universal benchmark" },
+    { t: "p", text: "If the road route is 150 km and the straight-line separation is 100 km, the detour ratio is 1.5. That tells you the network requires fifty percent more distance than the theoretical direct path. Comparing ratios across candidate sites can help with logistics, but context matters. A dense urban network, a mountain valley and an island ferry system should not be judged by the same expectation." },
+    { t: "h2", text: "Time can diverge even when distance does not" },
+    { t: "p", text: "Two routes of similar road length can have completely different travel times because one follows a motorway and the other crosses a city centre. That is why delivery planning, commutes and field-service decisions often need time rather than distance. A straight-line radius is excellent for policies written in miles; it is weak evidence for a promise written in minutes." },
+    { t: "linkp", parts: ["For accessibility questions, compare the same origin with a ", { href: "/tools/drive-time-map", text: "Drive Time Map" }, ". The companion guide ", { href: "/guides/radius-vs-drive-time-vs-straight-line-distance", text: "Radius vs. Drive Time vs. Straight-Line Distance" }, " shows how those three measurements answer different planning questions."] },
+    { t: "h2", text: "Common business mistakes" },
+    { t: "ul", items: [
+      "Advertising a '10 mile delivery area' when operations actually care about a 20-minute drive.",
+      "Using city-centre coordinates for customers whose actual addresses are near municipal edges.",
+      "Assuming a circular sales territory produces equal workload for every representative.",
+      "Comparing competitors by map distance without checking crossings, restricted roads or route direction.",
+      "Treating an estimated route from a public engine as a guaranteed travel time."
+    ] },
+    { t: "h2", text: "How to present the answer honestly" },
+    { t: "p", text: "When a decision involves real travel, show the straight-line number as geographic context, the road distance as network reality and travel time as an estimate tied to a routing model. That three-part presentation is more useful than pretending one number describes everything. It also makes disagreements easier to resolve because people can see they were often talking about different measurements." },
+  ],
+
+  "reading-isochrones-like-a-planner": [
+    { t: "h2", text: "A service area is a hypothesis, not a promise" },
+    { t: "p", text: "An isochrone can look authoritative because it produces a crisp polygon, but the boundary is the output of a model. The routing network, assumed speeds, travel mode and contour time all shape it. If live traffic is not included, the polygon is best read as 'reachable under these network assumptions' rather than 'everyone inside this line will always arrive within 20 minutes.'" },
+    { t: "p", text: "This distinction matters when an isochrone is used for store catchments, ambulance planning, school accessibility or field-service coverage. The map is powerful because it makes assumptions visible. It becomes dangerous only when those assumptions disappear from the explanation." },
+    { t: "linkp", parts: ["Start with the ", { href: "/tools/isochrone-map", text: "Isochrone Map" }, " or ", { href: "/tools/drive-time-map", text: "Drive Time Map" }, " and record the selected travel mode and contour time alongside any exported polygon."] },
+    { t: "h2", text: "How planners compare two candidate sites" },
+    { t: "p", text: "Suppose a clinic is choosing between two locations. A 20-minute driving isochrone around Site A covers more land, but much of it is low-density industrial area. Site B covers less land but reaches several dense neighborhoods. The larger polygon is not automatically the better site. The next layer might be population, demographic need, existing facilities or public transport access." },
+    { t: "p", text: "This is where isochrones become most useful: not as a final score, but as a geographic filter that can be combined with other evidence. The shape tells you where to look next." },
+    { t: "h2", text: "Why mode choice changes everything" },
+    { t: "p", text: "Driving, cycling and walking use different networks and speed assumptions. A motorway may create a long driving finger that does nothing for a pedestrian. A footbridge may connect two neighborhoods for walkers while remaining irrelevant to cars. When a map is shared without the mode written next to it, the viewer can easily infer the wrong kind of accessibility." },
+    { t: "h2", text: "Useful comparisons to run alongside an isochrone" },
+    { t: "ul", items: [
+      "A simple radius, to see how strongly the road network distorts equal-distance access.",
+      "A population-within-radius or demographic layer, if the question is about people rather than land area.",
+      "A second contour time, such as 15 versus 30 minutes, to show how access expands.",
+      "A competing site using identical mode and time settings.",
+      "A route to specific high-priority destinations that should not be hidden inside the polygon summary."
+    ] },
+    { t: "linkp", parts: ["The guide ", { href: "/guides/drive-time-map-vs-radius-circle", text: "Drive Time Map vs Radius Circle" }, " is useful when stakeholders keep interpreting an isochrone as though it were a simple distance buffer."] },
+    { t: "h2", text: "Document enough that somebody else can reproduce the map" },
+    { t: "p", text: "For serious analysis, save the centre coordinates, time bands, travel mode, routing source and date. If you export GeoJSON, keep those assumptions in the filename, metadata or project notes. Roads change, routing data is updated and travel models evolve. A reproducible map is one where a future analyst can tell why the boundary looked the way it did at the time." },
+  ],
+
+  "how-accurate-is-your-gps": [
+    { t: "h2", text: "The accuracy circle matters more than the last decimal" },
+    { t: "p", text: "Many devices expose an estimated horizontal accuracy with the location fix. If that value is 20 metres, interpreting the sixth decimal place as meaningful physical certainty makes no sense. The reported point is better imagined as the centre of an uncertainty area. That mental model is especially useful when deciding whether a coordinate is good enough for a trailhead, a parcel corner or a building entrance." },
+    { t: "p", text: "Consumer devices can still be excellent for everyday navigation. The point is not that GPS is unreliable; it is that accuracy changes with conditions and the application should respect that variability." },
+    { t: "linkp", parts: ["Use ", { href: "/tools/find-my-location", text: "Find My Location" }, " when you want the browser/device position, then compare the pin with known map features. If you need to understand why an IP lookup shows a different city, the guide ", { href: "/guides/find-my-location-gps-vs-ip-vs-vpn", text: "GPS vs IP Address vs VPN" }, " explains the two location systems separately."] },
+    { t: "h2", text: "Why repeated measurements can help" },
+    { t: "p", text: "If you record the same point several times, a cluster of fixes can reveal whether the device is stable or wandering. Averaging is not a magic substitute for professional surveying, but repeated observations can be more informative than trusting one instant reading. If all fixes jump in the same direction because of multipath or poor satellite geometry, averaging will not remove the underlying bias." },
+    { t: "h2", text: "GPS altitude deserves extra skepticism" },
+    { t: "p", text: "Vertical positioning is often less accurate than horizontal positioning, and different apps may also report height relative to different reference surfaces. A phone elevation number should not automatically be treated as equivalent to a surveyed orthometric height. For hiking and general orientation it may be useful; for engineering, flood design or construction it is not enough by itself." },
+    { t: "linkp", parts: ["When you need terrain context rather than raw device altitude, compare the coordinate with the ", { href: "/tools/elevation-finder", text: "Elevation Finder" }, ", which uses mapped elevation data and therefore has a different set of limitations from the phone sensor."] },
+    { t: "h2", text: "Privacy is part of the accuracy decision" },
+    { t: "p", text: "Precise location is sensitive information. A site should ask permission before browser geolocation and should still provide a useful alternative when permission is denied. For many tasks, searching an address or clicking a map is enough. You do not need to reveal your live device position just to calculate a distance to a place you already know." },
+    { t: "h2", text: "Match the tool to the consequence of being wrong" },
+    { t: "ul", items: [
+      "Meeting a friend at a park: ordinary phone GPS is usually more than adequate.",
+      "Recording a hiking waypoint: useful, but keep the map context and expect a few metres of uncertainty.",
+      "Mapping utilities, property boundaries or structural work: use the professional positioning method required by the project.",
+      "Emergency response: rely on the official emergency/location systems and procedures, not a consumer web page alone."
+    ] },
+    { t: "p", text: "The best location workflow is not the one with the most decimal places. It is the one where the measurement quality is appropriate for the consequence of a mistake." },
+  ],
+};
