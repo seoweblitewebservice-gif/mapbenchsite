@@ -25,6 +25,8 @@ const components: Record<string, () => Promise<{ default: ComponentType<{ params
   antipode: () => import("./EarthTools").then((m) => ({ default: m.AntipodeTool })),
   sun: () => import("./SunMoon").then((m) => ({ default: m.SunTool })),
   moon: () => import("./SunMoon").then((m) => ({ default: m.MoonTool })),
+  magneticdeclination: () => import("./MagneticDeclinationTool"),
+  moonriseset: () => import("./MoonRiseSetTool"),
   geolines: () => import("./GeoLinesTool"),
   overpass: () => import("./OverpassNearest"),
   flight: () => import("./TripTools").then((m) => ({ default: m.FlightTimeTool })),
