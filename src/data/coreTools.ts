@@ -236,9 +236,9 @@ const CORE_BASE = [
   {
     slug: "multi-stop-route-planner",
     name: "Multi-Stop Route Planner",
-    short: "Plan a route with multiple stops and see total distance and time.",
-    intro: "Add several stops, order them, and get a full road route with leg breakdown.",
-    category: "routing", scope: "Worldwide", component: "route",
+    short: "Plan a route with up to 30 stops and see total distance and time.",
+    intro: "Add up to 30 stops, reorder them, and get a full road route with per-leg breakdown and total distance and time.",
+    category: "routing", scope: "Worldwide", component: "route", props: { multi: true },
     keywords: ["multi stop route", "route planner"],
     faq: [["Optimize order?", "Manual ordering; use for planned stops."]],
     howTo: ["Add stops.", "Calculate the route.", "Review total distance and time."],

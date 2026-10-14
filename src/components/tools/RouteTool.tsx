@@ -114,7 +114,7 @@ export default function RouteTool({ params }: { params?: Record<string, unknown>
           ))}
         </div>
         <div className="flex flex-wrap gap-2">
-          {multi && stops.length < 12 && <button type="button" className="btn btn-ghost btn-sm" onClick={() => setStops((s) => [...s, null as any])}>+ Add stop</button>}
+          {multi && stops.length < 30 && <button type="button" className="btn btn-ghost btn-sm" onClick={() => setStops((s) => [...s, null as any])}>+ Add stop</button>}
           <button type="button" className="btn btn-ghost btn-sm" disabled={valid.length < 2 || valid.length !== stops.length} onClick={() => setStops([...valid.reverse()] as PlaceValue[])}>Reverse</button>
           {(multi || optimize) && <button type="button" className="btn btn-ghost btn-sm" onClick={doOptimize} disabled={busy}>⚡ Optimize order</button>}
         </div>
