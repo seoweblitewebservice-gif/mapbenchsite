@@ -2,7 +2,7 @@
 
 import { useMemo, useRef, useState } from "react";
 import type { Map as MLMap } from "maplibre-gl";
-import { fmtCoords, isValidLat, isValidLng, parseCoordPair, type LatLng } from "@/lib/geo";
+import { isValidLat, isValidLng, parseCoordPair, type LatLng } from "@/lib/geo";
 import { decodePlusCode, encodePlusCode, formatDms, formatUtm, latLngToMgrs, latLngToUtm, parseDms, parseMgrs, utmToLatLng } from "@/lib/coords";
 import { downloadText, toCsv } from "@/lib/formats";
 import { CopyBtn, ErrorBox, Field } from "@/components/ui";
@@ -63,7 +63,7 @@ export default function ConverterTool({ params }: { params?: Record<string, unkn
   const markerRef = useRef<any>(null);
 
   const parsed = useMemo(() => parseAnything(input), [input]);
-  const point = parsed && "point" in parsed ? parsed.point : null;
+  const point = "point" in parsed ? parsed.point : null;
   const outputs = useMemo(() => point ? convert(input, precision) : null, [input, point, precision]);
 
   const batchRows = useMemo(() => batch.split(/\r?\n/).map((line) => line.trim()).filter(Boolean).map((line) => convert(line, precision)).filter((x): x is Converted => !!x), [batch, precision]);
@@ -116,9 +116,15 @@ export default function ConverterTool({ params }: { params?: Record<string, unkn
           <div className="card order-2 space-y-4 p-4 lg:order-1">
             <div>
               <span className="label">Paste any coordinate format</span>
-              <textarea className="textarea font-mono" rows={3} value={input} onChange={(e) => setInput(e.target.value)} placeholder='40.7128, -74.006 · 40°26\'46"N 79°58\'36"W · 18T 583960 4507530 · 33UUP 05300 21500 · 87GVCWC8+3V' />
+              <textarea
+                className="textarea font-mono"
+                rows={3}
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder={"40.7128, -74.006 · 40°26'46\"N 79°58'36\"W · 18T 583960 4507530 · 33UUP 05300 21500 · 87GVCWC8+3V"}
+              />
             </div>
-            {parsed && "error" in parsed && <ErrorBox>{parsed.error}</ErrorBox>}
+            {"error" in parsed && <ErrorBox>{parsed.error}</ErrorBox>}
             {point && outputs && (
               <>
                 <div className="text-xs text-mute">Recognised as <strong className="text-ink">{outputs.source}</strong>. Every format below updates instantly.</div>
