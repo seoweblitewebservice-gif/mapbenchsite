@@ -3,6 +3,7 @@
 export type GuideBlock =
   | { t: "h2"; text: string }
   | { t: "p"; text: string }
+  | { t: "linkp"; parts: Array<string | { href: string; text: string }> }
   | { t: "ul"; items: string[] }
   | { t: "note"; text: string }
   | { t: "table"; headers: string[]; rows: string[][] }
