@@ -2,8 +2,10 @@
 import { useMemo, useState } from "react";
 import { CopyBtn, ErrorBox, Field, Stat } from "@/components/ui";
 import { BearingTool } from "./BearingMidpoint";
-import DistanceTool from "./DistanceTool";
 
+const R=6371.0088;
+const rad=(d:number)=>d*Math.PI/180;
+const deg=(r:number)=>r*180/Math.PI;
 const fmt=(n:number,d=2)=>Number.isFinite(n)?n.toFixed(d):"—";
 const num=(s:string)=>Number.isFinite(+s)?+s:0;
 type Row={label:string;value:string;sub?:string};
@@ -12,9 +14,29 @@ function Actions({rows,onReset}:{rows:Row[];onReset:()=>void}){return <div class
 function One({label,v0,calc}:{label:string;v0:number;calc:(v:number)=>Row[]}){const[v,setV]=useState(String(v0));const rows=calc(num(v));return <div className="space-y-4"><div className="card p-4"><Field label={label}><input className="input" type="number" value={v} onChange={e=>setV(e.target.value)}/></Field></div><div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">{rows.map(r=><Stat key={r.label} label={r.label} value={r.value} sub={r.sub}/>)}</div><Actions rows={rows} onReset={()=>setV(String(v0))}/></div>}
 function Two({aLabel,bLabel,a0,b0,calc}:{aLabel:string;bLabel:string;a0:number;b0:number;calc:(a:number,b:number)=>Row[]}){const[a,setA]=useState(String(a0)),[b,setB]=useState(String(b0));const rows=calc(num(a),num(b));return <div className="space-y-4"><div className="card grid gap-3 p-4 sm:grid-cols-2"><Field label={aLabel}><input className="input" type="number" value={a} onChange={e=>setA(e.target.value)}/></Field><Field label={bLabel}><input className="input" type="number" value={b} onChange={e=>setB(e.target.value)}/></Field></div><div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">{rows.map(r=><Stat key={r.label} label={r.label} value={r.value} sub={r.sub}/>)}</div><Actions rows={rows} onReset={()=>{setA(String(a0));setB(String(b0));}}/></div>}
 
+function RhumbTool({kind}:{kind:"distance"|"bearing"}){
+ const[aLat,setALat]=useState("40.7128"),[aLng,setALng]=useState("-74.0060"),[bLat,setBLat]=useState("51.5074"),[bLng,setBLng]=useState("-0.1278");
+ const out=useMemo(()=>{
+  const la1=num(aLat),lo1=num(aLng),la2=num(bLat),lo2=num(bLng);
+  const valid=[la1,lo1,la2,lo2].every(Number.isFinite)&&Math.abs(la1)<=90&&Math.abs(la2)<=90&&Math.abs(lo1)<=180&&Math.abs(lo2)<=180;
+  if(!valid)return null;
+  const p1=rad(la1),p2=rad(la2),dp=p2-p1;let dl=rad(lo2-lo1);
+  if(Math.abs(dl)>Math.PI)dl=dl>0?-(2*Math.PI-dl):(2*Math.PI+dl);
+  const dpsi=Math.log(Math.tan(Math.PI/4+p2/2)/Math.tan(Math.PI/4+p1/2));
+  const q=Math.abs(dpsi)>1e-12?dp/dpsi:Math.cos(p1);
+  const rhumbDist=Math.sqrt(dp*dp+q*q*dl*dl)*R;
+  const rhumbBearing=(deg(Math.atan2(dl,dpsi))+360)%360;
+  const h=Math.sin(dp/2)**2+Math.cos(p1)*Math.cos(p2)*Math.sin(dl/2)**2;
+  const greatCircle=2*R*Math.asin(Math.min(1,Math.sqrt(h)));
+  return{rhumbDist,rhumbBearing,greatCircle,difference:rhumbDist-greatCircle};
+ },[aLat,aLng,bLat,bLng]);
+ const rows:Row[]=out?[{label:"Rhumb-line distance",value:`${fmt(out.rhumbDist,2)} km`},{label:"Rhumb bearing",value:`${fmt(out.rhumbBearing,2)}°`},{label:"Great-circle distance",value:`${fmt(out.greatCircle,2)} km`},{label:"Rhumb vs great-circle",value:`${out.difference>=0?"+":""}${fmt(out.difference,2)} km`,sub:"difference in path length"}]:[];
+ return <div className="space-y-4"><div className="card grid gap-3 p-4 sm:grid-cols-2 lg:grid-cols-4"><Field label="Start latitude"><input className="input" value={aLat} onChange={e=>setALat(e.target.value)}/></Field><Field label="Start longitude"><input className="input" value={aLng} onChange={e=>setALng(e.target.value)}/></Field><Field label="End latitude"><input className="input" value={bLat} onChange={e=>setBLat(e.target.value)}/></Field><Field label="End longitude"><input className="input" value={bLng} onChange={e=>setBLng(e.target.value)}/></Field></div>{!out?<ErrorBox>Enter valid latitude and longitude values.</ErrorBox>:<><div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">{rows.map(r=><Stat key={r.label} label={r.label} value={r.value} sub={r.sub}/>)}</div><p className="text-xs text-mute">Rhumb lines keep a constant compass bearing. Great-circle routes are usually shorter over long distances, so the two values are intentionally different.</p><Actions rows={rows} onReset={()=>{setALat("40.7128");setALng("-74.0060");setBLat("51.5074");setBLng("-0.1278");}}/></>}</div>;
+}
+
 function RouteMath({mode}:{mode:string}){
- if(mode==="rhumb-distance")return <DistanceTool params={{defaultUnit:"km",emphasize:"crow"}}/>;
- if(mode==="rhumb-bearing")return <BearingTool params={{coordInputs:true}}/>;
+ if(mode==="rhumb-distance")return <RhumbTool kind="distance"/>;
+ if(mode==="rhumb-bearing")return <RhumbTool kind="bearing"/>;
  if(mode==="greatcircle-bearing")return <BearingTool params={{coordInputs:true}}/>;
  if(mode==="distance-percent")return <Two aLabel="Part distance (km)" bLabel="Total distance (km)" a0={25} b0={100} calc={(a,b)=>[{label:"Percent of route",value:b>0?`${fmt(a/b*100,2)}%`:"—"},{label:"Remaining",value:`${fmt(Math.max(0,b-a),2)} km`},{label:"Completed distance",value:`${fmt(a,2)} km`}]}/>;
  if(mode==="pace-speed")return <One label="Pace (min/km)" v0={6} calc={(p)=>[{label:"Speed",value:p>0?`${fmt(60/p,2)} km/h`:"—"},{label:"mph",value:p>0?`${fmt(60/p*0.621371,2)} mph`:"—"},{label:"min/mile",value:p>0?`${fmt(p*1.609344,2)} min/mi`:"—"}]}/>;
