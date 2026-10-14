@@ -8,6 +8,11 @@ function distanceKm(a: { lat: number; lng: number }, b: { lat: number; lng: numb
   return 2 * R * Math.asin(Math.min(1, Math.sqrt(x)));
 }
 
+function safeNum(value: unknown) {
+  const n = Number(value);
+  return Number.isFinite(n) && n > -999999000 ? n : null;
+}
+
 async function queryLayer(url: string, lat: number, lng: number, radiusKm: number, fields: string) {
   const q = new URL(url + "/query");
   q.searchParams.set("geometry", `${lng},${lat}`);
@@ -23,6 +28,25 @@ async function queryLayer(url: string, lat: number, lng: number, radiusKm: numbe
   if (!res.ok) throw new Error(`Census TIGERweb ${res.status}`);
   const json = await res.json();
   return Array.isArray(json?.features) ? json.features.map((f: any) => f.attributes ?? {}) : [];
+}
+
+async function acsForZcta(zcta: string) {
+  const url = new URL("https://api.census.gov/data/2024/acs/acs5");
+  url.searchParams.set("get", "NAME,B01003_001E,B19013_001E,B01002_001E,B17001_001E,B17001_002E,B15003_001E,B15003_022E,B15003_023E,B15003_024E,B15003_025E,B25077_001E");
+  url.searchParams.set("for", `zip code tabulation area:${zcta}`);
+  const res = await fetch(url, { next: { revalidate: 604800 } });
+  if (!res.ok) return null;
+  const payload = await res.json();
+  if (!Array.isArray(payload) || payload.length < 2) return null;
+  const headers = payload[0] as string[];
+  const values = payload[1] as string[];
+  return Object.fromEntries(headers.map((h, i) => [h, values[i]])) as Record<string, string>;
+}
+
+function weightedAverage(rows: { weight: number; value: number | null }[]) {
+  const usable = rows.filter((r) => r.value !== null && r.weight > 0) as { weight: number; value: number }[];
+  const total = usable.reduce((s, r) => s + r.weight, 0);
+  return total > 0 ? usable.reduce((s, r) => s + r.value * r.weight, 0) / total : null;
 }
 
 export async function GET(request: Request) {
@@ -80,6 +104,34 @@ export async function GET(request: Request) {
     const populationEstimate = zctaRows.reduce((sum: number, z: any) => sum + z.population2020, 0);
     const housingUnits = zctaRows.reduce((sum: number, z: any) => sum + z.housingUnits2020, 0);
 
+    // Fetch recent ACS context for the largest included ZCTAs. Capping the sample keeps
+    // the tool responsive on very large radii; the response labels this as a sample.
+    const acsTargets = [...zctaRows].sort((a: any, b: any) => b.population2020 - a.population2020).slice(0, 30);
+    const acsRaw = await Promise.all(acsTargets.map(async (z: any) => ({ z, row: await acsForZcta(z.zcta) })));
+    const acsRows = acsRaw.filter((x) => x.row).map(({ z, row }) => {
+      const population = safeNum(row?.B01003_001E) ?? z.population2020;
+      const povertyUniverse = safeNum(row?.B17001_001E);
+      const povertyBelow = safeNum(row?.B17001_002E);
+      const eduUniverse = safeNum(row?.B15003_001E);
+      const bachelors = ["B15003_022E", "B15003_023E", "B15003_024E", "B15003_025E"].reduce((s, key) => s + (safeNum(row?.[key]) ?? 0), 0);
+      return {
+        zcta: z.zcta,
+        population,
+        medianHouseholdIncome: safeNum(row?.B19013_001E),
+        medianAge: safeNum(row?.B01002_001E),
+        medianHomeValue: safeNum(row?.B25077_001E),
+        povertyUniverse,
+        povertyBelow,
+        educationUniverse: eduUniverse,
+        bachelors,
+      };
+    });
+    const coveredPopulation = acsRows.reduce((s, r) => s + (r.population ?? 0), 0);
+    const povertyUniverse = acsRows.reduce((s, r) => s + (r.povertyUniverse ?? 0), 0);
+    const povertyBelow = acsRows.reduce((s, r) => s + (r.povertyBelow ?? 0), 0);
+    const educationUniverse = acsRows.reduce((s, r) => s + (r.educationUniverse ?? 0), 0);
+    const bachelors = acsRows.reduce((s, r) => s + r.bachelors, 0);
+
     return Response.json({
       ok: true,
       radiusKm,
@@ -91,9 +143,20 @@ export async function GET(request: Request) {
         populationEstimate,
         housingUnits,
         largestPlace: [...places].sort((a: any, b: any) => b.population2020 - a.population2020)[0] ?? null,
+        demographics: {
+          zctaSampleCount: acsRows.length,
+          zctaTotalCount: zctaRows.length,
+          coveredPopulation,
+          coveragePct: populationEstimate > 0 ? (coveredPopulation / populationEstimate) * 100 : null,
+          populationWeightedMedianHouseholdIncome: weightedAverage(acsRows.map((r) => ({ weight: r.population ?? 0, value: r.medianHouseholdIncome }))),
+          populationWeightedMedianAge: weightedAverage(acsRows.map((r) => ({ weight: r.population ?? 0, value: r.medianAge }))),
+          populationWeightedMedianHomeValue: weightedAverage(acsRows.map((r) => ({ weight: r.population ?? 0, value: r.medianHomeValue }))),
+          povertyRate: povertyUniverse > 0 ? (povertyBelow / povertyUniverse) * 100 : null,
+          bachelorsOrHigherRate: educationUniverse > 0 ? (bachelors / educationUniverse) * 100 : null,
+        },
       },
-      method: "U.S. Census 2020 incorporated places/CDPs and 2020 ZCTAs. Inclusion uses each geography's Census centroid inside the selected radius; population is the sum of included ZCTA 2020 populations, so it is a reproducible approximation rather than an exact clipped-area count.",
-      sources: ["U.S. Census Bureau TIGERweb", "2020 Decennial Census POP100/HU100"],
+      method: "U.S. Census 2020 incorporated places/CDPs and 2020 ZCTAs. Inclusion uses each geography's Census centroid inside the selected radius; population is the sum of included ZCTA 2020 populations, so it is a reproducible approximation rather than an exact clipped-area count. Recent ACS demographic context is calculated from up to the 30 most populous included ZCTAs; rates aggregate ACS universes while median income, age and home value are population-weighted summaries of ZCTA medians.",
+      sources: ["U.S. Census Bureau TIGERweb", "2020 Decennial Census POP100/HU100", "2020–2024 American Community Survey 5-year estimates"],
     }, { headers: { "Cache-Control": "public, s-maxage=604800, stale-while-revalidate=1209600" } });
   } catch {
     return Response.json({ ok: false, message: "U.S. Census radius data is temporarily unavailable." }, { status: 502 });
