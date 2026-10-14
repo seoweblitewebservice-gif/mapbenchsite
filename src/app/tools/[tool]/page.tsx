@@ -49,7 +49,7 @@ export default async function ToolPage({ params }: Props) {
   if (!tool) notFound();
   const category = CATEGORIES.find((c) => c.id === tool.category);
   const absoluteUrl = `https://www.mapbench.site/tools/${tool.slug}`;
-  const author = { "@type": "Person", "@id": "https://www.mapbench.site/author/aladdin#person", name: "Aladdin", url: "https://www.mapbench.site/author/aladdin" };
+  const author = { "@type": "Person", "@id": "https://www.mapbench.site/author/aryan-khan#person", name: "Aryan Khan", url: "https://www.mapbench.site/author/aryan-khan", sameAs: ["https://www.linkedin.com/in/aryan-khan-b77438438/"] };
   const faqs = getEnhancedFaqs(tool);
 
   const jsonLd = [
