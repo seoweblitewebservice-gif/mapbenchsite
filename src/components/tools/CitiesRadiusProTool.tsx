@@ -5,7 +5,7 @@ import type { GeoJSONSource, Map as MLMap } from "maplibre-gl";
 import { bearingBetween, compassPoint, destination, distanceKm, fmt, kmTo, toKm, type UnitKey } from "@/lib/geo";
 import { MAJOR_CITIES } from "@/data/cities";
 import { downloadText, toCsv } from "@/lib/formats";
-import { ErrorBox, Field, Spinner, Stat } from "@/components/ui";
+import { Field, Spinner, Stat } from "@/components/ui";
 import { DynamicMap, pinElement, PlaceField, type PlaceValue } from "./shared";
 
 type CensusPlace = {
@@ -21,15 +21,30 @@ type CensusPlace = {
   landAreaSqMi: number | null;
 };
 
+type DemoSummary = {
+  zctaSampleCount: number;
+  zctaTotalCount: number;
+  coveredPopulation: number;
+  coveragePct: number | null;
+  populationWeightedMedianHouseholdIncome: number | null;
+  populationWeightedMedianAge: number | null;
+  populationWeightedMedianHomeValue: number | null;
+  povertyRate: number | null;
+  bachelorsOrHigherRate: number | null;
+};
+
 type CensusPayload = {
   ok: true;
   radiusKm: number;
   places: CensusPlace[];
   zctas: { zcta: string; lat: number; lng: number; distanceKm: number; population2020: number; housingUnits2020: number }[];
-  summary: { placeCount: number; zctaCount: number; populationEstimate: number; housingUnits: number; largestPlace: CensusPlace | null };
+  summary: { placeCount: number; zctaCount: number; populationEstimate: number; housingUnits: number; largestPlace: CensusPlace | null; demographics?: DemoSummary };
   method: string;
   sources: string[];
 };
+
+const money = (v: number | null | undefined) => v == null ? "—" : new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(v);
+const percent = (v: number | null | undefined) => v == null ? "—" : `${v.toFixed(1)}%`;
 
 export default function CitiesRadiusProTool({ params }: { params?: Record<string, unknown> }) {
   const populationMode = params?.mode === "population";
@@ -77,6 +92,7 @@ export default function CitiesRadiusProTool({ params }: { params?: Record<string
 
   const censusPlaces = useMemo(() => (census?.places ?? []).filter((p) => p.population2020 >= minPopulation), [census, minPopulation]);
   const usingCensus = !!census;
+  const demo = census?.summary.demographics;
 
   useEffect(() => {
     const map = mapRef.current, lib = libRef.current;
@@ -118,21 +134,35 @@ export default function CitiesRadiusProTool({ params }: { params?: Record<string
           </div>
           <Field label="Minimum place population"><select className="select" value={minPopulation} onChange={(e) => setMinPopulation(Number(e.target.value))}><option value={0}>Any population</option><option value={1000}>1,000+</option><option value={5000}>5,000+</option><option value={10000}>10,000+</option><option value={50000}>50,000+</option><option value={100000}>100,000+</option></select></Field>
 
-          {loadingCensus && <Spinner label="Checking Census places and ZIP areas…" />}
+          {loadingCensus && <Spinner label="Checking Census places, ZIP areas and ACS context…" />}
           {censusError && center && <div className="rounded-lg border border-line bg-well/40 p-3 text-xs text-mute">Official U.S. Census radius mode was not available for this point, so MapBench is showing the worldwide major-city fallback. {censusError}</div>}
 
           {center && (
             <div className="space-y-3 border-t border-line pt-3">
               {usingCensus ? (
                 <>
-                  <div className="flex flex-wrap gap-2"><span className="chip chip-brand">U.S. Census mode</span><span className="chip">2020 Decennial population</span></div>
+                  <div className="flex flex-wrap gap-2"><span className="chip chip-brand">U.S. Census mode</span><span className="chip">2020 population + recent ACS</span></div>
                   {populationMode ? (
-                    <div className="grid grid-cols-2 gap-2">
-                      <Stat label="Population estimate" value={`≈ ${census.summary.populationEstimate.toLocaleString("en-US")}`} sub={`${census.summary.zctaCount} ZCTA centroids inside radius`} />
-                      <Stat label="Housing units" value={census.summary.housingUnits.toLocaleString("en-US")} sub="2020 Census HU100" />
-                      <Stat label="Census places" value={censusPlaces.length} sub={`${census.summary.placeCount} before population filter`} />
-                      <Stat label="Largest place" value={census.summary.largestPlace?.name ?? "—"} sub={census.summary.largestPlace ? census.summary.largestPlace.population2020.toLocaleString("en-US") : undefined} />
-                    </div>
+                    <>
+                      <div className="grid grid-cols-2 gap-2">
+                        <Stat label="Population estimate" value={`≈ ${census.summary.populationEstimate.toLocaleString("en-US")}`} sub={`${census.summary.zctaCount} ZCTA centroids inside radius`} />
+                        <Stat label="Housing units" value={census.summary.housingUnits.toLocaleString("en-US")} sub="2020 Census HU100" />
+                        <Stat label="Census places" value={censusPlaces.length} sub={`${census.summary.placeCount} before population filter`} />
+                        <Stat label="Largest place" value={census.summary.largestPlace?.name ?? "—"} sub={census.summary.largestPlace ? census.summary.largestPlace.population2020.toLocaleString("en-US") : undefined} />
+                      </div>
+                      {demo && <div className="space-y-2 rounded-xl border border-line bg-well/30 p-3">
+                        <div className="flex flex-wrap items-center justify-between gap-2"><div className="text-[11px] font-extrabold uppercase tracking-wide text-mute">ACS demographic context</div><span className="chip">{percent(demo.coveragePct)} pop. coverage</span></div>
+                        <div className="grid grid-cols-2 gap-2">
+                          <Stat label="Weighted median income" value={money(demo.populationWeightedMedianHouseholdIncome)} />
+                          <Stat label="Weighted median age" value={demo.populationWeightedMedianAge == null ? "—" : demo.populationWeightedMedianAge.toFixed(1)} />
+                          <Stat label="Weighted home value" value={money(demo.populationWeightedMedianHomeValue)} />
+                          <Stat label="Poverty rate" value={percent(demo.povertyRate)} />
+                          <Stat label="Bachelor's+" value={percent(demo.bachelorsOrHigherRate)} />
+                          <Stat label="ACS ZCTAs sampled" value={`${demo.zctaSampleCount}/${demo.zctaTotalCount}`} />
+                        </div>
+                        <p className="text-[11px] leading-relaxed text-mute">Income, age and home value are population-weighted summaries of ZCTA medians, not a custom-area median. Poverty and education rates aggregate available ACS estimate universes for the sampled ZCTAs.</p>
+                      </div>}
+                    </>
                   ) : <Stat label="Census places in radius" value={censusPlaces.length} sub="Incorporated places + Census Designated Places" />}
                   <div className="rounded-lg border border-brand/20 bg-brand-soft/40 p-3 text-xs leading-relaxed text-mute"><strong className="text-ink">Method:</strong> {census.method}</div>
                 </>
@@ -169,7 +199,8 @@ export default function CitiesRadiusProTool({ params }: { params?: Record<string
       <div className="card p-5 sm:p-6">
         <h2 className="font-display text-xl font-bold">What changes in U.S. Census mode</h2>
         <p className="mt-3 leading-7 text-mute">Inside the United States, MapBench no longer relies only on a short list of major cities. It queries Census Bureau place geography for incorporated places and Census Designated Places, including smaller communities that a global major-city dataset misses. The population view separately uses 2020 ZIP Code Tabulation Area population totals whose Census centroids fall inside the radius, which captures suburban and rural population much better than summing city populations alone.</p>
-        <p className="mt-3 leading-7 text-mute">This is still an approximation: a ZCTA can cross the radius boundary, and centroid inclusion does not split population proportionally along the circle. The method is transparent and reproducible, but it is not an official custom Census tabulation. For exact policy, funding or regulatory work, use the Census Bureau&apos;s official tables or a GIS workflow that clips small-area population data to the requested boundary.</p>
+        <p className="mt-3 leading-7 text-mute">Recent ACS context adds income, age, home value, poverty and education indicators from the most populous included ZCTAs. These are transparent summaries rather than a claim that Census publishes an official statistic for your exact circle. A ZCTA can cross the radius boundary, centroid inclusion does not split population along the circle, and a weighted average of ZCTA medians is not the same as recomputing a median from household microdata.</p>
+        <p className="mt-3 leading-7 text-mute">For statewide county comparisons, use the <a href="/tools/us-county-demographic-explorer" className="font-semibold text-brand-strong hover:underline">U.S. County Demographic Explorer</a>. For exact policy, funding or regulatory work, use Census official tables or a GIS workflow that clips small-area population data to the requested boundary.</p>
       </div>
     </div>
   );
