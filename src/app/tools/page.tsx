@@ -4,11 +4,16 @@ import Link from "next/link";
 import ToolsDirectory from "@/components/ToolsDirectory";
 import { CATEGORIES, TOOLS } from "@/lib/registry";
 
-export const metadata: Metadata = {
-  title: "All Free Map & Geographic Tools",
-  description: "The complete MapBench directory: distance and bearing calculators, radius and area tools, routing, coordinate converters, KML/GPX/GeoJSON viewers, map makers and more.",
-  alternates: { canonical: "/tools" },
-};
+export async function generateMetadata({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
+  const params = await searchParams;
+  const hasFilter = Boolean(params.cat || params.q);
+  return {
+    title: "All Free Map & Geographic Tools",
+    description: "The complete MapBench directory: distance and bearing calculators, radius and area tools, routing, coordinate converters, KML/GPX/GeoJSON viewers, map makers and more.",
+    alternates: { canonical: "/tools" },
+    robots: hasFilter ? { index: false, follow: true } : { index: true, follow: true },
+  };
+}
 
 export default function ToolsPage() {
   return (
