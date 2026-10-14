@@ -62,6 +62,41 @@ const CORRECTIONS: Correction[] = [
 ];
 
 export default function CorrectionsPage() {
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "MapBench Corrections & Change Log",
+      url: "https://www.mapbench.site/corrections",
+      description: "Public record of material factual, calculation, data-source and indexing corrections made by MapBench.",
+      dateModified: "2026-10-14",
+      author: { "@type": "Person", name: "Aryan Khan", url: "https://www.mapbench.site/author/aryan-khan" },
+      isPartOf: { "@type": "WebSite", name: "MapBench", url: "https://www.mapbench.site" },
+      about: ["editorial corrections", "geographic calculations", "data quality", "indexing quality"],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "MapBench correction entries",
+      numberOfItems: CORRECTIONS.length,
+      itemListElement: CORRECTIONS.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: `https://www.mapbench.site${item.href}`,
+        name: `${item.page} correction — ${item.date}`,
+        description: item.after,
+      })),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "MapBench", item: "https://www.mapbench.site" },
+        { "@type": "ListItem", position: 2, name: "Corrections & Change Log", item: "https://www.mapbench.site/corrections" },
+      ],
+    },
+  ];
+
   return (
     <div className="doc mx-auto max-w-5xl">
       <nav aria-label="Breadcrumb" className="mb-4 text-xs text-mute"><Link href="/" className="hover:text-brand-strong">Home</Link> / Corrections</nav>
@@ -76,11 +111,20 @@ export default function CorrectionsPage() {
         </table>
       </div>
 
+      <section className="mt-10 grid gap-4 md:grid-cols-3" aria-labelledby="correction-policy">
+        <h2 id="correction-policy" className="sr-only">How MapBench handles corrections</h2>
+        <article className="card p-5"><h3 className="font-display text-lg font-bold">Material errors are logged</h3><p className="mt-2 text-sm leading-relaxed text-mute">We record changes that alter a result, data source, calculation method or important factual statement. Small style edits are not presented as substantive corrections.</p></article>
+        <article className="card p-5"><h3 className="font-display text-lg font-bold">Methods are rechecked</h3><p className="mt-2 text-sm leading-relaxed text-mute">A reported issue is tested against the implemented calculation and the documented source before the result or explanatory text is changed.</p></article>
+        <article className="card p-5"><h3 className="font-display text-lg font-bold">Affected pages stay linked</h3><p className="mt-2 text-sm leading-relaxed text-mute">Each entry points back to the relevant tool or policy page so readers can review the corrected version, method and current limitations.</p></article>
+      </section>
+
       <section className="mt-10 rounded-xl border border-line bg-well/40 p-6">
         <h2 className="font-display text-2xl font-bold">Report an error</h2>
         <p className="mt-3">Send the affected URL, the input or statement you believe is wrong, the expected result, and a source when one is available. We review reproducible reports against the implemented method and documented source data.</p>
-        <p className="mt-4 font-sans text-sm"><Link href="/contact" className="font-extrabold text-brand-strong hover:underline">Contact MapBench →</Link><span className="mx-2 text-mute">·</span><Link href="/editorial-policy" className="font-extrabold text-brand-strong hover:underline">Editorial policy →</Link><span className="mx-2 text-mute">·</span><Link href="/methodology" className="font-extrabold text-brand-strong hover:underline">Methodology →</Link></p>
+        <p className="mt-4 font-sans text-sm"><Link href="/contact" className="font-extrabold text-brand-strong hover:underline">Contact MapBench →</Link><span className="mx-2 text-mute">·</span><Link href="/editorial-policy" className="font-extrabold text-brand-strong hover:underline">Editorial policy →</Link><span className="mx-2 text-mute">·</span><Link href="/methodology" className="font-extrabold text-brand-strong hover:underline">Methodology →</Link><span className="mx-2 text-mute">·</span><Link href="/data-sources" className="font-extrabold text-brand-strong hover:underline">Data sources →</Link></p>
       </section>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </div>
   );
 }
