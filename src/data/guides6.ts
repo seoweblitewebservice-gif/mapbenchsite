@@ -6,7 +6,7 @@ export const GUIDES6: Guide[] = [
   {
     slug: "state-capitals-distance-from-coast",
     title: "How Far Is Every US State Capital From the Coast?",
-    description: "We measured the straight-line distance from all 50 US state capitals to the nearest coastline. Pierre, South Dakota is the most landlocked at 924.4 miles — explore the full ranked table.",
+    description: "All 50 US state capitals ranked by distance to the coast. Pierre, South Dakota is the most landlocked at 924.4 miles — see the full table.",
     date: "2026-10-13",
     readMins: 9,
     blocks: [
