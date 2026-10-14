@@ -16,7 +16,7 @@ const STATIC_PATHS = [
   "/guides",
   "/studies",
   "/reference",
-  "/author/aladdin",
+  "/author/aryan-khan",
   "/about",
   "/contact",
   "/methodology",
