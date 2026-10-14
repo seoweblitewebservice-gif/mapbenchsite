@@ -8,6 +8,7 @@ import { REFERENCE_COUNTRIES } from "@/data/referenceCountries";
 import { US_BLANK_MAP_STATES } from "@/data/usBlankMapStates";
 
 const BASE = "https://www.mapbench.site";
+const STRUCTURE_UPDATE = new Date("2026-10-14T00:00:00Z");
 
 const STATIC_PATHS = [
   "",
@@ -28,6 +29,16 @@ const STATIC_PATHS = [
   "/privacy",
   "/terms",
 ];
+
+const UPDATED_STATIC_PATHS = new Set([
+  "",
+  "/tools",
+  "/maps",
+  "/states",
+  "/studies",
+  "/studies/state-capital-radius",
+  "/corrections",
+]);
 
 const PRIORITY_TOOL_SLUGS = [
   "map-radius",
@@ -73,12 +84,14 @@ const ALL_COUNTRY_MAP_SLUGS = Array.from(
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries: MetadataRoute.Sitemap = STATIC_PATHS.map((path) => ({
     url: `${BASE}${path || "/"}`,
+    ...(UPDATED_STATIC_PATHS.has(path) ? { lastModified: STRUCTURE_UPDATE } : {}),
     changeFrequency: path === "" ? "weekly" : "monthly",
     priority: path === "" ? 1 : ["/tools", "/maps", "/states", "/guides", "/studies", "/reference"].includes(path) ? 0.9 : path === "/studies/state-capital-radius" ? 0.84 : 0.6,
   }));
 
   const categoryEntries: MetadataRoute.Sitemap = CATEGORIES.map((category) => ({
     url: `${BASE}/tools/category/${category.id}`,
+    lastModified: STRUCTURE_UPDATE,
     changeFrequency: "monthly",
     priority: 0.82,
   }));
@@ -94,6 +107,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const toolEntries: MetadataRoute.Sitemap = orderedTools.map((tool) => ({
     url: `${BASE}/tools/${tool.slug}`,
+    ...(priorityIndex.has(tool.slug) ? { lastModified: STRUCTURE_UPDATE } : {}),
     changeFrequency: "monthly",
     priority: priorityIndex.has(tool.slug) ? 0.95 : tool.popular ? 0.88 : 0.7,
   }));
@@ -120,18 +134,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const stateCountyEntries: MetadataRoute.Sitemap = US_BLANK_MAP_STATES.map((state) => ({
     url: `${BASE}/states/${state.slug}/counties`,
+    lastModified: STRUCTURE_UPDATE,
     changeFrequency: "monthly",
     priority: 0.84,
   }));
 
   const stateMapEntries: MetadataRoute.Sitemap = US_BLANK_MAP_STATES.map((state) => ({
     url: `${BASE}/maps/blank/us/${state.slug}`,
+    lastModified: STRUCTURE_UPDATE,
     changeFrequency: "yearly",
     priority: 0.82,
   }));
 
   const countryMapEntries: MetadataRoute.Sitemap = ALL_COUNTRY_MAP_SLUGS.map((slug) => ({
     url: `${BASE}/maps/blank/${slug}`,
+    lastModified: STRUCTURE_UPDATE,
     changeFrequency: "yearly",
     priority: 0.68,
   }));
