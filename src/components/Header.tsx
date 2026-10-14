@@ -158,7 +158,7 @@ export default function Header() {
                             <li key={tool.slug}>
                               <Link href={`/tools/${tool.slug}`} className="block text-[13px] font-medium leading-[1.35] text-ink transition hover:translate-x-0.5 hover:text-brand-strong hover:underline">
                                 {tool.name}
-                                {tool.scope === "US" && <span className="ml-1 align-super text-[8px] font-extrabold uppercase tracking-wide text-brand">US</span>}
+                                {tool.scope === "US focused" && <span className="ml-1 align-super text-[8px] font-extrabold uppercase tracking-wide text-brand">US</span>}
                               </Link>
                             </li>
                           ))}
@@ -243,7 +243,7 @@ export default function Header() {
                       <span className="flex items-center gap-2 text-xs text-mute"><span>{tools.length}</span><span className="transition group-open:rotate-45">+</span></span>
                     </summary>
                     <ul className="mt-3 grid gap-2 pl-1">
-                      {tools.map((tool) => <li key={tool.slug}><Link href={`/tools/${tool.slug}`} className="block text-sm leading-5 text-mute hover:text-brand-strong">{tool.name}{tool.scope === "US" && <span className="ml-1 align-super text-[8px] font-extrabold uppercase text-brand">US</span>}</Link></li>)}
+                      {tools.map((tool) => <li key={tool.slug}><Link href={`/tools/${tool.slug}`} className="block text-sm leading-5 text-mute hover:text-brand-strong">{tool.name}{tool.scope === "US focused" && <span className="ml-1 align-super text-[8px] font-extrabold uppercase text-brand">US</span>}</Link></li>)}
                     </ul>
                     <Link href={`/tools/category/${category.id}`} className="mt-3 inline-block text-xs font-extrabold text-brand-strong hover:underline">View {category.label} category →</Link>
                   </details>
