@@ -25,6 +25,32 @@ const STATIC_PATHS = [
   "/terms",
 ];
 
+// These are the strongest search-intent/crawl-priority tools. Keeping them
+// early in the sitemap mirrors their prominent internal links on the homepage.
+// All genuine canonical tools remain indexable and remain in the sitemap.
+const PRIORITY_TOOL_SLUGS = [
+  "map-radius",
+  "what-county-am-i-in",
+  "drive-time-map",
+  "halfway-between-two-places",
+  "coordinate-converter",
+  "elevation-finder",
+  "timezone-map-finder",
+  "population-within-radius",
+  "distance-between-two-places",
+  "what-zip-code-am-i-in",
+  "what-state-am-i-in",
+  "csv-to-map",
+  "latitude-longitude-finder",
+  "cities-within-radius",
+  "driving-distance-calculator",
+  "kml-viewer",
+  "geojson-viewer",
+  "gpx-viewer",
+] as const;
+
+const priorityIndex = new Map(PRIORITY_TOOL_SLUGS.map((slug, index) => [slug, index]));
+
 function slugify(value: string) {
   return value.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 }
@@ -56,10 +82,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.82,
   }));
 
-  const toolEntries: MetadataRoute.Sitemap = TOOLS.map((tool) => ({
+  const orderedTools = [...TOOLS].sort((a, b) => {
+    const ai = priorityIndex.get(a.slug);
+    const bi = priorityIndex.get(b.slug);
+    if (ai !== undefined && bi !== undefined) return ai - bi;
+    if (ai !== undefined) return -1;
+    if (bi !== undefined) return 1;
+    return Number(Boolean(b.popular)) - Number(Boolean(a.popular)) || a.name.localeCompare(b.name);
+  });
+
+  const toolEntries: MetadataRoute.Sitemap = orderedTools.map((tool) => ({
     url: `${BASE}/tools/${tool.slug}`,
     changeFrequency: "monthly",
-    priority: tool.popular ? 0.9 : 0.7,
+    priority: priorityIndex.has(tool.slug) ? 0.95 : tool.popular ? 0.88 : 0.7,
   }));
 
   const guideEntries: MetadataRoute.Sitemap = ALL_GUIDES.map((guide) => ({
