@@ -12,15 +12,14 @@ export async function generateMetadata({params}:{params:Promise<{locale:string}>
   const {locale}=await params;
   if(!isLocale(locale))return{};
   const ui=getLocaleUI(locale);
+  const localizedCount=localizedToolSlugs(locale).length;
   const languages: Record<string,string>={en:`${BASE}/tools`,"x-default":`${BASE}/tools`};
-  for(const l of LOCALES){
-    if(localizedToolSlugs(l).length>0) languages[l]=`${BASE}/${l}/tools`;
-  }
+  for(const l of LOCALES){ if(localizedToolSlugs(l).length>0) languages[l]=`${BASE}/${l}/tools`; }
   return {
     title:`${ui.mapTools} · MapBench`,
     description:ui.browseDirectory,
-    robots:{index:true,follow:true},
-    alternates:{canonical:`/${locale}/tools`,languages}
+    robots: localizedCount>0 ? {index:true,follow:true} : {index:false,follow:true},
+    alternates: localizedCount>0 ? {canonical:`/${locale}/tools`,languages} : {canonical:"/tools"}
   };
 }
 
@@ -38,6 +37,6 @@ export default async function LocalizedTools({params}:{params:Promise<{locale:st
       if(!items.length)return null;
       return <section key={c.id} className="mt-8"><h2 className="sect-h">{CATEGORY_LABELS[locale][c.id] ?? c.label}</h2><div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{items.map(t=><Link key={t.slug} href={`/${locale}/tools/${t.slug}`} className="card p-4"><div className="font-bold">{getLocalizedTool(locale,t.slug)?.name ?? t.name}</div><p className="mt-1 text-xs text-mute">{getLocalizedTool(locale,t.slug)?.short ?? t.short}</p></Link>)}</div></section>;
     })}
-    {!localizedCount && <div className="mt-6 rounded-lg border border-line bg-card p-4 text-sm text-mute">Tool translations for this language are still being expanded. Browse this language directory while more localized tool content is added.</div>}
+    {!localizedCount && <div className="mt-6 rounded-lg border border-line bg-card p-4 text-sm text-mute">Tool translations for this language are still being expanded. Browse the English tool directory while localized pages are prepared.</div>}
   </div>;
 }
