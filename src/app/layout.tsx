@@ -25,20 +25,11 @@ export const metadata: Metadata = {
     title: "MapBench — Free Maps & Geographic Tools",
     description:
       "Calculate distances, measure areas, create maps, explore geographic data and convert GPS files — instantly in your browser. Free, no account required.",
-    images: [
-      {
-        url: "/og-default.jpg",
-        width: 1200,
-        height: 630,
-        alt: "MapBench — Free Maps & Geographic Tools",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "MapBench — Free Maps & Geographic Tools",
     description: "Free browser-first geographic tools: distance, radius, routing, coordinates, map files and more.",
-    images: ["/og-default.jpg"],
   },
   robots: { index: true, follow: true },
   authors: [{ name: "Aryan Khan", url: "https://www.mapbench.site/author/aryan-khan" }],
