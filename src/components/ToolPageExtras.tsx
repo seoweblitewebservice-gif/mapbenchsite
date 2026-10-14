@@ -46,7 +46,70 @@ function DistanceExtras() {
   );
 }
 
+function MagneticExtras() {
+  return (
+    <div className="mt-10 space-y-10">
+      <section>
+        <h2 className="font-display text-2xl font-bold tracking-tight">What magnetic declination actually tells you</h2>
+        <p className="mt-3 leading-7 text-mute">A compass points toward magnetic north, while maps and geographic bearings are usually referenced to true north. The angle between those two directions is magnetic declination, sometimes called magnetic variation. It is not a fixed number for a country or even for one city. The value depends on latitude, longitude, altitude and date because Earth&apos;s magnetic field changes both across space and through time.</p>
+        <p className="mt-3 leading-7 text-mute">That distinction matters when you compare a map bearing with a physical compass. If the model reports an easterly declination, magnetic north lies east of true north; a westerly value puts it to the west. MapBench keeps the sign convention visible and includes a direct true-to-magnetic bearing converter so you do not have to remember the arithmetic while working in the field.</p>
+      </section>
+
+      <section>
+        <h2 className="font-display text-2xl font-bold tracking-tight">Why the date is part of the input</h2>
+        <p className="mt-3 leading-7 text-mute">Earth&apos;s core generates a magnetic field that evolves over time. A declination value copied from an old paper map can therefore be wrong today even when the coordinates are unchanged. The World Magnetic Model is periodically updated so navigation systems can estimate that changing field. This page uses the 2025 epoch model and deliberately limits the date picker to the model&apos;s intended 2025–2030 window rather than pretending a five-year model stays valid indefinitely.</p>
+        <p className="mt-3 leading-7 text-mute">The page also exposes inclination, or magnetic dip, and field intensity where the upstream model provides them. Those values help explain why the magnetic field is a three-dimensional vector rather than a simple horizontal arrow. For an everyday compass correction, declination is the key result; the additional field values are useful context for technical users.</p>
+      </section>
+
+      <section className="rounded-2xl border border-line bg-well/35 p-5 sm:p-6">
+        <h2 className="font-display text-2xl font-bold tracking-tight">Data source and calculation path</h2>
+        <p className="mt-3 leading-7 text-mute">MapBench does not invent a local magnetic correction from longitude or a rough regional table. The selected coordinates, altitude and date are sent through a MapBench server route to the British Geological Survey World Magnetic Model web service. The returned model fields are then displayed in the tool. This keeps the model source separate from the user interface and makes the method auditable.</p>
+        <p className="mt-3 leading-7 text-mute">A model result is still not the same thing as a physical compass observation. Nearby steel, reinforced concrete, vehicles, power equipment, phones, speakers and local crustal anomalies can disturb a real instrument. For safety-critical marine, aviation or surveying work, follow the relevant professional navigation standard and current official notices rather than relying on a browser calculator alone.</p>
+        <p className="mt-3 text-sm text-mute">Related MapBench tools: <Link href="/tools/bearing-calculator" className="font-semibold text-brand-strong hover:underline">Bearing Calculator</Link>, <Link href="/tools/latitude-longitude-finder" className="font-semibold text-brand-strong hover:underline">Latitude &amp; Longitude Finder</Link>, and <Link href="/tools/find-my-location" className="font-semibold text-brand-strong hover:underline">Find My Location</Link>. See also <Link href="/methodology" className="font-semibold text-brand-strong hover:underline">Methodology</Link> and <Link href="/data-sources" className="font-semibold text-brand-strong hover:underline">Data Sources</Link>.</p>
+      </section>
+
+      <section>
+        <h2 className="font-display text-2xl font-bold tracking-tight">A practical example</h2>
+        <p className="mt-3 leading-7 text-mute">Suppose a route on a topographic map has a true bearing of 90°. If the selected location&apos;s declination is +8° east, a simplified true-to-magnetic conversion gives about 82° magnetic. If declination were −8° west, the corresponding magnetic bearing would be about 98°. MapBench performs this sign handling automatically and normalizes the answer back into the familiar 0–360° compass range.</p>
+        <p className="mt-3 leading-7 text-mute">This example is intentionally about the relationship between two reference directions. It is not a promise that a handheld compass will display exactly the model value at a particular spot. A compass measures the magnetic environment around the instrument; the World Magnetic Model estimates the large-scale field.</p>
+      </section>
+    </div>
+  );
+}
+
+function MoonRiseSetExtras() {
+  return (
+    <div className="mt-10 space-y-10">
+      <section>
+        <h2 className="font-display text-2xl font-bold tracking-tight">Moonrise is a location problem, not just a Moon-phase problem</h2>
+        <p className="mt-3 leading-7 text-mute">The Moon&apos;s phase is nearly the same for everyone on Earth at a given instant, but the time it rises and sets depends strongly on where you are. Two observers in different countries can see the same phase while having very different moonrise, moonset and sky-position times. That is why this calculator starts with an actual geographic point and resolves the point to an IANA time zone before formatting event times.</p>
+        <p className="mt-3 leading-7 text-mute">For photographers, hikers, anglers and casual observers, rise and set times answer a practical question: when is the Moon likely to be above the local astronomical horizon? Upper transit adds another useful reference—the part of the day when the calculated lunar altitude is highest for the selected location.</p>
+      </section>
+
+      <section>
+        <h2 className="font-display text-2xl font-bold tracking-tight">How MapBench estimates the events</h2>
+        <p className="mt-3 leading-7 text-mute">The tool calculates an approximate geocentric position for the Moon from a compact lunar theory, then evaluates the Moon&apos;s apparent altitude above the horizon throughout the selected day. MapBench samples that altitude at five-minute intervals. A crossing from below 0° to above 0° is treated as moonrise; the opposite crossing is moonset. The highest sampled altitude is used as an estimate of upper transit.</p>
+        <p className="mt-3 leading-7 text-mute">This approach is transparent and suitable for everyday planning, but it is intentionally described as an estimate. Professional astronomical ephemerides use more terms, topocentric parallax corrections, refraction models and finer numerical event solving. Local terrain also matters: a ridge or building can delay the moment the Moon becomes visible even when the geometric horizon event has already occurred.</p>
+      </section>
+
+      <section className="rounded-2xl border border-line bg-well/35 p-5 sm:p-6">
+        <h2 className="font-display text-2xl font-bold tracking-tight">Why a day can have no moonrise or no moonset</h2>
+        <p className="mt-3 leading-7 text-mute">A missing event is not necessarily a calculation failure. The Moon&apos;s orbit is tilted to the ecliptic, and its declination changes substantially through the month. At higher latitudes the Moon can stay above the horizon through an entire calendar day or remain below it for the full day. In those cases the correct planning answer can genuinely be “no rise” or “no set” within that date window.</p>
+        <p className="mt-3 leading-7 text-mute">This is one reason MapBench shows the map point, time zone, phase, illumination and altitude context together. A single isolated clock time is easy to misread; the surrounding information helps you tell whether an unusual result is plausible.</p>
+      </section>
+
+      <section>
+        <h2 className="font-display text-2xl font-bold tracking-tight">When to use the other Moon tools</h2>
+        <p className="mt-3 leading-7 text-mute">Use this page when your main question is “when will the Moon rise or set here?” For a live global picture of where the Moon is above the horizon right now, open the <Link href="/tools/moon-position-map" className="font-semibold text-brand-strong hover:underline">Moon Position Map</Link>. For the phase on a calendar date, use the <Link href="/tools/moon-phase-calculator" className="font-semibold text-brand-strong hover:underline">Moon Phase Calculator</Link>. If you are planning around daylight as well, compare the same location with the <Link href="/tools/sunrise-sunset-calculator" className="font-semibold text-brand-strong hover:underline">Sunrise &amp; Sunset Calculator</Link>.</p>
+        <p className="mt-3 text-sm text-mute">For methodology and source notes across MapBench, see <Link href="/methodology" className="font-semibold text-brand-strong hover:underline">Methodology</Link> and <Link href="/data-sources" className="font-semibold text-brand-strong hover:underline">Data Sources</Link>.</p>
+      </section>
+    </div>
+  );
+}
+
 export default function ToolPageExtras({ slug }: { slug: string }) {
   if (slug === "distance-between-two-places") return <DistanceExtras />;
+  if (slug === "magnetic-declination") return <MagneticExtras />;
+  if (slug === "moonrise-moonset") return <MoonRiseSetExtras />;
   return null;
 }
