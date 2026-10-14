@@ -9,7 +9,37 @@ import { CopyBtn, ErrorBox, Field } from "@/components/ui";
 import { DynamicMap, pinElement } from "./shared";
 
 type Parsed = { point: LatLng; source: string } | { error: string };
-type Converted = { input: string; source: string; point: LatLng; decimal: string; dms: string; utm: string; mgrs: string; plus: string };
+type Converted = { input: string; source: string; point: LatLng; decimal: string; dmm: string; dms: string; utm: string; mgrs: string; plus: string; geohash: string };
+
+const GEOHASH_BASE32 = "0123456789bcdefghjkmnpqrstuvwxyz";
+
+function encodeGeohash(lat: number, lng: number, precision = 9): string {
+  let latMin = -90, latMax = 90, lngMin = -180, lngMax = 180;
+  let bit = 0, ch = 0, even = true;
+  let out = "";
+  const bits = [16, 8, 4, 2, 1];
+  while (out.length < precision) {
+    if (even) {
+      const mid = (lngMin + lngMax) / 2;
+      if (lng >= mid) { ch |= bits[bit]; lngMin = mid; } else lngMax = mid;
+    } else {
+      const mid = (latMin + latMax) / 2;
+      if (lat >= mid) { ch |= bits[bit]; latMin = mid; } else latMax = mid;
+    }
+    even = !even;
+    if (bit < 4) bit += 1;
+    else { out += GEOHASH_BASE32[ch]; bit = 0; ch = 0; }
+  }
+  return out;
+}
+
+function formatDmm(value: number, axis: "lat" | "lng", minutePrecision = 4): string {
+  const hemi = axis === "lat" ? (value >= 0 ? "N" : "S") : (value >= 0 ? "E" : "W");
+  const abs = Math.abs(value);
+  const deg = Math.floor(abs);
+  const minutes = (abs - deg) * 60;
+  return `${deg}° ${minutes.toFixed(minutePrecision)}' ${hemi}`;
+}
 
 function parseAnything(input: string): Parsed {
   const s = input.trim();
@@ -44,10 +74,12 @@ function convert(input: string, precision: number): Converted | null {
     source: parsed.source,
     point,
     decimal: `${point.lat.toFixed(precision)}, ${point.lng.toFixed(precision)}`,
+    dmm: `${formatDmm(point.lat, "lat")}, ${formatDmm(point.lng, "lng")}`,
     dms: `${formatDms(point.lat, "lat")}, ${formatDms(point.lng, "lng")}`,
     utm: utm ? formatUtm(utm) : "outside UTM range",
     mgrs: latLngToMgrs(point, Math.min(5, Math.max(1, precision - 1))) ?? "outside MGRS range",
     plus: encodePlusCode(point.lat, point.lng),
+    geohash: encodeGeohash(point.lat, point.lng, Math.min(12, Math.max(5, precision + 3))),
   };
 }
 
@@ -86,16 +118,18 @@ export default function ConverterTool({ params }: { params?: Record<string, unkn
     `Input: ${input}`,
     `Recognised as: ${outputs.source}`,
     `Decimal: ${outputs.decimal}`,
+    `DMM: ${outputs.dmm}`,
     `DMS: ${outputs.dms}`,
     `UTM: ${outputs.utm}`,
     `MGRS: ${outputs.mgrs}`,
+    `Geohash: ${outputs.geohash}`,
     `Plus Code: ${outputs.plus}`,
   ].join("\n") : "";
 
   const exportBatch = () => {
     downloadText("mapbench-coordinate-conversions.csv", toCsv(
-      ["input", "source", "latitude", "longitude", "decimal", "dms", "utm", "mgrs", "plus_code"],
-      batchRows.map((r) => [r.input, r.source, r.point.lat.toFixed(precision), r.point.lng.toFixed(precision), r.decimal, r.dms, r.utm, r.mgrs, r.plus]),
+      ["input", "source", "latitude", "longitude", "decimal", "dmm", "dms", "utm", "mgrs", "geohash", "plus_code"],
+      batchRows.map((r) => [r.input, r.source, r.point.lat.toFixed(precision), r.point.lng.toFixed(precision), r.decimal, r.dmm, r.dms, r.utm, r.mgrs, r.geohash, r.plus]),
     ), "text/csv");
   };
 
@@ -129,10 +163,12 @@ export default function ConverterTool({ params }: { params?: Record<string, unkn
               <>
                 <div className="text-xs text-mute">Recognised as <strong className="text-ink">{outputs.source}</strong>. Every format below updates instantly.</div>
                 <div className="space-y-2">
-                  <Row label="Decimal degrees" value={outputs.decimal} highlight={focus === "all" || focus === "decimal"} />
-                  <Row label="Degrees / minutes / seconds" value={outputs.dms} highlight={focus === "dms" || focus === "decimal"} />
+                  <Row label="Decimal degrees (DD)" value={outputs.decimal} highlight={focus === "all" || focus === "decimal"} />
+                  <Row label="Degrees + decimal minutes (DMM)" value={outputs.dmm} highlight={focus === "dmm"} />
+                  <Row label="Degrees / minutes / seconds (DMS)" value={outputs.dms} highlight={focus === "dms" || focus === "decimal"} />
                   <Row label="UTM (WGS84)" value={outputs.utm} highlight={focus === "utm"} />
                   <Row label="MGRS" value={outputs.mgrs} highlight={focus === "mgrs"} />
+                  <Row label="Geohash" value={outputs.geohash} highlight={focus === "geohash"} />
                   <Row label="Plus Code" value={outputs.plus} highlight={focus === "pluscode"} />
                 </div>
                 <div className="flex flex-wrap gap-2">
@@ -159,7 +195,7 @@ export default function ConverterTool({ params }: { params?: Record<string, unkn
       ) : (
         <div className="space-y-4">
           <div className="card p-4">
-            <Field label="One coordinate per line" hint="Mix decimal, DMS, UTM, MGRS and Plus Codes in the same batch.">
+            <Field label="One coordinate per line" hint="Mix decimal, DMS, UTM, MGRS and Plus Codes in the same batch. Every valid point exports to DD, DMM, DMS, UTM, MGRS, Geohash and Plus Code.">
               <textarea className="textarea min-h-48 font-mono text-xs" value={batch} onChange={(e) => setBatch(e.target.value)} />
             </Field>
             <div className="mt-3 flex flex-wrap items-center gap-2">
@@ -170,9 +206,9 @@ export default function ConverterTool({ params }: { params?: Record<string, unkn
           </div>
           <div className="card overflow-hidden">
             <div className="overflow-x-auto">
-              <table className="tbl min-w-[1050px]">
-                <thead><tr><th>#</th><th>Input</th><th>Detected</th><th>Decimal</th><th>DMS</th><th>UTM</th><th>MGRS</th><th>Plus Code</th></tr></thead>
-                <tbody>{batchRows.map((r, i) => <tr key={`${r.input}-${i}`}><td>{i + 1}</td><td className="font-mono text-xs">{r.input}</td><td>{r.source}</td><td className="font-mono text-xs">{r.decimal}</td><td className="font-mono text-xs">{r.dms}</td><td className="font-mono text-xs">{r.utm}</td><td className="font-mono text-xs">{r.mgrs}</td><td className="font-mono text-xs">{r.plus}</td></tr>)}</tbody>
+              <table className="tbl min-w-[1320px]">
+                <thead><tr><th>#</th><th>Input</th><th>Detected</th><th>Decimal</th><th>DMM</th><th>DMS</th><th>UTM</th><th>MGRS</th><th>Geohash</th><th>Plus Code</th></tr></thead>
+                <tbody>{batchRows.map((r, i) => <tr key={`${r.input}-${i}`}><td>{i + 1}</td><td className="font-mono text-xs">{r.input}</td><td>{r.source}</td><td className="font-mono text-xs">{r.decimal}</td><td className="font-mono text-xs">{r.dmm}</td><td className="font-mono text-xs">{r.dms}</td><td className="font-mono text-xs">{r.utm}</td><td className="font-mono text-xs">{r.mgrs}</td><td className="font-mono text-xs">{r.geohash}</td><td className="font-mono text-xs">{r.plus}</td></tr>)}</tbody>
               </table>
             </div>
           </div>
