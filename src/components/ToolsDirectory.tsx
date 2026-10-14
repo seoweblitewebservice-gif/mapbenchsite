@@ -36,7 +36,7 @@ export default function ToolsDirectory() {
       <div className="flex flex-wrap gap-1.5">
         <Link href="/tools" className={`chip !py-1.5 ${!cat ? "!border-transparent chip-brand" : "hover:border-brand"}`}>All</Link>
         {CATEGORIES.map((c) => (
-          <Link key={c.id} href={`/tools?cat=${c.id}${q ? `&q=${encodeURIComponent(q)}` : ""}`} className={`chip !py-1.5 ${cat === c.id ? "!border-transparent chip-brand" : "hover:border-brand"}`}>
+          <Link key={c.id} href={`/tools/category/${c.id}`} className="chip !py-1.5 hover:border-brand">
             <span className="h-2 w-2 rounded-full" style={{ background: c.tone }} aria-hidden />
             {c.label}
           </Link>
