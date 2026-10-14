@@ -20,6 +20,7 @@ import { GAP_C_TOOLS } from "@/data/toolsGapC";
 import { FLAGSHIP_TOOLS } from "@/data/toolsFlagship";
 import { CENSUS_US_TOOLS } from "@/data/toolsCensusUS";
 import { CENSUS_EXPLORER_TOOLS } from "@/data/toolsCensusExplorer";
+import { LIVE_SEO_OVERRIDES } from "@/data/toolsLiveSeoOverrides";
 
 export type CategoryId =
   | "location" | "distance" | "radius" | "routing" | "coordinates"
@@ -40,7 +41,7 @@ export const CATEGORIES: CategoryDef[] = [
   { id: "earth", label: "Earth Science", short: "Elevation, horizon, antipodes.", tone: "#155e75" },
   { id: "sun", label: "Sun & Moon", short: "Sunrise, sunset and day length.", tone: "#a16207" },
   { id: "lines", label: "Geographic Lines", short: "Equator, tropics and meridians.", tone: "#334155" },
-  { id: "population", label: "Places & Population", short: "Cities and ZIP codes in a radius.", tone: "#7c2d12" },
+  { id: "population", label: "Places & Population", short: "Cities, ZIP/ZCTA and demographic radius tools.", tone: "#7c2d12" },
   { id: "network", label: "IP & Network", short: "IP geolocation and network details.", tone: "#475569" },
 ];
 
@@ -78,6 +79,7 @@ const RAW_TOOLS: ToolDef[] = [
   ...FLAGSHIP_TOOLS,
   ...CENSUS_US_TOOLS,
   ...CENSUS_EXPLORER_TOOLS,
+  ...LIVE_SEO_OVERRIDES,
 ];
 
 const canonicalTools = new Map<string, ToolDef>();
@@ -90,9 +92,14 @@ export const toolsByCategory = (id: CategoryId) => TOOLS.filter((t) => t.categor
 export const STATIC_LINKS = [
   { href: "/", name: "Home", keywords: ["home"] },
   { href: "/tools", name: "All Tools", keywords: ["directory"] },
+  { href: "/states", name: "US States", keywords: ["states", "counties", "state maps"] },
+  { href: "/maps", name: "Blank Maps", keywords: ["blank maps", "state maps", "country maps"] },
+  { href: "/studies", name: "Studies", keywords: ["studies", "research"] },
+  { href: "/guides", name: "Guides", keywords: ["guides", "mapping"] },
   { href: "/about", name: "About", keywords: ["about"] },
   { href: "/methodology", name: "Methodology", keywords: ["methodology"] },
   { href: "/data-sources", name: "Data Sources", keywords: ["data"] },
+  { href: "/corrections", name: "Corrections", keywords: ["corrections", "change log"] },
   { href: "/privacy", name: "Privacy", keywords: ["privacy"] },
   { href: "/contact", name: "Contact", keywords: ["contact"] },
 ];
