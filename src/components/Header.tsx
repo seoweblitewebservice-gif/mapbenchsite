@@ -53,6 +53,11 @@ const FEATURED_SLUGS = [
 ];
 const FEATURED = FEATURED_SLUGS.map((slug) => TOOLS.find((t) => t.slug === slug)).filter(Boolean);
 
+const TOOL_GROUPS = CATEGORIES.map((category) => ({
+  category,
+  tools: TOOLS.filter((tool) => tool.category === category.id),
+})).filter((group) => group.tools.length > 0);
+
 const MAPS_MENU: { title: string; links: [string, string][]; more?: [string, string] }[] = [
   {
     title: "Popular maps",
@@ -94,8 +99,19 @@ export default function Header() {
       if (!toolsRef.current?.contains(e.target as Node)) setToolsOpen(false);
       if (!mapsRef.current?.contains(e.target as Node)) setMapsOpen(false);
     };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setToolsOpen(false);
+        setMapsOpen(false);
+        setOpen(false);
+      }
+    };
     document.addEventListener("mousedown", onDoc);
-    return () => document.removeEventListener("mousedown", onDoc);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onDoc);
+      document.removeEventListener("keydown", onKey);
+    };
   }, []);
 
   return (
@@ -105,26 +121,57 @@ export default function Header() {
         <Link href="/" aria-label="MapBench home"><Logo /></Link>
         <nav className="ml-auto hidden items-center gap-1 md:flex" aria-label="Main">
           <div className="relative" ref={toolsRef}>
-            <button type="button" className="rounded px-2.5 py-1.5 text-[13px] font-bold hover:text-brand-strong" aria-expanded={toolsOpen} onClick={() => { setToolsOpen((v) => !v); setMapsOpen(false); }}>
-              Tools <span aria-hidden className="text-[10px]">▾</span>
+            <button
+              type="button"
+              className={`rounded px-2.5 py-1.5 text-[13px] font-bold transition hover:text-brand-strong ${toolsOpen ? "bg-brand-soft text-brand-strong" : ""}`}
+              aria-expanded={toolsOpen}
+              aria-controls="desktop-tools-mega-menu"
+              onClick={() => { setToolsOpen((v) => !v); setMapsOpen(false); }}
+            >
+              Tools <span aria-hidden className={`inline-block text-[10px] transition-transform ${toolsOpen ? "rotate-180" : ""}`}>▾</span>
             </button>
+
             {toolsOpen && (
-              <div className="absolute right-0 top-full mt-1 w-[min(46rem,92vw)] rounded-lg border border-line bg-card p-5 shadow-xl">
-                <div className="grid gap-6 sm:grid-cols-2">
-                  <div>
-                    <div className="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-mute">Featured tools</div>
-                    <ul className="grid gap-1.5 sm:grid-cols-2">
-                      {FEATURED.map((t) => t && <li key={t.slug}><Link href={`/tools/${t.slug}`} className="text-[13px] font-semibold hover:text-brand-strong hover:underline">{t.name}</Link></li>)}
-                    </ul>
+              <div id="desktop-tools-mega-menu" className="fixed inset-x-0 top-12 z-50 border-y border-line bg-card/98 shadow-2xl backdrop-blur-xl">
+                <div className="mx-auto max-h-[calc(100vh-3rem)] max-w-[1540px] overflow-y-auto px-6 py-6 lg:px-8">
+                  <div className="mb-6 flex flex-wrap items-end justify-between gap-4 border-b border-line pb-4">
+                    <div>
+                      <div className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-strong">MapBench tool directory</div>
+                      <div className="mt-1 font-display text-2xl font-bold">Browse all {TOOLS.length} geographic tools</div>
+                      <p className="mt-1 max-w-2xl text-xs leading-5 text-mute">Every tool is listed below by task. Choose a tool directly without opening the full directory page.</p>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      <button type="button" className="btn btn-ghost btn-sm" onClick={() => { setToolsOpen(false); window.dispatchEvent(new CustomEvent("sf-open-search")); }}>Search tools</button>
+                      <Link href="/tools" className="btn btn-primary btn-sm">View all tools →</Link>
+                    </div>
                   </div>
-                  <div>
-                    <div className="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-mute">Browse by category</div>
-                    <ul className="grid gap-1.5 sm:grid-cols-2">
-                      {CATEGORIES.map((c) => <li key={c.id}><Link href={`/tools/category/${c.id}`} className="text-[13px] font-semibold hover:text-brand-strong hover:underline">{c.label}</Link></li>)}
-                    </ul>
+
+                  <div className="grid items-start gap-x-8 gap-y-9 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+                    {TOOL_GROUPS.map(({ category, tools }) => (
+                      <section key={category.id} className="min-w-0">
+                        <div className="mb-3 flex items-center justify-between gap-2 border-b border-line pb-2">
+                          <Link href={`/tools/category/${category.id}`} className="text-[11px] font-extrabold uppercase tracking-[0.12em] text-brand-strong hover:underline">{category.label}</Link>
+                          <span className="text-[10px] font-bold text-mute">{tools.length}</span>
+                        </div>
+                        <ul className="space-y-1.5">
+                          {tools.map((tool) => (
+                            <li key={tool.slug}>
+                              <Link href={`/tools/${tool.slug}`} className="block text-[13px] font-medium leading-[1.35] text-ink transition hover:translate-x-0.5 hover:text-brand-strong hover:underline">
+                                {tool.name}
+                                {tool.scope === "US" && <span className="ml-1 align-super text-[8px] font-extrabold uppercase tracking-wide text-brand">US</span>}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </section>
+                    ))}
+                  </div>
+
+                  <div className="mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-4 text-xs text-mute">
+                    <span>{TOOLS.length} tools across {TOOL_GROUPS.length} categories.</span>
+                    <Link href="/tools" className="font-extrabold text-brand-strong hover:underline">View the complete searchable tool directory →</Link>
                   </div>
                 </div>
-                <div className="mt-5 border-t border-line pt-3 text-right"><Link href="/tools" className="text-[13px] font-extrabold text-brand-strong hover:underline">Browse the full directory →</Link></div>
               </div>
             )}
           </div>
@@ -178,17 +225,30 @@ export default function Header() {
               <Link href="/about" className="text-brand-strong">About</Link>
             </div>
             <button type="button" className="btn btn-ghost btn-sm w-full" onClick={() => window.dispatchEvent(new CustomEvent("sf-open-search"))}>Search tools…</button>
+
             <div>
               <div className="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-mute">Featured tools</div>
               <ul className="grid grid-cols-2 gap-2">
                 {FEATURED.slice(0, 8).map((t) => t && <li key={t.slug}><Link href={`/tools/${t.slug}`} className="text-sm font-semibold hover:text-brand-strong">{t.name}</Link></li>)}
               </ul>
             </div>
+
             <div>
-              <div className="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-mute">Categories</div>
-              <ul className="grid grid-cols-2 gap-2">
-                {CATEGORIES.map((c) => <li key={c.id}><Link href={`/tools/category/${c.id}`} className="text-sm font-semibold hover:text-brand-strong">{c.label}</Link></li>)}
-              </ul>
+              <div className="mb-2 flex items-center justify-between"><div className="text-[11px] font-extrabold uppercase tracking-wider text-mute">All tools by category</div><span className="text-[10px] font-bold text-mute">{TOOLS.length} tools</span></div>
+              <div className="divide-y divide-line rounded-xl border border-line bg-card">
+                {TOOL_GROUPS.map(({ category, tools }) => (
+                  <details key={category.id} className="group px-3 py-3">
+                    <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-extrabold marker:content-none">
+                      <span>{category.label}</span>
+                      <span className="flex items-center gap-2 text-xs text-mute"><span>{tools.length}</span><span className="transition group-open:rotate-45">+</span></span>
+                    </summary>
+                    <ul className="mt-3 grid gap-2 pl-1">
+                      {tools.map((tool) => <li key={tool.slug}><Link href={`/tools/${tool.slug}`} className="block text-sm leading-5 text-mute hover:text-brand-strong">{tool.name}{tool.scope === "US" && <span className="ml-1 align-super text-[8px] font-extrabold uppercase text-brand">US</span>}</Link></li>)}
+                    </ul>
+                    <Link href={`/tools/category/${category.id}`} className="mt-3 inline-block text-xs font-extrabold text-brand-strong hover:underline">View {category.label} category →</Link>
+                  </details>
+                ))}
+              </div>
             </div>
           </div>
         </nav>
