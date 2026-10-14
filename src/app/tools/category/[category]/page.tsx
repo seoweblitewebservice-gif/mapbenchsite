@@ -33,6 +33,8 @@ export default async function CategoryPage({ params }: Props) {
   const categoryId = category.id as CategoryId;
   const tools = toolsByCategory(categoryId);
   const featured = [...tools].sort((a, b) => Number(Boolean(b.popular)) - Number(Boolean(a.popular))).slice(0, 12);
+  const featuredSlugs = new Set(featured.map((tool) => tool.slug));
+  const remaining = tools.filter((tool) => !featuredSlugs.has(tool.slug));
   const tips = CATEGORY_TIPS[categoryId] || [];
   const glossary = CATEGORY_GLOSSARY[categoryId] || [];
   const supplement = SUPPLEMENT[categoryId];
@@ -46,6 +48,16 @@ export default async function CategoryPage({ params }: Props) {
       description: category.short,
       url: `${BASE}/tools/category/${category.id}`,
       isPartOf: { "@type": "WebSite", name: "MapBench", url: BASE },
+      mainEntity: {
+        "@type": "ItemList",
+        numberOfItems: tools.length,
+        itemListElement: tools.map((tool, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: tool.name,
+          url: `${BASE}/tools/${tool.slug}`,
+        })),
+      },
     },
     {
       "@context": "https://schema.org",
@@ -69,11 +81,13 @@ export default async function CategoryPage({ params }: Props) {
       </header>
 
       <section className="mt-10" aria-labelledby="featured-category-tools">
-        <div className="flex items-end justify-between gap-4"><div><h2 id="featured-category-tools" className="sect-h">Start with these tools</h2><p className="mt-2 max-w-3xl">Choose the tool that matches the question rather than the one with the most familiar name. Related tools can use different geographic models and legitimately return different answers.</p></div><Link href={`/tools?cat=${category.id}`} className="font-sans text-sm font-extrabold text-brand-strong hover:underline">View all {tools.length} →</Link></div>
+        <div><h2 id="featured-category-tools" className="sect-h">Start with these tools</h2><p className="mt-2 max-w-3xl">Choose the tool that matches the question rather than the one with the most familiar name. Related tools can use different geographic models and legitimately return different answers.</p></div>
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((tool) => <Link key={tool.slug} href={`/tools/${tool.slug}`} className="card group p-5 hover:border-brand"><div className="text-[10px] font-extrabold uppercase tracking-wide text-mute">{tool.scope}</div><h3 className="mt-2 font-display text-lg font-bold group-hover:text-brand-strong">{tool.name}</h3><p className="mt-2 text-sm leading-relaxed text-mute">{tool.short}</p><span className="mt-4 block font-sans text-sm font-extrabold text-brand-strong">Open tool →</span></Link>)}
         </div>
       </section>
+
+      {remaining.length > 0 && <section className="mt-12 border-t border-line pt-10" aria-labelledby="all-category-tools"><h2 id="all-category-tools" className="sect-h">All {category.label.toLowerCase()} tools</h2><p className="mt-2 max-w-3xl">Browse every tool in this category from this canonical hub. Each link opens a dedicated indexable tool page with its own method, examples, limitations and related resources.</p><div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{remaining.map((tool) => <Link key={tool.slug} href={`/tools/${tool.slug}`} className="rounded-xl border border-line bg-white p-4 transition-colors hover:border-brand"><h3 className="font-display text-base font-bold text-ink">{tool.name}</h3><p className="mt-1.5 text-sm leading-relaxed text-mute">{tool.short}</p><span className="mt-3 block text-xs font-extrabold text-brand-strong">Open tool →</span></Link>)}</div></section>}
 
       <section className="mt-12 border-t border-line pt-10" aria-labelledby="category-method">
         <h2 id="category-method" className="sect-h">How to use this category well</h2>
