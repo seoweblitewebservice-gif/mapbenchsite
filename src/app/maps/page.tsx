@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { feature } from "topojson-client";
+import countriesTopo from "world-atlas/countries-110m.json";
 import MapsClient from "@/components/MapsClient";
 import { US_BLANK_MAP_STATES } from "@/data/usBlankMapStates";
 
@@ -9,12 +11,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/maps" },
 };
 
+function slugify(value: string) {
+  return value.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+}
+
+const countryFeatureCollection = feature(
+  countriesTopo as any,
+  (countriesTopo as any).objects.countries,
+) as unknown as GeoJSON.FeatureCollection<GeoJSON.Geometry, { name?: string }>;
+
+const COUNTRY_LINKS = Array.from(
+  new Set(countryFeatureCollection.features.map((item) => item.properties?.name).filter((name): name is string => Boolean(name))),
+).sort((a, b) => a.localeCompare(b));
+
 const MAP_FAQS: [string, string][] = [
   ["Are these maps really free to use?", "Yes — completely free, including commercial use. The boundary data comes from Natural Earth and the US Census Bureau, both public domain, and the outlines are generated in your browser with no watermark or branding."],
   ["What's the difference between the four variants?", "Blank is a clean outline for worksheets and quizzes; Labeled adds region or country names; Colored fills each region with a soft tint for presentations; With cities overlays major-city dots from our curated dataset. Every variant downloads in both SVG and PNG."],
   ["SVG or PNG — which should I choose?", "SVG for anything printed or resized because it stays sharp at any size and remains editable. PNG is convenient for slides, documents and quick sharing. State pages also include a print option for PDF output."],
   ["Where does the boundary data come from?", "Country and world outlines use Natural Earth's public-domain dataset. US state and county-equivalent maps use public US Census cartographic geometry distributed through us-atlas."],
   ["Does every US state have its own page?", "Yes. MapBench provides a dedicated indexable page for every state plus the District of Columbia, with county-equivalent boundaries, multiple map styles and downloads."],
+  ["Does every country have a separate URL?", "Yes. The country library links to a dedicated canonical blank-map page for each country represented in the bundled Natural Earth geometry."],
   ["Do I need to credit MapBench?", "No attribution is required for public-domain data. A credit line is appreciated but never obligatory."],
 ];
 
@@ -40,6 +56,21 @@ export default function MapsPage() {
             <Link key={state.slug} href={`/maps/blank/us/${state.slug}`} className="rounded-lg border border-line bg-well/35 px-3 py-3 font-sans text-sm font-semibold text-ink transition hover:border-brand hover:bg-brand-soft/40 hover:text-brand-strong">
               <span className="block">{state.name}</span>
               <span className="mt-1 block text-[10px] font-medium text-mute">{state.divisionLabel} map →</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section id="country-maps" className="mt-6 rounded-2xl border border-line bg-card p-5 sm:p-6" aria-labelledby="country-maps-heading">
+        <div className="max-w-3xl">
+          <p className="font-sans text-[11px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">Country map library</p>
+          <h2 id="country-maps-heading" className="mt-2 font-display text-2xl font-bold">Printable Country Blank Maps</h2>
+          <p className="mt-2 text-sm leading-relaxed text-mute">Each country link opens a separate canonical page instead of changing only the map on this URL. Use those pages for printing, downloads, geographic reference facts and stable links.</p>
+        </div>
+        <div className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+          {COUNTRY_LINKS.map((name) => (
+            <Link key={name} href={`/maps/blank/${slugify(name)}`} className="rounded-lg border border-line bg-well/35 px-3 py-3 font-sans text-sm font-semibold text-ink transition hover:border-brand hover:bg-brand-soft/40 hover:text-brand-strong">
+              {name} <span className="text-brand-strong">→</span>
             </Link>
           ))}
         </div>
