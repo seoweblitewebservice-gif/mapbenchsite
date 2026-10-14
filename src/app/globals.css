@@ -58,6 +58,30 @@ body {
 }
 
 @layer components {
+  .skip-link {
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    z-index: 1000;
+    transform: translateY(-180%);
+    border: 2px solid var(--sf-brand);
+    border-radius: .5rem;
+    background: var(--sf-card);
+    color: var(--sf-ink);
+    padding: .6rem .9rem;
+    font-family: var(--font-sans);
+    font-size: .85rem;
+    font-weight: 800;
+    box-shadow: 0 8px 24px rgb(15 23 42 / .16);
+    transition: transform .15s ease;
+  }
+  .skip-link:focus,
+  .skip-link:focus-visible {
+    transform: translateY(0);
+    outline: 3px solid color-mix(in srgb, var(--sf-brand) 30%, transparent);
+    outline-offset: 2px;
+  }
+
   .container-sf { max-width: 72rem; margin-inline: auto; padding-inline: 1rem; }
   @media (min-width: 640px) { .container-sf { padding-inline: 1.5rem; } }
 
