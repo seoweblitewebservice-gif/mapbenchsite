@@ -26,51 +26,56 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const words = (s: string) => s.trim().split(/\s+/).filter(Boolean).length;
+const slugify = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 
-function Block({ b }: { b: GuideBlock }) {
+function Block({ b, index }: { b: GuideBlock; index: number }) {
   switch (b.t) {
-    case "h2": return <h2>{b.text}</h2>;
-    case "p": return <p>{b.text}</p>;
-    case "ul": return <ul>{b.items.map((i) => <li key={i}>{i}</li>)}</ul>;
+    case "h2": {
+      const id = `${slugify(b.text)}-${index}`;
+      return <h2 id={id} className="scroll-mt-24 border-t border-line pt-9 font-display text-2xl font-bold tracking-tight sm:text-[1.75rem]">{b.text}</h2>;
+    }
+    case "p": return <p className="text-[17px] leading-[1.85] text-mute sm:text-[18px]">{b.text}</p>;
+    case "ul": return <ul className="space-y-2.5 pl-5 text-[16px] leading-[1.75] text-mute marker:text-brand sm:text-[17px]">{b.items.map((i) => <li key={i}>{i}</li>)}</ul>;
     case "note":
-      return <aside className="my-4 rounded-xl border border-brand/30 bg-brand-soft px-4 py-3 text-sm leading-relaxed text-brand-strong"><strong>Note: </strong>{b.text}</aside>;
+      return <aside className="my-7 rounded-2xl border border-brand/25 bg-brand-soft/60 px-5 py-4 text-[15px] leading-7 text-brand-strong"><div className="mb-1 font-sans text-[10px] font-extrabold uppercase tracking-[0.14em]">Worth noting</div>{b.text}</aside>;
     case "toolbox": {
       const tools = b.slugs.map((s) => toolBySlug.get(s)).filter(Boolean);
       return (
-        <div className="my-5 rounded-xl border border-line bg-card p-4 font-sans">
-          <div className="text-[11px] font-extrabold uppercase tracking-widest text-mute">Tools used in this post</div>
-          <div className="mt-2 grid gap-2 sm:grid-cols-2">
+        <section className="my-9 rounded-2xl border border-line bg-white p-5 shadow-sm">
+          <div className="font-sans text-[10px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">Related MapBench tools</div>
+          <h3 className="mt-1 font-display text-xl font-bold">Try the methods from this guide</h3>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
             {tools.map((t) => (
-              <a key={t!.slug} href={`/tools/${t!.slug}`} className="group rounded-lg border border-line px-3 py-2 hover:border-brand">
-                <span className="block text-sm font-extrabold group-hover:text-brand-strong">→ {t!.name}</span>
-                <span className="mt-0.5 line-clamp-1 block text-xs text-mute">{t!.short}</span>
-              </a>
+              <Link key={t!.slug} href={`/tools/${t!.slug}`} className="group rounded-xl border border-line bg-well/25 p-4 transition-all hover:-translate-y-0.5 hover:border-brand hover:shadow-sm">
+                <span className="block font-sans text-sm font-extrabold group-hover:text-brand-strong">{t!.name} →</span>
+                <span className="mt-1.5 block text-sm leading-6 text-mute">{t!.short}</span>
+              </Link>
             ))}
           </div>
-        </div>
+        </section>
       );
     }
     case "table": {
       return (
-        <div className="my-5 overflow-x-auto rounded-xl border border-line">
-          <table className="w-full border-collapse text-sm">
-            <thead>
-              <tr className="bg-card">
-                {b.headers.map((h) => (
-                  <th key={h} className="border-b border-line px-3 py-2 text-left font-sans text-xs font-bold uppercase tracking-wide text-mute">{h}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {b.rows.map((r, i) => (
-                <tr key={i} className="border-b border-line last:border-0">
-                  {r.map((c, j) => (
-                    <td key={j} className="px-3 py-2 align-top">{c}</td>
+        <div className="my-8 overflow-hidden rounded-2xl border border-line bg-white shadow-sm">
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[640px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-well/65">
+                  {b.headers.map((h) => (
+                    <th key={h} className="border-b border-line px-4 py-3 text-left font-sans text-[11px] font-extrabold uppercase tracking-wide text-mute">{h}</th>
                   ))}
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {b.rows.map((r, i) => (
+                  <tr key={i} className="border-b border-line last:border-0 even:bg-well/20">
+                    {r.map((c, j) => <td key={j} className="px-4 py-3 align-top leading-6 text-mute">{c}</td>)}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       );
     }
@@ -89,6 +94,11 @@ export default async function GuidePage({ params }: Props) {
     return acc;
   }, 0);
 
+  const readMins = Math.max(3, Math.ceil(bodyWords / 220));
+  const headings = g.blocks.flatMap((b, index) => b.t === "h2" ? [{ text: b.text, id: `${slugify(b.text)}-${index}` }] : []);
+  const firstList = g.blocks.find((b) => b.t === "ul");
+  const takeaways = firstList?.t === "ul" ? firstList.items.slice(0, 4) : [];
+
   const toolboxSlugs = g.blocks.filter((b) => b.t === "toolbox").flatMap((b) => (b as { slugs: string[] }).slugs);
   const related = ALL_GUIDES.filter((x) => x.slug !== slug && x.blocks.some((b) => b.t === "toolbox" && b.slugs.some((s) => toolboxSlugs.includes(s))));
   const guideUrl = `https://www.mapbench.site/guides/${g.slug}`;
@@ -104,7 +114,8 @@ export default async function GuidePage({ params }: Props) {
       dateModified: g.date,
       inLanguage: "en",
       isAccessibleForFree: true,
-      author: { "@type": "Organization", name: "MapBench Editorial", url: "https://www.mapbench.site/editorial-policy" },
+      author: { "@type": "Person", "@id": "https://www.mapbench.site/author/aladdin#person", name: "Aladdin", url: "https://www.mapbench.site/author/aladdin" },
+      reviewedBy: { "@type": "Person", "@id": "https://www.mapbench.site/author/aladdin#person", name: "Aladdin", url: "https://www.mapbench.site/author/aladdin" },
       publisher: {
         "@type": "Organization",
         name: "MapBench",
@@ -113,14 +124,14 @@ export default async function GuidePage({ params }: Props) {
       },
       mainEntityOfPage: { "@type": "WebPage", "@id": guideUrl },
       wordCount: bodyWords,
-      timeRequired: `PT${g.readMins}M`,
+      timeRequired: `PT${readMins}M`,
     },
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mapbench.site/" },
-        { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.mapbench.site/guides" },
+        { "@type": "ListItem", position: 2, name: "Guides", item: "https://www.mapbench.site/guides" },
         { "@type": "ListItem", position: 3, name: g.title, item: guideUrl },
       ],
     },
@@ -129,29 +140,99 @@ export default async function GuidePage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <article className="doc mx-auto max-w-3xl">
-        <nav aria-label="Breadcrumb" className="mb-4 font-sans text-xs text-mute">
-          <Link href="/" className="hover:text-brand-strong">Home</Link> / <Link href="/guides" className="hover:text-brand-strong">Blog</Link> / <span className="font-semibold text-ink">{g.title}</span>
+
+      <article className="mx-auto max-w-6xl">
+        <nav aria-label="Breadcrumb" className="mb-6 font-sans text-xs text-mute">
+          <Link href="/" className="hover:text-brand-strong">Home</Link> <span className="mx-1">/</span> <Link href="/guides" className="hover:text-brand-strong">Guides</Link> <span className="mx-1">/</span> <span className="font-semibold text-ink">{g.title}</span>
         </nav>
-        <p className="font-sans text-xs font-bold uppercase tracking-wide text-mute">{new Date(g.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })} · {g.readMins} min read · MapBench editorial</p>
-        <h1 className="mt-2 font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl">{g.title}</h1>
-        <p className="mt-4 text-sm leading-relaxed text-mute">{g.description}</p>
-        <div className="mt-6">
-          {g.blocks.map((b, i) => <Block key={i} b={b} />)}
-        </div>
-        <div className="mt-10 rounded-xl border border-line bg-card p-4 font-sans text-sm text-mute">
-          <strong className="text-ink">Editorial note:</strong> This guide is written and reviewed for MapBench. We correct factual or technical errors when they are reported. See our <Link href="/editorial-policy" className="font-bold text-brand-strong hover:underline">editorial policy</Link>.
-        </div>
-        {related.length > 0 && (
-          <div className="mt-10 border-t border-line pt-6 font-sans">
-            <h2 className="font-display text-lg font-bold">Keep reading</h2>
-            <ul className="mt-3 space-y-2">
-              {related.slice(0, 4).map((o) => (
-                <li key={o.slug}><Link href={`/guides/${o.slug}`} className="text-sm font-bold text-brand-strong hover:underline">→ {o.title}</Link><span className="ml-2 text-xs text-mute">Related guide</span></li>
-              ))}
-            </ul>
+
+        <header className="mx-auto max-w-4xl border-b border-line pb-8">
+          <div className="font-sans text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-strong">MapBench long-form guide</div>
+          <h1 className="mt-3 font-display text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl">{g.title}</h1>
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-mute sm:text-xl">{g.description}</p>
+
+          <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 font-sans text-sm text-mute">
+            <Link href="/author/aladdin" className="font-extrabold text-ink hover:text-brand-strong">By Aladdin</Link>
+            <span aria-hidden>·</span>
+            <span>Published {new Date(g.date).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}</span>
+            <span aria-hidden>·</span>
+            <span>{readMins} min read</span>
+            <span aria-hidden>·</span>
+            <span>{bodyWords.toLocaleString()} words</span>
           </div>
-        )}
+
+          <div className="mt-7 rounded-2xl border border-brand/20 bg-brand-soft/45 p-5 sm:p-6">
+            <div className="font-sans text-[10px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">The short version</div>
+            <p className="mt-2 text-[17px] leading-8 text-ink">{g.description}</p>
+            {takeaways.length > 0 && (
+              <ul className="mt-4 grid gap-2 text-sm leading-6 text-mute sm:grid-cols-2">
+                {takeaways.map((item) => <li key={item} className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" /><span>{item}</span></li>)}
+              </ul>
+            )}
+          </div>
+        </header>
+
+        <div className="mx-auto mt-8 grid max-w-6xl gap-10 lg:grid-cols-[minmax(0,760px)_260px] lg:justify-center">
+          <div className="min-w-0">
+            <div className="doc space-y-7">
+              {g.blocks.map((b, i) => <Block key={i} b={b} index={i} />)}
+            </div>
+
+            <section className="mt-12 rounded-2xl border border-line bg-white p-5 shadow-sm sm:p-6">
+              <div className="font-sans text-[10px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">About this guide</div>
+              <div className="mt-3 flex items-start gap-4">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-soft font-display text-lg font-bold text-brand-strong">A</div>
+                <div>
+                  <h2 className="font-display text-xl font-bold">Written and reviewed by Aladdin</h2>
+                  <p className="mt-2 text-sm leading-7 text-mute">MapBench guides explain the method behind geographic tools, show practical examples and call out limitations instead of presenting estimates as absolute facts.</p>
+                  <div className="mt-3 flex flex-wrap gap-4 text-sm font-bold">
+                    <Link href="/author/aladdin" className="text-brand-strong hover:underline">Author profile →</Link>
+                    <Link href="/editorial-policy" className="text-brand-strong hover:underline">Editorial policy →</Link>
+                    <Link href="/methodology" className="text-brand-strong hover:underline">Methodology →</Link>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {related.length > 0 && (
+              <section className="mt-12 border-t border-line pt-8">
+                <div className="font-sans text-[10px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">Continue learning</div>
+                <h2 className="mt-1 font-display text-2xl font-bold">Related guides</h2>
+                <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                  {related.slice(0, 4).map((o) => (
+                    <Link key={o.slug} href={`/guides/${o.slug}`} className="group rounded-2xl border border-line bg-white p-5 transition-all hover:-translate-y-0.5 hover:border-brand hover:shadow-sm">
+                      <div className="text-xs font-bold uppercase tracking-wide text-mute">{Math.max(3, Math.ceil(o.blocks.reduce((sum, b) => b.t === "p" || b.t === "h2" || b.t === "note" ? sum + words(b.text) : b.t === "ul" ? sum + b.items.reduce((a, item) => a + words(item), 0) : sum, 0) / 220))} min read</div>
+                      <h3 className="mt-2 font-display text-lg font-bold leading-snug group-hover:text-brand-strong">{o.title}</h3>
+                      <p className="mt-2 text-sm leading-6 text-mute">{o.description}</p>
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            )}
+          </div>
+
+          <aside className="hidden lg:block">
+            <div className="sticky top-24 space-y-4">
+              {headings.length > 0 && (
+                <nav aria-label="Article sections" className="rounded-2xl border border-line bg-white p-4 shadow-sm">
+                  <div className="font-sans text-[10px] font-extrabold uppercase tracking-[0.14em] text-mute">On this page</div>
+                  <ol className="mt-3 space-y-2.5">
+                    {headings.map((h) => <li key={h.id}><a href={`#${h.id}`} className="block text-sm leading-5 text-mute hover:text-brand-strong">{h.text}</a></li>)}
+                  </ol>
+                </nav>
+              )}
+              <div className="rounded-2xl border border-line bg-well/45 p-4">
+                <div className="font-sans text-[10px] font-extrabold uppercase tracking-[0.14em] text-mute">Trust & methods</div>
+                <p className="mt-2 text-xs leading-6 text-mute">Technical claims are written to match MapBench methods and documented source data.</p>
+                <div className="mt-3 space-y-2 text-sm font-bold">
+                  <Link href="/data-sources" className="block text-brand-strong hover:underline">Data sources →</Link>
+                  <Link href="/methodology" className="block text-brand-strong hover:underline">Methodology →</Link>
+                  <Link href="/editorial-policy" className="block text-brand-strong hover:underline">Corrections policy →</Link>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
       </article>
     </>
   );
