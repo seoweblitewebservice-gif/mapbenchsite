@@ -4,6 +4,7 @@ import { CATEGORIES, TOOLS, popularTools } from "@/lib/registry";
 import { ALL_GUIDES } from "@/data/allGuides";
 import { STUDIES } from "@/data/studies";
 import BlankMapsHomeGrid from "@/components/BlankMapsHomeGrid";
+import HomeToolIndex from "@/components/HomeToolIndex";
 
 export const metadata: Metadata = {
   title: "Free Map Tools, Geographic Calculators & Blank Maps",
@@ -97,6 +98,8 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <HomeToolIndex />
 
       <section aria-labelledby="categories" className="border-y border-line bg-well/40 py-12">
         <div className="mx-auto max-w-5xl px-4">
