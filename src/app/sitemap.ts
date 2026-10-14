@@ -5,6 +5,7 @@ import { CATEGORIES, TOOLS } from "@/lib/registry";
 import { ALL_GUIDES } from "@/data/allGuides";
 import { STUDIES } from "@/data/studies";
 import { REFERENCE_COUNTRIES } from "@/data/referenceCountries";
+import { US_BLANK_MAP_STATES } from "@/data/usBlankMapStates";
 
 const BASE = "https://www.mapbench.site";
 
@@ -25,9 +26,6 @@ const STATIC_PATHS = [
   "/terms",
 ];
 
-// These are the strongest search-intent/crawl-priority tools. Keeping them
-// early in the sitemap mirrors their prominent internal links on the homepage.
-// All genuine canonical tools remain indexable and remain in the sitemap.
 const PRIORITY_TOOL_SLUGS = [
   "map-radius",
   "what-county-am-i-in",
@@ -117,19 +115,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.72,
   }));
 
-  const mapEntries: MetadataRoute.Sitemap = ALL_COUNTRY_MAP_SLUGS.map((slug) => ({
+  const stateMapEntries: MetadataRoute.Sitemap = US_BLANK_MAP_STATES.map((state) => ({
+    url: `${BASE}/maps/blank/us/${state.slug}`,
+    changeFrequency: "yearly",
+    priority: 0.82,
+  }));
+
+  const countryMapEntries: MetadataRoute.Sitemap = ALL_COUNTRY_MAP_SLUGS.map((slug) => ({
     url: `${BASE}/maps/blank/${slug}`,
     changeFrequency: "yearly",
-    priority: 0.65,
+    priority: 0.68,
   }));
 
   return [
     ...staticEntries,
     ...categoryEntries,
     ...toolEntries,
+    ...stateMapEntries,
+    ...countryMapEntries,
     ...guideEntries,
     ...studyEntries,
     ...referenceEntries,
-    ...mapEntries,
   ];
 }
