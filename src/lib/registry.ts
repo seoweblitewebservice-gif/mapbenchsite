@@ -18,6 +18,7 @@ import { GAP_A_TOOLS } from "@/data/toolsGapA";
 import { GAP_B_TOOLS } from "@/data/toolsGapB";
 import { GAP_C_TOOLS } from "@/data/toolsGapC";
 import { FLAGSHIP_TOOLS } from "@/data/toolsFlagship";
+import { CENSUS_US_TOOLS } from "@/data/toolsCensusUS";
 
 export type CategoryId =
   | "location" | "distance" | "radius" | "routing" | "coordinates"
@@ -74,6 +75,7 @@ const RAW_TOOLS: ToolDef[] = [
   ...GAP_B_TOOLS,
   ...GAP_C_TOOLS,
   ...FLAGSHIP_TOOLS,
+  ...CENSUS_US_TOOLS,
 ];
 
 const canonicalTools = new Map<string, ToolDef>();
