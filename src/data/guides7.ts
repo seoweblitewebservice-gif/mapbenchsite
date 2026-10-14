@@ -6,7 +6,7 @@ export const GUIDES7: Guide[] = [
   {
     slug: "full-moon-moonrise-times",
     title: "Full Moon Moonrise Times for 100 US Cities (2026–2027)",
-    description: "Exact local moonrise time for every full moon from October 2026 through December 2027, computed for America's 100 largest cities — including a supermoon on Christmas Eve 2026.",
+    description: "Moonrise time for every full moon, Oct 2026–Dec 2027, for America's 100 largest cities — including a Christmas Eve 2026 supermoon.",
     date: "2026-10-14",
     readMins: 12,
     blocks: [
