@@ -13,16 +13,15 @@ export function generateStaticParams(){ return LOCALES.map(locale=>({locale})); 
 export async function generateMetadata({params}:Props):Promise<Metadata>{
   const {locale}=await params;
   if(!isLocale(locale))return{};
+  const localizedCount=localizedToolSlugs(locale).length;
   const titleMap: Record<string,string> = {es:"Herramientas de mapas gratis",de:"Kostenlose Kartentools",fr:"Outils cartographiques gratuits",it:"Strumenti cartografici gratuiti",pt:"Ferramentas de mapas gratuitas",nl:"Gratis kaarttools",pl:"Darmowe narzędzia mapowe",ru:"Бесплатные картографические инструменты",sv:"Gratis kartverktyg",da:"Gratis kortværktøjer",no:"Gratis kartverktøy",fi:"Ilmaiset karttatyökalut",cs:"Bezplatné mapové nástroje",ro:"Instrumente gratuite pentru hărți",el:"Δωρεάν εργαλεία χαρτών",hu:"Ingyenes térképes eszközök",tr:"Ücretsiz harita araçları",uk:"Безкоштовні картографічні інструменти",ar:"أدوات خرائط مجانية",ja:"無料の地図ツール",ko:"무료 지도 도구",zh:"免费地图工具",hi:"मुफ़्त मैप टूल"};
   const langs: Record<string,string> = { en: BASE, "x-default": BASE };
-  for(const l of LOCALES){
-    if(localizedToolSlugs(l).length>0) langs[l] = `${BASE}/${l}`;
-  }
+  for(const l of LOCALES){ if(localizedToolSlugs(l).length>0) langs[l] = `${BASE}/${l}`; }
   return {
     title:`${titleMap[locale] ?? "MapBench"} · MapBench`,
     description:`${LOCALE_NAMES[locale]} — ${getLocaleUI(locale).browseDirectory}`,
-    robots:{index:true,follow:true},
-    alternates:{canonical:`/${locale}`,languages:langs}
+    robots: localizedCount>0 ? {index:true,follow:true} : {index:false,follow:true},
+    alternates: localizedCount>0 ? {canonical:`/${locale}`,languages:langs} : {canonical:"/"}
   };
 }
 
