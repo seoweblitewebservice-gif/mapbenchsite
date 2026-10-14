@@ -30,6 +30,7 @@ const wordCount = (text: string) => text.trim().split(/\s+/).filter(Boolean).len
 function guideReadMins(g: (typeof ALL_GUIDES)[number]) {
   const words = g.blocks.reduce((sum, block) => {
     if (block.t === "p" || block.t === "h2" || block.t === "note") return sum + wordCount(block.text);
+    if (block.t === "linkp") return sum + block.parts.reduce((n, part) => n + wordCount(typeof part === "string" ? part : part.text), 0);
     if (block.t === "ul") return sum + block.items.reduce((n, item) => n + wordCount(item), 0);
     if (block.t === "table") return sum + block.headers.reduce((n, h) => n + wordCount(h), 0) + block.rows.reduce((n, row) => n + row.reduce((x, cell) => x + wordCount(cell), 0), 0);
     return sum;
@@ -41,10 +42,10 @@ export default function GuidesPage() {
   return (
     <div className="doc">
       <section className="mx-auto max-w-3xl">
-        <p className="font-sans text-[11px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">MapBench learning center</p>
+        <p className="font-sans text-[11px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">Practical geography, explained</p>
         <h1 className="mt-2 font-display text-3xl font-bold tracking-tight sm:text-4xl">Mapping Guides & Geographic Methods</h1>
         <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-mute">
-          MapBench is more than a directory of calculators. These guides explain the ideas behind the tools: what a measurement really means, when a method is appropriate, where errors come from, and how to use geographic data without giving a rough estimate more certainty than it deserves.
+          Detailed articles for people who want to understand what a map result actually means. The focus is practical: worked examples, data limitations, method choices, common mistakes and the MapBench tools you can use to test the idea yourself.
         </p>
       </section>
 
@@ -69,7 +70,7 @@ export default function GuidesPage() {
           <div>
             <h2 className="font-display text-2xl font-bold tracking-tight">All guides</h2>
             <p className="mt-2 text-sm leading-relaxed text-mute">
-              Practical reference articles covering coordinates, GPS formats, distance, routing, map projections and location-based workflows. Each guide links to the relevant MapBench tools.
+              Long-form practical references covering coordinates, GPS formats, distance, routing, map projections, location lookups and original geographic research.
             </p>
           </div>
           <div className="shrink-0 font-sans text-xs font-bold text-mute">{ALL_GUIDES.length} guides</div>
