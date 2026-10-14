@@ -29,6 +29,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!tool) return {};
 
   const localized = getLocalizedTool(locale, slug);
+  if (!localized) {
+    return {
+      title: tool.name,
+      description: tool.short,
+      alternates: { canonical: `/tools/${tool.slug}` },
+      robots: { index: false, follow: true },
+    };
+  }
+
   const languages: Record<string, string> = {
     en: `${BASE}/tools/${tool.slug}`,
     "x-default": `${BASE}/tools/${tool.slug}`,
@@ -40,8 +49,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: localized?.name ?? tool.name,
-    description: localized?.short ?? tool.short,
+    title: localized.name,
+    description: localized.short,
     keywords: tool.keywords,
     alternates: {
       canonical: `/${locale}/tools/${tool.slug}`,
