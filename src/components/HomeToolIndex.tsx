@@ -50,7 +50,7 @@ export default function HomeToolIndex() {
                   <h3 className="font-display text-[17px] font-bold leading-snug">
                     <Link href={`/tools/${tool.slug}`} className="underline decoration-line underline-offset-4 hover:text-brand-strong hover:decoration-brand">{tool.name}</Link>
                   </h3>
-                  {tool.scope === "US" && <span className="font-sans text-[9px] font-extrabold uppercase tracking-wide text-brand-strong">US</span>}
+                  {tool.scope === "US focused" && <span className="font-sans text-[9px] font-extrabold uppercase tracking-wide text-brand-strong">US</span>}
                 </div>
                 <p className="mt-2 text-[14px] leading-6 text-mute">{tool.short}</p>
                 <div className="mt-2 font-sans text-[11px] font-semibold text-mute">{category}{category ? " · " : ""}{tool.scope}</div>
