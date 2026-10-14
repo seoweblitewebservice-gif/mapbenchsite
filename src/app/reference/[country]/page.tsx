@@ -68,7 +68,7 @@ export default async function CountryReferencePage({ params }: { params: Promise
     "@type": "Article",
     headline: `${meta.name} Geography Reference`,
     description: `Approximate geographic area, centroid and coordinate extent for ${meta.name}.`,
-    author: { "@type": "Person", name: "Aladdin", url: "https://www.mapbench.site/author/aladdin" },
+    author: { "@type": "Person", "@id": "https://www.mapbench.site/author/aryan-khan#person", name: "Aryan Khan", url: "https://www.mapbench.site/author/aryan-khan", sameAs: ["https://www.linkedin.com/in/aryan-khan-b77438438/"] },
     publisher: { "@type": "Organization", name: "MapBench", url: "https://www.mapbench.site" },
     mainEntityOfPage: `https://www.mapbench.site/reference/${meta.slug}`,
   };
@@ -76,7 +76,7 @@ export default async function CountryReferencePage({ params }: { params: Promise
   return (
     <article className="doc mx-auto max-w-4xl py-10">
       <nav className="mb-5 text-xs text-mute"><Link href="/">Home</Link> / <Link href="/reference">Reference</Link> / <span>{meta.name}</span></nav>
-      <p className="font-sans text-[11px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">Country geography reference · Edited by Aladdin</p>
+      <p className="font-sans text-[11px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">Country geography reference · Edited by Aryan Khan</p>
       <h1 className="mt-2 font-display text-4xl font-bold tracking-tight">{meta.name}: Area, Centroid & Geographic Extent</h1>
       <p className="mt-4 text-lg leading-relaxed text-mute">A reproducible map-geometry reference for {meta.name}, focused on {meta.focus}. Values below are calculated consistently from generalized world boundary geometry.</p>
 
@@ -112,7 +112,7 @@ export default async function CountryReferencePage({ params }: { params: Promise
 
       <section className="mt-10 border-t border-line pt-8">
         <h2 className="font-display text-2xl font-bold">Source and editorial note</h2>
-        <p className="mt-3">Geometry is read from the bundled world-atlas country dataset and processed with standard d3-geo spherical functions. The page is edited by <Link href="/author/aladdin" className="font-semibold text-brand-strong hover:underline">Aladdin</Link>. The values are intended for learning, comparison and general map work rather than official boundary determination.</p>
+        <p className="mt-3">Geometry is read from the bundled world-atlas country dataset and processed with standard d3-geo spherical functions. The page is edited by <Link href="/author/aryan-khan" className="font-semibold text-brand-strong hover:underline">Aryan Khan</Link>. The values are intended for learning, comparison and general map work rather than official boundary determination.</p>
       </section>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
