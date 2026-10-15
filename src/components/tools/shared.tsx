@@ -27,8 +27,14 @@ export function PlaceField({ label, value, onChange, placeholder }: {
   const useMyLocation = async () => {
     setGeoNote(null);
     setLocating(true);
+    // Hard timeout: never let geolocation hang the UI indefinitely
+    const withTimeout = <T,>(p: Promise<T>, ms: number, msg: string): Promise<T> =>
+      Promise.race([
+        p,
+        new Promise<never>((_, reject) => setTimeout(() => reject(new Error(msg)), ms)),
+      ]);
     try {
-      const pos = await geolocation();
+      const pos = await withTimeout(geolocation(), 12000, "Location request timed out.");
       // Validate coordinates before using them
       if (!Number.isFinite(pos.lat) || !Number.isFinite(pos.lng)) {
         throw new Error("Invalid location coordinates received.");
@@ -39,7 +45,7 @@ export function PlaceField({ label, value, onChange, placeholder }: {
       // If browser/device GPS is blocked, gracefully fall back to an approximate
       // network/IP location instead of leaving the user with a blocking error.
       try {
-        const approx = await ipGeolocation();
+        const approx = await withTimeout(ipGeolocation(), 10000, "IP location timed out.");
         if (approx) {
           const labelParts = [approx.city, approx.region, approx.country].filter(Boolean);
           setManual("");
