@@ -136,37 +136,63 @@ export default function GeocoderTool({ params }: { params?: Record<string, unkno
     setError(null);
     setIpFallback(null);
     setLocationDetails(null);
+    // Hard timeout wrapper — never hang indefinitely
+    const withTimeout = <T,>(p: Promise<T>, ms: number): Promise<T> =>
+      Promise.race([
+        p,
+        new Promise<never>((_, reject) => setTimeout(() => reject(new Error("Request timed out.")), ms)),
+      ]);
+    // For country detection, IP geolocation is sufficient and crash-proof
+    // (no GPS permission prompt, no browser geolocation API involved).
+    const useIpOnly = focus === "country";
     try {
-      const d = await geolocationDetails();
-      const p = { lat: d.lat, lng: d.lng };
-      setLocationDetails(d);
-      setPoint(p);
-      await reverseLookup(p);
-      mapRef.current?.flyTo({ center: [p.lng, p.lat], zoom: 15, essential: true });
-    } catch (e: any) {
-      const gpsMsg = e?.message ?? "Could not determine your location.";
-      try {
-        const ip = await ipGeolocation();
-        if (ip) {
-          const p = { lat: ip.lat, lng: ip.lng };
-          const info: IpInfo = { ip: ip.ip, city: ip.city, region: ip.region, country: ip.country, org: ip.org };
-          setPoint(p);
-          setIpFallback(info);
-          await reverseLookup(p, info);
-          mapRef.current?.flyTo({ center: [p.lng, p.lat], zoom: 6, essential: true });
-          // reverseLookup may set a more specific error; only set default if none
-          setError((prev) =>
-            prev ??
-            "Precise device location was unavailable (VPN or permission can block it). Showing approximate IP location — with a VPN this is usually the VPN server city, not your real address.",
-          );
-        } else {
-          setError(
-            gpsMsg +
-              " IP fallback also failed. Allow location permission, or turn off VPN location-blocking, then try again. You can also search for your city by name.",
-          );
+      if (useIpOnly) {
+        const ip = await withTimeout(ipGeolocation(), 10000);
+        if (!ip || !Number.isFinite(ip.lat) || !Number.isFinite(ip.lng)) {
+          throw new Error("Could not determine your location from your network.");
         }
-      } catch {
-        setError(gpsMsg);
+        const p = { lat: ip.lat, lng: ip.lng };
+        const info: IpInfo = { ip: ip.ip, city: ip.city, region: ip.region, country: ip.country, org: ip.org };
+        setPoint(p);
+        setIpFallback(info);
+        await reverseLookup(p, info);
+        mapRef.current?.flyTo({ center: [p.lng, p.lat], zoom: 4, essential: true });
+      } else {
+        const d = await withTimeout(geolocationDetails(), 12000);
+        if (!Number.isFinite(d.lat) || !Number.isFinite(d.lng)) {
+          throw new Error("Invalid location coordinates received.");
+        }
+        const p = { lat: d.lat, lng: d.lng };
+        setLocationDetails(d);
+        setPoint(p);
+        await reverseLookup(p);
+        mapRef.current?.flyTo({ center: [p.lng, p.lat], zoom: 15, essential: true });
+      }
+    } catch (e: any) {
+      const msg = e?.message ?? "Could not determine your location.";
+      // For non-country tools, fall back to IP on GPS failure
+      if (!useIpOnly) {
+        try {
+          const ip = await withTimeout(ipGeolocation(), 10000);
+          if (ip && Number.isFinite(ip.lat) && Number.isFinite(ip.lng)) {
+            const p = { lat: ip.lat, lng: ip.lng };
+            const info: IpInfo = { ip: ip.ip, city: ip.city, region: ip.region, country: ip.country, org: ip.org };
+            setPoint(p);
+            setIpFallback(info);
+            await reverseLookup(p, info);
+            mapRef.current?.flyTo({ center: [p.lng, p.lat], zoom: 6, essential: true });
+            setError((prev) =>
+              prev ??
+              "Precise device location was unavailable. Showing approximate IP location instead.",
+            );
+          } else {
+            setError(msg + " You can also search for your city by name.");
+          }
+        } catch {
+          setError(msg);
+        }
+      } else {
+        setError(msg + " You can also search for your city by name.");
       }
     } finally {
       setBusy(false);
@@ -230,10 +256,12 @@ export default function GeocoderTool({ params }: { params?: Record<string, unkno
         {mode === "locate" && (
           <>
             <button type="button" className="btn btn-primary w-full" onClick={locate} disabled={busy}>
-              {busy ? <Spinner label="Locating…" /> : "📍 Use my location"}
+              {busy ? <Spinner label="Locating…" /> : focus === "country" ? "🌍 Detect my country" : "📍 Use my location"}
             </button>
             <p className="text-[11px] leading-relaxed text-mute">
-              Uses your device GPS/Wi‑Fi when allowed. A VPN can block precise location or place the pin on a server overseas (sometimes over water). For your real address: allow location, or turn off VPN location-blocking, or search your city by name.
+              {focus === "country"
+                ? "Detects your country from your network connection — no location permission needed. For a different place, search by name or paste coordinates."
+                : "Uses your device GPS/Wi‑Fi when allowed. A VPN can block precise location or place the pin on a server overseas (sometimes over water). For your real address: allow location, or turn off VPN location-blocking, or search your city by name."}
             </p>
           </>
         )}
