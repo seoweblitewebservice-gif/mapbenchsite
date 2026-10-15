@@ -104,7 +104,7 @@ export default function CensusCountyTool() {
     <div className="space-y-4">
       <div className="grid gap-4 lg:grid-cols-[400px,1fr]">
         <div className="card order-2 space-y-4 p-4 lg:order-1">
-          <PlaceField label="U.S. location" value={place} onChange={(p) => { if (p) lookup(p); else { setPlace(null); setData(null); } }} placeholder="Search an address, city, ZIP or use your location…" />
+          <PlaceField label="U.S. location" value={place} onChange={(p) => { if (p) lookup(p); else { setPlace(null); setData(null); } }} placeholder="Search an address, city, ZIP or use your location…" ipFirst />
           <p className="text-xs leading-relaxed text-mute">For U.S. points, this uses the Census Bureau county boundary rather than relying only on an address label. Search, use GPS, paste coordinates, or click the map.</p>
           {busy && <Spinner label="Checking Census geography…" />}
           {error && <ErrorBox>{error}</ErrorBox>}

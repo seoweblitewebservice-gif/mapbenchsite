@@ -14,11 +14,13 @@ export const DynamicMap = dynamic(() => import("@/components/MapShell"), {
 export interface PlaceValue extends LatLng { label?: string }
 
 /** Search-or-paste place picker used across distance/routing tools. */
-export function PlaceField({ label, value, onChange, placeholder }: {
+export function PlaceField({ label, value, onChange, placeholder, ipFirst }: {
   label: string;
   value: PlaceValue | null;
   onChange: (v: PlaceValue | null) => void;
   placeholder?: string;
+  /** If true, use IP geolocation directly (no browser GPS permission prompt, crash-proof). */
+  ipFirst?: boolean;
 }) {
   const [manual, setManual] = useState("");
   const [locating, setLocating] = useState(false);
@@ -33,30 +35,44 @@ export function PlaceField({ label, value, onChange, placeholder }: {
         p,
         new Promise<never>((_, reject) => setTimeout(() => reject(new Error(msg)), ms)),
       ]);
-    try {
-      const pos = await withTimeout(geolocation(), 12000, "Location request timed out.");
-      // Validate coordinates before using them
-      if (!Number.isFinite(pos.lat) || !Number.isFinite(pos.lng)) {
-        throw new Error("Invalid location coordinates received.");
+    // Helper to apply an IP-based location (crash-proof, no permission prompt)
+    const applyIpLocation = async () => {
+      const approx = await withTimeout(ipGeolocation(), 10000, "IP location timed out.");
+      if (!approx || !Number.isFinite(approx.lat) || !Number.isFinite(approx.lng)) {
+        throw new Error("Could not determine your location from your network.");
       }
+      const labelParts = [approx.city, approx.region, approx.country].filter(Boolean);
       setManual("");
-      onChange({ lat: pos.lat, lng: pos.lng, label: "My precise location" });
+      onChange({
+        lat: approx.lat,
+        lng: approx.lng,
+        label: labelParts.length ? `${labelParts.join(", ")} (approx.)` : "Approximate location",
+      });
+      return true;
+    };
+    try {
+      // IP-first mode: skip browser GPS entirely (crash-proof)
+      if (ipFirst) {
+        await applyIpLocation();
+        setGeoNote("Location detected from your network. For a precise point, search by address or paste coordinates.");
+      } else {
+        const pos = await withTimeout(geolocation(), 12000, "Location request timed out.");
+        // Validate coordinates before using them
+        if (!Number.isFinite(pos.lat) || !Number.isFinite(pos.lng)) {
+          throw new Error("Invalid location coordinates received.");
+        }
+        setManual("");
+        onChange({ lat: pos.lat, lng: pos.lng, label: "My precise location" });
+      }
     } catch {
       // If browser/device GPS is blocked, gracefully fall back to an approximate
       // network/IP location instead of leaving the user with a blocking error.
       try {
-        const approx = await withTimeout(ipGeolocation(), 10000, "IP location timed out.");
-        if (approx) {
-          const labelParts = [approx.city, approx.region, approx.country].filter(Boolean);
-          setManual("");
-          onChange({
-            lat: approx.lat,
-            lng: approx.lng,
-            label: labelParts.length ? `${labelParts.join(", ")} (approx.)` : "Approximate location",
-          });
+        if (!ipFirst) {
+          await applyIpLocation();
           setGeoNote("Precise location is blocked, so an approximate network location was used instead. You can still search or paste exact coordinates.");
         } else {
-          setGeoNote("Precise location is blocked. Search a place, click the map, or paste coordinates instead.");
+          setGeoNote("Could not determine your location. Search a place, click the map, or paste coordinates instead.");
         }
       } catch {
         setGeoNote("Precise location is blocked. Search a place, click the map, or paste coordinates instead.");
@@ -85,7 +101,7 @@ export function PlaceField({ label, value, onChange, placeholder }: {
           onClick={useMyLocation}
           disabled={locating}
         >
-          {locating ? "Locating…" : "⌖ Use my location"}
+          {locating ? "Locating…" : ipFirst ? "🌐 Detect my location" : "⌖ Use my location"}
         </button>
       </div>
       <div className="mt-2 grid gap-2 sm:grid-cols-[1fr_auto]">
