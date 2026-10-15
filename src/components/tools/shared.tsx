@@ -29,6 +29,10 @@ export function PlaceField({ label, value, onChange, placeholder }: {
     setLocating(true);
     try {
       const pos = await geolocation();
+      // Validate coordinates before using them
+      if (!Number.isFinite(pos.lat) || !Number.isFinite(pos.lng)) {
+        throw new Error("Invalid location coordinates received.");
+      }
       setManual("");
       onChange({ lat: pos.lat, lng: pos.lng, label: "My precise location" });
     } catch {

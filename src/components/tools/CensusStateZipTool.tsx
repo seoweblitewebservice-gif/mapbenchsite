@@ -103,6 +103,8 @@ export default function CensusStateZipTool({ focus }: { focus: Focus }) {
     const map = mapRef.current;
     const lib = libRef.current;
     if (!map || !lib || !place) return;
+    // Guard against invalid coordinates crashing the map renderer
+    if (!Number.isFinite(place.lat) || !Number.isFinite(place.lng)) return;
     if (!markerRef.current) markerRef.current = new lib.Marker({ element: pinElement("#d95d32", "P") }).addTo(map);
     markerRef.current.setLngLat([place.lng, place.lat]);
     map.flyTo({ center: [place.lng, place.lat], zoom: isZip ? 11 : 6, essential: true });
