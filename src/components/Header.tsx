@@ -42,6 +42,7 @@ const FEATURED_SLUGS = [
   "distance-between-two-places",
   "drive-time-map",
   "map-radius",
+  "what-county-am-i-in",
   "latitude-longitude-finder",
   "map-area-calculator",
   "fuel-cost-calculator",

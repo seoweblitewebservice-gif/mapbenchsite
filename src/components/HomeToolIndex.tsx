@@ -4,7 +4,7 @@ import { TOOLS } from "@/lib/registry";
 const HOME_GROUPS = [
   {
     title: "How the location tools work",
-    slugs: ["what-state-am-i-in", "what-zip-code-am-i-in", "what-country-am-i-in", "find-my-location", "latitude-longitude-finder"],
+    slugs: ["what-county-am-i-in", "what-state-am-i-in", "what-zip-code-am-i-in", "what-country-am-i-in", "find-my-location", "latitude-longitude-finder"],
   },
   {
     title: "Distance, radius and travel tools",

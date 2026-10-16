@@ -5,6 +5,7 @@ const POPULAR: [string, string][] = [
   ["/tools/find-my-location", "Find My Location"],
   ["/tools/distance-between-two-places", "Distance Calculator"],
   ["/tools/drive-time-map", "Drive Time Map"],
+  ["/tools/what-county-am-i-in", "What County Am I In?"],
   ["/tools/map-radius", "Map Radius Tool"],
   ["/tools/latitude-longitude-finder", "Lat & Long Finder"],
   ["/tools/population-within-radius", "Population Within Radius"],
