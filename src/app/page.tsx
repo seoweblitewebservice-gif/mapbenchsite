@@ -16,7 +16,6 @@ export const metadata: Metadata = {
 
 const HOME_PRIORITY_SLUGS = [
   "map-radius",
-  "what-county-am-i-in",
   "drive-time-map",
   "halfway-between-two-places",
   "coordinate-converter",
@@ -36,7 +35,6 @@ const HOME_PRIORITY_SLUGS = [
 ] as const;
 
 const POPULAR_QUESTIONS: { q: string; href: string }[] = [
-  { q: "What county am I in?", href: "/tools/what-county-am-i-in" },
   { q: "How far can I drive in 30 minutes?", href: "/tools/drive-time-map" },
   { q: "Find my current location", href: "/tools/find-my-location" },
   { q: "Distance between two cities", href: "/tools/distance-between-two-places" },
