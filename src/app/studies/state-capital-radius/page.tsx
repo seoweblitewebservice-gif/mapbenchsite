@@ -55,6 +55,7 @@ export default function StateCapitalRadiusStudy() {
       description: "Fifty-state ranking calculated by MapBench from state polygon centroids and public state-capital coordinates.",
       url: "https://www.mapbench.site/studies/state-capital-radius",
       creator: { "@type": "Person", name: "Aryan Khan", url: "https://www.mapbench.site/author/aryan-khan" },
+      license: "https://creativecommons.org/licenses/by/4.0/",
       dateModified: "2026-10-14",
       spatialCoverage: "United States",
       temporalCoverage: "2026",
