@@ -4,7 +4,7 @@ import { TOOLS } from "@/lib/registry";
 const HOME_GROUPS = [
   {
     title: "How the location tools work",
-    slugs: ["what-county-am-i-in", "what-state-am-i-in", "what-zip-code-am-i-in", "what-country-am-i-in", "find-my-location", "latitude-longitude-finder"],
+    slugs: ["what-state-am-i-in", "what-zip-code-am-i-in", "what-country-am-i-in", "find-my-location", "latitude-longitude-finder"],
   },
   {
     title: "Distance, radius and travel tools",
@@ -21,10 +21,6 @@ const HOME_GROUPS = [
 ] as const;
 
 const EXPLANATIONS: Record<string, [string, string]> = {
-  "what-county-am-i-in": [
-    "What County Am I In? is designed for the moments when a street address is not enough and you need the actual county behind a location. You can use your current position, search for a place, or work from a point on the map. The tool returns the county name and keeps the location visible on the map so the result is easy to verify instead of being presented as a disconnected label. That is useful near county borders, in rural areas, and when a city name overlaps several local jurisdictions.",
-    "People often need county information for property research, local services, permits, court forms, school districts, tax records, elections, public records, or business territory planning. The tool is also useful when you are comparing several locations and want a quick jurisdiction check before opening a more detailed county source. Because county boundaries can matter more than the nearest city, MapBench keeps the geographic point and the county result together in one workflow.",
-  ],
   "what-state-am-i-in": [
     "What State Am I In? identifies the US state or first-level region associated with a location. Use your device location, search for an address or place, or choose a position on the map. The tool is built for quick geographic confirmation, especially when you are travelling, working close to a state line, reviewing a remote property, or checking coordinates supplied by somebody else. The map remains part of the answer, which makes it easier to understand where the selected point sits relative to the surrounding area.",
     "A state lookup can be useful before checking taxes, registration rules, licensing, business requirements, shipping restrictions, school information, legal forms, or regional statistics. It is also a simple way to confirm that a geocoded address or imported coordinate landed in the expected state. Instead of forcing you to interpret latitude and longitude manually, the tool translates the point into a familiar administrative area and gives you a direct route into related MapBench location tools when you need more detail.",

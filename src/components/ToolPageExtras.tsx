@@ -126,7 +126,7 @@ function CensusStateExtras() {
       </section>
       <section className="rounded-2xl border border-line bg-well/35 p-5 sm:p-6">
         <h2 className="font-display text-2xl font-bold tracking-tight">State, county and ZIP answer different questions</h2>
-        <p className="mt-3 leading-7 text-mute">For local jurisdiction, continue to <Link href="/tools/what-county-am-i-in" className="font-semibold text-brand-strong hover:underline">What County Am I In?</Link>. For postal and Census ZIP geography, use <Link href="/tools/what-zip-code-am-i-in" className="font-semibold text-brand-strong hover:underline">What ZIP Code Am I In?</Link>. If you are starting with a street address, <Link href="/tools/address-to-state-lookup" className="font-semibold text-brand-strong hover:underline">Address to State Lookup</Link> is the more direct entry point.</p>
+        <p className="mt-3 leading-7 text-mute">For postal and Census ZIP geography, use <Link href="/tools/what-zip-code-am-i-in" className="font-semibold text-brand-strong hover:underline">What ZIP Code Am I In?</Link>. If you are starting with a street address, <Link href="/tools/address-to-state-lookup" className="font-semibold text-brand-strong hover:underline">Address to State Lookup</Link> is the more direct entry point.</p>
       </section>
     </div>
   );
@@ -151,7 +151,7 @@ function CensusZipExtras() {
       </section>
       <section className="rounded-2xl border border-line bg-well/35 p-5 sm:p-6">
         <h2 className="font-display text-2xl font-bold tracking-tight">Related location checks</h2>
-        <p className="mt-3 leading-7 text-mute">For many nearby postal areas at once, use <Link href="/tools/zip-codes-within-radius" className="font-semibold text-brand-strong hover:underline">ZIP Codes Within Radius</Link>. For the containing county or state, use <Link href="/tools/what-county-am-i-in" className="font-semibold text-brand-strong hover:underline">What County Am I In?</Link> or <Link href="/tools/what-state-am-i-in" className="font-semibold text-brand-strong hover:underline">What State Am I In?</Link>. If you begin with a street address, <Link href="/tools/address-to-zip-code-lookup" className="font-semibold text-brand-strong hover:underline">Address to ZIP Code Lookup</Link> leads directly into the same postcode-versus-ZCTA workflow.</p>
+        <p className="mt-3 leading-7 text-mute">For many nearby postal areas at once, use <Link href="/tools/zip-codes-within-radius" className="font-semibold text-brand-strong hover:underline">ZIP Codes Within Radius</Link>. For the containing state, use <Link href="/tools/what-state-am-i-in" className="font-semibold text-brand-strong hover:underline">What State Am I In?</Link>. If you begin with a street address, <Link href="/tools/address-to-zip-code-lookup" className="font-semibold text-brand-strong hover:underline">Address to ZIP Code Lookup</Link> leads directly into the same postcode-versus-ZCTA workflow.</p>
       </section>
     </div>
   );
@@ -161,7 +161,7 @@ export default function ToolPageExtras({ slug }: { slug: string }) {
   if (slug === "distance-between-two-places") return <DistanceExtras />;
   if (slug === "magnetic-declination") return <MagneticExtras />;
   if (slug === "moonrise-moonset") return <MoonRiseSetExtras />;
-  if (slug === "what-county-am-i-in" || slug === "address-to-county-lookup") return <CensusCountyExtras />;
+  if (slug === "address-to-county-lookup") return <CensusCountyExtras />;
   if (slug === "what-state-am-i-in" || slug === "address-to-state-lookup") return <CensusStateExtras />;
   if (slug === "what-zip-code-am-i-in" || slug === "address-to-zip-code-lookup") return <CensusZipExtras />;
   return null;

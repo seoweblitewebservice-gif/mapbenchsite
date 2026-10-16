@@ -39,7 +39,6 @@ function ThemeToggle() {
 
 const FEATURED_SLUGS = [
   "find-my-location",
-  "what-county-am-i-in",
   "distance-between-two-places",
   "drive-time-map",
   "map-radius",
@@ -74,7 +73,6 @@ const MAPS_MENU: { title: string; links: [string, string][]; more?: [string, str
   {
     title: "Region tools",
     links: [
-      ["/tools/what-county-am-i-in", "What County Am I In?"],
       ["/tools/us-county-demographic-explorer", "County Demographic Explorer"],
       ["/tools/cities-within-radius", "Cities Within Radius"],
       ["/tools/population-within-radius", "Population Within Radius"],

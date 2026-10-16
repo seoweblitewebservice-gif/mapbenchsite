@@ -3,7 +3,6 @@ import { TOOLS } from "@/lib/registry";
 
 const POPULAR: [string, string][] = [
   ["/tools/find-my-location", "Find My Location"],
-  ["/tools/what-county-am-i-in", "What County Am I In?"],
   ["/tools/distance-between-two-places", "Distance Calculator"],
   ["/tools/drive-time-map", "Drive Time Map"],
   ["/tools/map-radius", "Map Radius Tool"],
