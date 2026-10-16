@@ -165,6 +165,7 @@ export default async function MapsPage({ searchParams }: MapsPageProps) {
             <li><Link href="/tools/us-county-demographic-explorer" className="font-bold text-brand-strong hover:underline">US County Demographic Explorer</Link> — compare Census county data on an interactive map.</li>
             <li><Link href="/tools/pin-drop-map" className="font-bold text-brand-strong hover:underline">Pin Drop Map</Link> — annotate a live map with labelled pins and export it.</li>
             <li><Link href="/tools/cities-within-radius" className="font-bold text-brand-strong hover:underline">Cities Within Radius</Link> — find cities around any location.</li>
+            <li><Link href="/tools/what-county-am-i-in" className="font-bold text-brand-strong hover:underline">What County Am I In?</Link> — identify a US county and Census context for a map point.</li>
           </ul>
         </section>
 

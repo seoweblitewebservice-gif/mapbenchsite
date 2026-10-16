@@ -125,6 +125,7 @@ export default async function StateCountiesPage({ params }: { params: Promise<{ 
       <section className="mt-8 grid gap-4 md:grid-cols-3">
         <Link href={`/maps/blank/us/${state.slug}`} className="card p-5 transition hover:border-brand"><h2 className="font-display text-lg font-bold">Printable {state.name} {unitTitle} Map</h2><p className="mt-2 text-sm leading-relaxed text-mute">Open blank, labeled and colored boundary variants, then export SVG or PNG.</p><span className="mt-3 block text-sm font-extrabold text-brand-strong">Open map →</span></Link>
         <Link href="/tools/us-county-demographic-explorer" className="card p-5 transition hover:border-brand"><h2 className="font-display text-lg font-bold">County Demographic Explorer</h2><p className="mt-2 text-sm leading-relaxed text-mute">Compare population, income, age, poverty, education and housing across counties in a selected state.</p><span className="mt-3 block text-sm font-extrabold text-brand-strong">Explore counties →</span></Link>
+        <Link href="/tools/what-county-am-i-in" className="card p-5 transition hover:border-brand"><h2 className="font-display text-lg font-bold">What County Am I In?</h2><p className="mt-2 text-sm leading-relaxed text-mute">Identify the county-equivalent for an address, GPS location or coordinate and see its Census FIPS code.</p><span className="mt-3 block text-sm font-extrabold text-brand-strong">Open lookup →</span></Link>
       </section>
 
       <section className="mt-12" aria-labelledby="county-list">

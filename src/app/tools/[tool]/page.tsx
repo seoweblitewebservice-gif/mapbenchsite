@@ -21,6 +21,7 @@ const TITLE_OVERRIDES: Record<string, string> = {
   "map-radius": "Map Radius Tool: Draw a Radius Around Any Location",
   "drive-time-map": "Drive Time Map: See How Far You Can Travel",
   "driving-distance-calculator": "Driving Distance Calculator: Road Miles & Travel Time",
+  "what-county-am-i-in": "What County Am I In? Census County & FIPS Lookup",
   "what-state-am-i-in": "What State Am I In? State Boundary & FIPS Lookup",
   "what-zip-code-am-i-in": "What ZIP Code Am I In? Postcode & Census ZCTA Lookup",
   "us-county-demographic-explorer": "US County Demographics Explorer: Population, Income & Maps",
