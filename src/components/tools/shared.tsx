@@ -14,13 +14,15 @@ export const DynamicMap = dynamic(() => import("@/components/MapShell"), {
 export interface PlaceValue extends LatLng { label?: string }
 
 /** Search-or-paste place picker used across distance/routing tools. */
-export function PlaceField({ label, value, onChange, placeholder, ipFirst }: {
+export function PlaceField({ label, value, onChange, placeholder, ipFirst, useGps }: {
   label: string;
   value: PlaceValue | null;
   onChange: (v: PlaceValue | null) => void;
   placeholder?: string;
-  /** If true, use IP geolocation directly (no browser GPS permission prompt, crash-proof). */
+  /** If true, use IP geolocation directly (no browser GPS permission prompt, crash-proof). Default: true for safety. */
   ipFirst?: boolean;
+  /** If true, try browser GPS first (may crash on some devices). Default: false. */
+  useGps?: boolean;
 }) {
   const [manual, setManual] = useState("");
   const [locating, setLocating] = useState(false);
@@ -51,8 +53,11 @@ export function PlaceField({ label, value, onChange, placeholder, ipFirst }: {
       return true;
     };
     try {
-      // IP-first mode: skip browser GPS entirely (crash-proof)
-      if (ipFirst) {
+      // Default: IP-first (crash-proof, no permission prompt). Only use browser GPS
+      // if the tool explicitly opts in with useGps, as navigator.geolocation can
+      // crash the renderer on some Chrome/device configurations.
+      const preferGps = useGps === true;
+      if (!preferGps) {
         await applyIpLocation();
         setGeoNote("Location detected from your network. For a precise point, search by address or paste coordinates.");
       } else {
@@ -65,17 +70,16 @@ export function PlaceField({ label, value, onChange, placeholder, ipFirst }: {
         onChange({ lat: pos.lat, lng: pos.lng, label: "My precise location" });
       }
     } catch {
-      // If browser/device GPS is blocked, gracefully fall back to an approximate
-      // network/IP location instead of leaving the user with a blocking error.
+      // If IP location fails, try GPS as a last resort (only if not already tried)
       try {
-        if (!ipFirst) {
+        if (useGps !== true) {
+          setGeoNote("Could not determine your location from your network. Search a place, click the map, or paste coordinates instead.");
+        } else {
           await applyIpLocation();
           setGeoNote("Precise location is blocked, so an approximate network location was used instead. You can still search or paste exact coordinates.");
-        } else {
-          setGeoNote("Could not determine your location. Search a place, click the map, or paste coordinates instead.");
         }
       } catch {
-        setGeoNote("Precise location is blocked. Search a place, click the map, or paste coordinates instead.");
+        setGeoNote("Could not determine your location. Search a place, click the map, or paste coordinates instead.");
       }
     } finally {
       setLocating(false);
@@ -101,7 +105,7 @@ export function PlaceField({ label, value, onChange, placeholder, ipFirst }: {
           onClick={useMyLocation}
           disabled={locating}
         >
-          {locating ? "Locating…" : ipFirst ? "🌐 Detect my location" : "⌖ Use my location"}
+          {locating ? "Locating…" : useGps === true ? "⌖ Use my location" : "🌐 Detect my location"}
         </button>
       </div>
       <div className="mt-2 grid gap-2 sm:grid-cols-[1fr_auto]">
