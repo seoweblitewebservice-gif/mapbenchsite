@@ -11,18 +11,7 @@ const CORE_BASE = [
     keywords: ["gps", "where am i", "my location"], popular: true,
     faq: [["Is my location stored?", "No. Nothing is saved on our servers."], ["Inaccurate position?", "GPS is best outdoors; indoors may use Wi-Fi or IP."]],
     howTo: ["Press Use my location.", "Allow access when asked.", "Read coordinates and address."],
-    related: ["what-county-am-i-in", "latitude-longitude-finder", "reverse-geocoder"],
-  },
-  {
-    slug: "what-county-am-i-in",
-    name: "What County Am I In?",
-    short: "Find which county your location or any map point belongs to.",
-    intro: "Reverse-geocodes against OpenStreetMap boundaries to report the administrative county.",
-    category: "location", scope: "Worldwide", component: "geocoder", props: { mode: "locate", focus: "county" },
-    keywords: ["county", "county finder"], popular: true,
-    faq: [["Outside the US?", "Yes — equivalent units when available."], ["Any point?", "Yes — click the map or paste coordinates."]],
-    howTo: ["Use my location or click the map.", "Read the County field."],
-    related: ["what-city-am-i-in", "what-state-am-i-in", "find-my-location"],
+    related: ["latitude-longitude-finder", "reverse-geocoder"],
   },
   {
     slug: "what-city-am-i-in",
@@ -33,7 +22,7 @@ const CORE_BASE = [
     keywords: ["city", "town", "municipality"],
     faq: [["Unincorporated areas?", "County is shown when no city exists."]],
     howTo: ["Use my location or click the map.", "Read the City field."],
-    related: ["what-county-am-i-in", "find-my-location"],
+    related: ["find-my-location"],
   },
   {
     slug: "what-state-am-i-in",
@@ -44,7 +33,7 @@ const CORE_BASE = [
     keywords: ["state", "province", "region"],
     faq: [["Outside the US?", "Yes — provinces and state-equivalents."]],
     howTo: ["Use my location or click the map.", "Read the State field."],
-    related: ["what-country-am-i-in", "what-county-am-i-in"],
+    related: ["what-country-am-i-in"],
   },
   {
     slug: "what-country-am-i-in",

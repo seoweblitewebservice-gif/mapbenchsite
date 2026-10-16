@@ -42,7 +42,6 @@ const UPDATED_STATIC_PATHS = new Set([
 
 const PRIORITY_TOOL_SLUGS = [
   "map-radius",
-  "what-county-am-i-in",
   "drive-time-map",
   "halfway-between-two-places",
   "coordinate-converter",
