@@ -8,17 +8,154 @@
   "geojson minified size calculator tool",
   "how to calculate geojson minified size calculator"
  ],
- "title": null,
- "description": null,
+ "title": "GeoJSON Minified Size Calculator: Byte Truth",
+ "description": "Estimate a GeoJSON file's byte size after compact serialization with the GeoJSON Minified Size Calculator — before you minify. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a sample collection that occupies 1,521 bytes pretty-printed estimates at 669 bytes minified — a 56.0% saving you can quote before touching the file.",
+ "quick_answer": "The GeoJSON Minified Size Calculator estimates the byte size of a GeoJSON document after compact serialization — whitespace stripped, structure untouched. Paste the GeoJSON and read the projected size and the saving: the number that decides whether minifying is worth it, computed before you commit to the compact file.",
+ "steps_intro": "Quote the diet before starting it:",
+ "use_cases": [
+  {
+   "title": "Payload budgeting",
+   "body": [
+    {
+     "t": "An API response or a tile-adjacent data file has a size budget. The estimate tells you whether whitespace alone breaks it — or whether geometry must shrink too. The actual minifying is the "
+    },
+    {
+     "t": "GeoJSON Minifier",
+     "l": "/tools/geojson-minifier"
+    },
+    {
+     "t": "’s job."
+    }
+   ]
+  },
+  {
+   "title": "Comparing export settings",
+   "body": [
+    {
+     "t": "Two exports of the same data differ mysteriously in size. Minified estimates normalise the comparison: same air removed, real difference exposed."
+    }
+   ]
+  },
+  {
+   "title": "Deciding about compression",
+   "body": [
+    {
+     "t": "Minified size is the input to the gzip question — if the compact file is already small, compression infrastructure may be ceremony."
+    }
+   ]
+  },
+  {
+   "title": "Teaching data weight",
+   "body": [
+    {
+     "t": "Students meet the idea that formatting is bytes: a 56% whitespace share in a real file teaches it permanently."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · What the estimate counts",
+   "body": [
+    {
+     "t": "Every space, tab and newline outside strings is air; everything inside quotes is data and untouchable. The estimate is a re-serialization, not a guess: parse, print compactly, count bytes."
+    }
+   ]
+  },
+  {
+   "label": "Example · When minified is still huge",
+   "body": [
+    {
+     "t": "A 40 MB coastline file might minify to 31 MB — the air was never the problem; vertices are. The estimate’s honesty redirects effort to simplification, where the megabytes live."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Where GeoJSON bytes live",
+  "intro": "The budget, roughly, for typical pretty-printed files.",
+  "columns": [
+   "Component",
+   "Share character"
+  ],
+  "rows": [
+   [
+    "Whitespace and indentation",
+    "Often 30–60% of pretty files — the minifier’s entire harvest"
+   ],
+   [
+    "Coordinate digits",
+    "The irreducible core; shrinks only by rounding or simplification"
+   ],
+   [
+    "Property keys, repeated per feature",
+    "Surprisingly heavy at scale — one reason binary formats exist"
+   ],
+   [
+    "String values",
+    "Data — untouchable by minifying"
+   ]
+  ],
+  "note": "The estimate is exact for plain minification (deterministic re-serialization). Transport sizes shrink further with gzip — a different mechanism, estimated by different tools."
+ },
+ "faq": [
+  [
+   "How is the estimate computed?",
+   "By actually serializing the parsed document compactly (no spaces, no newlines) and counting UTF-8 bytes — an estimate in name, a measurement in method."
+  ],
+  [
+   "Does it change my file?",
+   "No — the calculator reports sizes; the Minifier produces the compact file when you decide the saving is worth it."
+  ],
+  [
+   "UTF-8 bytes versus characters?",
+   "Bytes are what networks and disks charge. Non-ASCII text (accented names) costs multiple bytes per character — the calculator counts bytes, as the bill does."
+  ],
+  [
+   "Why not estimate gzip too?",
+   "Compression ratios depend on repetition in ways that defy honest formula — gzip must be run, not estimated. Minified size is the deterministic floor beneath it."
+  ],
+  [
+   "Number formatting effects?",
+   "Re-serialization may normalise numbers (40.0 → 40) — byte differences from that are included in the measurement, since the minifier’s output has them too."
+  ],
+  [
+   "Key order affects size?",
+   "No — bytes do not care about order. Property key repetition does: a thousand features repeat every key a thousand times."
+  ],
+  [
+   "Coordinate rounding would save more?",
+   "Often, yes: trimming 6 decimals to 5 saves a byte per number per vertex — the Coordinate Rounding Tool’s territory, trading precision for size deliberately."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Do the minifying: the "
+  },
+  {
+   "t": "GeoJSON Minifier",
+   "l": "/tools/geojson-minifier"
+  },
+  {
+   "t": "; expand again: the "
+  },
+  {
+   "t": "GeoJSON Formatter",
+   "l": "/tools/geojson-formatter"
+  },
+  {
+   "t": "; the vertex weight: the "
+  },
+  {
+   "t": "GeoJSON Coordinate Counter",
+   "l": "/tools/geojson-coordinate-counter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

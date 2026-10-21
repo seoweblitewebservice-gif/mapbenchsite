@@ -8,17 +8,181 @@
   "web mercator scale factor calculator tool",
   "how to calculate web mercator scale factor calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Web Mercator Scale Factor Calculator",
+ "description": "Calculate the Web Mercator scale factor and distortion at any latitude with the Web Mercator Scale Factor Calculator — k = sec(latitude). Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, at 60° north the scale factor is exactly 2.000 — every distance on the map is drawn twice its equatorial size, and every area four times, which is why Greenland looks like a continent-sized rival to Africa.",
+ "quick_answer": "The Web Mercator Scale Factor Calculator computes the local scale factor k = sec(latitude) for the Web Mercator projection, and the area distortion k² that comes with it. Enter a latitude and read how much the map stretches distances and areas there — the projection's honest price tag.",
+ "steps_intro": "Mercator keeps angles true and inflates sizes. Measure the inflation:",
+ "use_cases": [
+  {
+   "title": "Correcting map measurements",
+   "body": [
+    {
+     "t": "Measured a distance in projected metres? Dividing by k returns the ground truth at that latitude — the companion correction to the "
+    },
+    {
+     "t": "Latitude Longitude to Web Mercator",
+     "l": "/tools/lat-lon-to-web-mercator"
+    },
+    {
+     "t": " conversion."
+    }
+   ]
+  },
+  {
+   "title": "Explaining area illusions",
+   "body": [
+    {
+     "t": "Why does Greenland (about 2.16 million km² in published figures) rival South America (about 17.8 million km²) on screen? At Greenland's latitudes k² runs 4–9×. This calculator prices the illusion."
+    }
+   ]
+  },
+  {
+   "title": "Choosing zoom and tile budgets",
+   "body": [
+    {
+     "t": "Scale factor feeds metres-per-pixel at latitude — the "
+    },
+    {
+     "t": "Map Meters per Pixel Calculator",
+     "l": "/tools/map-meters-per-pixel-calculator"
+    },
+    {
+     "t": " carries the same cosine into the tile world."
+    }
+   ]
+  },
+  {
+   "title": "GIS coursework and projection literacy",
+   "body": [
+    {
+     "t": "k = sec(φ) is the one formula that demystifies Mercator. Computing it at your own city's latitude makes the distortion personal."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · London versus the equator",
+   "body": [
+    {
+     "t": "At London's 51.5° the factor is about 1.61: a projected kilometre there is roughly 622 ground metres (1,000 ÷ 1.61). At the equator k = 1.000 and projection metres are honest metres."
+    }
+   ]
+  },
+  {
+   "label": "Example · Where it doubles and quadruples",
+   "body": [
+    {
+     "t": "Distance scale doubles at 60° (k = 2.000) and area quadruples there; at 45° area distortion is exactly 2.00 because k = 1.414 and k² = 2. Polar regions leave the chart entirely — which is why the web map cuts off near ±85°."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Scale factor by latitude",
+  "intro": "Computed k = sec(latitude) and the area factor k² — Mercator's distortion schedule.",
+  "columns": [
+   "Latitude",
+   "Distance factor k",
+   "Area factor k²"
+  ],
+  "rows": [
+   [
+    "0° (equator)",
+    "1.000",
+    "1.00"
+   ],
+   [
+    "30°",
+    "1.155",
+    "1.33"
+   ],
+   [
+    "40°",
+    "1.305",
+    "1.70"
+   ],
+   [
+    "45°",
+    "1.414",
+    "2.00"
+   ],
+   [
+    "60°",
+    "2.000",
+    "4.00"
+   ],
+   [
+    "70°",
+    "2.924",
+    "8.55"
+   ],
+   [
+    "80°",
+    "5.759",
+    "33.16"
+   ]
+  ],
+  "note": "The spherical formula this tool uses matches the Web Mercator standard (EPSG:3857). Local scale is the same in every direction at a point — Mercator is conformal — so one number honestly describes the stretch."
+ },
+ "faq": [
+  [
+   "What does the scale factor multiply?",
+   "Ground distances at that latitude are drawn k times larger than the same distances at the equator. To recover truth from a projected measurement, divide by k; to draw truth, multiply."
+  ],
+  [
+   "Why does the web use a distorting projection at all?",
+   "Because it is conformal (local shapes and angles are right), its tiles nest perfectly, and north is up everywhere. Navigation and street maps prize those properties over area honesty — know the trade and the map stops lying to you."
+  ],
+  [
+   "Does scale factor affect bearings?",
+   "No — conformality means angles and bearings are locally true on Mercator. It is distances and areas that inflate, which is precisely the split this calculator quantifies."
+  ],
+  [
+   "What happens at the poles?",
+   "k runs to infinity as latitude approaches 90°, so Web Mercator simply gives up near ±85.0511° — the standard's cutoff, and the reason polar maps use other projections."
+  ],
+  [
+   "Is EPSG:3857 really a sphere formula?",
+   "Yes — it applies spherical Mercator maths to WGS84 latitudes (hence 'pseudo-Mercator'). The calculator's sec(latitude) is the spherical local scale, the standard's own definition."
+  ],
+  [
+   "How does this connect to map tiles?",
+   "Metres per pixel at a zoom combine the equatorial pixel size with 1/k at the tile's latitude: northern tiles cover less ground per pixel, exactly by this factor."
+  ],
+  [
+   "Can I use it to fix an area I measured?",
+   "Divide the projected area by k² at the measurement's latitude for a good local correction. Large regions spanning many latitudes need true geodesic area tools instead — distortion varies across them."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The projection itself: "
+  },
+  {
+   "t": "Latitude Longitude to Web Mercator",
+   "l": "/tools/lat-lon-to-web-mercator"
+  },
+  {
+   "t": "; pixels: the "
+  },
+  {
+   "t": "Map Meters per Pixel Calculator",
+   "l": "/tools/map-meters-per-pixel-calculator"
+  },
+  {
+   "t": "; true sizes: the "
+  },
+  {
+   "t": "Earth Circumference at Latitude",
+   "l": "/tools/earth-circumference-at-latitude"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boiling-point-by-elevation-calculator",
   "central-angle-from-distance-calculator",

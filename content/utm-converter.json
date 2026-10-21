@@ -6,17 +6,162 @@
   "easting northing",
   "utm converter online"
  ],
- "title": null,
- "description": null,
+ "title": "UTM Converter: Zone, Easting and Northing",
+ "description": "Convert latitude/longitude to UTM zone, easting and northing with the UTM Converter — WGS84, both hemispheres, metres exact. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, Times Square converts to zone 18N, easting 585,633 m, northing 4,512,388 m — and London to 30U, 699,331 E, 5,710,142 N, each point at home in its own 6-degree strip of the world.",
+ "quick_answer": "The UTM Converter translates WGS84 coordinates into Universal Transverse Mercator zone, easting and northing — and converts UTM values back to latitude and longitude. Enter a pair and read its position in metres within its zone: the grid that mapping, military and field-science work runs on worldwide.",
+ "steps_intro": "The world in sixty strips, each with its own metre grid:",
+ "use_cases": [
+  {
+   "title": "Field science and surveying prep",
+   "body": [
+    {
+     "t": "Plots, transects and sample points are logged in UTM across ecology, geology and archaeology. Convert GPS pairs before the field notebook hardens. MGRS strings build on this — see the "
+    },
+    {
+     "t": "MGRS Converter",
+     "l": "/tools/mgrs-converter"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "GIS data intake",
+   "body": [
+    {
+     "t": "A CSV of eastings and northings needs its zone to mean anything. This converter verifies single points so the batch import can be trusted."
+    }
+   ]
+  },
+  {
+   "title": "Military and rescue interoperability",
+   "body": [
+    {
+     "t": "UTM is the substrate under MGRS and much allied mapping — fluency here is fluency everywhere in that world."
+    }
+   ]
+  },
+  {
+   "title": "Understanding map margins",
+   "body": [
+    {
+     "t": "Topographic maps print UTM grid ticks in their margins. Converting your point explains which blue numbers your pencil should chase."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Denver's tell-tale easting",
+   "body": [
+    {
+     "t": "Denver converts to 13S, easting 500,831 m — nearly the 500,000 false easting itself, because Denver sits almost on zone 13's central meridian (−105°). An easting near 500,000 means 'near the zone's spine'; near 100,000 or 900,000 means 'near its edge'."
+    }
+   ]
+  },
+  {
+   "label": "Example · Sydney's southern northing",
+   "body": [
+    {
+     "t": "Sydney converts to 56H, northing 6,250,948 m — southern-hemisphere northings count down from a 10,000,000 m false origin at the equator, so the number itself announces the hemisphere."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "UTM in one view",
+  "intro": "The system's working facts.",
+  "columns": [
+   "Property",
+   "Value"
+  ],
+  "rows": [
+   [
+    "Zones",
+    "60, each 6° of longitude wide, numbered from the date line"
+   ],
+   [
+    "Bands",
+    "Latitude bands C–X (no I, O), 8° tall, X is 12°"
+   ],
+   [
+    "Easting",
+    "Metres from the zone's false origin — 500,000 m at the central meridian"
+   ],
+   [
+    "Northing",
+    "Metres from the equator (northern), or from a 10,000,000 m false origin (southern)"
+   ],
+   [
+    "Scale factor",
+    "0.9996 on the central meridian — the price of flattening a strip"
+   ],
+   [
+    "Range",
+    "84°N to 80°S; poles belong to UPS"
+   ]
+  ],
+  "note": "Norway and Svalbard bend the zone map (zones 31V–37X have famous exceptions) so their land stays in fewer zones — the converter follows the standard, exceptions included."
+ },
+ "faq": [
+  [
+   "Which hemisphere letter or N/S suffix?",
+   "Northings need the hemisphere to be unambiguous: state it (or the band letter, which implies it). An easting/northing pair without zone and hemisphere is an address with no town."
+  ],
+  [
+   "How precise is the conversion?",
+   "The transverse Mercator series used is accurate to centimetres within a zone — far beyond consumer GPS. Legal work still follows survey procedure and datums."
+  ],
+  [
+   "Edge of a zone — which one wins?",
+   "A point within a whisker of a boundary converts in either zone; professionals keep a whole project in ONE zone (the one containing most of it) even past the edge."
+  ],
+  [
+   "Why 0.9996?",
+   "Shrinking the central meridian slightly spreads distortion evenly — nowhere in a zone does scale error exceed about 1 part in 1,000. The bargain every transverse Mercator makes."
+  ],
+  [
+   "UTM or latitude/longitude for storage?",
+   "Store the original pair; UTM is a working projection. Zones make UTM values ambiguous without metadata, while lat/lon is the universal original."
+  ],
+  [
+   "The Norway exceptions?",
+   "Zone 32V extends west over Norway, deleting most of 31V/33V's land work, and Svalbard's zones are specially widened — documented quirks the converter honours."
+  ],
+  [
+   "Negative eastings?",
+   "Never inside a zone (the false easting prevents them) — a negative easting in the wild is a sign error or another system's value."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Military dress: the "
+  },
+  {
+   "t": "MGRS Converter",
+   "l": "/tools/mgrs-converter"
+  },
+  {
+   "t": "; American surveying: the "
+  },
+  {
+   "t": "US State Plane Helper",
+   "l": "/tools/state-plane-helper"
+  },
+  {
+   "t": "; formats: the "
+  },
+  {
+   "t": "Coordinate Converter",
+   "l": "/tools/coordinate-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "city-from-coordinates",
   "coordinate-bounding-box-generator",

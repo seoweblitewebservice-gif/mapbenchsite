@@ -8,17 +8,172 @@
   "next full moon calculator tool",
   "how to calculate next full moon calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Next Full Moon Calculator: Date and Time",
+ "description": "Find the date of the next full moon from today or any date with the Next Full Moon Calculator — plus the phase facts around it. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, from October 22, 2026 the Moon is about 10.6 days old and 82% lit — so the next full moon falls on October 26, 2026, four days later.",
+ "quick_answer": "The Next Full Moon Calculator finds the date (and approximate time) of the next full moon after today or any date you enter. It works from the Moon's 29.53-day cycle — enter a date and learn when the next fully lit Moon rises, for planning nights out, photos and calendars.",
+ "steps_intro": "One full moon every 29.53 days — find yours:",
+ "use_cases": [
+  {
+   "title": "Night walks and events",
+   "body": [
+    {
+     "t": "Full-moon hikes, night markets and beach nights schedule around this date — pair it with "
+    },
+    {
+     "t": "Moonrise and Moonset",
+     "l": "/tools/moonrise-moonset"
+    },
+    {
+     "t": " times for the full plan."
+    }
+   ]
+  },
+  {
+   "title": "Photography planning",
+   "body": [
+    {
+     "t": "The classic shot — full moon rising over a landmark at dusk — happens on this date (and the evening before). The "
+    },
+    {
+     "t": "Moon Illumination Calculator",
+     "l": "/tools/moon-illumination-calculator"
+    },
+    {
+     "t": " confirms how lit it will look."
+    }
+   ]
+  },
+  {
+   "title": "Calendars and festivals",
+   "body": [
+    {
+     "t": "Many festivals ride the lunar calendar (Easter's rule starts from a full moon). This calculator is the quick check behind the almanac."
+    }
+   ]
+  },
+  {
+   "title": "Tides and the coast",
+   "body": [
+    {
+     "t": "Spring tides cluster near full and new moons — coastal plans start here and continue on the "
+    },
+    {
+     "t": "Coastal Time & Sun Context",
+     "l": "/tools/tide-time-context"
+    },
+    {
+     "t": " page."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · October 2026",
+   "body": [
+    {
+     "t": "October 22, 2026: the Moon is ~10.6 days into its cycle. Add the road to fullness (14.77 days) and the next full moon lands on October 26, 2026."
+    }
+   ]
+  },
+  {
+   "label": "Example · The 29.53-day rhythm",
+   "body": [
+    {
+     "t": "Full moons average 29.53 days apart — so a month occasionally holds two (the second is the popular 'blue moon'), and February occasionally holds none."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Full moon facts",
+  "intro": "The numbers behind the date.",
+  "columns": [
+   "Fact",
+   "Value"
+  ],
+  "rows": [
+   [
+    "Cycle length (new to new)",
+    "29.53 days average"
+   ],
+   [
+    "Full moon's Moon age",
+    "~14.8 days"
+   ],
+   [
+    "Illumination at full",
+    "~100% (99%+ either side for a day)"
+   ],
+   [
+    "Rise time at full",
+    "Around sunset — the full moon is opposite the Sun"
+   ],
+   [
+    "Months per year",
+    "12 or 13 full moons"
+   ]
+  ],
+  "note": "The instant of full moon is when the Moon is exactly opposite the Sun in longitude; the date shown is that instant in your time frame, so the best viewing evening may be the night before or after."
+ },
+ "faq": [
+  [
+   "How is the date calculated?",
+   "From the Moon's mean synodic cycle (29.53 days) counted from a known new moon — accurate to within hours for planning; almanac-grade instants come from full orbital ephemerides."
+  ],
+  [
+   "What time is the full moon, exactly?",
+   "The calculator reports the approximate instant; the Moon looks equally full across the surrounding night, which is the honest precision for viewing plans."
+  ],
+  [
+   "Why does it rise at sunset?",
+   "Geometry: a full moon sits opposite the Sun, so it crosses the sky all night — rising as the Sun sets and setting as it rises."
+  ],
+  [
+   "What is a blue moon?",
+   "The popular name for the second full moon inside one calendar month — possible because 29.53 days is shorter than most months."
+  ],
+  [
+   "Supermoons?",
+   "Full moons near perigee look slightly larger (up to ~14% wider than at apogee). The date is the same; the size flourish is orbital, and the calculator's job is the date."
+  ],
+  [
+   "Does the full moon affect tides?",
+   "Yes — sun and Moon align, so high tides run higher and low tides lower (spring tides) within a day or so of full and new moons."
+  ],
+  [
+   "Can I look up a past full moon?",
+   "Enter a past date and the calculator finds the next full moon after it — the cycle runs both directions."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The dark twin: the "
+  },
+  {
+   "t": "Next New Moon Calculator",
+   "l": "/tools/next-new-moon-calculator"
+  },
+  {
+   "t": "; rise and set: "
+  },
+  {
+   "t": "Moonrise and Moonset",
+   "l": "/tools/moonrise-moonset"
+  },
+  {
+   "t": "; any date's phase: "
+  },
+  {
+   "t": "Moon Phase by Date",
+   "l": "/tools/moon-phase-by-date"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "golden-hour-calculator",
   "moon-age-calculator",

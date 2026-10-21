@@ -6,17 +6,180 @@
   "altitude",
   "elevation finder online"
  ],
- "title": null,
- "description": null,
+ "title": "Elevation Finder: Height of Any Point",
+ "description": "Find the elevation of any place with the Elevation Finder — click the map or search, read height in feet and metres from open terrain data. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, clicking the Colorado State Capitol steps in Denver returns about 5,280 feet — the surveyed mile-high mark — read straight from the terrain model.",
+ "quick_answer": "The Elevation Finder reads the elevation of any point on Earth from open terrain data: click the map or search a place and get its height in feet and metres. Use it for trailheads, properties, summits and sites — the ground's own number, without a survey crew.",
+ "steps_intro": "Point at the ground; the terrain model answers:",
+ "use_cases": [
+  {
+   "title": "Trail and trip planning",
+   "body": [
+    {
+     "t": "Trailhead, pass and campsite heights drive water, layers and expectations. Check them before the drive — then chart the whole route with the "
+    },
+    {
+     "t": "Elevation Profile",
+     "l": "/tools/elevation-profile"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Property and site questions",
+   "body": [
+    {
+     "t": "Drainage, frost pockets, snow load and flood anxiety all start with 'how high is it?' — this is the five-second first answer (the formal flood answer lives on the "
+    },
+    {
+     "t": "Flood Zone Check",
+     "l": "/tools/flood-zone-check"
+    },
+    {
+     "t": " page)."
+    }
+   ]
+  },
+  {
+   "title": "Checking a claimed height",
+   "body": [
+    {
+     "t": "A listing or a guidebook states an elevation — click the spot and compare. Terrain models and brochures disagree in instructive places."
+    }
+   ]
+  },
+  {
+   "title": "Radio and antenna siting",
+   "body": [
+    {
+     "t": "Height above the surrounding terrain starts with absolute elevation; the "
+    },
+    {
+     "t": "Radio Line-of-Sight Calculator",
+     "l": "/tools/radio-line-of-sight-calculator"
+    },
+    {
+     "t": " takes it from there."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Two famous benchmarks",
+   "body": [
+    {
+     "t": "Badwater Basin, Death Valley: −282 ft (−86 m), the lowest ground in North America. Denver's Capitol step: 5,280 ft (1,609 m). The finder spans both from the same terrain model — below the sea and a mile above it."
+    }
+   ]
+  },
+  {
+   "label": "Example · Why your street reads two values",
+   "body": [
+    {
+     "t": "Terrain models sample the ground on a grid (about every 30 m for the global SRTM-based data) and average rooftops and trees to a degree — a click on a wooded slope can read a few metres off the surveyed spot height. Resolution, stated, is the honest limit."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reference elevations (published surveys)",
+  "intro": "Anchors to sanity-check any reading against.",
+  "columns": [
+   "Place",
+   "Elevation"
+  ],
+  "rows": [
+   [
+    "Mount Everest summit",
+    "8,848.86 m / 29,032 ft"
+   ],
+   [
+    "Denali summit",
+    "6,190 m / 20,310 ft"
+   ],
+   [
+    "Mount Mitchell (NC)",
+    "2,037 m / 6,684 ft"
+   ],
+   [
+    "Denver, Colorado",
+    "1,609 m / 5,280 ft"
+   ],
+   [
+    "Chicago, Illinois",
+    "182 m / 597 ft"
+   ],
+   [
+    "Badwater Basin, California",
+    "−86 m / −282 ft"
+   ]
+  ],
+  "note": "Terrain-model readings near these anchors land close; sharp summits read slightly low because the model's grid averages the peak with its shoulders."
+ },
+ "faq": [
+  [
+   "Where does the elevation come from?",
+   "Open global terrain models built largely on NASA's SRTM radar survey and its successors — the same data family most free elevation services serve."
+  ],
+  [
+   "Ocean points?",
+   "They read about 0 m — the model is a land terrain model with the sea at sea level, which is the only honest answer for water."
+  ],
+  [
+   "Building rooftops?",
+   "The model is closer to ground than roof: radar-derived data partially includes structures and canopy, so dense city clicks can read a few metres high. For the dirt itself, surveyed data wins."
+  ],
+  [
+   "How current is the data?",
+   "The base surveys are from the 2000s with ongoing refinements — terrain changes slowly except where humans move it (mines, reservoirs, new suburbs), and the model will not know about last year's earthworks."
+  ],
+  [
+   "Feet or metres first?",
+   "Both are shown — this site's convention is imperial first for US readers with metric alongside."
+  ],
+  [
+   "A whole route's elevations?",
+   "That is the Elevation Profile's job — click the route and read min, max, ascent and grade."
+  ],
+  [
+   "Below sea level places?",
+   "Handled naturally: the Dead Sea shore reads about −430 m (−1,412 ft), the lowest land on Earth."
+  ],
+  [
+   "Is the reading survey grade?",
+   "No — it is planning grade from a public model. The Accuracy FAQ on this page gives the fuller answer; legal and engineering heights come from survey."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Your position now: "
+  },
+  {
+   "t": "My Elevation",
+   "l": "/tools/my-elevation"
+  },
+  {
+   "t": "; routes: the "
+  },
+  {
+   "t": "Elevation Profile",
+   "l": "/tools/elevation-profile"
+  },
+  {
+   "t": "; peaks: the "
+  },
+  {
+   "t": "Peak Elevation Lookup",
+   "l": "/tools/peak-elevation-profile"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boiling-point-by-elevation-calculator",
   "central-angle-from-distance-calculator",

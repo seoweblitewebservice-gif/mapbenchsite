@@ -8,17 +8,178 @@
   "kml coordinate block counter checker",
   "kml coordinate block counter validator"
  ],
- "title": null,
- "description": null,
+ "title": "KML Coordinate Block Counter: Geometry Census",
+ "description": "Count the coordinates elements in a KML file with the KML Coordinate Block Counter — blocks per geometry type, counted locally. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a boundary KML with 3 Polygons, 2 LineStrings and 8 Points holds 14 coordinate blocks — one per geometry part — a structural census this counter reads in seconds.",
+ "quick_answer": "The KML Coordinate Block Counter counts the <coordinates> elements in a KML file — one block per Point, LineString, LinearRing or other geometry part — and reports the structural total. Drop the file and read how its geometry is organised, locally, before importing it anywhere.",
+ "steps_intro": "KML geometry travels in blocks. Census the blocks:",
+ "use_cases": [
+  {
+   "title": "Understanding a KML's structure",
+   "body": [
+    {
+     "t": "Blocks, not placemarks, reveal complexity: a single Placemark with a MultiGeometry can hold dozens. Compare with the "
+    },
+    {
+     "t": "KML Placemark Counter",
+     "l": "/tools/kml-placemark-counter"
+    },
+    {
+     "t": " to see features versus geometry parts."
+    }
+   ]
+  },
+  {
+   "title": "Estimating rendering weight",
+   "body": [
+    {
+     "t": "Every block is a draw call's worth of geometry; hundreds of blocks warn of heavy files before the map slows down to tell you."
+    }
+   ]
+  },
+  {
+   "title": "Auditing exports from GIS",
+   "body": [
+    {
+     "t": "An export that split one polygon into 40 blocks used a different geometry model than expected — the count exposes the modelling choice."
+    }
+   ]
+  },
+  {
+   "title": "Pre-import QA",
+   "body": [
+    {
+     "t": "Blocks with zero or one tuples are degenerate geometry that importers choke on. The census is the early warning."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Blocks are not tuples",
+   "body": [
+    {
+     "t": "One LineString block can hold 900 coordinate tuples (lon,lat pairs) in a single <coordinates> element. This counter counts the block as 1. For tuple-level counting, the geometry's own length tools ("
+    },
+    {
+     "t": "KML Path Length",
+     "l": "/tools/kml-path-length"
+    },
+    {
+     "t": ") process the points themselves."
+    }
+   ]
+  },
+  {
+   "label": "Example · The ring arithmetic",
+   "body": [
+    {
+     "t": "A Polygon with a hole has 2 blocks: the outer LinearRing and the inner ring. A 12-polygon boundary with 3 holes totals 12 + 3 = 15 ring/point blocks before any Point or LineString is counted — structure you can verify by hand."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Which KML geometries carry a coordinates block",
+  "intro": "The census list — one <coordinates> element per geometry part.",
+  "columns": [
+   "Geometry",
+   "Blocks",
+   "Block contents"
+  ],
+  "rows": [
+   [
+    "Point",
+    "1",
+    "Exactly one lon,lat[,alt] tuple"
+   ],
+   [
+    "LineString",
+    "1",
+    "Two or more tuples in path order"
+   ],
+   [
+    "LinearRing (in Polygon)",
+    "1 per ring",
+    "A closed loop — first tuple repeated last"
+   ],
+   [
+    "MultiGeometry",
+    "Sum of its parts",
+    "Each child geometry brings its own block(s)"
+   ],
+   [
+    "GroundOverlay / Model",
+    "0",
+    "Positioned by LatLonBox or Location, not coordinates blocks"
+   ]
+  ],
+  "note": "The count is structural: it tallies elements, not vertices. Both numbers matter; this page owns the element census."
+ },
+ "faq": [
+  [
+   "Does it count individual coordinate pairs?",
+   "No — it counts <coordinates> blocks. A block may hold one pair (a Point) or thousands (a detailed LineString). The distinction is the page's whole point, and the examples show how to read it."
+  ],
+  [
+   "What about coordinates in GroundOverlays?",
+   "Overlays position imagery with a LatLonBox, not a coordinates element — honestly excluded from this census, and listed as such in the table."
+  ],
+  [
+   "KMZ files?",
+   "A KMZ is a zipped KML — unzip it (any archive tool) and count the doc.kml inside."
+  ],
+  [
+   "Empty blocks?",
+   "A <coordinates> element with no tuples is malformed but countable — the census includes it and the anomaly is worth your attention."
+  ],
+  [
+   "gx:Track elements (Google extensions)?",
+   "gx:Track stores <gx:coord> elements instead of <coordinates> — a Google extension namespace this standard census does not fold in."
+  ],
+  [
+   "Why would blocks exceed placemarks?",
+   "MultiGeometries and holed polygons: geometry parts outnumber features whenever shapes get serious. The placemark counter gives the feature side of the ratio."
+  ],
+  [
+   "Why would placemarks exceed blocks?",
+   "Placemarks can hold no geometry at all (a labelled folder entry, a camera view) — features without blocks are the mirror case."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Features: the "
+  },
+  {
+   "t": "KML Placemark Counter",
+   "l": "/tools/kml-placemark-counter"
+  },
+  {
+   "t": "; named features: the "
+  },
+  {
+   "t": "KML Named Placemark Counter",
+   "l": "/tools/kml-named-placemark-counter"
+  },
+  {
+   "t": "; see it: the "
+  },
+  {
+   "t": "KML Viewer",
+   "l": "/tools/kml-viewer"
+  },
+  {
+   "t": "; path length: "
+  },
+  {
+   "t": "KML Path Length",
+   "l": "/tools/kml-path-length"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

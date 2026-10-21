@@ -8,17 +8,170 @@
   "rows per field calculator tool",
   "how to use rows per field calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Rows Per Field Calculator: Fit and Leftover",
+ "description": "Work out how many crop rows fit across a field width with the Rows Per Field Calculator — row count and unused width, before headlands. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a 600 ft field at 30-inch row spacing fits exactly 240 rows with nothing left over — while 36-inch rows in a 500 ft field give 166 rows and 2 awkward feet of leftover.",
+ "quick_answer": "The Rows Per Field Calculator divides a field or bed width by the row spacing to give the number of rows that fit and the unused width remaining. Enter the width and spacing and read the fit — the first-pass planting layout, before headlands and machinery turns take their share.",
+ "steps_intro": "Width divided by spacing, with the remainder reported honestly:",
+ "use_cases": [
+  {
+   "title": "Planting layout, first pass",
+   "body": [
+    {
+     "t": "Corn at 30 inches, soybeans at 15, vegetables closer — the row count is where seed orders and planter settings start. Seed totals follow from the "
+    },
+    {
+     "t": "Seed Quantity Per Acre Calculator",
+     "l": "/tools/seed-quantity-per-acre-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Choosing a spacing",
+   "body": [
+    {
+     "t": "Try 30 versus 36 inches and watch the leftover: a spacing that divides the width cleanly wastes nothing — the calculator makes the tidy option visible."
+    }
+   ]
+  },
+  {
+   "title": "Garden and market beds",
+   "body": [
+    {
+     "t": "A 100 ft bed at 12-inch spacing fits 100 rows of salad — the market gardener's version of the same division."
+    }
+   ]
+  },
+  {
+   "title": "Checking a contractor's plan",
+   "body": [
+    {
+     "t": "A quoted row count either divides out of the field width or it doesn't. Two minutes here audits a season's geometry."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The clean fit",
+   "body": [
+    {
+     "t": "660 ft ÷ 2.5 ft (30-inch rows) = 264 rows exactly, zero leftover. Widths that are multiples of the spacing are why old fields came in chain-based sizes."
+    }
+   ]
+  },
+  {
+   "label": "Example · The awkward leftover",
+   "body": [
+    {
+     "t": "500 ft at 36-inch rows: 166 rows use 498 ft, leaving 2 ft — too narrow for a row, perfect for the access path you needed anyway. Leftovers are design material, not failure."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Common spacings and fits",
+  "intro": "Rows that fit across standard widths — computed with the leftover the table refuses to hide.",
+  "columns": [
+   "Field width",
+   "Spacing",
+   "Rows",
+   "Leftover"
+  ],
+  "rows": [
+   [
+    "600 ft",
+    "30 in",
+    "240",
+    "0 ft"
+   ],
+   [
+    "500 ft",
+    "36 in",
+    "166",
+    "2.0 ft"
+   ],
+   [
+    "660 ft",
+    "15 in",
+    "528",
+    "0 ft"
+   ],
+   [
+    "1,320 ft",
+    "30 in",
+    "528",
+    "0 ft"
+   ],
+   [
+    "100 ft",
+    "12 in",
+    "100",
+    "0 ft"
+   ]
+  ],
+  "note": "First-pass arithmetic: headlands, tramlines and turn rows come out of the total in real layouts — the tool's intro says so, and so does this note."
+ },
+ "faq": [
+  [
+   "Does it allow for headlands?",
+   "No — this is the first-pass fit across the worked width. Subtract your headland and turn space from the width first, then calculate."
+  ],
+  [
+   "First row at the edge or half-spacing in?",
+   "Planting convention usually centres the pattern or starts a half-spacing from the edge; either consumes the same total width. The count is what this calculator guarantees."
+  ],
+  [
+   "Metric widths?",
+   "Metres and centimetre spacings work identically — the division does not care which system measured the field."
+  ],
+  [
+   "Uneven field edges?",
+   "Use the narrowest worked width for a guaranteed fit, or split an irregular field into rectangular blocks and calculate each."
+  ],
+  [
+   "Row length for seed maths?",
+   "Multiply rows by row length for total row feet — the Crop Row Length Calculator's territory, and the input seed calculations want."
+  ],
+  [
+   "Can spacing exceed the width?",
+   "Then zero rows fit and the calculator says so — a raised bed narrower than the spacing is a single row's home."
+  ],
+  [
+   "Drip lines and plastic mulch?",
+   "Same arithmetic: the 'rows' are whatever repeats across the width — mulch beds, drip tapes, trellis lines."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Row length: the "
+  },
+  {
+   "t": "Crop Row Length Calculator",
+   "l": "/tools/crop-row-length-calculator"
+  },
+  {
+   "t": "; seed totals: the "
+  },
+  {
+   "t": "Seed Quantity Per Acre Calculator",
+   "l": "/tools/seed-quantity-per-acre-calculator"
+  },
+  {
+   "t": "; field area: the "
+  },
+  {
+   "t": "Acreage Map Calculator",
+   "l": "/tools/acreage-map-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-area-from-radius",

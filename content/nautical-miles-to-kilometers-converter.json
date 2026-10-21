@@ -8,17 +8,183 @@
   "nautical miles to kilometers converter converter",
   "nautical miles to kilometers converter formula"
  ],
- "title": null,
- "description": null,
+ "title": "Nautical Miles to Kilometers Converter",
+ "description": "Convert nautical miles to kilometers and statute miles with the Nautical Miles to Kilometers Converter — the exact 1.852 factor, no rounding games. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, the 2,146 nautical miles between New York and Los Angeles by air is 3,974.3 kilometres — one exact multiplication, because a nautical mile is 1.852 km by international definition.",
+ "quick_answer": "The Nautical Miles to Kilometers Converter changes nautical miles into kilometres (and statute miles) using the exact international definition: 1 nautical mile = 1.852 kilometres. Enter the nautical miles and read the converted distance — the unit of charts, knots and every sea or air route you will ever plan.",
+ "steps_intro": "One exact factor does all the work:",
+ "use_cases": [
+  {
+   "title": "Reading charts and passage plans",
+   "body": [
+    {
+     "t": "Chart distances come in nautical miles; road brains think in kilometres. Convert the leg before comparing it with anything on land — and convert coordinates directly with the "
+    },
+    {
+     "t": "Nautical Miles Between Coordinates",
+     "l": "/tools/nautical-miles-between-coordinates"
+    },
+    {
+     "t": " tool."
+    }
+   ]
+  },
+  {
+   "title": "Aviation paperwork",
+   "body": [
+    {
+     "t": "Flight planning mixes nautical miles with kilometre-based weather and fuel figures. One consistent conversion here prevents the unit error that checklists exist to catch."
+    }
+   ]
+  },
+  {
+   "title": "Knot conversions",
+   "body": [
+    {
+     "t": "A knot is one nautical mile per hour, so every speed in knots converts through the same 1.852 factor — the "
+    },
+    {
+     "t": "Nautical Travel Time Calculator",
+     "l": "/tools/nautical-travel-time-calculator"
+    },
+    {
+     "t": " turns it into hours."
+    }
+   ]
+  },
+  {
+   "title": "Checking a quoted distance",
+   "body": [
+    {
+     "t": "A ferry or cruise quotes 500 nautical miles: that is 926 km, or 575 land miles. The reverse trip lives in "
+    },
+    {
+     "t": "Kilometers to Nautical Miles",
+     "l": "/tools/kilometers-to-nautical-miles-converter"
+    },
+    {
+     "t": "."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The degree hidden in the mile",
+   "body": [
+    {
+     "t": "Sixty nautical miles is 111.12 km — because the nautical mile was defined as one arcminute of latitude, a degree of latitude is almost exactly 60 nautical miles. The unit carries the Earth's geometry inside it."
+    }
+   ]
+  },
+  {
+   "label": "Example · Not a land mile",
+   "body": [
+    {
+     "t": "100 nautical miles = 185.2 km = 115.08 statute miles. Treating nautical and land miles as the same unit misstates a voyage by 15% — the most expensive rounding error in travel."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Nautical mile anchors",
+  "intro": "Exact-factor conversions worth recognising on sight.",
+  "columns": [
+   "Nautical miles",
+   "Kilometres",
+   "Statute miles"
+  ],
+  "rows": [
+   [
+    "1",
+    "1.852",
+    "1.151"
+   ],
+   [
+    "5",
+    "9.26",
+    "5.75"
+   ],
+   [
+    "10",
+    "18.52",
+    "11.51"
+   ],
+   [
+    "60",
+    "111.12",
+    "69.05"
+   ],
+   [
+    "100",
+    "185.20",
+    "115.08"
+   ],
+   [
+    "1,000",
+    "1,852.00",
+    "1,150.78"
+   ]
+  ],
+  "note": "The factor 1.852 is exact by international definition (adopted 1929, US 1954) — conversions through it carry no approximation at all."
+ },
+ "faq": [
+  [
+   "Why is a nautical mile longer than a land mile?",
+   "They were born from different ideas: the statute mile is land-survey history (5,280 feet), while the nautical mile is one arcminute of the Earth's latitude — about 6,076 feet. Navigation kept the one tied to the chart."
+  ],
+  [
+   "Is the conversion exact?",
+   "Yes. One international nautical mile is exactly 1,852 metres by definition, so every result here is exact arithmetic, not an estimate."
+  ],
+  [
+   "How do I convert kilometres back?",
+   "Divide by 1.852 — or use the Kilometers to Nautical Miles Converter, the dedicated reverse lane."
+  ],
+  [
+   "What is a knot in km/h?",
+   "One knot is one nautical mile per hour: exactly 1.852 km/h, about 1.15 mph. Ten knots is a bicycle's pace; thirty is a fast ferry."
+  ],
+  [
+   "Do pilots and sailors use the same nautical mile?",
+   "Yes — the international nautical mile is shared by IMO and ICAO convention, which is precisely why the unit survived into aviation."
+  ],
+  [
+   "How many nautical miles around the Earth?",
+   "The equator is about 21,600 nautical miles — sixty for every one of the 360 degrees, the definition closing its own circle."
+  ],
+  [
+   "Can I enter statute miles here?",
+   "This lane converts from nautical miles; land miles to kilometres belongs to the miles converters, and mixing the two inputs is the classic trap this page exists to disarm."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Reverse: "
+  },
+  {
+   "t": "Kilometers to Nautical Miles Converter",
+   "l": "/tools/kilometers-to-nautical-miles-converter"
+  },
+  {
+   "t": "; between points: the "
+  },
+  {
+   "t": "Nautical Miles Between Coordinates",
+   "l": "/tools/nautical-miles-between-coordinates"
+  },
+  {
+   "t": "; time at sea: the "
+  },
+  {
+   "t": "Nautical Travel Time Calculator",
+   "l": "/tools/nautical-travel-time-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "closest-facility-finder",
   "compass-bearing-visualizer",

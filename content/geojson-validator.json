@@ -8,17 +8,165 @@
   "geojson error checker",
   "geojson lint"
  ],
- "title": null,
- "description": null,
+ "title": "GeoJSON Validator: Syntax and Structure Check",
+ "description": "Validate GeoJSON against RFC 7946 structure with the GeoJSON Validator — syntax errors and container mistakes caught in your browser. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a Feature whose 'coordinates' sit directly under the feature instead of inside a 'geometry' object is the classic structural slip this validator names in one paste.",
+ "quick_answer": "The GeoJSON Validator checks pasted GeoJSON for JSON syntax errors and basic RFC 7946 container mistakes — wrong nesting, missing type fields, malformed positions. Paste a FeatureCollection, Feature or bare geometry and read a verdict that separates 'not JSON at all' from 'JSON, but not GeoJSON', entirely in your browser.",
+ "steps_intro": "Two different ways for a file to be broken — the verdict distinguishes them:",
+ "use_cases": [
+  {
+   "title": "Debugging an API response",
+   "body": [
+    {
+     "t": "The map renders nothing and the console is silent. Paste the response here: a trailing comma and a swapped coordinate order have very different fixes, and the "
+    },
+    {
+     "t": "GeoJSON Viewer",
+     "l": "/tools/geojson-viewer"
+    },
+    {
+     "t": " shows whatever survives."
+    }
+   ]
+  },
+  {
+   "title": "Checking hand-written fixtures",
+   "body": [
+    {
+     "t": "Test data written by hand fails structurally more often than syntactically. Validate before the test suite blames your code."
+    }
+   ]
+  },
+  {
+   "title": "Pre-flight before conversion",
+   "body": [
+    {
+     "t": "Converters fail opaquely on invalid input. Validate first and the "
+    },
+    {
+     "t": "GeoJSON to CSV Converter",
+     "l": "/tools/geojson-to-csv-converter"
+    },
+    {
+     "t": " gets the clean file it expects."
+    }
+   ]
+  },
+  {
+   "title": "Learning the format's skeleton",
+   "body": [
+    {
+     "t": "Deliberately breaking a valid file — remove a bracket, rename a key — and reading the verdict is the fastest GeoJSON course there is."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Syntax versus structure",
+   "body": [
+    {
+     "t": "A missing closing brace is a syntax error: the text is not JSON. A FeatureCollection whose members lack 'type': 'Feature' parses fine as JSON but fails as GeoJSON. The validator reports which world your file broke in."
+    }
+   ]
+  },
+  {
+   "label": "Example · The position rule",
+   "body": [
+    {
+     "t": "A position needs at least two numbers, longitude first: [−73.9719, 40.7681]. A one-number 'position' or a string in the array is a structural failure the checker catches before a renderer misplaces your data by an ocean."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The RFC 7946 skeleton",
+  "intro": "The nine object types and the members each must carry.",
+  "columns": [
+   "Type",
+   "Must contain"
+  ],
+  "rows": [
+   [
+    "FeatureCollection",
+    "type + features array"
+   ],
+   [
+    "Feature",
+    "type + geometry + properties"
+   ],
+   [
+    "Point / MultiPoint",
+    "type + coordinates (positions)"
+   ],
+   [
+    "LineString",
+    "type + coordinates (2+ positions)"
+   ],
+   [
+    "Polygon",
+    "type + coordinates (linear rings, 4+ positions, closed)"
+   ],
+   [
+    "MultiPolygon / GeometryCollection",
+    "type + member geometries"
+   ]
+  ],
+  "note": "RFC 7946 (2016) is the whole specification — GeoJSON has no versions in the wild worth fearing, and no CRS field: coordinates are WGS84 longitude/latitude by definition."
+ },
+ "faq": [
+  [
+   "Does it check the right-hand rule for polygon rings?",
+   "RFC 7946 recommends exterior rings wind counterclockwise and holes clockwise. Many parsers ignore winding; the validator concentrates on syntax and container structure, and treats winding as the recommendation it is rather than a hard failure."
+  ],
+  [
+   "Lat/lon order — can it detect swaps?",
+   "A latitude beyond ±90 inside a position is detectable and flagged. A swapped pair that stays in range (both numbers plausible) cannot be convicted by structure alone — plot the file in the viewer; geography is the witness."
+  ],
+  [
+   "What about foreign members and extensions?",
+   "Extra members are legal in GeoJSON — the spec permits foreign members. The validator does not punish a file for carrying them."
+  ],
+  [
+   "Properties: any rules?",
+   "Properties must be a JSON object or null on a Feature. An array or a bare string there is a structural error the checker names."
+  ],
+  [
+   "Can a single geometry (no Feature) validate?",
+   "Yes — bare geometry objects are complete GeoJSON. The validator accepts FeatureCollections, Features and geometries alike."
+  ],
+  [
+   "Empty coordinates arrays?",
+   "A geometry with empty coordinates is structurally tolerated by the spec's grammar but renders nothing — the validator flags emptiness as a warning worth reading."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "See valid data: the "
+  },
+  {
+   "t": "GeoJSON Viewer",
+   "l": "/tools/geojson-viewer"
+  },
+  {
+   "t": "; simplify it: the "
+  },
+  {
+   "t": "GeoJSON Simplify Helper",
+   "l": "/tools/geojson-simplify-helper"
+  },
+  {
+   "t": "; flatten it: the "
+  },
+  {
+   "t": "GeoJSON to CSV Converter",
+   "l": "/tools/geojson-to-csv-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

@@ -8,17 +8,157 @@
   "gpx start and end coordinates tool",
   "how to calculate gpx start and end coordinates"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Start and End Coordinates Extractor",
+ "description": "Extract the first and last coordinates of a GPX track or route with GPX Start and End Coordinates — the endpoints, read locally. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, the worked park loop starts at 40.7681, −73.9719 and ends at 40.7681, −73.9630 — same latitude, 0.75 kilometres apart, a loop that was never quite closed.",
+ "quick_answer": "GPX Start and End Coordinates extracts the first and last coordinate from a GPX track's or route's point sequence. Load the file locally and read the two endpoints — the pair that identifies a route in any catalogue and frames its full extent.",
+ "steps_intro": "First point, last point — the file's two handshakes:",
+ "use_cases": [
+  {
+   "title": "Cataloguing a track library",
+   "body": [
+    {
+     "t": "Endpoints are a route's fingerprint in a spreadsheet: start town, finish town. The "
+    },
+    {
+     "t": "GPX Bounding Box Tool",
+     "l": "/tools/gpx-bounding-box-tool"
+    },
+    {
+     "t": " adds the full extent around them."
+    }
+   ]
+  },
+  {
+   "title": "Verifying a reversal",
+   "body": [
+    {
+     "t": "Reverse a track with the "
+    },
+    {
+     "t": "GPX Reverse Track Tool",
+     "l": "/tools/gpx-reverse-track"
+    },
+    {
+     "t": " and the endpoints swap — the extractor proves the flip in one reading."
+    }
+   ]
+  },
+  {
+   "title": "Trailhead logistics",
+   "body": [
+    {
+     "t": "Shuttle and pickup planning needs the finish coordinate exactly; the start coordinate is where the car goes. Both, copy-ready, from the file."
+    }
+   ]
+  },
+  {
+   "title": "Detecting open versus closed loops",
+   "body": [
+    {
+     "t": "A loop's endpoints should nearly coincide. A 750-metre gap between start and finish means the recording started late, ended early, or the 'loop' is a line."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The unclosed loop",
+   "body": [
+    {
+     "t": "Start 40.7681, −73.9719; end 40.7681, −73.9630: identical latitude, longitude differing by 0.0089° — about 0.75 km of unfinished business, priced by the same degree arithmetic as the rest of this site."
+    }
+   ]
+  },
+  {
+   "label": "Example · Which sequence wins",
+   "body": [
+    {
+     "t": "A file with several tracks has several starts and ends. The extractor works from the point sequence you are asking about — first track by default order — because 'the start of the file' and 'the start of Saturday's leg' are different questions."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Endpoints and their evidence",
+  "intro": "What the first and last points do and do not certify.",
+  "columns": [
+   "Reading",
+   "It tells you"
+  ],
+  "rows": [
+   [
+    "Start coordinate",
+    "Where the recording's sequence begins — the device's first kept fix, not necessarily the trailhead sign"
+   ],
+   [
+    "End coordinate",
+    "Where the sequence stops — battery death and finish lines look identical here"
+   ],
+   [
+    "Endpoints equal (within metres)",
+    "A closed loop, or an out-and-back retraced"
+   ],
+   [
+    "Endpoints far apart",
+    "A point-to-point journey — or a recording with a hole in it"
+   ]
+  ],
+  "note": "Endpoints are single recorded points, with a single point's GPS error (±5–15 m in consumer hands). Treat them as the file's testimony, not surveyed markers."
+ },
+ "faq": [
+  [
+   "Which track in a multi-track file?",
+   "The extractor reads the sequence in document order and identifies endpoints per the file's structure — for a specific leg, split or merge with the family's tools until the file holds the journey you mean."
+  ],
+  [
+   "Routes as well as tracks?",
+   "Yes — a route's first and last rtept are its planned endpoints, read by the same extraction. Plan versus record is the file's business; endpoints are endpoints."
+  ],
+  [
+   "What about waypoints?",
+   "Standalone <wpt> elements have no sequence and no endpoints — the point counter is their census; this tool reads ordered sequences."
+  ],
+  [
+   "Elevation and time of the endpoints?",
+   "Where the points carry <ele> and <time>, they are part of the endpoint's identity — start time and start altitude ride along with the coordinate."
+  ],
+  [
+   "Can I get the midpoint too?",
+   "The point at half the cumulative distance is the sequential checker's territory — endpoints frame the journey; the running total furnishes its interior."
+  ],
+  [
+   "The start looks wrong (inside a building, mid-road).",
+   "First fixes are the least accurate of any recording (cold receiver, partial sky). A start point a street away from the trailhead is the device warming up, faithfully reported."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Extent: the "
+  },
+  {
+   "t": "GPX Bounding Box Tool",
+   "l": "/tools/gpx-bounding-box-tool"
+  },
+  {
+   "t": "; flipped: the "
+  },
+  {
+   "t": "GPX Reverse Track Tool",
+   "l": "/tools/gpx-reverse-track"
+  },
+  {
+   "t": "; interior: the "
+  },
+  {
+   "t": "GPX Sequential Distance Checker",
+   "l": "/tools/gpx-sequential-distance-checker"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

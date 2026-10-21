@@ -6,17 +6,173 @@
   "tropic of capricorn",
   "tropics"
  ],
- "title": null,
- "description": null,
+ "title": "Tropics Finder: Cancer, Capricorn and the Zone",
+ "description": "Use the Tropics Finder to see the Tropic of Cancer and Tropic of Capricorn at 23.44°, the zone between them, and where the overhead Sun travels. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, the tropical zone between the two lines is about 5,186 km wide — yet Miami, at 25.8°N, misses 'the tropics' by roughly 260 km despite its palm-tree branding.",
+ "quick_answer": "The Tropics Finder draws the Tropic of Cancer and the Tropic of Capricorn — the lines at 23.44 degrees north and south — and the zone between them. Explore where the Sun can stand directly overhead, which places fall inside the tropics, and which only pretend to.",
+ "steps_intro": "Two lines set by the tilt of the planet — here is what lives between them:",
+ "use_cases": [
+  {
+   "title": "Settling 'is it tropical?' arguments",
+   "body": [
+    {
+     "t": "Hawaii is in the tropics (Honolulu, 21.3°N); Miami is not. The finder replaces brochure language with a boundary you can check. Its partner lines are in the "
+    },
+    {
+     "t": "Equator Finder",
+     "l": "/tools/equator-finder"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Understanding overhead-Sun days",
+   "body": [
+    {
+     "t": "Inside the zone, the Sun passes through the zenith twice a year — Hawaii calls them Lahaina Noon days. The tropics are defined by exactly this possibility."
+    }
+   ]
+  },
+  {
+   "title": "Desert belt geography",
+   "body": [
+    {
+     "t": "The great deserts — Sahara, Arabian, Australian — cluster near the tropics lines, where descending dry air dominates. Seeing the lines over a world map makes the pattern click."
+    }
+   ]
+  },
+  {
+   "title": "Roadside marker hunting",
+   "body": [
+    {
+     "t": "Highways in Mexico, India, Australia and elsewhere plant Tropic of Cancer or Capricorn markers. Travellers can verify which line they are crossing — and that markers lag the lines' slow drift."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Havana in, Miami out",
+   "body": [
+    {
+     "t": "Havana sits at about 23.11°N — just inside the Tropic of Cancer. Miami at 25.76°N is about 260 km north of the line. The Florida Straits between them are only 150 km wide, but the astronomical boundary falls inside that gap."
+    }
+   ]
+  },
+  {
+   "label": "Example · The lines are creeping",
+   "body": [
+    {
+     "t": "Earth's tilt is shrinking by about 0.47 arcseconds a year, so both tropics lines drift toward the equator at roughly 15 metres a year. A marker placed in 2000 can be a few hundred metres from today's line."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Inside and outside the zone",
+  "intro": "The tropics at about ±23.44° — the only band where the Sun can be directly overhead.",
+  "columns": [
+   "Place",
+   "Latitude",
+   "In the tropics?"
+  ],
+  "rows": [
+   [
+    "Honolulu, USA",
+    "21.31°N",
+    "Yes — overhead Sun twice a year"
+   ],
+   [
+    "Havana, Cuba",
+    "23.11°N",
+    "Yes — just inside Cancer"
+   ],
+   [
+    "Miami, USA",
+    "25.76°N",
+    "No — about 260 km north of the line"
+   ],
+   [
+    "Mexico City, Mexico",
+    "19.43°N",
+    "Yes"
+   ],
+   [
+    "São Paulo, Brazil",
+    "23.55°S",
+    "No — just outside Capricorn, by about 12 km"
+   ],
+   [
+    "Brisbane, Australia",
+    "27.47°S",
+    "No"
+   ]
+  ],
+  "note": "The zone spans about 5,186 km of meridian from Capricorn to Cancer. Its boundary value, 23.44°, equals Earth's current axial tilt and is slowly decreasing — the lines used here are today's, not the ancients'."
+ },
+ "faq": [
+  [
+   "Why are the tropics at 23.44 degrees?",
+   "Because that is Earth's current axial tilt. The Tropic of Cancer is the farthest north the Sun's rays strike vertically (at the June solstice); Capricorn mirrors it in December. Tilt the planet differently and the lines move."
+  ],
+  [
+   "When is the Sun overhead on the lines?",
+   "On the Tropic of Cancer at the June solstice (around June 20–21) and on the Tropic of Capricorn at the December solstice (around December 21–22). On the equator it happens at both equinoxes."
+  ],
+  [
+   "Why are there deserts near the tropics?",
+   "Global circulation: air rises at the equator, dries, and descends around 20–30° latitude, suppressing rain. That is why the Sahara, Arabian, Kalahari and Australian deserts hug these lines."
+  ],
+  [
+   "Is Florida tropical?",
+   "Astronomically, no part of mainland Florida reaches the tropics — even Key West at 24.56°N sits north of the line. Its climate is subtropical: similar warmth, but the Sun is never directly overhead there."
+  ],
+  [
+   "Do the tropics lines pass through the oceans only?",
+   "No — Cancer crosses Mexico, the Sahara, India and southern China among others; Capricorn crosses Australia, Namibia, Botswana, Brazil and Argentina. Both are well-marked on highways in several countries."
+  ],
+  [
+   "What are Lahaina Noon days?",
+   "In Hawaii, the two days a year when the Sun passes exactly overhead at local noon and upright objects cast no shadow. The name comes from Lahaina, Maui; the phenomenon happens everywhere inside the tropics on place-specific dates."
+  ],
+  [
+   "Will the lines reach the equator someday?",
+   "The tilt cycles between about 22.1° and 24.5° over 41,000 years and is currently decreasing — so the zone narrows for now, but over the full cycle it widens again. Nothing human-paced changes it."
+  ],
+  [
+   "How wide is the tropical zone in degrees?",
+   "About 46.88° of latitude — 23.44° each side of the equator — which converts to roughly 5,186 km measured along a meridian."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "See the zone's centre line with the "
+  },
+  {
+   "t": "Equator Finder",
+   "l": "/tools/equator-finder"
+  },
+  {
+   "t": ", place any latitude in its band with the "
+  },
+  {
+   "t": "Latitude Band Finder",
+   "l": "/tools/latitude-band-finder"
+  },
+  {
+   "t": ", or measure a gap to the lines with the "
+  },
+  {
+   "t": "Distance from Tropic of Cancer Calculator",
+   "l": "/tools/distance-from-tropic-of-cancer"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "distance-from-equator-calculator",
   "distance-from-prime-meridian-calculator",

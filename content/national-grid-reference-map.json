@@ -7,17 +7,155 @@
   "os map grid reference",
   "find grid reference on map"
  ],
- "title": null,
- "description": null,
+ "title": "National Grid Reference Map: Plot Any Reference",
+ "description": "Plot any Ordnance Survey grid reference on the National Grid Reference Map — see its square, its context and the point it names. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, type a six-figure reference from a walking guide and watch its 100-metre square land on the map — the moment a string of letters and digits becomes a place you can see.",
+ "quick_answer": "The National Grid Reference Map plots an Ordnance Survey grid reference on the map, with its square and surrounding grid context drawn in. Type a reference and watch it land, or click the map and read its reference — the visual bridge between paper maps and geography.",
+ "steps_intro": "A reference is an address. See where it lives:",
+ "use_cases": [
+  {
+   "title": "Verifying a guidebook reference",
+   "body": [
+    {
+     "t": "Walking guides and site reports cite references blind. Plot one before the walk and the car park, gate or summit it names is confirmed — convert coordinates the other way with the "
+    },
+    {
+     "t": "National Grid Reference Converter",
+     "l": "/tools/national-grid-reference-converter"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Planning application checks",
+   "body": [
+    {
+     "t": "A reference on a form becomes a visible square: does it sit on the building, the field or the neighbour's garden? The map answers faster than any description."
+    }
+   ]
+  },
+  {
+   "title": "Teaching the grid visually",
+   "body": [
+    {
+     "t": "The 1 km and 10 km grid context around a plotted reference shows students how squares nest — the abstraction becomes landscape."
+    }
+   ]
+  },
+  {
+   "title": "Archaeology and records work",
+   "body": [
+    {
+     "t": "Finds logged by reference get plotted for the site meeting — a table of strings becomes a distribution map."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The square is the statement",
+   "body": [
+    {
+     "t": "A six-figure reference names a 100 m square, and the map draws that square — not a pin pretending to metre precision. What the reference claims is exactly what you see."
+    }
+   ]
+  },
+  {
+   "label": "Example · Context exposes errors",
+   "body": [
+    {
+     "t": "A transposed digit usually lands the square in a lake, a motorway or the wrong county — the map's context is a lie detector that pure conversion cannot be."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reference precision, drawn",
+  "intro": "What each figure count looks like on the ground.",
+  "columns": [
+   "Figures",
+   "Square size",
+   "Typical use"
+  ],
+  "rows": [
+   [
+    "4",
+    "1 km × 1 km",
+    "Area references, reports"
+   ],
+   [
+    "6",
+    "100 m × 100 m",
+    "Walking, site visits"
+   ],
+   [
+    "8",
+    "10 m × 10 m",
+    "Field recording"
+   ],
+   [
+    "10",
+    "1 m × 1 m",
+    "Survey-adjacent work"
+   ]
+  ],
+  "note": "The drawn square is the reference's whole claim — the point lies somewhere inside it. Longer references shrink the square; they never move its truth beyond the source's accuracy."
+ },
+ "faq": [
+  [
+   "Why does the map draw a square instead of a pin?",
+   "Because a grid reference names an area, not a point — the square is the honest picture of what the reference says."
+  ],
+  [
+   "Can I plot several references at once?",
+   "Plot them one at a time to inspect each; lists of references belong in GIS, with this map as the visual spot-check."
+  ],
+  [
+   "What if my reference has spaces?",
+   "Spaces between the letters and digit groups are cosmetic — 'TQ 292 796' and 'TQ292796' name the same square."
+  ],
+  [
+   "The square landed in the sea.",
+   "Either the reference is wrong (a transposed digit is the usual cause) or it genuinely names a coastal square — the context view makes the call obvious."
+  ],
+  [
+   "Does the map show OS mapping itself?",
+   "The map plots references on standard web map data with grid context; Ordnance Survey's own copyrighted mapping is viewed through OS channels."
+  ],
+  [
+   "How do I read a reference off the map?",
+   "Click the ground — the map returns the reference for the clicked point at your chosen precision, the reverse of plotting."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Convert coordinates: the "
+  },
+  {
+   "t": "National Grid Reference Converter",
+   "l": "/tools/national-grid-reference-converter"
+  },
+  {
+   "t": "; from a grid reference to a postcode: the "
+  },
+  {
+   "t": "Grid Reference to Postcode Finder",
+   "l": "/tools/ngr-to-postcode-finder"
+  },
+  {
+   "t": "; the workflow: the "
+  },
+  {
+   "t": "British National Grid Helper",
+   "l": "/tools/bng-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "arcminutes-to-decimal-degrees-converter",
   "arcseconds-to-ground-distance-calculator",

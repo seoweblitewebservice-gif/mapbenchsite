@@ -8,17 +8,166 @@
   "county income map",
   "county fips explorer"
  ],
- "title": null,
- "description": null,
+ "title": "U.S. County Demographic Explorer: ACS by County",
+ "description": "Explore county demographics with the U.S. County Demographic Explorer — population, age, income and housing from Census and ACS data. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, Los Angeles County's 10,014,009 residents (2020 Census) make it more populous than most US states — while Loving County, Texas counted 64 people in the same census.",
+ "quick_answer": "The U.S. County Demographic Explorer presents Census and American Community Survey data for America's 3,143 counties and county equivalents — population, age, income, housing and more — county by county. Pick a county and read its profile: official statistics, with their survey margins kept visible instead of averaged away.",
+ "steps_intro": "Counties are America's statistical workhorses. Explore them on official data:",
+ "use_cases": [
+  {
+   "title": "Local research and journalism",
+   "body": [
+    {
+     "t": "County profiles are the working unit of American local reporting — the "
+    },
+    {
+     "t": "Census Geography Finder",
+     "l": "/tools/census-geography-finder"
+    },
+    {
+     "t": " finds which county a point is in; this explorer says what the county is like."
+    }
+   ]
+  },
+  {
+   "title": "Grant and programme work",
+   "body": [
+    {
+     "t": "Federal programmes allocate by county statistics. The explorer is the first read before the application — with ACS margins in view, because funders check them."
+    }
+   ]
+  },
+  {
+   "title": "Market and site homework",
+   "body": [
+    {
+     "t": "Income, age and housing profiles screen counties before expensive data does. Density comparisons live at the "
+    },
+    {
+     "t": "Population Density Compare",
+     "l": "/tools/population-density-compare"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Curiosity with receipts",
+   "body": [
+    {
+     "t": "Which county is oldest, richest, emptiest? Rankings built on published ACS values — with the base FAQ's warning that small counties' ranks wobble inside their margins."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The two extremes",
+   "body": [
+    {
+     "t": "Los Angeles County: 10,014,009 people (2020 Census) — more than 40 individual states. Loving County, Texas: 64 people, the nation's least populous county. One explorer holds both, and the ACS treats the second with the statistical caution its sample size demands."
+    }
+   ]
+  },
+  {
+   "label": "Example · Margin of error is part of the number",
+   "body": [
+    {
+     "t": "An ACS median income of $58,000 ± $4,000 for a small county is not '$58,000'. The margin is the survey telling you its own resolution — the explorer shows it because hiding it would be a lie of precision."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The data behind the profiles",
+  "intro": "Decennial census versus ACS — the distinction the explorer maintains.",
+  "columns": [
+   "Source",
+   "What it is",
+   "Counties covered"
+  ],
+  "rows": [
+   [
+    "2020 Census",
+    "The decennial headcount",
+    "All — the population backbone"
+   ],
+   [
+    "ACS 1-year estimates",
+    "Annual survey, larger counties (65,000+)",
+    "Roughly the largest 800 counties"
+   ],
+   [
+    "ACS 5-year estimates",
+    "Five pooled survey years",
+    "All 3,143 — the only full-coverage series"
+   ],
+   [
+    "Margins of error",
+    "Published with every ACS estimate",
+    "Wide in small counties — read them"
+   ]
+  ],
+  "note": "County counts: 3,143 counties and county equivalents (including Louisiana parishes, Alaska boroughs and independent cities) per the Census Bureau. ACS values are estimates from a survey, not counts — the explorer labels each figure's source and period."
+ },
+ "faq": [
+  [
+   "Why do two counties' data years differ?",
+   "Large counties publish ACS 1-year estimates; small ones appear only in 5-year pooled estimates. Comparing a 2023 1-year figure against a 2019–2023 5-year one is comparing different instruments — the profiles label each value's series and period."
+  ],
+  [
+   "What is a good use of the explorer?",
+   "Screening, learning and first-draft research: understanding a county's shape before deeper work. Regulated decisions (lending, insurance, eligibility) require the underlying official extracts and their full documentation."
+  ],
+  [
+   "How often does it refresh?",
+   "The decennial backbone changes every ten years; ACS series republish annually. The explorer follows the Census Bureau's release cycle, with vintages named on the profiles."
+  ],
+  [
+   "County equivalents — what counts?",
+   "Parishes (Louisiana), boroughs and census areas (Alaska), independent cities (Virginia and others), and the District of Columbia — 3,143 units total in the Bureau's county framework."
+  ],
+  [
+   "Can I see tracts instead of counties?",
+   "Tract-level ACS exists and is finer; the Census Geography Finder supplies tract IDs for any point. This explorer's grain is deliberately the county — America's administrative atom."
+  ],
+  [
+   "Why is a tiny county's income figure fuzzy?",
+   "ACS interviews a sample; in a county of 64 people the sample is a handful of households, and the published margin is correspondingly honest. Treat small-county point values as ranges."
+  ],
+  [
+   "Historical comparisons (2010 vs 2020)?",
+   "County boundaries rarely change, so decennial comparisons are mostly clean — the exceptions (Alaska reorganisations, new Virginia independents) are footnoted by the Bureau and flagged in careful work."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Find a county: the "
+  },
+  {
+   "t": "Census Geography Finder",
+   "l": "/tools/census-geography-finder"
+  },
+  {
+   "t": "; compare places: the "
+  },
+  {
+   "t": "Population Density Compare",
+   "l": "/tools/population-density-compare"
+  },
+  {
+   "t": "; people near a point: the "
+  },
+  {
+   "t": "Population Within Radius",
+   "l": "/tools/population-within-radius"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "australia-postcodes-by-state-suburb",
   "census-geography-finder",

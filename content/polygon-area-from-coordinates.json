@@ -8,17 +8,150 @@
   "polygon area from coordinates tool",
   "how to calculate polygon area from coordinates"
  ],
- "title": null,
- "description": null,
+ "title": "Polygon Area From Coordinates in Acres",
+ "description": "Compute the area enclosed by a coordinate polygon with Polygon Area From Coordinates — square metres, hectares and acres from your corners. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a four-point polygon over Midtown Manhattan — corners at 40.7580, −73.9855 and its neighbours — encloses 1.742 km² (430 acres) inside a 5.28 km boundary, all computed from the corners alone.",
+ "quick_answer": "Polygon Area From Coordinates computes the ground area enclosed by a polygon whose corners are latitude/longitude pairs, using the shoelace method on a locally projected plane. Paste the corners in boundary order and read the area in square metres, hectares and acres — for fields, parcels, sites and zones.",
+ "steps_intro": "Corners in walking order; an honest area out:",
+ "use_cases": [
+  {
+   "title": "Fields, parcels and plots",
+   "body": [
+    {
+     "t": "Walked or clicked corners become acreage — the number land is priced by. Its boundary length comes from the "
+    },
+    {
+     "t": "Polygon Perimeter From Coordinates",
+     "l": "/tools/polygon-perimeter-from-coordinates"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Checking a stated area",
+   "body": [
+    {
+     "t": "A listing claims 430 acres; the corners say 430.3. Agreement builds trust; disagreement starts the right conversation."
+    }
+   ]
+  },
+  {
+   "title": "Zones and coverage areas",
+   "body": [
+    {
+     "t": "Delivery zones, study areas and service territories drawn as polygons get their true size here — not the bounding box's flattery."
+    }
+   ]
+  },
+  {
+   "title": "Environmental and planning work",
+   "body": [
+    {
+     "t": "Habitat patches, flood zones and development sites are polygons first and paperwork second."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · A Manhattan block of sky",
+   "body": [
+    {
+     "t": "Corners (40.7580, −73.9855), (40.7580, −73.9700), (40.7700, −73.9700), (40.7700, −73.9855): the enclosed area computes to 1.742 km² — 174.2 hectares, 430.3 acres. The edges run 1.31–1.33 km: a serious city park's worth of ground."
+    }
+   ]
+  },
+  {
+   "label": "Example · Order is everything",
+   "body": [
+    {
+     "t": "List the same corners crossed (bowtie order) and the shoelace sum cancels itself toward nonsense. The calculator expects a walked boundary — each point the next corner along the fence, never a scatter."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "How area is computed",
+  "intro": "The method, and what its numbers mean.",
+  "columns": [
+   "Step",
+   "What happens"
+  ],
+  "rows": [
+   [
+    "Project",
+    "Coordinates are mapped to a local flat plane (equirectangular at the polygon's latitude)"
+   ],
+   [
+    "Shoelace",
+    "Cross-sum of (x·y_next − x_next·y) around the ring, halved"
+   ],
+   [
+    "Report",
+    "Square metres/kilometres, hectares and acres from the same sum"
+   ],
+   [
+    "Sanity",
+    "A walked ring gives a positive area; a crossed ring exposes itself"
+   ]
+  ],
+  "note": "For parcel-sized polygons the flat projection is effectively exact. Continent-sized polygons belong to geodesic area methods — the calculator's method note states its scale honestly."
+ },
+ "faq": [
+  [
+   "Does corner order matter?",
+   "Completely — the points must walk the boundary in order (clockwise or counter-clockwise both work). A scrambled order draws a bowtie and the area is meaningless."
+  ],
+  [
+   "Must the first point repeat at the end?",
+   "No — the calculator closes the ring automatically. Repeating it is harmless."
+  ],
+  [
+   "How accurate is the flat projection?",
+   "At field and district scales, beyond any tape measure's patience. The method is stated so survey-grade users know to bring geodesic tools for legal boundaries."
+  ],
+  [
+   "Acres or hectares?",
+   "Both are reported, with square metres and kilometres — US and European readers each get their native unit."
+  ],
+  [
+   "Polygons with holes?",
+   "Compute the outer area and subtract the hole's area, each as its own polygon — lakes inside fields are the classic case."
+  ],
+  [
+   "Self-crossing boundaries?",
+   "They produce self-cancelling areas. Trace the boundary properly and recompute — the tool reads intent from order."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Boundary length: the "
+  },
+  {
+   "t": "Polygon Perimeter From Coordinates",
+   "l": "/tools/polygon-perimeter-from-coordinates"
+  },
+  {
+   "t": "; balance point: the "
+  },
+  {
+   "t": "Polygon Centroid From Coordinates",
+   "l": "/tools/polygon-centroid-from-coordinates"
+  },
+  {
+   "t": "; circles instead: the "
+  },
+  {
+   "t": "Map Radius",
+   "l": "/tools/map-radius"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "city-from-coordinates",
   "coordinate-bounding-box-generator",

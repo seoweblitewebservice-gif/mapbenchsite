@@ -6,17 +6,155 @@
   "date line map",
   "diomede islands time difference"
  ],
- "title": null,
- "description": null,
+ "title": "International Date Line: Where the Day Changes",
+ "description": "Explore the International Date Line — why it zigzags, the 21-hour Diomede gap, and which places greet each new day first. Free interactive map.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, the two Diomede Islands sit under 4 km apart in the Bering Strait — yet their clocks differ by 21 hours, because the date line runs between them.",
+ "quick_answer": "The International Date Line tool maps the invisible boundary where one calendar day becomes the next. Explore its famous bends around island nations, the 21-hour gap between the Diomede Islands, and why crossing it adds or removes a whole day from your trip.",
+ "steps_intro": "The line is a political drawing on a geographic idea — here is how it actually runs:",
+ "use_cases": [
+  {
+   "title": "Planning Pacific travel",
+   "body": [
+    {
+     "t": "Fly Sydney to Los Angeles and you land before you left, on paper. Seeing where the line bends around Fiji, Tonga and Samoa explains real itinerary dates. The "
+    },
+    {
+     "t": "Longitude Time Zone Estimator",
+     "l": "/tools/longitude-time-zone-estimator"
+    },
+    {
+     "t": " shows the solar logic underneath the politics."
+    }
+   ]
+  },
+  {
+   "title": "Teaching time zones honestly",
+   "body": [
+    {
+     "t": "Students think the line sits at 180°. Showing Kiribati's great eastern bulge — a whole nation moved the line in 1995 — teaches that time is negotiated, not just measured."
+    }
+   ]
+  },
+  {
+   "title": "Business across the Pacific",
+   "body": [
+    {
+     "t": "Auckland and Honolulu are close on the map and nearly a day apart on the calendar. The line's position decides whose Monday your email lands in."
+    }
+   ]
+  },
+  {
+   "title": "Curiosity and trivia nights",
+   "body": [
+    {
+     "t": "First sunrise of the new year, the island that skipped a Friday — the date line generates the best geography questions ever asked."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The Diomede gap",
+   "body": [
+    {
+     "t": "Big Diomede (Russia) keeps UTC+12; Little Diomede (USA), under 4 km away, keeps UTC−9. The difference is 21 hours — so from the American island you can literally see tomorrow across the water."
+    }
+   ]
+  },
+  {
+   "label": "Example · Samoa skips a day",
+   "body": [
+    {
+     "t": "On 30 December 2011 Samoa jumped the line westward to align with Australia and New Zealand trade — the country went to sleep on Thursday and woke on Saturday. Friday 30 December simply never happened there."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The date line's greatest bends",
+  "intro": "The line follows 180° only where no one objects. Everywhere else, nations pull it their way.",
+  "columns": [
+   "Bend",
+   "What happened",
+   "Why"
+  ],
+  "rows": [
+   [
+    "Kiribati, 1995",
+    "Line bulged far east around the Line Islands",
+    "So the whole country shares one day; Kiritimati became UTC+14"
+   ],
+   [
+    "Samoa, 2011",
+    "Jumped from the east side to the west side",
+    "Trade with Australia and New Zealand mattered more than with the US"
+   ],
+   [
+    "Diomede Islands",
+    "Line threads a strait under 4 km wide",
+    "Russia and the USA keep their own days within sight of each other"
+   ],
+   [
+    "Fiji",
+    "The 180° meridian crosses its islands, the line bends around them",
+    "So Fiji keeps a single national date"
+   ]
+  ],
+  "note": "There is no international treaty fixing the line — it is drawn by national choices and chart conventions. The maximum clock difference on Earth is 26 hours, between UTC+14 (Kiritimati) and UTC−12 (Baker Island)."
+ },
+ "faq": [
+  [
+   "Why does no country sit split in two by the line?",
+   "Because every country gets to choose its side. The line bends around national territory precisely so that no state wakes up with two dates — the wishes of the countries it passes are the whole reason the zigzags exist."
+  ],
+  [
+   "What happens on a ship crossing the line?",
+   "Crews adjust the ship's calendar at a convenient moment near the line — westbound, a day is skipped; eastbound, a day repeats. The adjustment is tradition and logistics, not law."
+  ],
+  [
+   "Is the date line the same as the 180° meridian?",
+   "No. The meridian is geometry; the line is a negotiated path that mostly follows it but bends around island groups and national borders — in Kiribati's case by thousands of kilometres."
+  ],
+  [
+   "Can two places share a clock time but different dates?",
+   "Yes — that is the line's whole job. Samoa (UTC+13/+14) and American Samoa (UTC−11) are near neighbours with clocks roughly a day apart, which is why the Samoan jump in 2011 split the two Samoas' calendars."
+  ],
+  [
+   "Why did Kiribati move the line?",
+   "Before 1995 the line split Kiribati, so its far-flung islands lived on different days — government offices effectively shared only four working days a week. The 1995 bend unified the national calendar."
+  ],
+  [
+   "Does Antarctica have a date line?",
+   "Antarctica has no official time zones; research stations keep the time of their supply countries. The date line runs to the South Pole on charts, but no community lives by it there."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Estimate the solar time zone from longitude alone with the "
+  },
+  {
+   "t": "Longitude Time Zone Estimator",
+   "l": "/tools/longitude-time-zone-estimator"
+  },
+  {
+   "t": ", find the meridian the whole system hangs from with the "
+  },
+  {
+   "t": "Prime Meridian Finder",
+   "l": "/tools/prime-meridian-finder"
+  },
+  {
+   "t": ", or convert real zone times with the "
+  },
+  {
+   "t": "Timezone Converter",
+   "l": "/tools/timezone-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "antarctic-circle",
   "arctic-circle",

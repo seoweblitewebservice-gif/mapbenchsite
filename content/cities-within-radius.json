@@ -7,17 +7,163 @@
   "cities within miles",
   "nearby cities map"
  ],
- "title": null,
- "description": null,
+ "title": "Cities Within Radius: What Falls in the Circle",
+ "description": "List the cities that fall within a radius of a centre point with Cities Within Radius — straight-line, ranked, honest about the edges. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a 50-mile circle around Chicago takes in Oak Park (8.0 mi), Evanston (11.7), Gary (24.5), Naperville (28.4) and Joliet (33.7) — while Milwaukee, at 81.4 miles, waits outside.",
+ "quick_answer": "Cities Within Radius lists the cities and towns whose centres fall inside a circle you draw around a point. Set the centre and radius and read the ranked list — every place inside, sorted by distance, for market scans, relocation shortlists and every 'what is near here, really?' question.",
+ "steps_intro": "Draw the circle; read who is actually inside it:",
+ "use_cases": [
+  {
+   "title": "Relocation shortlists",
+   "body": [
+    {
+     "t": "“Within an hour-ish of the city” becomes a concrete list of towns to visit, priced by the "
+    },
+    {
+     "t": "City Comparison Tool",
+     "l": "/tools/city-comparison-tool"
+    },
+    {
+     "t": " once the circle names them."
+    }
+   ]
+  },
+  {
+   "title": "Market and territory scans",
+   "body": [
+    {
+     "t": "Which towns does a depot's 50-mile promise really cover? The list is the promise, itemised — catchments drawn by straight line, before drive-time refinements."
+    }
+   ]
+  },
+  {
+   "title": "Event and meetup planning",
+   "body": [
+    {
+     "t": "A central venue's realistic catchment is the towns in its circle. Invitation lists built from the circle stop forgetting the near town in the next county."
+    }
+   ]
+  },
+  {
+   "title": "Fact-checking 'near'",
+   "body": [
+    {
+     "t": "Listings love the phrase 'near Chicago'. The circle adjudicates: Gary at 24.5 miles is near; Milwaukee at 81.4 is a different claim entirely."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 50-mile Chicago circle",
+   "body": [
+    {
+     "t": "In: Oak Park 8.0 mi, Evanston 11.7, Gary 24.5, Naperville 28.4, Joliet 33.7. Out: Milwaukee 81.4. The list is sorted by centre-to-centre distance — Gary's presence reminds you the circle crosses state lines without asking permission."
+    }
+   ]
+  },
+  {
+   "label": "Example · Centre of the city, edge of the town",
+   "body": [
+    {
+     "t": "Membership is judged at each city's centre point. A big city's edge can be inside your circle while its centre is outside — the list says which convention it used, and the radius you choose should leave slack for it."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Choosing a radius",
+  "intro": "What common radii mean in practice (straight-line).",
+  "columns": [
+   "Radius",
+   "Typically captures",
+   "Feels like"
+  ],
+  "rows": [
+   [
+    "10 mi / 16 km",
+    "The home city and inner suburbs",
+    "A local errand"
+   ],
+   [
+    "25 mi / 40 km",
+    "The metro's working body",
+    "A normal commute's reach"
+   ],
+   [
+    "50 mi / 80 km",
+    "The full metro plus exurbs",
+    "A long commute or easy day trip"
+   ],
+   [
+    "100 mi / 161 km",
+    "Neighbouring metros' edges",
+    "A weekend radius"
+   ]
+  ],
+  "note": "Radii are straight-line (great-circle). Driving reach is always smaller and road-shaped — the Drive Time Map draws that version when the distinction decides something."
+ },
+ "faq": [
+  [
+   "Which cities are in the underlying list?",
+   "A gazetteer of incorporated places and recognised towns with their centre coordinates — deep in the US and Europe, thinner where settlement data is sparse. The list states its source family so gaps read as data limits, not editorial choices."
+  ],
+  [
+   "Why is a city I can see on the map missing?",
+   "Its centre may fall just outside the circle even while its suburbs reach in — or the gazetteer's threshold skipped a very small place. Both are conventions, stated here so you can widen the radius deliberately."
+  ],
+  [
+   "Does it rank by population?",
+   "The default order is distance. Population context belongs to the Population Within Radius tool, which counts people instead of places."
+  ],
+  [
+   "Can I use kilometres?",
+   "Yes — radii enter in miles or kilometres, per this site's convention, and distances report in both."
+  ],
+  [
+   "Cities across borders and water?",
+   "The circle is blind to borders, lakes and tolls: Gary, Indiana is in Chicago's circle and across a state line. Political and physical reality layer on top of the geometry, by your judgment."
+  ],
+  [
+   "Twin cities and merged metros?",
+   "Each listed place counts separately even inside one metro — the list is of municipalities, not metro areas, and says so."
+  ],
+  [
+   "How big can the radius be?",
+   "Continental radii return continental lists — technically fine, editorially useless. The tool serves local and regional questions best."
+  ],
+  [
+   "Exact distances — centre to centre?",
+   "Yes: great-circle distance between the two centre points, computed on the sphere. It is not a boundary-to-boundary measure; edge cases near the line deserve the slack the examples describe."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "People, not places: the "
+  },
+  {
+   "t": "Population Within Radius",
+   "l": "/tools/population-within-radius"
+  },
+  {
+   "t": "; postcodes inside: "
+  },
+  {
+   "t": "ZIP Codes Within Radius",
+   "l": "/tools/zip-codes-within-radius"
+  },
+  {
+   "t": "; the circle itself: "
+  },
+  {
+   "t": "Map Radius",
+   "l": "/tools/map-radius"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "australia-postcodes-by-state-suburb",
   "census-geography-finder",

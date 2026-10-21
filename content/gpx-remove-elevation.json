@@ -8,17 +8,154 @@
   "gpx remove ele",
   "remove altitude gps track"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Elevation Remover: Strip the <ele> Tags",
+ "description": "Remove elevation elements from a GPX file with the GPX Elevation Remover — geometry untouched, altitude gone, locally in your browser. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, stripping <ele> from a typical trackpoint shrinks it from 97 to 81 bytes of XML — about a sixth of every point — while the latitude and longitude sit exactly where they were.",
+ "quick_answer": "The GPX Elevation Remover strips the <ele> elevation elements from a GPX file and gives you a cleaned copy whose route geometry is untouched. Load the file, remove the altitude channel, and download the lighter copy — for privacy, compatibility, or wrong elevation.",
+ "steps_intro": "The altitude channel, removed surgically:",
+ "use_cases": [
+  {
+   "title": "Sharing routes without altitude profiles",
+   "body": [
+    {
+     "t": "Some sharing contexts want the line, not the vertical story. The geometry remains complete; the profile is simply not published. Its sibling strips the clock instead: the "
+    },
+    {
+     "t": "GPX Timestamp Remover",
+     "l": "/tools/gpx-remove-timestamps"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Fixing garbage elevation",
+   "body": [
+    {
+     "t": "A file whose altitude channel is corrupt (sea-level mountains, underground valleys) visualises badly everywhere. Removing the channel beats displaying confident nonsense."
+    }
+   ]
+  },
+  {
+   "title": "Compatibility with strict parsers",
+   "body": [
+    {
+     "t": "Some minimal GPX consumers choke on elements they do not expect. A stripped copy is the lowest-common-denominator edition of the same track."
+    }
+   ]
+  },
+  {
+   "title": "File-size trimming",
+   "body": [
+    {
+     "t": "Elevation is a sixth of a typical point's bytes. For massive archives shared as geometry, the saving is real — and the original keeps the full record."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · One point, before and after",
+   "body": [
+    {
+     "t": "Before: <trkpt lat=\"40.768100\" lon=\"-73.971900\"><ele>102.4</ele><time>…</time></trkpt> — 97 bytes. After: the same point without <ele> — 81 bytes. Coordinates and time untouched; only the altitude statement is withdrawn."
+    }
+   ]
+  },
+  {
+   "label": "Example · What breaks downstream",
+   "body": [
+    {
+     "t": "Elevation gain, loss and profile charts have nothing to read in the stripped file — they report absence, not zero. Keep the original wherever the vertical story matters; the stripped edition is for audiences who should not have it."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What is removed, what survives",
+  "intro": "The operation's exact scope.",
+  "columns": [
+   "Element",
+   "Fate"
+  ],
+  "rows": [
+   [
+    "<ele> in trackpoints",
+    "Removed"
+   ],
+   [
+    "<ele> in waypoints and route points",
+    "Removed"
+   ],
+   [
+    "lat / lon attributes",
+    "Untouched — the geometry is the point"
+   ],
+   [
+    "<time> and other elements",
+    "Untouched"
+   ],
+   [
+    "Extension data (HR, power)",
+    "Untouched — other channels are other removals"
+   ]
+  ],
+  "note": "The tool edits a copy in your browser and downloads it; your original file is never modified. 'Remove' here means 'publish without', which is why the original stays sacred."
+ },
+ "faq": [
+  [
+   "Does the route still display on maps?",
+   "Yes — maps draw from latitude/longitude. The track shows identically in plan view; only profile and ascent features go quiet."
+  ],
+  [
+   "Can elevation be recovered later?",
+   "Not from the stripped file — but a map model can re-derive approximate elevation for the coordinates (DEM sampling). That is a model's estimate, not your recording's measurement, and honest tools label it so."
+  ],
+  [
+   "Why would elevation be private?",
+   "Altitude profiles can identify home floors, exact buildings and routines more precisely than a street path does. Stripping is a legitimate pre-share decision."
+  ],
+  [
+   "Negative or zero elevations?",
+   "Real places sit below sea level and files carry 0 for missing data in sloppy exports — the remover removes the element whatever it says; it does not judge values."
+  ],
+  [
+   "Does it remove depth or altitude in extensions?",
+   "The standard <ele> channel is the scope. Exotic extension altitude fields are outside the GPX core this tool edits."
+  ],
+  [
+   "Routes versus tracks?",
+   "Both are stripped — <ele> appears in rtept and wpt too, and the remover walks the whole document."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Strip time instead: the "
+  },
+  {
+   "t": "GPX Timestamp Remover",
+   "l": "/tools/gpx-remove-timestamps"
+  },
+  {
+   "t": "; strip places: the "
+  },
+  {
+   "t": "GPX Remove Waypoints Tool",
+   "l": "/tools/gpx-remove-waypoints-tool"
+  },
+  {
+   "t": "; the elevation reader: the "
+  },
+  {
+   "t": "GPX Elevation Gain Calculator",
+   "l": "/tools/gpx-elevation-gain-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

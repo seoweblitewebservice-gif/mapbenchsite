@@ -8,17 +8,158 @@
   "pressure altitude calculator tool",
   "how to calculate pressure altitude calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Pressure Altitude Calculator: Aviation Standard",
+ "description": "Calculate pressure altitude from pressure with the Pressure Altitude Calculator — the ISA formula pilots and altimeters live by. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, air pressure of 29.42 inHg at sea level corresponds to a pressure altitude of 467 feet — your altimeter, set to 29.92, would swear you are nearly 500 feet up while you stand on the ramp.",
+ "quick_answer": "The Pressure Altitude Calculator converts an air pressure reading into pressure altitude — the height the International Standard Atmosphere assigns to that pressure. Enter the pressure and read the altitude in feet: the number aircraft performance charts, altimeter settings and density calculations all start from.",
+ "steps_intro": "Pressure is altitude, spoken by the standard atmosphere:",
+ "use_cases": [
+  {
+   "title": "Pilot performance planning",
+   "body": [
+    {
+     "t": "Takeoff charts are indexed by pressure altitude (then corrected for temperature into density altitude). Compute the PA from the field's pressure before the chart work begins."
+    }
+   ]
+  },
+  {
+   "title": "Understanding your altimeter",
+   "body": [
+    {
+     "t": "An altimeter is a pressure gauge with ambitions. This page shows the conversion it performs — and why the Kollsman window's setting matters, a companion to the "
+    },
+    {
+     "t": "Elevation Finder",
+     "l": "/tools/elevation-finder"
+    },
+    {
+     "t": "'s ground truth."
+    }
+   ]
+  },
+  {
+   "title": "Hiking and barometric gadgets",
+   "body": [
+    {
+     "t": "Watches and phones that report 'altitude' from pressure are doing this calculation with a sea-level reference you give them. Knowing the formula explains their weather-day drift."
+    }
+   ]
+  },
+  {
+   "title": "Weather station calibration",
+   "body": [
+    {
+     "t": "Home stations report sea-level pressure by inverting this very relation with your elevation — set the elevation right, or every forecast model ingesting your data inherits the error."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · A low-pressure day",
+   "body": [
+    {
+     "t": "Station pressure 28.50 inHg — a strong storm's figure — corresponds to a pressure altitude of about 1,340 ft at sea level. Aircraft on the ground 'believe' they are a quarter-mile up, and their takeoff performance genuinely worsens to match."
+    }
+   ]
+  },
+  {
+   "label": "Example · A high-pressure day",
+   "body": [
+    {
+     "t": "At 30.50 inHg, pressure altitude at sea level is about −531 ft — below the sea, in the standard atmosphere's bookkeeping. Negative pressure altitudes are legitimate outputs, and performance charts handle them fine."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Pressure to pressure altitude (ISA, sea level)",
+  "intro": "Computed with the standard formula PA = 145,366.45 × (1 − (P/29.92126)^0.190284), P in inHg.",
+  "columns": [
+   "Pressure",
+   "Pressure altitude"
+  ],
+  "rows": [
+   [
+    "28.50 inHg",
+    "≈ 1,340 ft"
+   ],
+   [
+    "29.42 inHg",
+    "≈ 467 ft"
+   ],
+   [
+    "29.92 inHg (standard)",
+    "0 ft"
+   ],
+   [
+    "30.50 inHg",
+    "≈ −531 ft"
+   ],
+   [
+    "Rule of thumb",
+    "1 inHg ≈ 1,000 ft near sea level (exact formula: ~937 ft for the first inHg)"
+   ]
+  ],
+  "note": "Pressure altitude is not true altitude — it is the standard atmosphere's interpretation of a pressure. Temperature then bends it into density altitude, which is what wings and engines actually feel."
+ },
+ "faq": [
+  [
+   "Pressure altitude versus density altitude?",
+   "Density altitude is pressure altitude corrected for temperature — hot air thins, and the aircraft performs as if higher. PA is the first half of the calculation; every performance chart wants both halves done."
+  ],
+  [
+   "What is 29.92 (1013.25 hPa)?",
+   "The standard atmosphere's sea-level pressure — the reference the whole system hangs from. Altimeters set to it read pressure altitude directly, which is why airliners above the transition altitude all fly on 29.92."
+  ],
+  [
+   "hPa instead of inHg?",
+   "The same ISA relation in hectopascals: PA (ft) = 145,366.45 × (1 − (P/1013.25)^0.190284). One formula, two unit dialects — aviation outside the US mostly speaks hPa."
+  ],
+  [
+   "Why does my altimeter disagree with GPS altitude?",
+   "Because they measure different things: pressure (interpreted) versus satellite geometry. On non-standard days differences of 100–300 ft at altitude are unremarkable and expected."
+  ],
+  [
+   "Station pressure or sea-level pressure?",
+   "The formula wants the actual pressure at the point (station pressure). Weather reports publish sea-level-reduced pressure (the altimeter setting) — feeding one as the other is the classic input error, worth roughly your elevation in feet of error."
+  ],
+  [
+   "Negative pressure altitude — a bug?",
+   "No: high-pressure days push the standard atmosphere's zero below the real sea. The arithmetic is calm about it, and so are the charts."
+  ],
+  [
+   "Does humidity matter?",
+   "For density altitude, slightly (moist air is less dense); for pressure altitude as defined, no — it is a pressure-only construction by design."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Ground truth: the "
+  },
+  {
+   "t": "Elevation Finder",
+   "l": "/tools/elevation-finder"
+  },
+  {
+   "t": "; standing there: "
+  },
+  {
+   "t": "My Elevation",
+   "l": "/tools/my-elevation"
+  },
+  {
+   "t": "; the view from that altitude: "
+  },
+  {
+   "t": "Horizon Distance",
+   "l": "/tools/horizon-distance"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "central-angle-from-distance-calculator",
   "cicada-emergence-map",

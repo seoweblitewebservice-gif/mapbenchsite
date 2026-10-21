@@ -8,17 +8,161 @@
   "wkt coordinate counter tool",
   "how to calculate wkt coordinate counter"
  ],
- "title": null,
- "description": null,
+ "title": "WKT Coordinate Counter: Pairs in a Geometry",
+ "description": "Count the coordinate pairs inside a WKT geometry with the WKT Coordinate Counter — vertices per ring and part, tallied locally. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a POLYGON whose outer ring lists 5 pairs and whose hole lists 4 holds 9 coordinate pairs — with the closing pair of each ring counted, because in WKT it is written, so it counts.",
+ "quick_answer": "The WKT Coordinate Counter counts the coordinate pairs inside a Well-Known Text geometry — every vertex of every ring, line and member — and breaks the total down by part. Paste the WKT and read how many positions the geometry actually carries.",
+ "steps_intro": "Vertices are a geometry's weight. Weigh it:",
+ "use_cases": [
+  {
+   "title": "Estimating geometry complexity",
+   "body": [
+    {
+     "t": "Vertex count predicts rendering cost, payload size and simplification benefit better than file size does. Compare before and after a simplify pass — the "
+    },
+    {
+     "t": "GeoJSON Simplify Helper",
+     "l": "/tools/geojson-simplify-helper"
+    },
+    {
+     "t": " works the same trade on GeoJSON."
+    }
+   ]
+  },
+  {
+   "title": "Checking ring closure",
+   "body": [
+    {
+     "t": "A POLYGON ring whose first and last pairs match is closed; counting pairs per ring helps spot the ring that forgot to come home."
+    }
+   ]
+  },
+  {
+   "title": "Database payload audits",
+   "body": [
+    {
+     "t": "A 'simple boundary' column holding 400,000-pair monsters explains the slow queries — the counter proves which rows are the monsters."
+    }
+   ]
+  },
+  {
+   "title": "Verifying a conversion",
+   "body": [
+    {
+     "t": "WKT in, GeoJSON out: pair counts should survive conversion (modulo ring-closure conventions). Count both sides with their own counters and reconcile."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The closing pair counts",
+   "body": [
+    {
+     "t": "A square POLYGON ring written with 5 pairs (the fifth repeating the first to close) counts 5, not 4 — the counter counts what is written. Some formats store 4 and imply closure; conversions differ by exactly the ring count, and this is where that off-by-one lives."
+    }
+   ]
+  },
+  {
+   "label": "Example · Multi-part totals",
+   "body": [
+    {
+     "t": "A MULTILINESTRING of three lines with 12, 40 and 7 pairs totals 59 — reported per part as well as summed, because the 40-pair part is where the weight (and the simplification win) sits."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Pairs by geometry type",
+  "intro": "What the counter tallies in each WKT form.",
+  "columns": [
+   "Geometry",
+   "Pairs counted"
+  ],
+  "rows": [
+   [
+    "POINT",
+    "1 (or 0 for POINT EMPTY)"
+   ],
+   [
+    "LINESTRING",
+    "Every vertex in order"
+   ],
+   [
+    "POLYGON",
+    "All rings — outer plus every hole, closing pairs included"
+   ],
+   [
+    "MULTI* / GEOMETRYCOLLECTION",
+    "Sum over all members, recursively"
+   ]
+  ],
+  "note": "Z and M ordinates ride inside the pairs; a pair is a position regardless of how many numbers dress it."
+ },
+ "faq": [
+  [
+   "POINT with Z — still one pair?",
+   "Yes — one position with three ordinates. The counter counts positions, not numbers."
+  ],
+  [
+   "Empty geometries?",
+   "POINT EMPTY and friends count as zero, reported as the valid empties they are."
+  ],
+  [
+   "Nested collections?",
+   "GEOMETRYCOLLECTION members recurse — a collection of collections counts to the bottom."
+  ],
+  [
+   "Why would two files of one boundary differ by exactly the ring count?",
+   "Closure convention: one writer repeats the first pair per ring, another doesn't. The difference equals the number of rings — a fingerprint, not an error."
+  ],
+  [
+   "Curves (CIRCULARSTRING, COMPOUNDPOLYGON)?",
+   "Their control points are countable tuples; true arc vertices are implied geometry beyond tuple counting — the count reports the written control points, labelled as such."
+  ],
+  [
+   "Huge WKT (megabytes)?",
+   "The parse is linear in the text; million-pair geometries count in seconds in the browser."
+  ],
+  [
+   "Can it count only unique positions?",
+   "Duplicates (including closing pairs) count as written. Uniqueness is an analysis choice, not a counting default."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Its box: the "
+  },
+  {
+   "t": "WKT Bounding Box Calculator",
+   "l": "/tools/wkt-bounding-box"
+  },
+  {
+   "t": "; validate: the "
+  },
+  {
+   "t": "WKT Validator",
+   "l": "/tools/wkt-validator"
+  },
+  {
+   "t": "; convert: the "
+  },
+  {
+   "t": "WKT / GeoJSON Helper",
+   "l": "/tools/wkt-geojson-helper"
+  },
+  {
+   "t": "; GeoJSON counting: the "
+  },
+  {
+   "t": "GeoJSON Coordinate Counter",
+   "l": "/tools/geojson-coordinate-counter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

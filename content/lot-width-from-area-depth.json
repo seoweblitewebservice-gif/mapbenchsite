@@ -8,17 +8,164 @@
   "lot width from area and depth tool",
   "how to use lot width from area and depth"
  ],
- "title": null,
- "description": null,
+ "title": "Lot Width From Area and Depth",
+ "description": "Find a rectangular lot's width from its area and depth with Lot Width From Area and Depth — area ÷ depth, in feet, metres or acres. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a half-acre lot (21,780 sq ft) that runs 198 feet deep must be 110 feet wide — the frontage the listing forgot to mention, recovered by one division.",
+ "quick_answer": "Lot Width From Area and Depth finds the missing side of a rectangular lot: width equals area divided by depth. Enter the area and the depth and read the width — the frontage figure that decides building envelopes and split feasibility.",
+ "steps_intro": "Area ÷ depth = the frontage nobody printed:",
+ "use_cases": [
+  {
+   "title": "Frontage recovery from old plats",
+   "body": [
+    {
+     "t": "Historic plats often state depth and area but let the frontage fade. The division restores it — and its twin restores depth: "
+    },
+    {
+     "t": "Lot Depth From Area and Width",
+     "l": "/tools/lot-depth-from-area-width"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Split feasibility",
+   "body": [
+    {
+     "t": "Zoning demands 75 ft of frontage per lot; the parcel computes to 110 ft wide — one lot, not two, whatever the owner's hopes. The width is where subdivision dreams meet arithmetic."
+    }
+   ]
+  },
+  {
+   "title": "Road and access valuation",
+   "body": [
+    {
+     "t": "Frontage is value: retail and road-front parcels price by the front foot. A recovered width prices the access, not just the dirt."
+    }
+   ]
+  },
+  {
+   "title": "Cross-checking a listing's trio",
+   "body": [
+    {
+     "t": "Area, depth and width should multiply out. Run the solver on any two and compare with the third — the mismatch names the rounded (or invented) figure."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The half-acre standard",
+   "body": [
+    {
+     "t": "21,780 sq ft ÷ 198 ft deep = 110 ft wide. The 110 × 198 half-acre is a subdivision standard across the American Midwest — plat maps repeat it like a chorus."
+    }
+   ]
+  },
+  {
+   "label": "Example · Narrow-lot detection",
+   "body": [
+    {
+     "t": "A quarter acre (10,890 sq ft) at 217.8 ft deep implies a 50 ft width — a narrow, deep lot whose building envelope and price behave very differently from the 66 × 165 classic. The width is the character of the lot."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Widths for common lots",
+  "intro": "Area ÷ depth for the sizes plats repeat.",
+  "columns": [
+   "Area",
+   "Depth",
+   "Width"
+  ],
+  "rows": [
+   [
+    "10,890 sq ft (¼ acre)",
+    "165 ft",
+    "66 ft"
+   ],
+   [
+    "10,890 sq ft",
+    "217.8 ft",
+    "50 ft"
+   ],
+   [
+    "21,780 sq ft (½ acre)",
+    "198 ft",
+    "110 ft"
+   ],
+   [
+    "43,560 sq ft (1 acre)",
+    "435.6 ft",
+    "100 ft"
+   ],
+   [
+    "43,560 sq ft",
+    "208.7 ft",
+    "208.7 ft — the square acre"
+   ]
+  ],
+  "note": "Rectangles only, as with its twin: tapered and flag lots need the map, not the division."
+ },
+ "faq": [
+  [
+   "Which side is 'width' on a corner lot?",
+   "Convention takes width along the addressed street. Corner lots can be read two ways — compute both and let the zoning code's definition of frontage settle which one governs."
+  ],
+  [
+   "Can I enter the area in acres?",
+   "Yes — acres, square feet and square metres all convert internally. Half an acre at 198 ft deep is the worked example on this page."
+  ],
+  [
+   "My lot tapers — front narrower than back.",
+   "Then two widths exist and the division returns their average. For pricing and envelopes, the front width is usually the binding one; measure it on the plat or the map."
+  ],
+  [
+   "Flag lots (pole lots)?",
+   "The pole's width is access, not frontage in the usual sense, and the flag's width hides behind another lot. This solver prices the rectangular part; the pole is a legal conversation."
+  ],
+  [
+   "Width for a curved street frontage?",
+   "Chord versus arc: deeds usually state the chord or the arc length along the curve. The solver's straight width approximates both only for gentle curves."
+  ],
+  [
+   "How precise is the recovered width?",
+   "Exactly as precise as the area and depth fed in — a rounded 'half acre' (21,780 sq ft) hides ±hundreds of square feet, and the width inherits that fuzz proportionally."
+  ],
+  [
+   "Why do listings omit width?",
+   "Because depth and acreage sound generous and a 50 ft frontage does not. The solver exists so the omission never survives your due diligence."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The mirror: "
+  },
+  {
+   "t": "Lot Depth From Area and Width",
+   "l": "/tools/lot-depth-from-area-width"
+  },
+  {
+   "t": "; both sides known: the "
+  },
+  {
+   "t": "Lot Size Calculator",
+   "l": "/tools/lot-size-calculator"
+  },
+  {
+   "t": "; price the frontage: the "
+  },
+  {
+   "t": "Land Cost Per Square Foot Calculator",
+   "l": "/tools/land-cost-per-square-foot"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-area-from-radius",

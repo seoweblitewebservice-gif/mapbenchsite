@@ -7,17 +7,164 @@
   "census geography",
   "FIPS"
  ],
- "title": null,
- "description": null,
+ "title": "Census Geography Finder: Tract, County, State",
+ "description": "Find the census geography containing a point with the Census Geography Finder — state, county, tract and block group FIPS codes. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a point in downtown Chicago resolves to Illinois (FIPS 17), Cook County (17031), and then one specific tract and block group inside it — the full nesting doll of US census geography.",
+ "quick_answer": "The Census Geography Finder reports the census geography that contains a coordinate point — state, county, census tract, block group and block, with their FIPS codes. Paste the point and read the hierarchy: the identifiers that unlock every dataset the Census Bureau and the ACS publish.",
+ "steps_intro": "Every US point lives inside a stack of census areas. Unstack yours:",
+ "use_cases": [
+  {
+   "title": "Joining census data to your points",
+   "body": [
+    {
+     "t": "ACS tables are keyed by FIPS codes. The finder turns your coordinates into the keys — then the "
+    },
+    {
+     "t": "U.S. County Demographic Explorer",
+     "l": "/tools/us-county-demographic-explorer"
+    },
+    {
+     "t": " and tract-level tables can join on them."
+    }
+   ]
+  },
+  {
+   "title": "Research and grant writing",
+   "body": [
+    {
+     "t": "Funders ask for tract identifiers because tracts are the unit of need measurement (CRA, CDFI and health research all speak tract). This finder is step one of a thousand applications."
+    }
+   ]
+  },
+  {
+   "title": "Verifying an address's tract",
+   "body": [
+    {
+     "t": "A claimed tract for an address can be checked from its coordinates in one lookup — mismatches usually mean a geocode landed across the street, in the next tract."
+    }
+   ]
+  },
+  {
+   "title": "Learning the geography system",
+   "body": [
+    {
+     "t": "Nation, state, county, tract, block group, block — the nesting is the Bureau's master design, and seeing your own home's full stack teaches it permanently."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Reading a GEO ID",
+   "body": [
+    {
+     "t": "A block-group GEO ID like 170310101001 reads as: 17 (Illinois) + 031 (Cook County) + 010100 (tract) + 1 (block group). The finder returns the stack labelled, so the code stops being a phone number and becomes an address in geography-space."
+    }
+   ]
+  },
+  {
+   "label": "Example · Designed populations",
+   "body": [
+    {
+     "t": "Tracts are drawn for roughly 4,000 residents (the Census Bureau's design target is an average near 4,000, within a 1,200–8,000 range); block groups hold 600–3,000. The finder shows you units that were designed to be statistically comparable — that is their whole purpose."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The census hierarchy",
+  "intro": "From the nation down to the block — with the Bureau's design sizes.",
+  "columns": [
+   "Level",
+   "Typical size",
+   "Identified by"
+  ],
+  "rows": [
+   [
+    "State",
+    "One of 50 + DC and territories",
+    "2-digit state FIPS"
+   ],
+   [
+    "County / equivalent",
+    "3,143 nationwide",
+    "3-digit county FIPS"
+   ],
+   [
+    "Census tract",
+    "~4,000 people (1,200–8,000)",
+    "6-digit tract code"
+   ],
+   [
+    "Block group",
+    "600–3,000 people",
+    "1 digit within the tract"
+   ],
+   [
+    "Census block",
+    "A city block or rural equivalent",
+    "4-digit block code (first digit = block group)"
+   ]
+  ],
+  "note": "Boundaries and codes are the Census Bureau's TIGER/Line geography for the stated vintage; tracts are redrawn each decennial census, so a 2010 tract ID and a 2020 tract ID are different objects with similar names."
+ },
+ "faq": [
+  [
+   "Which census vintage does it use?",
+   "The finder reports the current TIGER/Line geography it is built on and names the vintage with the result — because tract IDs silently change meaning between censuses, the vintage is part of the answer."
+  ],
+  [
+   "Does it cover Puerto Rico and the territories?",
+   "Census geography covers Puerto Rico's municipios in the same hierarchy; the island areas use their own census programmes and vintages, stated with any result."
+  ],
+  [
+   "What is a county equivalent?",
+   "Louisiana parishes, Alaska boroughs, independent cities and DC function as counties in census geography — the finder uses the Bureau's list, names included."
+  ],
+  [
+   "Can I get the tract for an address, not coordinates?",
+   "Geocode the address first (the Batch Geocoder), then find its geography. The two-step route keeps each tool's honesty about its own step."
+  ],
+  [
+   "Why did my tract change between 2010 and 2020?",
+   "Tracts split when population grows past the design range and merge when it falls — your neighbourhood did not move; the statistical net was re-knotted."
+  ],
+  [
+   "Tribal geographies?",
+   "The Bureau maintains American Indian area geographies alongside the standard stack; where a point falls in one, the fuller record matters for the programmes that fund by it."
+  ],
+  [
+   "Is the block my exact address's unit?",
+   "Blocks are the smallest geography and hold no published demographics (privacy). Your block ID identifies geography, never your household's data — by the Bureau's design."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The data the keys unlock: the "
+  },
+  {
+   "t": "U.S. County Demographic Explorer",
+   "l": "/tools/us-county-demographic-explorer"
+  },
+  {
+   "t": "; county by point: "
+  },
+  {
+   "t": "What County Am I In",
+   "l": "/tools/what-county-am-i-in"
+  },
+  {
+   "t": "; addresses first: the "
+  },
+  {
+   "t": "Batch Geocoder",
+   "l": "/tools/batch-geocoder"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "australia-postcodes-by-state-suburb",
   "cities-within-radius",

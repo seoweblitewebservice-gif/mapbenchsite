@@ -8,17 +8,158 @@
   "geojson property key finder tool",
   "how to calculate geojson property key finder"
  ],
- "title": null,
- "description": null,
+ "title": "GeoJSON Property Key Finder: Schema Census",
+ "description": "List the unique property keys used across a GeoJSON file's features with the GeoJSON Property Key Finder — the schema hiding in your data. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a four-feature sample reports three keys — name on all 4 features, type on all 4, and code on just 1 — exposing the airport’s extra field the other features never got.",
+ "quick_answer": "The GeoJSON Property Key Finder lists the unique property keys used across a GeoJSON file’s features — the de facto schema hiding in the data. Paste the file and read every key: the census revealing inconsistencies, undocumented fields and the shape your styling can rely on.",
+ "steps_intro": "Properties are promises. List the promises actually made:",
+ "use_cases": [
+  {
+   "title": "Schema discovery",
+   "body": [
+    {
+     "t": "Nobody documented the file; the keys document it themselves. The finder produces the field list documentation should have shipped. Compare across files before merging them — the "
+    },
+    {
+     "t": "GeoJSON Feature Counter",
+     "l": "/tools/geojson-feature-counter"
+    },
+    {
+     "t": " reconciles their sizes."
+    }
+   ]
+  },
+  {
+   "title": "Style and filter planning",
+   "body": [
+    {
+     "t": "Map styles filter on properties (type = ‘airport’). Knowing which keys exist — and on how many features — prevents styles that silently match nothing."
+    }
+   ]
+  },
+  {
+   "title": "Inconsistency hunting",
+   "body": [
+    {
+     "t": "‘name’ on 400 features and ‘Name’ on 37 is one dataset with two dialects. Key censuses surface case drift, typos and half-applied schemas."
+    }
+   ]
+  },
+  {
+   "title": "Merge preparation",
+   "body": [
+    {
+     "t": "Two files merge cleanly only if their property dialects align. List both key sets first; align; then merge."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The key on one feature",
+   "body": [
+    {
+     "t": "A key appearing once in 10,000 features is either a jewel (the one airport’s code) or a typo (‘naem’). The finder cannot judge — it guarantees you see it, which is where judgment starts."
+    }
+   ]
+  },
+  {
+   "label": "Example · The missing everywhere-key",
+   "body": [
+    {
+     "t": "‘id’ on 998 of 1,000 features means two features will break every id-based join downstream. Coverage counts per key turn schema QA from archaeology into arithmetic."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading the census",
+  "intro": "Key patterns and what they usually mean.",
+  "columns": [
+   "Pattern",
+   "Usually means"
+  ],
+  "rows": [
+   [
+    "Key on every feature",
+    "Core schema — safe to style, filter and join on"
+   ],
+   [
+    "Key on most features",
+    "Optional field — or a data-entry gap growing"
+   ],
+   [
+    "Key on a few",
+    "Subtype-specific field (codes, runways) — or the schema’s frontier"
+   ],
+   [
+    "Key exactly once",
+    "Typo suspect until proven jewel"
+   ],
+   [
+    "Case variants (name / Name)",
+    "Two pipelines shook hands without introducing themselves"
+   ]
+  ],
+  "note": "The finder reads keys, not values: it reports that ‘code’ exists and where, not whether the codes are valid. Value-level QA is the next gate, and it starts from this list."
+ },
+ "faq": [
+  [
+   "Does it show property values too?",
+   "The census is of keys and their coverage. Values are your data’s content; keys are its contract — this tool audits the contract."
+  ],
+  [
+   "Nested properties objects?",
+   "Properties are usually flat; where a value is itself an object, its top-level key is what the census lists — nested keys belong to that value’s own story."
+  ],
+  [
+   "Null-valued keys counted?",
+   "A key present with value null is present — and the distinction matters: null is a statement (‘known to be none’), absence is silence. The census counts statements."
+  ],
+  [
+   "Feature id versus properties?",
+   "A feature’s top-level ‘id’ member is not inside properties. The finder’s world is the properties object; ids get their own mention when a file uses them."
+  ],
+  [
+   "Mixed types under one key?",
+   "‘code’ as string on 900 features and number on 3 is a value-type inconsistency — visible when you sample values; the key census is the alarm that sends you sampling."
+  ],
+  [
+   "Can it compare two files’ keys?",
+   "Run it on each and compare the lists — the workflow is manual and quick for pairs; schema-diff tooling automates it for pipelines."
+  ],
+  [
+   "Geometry keys included?",
+   "No — ‘type’, ‘coordinates’ and ‘geometry’ are structure, not properties. The census covers the properties object only, which is where data design lives."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Counts: the "
+  },
+  {
+   "t": "GeoJSON Feature Counter",
+   "l": "/tools/geojson-feature-counter"
+  },
+  {
+   "t": "; types: the "
+  },
+  {
+   "t": "GeoJSON Geometry Type Counter",
+   "l": "/tools/geojson-geometry-type-counter"
+  },
+  {
+   "t": "; build files with keys: the "
+  },
+  {
+   "t": "CSV to GeoJSON Converter",
+   "l": "/tools/csv-to-geojson-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

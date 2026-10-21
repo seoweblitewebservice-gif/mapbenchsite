@@ -6,17 +6,168 @@
   "city cost compare",
   "relocation cost"
  ],
- "title": null,
- "description": null,
+ "title": "Cost of Living Compare: Same Life, Two Cities",
+ "description": "Compare cost of living between two cities with Cost of Living Compare — index logic explained so the numbers stay honest. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, on index arithmetic alone, a $3,000 monthly budget in a city indexed at 92 needs about $5,870 in a city indexed at 180 to buy the same life — the indexes are illustrative; the method is the lesson.",
+ "quick_answer": "Cost of Living Compare sets two cities' living costs side by side using index numbers — each city's basket price relative to a common baseline. Pick the pair and read what the same life costs there versus here — and what a salary buys in each.",
+ "steps_intro": "Costs only compare as indexes. Here is the pair, and the method kept visible:",
+ "use_cases": [
+  {
+   "title": "Relocation salary checks",
+   "body": [
+    {
+     "t": "A raise that is a pay cut after the move is the classic trap. Run the pair before negotiating — the "
+    },
+    {
+     "t": "City Comparison Tool",
+     "l": "/tools/city-comparison-tool"
+    },
+    {
+     "t": " supplies the size context; this tool prices the life."
+    }
+   ]
+  },
+  {
+   "title": "Remote-work location choices",
+   "body": [
+    {
+     "t": "A salary set in one market stretches differently in another. The comparison turns 'cheaper there' into a defensible monthly figure."
+    }
+   ]
+  },
+  {
+   "title": "Retirement shortlists",
+   "body": [
+    {
+     "t": "Fixed incomes make index gaps permanent. Retirees comparing two finalists deserve the basket view, not the rent-only view."
+    }
+   ]
+  },
+  {
+   "title": "Student and first-job moves",
+   "body": [
+    {
+     "t": "The first salary's real value is set by the city's index. Comparing before signing beats discovering it from the first month's receipts."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · How to read an index",
+   "body": [
+    {
+     "t": "Index 100 is the baseline basket. A city at 180 costs 1.8 times the baseline for the same basket; at 92, about 8 percent less. Salary equivalence runs the ratio backward: multiply by (destination ÷ current) — the worked budget in the summary is that arithmetic, with illustrative indexes."
+    }
+   ]
+  },
+  {
+   "label": "Example · Housing breaks the basket",
+   "body": [
+    {
+     "t": "Indexes average the basket; your life may not. A renter's comparison is dominated by the housing row, a homeowner's by everything else. Read the category rows, not just the headline — the tool shows both because the headline alone misleads most movers."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the comparison rests on",
+  "intro": "Index methodology, stated so the numbers can be doubted properly.",
+  "columns": [
+   "Component",
+   "How it enters",
+   "Volatility"
+  ],
+  "rows": [
+   [
+    "Housing (rent)",
+    "The largest weight in most baskets",
+    "High — moves yearly, by neighbourhood"
+   ],
+   [
+    "Groceries and eating out",
+    "A standard basket priced locally",
+    "Moderate"
+   ],
+   [
+    "Transport",
+    "Transit passes or car costs by city pattern",
+    "Moderate"
+   ],
+   [
+    "Services and goods",
+    "The basket's long tail",
+    "Low"
+   ],
+   [
+    "Income tax",
+    "NOT in most price indexes",
+    "Separate question — see the FAQs"
+   ]
+  ],
+  "note": "Cost-of-living indexes (the C2ER/ACCRA tradition in the US) price a basket for a reference household. They are comparison instruments, not predictions of your spending — your basket is your own."
+ },
+ "faq": [
+  [
+   "Is the comparison official inflation data?",
+   "No — it is a cross-city price index, not a time-series inflation measure (that is the CPI's job, and the base FAQ names the distinction). City-versus-city and month-versus-month are different questions."
+  ],
+  [
+   "Which baseline is 100?",
+   "The index family's reference — a national average basket in the C2ER tradition. Both cities are measured against the same 100, which is what makes their ratio meaningful."
+  ],
+  [
+   "Why is my experience different from the index?",
+   "The basket belongs to a reference household. Childcare, a car habit, or a taste for eating out reweights your personal index — the category rows let you recompute the comparison with your own weights."
+  ],
+  [
+   "Does it include taxes?",
+   "Price indexes price goods and housing, not tax codes. Two cities with equal indexes can leave different paycheques after state, city and sales taxes — treat tax as a second, separate comparison."
+  ],
+  [
+   "How fresh are the prices?",
+   "Index publishers survey periodically; rents in hot markets outrun any survey. Use the comparison for the decision's scale (a 90-point gap is decisive; a 4-point gap is noise)."
+  ],
+  [
+   "Neighbourhoods within a city?",
+   "Indexes are city-level. Neighbourhood rents can double across one city — the index frames the negotiation; the neighbourhood decides it."
+  ],
+  [
+   "International pairs?",
+   "Cross-border comparisons add currency and basket-definition differences; treat them as orientation, and convert at a stated exchange-rate date."
+  ],
+  [
+   "Salary negotiation use?",
+   "Quote the ratio, not a vibe: 'the destination indexes 1.4× my current city on the same basket' is a sentence a manager can take to finance."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Size context: the "
+  },
+  {
+   "t": "City Comparison Tool",
+   "l": "/tools/city-comparison-tool"
+  },
+  {
+   "t": "; candidates: "
+  },
+  {
+   "t": "Cities Within Radius",
+   "l": "/tools/cities-within-radius"
+  },
+  {
+   "t": "; densities: the "
+  },
+  {
+   "t": "Population Density Compare",
+   "l": "/tools/population-density-compare"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "nearest-postcode-from-list",
   "population-density-compare",

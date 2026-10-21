@@ -8,17 +8,164 @@
   "store catchment area calculator tool",
   "how to use store catchment area calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Store Catchment Area Calculator",
+ "description": "Size a store's catchment with the Store Catchment Area Calculator — primary and secondary rings, areas and the population maths they feed. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a store's 3-mile primary catchment covers 28.3 square miles — at a suburban density of 2,500 people per square mile, that is roughly 70,700 potential customers before a single competitor is counted.",
+ "quick_answer": "The Store Catchment Area Calculator sizes the rings a store draws its trade from — typically a primary ring, a secondary ring and an outer zone — computing each band's true area. Enter the ring radii and read the areas: the ground truth beneath catchment population estimates and site comparisons.",
+ "steps_intro": "Catchments are rings, and rings have exact areas:",
+ "use_cases": [
+  {
+   "title": "Site comparison",
+   "body": [
+    {
+     "t": "Two candidate sites, same rings: the catchment areas either match the rent difference or expose it. Pair with the "
+    },
+    {
+     "t": "Store Locator Radius Map",
+     "l": "/tools/store-locator-radius"
+    },
+    {
+     "t": " for the visual version."
+    }
+   ]
+  },
+  {
+   "title": "Population estimation",
+   "body": [
+    {
+     "t": "Ring area × local density = catchment population, labelled as the estimate it is. The calculator keeps the area exact so the estimate's softness lives only in the density."
+    }
+   ]
+  },
+  {
+   "title": "Cannibalisation checks",
+   "body": [
+    {
+     "t": "A new store's rings over an existing store's: the shared bands' areas price the overlap before the opening does."
+    }
+   ]
+  },
+  {
+   "title": "Franchise presentations",
+   "body": [
+    {
+     "t": "Catchment areas are the franchise brochure's honest core — computed rings, stated radii, no hand-waved 'greater metro area'."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The three rings",
+   "body": [
+    {
+     "t": "Primary 0–2 mi: 12.6 sq mi. Secondary 2–5 mi: 66.0 sq mi. Outer 5–10 mi: 235.6 sq mi. The outer ring dwarfs the others — which is why trade percentages, not raw areas, run catchment thinking (the classic 60/25/15 split of customers by ring)."
+    }
+   ]
+  },
+  {
+   "label": "Example · Density honesty",
+   "body": [
+    {
+     "t": "The same 28.3 sq mi primary ring holds ~70,700 people at 2,500/sq mi and ~7,100 at 250/sq mi. Area is exact; density is local. The calculator never lets the first disguise the second."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Standard catchment rings",
+  "intro": "Annulus areas, computed — the bands retail actually plans in.",
+  "columns": [
+   "Ring",
+   "Area",
+   "Typical role"
+  ],
+  "rows": [
+   [
+    "0–2 mi",
+    "12.57 sq mi",
+    "Primary: the core trade"
+   ],
+   [
+    "2–5 mi",
+    "65.97 sq mi",
+    "Secondary: regular reach"
+   ],
+   [
+    "5–10 mi",
+    "235.62 sq mi",
+    "Tertiary: occasional trips"
+   ],
+   [
+    "0–3 mi (single ring)",
+    "28.27 sq mi",
+    "Convenience formats"
+   ],
+   [
+    "0–5 mi (single ring)",
+    "78.54 sq mi",
+    "Comparison and big-box formats"
+   ]
+  ],
+  "note": "Ring conventions vary by format — grocers think in minutes, destination retail in tens of miles. Radii are the planner's input; areas are this calculator's exact output."
+ },
+ "faq": [
+  [
+   "Rings or drive time?",
+   "Rings are the reproducible first pass; drive-time polygons are the refinement where roads dominate. Serious site work uses both — rings for comparison, time for the chosen site's truth."
+  ],
+  [
+   "Where does population come from?",
+   "Census data at your chosen density or by tract — the calculator computes areas; population joins by multiplication with figures you source and cite."
+  ],
+  [
+   "Overlapping catchments of rivals?",
+   "Overlap areas can be computed the same way; the trade split inside overlaps is market research, honestly beyond ring arithmetic."
+  ],
+  [
+   "Rural catchments are huge — is that real?",
+   "Yes: destination stores in sparse country genuinely trade over 20+ mile rings. The area is large because the density is thin — the population product stays sane."
+  ],
+  [
+   "Kilometres?",
+   "European catchments plan in km rings with identical annulus maths."
+  ],
+  [
+   "One ring enough?",
+   "For convenience retail, often. For comparison across formats, the three-ring structure is the professional habit this page is built around."
+  ],
+  [
+   "Seasonal or tourist trade?",
+   "Catchment areas stay; populations swell. Report both resident and seasonal figures against the same computed rings."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Visual rings: the "
+  },
+  {
+   "t": "Store Locator Radius Map",
+   "l": "/tools/store-locator-radius"
+  },
+  {
+   "t": "; what's inside: the "
+  },
+  {
+   "t": "Spatial Buffer & Overlay Analyzer",
+   "l": "/tools/spatial-buffer-overlay-analyzer"
+  },
+  {
+   "t": "; territories: the "
+  },
+  {
+   "t": "Sales Territory Area Calculator",
+   "l": "/tools/sales-territory-area-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-area-from-radius",

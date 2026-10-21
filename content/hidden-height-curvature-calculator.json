@@ -8,17 +8,162 @@
   "hidden height calculator distance",
   "earth curve obstruction calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Hidden Height by Earth Curvature Calculator",
+ "description": "Calculate how much of a distant object the Earth's curve hides with the Hidden Height by Earth Curvature Calculator — observer height included. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, standing at the shore with eyes 1.8 m up, a ship 20 km away hides its lowest 18.2 m below the horizon — hull and waterline gone, masts and superstructure still showing.",
+ "quick_answer": "The Hidden Height by Earth Curvature Calculator works out how much of a distant object is hidden below the horizon for an observer at a given height. Enter your eye height and the object's distance and read the hidden amount — why ships vanish hull-first.",
+ "steps_intro": "Your horizon cuts every distant object at a computable height:",
+ "use_cases": [
+  {
+   "title": "Shoreline viewing claims",
+   "body": [
+    {
+     "t": "Which floors of that tower across the bay should be visible? The hidden height answers before the telescope comes out — and the "
+    },
+    {
+     "t": "Earth Curvature Calculator",
+     "l": "/tools/earth-curvature-calculator"
+    },
+    {
+     "t": " supplies the pure drop it builds on."
+    }
+   ]
+  },
+  {
+   "title": "Ship watching and photography",
+   "body": [
+    {
+     "t": "Hull-down ships are the horizon's signature. Knowing the hidden metres tells you how much of the vessel (a large container ship's hull is roughly 10–15 m deep) remains."
+    }
+   ]
+  },
+  {
+   "title": "Survey and observation planning",
+   "body": [
+    {
+     "t": "Whether a target's marker light clears the curve from your station is a hidden-height question — answered before the field trip, not during it."
+    }
+   ]
+  },
+  {
+   "title": "Testing viral curvature photos",
+   "body": [
+    {
+     "t": "Both directions of internet argument collapse into this arithmetic: observer height, distance, hidden height, and what the photo should therefore show."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The beach view",
+   "body": [
+    {
+     "t": "Eyes at 1.8 m: horizon 4.79 km away. A ship at 10 km has only its bottom 2.1 m hidden — nearly all of it shows. At 30 km the hidden part is 49.9 m: everything below a 16-storey line is gone."
+    }
+   ]
+  },
+  {
+   "label": "Example · Climb a little, see a lot",
+   "body": [
+    {
+     "t": "From a 30 m cliff the horizon stretches to 19.6 km, and that same 30 km ship hides only about (30 − 19.6)²⁄(2R) ≈ 8.5 m. Height buys back the curve at a generous exchange rate."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Hidden height by distance (observer eye 1.8 m, no refraction)",
+  "intro": "Computed as (D − horizon)² ⁄ 2R beyond the observer's horizon.",
+  "columns": [
+   "Object distance",
+   "Hidden height"
+  ],
+  "rows": [
+   [
+    "5 km",
+    "Under 0.01 m — effectively nothing"
+   ],
+   [
+    "10 km",
+    "2.1 m"
+   ],
+   [
+    "15 km",
+    "8.2 m"
+   ],
+   [
+    "20 km",
+    "18.2 m"
+   ],
+   [
+    "30 km",
+    "49.9 m"
+   ],
+   [
+    "50 km",
+    "160.4 m"
+   ]
+  ],
+  "note": "Standard atmospheric refraction bends the view slightly and cuts these figures by roughly a seventh on an average day; temperature inversions can cut far more, which is why distant coasts sometimes loom impossibly complete."
+ },
+ "faq": [
+  [
+   "Why does the hidden part grow so fast?",
+   "It follows the square of the distance beyond your horizon — double the extra distance, quadruple the hidden height. The curve is gentle nearby and ruthless far away."
+  ],
+  [
+   "Does the object's own height matter?",
+   "Only by comparison: the visible part is the object's height minus the hidden height. A 200 m tower at 30 km shows its top ~150 m to a beach observer."
+  ],
+  [
+   "What if I use binoculars?",
+   "Optics magnify the visible part; they cannot see through the planet. The hidden height is identical — only the detail in what remains changes."
+  ],
+  [
+   "Refraction — included?",
+   "This page's headline figures are geometric; its method note shows the standard-refraction version (effective radius 7⁄6 R), which trims the 20 km example from 18.2 m to about 15.6 m."
+  ],
+  [
+   "Opposite case: how much can I see of a tall tower?",
+   "Same arithmetic run backward — the tower's own horizon adds to yours, the Line of Sight Helper's two-height framing."
+  ],
+  [
+   "Ships 'sinking' — really the curve?",
+   "Yes — hull-first disappearance with masts last is the signature of a curved surface cutting the view, exactly the progression this calculation prices."
+  ],
+  [
+   "Freshwater versus sea?",
+   "Identical geometry; the Great Lakes host the famous long sight lines (Chicago–Michigan shore) because they offer 50+ km of flat water to look across."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The drop alone: the "
+  },
+  {
+   "t": "Earth Curvature Calculator",
+   "l": "/tools/earth-curvature-calculator"
+  },
+  {
+   "t": "; your horizon: "
+  },
+  {
+   "t": "Horizon Distance",
+   "l": "/tools/horizon-distance"
+  },
+  {
+   "t": "; two-way sight: the "
+  },
+  {
+   "t": "Line of Sight Helper",
+   "l": "/tools/line-of-sight-helper"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "air-pressure-by-elevation",
   "antenna-height-distance-calculator",

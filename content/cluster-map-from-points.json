@@ -6,17 +6,159 @@
   "point clusters",
   "csv clusters"
  ],
- "title": null,
- "description": null,
+ "title": "Cluster Map from Points: See Point Patterns",
+ "description": "Plot spreadsheet points and see their natural clusters with the Cluster Map from Points — patterns for stores, incidents or samples. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a delivery firm’s 800 drop points resolve into a handful of dense urban clusters and a long rural scatter — the map shows in seconds what the spreadsheet hid in rows.",
+ "quick_answer": "The Cluster Map from Points plots a spreadsheet of coordinates on a map and groups nearby points into clusters you can read at a glance. Paste your points and watch the pattern emerge — dense cores, empty gaps and outliers — before committing to conclusions.",
+ "steps_intro": "Rows hide geography. Clusters reveal it:",
+ "use_cases": [
+  {
+   "title": "Store and territory planning",
+   "body": [
+    {
+     "t": "Customer points cluster where demand lives. Territories drawn around real clusters beat territories drawn around postcodes — start from a clean file via the "
+    },
+    {
+     "t": "CSV Coordinate Validator",
+     "l": "/tools/csv-coordinate-validator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Incident and response analysis",
+   "body": [
+    {
+     "t": "Calls, faults and sightings cluster for reasons — a hotspot map is the first exhibit in any ‘why here?’ investigation."
+    }
+   ]
+  },
+  {
+   "title": "Sampling design",
+   "body": [
+    {
+     "t": "Field samples meant to spread evenly reveal their clumps on a cluster map. Fix the design before the fieldwork, not after."
+    }
+   ]
+  },
+  {
+   "title": "Outlier spotting",
+   "body": [
+    {
+     "t": "The lone point 80 miles from its family is either a story or a typo. Clusters make loners impossible to miss."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Zoom changes the story",
+   "body": [
+    {
+     "t": "At country zoom, a retailer’s points merge into a few regional blobs; zoom in and each blob splits into neighbourhood clusters. Both views are true — clustering is a scale-dependent reading, and the map lets you read at several scales."
+    }
+   ]
+  },
+  {
+   "label": "Example · The empty middle",
+   "body": [
+    {
+     "t": "A ring of clusters around an empty centre often means a lake, a park, a military range — or a data hole. The cluster map poses the question; local knowledge answers it."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading a cluster map honestly",
+  "intro": "What clusters can and cannot tell you.",
+  "columns": [
+   "You see",
+   "It suggests",
+   "It does not prove"
+  ],
+  "rows": [
+   [
+    "A dense hotspot",
+    "Concentrated activity",
+    "Why it concentrates there"
+   ],
+   [
+    "Scattered singles",
+    "Sparse coverage or noise",
+    "That the points are errors"
+   ],
+   [
+    "A hard edge",
+    "A boundary, river or data cutoff",
+    "A natural phenomenon’s edge"
+   ],
+   [
+    "Even spread",
+    "Systematic coverage",
+    "That coverage is complete"
+   ]
+  ],
+  "note": "Clusters are visual groupings of your points — patterns in the data you supplied, computed in your browser. They describe the dataset first and the world only as far as the dataset does."
+ },
+ "faq": [
+  [
+   "What input does it take?",
+   "Coordinate lists — typically latitude/longitude columns from a spreadsheet or CSV. Clean the file first (the coordinate validators here) and the clusters will be about geography, not typos."
+  ],
+  [
+   "How are points grouped?",
+   "By proximity on the map: points close together read as one cluster, separating as you zoom in. The grouping is a visual reading aid, not a statistical verdict."
+  ],
+  [
+   "How many points can I plot?",
+   "Browser plotting handles thousands comfortably; beyond that, aggregate first. A cluster map’s job is pattern-reading, and patterns saturate long before the browser does."
+  ],
+  [
+   "Does clustering change my data?",
+   "No — your file is read, not rewritten. Clusters exist only in this view."
+  ],
+  [
+   "Can I export the clusters?",
+   "The map is the analysis view. For cluster assignments as data, dedicated GIS or statistics tools export labels — this page gives you the pattern to specify them against."
+  ],
+  [
+   "Why do clusters merge when I zoom out?",
+   "Screen distance shrinks as zoom falls, so neighbours merge. It is the map’s honesty about scale, not instability — read patterns at the zoom of your decision."
+  ],
+  [
+   "One point, one cluster?",
+   "A single isolated point is its own cluster of one — often the most interesting marker on the map."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Prepare points: the "
+  },
+  {
+   "t": "CSV Coordinate Validator",
+   "l": "/tools/csv-coordinate-validator"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "CSV Coordinate Deduplicator",
+   "l": "/tools/csv-coordinate-deduplicator"
+  },
+  {
+   "t": "; summarise a file: the "
+  },
+  {
+   "t": "CSV Coordinate Centroid Calculator",
+   "l": "/tools/csv-coordinate-centroid-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-centroid-calculator",
   "csv-coordinate-deduplicator",

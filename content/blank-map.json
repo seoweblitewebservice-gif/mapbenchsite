@@ -6,17 +6,170 @@
   "printable map",
   "blank map online"
  ],
- "title": null,
- "description": null,
+ "title": "Blank Map: Outlines for Worksheets and Slides",
+ "description": "Browse and download a Blank Map outline — countries, US states and regions with no labels, ready for worksheets, slides and colouring. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a teacher prints the blank US states outline on Monday, and by Friday the same sheet — coloured and labelled by hand — has taught the Midwest better than any atlas.",
+ "quick_answer": "A Blank Map is an outline with borders and no labels — the starting sheet for worksheets, quizzes, slides and colouring. Browse world, country and US-state outlines here, download the clean version you need, and add your own labels, colours and questions on top.",
+ "steps_intro": "No labels, no clutter — just the outlines, ready for your layer:",
+ "use_cases": [
+  {
+   "title": "Classroom worksheets and quizzes",
+   "body": [
+    {
+     "t": "The classic use: label the states, shade the regions, mark the rivers. A blank outline is a question paper waiting to happen. Colour it digitally with "
+    },
+    {
+     "t": "Color a Map",
+     "l": "/tools/color-a-map"
+    },
+    {
+     "t": " when paper is not the plan."
+    }
+   ]
+  },
+  {
+   "title": "Slides and reports",
+   "body": [
+    {
+     "t": "A clean outline under your own annotations looks designed; a cluttered atlas scan looks borrowed. Business and school decks both benefit."
+    }
+   ]
+  },
+  {
+   "title": "Study and revision",
+   "body": [
+    {
+     "t": "Filling a blank map from memory is the oldest active-recall trick in geography — far stickier than re-reading a labelled one."
+    }
+   ]
+  },
+  {
+   "title": "Base for your own data map",
+   "body": [
+    {
+     "t": "Start from an outline and add pins, regions or a legend by hand or in a drawing tool — or skip ahead to the "
+    },
+    {
+     "t": "Map with Legend",
+     "l": "/tools/map-with-legend"
+    },
+    {
+     "t": " builder."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The Friday quiz",
+   "body": [
+    {
+     "t": "Teacher prints the unlabeled US map; students label the 13 states covered that term and shade the Great Lakes states blue. Grading takes minutes because the outline carries no hints."
+    }
+   ]
+  },
+  {
+   "label": "Example · Election-night practice",
+   "body": [
+    {
+     "t": "A student colours states by hand as results are called — the same blank sheet television networks start from, minus the graphics department."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Which blank outline do you need?",
+  "intro": "Pick by the job — detail you do not need is just visual noise.",
+  "columns": [
+   "Outline",
+   "Best for",
+   "Watch out"
+  ],
+  "rows": [
+   [
+    "World (countries)",
+    "Global quizzes, travel tracking, trade lessons",
+    "Small island nations shrink to specks"
+   ],
+   [
+    "Single country",
+    "National geography, regional units",
+    "Internal borders vary by source"
+   ],
+   [
+    "US states",
+    "American classrooms, civics, data sketches",
+    "Alaska and Hawaii are usually inset, not to scale"
+   ],
+   [
+    "US counties",
+    "Local studies, detailed data work",
+    "3,142 counties is a lot of outline — zoom to your state"
+   ]
+  ],
+  "note": "Outlines here are simplified for screens and classroom printing — borders are teaching-accurate, not legal-survey grade. For a boundaries-as-data job, use a GeoJSON source instead."
+ },
+ "faq": [
+  [
+   "Are the outlines free to use in my classroom or slides?",
+   "They are provided for exactly that kind of educational and presentation use. If you plan to republish commercially, check the underlying map data attribution — the base outlines derive from open map data (OpenStreetMap contributors) whose licence asks for a credit line."
+  ],
+  [
+   "Can I get a map with no internal borders at all?",
+   "Yes — a silhouette-style outline (outer border only) is the cleanest base for cover slides and logos. Pick the country outline and the no-internal-borders style where offered."
+  ],
+  [
+   "How do I add labels?",
+   "Print and write, annotate in any slides or drawing app, or build the labelled version directly with the Custom Labeled Pin Map and Map with Legend tools on this site."
+  ],
+  [
+   "Why do Alaska and Hawaii move on US maps?",
+   "Inset convention: they are shifted and rescaled to fit the page beside the mainland. On a blank worksheet that is a feature — just do not measure distances from the insets."
+  ],
+  [
+   "Can I download at a bigger size?",
+   "Choose the largest export offered and print at that size; outlines are line art, so they scale cleanly compared with a screenshot of a street map, which pixelates."
+  ],
+  [
+   "Do you have historical borders?",
+   "The outlines show present-day boundaries. For older borders as study context, the Historical Map Context page is the honest companion — modern anchors for old maps, not a time machine."
+  ],
+  [
+   "Can I colour it on screen instead of printing?",
+   "Yes — Color a Map does exactly that in the browser, and exports your colouring as an image or a CSV list."
+  ],
+  [
+   "Is there a version with a grid or compass rose?",
+   "For print worksheets, the Printable Map with Scale Context page covers scale bars and print framing; a compass rose is best added in your document editor where you control placement."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Colour an outline in the browser with "
+  },
+  {
+   "t": "Color a Map",
+   "l": "/tools/color-a-map"
+  },
+  {
+   "t": ", capture map images with "
+  },
+  {
+   "t": "Map PNG Export",
+   "l": "/tools/map-png-export"
+  },
+  {
+   "t": ", or jump straight to labelled pins with the "
+  },
+  {
+   "t": "Pin Map Maker",
+   "l": "/tools/pin-map-maker"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "custom-labeled-map",
   "embed-map-link-helper",

@@ -8,17 +8,162 @@
   "kml placemark counter checker",
   "kml placemark counter validator"
  ],
- "title": null,
- "description": null,
+ "title": "KML Placemark Counter: Feature Census",
+ "description": "Count the Placemark elements in a KML file with the KML Placemark Counter — feature-level size checked locally before import. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a real-estate KML with 214 Placemarks is 214 listings wearing geometry — a number worth knowing before you promise anyone the file is 'small'.",
+ "quick_answer": "The KML Placemark Counter counts the <Placemark> elements in a KML file — the features that usually carry a point, line or polygon plus its properties. Drop the file and read the feature count locally, before importing, comparing or sharing a file whose size you should know.",
+ "steps_intro": "Placemarks are KML's features. Count the features:",
+ "use_cases": [
+  {
+   "title": "Pre-import sanity",
+   "body": [
+    {
+     "t": "Importers slow down and symbology drowns around thousands of features. The count sets expectations before the load — pair it with the "
+    },
+    {
+     "t": "KML Named Placemark Counter",
+     "l": "/tools/kml-named-placemark-counter"
+    },
+    {
+     "t": " for the labelled share."
+    }
+   ]
+  },
+  {
+   "title": "Comparing dataset versions",
+   "body": [
+    {
+     "t": "Last quarter's file: 1,204 placemarks. This quarter's: 1,187. Seventeen features vanished somewhere — the count starts the investigation the diff finishes."
+    }
+   ]
+  },
+  {
+   "title": "Scoping a conversion job",
+   "body": [
+    {
+     "t": "Converting KML to another format is priced by features, not megabytes. This is the number quotes are built on."
+    }
+   ]
+  },
+  {
+   "title": "Checking an export's completeness",
+   "body": [
+    {
+     "t": "The source database holds 860 sites; the KML holds 860 Placemarks, or the export dropped some — verify before the client counts for you."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Features versus geometry",
+   "body": [
+    {
+     "t": "One Placemark can hold a MultiGeometry of 30 polygons — feature count 1, coordinate blocks 30. Both censuses are printed on this site because maps break on geometry while databases break on features."
+    }
+   ]
+  },
+  {
+   "label": "Example · Placemarks with no geometry",
+   "body": [
+    {
+     "t": "A Placemark may carry only a name, a description and a camera view — it still counts as a Placemark element. Structural counting is literal: the element is the unit."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What a Placemark typically carries",
+  "intro": "The feature anatomy behind the count.",
+  "columns": [
+   "Child",
+   "Role"
+  ],
+  "rows": [
+   [
+    "<name>",
+    "The feature's label"
+   ],
+   [
+    "<description>",
+    "Balloon text — often HTML"
+   ],
+   [
+    "One geometry (Point, LineString, Polygon, MultiGeometry…)",
+    "Where and what shape"
+   ],
+   [
+    "<ExtendedData>",
+    "Attribute fields from the source system"
+   ],
+   [
+    "<Style> / styleUrl",
+    "How it is drawn"
+   ],
+   [
+    "<TimeStamp> / <TimeSpan>",
+    "When it exists"
+   ]
+  ],
+  "note": "Folders organise Placemarks; they are not Placemarks themselves and are never counted here."
+ },
+ "faq": [
+  [
+   "Does it count Placemarks inside Folders?",
+   "Yes — nesting is organisation, not a different element. Every <Placemark> in the document counts, at any depth."
+  ],
+  [
+   "GroundOverlay or ScreenOverlay counted?",
+   "No — overlays are their own elements, not Placemarks. The census is strict about the element it names."
+  ],
+  [
+   "Why is my count lower than the rows in my GIS?",
+   "Empty-geometry rows sometimes export as nothing, and some exporters split multi-part features. The count shows the file's truth; reconcile against the source with the named counter's audit."
+  ],
+  [
+   "Why higher than expected?",
+   "Multi-part exports can duplicate features, and template Placemarks hide in some files. The viewer shows what the count found."
+  ],
+  [
+   "Does a Placemark need geometry to count?",
+   "No — the element counts as written. Geometry-free Placemarks are legal KML and occasionally intentional (views, labels-in-waiting)."
+  ],
+  [
+   "Feature count versus file weight?",
+   "Bytes follow coordinate tuples and description HTML more than feature count. Both numbers together size a file honestly."
+  ],
+  [
+   "Counting before conversion — why?",
+   "Because a converted file can be recounted, and equal counts are the cheapest proof the conversion lost no features."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Named share: the "
+  },
+  {
+   "t": "KML Named Placemark Counter",
+   "l": "/tools/kml-named-placemark-counter"
+  },
+  {
+   "t": "; geometry blocks: the "
+  },
+  {
+   "t": "KML Coordinate Block Counter",
+   "l": "/tools/kml-coordinate-block-counter"
+  },
+  {
+   "t": "; see them: the "
+  },
+  {
+   "t": "KML Viewer",
+   "l": "/tools/kml-viewer"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

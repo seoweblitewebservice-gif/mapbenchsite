@@ -6,17 +6,168 @@
   "live night map",
   "subsolar point"
  ],
- "title": null,
- "description": null,
+ "title": "Day Night Map: The Live Terminator Line",
+ "description": "Watch the live boundary between daylight and darkness sweep the world on the Day Night Map — terminator, subsolar point and local Sun times. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, at the June solstice the terminator tilts so far that the whole Arctic sits in daylight while the Antarctic cap stays dark — the map's tilt is the season, drawn live.",
+ "quick_answer": "The Day Night Map shows the live boundary between day and night across the world — the terminator — with the subsolar point where the Sun stands directly overhead. Watch the night hemisphere move, and click any point for its sunrise and sunset: the planet's clockwork, drawn as one picture.",
+ "steps_intro": "One line divides breakfast from bedtime on Earth right now:",
+ "use_cases": [
+  {
+   "title": "Calling across the world kindly",
+   "body": [
+    {
+     "t": "Before ringing Sydney from Chicago, look at the map: the terminator tells you whether it is 3 p.m. or 3 a.m. there more honestly than mental timezone arithmetic. The "
+    },
+    {
+     "t": "World Time Zone Map",
+     "l": "/tools/world-time-zone-map"
+    },
+    {
+     "t": " adds the clock numbers."
+    }
+   ]
+  },
+  {
+   "title": "Shortwave and satellite intuition",
+   "body": [
+    {
+     "t": "Radio propagation and satellite passes ride the terminator. Operators have watched this line for a century because dawn and dusk change what the sky carries."
+    }
+   ]
+  },
+  {
+   "title": "Teaching seasons properly",
+   "body": [
+    {
+     "t": "Freeze the map at a solstice and the tilt explains everything textbooks diagram badly — why hemispheres take turns, and why the poles get their six-month days."
+    }
+   ]
+  },
+  {
+   "title": "Flight and photography timing",
+   "body": [
+    {
+     "t": "Chasing a sunset landing or a night arrival? The map shows the darkness front your flight is racing, at the speed the terminator actually moves."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The terminator's speed",
+   "body": [
+    {
+     "t": "At the equator the line sweeps westward at about 1,670 km/h (the Earth's rotation: 40,075 km of circumference in 24 hours). Your sunset is that line arriving at the speed of a fighter jet — and leaving just as fast."
+    }
+   ]
+  },
+  {
+   "label": "Example · Why night is not half the picture",
+   "body": [
+    {
+     "t": "Twilight blurs the edge: the fully-dark region is smaller than a hemisphere, ringed by the twilight band the "
+    },
+    {
+     "t": "Civil Twilight Calculator",
+     "l": "/tools/civil-twilight-calculator"
+    },
+    {
+     "t": " times out to the minute."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading the map",
+  "intro": "The features on the picture, decoded.",
+  "columns": [
+   "Feature",
+   "Meaning"
+  ],
+  "rows": [
+   [
+    "Terminator line",
+    "Where the Sun is rising (west edge of night) or setting (east edge)"
+   ],
+   [
+    "Subsolar point",
+    "Where the Sun is exactly overhead — always between the tropics"
+   ],
+   [
+    "Night hemisphere",
+    "Roughly half the Earth, trimmed by twilight's glow"
+   ],
+   [
+    "Tilt of the line",
+    "The season: solstice tilt ≈ 23.4°, equinox nearly straight"
+   ]
+  ],
+  "note": "The map is computed from the Sun's position for the current instant (or the moment you set) — geometry, not a satellite photograph. Clouds are having their own day regardless."
+ },
+ "faq": [
+  [
+   "Where is the subsolar point right now?",
+   "Over the spot where the Sun is at its highest — its latitude equals the Sun's declination for the date (up to ±23.44°) and its longitude is wherever local solar noon is happening this minute."
+  ],
+  [
+   "How often does the picture change?",
+   "Continuously in principle — the terminator moves about 15° of longitude per hour. The map refreshes on its live cycle; a minute's patience shows real motion near the line."
+  ],
+  [
+   "Can I check a future date?",
+   "The terminator belongs to an instant. Day-length and twilight tools answer date questions; this map's gift is the present tense, plus the intuition it builds."
+  ],
+  [
+   "Why does the night edge look soft in real life?",
+   "The map draws the geometric line; the sky grades through twilight bands on both sides of it — civil, nautical, astronomical — each computed by this site's twilight calculators."
+  ],
+  [
+   "Is the southern summer really the mirror?",
+   "Yes and slightly no: seasons mirror, but Earth's elliptical orbit makes southern summers a touch shorter and sharper (perihelion falls in January). The map shows the geometry; the orbit supplies the footnote."
+  ],
+  [
+   "What is the grey line in radio terms?",
+   "Amateur radio's 'gray line' is this same terminator band — signals along it travel unusually far at dawn and dusk. The map on this page is the one operators picture."
+  ],
+  [
+   "Does the map show the Moon's night too?",
+   "The terminator here is the Sun's. The Moon Position Map draws the lunar counterpart — where the Moon is up, and how lit it looks."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Day lengths by date: the "
+  },
+  {
+   "t": "Day Length Calculator",
+   "l": "/tools/day-length-calculator"
+  },
+  {
+   "t": "; twilight grades: the "
+  },
+  {
+   "t": "Civil Twilight Calculator",
+   "l": "/tools/civil-twilight-calculator"
+  },
+  {
+   "t": "; the Moon's map: the "
+  },
+  {
+   "t": "Moon Position Map",
+   "l": "/tools/moon-position-map"
+  },
+  {
+   "t": "; polar extremes: the "
+  },
+  {
+   "t": "Polar Day Night Checker",
+   "l": "/tools/polar-day-night-checker"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "astronomical-twilight-calculator",
   "civil-twilight-calculator",

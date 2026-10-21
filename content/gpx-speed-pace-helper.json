@@ -6,17 +6,169 @@
   "gpx speed",
   "track pace calculator"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Speed / Pace Helper: Moving-Time Pace",
+ "description": "Read a GPX track's pace from its moving time with the GPX Speed / Pace Helper — distance and pace, computed offline in your browser. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, 10 kilometres covered in 50 minutes of moving time is a 5:00-per-kilometre pace and a 12.0 km/h speed — the same performance wearing the runner's unit and the cyclist's unit.",
+ "quick_answer": "The GPX Speed / Pace Helper loads a GPX track, reads its distance, and computes pace from your moving time. Drop the file — arithmetic happens offline in your browser — and read pace and speed, the two dialects of one performance.",
+ "steps_intro": "Pace is speed in runner's clothing. Both, from the file:",
+ "use_cases": [
+  {
+   "title": "Post-run analysis",
+   "body": [
+    {
+     "t": "The number runners actually trade in — minutes per kilometre — from the recording, with the "
+    },
+    {
+     "t": "GPX Average Speed Calculator",
+     "l": "/tools/gpx-average-speed-calculator"
+    },
+    {
+     "t": "'s elapsed figure beside it for the stop-inclusive truth."
+    }
+   ]
+  },
+  {
+   "title": "Marathon maths",
+   "body": [
+    {
+     "t": "A 3:30 marathon is 4:59 per kilometre at 12.06 km/h. Knowing your file's pace is knowing whether the goal pace is a plan or a hope."
+    }
+   ]
+  },
+  {
+   "title": "Cycling speed translation",
+   "body": [
+    {
+     "t": "Cyclists quote km/h; runners quote pace. The helper is the phrasebook — one performance, both units, no mental division at kilometre 30."
+    }
+   ]
+  },
+  {
+   "title": "Comparing efforts across files",
+   "body": [
+    {
+     "t": "Same route, two Sundays: moving pace separates fitness from traffic lights — the comparison elapsed averages cannot honestly make."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The conversion identities",
+   "body": [
+    {
+     "t": "Pace (min/km) = 60 ÷ speed (km/h). At 12.0 km/h, pace is 5:00/km; at 10 km/h, 6:00/km; at 15 km/h, 4:00/km. The table below is this identity, tabulated — no other formula hides anywhere in pace."
+    }
+   ]
+  },
+  {
+   "label": "Example · Moving versus elapsed, priced",
+   "body": [
+    {
+     "t": "10 km in 50 moving minutes is 5:00/km. Add a 6-minute café stop inside the same outing and elapsed pace becomes 5:36/km — both numbers true, answering different questions, which is why this page insists on naming its denominator."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Speed and pace, side by side",
+  "intro": "The identity pace = 60 ÷ speed, at the values athletes actually meet.",
+  "columns": [
+   "Speed",
+   "Pace per km",
+   "Pace per mile"
+  ],
+  "rows": [
+   [
+    "8 km/h",
+    "7:30",
+    "12:04"
+   ],
+   [
+    "10 km/h",
+    "6:00",
+    "9:39"
+   ],
+   [
+    "12 km/h",
+    "5:00",
+    "8:03"
+   ],
+   [
+    "12.06 km/h",
+    "4:59",
+    "8:01"
+   ],
+   [
+    "15 km/h",
+    "4:00",
+    "6:26"
+   ],
+   [
+    "20 km/h",
+    "3:00",
+    "4:50"
+   ]
+  ],
+  "note": "Per-mile paces use the exact mile (1.609344 km). A 3:30 marathon runs 4:59/km and 8:01/mile — the pair of numbers painted on a thousand pace bands."
+ },
+ "faq": [
+  [
+   "How is moving time decided?",
+   "By the recording's own movement: intervals where the track actually progresses count; standstills do not. Any threshold a tool applies is a judgement — this page's framing keeps the denominator visible rather than pretending 'moving' is a physical constant."
+  ],
+  [
+   "Pace per mile instead?",
+   "Both units are offered — American runners pace by the mile, European runners and most of the world's races by the kilometre."
+  ],
+  [
+   "What if the file has no timestamps?",
+   "Pace needs time. A timeless file yields distance only — its geometry tools (stats, box, splits by distance) still work, and only the clock-dependent family falls silent."
+  ],
+  [
+   "Instantaneous pace at a point?",
+   "Pace exists over intervals; single-point 'pace' is a short segment in disguise. The Maximum Speed tool reads the extreme segment; this helper reads the outing."
+  ],
+  [
+   "Uphill and downhill pace mixed?",
+   "Yes — pace averages terrain away. Splitting by segment (the sequential checker's distances against the stamps) is how climb versus descent pace gets separated."
+  ],
+  [
+   "Treadmill or indoor files?",
+   "Indoor recordings carry time with little or no GPS distance; pace from them is the device's estimate, not geometry. This helper works from what the file's coordinates support."
+  ],
+  [
+   "Why is my helper pace faster than my platform's?",
+   "Different moving-time thresholds: platforms discard slow shuffling differently (a traffic-light creep counts here, vanishes there). Same file, declared denominators, honest disagreement."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Elapsed truth: the "
+  },
+  {
+   "t": "GPX Average Speed Calculator",
+   "l": "/tools/gpx-average-speed-calculator"
+  },
+  {
+   "t": "; extremes: the "
+  },
+  {
+   "t": "GPX Maximum Speed Calculator",
+   "l": "/tools/gpx-max-speed-calculator"
+  },
+  {
+   "t": "; effort: the "
+  },
+  {
+   "t": "GPX Heart Rate Analyzer",
+   "l": "/tools/gpx-heart-rate-analyzer"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

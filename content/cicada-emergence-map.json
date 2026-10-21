@@ -6,17 +6,166 @@
   "when do cicadas emerge",
   "periodical cicada 17 year"
  ],
- "title": null,
- "description": null,
+ "title": "Cicada Emergence Map: Which Brood, Which Year",
+ "description": "Find the periodical cicada brood covering a US location with the Cicada Emergence Map — brood ranges and next emergence years by 13/17-year cycle. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, central Illinois sits in Brood XIII's recorded range — a 17-year brood that emerged in 2024 and is next due in 2041 — while Kentucky's Brood XIV, out in 2025, returns in 2042.",
+ "quick_answer": "The Cicada Emergence Map identifies which periodical cicada brood's recorded range covers a US location, and computes that brood's next emergence year from its 13- or 17-year cycle. Set the location and read the brood — Magicicada's extraordinary calendar, mapped.",
+ "steps_intro": "Underground for 13 or 17 years, then a few loud weeks. Whose ground are you on?",
+ "use_cases": [
+  {
+   "title": "Planning around an emergence",
+   "body": [
+    {
+     "t": "Weddings, graduations and open houses in brood country check the year first — a 2041 Illinois June will be loud, and the map says which counties carry the chorus."
+    }
+   ]
+  },
+  {
+   "title": "Gardeners and orchardists",
+   "body": [
+    {
+     "t": "Young trees suffer egg-laying damage in emergence years; knowing your brood's calendar is when netting gets bought. Compare with the "
+    },
+    {
+     "t": "Plant Hardiness Zone",
+     "l": "/tools/plant-hardiness-zone"
+    },
+    {
+     "t": " for the other great American garden map."
+    }
+   ]
+  },
+  {
+   "title": "Curiosity and citizen science",
+   "body": [
+    {
+     "t": "Brood maps are refined by public reports each emergence. Knowing your brood's name and year is the citizen scientist's first credential."
+    }
+   ]
+  },
+  {
+   "title": "Teaching prime-number biology",
+   "body": [
+    {
+     "t": "13 and 17 are primes — cycles that rarely sync with predators or with each other. The 2024 co-emergence of Broods XIII and XIX was the first since 1803; this map's arithmetic shows why such overlaps are centuries apart."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 2024 double bill",
+   "body": [
+    {
+     "t": "Brood XIII (17-year, Illinois-centred) and Brood XIX (13-year, southeastern) emerged together in 2024 — an overlap last seen in 1803 and next due 221 years later: the cycles' least common multiple is 221 years, and geography must also cooperate."
+    }
+   ]
+  },
+  {
+   "label": "Example · Brood X, the famous one",
+   "body": [
+    {
+     "t": "Brood X — the 'Great Eastern Brood' around Washington, DC and the mid-Atlantic — filled 2021's headlines and returns in 2038 (2021 + 17). If a location's brood is X, its calendar is already set."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Notable broods and their calendars",
+  "intro": "From published brood records (USDA Forest Service and university entomology) — last emergence plus period gives the next.",
+  "columns": [
+   "Brood",
+   "Cycle",
+   "Last emerged",
+   "Next due"
+  ],
+  "rows": [
+   [
+    "X (Great Eastern)",
+    "17-year",
+    "2021",
+    "2038"
+   ],
+   [
+    "XIII (Northern Illinois)",
+    "17-year",
+    "2024",
+    "2041"
+   ],
+   [
+    "XIV (Kentucky/Ohio-centred)",
+    "17-year",
+    "2025",
+    "2042"
+   ],
+   [
+    "XIX (Great Southern)",
+    "13-year",
+    "2024",
+    "2037"
+   ],
+   [
+    "II (East Coast)",
+    "17-year",
+    "2013",
+    "2030"
+   ]
+  ],
+  "note": "Broods are numbered with Roman numerals by entomologists. Ranges here are the recorded brood ranges; stragglers a year early or late (especially 4-year-early 'shadow' emergences) are a documented Magicicada habit, not a map error."
+ },
+ "faq": [
+  [
+   "What triggers the exact week?",
+   "Soil temperature — nymphs emerge when soil at about 20 cm depth reaches roughly 18°C (64°F), usually after rain. The year is the brood's clockwork; the week is spring's."
+  ],
+  [
+   "How many broods are there?",
+   "Fifteen recognised broods in the eastern US: twelve on 17-year cycles and three on 13-year cycles, numbered I–XXX with gaps where broods have gone extinct or were never assigned."
+  ],
+  [
+   "Are periodical cicadas locusts?",
+   "No — locusts are grasshoppers. 'Seventeen-year locust' is a settler-era misnomer stuck to a true cicada (genus Magicicada), harmless to people and pets."
+  ],
+  [
+   "Do they damage trees fatally?",
+   "Egg-laying slits flag small branches ('flagging') and can set back young or stressed trees; established trees shrug it off. The underground years of root feeding are gentle. Netting protects saplings in emergence springs."
+  ],
+  [
+   "Annual 'dog-day' cicadas instead?",
+   "Those appear every summer in small numbers and are not broods — this map covers periodical Magicicada only; a lone August singer is a different insect entirely."
+  ],
+  [
+   "My county borders two broods.",
+   "Range edges are lived gradients, not fences — a few miles can change which brood sings loudest. The map gives the recorded range for the point; both broods may visit the borderland."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Garden companion: the "
+  },
+  {
+   "t": "Plant Hardiness Zone",
+   "l": "/tools/plant-hardiness-zone"
+  },
+  {
+   "t": "; climate context: the "
+  },
+  {
+   "t": "Climate Zone Finder",
+   "l": "/tools/climate-zone-finder"
+  },
+  {
+   "t": "; the latitude frame: the "
+  },
+  {
+   "t": "Distance from Equator Calculator",
+   "l": "/tools/distance-from-equator-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "air-pressure-by-elevation",
   "antenna-height-distance-calculator",

@@ -6,17 +6,163 @@
   "seasons by latitude online",
   "free seasons by latitude"
  ],
- "title": null,
- "description": null,
+ "title": "Seasons by Latitude: How the Year Tilts",
+ "description": "See how seasons change with latitude with Seasons by Latitude — solstices, equinoxes, day length and why the tropics barely notice. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, on June 21 New York gets 15.1 hours of daylight while London gets 16.6 and the equator gets its usual twelve — same day, three different planets of light.",
+ "quick_answer": "Seasons by Latitude shows how the seasons play out at your latitude — day lengths at the solstices and equinoxes, and when your hemisphere leans toward the Sun. Pick a latitude and read the year's shape: fierce high up, gentle in the tropics, flipped down south.",
+ "steps_intro": "One tilt, every latitude its own version of the year:",
+ "use_cases": [
+  {
+   "title": "Teaching and homework",
+   "body": [
+    {
+     "t": "The page that makes 'why do we have seasons?' answerable with numbers — test the poles and the equator against the "
+    },
+    {
+     "t": "Polar Day / Night Checker",
+     "l": "/tools/polar-day-night-checker"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Relocation reality checks",
+   "body": [
+    {
+     "t": "Moving from Miami to Minneapolis (or Manchester)? Your December daylight is about to change character — preview it here."
+    }
+   ]
+  },
+  {
+   "title": "Gardening and growing seasons",
+   "body": [
+    {
+     "t": "Day length drives plants as much as temperature does; latitude sets the calendar both follow."
+    }
+   ]
+  },
+  {
+   "title": "Travel timing",
+   "body": [
+    {
+     "t": "Southern-hemisphere trips invert everything: Sydney's Christmas is high summer, a fact this page makes mechanical rather than surprising."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · June 21, three latitudes",
+   "body": [
+    {
+     "t": "Day length on the June solstice (computed): equator 12.0 h, New York 15.1 h, London 16.6 h, Tromsø 24 h. Latitude is the volume knob on the seasons."
+    }
+   ]
+  },
+  {
+   "label": "Example · The equinox equaliser",
+   "body": [
+    {
+     "t": "Around March 20 and September 22, every latitude gets ~12 hours — computed New York: 12.1 h on March 20. The equinoxes are the year's two fair days."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The year's four hinges",
+  "intro": "Solstices and equinoxes — dates wobble by a day between years.",
+  "columns": [
+   "Event",
+   "Usual date",
+   "What happens"
+  ],
+  "rows": [
+   [
+    "March equinox",
+    "Mar 20",
+    "Sun over the equator; ~12 h days worldwide"
+   ],
+   [
+    "June solstice",
+    "Jun 21",
+    "Northern summer peak; southern winter"
+   ],
+   [
+    "September equinox",
+    "Sep 22",
+    "Sun over the equator again"
+   ],
+   [
+    "December solstice",
+    "Dec 21",
+    "Southern summer peak; northern winter"
+   ]
+  ],
+  "note": "Seasons here are astronomical (tilt-driven). Meteorological seasons (whole months: DJF etc.) are the weather services' convention — both are used, for different jobs."
+ },
+ "faq": [
+  [
+   "What actually causes the seasons?",
+   "Earth's axis tilts 23.44° and keeps pointing the same way as we orbit, so each hemisphere takes its turn leaning sunward. Distance to the Sun is not the cause — Earth is nearest the Sun in early January."
+  ],
+  [
+   "Do the tropics have seasons?",
+   "Mild ones: day length and noon sun vary little inside the tropics, so seasons there are usually described as wet and dry instead of hot and cold."
+  ],
+  [
+   "Why are southern seasons flipped?",
+   "The same tilt, seen from the other hemisphere: December leans the south sunward. Their summer solstice is the north's winter one."
+  ],
+  [
+   "Equinox means exactly 12 hours?",
+   "Nearly — refraction and the Sun's size stretch the day slightly past 12 hours (New York computes to 12.1 h on March 20). The name promises equal night; geometry adds a tip."
+  ],
+  [
+   "How extreme can day length get?",
+   "From the equator's fixed ~12 h to the poles' single six-month day and night — the checker on this site tests any latitude's extremes."
+  ],
+  [
+   "Do seasons shift over centuries?",
+   "Slowly: the tilt itself wobbles between ~22.1° and 24.5° over ~41,000 years, which is why the tropics and circles creep (currently ~15 m a year)."
+  ],
+  [
+   "Astronomical versus meteorological seasons?",
+   "Astronomers date from solstices/equinoxes; meteorologists use whole calendar months for statistics. Your forecast's 'first day of winter' (Dec 1) and the solstice (Dec 21) are both right, differently."
+  ],
+  [
+   "Does latitude change temperature directly?",
+   "It sets the Sun's angle and day length — the energy budget. Oceans, altitude and winds then argue with it, which is why London out-warms its latitude."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Extremes: the "
+  },
+  {
+   "t": "Polar Day / Night Checker",
+   "l": "/tools/polar-day-night-checker"
+  },
+  {
+   "t": "; day lengths: the "
+  },
+  {
+   "t": "Day Length Calculator",
+   "l": "/tools/day-length-calculator"
+  },
+  {
+   "t": "; the boundary lines: "
+  },
+  {
+   "t": "Tropics Finder",
+   "l": "/tools/tropics-finder"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "astronomical-twilight-calculator",
   "civil-twilight-calculator",

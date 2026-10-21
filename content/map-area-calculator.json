@@ -6,17 +6,165 @@
   "measure area on map",
   "map area calculator online"
  ],
- "title": null,
- "description": null,
+ "title": "Map Area Calculator: Measure Any Shape",
+ "description": "Measure the area of any shape drawn on the map with the Map Area Calculator — geodesic polygon area in acres, hectares, square miles and more. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a rectangle drawn between four map coordinates can measure 6.08 km² — 1,501 acres — computed on the curved Earth, not on the flat fiction of the screen.",
+ "quick_answer": "The Map Area Calculator measures the surface area of a polygon you draw on the map, computed geodesically on the Earth's sphere. Drop the corners of a field, lake or parcel and read the area in acres, hectares or square miles — accurate from garden to county.",
+ "steps_intro": "Draw the boundary; the sphere does the rest:",
+ "use_cases": [
+  {
+   "title": "Land and parcel estimation",
+   "body": [
+    {
+     "t": "A field's deed acreage checked against its drawn boundary ends arguments at the kitchen table. Rectangular parcels have the simpler "
+    },
+    {
+     "t": "Lot Size Calculator",
+     "l": "/tools/lot-size-calculator"
+    },
+    {
+     "t": "; everything else lives here."
+    }
+   ]
+  },
+  {
+   "title": "Study areas and coverage zones",
+   "body": [
+    {
+     "t": "Research plots, habitat patches, burn scars, flood footprints — drawn-polygon area is how field science reports extent, and geodesic math keeps the number true at any latitude."
+    }
+   ]
+  },
+  {
+   "title": "Water bodies and land cover",
+   "body": [
+    {
+     "t": "A lake drawn at its shoreline measures its surface honestly; compare across years and the shrinkage or growth is a number, not an impression."
+    }
+   ]
+  },
+  {
+   "title": "Feeding the calculators",
+   "body": [
+    {
+     "t": "Seed, mulch, irrigation and per-acre pricing all consume area. Measure once here and the whole family of "
+    },
+    {
+     "t": "Land Cost Per Acre",
+     "l": "/tools/land-cost-per-acre-calculator"
+    },
+    {
+     "t": "-style tools downstream stops guessing."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · A drawn rectangle, honestly measured",
+   "body": [
+    {
+     "t": "Four corners spanning about 3.75 km by 1.6 km measure 6.08 km² (1,501 acres, 2.35 sq mi) on the sphere. The same rectangle computed flat would read slightly differently at its latitude — the geodesic method is why the number travels between tools unchanged."
+    }
+   ]
+  },
+  {
+   "label": "Example · Small plots work too",
+   "body": [
+    {
+     "t": "A garden polygon of a few metres per side reports in square feet and square metres without unit strain. Geodesic corrections at that scale are negligible, but the pipeline is identical — one method, every scale."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Area units, reconciled",
+  "intro": "The same ground in every dialect the results speak.",
+  "columns": [
+   "Unit",
+   "Equals"
+  ],
+  "rows": [
+   [
+    "1 acre",
+    "43,560 sq ft · 0.4047 ha · 0.001562 sq mi"
+   ],
+   [
+    "1 hectare",
+    "10,000 m² · 2.471 acres"
+   ],
+   [
+    "1 sq km",
+    "100 ha · 247.1 acres · 0.386 sq mi"
+   ],
+   [
+    "1 sq mile",
+    "640 acres · 2.590 sq km"
+   ]
+  ],
+  "note": "640 acres to the square mile is the surveyor's gift to mental arithmetic — a section of land in the US Public Land Survey is exactly that."
+ },
+ "faq": [
+  [
+   "How is the area computed?",
+   "By spherical polygon geometry (the Chamberlain–Duquette method family): the boundary's great-circle edges enclose a surface area on the reference sphere, converted to your chosen unit. It is the standard approach of serious web-mapping libraries."
+  ],
+  [
+   "How accurate is a drawn measurement?",
+   "The geometry is exact; the drawing is human. Zoom in, place corners on the true boundary, and expect agreement with surveyed areas within a percent or two — good for planning, never a substitute for the survey itself."
+  ],
+  [
+   "Can I measure several separate areas?",
+   "Draw each polygon in turn and add the results — or draw one boundary around a study region when the total footprint is the question. The tool prices the shape you close."
+  ],
+  [
+   "Holes and courtyards?",
+   "For a shape with a hole (a building's courtyard, a lake's island), measure the outer polygon and subtract the hole's own measurement. Two honest numbers beat one complicated one."
+  ],
+  [
+   "Does terrain slope inflate the area?",
+   "Map area is plan (horizontal) area — the deed convention. A steep hillside's true surface is larger; specialised surface-area tools address that different question."
+  ],
+  [
+   "Latitude distortion?",
+   "None in the result: geodesic area is computed on the sphere, so a square kilometre near the pole measures the same ground as one at the equator — unlike pixel-counting on a Mercator screen, which would lie by the cosine."
+  ],
+  [
+   "What shapes break it?",
+   "Self-intersecting polygons (a figure-eight) have no single honest area — the tool expects a simple boundary. Split bowties into two honest polygons."
+  ],
+  [
+   "Units for a farm versus a forest?",
+   "Acres in the US, hectares almost everywhere else; the calculator reports both because land, like weather, ignores the reader's habits."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Boundary length: the "
+  },
+  {
+   "t": "Perimeter Calculator",
+   "l": "/tools/perimeter-calculator"
+  },
+  {
+   "t": "; rectangles: the "
+  },
+  {
+   "t": "Lot Size Calculator",
+   "l": "/tools/lot-size-calculator"
+  },
+  {
+   "t": "; inside or outside: the "
+  },
+  {
+   "t": "Points in Polygon Helper",
+   "l": "/tools/points-in-polygon-helper"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-area-from-radius",

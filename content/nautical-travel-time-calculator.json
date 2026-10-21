@@ -8,17 +8,171 @@
   "ship speed time distance",
   "marine travel time"
  ],
- "title": null,
- "description": null,
+ "title": "Nautical Travel Time Calculator: Knots to Hours",
+ "description": "Work out sailing and boating time from nautical miles and knots with the Nautical Travel Time Calculator — passage hours for any steady speed. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a 60-nautical-mile crossing at a steady 6 knots takes 10 hours on the calculator — the arithmetic every passage plan starts from, before weather gets its vote.",
+ "quick_answer": "The Nautical Travel Time Calculator divides a distance in nautical miles by a speed in knots to give the passage time in hours. Enter the nautical miles and a realistic average speed and read the time — the starting estimate before currents and conditions adjust it.",
+ "steps_intro": "Time is distance divided by knots. The honest part is the speed you choose:",
+ "use_cases": [
+  {
+   "title": "Passage planning",
+   "body": [
+    {
+     "t": "A 180-nautical-mile leg at 15 knots is 12 hours — daylight arithmetic that decides departure times. Feed the distance from the "
+    },
+    {
+     "t": "Nautical Miles Between Coordinates",
+     "l": "/tools/nautical-miles-between-coordinates"
+    },
+    {
+     "t": " tool."
+    }
+   ]
+  },
+  {
+   "title": "Sailboat realism",
+   "body": [
+    {
+     "t": "A cruising sailboat averaging 5 knots covers 25 nautical miles in 5 hours. Planning with hull speed instead of average speed is how schedules become fiction."
+    }
+   ]
+  },
+  {
+   "title": "Ferry and shipping estimates",
+   "body": [
+    {
+     "t": "Fast ferries near 20 knots and cargo ships in the high teens turn port distances into days — the "
+    },
+    {
+     "t": "Shipping Distance Calculator",
+     "l": "/tools/shipping-distance-calculator"
+    },
+    {
+     "t": " covers the freight side."
+    }
+   ]
+  },
+  {
+   "title": "Fuel and watch planning",
+   "body": [
+    {
+     "t": "Hours underway drive fuel burn and crew rotations. The calculator's hours are the skeleton both plans hang on."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The day crossing",
+   "body": [
+    {
+     "t": "100 nautical miles at 10 knots = 10 hours. Leave at 7 a.m., arrive at 5 p.m. — if the average holds. The calculator gives the skeleton; the forecast dresses it."
+    }
+   ]
+  },
+  {
+   "label": "Example · Speed is a lever, not a detail",
+   "body": [
+    {
+     "t": "The same 60 nautical miles takes 10 hours at 6 knots, 6 hours at 10 knots and 3 hours at 20 knots. Doubling speed halves time — but fuel burn per mile roughly squares, which is why ships slow-steam."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reference passages at steady speed",
+  "intro": "Distance ÷ knots = hours — the table is the tool's own arithmetic.",
+  "columns": [
+   "Distance",
+   "At 5 kn",
+   "At 10 kn",
+   "At 20 kn"
+  ],
+  "rows": [
+   [
+    "25 nmi",
+    "5.0 h",
+    "2.5 h",
+    "1.25 h"
+   ],
+   [
+    "60 nmi",
+    "12.0 h",
+    "6.0 h",
+    "3.0 h"
+   ],
+   [
+    "100 nmi",
+    "20.0 h",
+    "10.0 h",
+    "5.0 h"
+   ],
+   [
+    "240 nmi",
+    "48.0 h",
+    "24.0 h",
+    "12.0 h"
+   ]
+  ],
+  "note": "One knot = 1.852 km/h ≈ 1.15 mph. All times assume the stated average over the ground, held steady — the assumption the FAQ interrogates."
+ },
+ "faq": [
+  [
+   "Should I enter speed through water or over ground?",
+   "Time comes from speed over ground. Currents and leeway make the two differ — a 2-knot adverse current turns a 6-knot boat into a 4-knot traveller, and the honest input is the 4."
+  ],
+  [
+   "Why does my real passage never match?",
+   "Averages hide slowdowns: harbour manoeuvres, traffic schemes, weather and tides. Experienced planners add a margin — 10–20% is the common habit — rather than trusting the bare division."
+  ],
+  [
+   "Days, not just hours?",
+   "Divide the hours by 24: a 2,997-nautical-mile Atlantic crossing at 22 knots is 136 hours, about 5.7 days of steaming — port time excluded."
+  ],
+  [
+   "What speed do cargo ships actually make?",
+   "Typically 16–22 knots in service, slower when slow-steaming for fuel and emissions. The calculator takes whatever service speed your source quotes."
+  ],
+  [
+   "Can I work in kilometres instead?",
+   "Convert first — one nautical mile is exactly 1.852 km — or keep the whole problem nautical: miles, knots and hours are one consistent system, which is its charm."
+  ],
+  [
+   "Headwinds for aircraft?",
+   "The same division applies with ground speed; airliners plan on forecast winds exactly as sailors plan on currents. This page's marine framing is the arithmetic's home, not its limit."
+  ],
+  [
+   "Multiple legs with different speeds?",
+   "Price each leg separately and add the hours — the total is the sum of leg times, never total distance ÷ average of speeds."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Distances: the "
+  },
+  {
+   "t": "Nautical Miles Between Coordinates",
+   "l": "/tools/nautical-miles-between-coordinates"
+  },
+  {
+   "t": "; units: the "
+  },
+  {
+   "t": "Nautical Miles to Kilometers Converter",
+   "l": "/tools/nautical-miles-to-kilometers-converter"
+  },
+  {
+   "t": "; freight: the "
+  },
+  {
+   "t": "Shipping Distance Calculator",
+   "l": "/tools/shipping-distance-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "compass-bearing-visualizer",
   "competitor-distance-map",

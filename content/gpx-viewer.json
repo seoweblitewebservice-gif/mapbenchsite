@@ -6,17 +6,173 @@
   "gpx viewer online",
   "free gpx viewer"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Viewer: See Tracks, Routes and Waypoints",
+ "description": "Open a GPX file and see its tracks, routes and waypoints drawn in the browser with the GPX Viewer — parsed locally, never uploaded. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, dropping in a hiking club's GPX draws the loop, its named waypoints and the planned route in different colours — the fastest sanity check a downloaded trail file can get.",
+ "quick_answer": "The GPX Viewer draws a GPX file's tracks, routes and waypoints on a map, entirely in your browser. Drop the file and see what it actually contains — geometry, waypoint names and all — before trusting it in a device, a report or your boots.",
+ "steps_intro": "Files lie by filename. The map shows the truth:",
+ "use_cases": [
+  {
+   "title": "Checking a downloaded trail file",
+   "body": [
+    {
+     "t": "Trail sites hand out GPX freely and quality varies. View before you hike: the loop should close where the description promises, and the "
+    },
+    {
+     "t": "GPX Track Distance Calculator",
+     "l": "/tools/gpx-track-distance-calculator"
+    },
+    {
+     "t": " prices its length."
+    }
+   ]
+  },
+  {
+   "title": "Debugging your own exports",
+   "body": [
+    {
+     "t": "An export that looks wrong in a platform looks wrong here first — swapped coordinates and truncated tracks confess visually in seconds."
+    }
+   ]
+  },
+  {
+   "title": "Sharing a route with a group",
+   "body": [
+    {
+     "t": "Open the file, screenshot the map, send. Recipients see the plan without installing anything; waypoints ride along with their names."
+    }
+   ]
+  },
+  {
+   "title": "Auditing a client's or club's archive",
+   "body": [
+    {
+     "t": "A folder of legacy GPX becomes a browsable collection — files that draw nothing announce their emptiness before any deeper tool wastes time."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The route that was a track",
+   "body": [
+    {
+     "t": "A file named 'route.gpx' draws as a dense, wiggly line with thousands of points — a recording, not a plan. The viewer makes the family obvious; the counters ("
+    },
+    {
+     "t": "GPX Track Count Tool",
+     "l": "/tools/gpx-track-count-tool"
+    },
+    {
+     "t": ") then put numbers on what your eyes already know."
+    }
+   ]
+  },
+  {
+   "label": "Example · The offshore hike",
+   "body": [
+    {
+     "t": "A trail drawn in the sea off the coast means longitude and latitude were swapped somewhere upstream. The viewer cannot fix it, but it turns a silent data bug into a visible one in two seconds."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the viewer draws",
+  "intro": "The GPX families, as rendered.",
+  "columns": [
+   "Element",
+   "Drawn as",
+   "Tells you"
+  ],
+  "rows": [
+   [
+    "Track (<trk>/<trkpt>)",
+    "A dense polyline per segment",
+    "Where the recording actually went"
+   ],
+   [
+    "Route (<rte>/<rtept>)",
+    "A sparse polyline through its points",
+    "The plan, as the planner drew it"
+   ],
+   [
+    "Waypoint (<wpt>)",
+    "A pin with its <name>",
+    "Saved places, trailheads, camps"
+   ],
+   [
+    "Start of each segment",
+    "The line breaks",
+    "Where recording paused"
+   ]
+  ],
+  "note": "Elevation and timestamps are not drawn — they are read by the stats tools. The viewer owns geometry: shape first, numbers second."
+ },
+ "faq": [
+  [
+   "Does it show elevation profiles?",
+   "The viewer's job is the map shape. Elevation profiles and gain/loss live in the dedicated GPX elevation tools, reading the same file."
+  ],
+  [
+   "The map is empty but the file has size.",
+   "Size can be metadata, extensions or a waypoints-only file with points off-screen — zoom to the points using the GPX Bounding Box Tool's extent, or check for zero tracks with the counters."
+  ],
+  [
+   "Waypoint names show?",
+   "Yes — <name> text labels its pin, which is how trailhead and camp waypoints identify themselves."
+  ],
+  [
+   "Why does my track look angular?",
+   "Sparse recording: points every 10–30 seconds draw as chords. The shape is the file's sampling, faithfully shown — not a viewer simplification."
+  ],
+  [
+   "Tracks in different colours?",
+   "Multiple tracks and segments are distinguished so multi-day files read as journeys, not spaghetti."
+  ],
+  [
+   "A file from a very old GPS?",
+   "GPX 1.0 files draw the same way — the geometry elements predate the 1.1 revision."
+  ],
+  [
+   "Screenshot for a report?",
+   "The drawn map is yours to capture — a viewed, verified route picture beats a filename in any report."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Measure it: the "
+  },
+  {
+   "t": "GPX Track Distance Calculator",
+   "l": "/tools/gpx-track-distance-calculator"
+  },
+  {
+   "t": "; count it: the "
+  },
+  {
+   "t": "GPX Total Point Counter",
+   "l": "/tools/gpx-total-point-counter"
+  },
+  {
+   "t": "; KML sibling: the "
+  },
+  {
+   "t": "KML Viewer",
+   "l": "/tools/kml-viewer"
+  },
+  {
+   "t": "; merge files: the "
+  },
+  {
+   "t": "GPX Merger",
+   "l": "/tools/gpx-merger"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

@@ -7,17 +7,163 @@
   "population around location",
   "census population radius"
  ],
- "title": null,
- "description": null,
+ "title": "Population Within Radius: People in the Circle",
+ "description": "Estimate the population inside a circle with Population Within Radius — census areas apportioned by overlap, method stated. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, the tool never pretends a circle is uniform: it sums the census areas your circle actually covers, apportioning each tract or block group by the share of its area inside the line.",
+ "quick_answer": "Population Within Radius estimates how many people live inside a circle you draw, by adding up the census areas it covers, each apportioned by its overlap with the circle. Set centre and radius and read the estimate with its method attached — the method decides whether the number deserves trust.",
+ "steps_intro": "Circles do not respect census boundaries, so the counting method is the tool:",
+ "use_cases": [
+  {
+   "title": "Site and store planning",
+   "body": [
+    {
+     "t": "“How many people live within 3 miles?” is the first question of every site decision. The "
+    },
+    {
+     "t": "Cities Within Radius",
+     "l": "/tools/cities-within-radius"
+    },
+    {
+     "t": " lists the towns; this tool counts the people."
+    }
+   ]
+  },
+  {
+   "title": "Service and clinic catchments",
+   "body": [
+    {
+     "t": "A new facility's realistic service population, estimated from the census areas it actually covers — the number grant applications ask for by name."
+    }
+   ]
+  },
+  {
+   "title": "Campaign and outreach sizing",
+   "body": [
+    {
+     "t": "Canvassing, mail drops and event promotion all size themselves by the circle's population before they size their budgets."
+    }
+   ]
+  },
+  {
+   "title": "Exposure and risk sketches",
+   "body": [
+    {
+     "t": "How many residents sit within a radius of a site is the first-pass exposure question — estimated honestly here, modelled properly by specialists later."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The uniform trap",
+   "body": [
+    {
+     "t": "A 2 km circle at a claimed uniform 5,000 people/km² would hold π × 2² × 5,000 ≈ 62,800 people — but real density is never uniform (a park, a river and a tower block share most circles). The tool's tract-by-tract apportionment exists to replace that fantasy number with a defensible one."
+    }
+   ]
+  },
+  {
+   "label": "Example · The water problem",
+   "body": [
+    {
+     "t": "A circle centred on a waterfront spends half its area on the harbour — zero residents, half the circle. Apportionment by land-intersecting census areas handles it; naive area maths counts the fish. Manhattan-edge circles are the classic test."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "How the estimate is built",
+  "intro": "Each step, and the honesty it buys.",
+  "columns": [
+   "Step",
+   "Method",
+   "Buys you"
+  ],
+  "rows": [
+   [
+    "Find intersecting areas",
+    "Tracts/block groups the circle touches",
+    "Real settlement patterns, not uniform paint"
+   ],
+   [
+    "Apportion each",
+    "Population × share of the area's land inside the circle",
+    "Partial areas counted partially"
+   ],
+   [
+    "Sum and report",
+    "Total with the census vintage named",
+    "A number whose recipe you can repeat"
+   ],
+   [
+    "Round honestly",
+    "Estimates reported as estimates",
+    "No false precision to the last person"
+   ]
+  ],
+  "note": "Apportionment assumes people spread evenly within each small census area — a good approximation at block-group grain, weaker at tract grain. The figure is an estimate built on the named census, not a headcount."
+ },
+ "faq": [
+  [
+   "Which census areas are summed?",
+   "The smallest areas with published populations that the data supports — block groups where available, tracts otherwise — each apportioned by its land-area overlap with your circle."
+  ],
+  [
+   "How accurate is the estimate?",
+   "Good for planning at neighbourhood scale and better as the radius grows (errors average out). At very small radii the within-area uniformity assumption dominates — read a 500-metre circle's number as a sketch, not a count."
+  ],
+  [
+   "Does it count daytime population?",
+   "No — census residence is the basis: people where they live. Workplace and daytime populations are different datasets with different tools and honest labels."
+  ],
+  [
+   "Water and parks inside the circle?",
+   "Handled by apportioning on land-intersecting areas where the data separates land — the harbour example on this page is the design case, not an afterthought."
+  ],
+  [
+   "Can I compare two circles?",
+   "Run both and compare — the method is identical, so the comparison is fair even where each estimate carries its own error. Overlap between circles, if any, is yours to note."
+  ],
+  [
+   "Business use — site selection finals?",
+   "As the demographic first pass, yes. Final site decisions deserve current commercial data and a site visit; the circle estimate narrows twenty candidates to three honestly."
+  ],
+  [
+   "Outside the United States?",
+   "The method travels wherever small-area census counts exist; coverage depth varies by country and the tool's data statement names what it holds."
+  ],
+  [
+   "Why not just use density × area?",
+   "Because density is not uniform — the uniform-trap example prices the error. Apportionment costs more arithmetic and buys a number you can defend in a meeting."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Towns in the circle: "
+  },
+  {
+   "t": "Cities Within Radius",
+   "l": "/tools/cities-within-radius"
+  },
+  {
+   "t": "; ZIPs inside: "
+  },
+  {
+   "t": "ZIP Codes Within Radius",
+   "l": "/tools/zip-codes-within-radius"
+  },
+  {
+   "t": "; density sense: the "
+  },
+  {
+   "t": "Population Density Compare",
+   "l": "/tools/population-density-compare"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "australia-postcodes-by-state-suburb",
   "census-geography-finder",

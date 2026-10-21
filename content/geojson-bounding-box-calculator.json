@@ -8,17 +8,166 @@
   "geojson bounds",
   "geojson extent calculator"
  ],
- "title": null,
- "description": null,
+ "title": "GeoJSON Bounding Box Calculator: File Extent",
+ "description": "Find the west/south/east/north extent of a GeoJSON object with the GeoJSON Bounding Box Calculator — every coordinate pair considered. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a four-feature sample file (two points, a route, a square) bounds at west −73.99, south 40.6413, east −73.7781, north 40.76 — the frame that contains everything in the file.",
+ "quick_answer": "The GeoJSON Bounding Box Calculator finds the west, south, east and north limits across every coordinate pair in a GeoJSON object — points, lines, polygons, whole FeatureCollections. Paste the GeoJSON and read the extent: the bbox that map fitting, tile planning and spatial QA all start from.",
+ "steps_intro": "The frame around everything your file contains:",
+ "use_cases": [
+  {
+   "title": "Map initialisation",
+   "body": [
+    {
+     "t": "A web map showing a GeoJSON layer should open fitted to that layer — the bbox is fitBounds’ argument, computed instead of guessed. CSV files get the same service from the "
+    },
+    {
+     "t": "CSV Coordinate Bounding Box",
+     "l": "/tools/csv-coordinate-bounding-box"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Provenance smell-tests",
+   "body": [
+    {
+     "t": "A ‘Berlin dataset’ whose box reaches Bavaria — or Boston — confesses its troubles in four numbers before a single feature is drawn."
+    }
+   ]
+  },
+  {
+   "title": "Tile and export planning",
+   "body": [
+    {
+     "t": "Exports and tile sets clip to extents; the file’s own box is the honest starting rectangle."
+    }
+   ]
+  },
+  {
+   "title": "Merging datasets",
+   "body": [
+    {
+     "t": "Before union, compare boxes: overlapping extents promise interaction; disjoint ones promise a world map’s worth of empty ocean between your layers."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · One stray vertex",
+   "body": [
+    {
+     "t": "A polygon vertex typed as −37.98 instead of −73.98 drags the west edge across the Atlantic. The bbox cannot say which vertex sinned — but it proves one did, which sends you to the "
+    },
+    {
+     "t": "GeoJSON Coordinate Counter",
+     "l": "/tools/geojson-coordinate-counter"
+    },
+    {
+     "t": " and a text search."
+    }
+   ]
+  },
+  {
+   "label": "Example · Points define boxes too",
+   "body": [
+    {
+     "t": "Two lonely points — Times Square and JFK — bound a box from 40.6413 to 40.7580 latitude: boxes frame content, and two points are content enough."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading the extent",
+  "intro": "The four edges and their uses.",
+  "columns": [
+   "Edge",
+   "Meaning",
+   "Feeds"
+  ],
+  "rows": [
+   [
+    "West / East",
+    "Extreme longitudes",
+    "Horizontal fit, tile columns"
+   ],
+   [
+    "South / North",
+    "Extreme latitudes",
+    "Vertical fit, tile rows"
+   ],
+   [
+    "Width × height in degrees",
+    "Angular size",
+    "Zoom estimation"
+   ],
+   [
+    "Centre of the box",
+    "Midpoint of edges",
+    "A rough view centre — not the data’s centroid"
+   ]
+  ],
+  "note": "The box is axis-aligned in lon/lat — the standard ‘bbox’ member GeoJSON itself defines (RFC 7946 §5). Rotated data wears an axis-aligned box with empty corners; that is the convention’s honesty, not an error."
+ },
+ "faq": [
+  [
+   "Does it read every geometry type?",
+   "Yes — points, lines, polygons and their multi- forms, nested in features or bare geometries. Every coordinate pair votes on the edges."
+  ],
+  [
+   "Existing bbox member trusted?",
+   "If the GeoJSON carries its own bbox, this calculator still recomputes from coordinates — declared boxes and true boxes disagree often enough that recomputation is the professional habit."
+  ],
+  [
+   "Antimeridian files?",
+   "A dataset spanning the seam (Fiji) reports the naive box (nearly world-wide) unless split. The calculator reports the coordinates’ honest extremes; seam handling is a data decision."
+  ],
+  [
+   "Altitude affects the box?",
+   "No — the extent is two-dimensional; third elements ride along unread."
+  ],
+  [
+   "Empty geometries?",
+   "Features with null or empty geometry cast no votes. A file of only empties has no extent, and the tool says so."
+  ],
+  [
+   "Precision of edges?",
+   "Edges are the file’s own extreme values, unmolested — the box introduces no rounding of its own."
+  ],
+  [
+   "Box versus convex hull?",
+   "The hull hugs rotated data tighter; the box is the standard, the API parameter and the spec member. Different instruments, both honest."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Centre: the "
+  },
+  {
+   "t": "GeoJSON Centroid Calculator",
+   "l": "/tools/geojson-centroid-calculator"
+  },
+  {
+   "t": "; area: the "
+  },
+  {
+   "t": "GeoJSON Area Calculator",
+   "l": "/tools/geojson-area-calculator"
+  },
+  {
+   "t": "; CSV twin: the "
+  },
+  {
+   "t": "CSV Coordinate Bounding Box",
+   "l": "/tools/csv-coordinate-bounding-box"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

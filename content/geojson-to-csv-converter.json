@@ -8,17 +8,154 @@
   "geojson to csv converter tool",
   "how to calculate geojson to csv converter"
  ],
- "title": null,
- "description": null,
+ "title": "GeoJSON to CSV Converter: Features to Rows",
+ "description": "Convert GeoJSON features into a flat CSV table with the GeoJSON to CSV Converter — properties as columns, geometry as coordinate fields. Free, in-browser.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a FeatureCollection of 1,000 survey points becomes 1,000 spreadsheet rows — one per feature, with the point's longitude and latitude promoted into their own columns.",
+ "quick_answer": "The GeoJSON to CSV Converter turns a GeoJSON file into a flat table: one row per feature, its properties spread across columns, and its geometry reduced to coordinate fields. Load the file, review the columns, and download a CSV spreadsheets and databases can eat without a GIS in sight.",
+ "steps_intro": "Nested JSON in, honest rows out:",
+ "use_cases": [
+  {
+   "title": "Spreadsheet analysis",
+   "body": [
+    {
+     "t": "The analyst has Excel, not QGIS. Converting the delivery to CSV puts the data in their hands today — the reverse trip is "
+    },
+    {
+     "t": "CSV to GeoJSON",
+     "l": "/tools/csv-to-geojson-converter"
+    },
+    {
+     "t": " when it must come back."
+    }
+   ]
+  },
+  {
+   "title": "Database imports",
+   "body": [
+    {
+     "t": "Point features with flat properties import into any SQL table from CSV. Lines and polygons belong in real geometry columns — see the shape limits in the table on this page."
+    }
+   ]
+  },
+  {
+   "title": "Quick data inspection",
+   "body": [
+    {
+     "t": "A CSV opens anywhere, sorts instantly and shows property inconsistencies a map hides — ragged keys, mixed types, missing values."
+    }
+   ]
+  },
+  {
+   "title": "Feeding the CSV tool family",
+   "body": [
+    {
+     "t": "Once flattened, the file can use this site's CSV instruments — validators, centroid and bounding-box calculators built for tables."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · A point feature, flattened",
+   "body": [
+    {
+     "t": "A feature with coordinates [−73.9719, 40.7681] and properties {name: Gate, type: entrance} becomes one row: name=Gate, type=entrance, lon=−73.9719, lat=40.7681. Nothing is invented; the geometry's two numbers take their place as columns."
+    }
+   ]
+  },
+  {
+   "label": "Example · Why lines resist flattening",
+   "body": [
+    {
+     "t": "A LineString of 400 vertices has no single lat/lon. Flattening it means either one row per vertex (a track table) or a text dump of the coordinate list — the converter's handling is stated in its output rather than hidden, and the GPX-style per-vertex table is usually the useful one."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Geometry versus CSV shape",
+  "intro": "What each GeoJSON geometry becomes in a flat file — the honest limits of rows and columns.",
+  "columns": [
+   "Geometry",
+   "CSV outcome"
+  ],
+  "rows": [
+   [
+    "Point",
+    "One row; lon and lat columns — the clean case"
+   ],
+   [
+    "MultiPoint",
+    "One row per point, properties repeated"
+   ],
+   [
+    "LineString",
+    "One row per vertex with a sequence column"
+   ],
+   [
+    "Polygon",
+    "One row per ring vertex — or keep GeoJSON; tables flatten polygons badly"
+   ],
+   [
+    "Feature with nested properties",
+    "Nested objects serialise as text in their cell — flatten upstream if you need them sortable"
+   ]
+  ],
+  "note": "GeoJSON coordinates are [longitude, latitude] by RFC 7946 — the CSV columns follow that order, and the column names say so, because swapped axes are the conversion's classic injury."
+ },
+ "faq": [
+  [
+   "Which properties become columns?",
+   "The union of property keys across features, so a key present on only some features still gets its column, with blanks where a feature lacks it. Ragged data survives honestly instead of silently dropping keys."
+  ],
+  [
+   "What happens to feature ids?",
+   "A feature's id, where present, is carried as a column so rows can be traced back to their source features."
+  ],
+  [
+   "Can rows convert back to GeoJSON?",
+   "For point tables, yes — the CSV to GeoJSON Converter reverses the trip. Line and polygon vertex tables need their sequence and ring structure respected, which is why the round trip is guaranteed for points."
+  ],
+  [
+   "Numbers or text?",
+   "Property values keep their JSON types in spirit: numbers write as numbers, strings as text, booleans as true/false. CSV itself is untyped — the receiving program will re-guess, so check imports."
+  ],
+  [
+   "Commas and quotes inside values?",
+   "Standard CSV quoting handles them — values containing commas, quotes or newlines are quoted and escaped per RFC 4180 conventions."
+  ],
+  [
+   "Very large files?",
+   "The conversion runs in your browser's memory; files in the tens of megabytes usually manage, GIS-scale hundreds of megabytes belong to command-line tools like ogr2ogr."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Reverse: "
+  },
+  {
+   "t": "CSV to GeoJSON Converter",
+   "l": "/tools/csv-to-geojson-converter"
+  },
+  {
+   "t": "; validate first: the "
+  },
+  {
+   "t": "GeoJSON Validator",
+   "l": "/tools/geojson-validator"
+  },
+  {
+   "t": "; view it: the "
+  },
+  {
+   "t": "GeoJSON Viewer",
+   "l": "/tools/geojson-viewer"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

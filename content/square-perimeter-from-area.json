@@ -8,17 +8,159 @@
   "square perimeter from area calculator tool",
   "how to use square perimeter from area calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Square Perimeter From Area Calculator",
+ "description": "Get a square's perimeter from its area with the Square Perimeter From Area Calculator — square root, times four, straight to fencing length. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a one-acre square lot has sides of 208.7 ft and needs 834.8 ft of fencing — the perimeter was hiding inside the area all along, behind one square root.",
+ "quick_answer": "The Square Perimeter From Area Calculator takes a square's area, finds its side as the square root, and multiplies by four for the perimeter. Enter area in square feet, acres or square metres and read the boundary length — the fencing quantity the area quietly contains.",
+ "steps_intro": "Area to side to perimeter: √A, then ×4:",
+ "use_cases": [
+  {
+   "title": "Fencing from a listing",
+   "body": [
+    {
+     "t": "The listing gives an acre; the fence contractor needs feet. 834.8 ft for the square acre — the reverse journey (perimeter to acreage) lives at "
+    },
+    {
+     "t": "Square Acreage From Perimeter",
+     "l": "/tools/square-acreage-from-perimeter"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Edging, borders and trim",
+   "body": [
+    {
+     "t": "Garden edging, caution tape, irrigation mainline around a square plot — all perimeter purchases hiding behind an area spec."
+    }
+   ]
+  },
+  {
+   "title": "Checking a quote",
+   "body": [
+    {
+     "t": "A contractor's linear feet against the area's implied perimeter: disagreement means a non-square assumption somewhere, and now it has to be said out loud."
+    }
+   ]
+  },
+  {
+   "title": "Classroom geometry with dirt on it",
+   "body": [
+    {
+     "t": "√ and ×4 stop being abstract when the answer is a fence a student can pace."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The tidy hundred",
+   "body": [
+    {
+     "t": "10,000 sq ft → side exactly 100 ft → perimeter 400 ft. Surveyors' favourite training example because every step lands whole."
+    }
+   ]
+  },
+  {
+   "label": "Example · Ten acres",
+   "body": [
+    {
+     "t": "435,600 sq ft → side 660 ft → perimeter 2,640 ft (half a mile). Ten-acre squares are half-mile fences — the countryside is full of this exact sum."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Area to perimeter (squares)",
+  "intro": "Computed — note how slowly the fence grows against the area.",
+  "columns": [
+   "Area",
+   "Side",
+   "Perimeter"
+  ],
+  "rows": [
+   [
+    "10,000 sq ft (0.23 ac)",
+    "100.0 ft",
+    "400.0 ft"
+   ],
+   [
+    "43,560 sq ft (1 ac)",
+    "208.7 ft",
+    "834.8 ft"
+   ],
+   [
+    "100,000 sq ft (2.30 ac)",
+    "316.2 ft",
+    "1,264.9 ft"
+   ],
+   [
+    "435,600 sq ft (10 ac)",
+    "660.0 ft",
+    "2,640.0 ft"
+   ]
+  ],
+  "note": "Perimeter grows with the square root of area: 100× the ground needs only 10× the fence. It is why big square fields are cheap to fence per acre and small plots are dear."
+ },
+ "faq": [
+  [
+   "What if the plot is not square?",
+   "Area alone cannot give a non-square perimeter (shape matters). For rectangles, one side plus area fixes everything — the rectangular tools take it from there."
+  ],
+  [
+   "Acres directly?",
+   "Yes — enter acres and the calculator converts internally (1 acre = 43,560 sq ft) before the square root."
+  ],
+  [
+   "Square metres and metres?",
+   "Fully — the geometry is unit-blind; hectares enter as 10,000 m² each."
+  ],
+  [
+   "Gates and corners?",
+   "The perimeter is the full boundary. Subtract gate widths when ordering materials; add corner posts by count, not by length."
+  ],
+  [
+   "Why is my fence longer than this on a slope?",
+   "Fences follow the ground; area is plan measure. Sloped boundaries run long — the calculator gives the plan perimeter the deed would recognise."
+  ],
+  [
+   "Rounding of the side?",
+   "The side is shown to a decimal; fencing orders round up to the next roll or panel — buy by the perimeter plus waste, as every trade does."
+  ],
+  [
+   "Circle instead?",
+   "A circle of equal area has about 11% less perimeter — the isoperimetric fact. Circular plots are their own tools' business."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Reverse: "
+  },
+  {
+   "t": "Square Acreage From Perimeter",
+   "l": "/tools/square-acreage-from-perimeter"
+  },
+  {
+   "t": "; rectangles: the "
+  },
+  {
+   "t": "Rectangular Lot Acreage Calculator",
+   "l": "/tools/rectangular-lot-acreage-calculator"
+  },
+  {
+   "t": "; circles: the "
+  },
+  {
+   "t": "Circle Area From Radius",
+   "l": "/tools/circle-area-from-radius"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-area-from-radius",

@@ -8,17 +8,166 @@
   "csv coordinate bounding box checker",
   "csv coordinate bounding box validator"
  ],
- "title": null,
- "description": null,
+ "title": "CSV Coordinate Bounding Box: Instant Extent",
+ "description": "Get the S/W/N/E extent of a coordinate CSV with the CSV Coordinate Bounding Box — viewport and API bbox numbers without desktop GIS. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a five-city US file (New York to Los Angeles) returns west −118.2437, south 29.7604, east −74.0060, north 41.8781 — a box 1,347 km tall that frames the whole dataset.",
+ "quick_answer": "The CSV Coordinate Bounding Box computes the geographic extent of a coordinate spreadsheet — the westernmost, southernmost, easternmost and northernmost values across every valid row. Paste the CSV and read the S/W/N/E bounds: the numbers map viewports, API bbox parameters and first-pass dataset QA all ask for.",
+ "steps_intro": "Every dataset has edges. Find them before your map does:",
+ "use_cases": [
+  {
+   "title": "Map viewport setup",
+   "body": [
+    {
+     "t": "Fit the initial view to the data, not to a default continent. The box plus a margin is the fitBounds call’s exact input — the "
+    },
+    {
+     "t": "Coordinate Bounding Box Generator",
+     "l": "/tools/coordinate-bounding-box-generator"
+    },
+    {
+     "t": " builds boxes from corners when you start the other way."
+    }
+   ]
+  },
+  {
+   "title": "API bbox parameters",
+   "body": [
+    {
+     "t": "Overpass and places APIs want (S, W, N, E). Compute your data’s own extent here to sanity-check the query you are about to run."
+    }
+   ]
+  },
+  {
+   "title": "Dataset QA triage",
+   "body": [
+    {
+     "t": "A US-only file whose box reaches longitude +40 has a swapped or unsigned row hiding in it — the box is the cheapest lie detector in geospatial work."
+    }
+   ]
+  },
+  {
+   "title": "Tiling and export planning",
+   "body": [
+    {
+     "t": "Exports clip to extents. Knowing the true box before choosing tiles or shards prevents both gaps and gigabytes of empty ocean."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Five cities, one box",
+   "body": [
+    {
+     "t": "New York, Chicago, Los Angeles, Houston and Denver: W −118.2437 (Los Angeles), S 29.7604 (Houston), E −74.0060 (New York), N 41.8781 (Chicago). South-to-north the box spans 12.1177° of latitude — about 1,347 km of ground."
+    }
+   ]
+  },
+  {
+   "label": "Example · The one bad row",
+   "body": [
+    {
+     "t": "Add a single row with a missing minus sign (74.0060 instead of −74.0060) and the east edge leaps to +74 — Central Asia. The box does not find the row, but it proves the row exists. The "
+    },
+    {
+     "t": "CSV Coordinate Validator",
+     "l": "/tools/csv-coordinate-validator"
+    },
+    {
+     "t": " then finds it."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the four numbers are",
+  "intro": "The extent, edge by edge.",
+  "columns": [
+   "Edge",
+   "Comes from",
+   "Decides"
+  ],
+  "rows": [
+   [
+    "West (min longitude)",
+    "The westernmost valid row",
+    "The view’s left edge"
+   ],
+   [
+    "South (min latitude)",
+    "The southernmost valid row",
+    "The view’s bottom edge"
+   ],
+   [
+    "East (max longitude)",
+    "The easternmost valid row",
+    "The view’s right edge"
+   ],
+   [
+    "North (max latitude)",
+    "The northernmost valid row",
+    "The view’s top edge"
+   ]
+  ],
+  "note": "Invalid rows are excluded from the extent — which is why a box can look sane while rows silently fail; pair the box with validation counts when QA matters."
+ },
+ "faq": [
+  [
+   "Which columns does it read?",
+   "The latitude and longitude columns your file declares — pick them as the tool presents them. Mislabelled columns produce a box that is obviously wrong, which is its own diagnostic."
+  ],
+  [
+   "What happens to bad rows?",
+   "Rows without parseable coordinates do not move the edges. The tool reports the extent of the valid data; validators on this site report the invalid rows themselves."
+  ],
+  [
+   "Date-line datasets?",
+   "A file spanning ±180° yields a box the long way around (min −179, max +179 reads as nearly world-wide). Pacific datasets need seam-aware handling — the box honestly reports the naive extent."
+  ],
+  [
+   "Can I get the centre too?",
+   "The box’s midpoint is a rough centre; the CSV Coordinate Centroid Calculator computes the mean of the points themselves — different numbers, different meanings."
+  ],
+  [
+   "Swapped lat/lon file?",
+   "A swapped file’s box often shows an impossible latitude edge (beyond ±90 in longitude clothing) or a mirrored location — the box is the fastest swap detector there is."
+  ],
+  [
+   "Miles or degrees?",
+   "The box is in degrees (that is what APIs and viewports eat); the summary translates spans into kilometres for human reading."
+  ],
+  [
+   "One point only?",
+   "A degenerate box — all four edges meet at the point. Valid, and the map will need a default zoom to show anything."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Centre: the "
+  },
+  {
+   "t": "CSV Coordinate Centroid Calculator",
+   "l": "/tools/csv-coordinate-centroid-calculator"
+  },
+  {
+   "t": "; validate: the "
+  },
+  {
+   "t": "CSV Coordinate Validator",
+   "l": "/tools/csv-coordinate-validator"
+  },
+  {
+   "t": "; GeoJSON twin: the "
+  },
+  {
+   "t": "GeoJSON Bounding Box Calculator",
+   "l": "/tools/geojson-bounding-box-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

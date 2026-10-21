@@ -7,17 +7,166 @@
   "planting zone",
   "garden zone"
  ],
- "title": null,
- "description": null,
+ "title": "Plant Hardiness Zone: USDA Zones by Location",
+ "description": "Find the USDA plant hardiness zone for any location with the Plant Hardiness Zone finder — 2023 map basis, half-zones included. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, Chicago gardens sit in zone 6a on the 2023 USDA map, where average winter lows reach −10 to −5 °F (−23.3 to −20.6 °C) — the number printed on every seed packet sold there.",
+ "quick_answer": "The Plant Hardiness Zone finder tells you the USDA hardiness zone of any location — the band based on the average coldest winter temperature, which decides which perennial plants survive outdoors there. Enter the place and read its zone and half-zone — the code printed on plant labels.",
+ "steps_intro": "One winter number decides what survives:",
+ "use_cases": [
+  {
+   "title": "Buying perennials that live",
+   "body": [
+    {
+     "t": "A shrub rated 'zones 5–8' is a promise about winter cold. Check your zone before the nursery run and the promise becomes testable — gardeners in zone 6a buy differently from zone 8a."
+    }
+   ]
+  },
+  {
+   "title": "Moving house, new climate",
+   "body": [
+    {
+     "t": "Relocating gardeners bring habits from the old zone. The new zone recalibrates what 'hardy' means before the first beloved plant dies learning it."
+    }
+   ]
+  },
+  {
+   "title": "Reading the 2023 map's shifts",
+   "body": [
+    {
+     "t": "The 2023 USDA revision (1991–2020 data) moved roughly half the US map about half a zone warmer than 2012. Your zone from memory may be a zone out of date."
+    }
+   ]
+  },
+  {
+   "title": "Orchards and landscaping plans",
+   "body": [
+    {
+     "t": "Trees are decades-long bets placed on winter minima. Zone first, cultivar second — with microclimate judgement layered on top, as the FAQs insist."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · What zone 6b actually says",
+   "body": [
+    {
+     "t": "Zone 6b means the average annual extreme minimum winter temperature is −5 to 0 °F (−20.6 to −17.8 °C). Not the coldest ever recorded — the average of each year's coldest night across three decades. Plants rated to zone 6 survive the typical worst night, not the legendary one."
+    }
+   ]
+  },
+  {
+   "label": "Example · Half a zone of change",
+   "body": [
+    {
+     "t": "Minneapolis moved from 4b on the 2012 map to about 5a on the 2023 map — winters' coldest nights averaged roughly 5 °F warmer in the newer data window. Gardeners there felt it before the map admitted it."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "USDA zones — winter minimum bands",
+  "intro": "Each full zone spans 10 °F of average annual extreme minimum temperature; half-zones (a/b) split it into 5 °F steps.",
+  "columns": [
+   "Zone",
+   "Average winter low",
+   "In Celsius"
+  ],
+  "rows": [
+   [
+    "4a",
+    "−30 to −25 °F",
+    "−34.4 to −31.7 °C"
+   ],
+   [
+    "6b",
+    "−5 to 0 °F",
+    "−20.6 to −17.8 °C"
+   ],
+   [
+    "7a",
+    "0 to 5 °F",
+    "−17.8 to −15.0 °C"
+   ],
+   [
+    "8b",
+    "15 to 20 °F",
+    "−9.4 to −6.7 °C"
+   ],
+   [
+    "10a",
+    "30 to 35 °F",
+    "−1.1 to 1.7 °C"
+   ],
+   [
+    "13b",
+    "65 to 70 °F",
+    "18.3 to 21.1 °C"
+   ]
+  ],
+  "note": "The 2023 USDA map (based on 1991–2020 data from thousands of weather stations) is the current edition. Britain and Europe use their own hardiness framings — RHS ratings and European zone adaptations echo the same idea."
+ },
+ "faq": [
+  [
+   "Does the zone use the coldest night ever?",
+   "No — it averages the single coldest night of each winter across the data period. A once-in-50-years freeze goes below the zone's floor; that is why experienced gardeners near a boundary buy half a zone of margin."
+  ],
+  [
+   "Microclimates — my garden is warmer.",
+   "Often true: south walls, city heat islands, cold-air drainage and snow cover shift a garden's reality by half a zone or more either way. The map gives the regional baseline; your thermometer keeps the local truth."
+  ],
+  [
+   "Zone says nothing about summer?",
+   "Correct — heat, humidity, rainfall and season length are separate axes (heat-zone maps exist for the first). Two zone-7 gardens, coastal Oregon and inland Georgia, garden very differently."
+  ],
+  [
+   "Canada and Europe?",
+   "Canada publishes its own hardiness map on a related but distinct formula; Europe is often described with USDA-equivalent zones in catalogues. This page speaks the USDA system named on North American labels."
+  ],
+  [
+   "Container plants?",
+   "Pots expose roots to far colder temperatures than the ground feels — treat container plants as needing roughly two zones of extra hardiness, the nurseryman's rule of thumb."
+  ],
+  [
+   "How often does the map change?",
+   "USDA revised in 2012 and 2023 as data windows roll forward. Zones are climate statistics, not borders — expect slow drift, and re-check before big plantings."
+  ],
+  [
+   "Snow cover helps?",
+   "Reliably: snow is insulation, and perennials under a steady snowpack survive air temperatures well below their rating. The zone counts air temperature only — one more reason locals out-garden maps."
+  ],
+  [
+   "First and last frost dates?",
+   "Different data (spring/autumn averages) and just as decision-relevant for annuals — zones govern perennial survival through winter, frost dates govern the growing season's bookends."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The ground beneath the garden: the "
+  },
+  {
+   "t": "Elevation Finder",
+   "l": "/tools/elevation-finder"
+  },
+  {
+   "t": "; flood context for the plot: the "
+  },
+  {
+   "t": "Flood Zone Check",
+   "l": "/tools/flood-zone-check"
+  },
+  {
+   "t": "; your spot: "
+  },
+  {
+   "t": "My Elevation",
+   "l": "/tools/my-elevation"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boiling-point-by-elevation-calculator",
   "central-angle-from-distance-calculator",

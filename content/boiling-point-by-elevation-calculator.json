@@ -8,17 +8,175 @@
   "boiling point by elevation calculator tool",
   "how to calculate boiling point by elevation calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Boiling Point by Elevation Calculator",
+ "description": "Estimate water's boiling point at any elevation with the Boiling Point by Elevation Calculator — standard-atmosphere physics, °C and °F. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, in Denver (1,609 m) water boils at about 94.7°C (202.4°F) — so eggs take longer, pasta sulks, and pressure cookers earn their keep in the Mile High City.",
+ "quick_answer": "The Boiling Point by Elevation Calculator estimates the temperature at which water boils at a given elevation, using the standard atmosphere's pressure at that height. Enter the elevation and read the boiling point in Celsius and Fahrenheit — the number behind altitude cooking adjustments.",
+ "steps_intro": "Lower pressure, lower boiling point — physics you can cook with:",
+ "use_cases": [
+  {
+   "title": "Altitude cooking adjustments",
+   "body": [
+    {
+     "t": "Baking times, candy stages and egg timings all assume 100°C water. At 2,000 m your water is boiling near 93°C — recipes fail politely until you adjust — pressure first from the "
+    },
+    {
+     "t": "Air Pressure by Elevation Calculator",
+     "l": "/tools/air-pressure-by-elevation"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Trek and base-camp planning",
+   "body": [
+    {
+     "t": "At 3,640 m (La Paz) water boils at about 87.9°C: pasta stays stubborn, sterilising takes longer, and fuel budgets grow. The number plans the kitchen."
+    }
+   ]
+  },
+  {
+   "title": "Brewing and lab work",
+   "body": [
+    {
+     "t": "Strike temperatures and sterilisation protocols reference boiling; altitude labs recalibrate by exactly this curve."
+    }
+   ]
+  },
+  {
+   "title": "Teaching phase change",
+   "body": [
+    {
+     "t": "Boiling is pressure's victory over vapour pressure — one curve of elevations makes the concept edible in a classroom."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The Everest kettle",
+   "body": [
+    {
+     "t": "At 8,849 m the boiling point falls to about 70.3°C (158.5°F) — too cool to brew proper tea or cook pasta through, which is why high camps melt snow and pressure-cook what they can."
+    }
+   ]
+  },
+  {
+   "label": "Example · The 300-metre rule",
+   "body": [
+    {
+     "t": "Near sea level the boiling point drops about 1°C per 300 m of elevation (100.0°C → 96.7°C over the first kilometre, by this model). A cook's rule that happens to be physics, approximately — labelled as the approximation it is."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Boiling point by elevation (standard atmosphere)",
+  "intro": "Computed from standard pressure via water's vapour-pressure curve.",
+  "columns": [
+   "Place / elevation",
+   "Boils at",
+   ""
+  ],
+  "rows": [
+   [
+    "Sea level",
+    "100.0°C",
+    "212.0°F"
+   ],
+   [
+    "500 m",
+    "98.3°C",
+    "209.0°F"
+   ],
+   [
+    "1,000 m",
+    "96.7°C",
+    "206.0°F"
+   ],
+   [
+    "Denver — 1,609 m",
+    "94.7°C",
+    "202.4°F"
+   ],
+   [
+    "Mexico City — 2,240 m",
+    "92.6°C",
+    "198.6°F"
+   ],
+   [
+    "3,000 m",
+    "90.0°C",
+    "194.1°F"
+   ],
+   [
+    "La Paz — 3,640 m",
+    "87.9°C",
+    "190.2°F"
+   ],
+   [
+    "Everest summit — 8,849 m",
+    "70.3°C",
+    "158.5°F"
+   ]
+  ],
+  "note": "Values use the standard atmosphere; a strong high-pressure day raises your local boiling point slightly, a storm lowers it. Dissolved salts raise it too — seawater boils about 0.6°C hotter than fresh at sea level."
+ },
+ "faq": [
+  [
+   "How is the number computed?",
+   "Two physical steps: standard-atmosphere pressure at your elevation, then the temperature at which water's vapour pressure equals that pressure (the Antoine relation). Boiling is defined by the equality — the calculator just evaluates it."
+  ],
+  [
+   "Does today's weather shift it?",
+   "Yes, slightly: real pressure wanders a few percent around standard with weather, moving the boiling point by a few tenths of a degree at low altitude. The standard value is the planning number."
+  ],
+  [
+   "Why do eggs take longer at altitude?",
+   "Because the water is cooler — 94.7°C in Denver cannot push heat into an egg like 100°C does. Time substitutes for temperature, within limits the recipe books tabulate."
+  ],
+  [
+   "Pressure cookers fix this how?",
+   "By raising the pressure above atmospheric, the boiling point climbs back — a cooker at 15 psi adds roughly an atmosphere, restoring (and exceeding) sea-level boiling at any elevation."
+  ],
+  [
+   "What about other liquids?",
+   "Each liquid has its own vapour-pressure curve; this calculator is water's. Milk, oils and solvents each need their own relation."
+  ],
+  [
+   "Below sea level?",
+   "Pressure rises, so boiling does too: at the Dead Sea shore (−430 m) water boils near 101.5°C by the same model."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The pressure step: the "
+  },
+  {
+   "t": "Air Pressure by Elevation Calculator",
+   "l": "/tools/air-pressure-by-elevation"
+  },
+  {
+   "t": "; the height: the "
+  },
+  {
+   "t": "Elevation Finder",
+   "l": "/tools/elevation-finder"
+  },
+  {
+   "t": "; temperature's fall: the "
+  },
+  {
+   "t": "Temperature Lapse Rate Calculator",
+   "l": "/tools/temperature-lapse-rate-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "central-angle-from-distance-calculator",
   "cicada-emergence-map",

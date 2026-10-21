@@ -8,17 +8,158 @@
   "geojson acreage calculator",
   "geojson polygon area"
  ],
- "title": null,
- "description": null,
+ "title": "GeoJSON Area Calculator: Polygon Size in km²",
+ "description": "Calculate the spherical area of GeoJSON polygons with the GeoJSON Area Calculator — square kilometres and acres from pasted geometry. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a 0.01° × 0.01° test square drawn in New York measures 0.937 km² (231 acres) — not the 1.23 km² a flat map would claim, because longitude degrees are shorter there.",
+ "quick_answer": "The GeoJSON Area Calculator computes the approximate spherical area enclosed by GeoJSON polygons — in square kilometres and acres — directly from the geometry you paste. Read the total for every polygon in the file: parcels, districts and lakes measured on the sphere, not the flat lie of the screen.",
+ "steps_intro": "Paste geometry, get honest ground area:",
+ "use_cases": [
+  {
+   "title": "Parcel and site sizing",
+   "body": [
+    {
+     "t": "A polygon from any source gets its area before the meeting asks. Pair with the "
+    },
+    {
+     "t": "GeoJSON Bounding Box Calculator",
+     "l": "/tools/geojson-bounding-box-calculator"
+    },
+    {
+     "t": " for the extent that frames it."
+    }
+   ]
+  },
+  {
+   "title": "Dataset verification",
+   "body": [
+    {
+     "t": "A file claiming to hold a county should measure near the county’s known size. The area is the checksum geography provides free."
+    }
+   ]
+  },
+  {
+   "title": "Coverage reporting",
+   "body": [
+    {
+     "t": "Service areas, protected zones and sales territories report in km² and acres — computed from the same geometry everyone is looking at."
+    }
+   ]
+  },
+  {
+   "title": "Teaching projection distortion",
+   "body": [
+    {
+     "t": "Measure the same degree-square at the equator and at 60° — the two areas are the Mercator lecture, delivered by arithmetic."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The degree-square lesson",
+   "body": [
+    {
+     "t": "A 1° × 1° square at the equator encloses about 12,300 km²; the same angular square at 60° encloses roughly half. Angular size is not ground size — this calculator reports the ground."
+    }
+   ]
+  },
+  {
+   "label": "Example · Holes subtract",
+   "body": [
+    {
+     "t": "A park polygon with a lake cut out (an inner ring) measures land only — inner rings subtract by the ring-orientation rules of spherical area. Donut geography is handled as geography, not as a surprise."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What gets measured",
+  "intro": "Geometry types and their area treatment.",
+  "columns": [
+   "Geometry",
+   "Area"
+  ],
+  "rows": [
+   [
+    "Polygon",
+    "The enclosed spherical area"
+   ],
+   [
+    "MultiPolygon",
+    "The sum of all parts"
+   ],
+   [
+    "Feature / FeatureCollection",
+    "The sum over all polygon features"
+   ],
+   [
+    "Point / LineString",
+    "Zero — no enclosed ground"
+   ],
+   [
+    "Inner rings (holes)",
+    "Subtracted"
+   ]
+  ],
+  "note": "Areas are computed on the sphere with the standard ring algorithm (the one popularised by Mapbox’s geojson-area): accurate to well within a percent for ordinary polygons — planning-grade, not survey-grade."
+ },
+ "faq": [
+  [
+   "How accurate is the spherical method?",
+   "For typical parcels and regions, within a fraction of a percent of ellipsoidal truth. Legal boundaries and cadastral areas come from licensed survey work — this is the measurement for analysis, reporting and checking."
+  ],
+  [
+   "Acres and hectares?",
+   "Square kilometres headline; acres convert at 1 km² = 247.105 acres, hectares at exactly 100 per km². US audiences get acres, European audiences hectares and km² — all from the same geometry."
+  ],
+  [
+   "What about unclosed rings?",
+   "GeoJSON rings should repeat the first point at the end. The calculator treats rings as closed figures; a badly unclosed ring in source data is a data bug worth fixing at the source."
+  ],
+  [
+   "Ring winding order matter?",
+   "Robust implementations read winding to tell outer rings from holes (the RFC 7946 right-hand rule). Reversed files can produce nonsense totals — a negative or absurd area is the tell."
+  ],
+  [
+   "Antimeridian polygons?",
+   "Polygons crossing ±180° (Fiji, Russia’s far east) can compute wildly if the ring jumps the seam naively. Split such polygons at the meridian for sane areas."
+  ],
+  [
+   "Self-intersecting polygons?",
+   "A bowtie ring has no honest area — the algorithm returns a number, but geometry that crosses itself is broken input. Fix the ring, then measure."
+  ],
+  [
+   "Altitude coordinates?",
+   "Ignored — area is a surface measure of the lon/lat outline; the third element rides along unmeasured."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Lengths: the "
+  },
+  {
+   "t": "GeoJSON Length Calculator",
+   "l": "/tools/geojson-length-calculator"
+  },
+  {
+   "t": "; extent: the "
+  },
+  {
+   "t": "GeoJSON Bounding Box Calculator",
+   "l": "/tools/geojson-bounding-box-calculator"
+  },
+  {
+   "t": "; centres: the "
+  },
+  {
+   "t": "GeoJSON Centroid Calculator",
+   "l": "/tools/geojson-centroid-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

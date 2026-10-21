@@ -8,17 +8,166 @@
   "wkt bounding box calculator tool",
   "how to calculate wkt bounding box calculator"
  ],
- "title": null,
- "description": null,
+ "title": "WKT Bounding Box Calculator: Extent of a WKT",
+ "description": "Compute the bounding box of a WKT geometry with the WKT Bounding Box Calculator — west, south, east and north from any geometry type. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a LINESTRING through (−73.9900 40.7610), (−73.9855 40.7580) and (−73.9780 40.7490) has the box west −73.9900, south 40.7490, east −73.9780, north 40.7610 — read straight off its extremes.",
+ "quick_answer": "The WKT Bounding Box Calculator reads a Well-Known Text geometry and returns its bounding box — the minimum and maximum x and y over every coordinate it contains. Paste a POINT, LINESTRING, POLYGON or collection and read the extent: the envelope every spatial index, viewport and intersection test starts from.",
+ "steps_intro": "Every geometry has an envelope. Compute it exactly:",
+ "use_cases": [
+  {
+   "title": "Spatial index preparation",
+   "body": [
+    {
+     "t": "Databases index boxes before geometries (the box is the R-tree's key). Computing it outside the database verifies what the index will hold — validity first via the "
+    },
+    {
+     "t": "WKT Validator",
+     "l": "/tools/wkt-validator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Viewport and export extents",
+   "body": [
+    {
+     "t": "A geometry's box is the map frame that fits it — APIs and tile requests want exactly these four numbers."
+    }
+   ]
+  },
+  {
+   "title": "Quick overlap reasoning",
+   "body": [
+    {
+     "t": "Two boxes that do not intersect mean two geometries that cannot. The box test is the cheapest spatial question there is, and this page answers it for one geometry at a time."
+    }
+   ]
+  },
+  {
+   "title": "Checking generated WKT",
+   "body": [
+    {
+     "t": "A generator claims a city's boundary; the box either spans the city or exposes the axis swap — WKT is x y (longitude first), and swapped output boxes land in the wrong ocean."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · A polygon's box is not its corners",
+   "body": [
+    {
+     "t": "A diamond-shaped POLYGON (rotated square) has a box larger than its 'radius' suggests: the extremes come from four different vertices. Boxes come from all coordinates, not from the first and last."
+    }
+   ]
+  },
+  {
+   "label": "Example · The empty and the point",
+   "body": [
+    {
+     "t": "A POINT's box is itself (zero width, zero height — a valid, degenerate envelope). An EMPTY geometry has no box at all, and the calculator says so instead of inventing zeros."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Box anatomy",
+  "intro": "The four output numbers and their names in the wild.",
+  "columns": [
+   "Value",
+   "Also called",
+   "From"
+  ],
+  "rows": [
+   [
+    "Minimum x",
+    "west / left / minLon",
+    "Smallest longitude (or projected x) present"
+   ],
+   [
+    "Minimum y",
+    "south / bottom / minLat",
+    "Smallest latitude (or projected y) present"
+   ],
+   [
+    "Maximum x",
+    "east / right / maxLon",
+    "Largest x present"
+   ],
+   [
+    "Maximum y",
+    "north / top / maxLat",
+    "Largest y present"
+   ]
+  ],
+  "note": "Axis order in WKT is x then y — for geographic data, longitude then latitude. Half the world's bounding-box bugs are that sentence ignored."
+ },
+ "faq": [
+  [
+   "Does it handle Z and M coordinates?",
+   "Three- and four-dimensional WKT (POINT Z, POINT M, POINT ZM) parses; the box reports the x/y envelope, with z/m extents a separate question this page keeps out of scope by design."
+  ],
+  [
+   "MULTIPOLYGON with far-flung islands?",
+   "One box spans all members — a Hawaii-plus-Alaska collection's envelope covers most of the Pacific, honestly. Per-member boxes are a decomposition task."
+  ],
+  [
+   "Antimeridian-crossing geometry?",
+   "Naive min/max gives a near-world-width box for a Fiji-crossing line — the classic seam limitation of axis boxes, stated rather than hidden."
+  ],
+  [
+   "SRID prefixes (EWKT)?",
+   "An SRID=4326; prefix is accepted as PostGIS writes it; the numbers are computed in whatever units the coordinates carry."
+  ],
+  [
+   "Curved geometries (CIRCULARSTRING)?",
+   "True curve envelopes need arc extrema, not just vertex scans — beyond this calculator's straight-geometry scope, and flagged when detected."
+  ],
+  [
+   "Why is my box a single point?",
+   "Your geometry is a POINT (or all its coordinates coincide) — a degenerate but correct envelope."
+  ],
+  [
+   "Precision of the outputs?",
+   "Full input precision — the box copies extremes verbatim, never rounds them."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Validate first: the "
+  },
+  {
+   "t": "WKT Validator",
+   "l": "/tools/wkt-validator"
+  },
+  {
+   "t": "; convert: the "
+  },
+  {
+   "t": "WKT / GeoJSON Helper",
+   "l": "/tools/wkt-geojson-helper"
+  },
+  {
+   "t": "; count: the "
+  },
+  {
+   "t": "WKT Coordinate Counter",
+   "l": "/tools/wkt-coordinate-counter"
+  },
+  {
+   "t": "; GeoJSON boxes: the "
+  },
+  {
+   "t": "GeoJSON Bounding Box Calculator",
+   "l": "/tools/geojson-bounding-box-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

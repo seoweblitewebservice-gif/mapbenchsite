@@ -8,17 +8,169 @@
   "gpx remove waypoints tool tool",
   "how to calculate gpx remove waypoints tool"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Remove Waypoints Tool: Tracks Stay, Pins Go",
+ "description": "Remove standalone waypoints from a GPX file with the GPX Remove Waypoints Tool — tracks and routes preserved exactly. Free, local processing.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a file carrying 40 planning waypoints — trailheads you considered, camps you skipped — downloads with zero <wpt> elements while its recorded track keeps all 2,050 of its points.",
+ "quick_answer": "The GPX Remove Waypoints Tool deletes the standalone <wpt> waypoint elements from a GPX file while preserving its tracks and routes exactly. Load the file in your browser and download the cleaned copy — the recording without the planning clutter, ready for platforms that plot every pin you ever saved.",
+ "steps_intro": "Waypoints are the pins. Tracks are the journey. Remove one, keep the other:",
+ "use_cases": [
+  {
+   "title": "Cleaning a share-out file",
+   "body": [
+    {
+     "t": "Your planning pins include your home, your car and three maybes. Share the track, not the notebook — the sibling strippers handle "
+    },
+    {
+     "t": "time",
+     "l": "/tools/gpx-remove-timestamps"
+    },
+    {
+     "t": " and "
+    },
+    {
+     "t": "elevation",
+     "l": "/tools/gpx-remove-elevation"
+    },
+    {
+     "t": " the same way."
+    }
+   ]
+  },
+  {
+   "title": "Platform imports without pin spam",
+   "body": [
+    {
+     "t": "Some platforms render every <wpt> as a permanent map pin. A waypoint-free copy shows the clean route alone."
+    }
+   ]
+  },
+  {
+   "title": "Separating plan from record",
+   "body": [
+    {
+     "t": "Waypoints were the intention; the track is the evidence. Archiving the evidence clean is a defensible filing habit."
+    }
+   ]
+  },
+  {
+   "title": "Reducing a busy file",
+   "body": [
+    {
+     "t": "Seasons of saved places accumulate in device exports. Removing them leaves the tracks that were the point of the file."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · What a waypoint is (and is not)",
+   "body": [
+    {
+     "t": "A <wpt> is a standalone saved place — summit, camp, trailhead — stored at the top level of the file, independent of any track. Trackpoints (<trkpt>) may pass the same summit; they are the recording's moments, and this tool never touches them."
+    }
+   ]
+  },
+  {
+   "label": "Example · The route-point distinction",
+   "body": [
+    {
+     "t": "Route points (<rtept>) belong to planned routes and also survive — they are structure, not pins. The tool's scope is exactly the top-level <wpt> set, stated so the cleaned file holds no surprises."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Scope of the removal",
+  "intro": "Three point kinds live in a GPX file; exactly one is removed.",
+  "columns": [
+   "Element",
+   "What it is",
+   "Fate"
+  ],
+  "rows": [
+   [
+    "<wpt>",
+    "Standalone saved places",
+    "Removed"
+   ],
+   [
+    "<trkpt>",
+    "Recorded track points",
+    "Preserved exactly"
+   ],
+   [
+    "<rtept>",
+    "Planned route points",
+    "Preserved"
+   ],
+   [
+    "Metadata and bounds",
+    "File header data",
+    "Preserved"
+   ]
+  ],
+  "note": "The edit runs on a browser-side copy; the original file is never modified. Extract waypoints first (the extractor tools in this family) if the pins themselves are worth keeping as their own file."
+ },
+ "faq": [
+  [
+   "I only want some waypoints gone.",
+   "This tool removes the whole <wpt> set. For surgical removal, a text editor finds each <wpt>…</wpt> block by name — or extract all, delete from the copy, and keep the extraction as the pins file."
+  ],
+  [
+   "Do waypoint names inside tracks survive?",
+   "Track and segment names are not waypoints and are untouched — only top-level <wpt> elements are in scope."
+  ],
+  [
+   "Will the file still open everywhere?",
+   "Yes — a GPX without waypoints is ordinary GPX 1.1; tracks and routes are the elements readers require."
+  ],
+  [
+   "What about courses and FIT files?",
+   "Different formats, different editors — this tool speaks GPX XML. Convert FIT to GPX first if a platform offers it."
+  ],
+  [
+   "Can removal be undone?",
+   "In the download, no — in your archive, trivially: the original file never changes, and the cleaned file is a copy."
+  ],
+  [
+   "Waypoints with photos or links?",
+   "Their <link> and description children go with the <wpt> element — the whole pin, attachments included, is the unit of removal."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Extract before deleting: count with the "
+  },
+  {
+   "t": "GPX Track Point Counter",
+   "l": "/tools/gpx-point-counter"
+  },
+  {
+   "t": "; sibling strips: "
+  },
+  {
+   "t": "GPX Elevation Remover",
+   "l": "/tools/gpx-remove-elevation"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "GPX Timestamp Remover",
+   "l": "/tools/gpx-remove-timestamps"
+  },
+  {
+   "t": "; combine files: the "
+  },
+  {
+   "t": "GPX Merger",
+   "l": "/tools/gpx-merger"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-deduplicator",
   "csv-coordinate-validator",
@@ -26,5 +178,12 @@
   "csv-row-counter",
   "csv-to-geojson-converter",
   "csv-to-map"
+ ],
+ "related": [
+  "gpx-merger",
+  "gpx-remove-elevation",
+  "gpx-remove-timestamps",
+  "gpx-reverse-track",
+  "gpx-to-csv-converter"
  ]
 }

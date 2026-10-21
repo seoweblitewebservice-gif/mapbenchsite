@@ -6,17 +6,158 @@
   "places near me",
   "amenities near"
  ],
- "title": null,
- "description": null,
+ "title": "Nearby Places Finder: What Is Around a Point",
+ "description": "Find places near a point with the Nearby Places Finder — cafes, pharmacies, stations and more from open map data, ranked by distance. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, from Times Square the everyday essentials fan out in every direction — Grand Central alone is 0.91 km northeast — and the finder ranks them by the walkable truth of distance.",
+ "quick_answer": "The Nearby Places Finder lists the places around a point — cafes, pharmacies, stations, shops and services recorded in OpenStreetMap — ranked by distance. Set the point, choose the kind of place, and read what is actually near: the traveller's, mover's and scout's first question, answered from open data.",
+ "steps_intro": "Name the point and the need; the map answers with its records:",
+ "use_cases": [
+  {
+   "title": "Hotel and rental scouting",
+   "body": [
+    {
+     "t": "A listing's claims ('steps to everything') become a ranked list with metres on it — the "
+    },
+    {
+     "t": "Cities Within Radius",
+     "l": "/tools/cities-within-radius"
+    },
+    {
+     "t": " pattern at street scale."
+    }
+   ]
+  },
+  {
+   "title": "New-neighbourhood due diligence",
+   "body": [
+    {
+     "t": "Before the lease: the pharmacy, the grocery, the station, the park — counted from the door, not from the brochure's imagination."
+    }
+   ]
+  },
+  {
+   "title": "Travel days",
+   "body": [
+    {
+     "t": "Stranded near a station with an hour to fill: the finder is the difference between wandering and choosing."
+    }
+   ]
+  },
+  {
+   "title": "Care and family logistics",
+   "body": [
+    {
+     "t": "The nearest pharmacy at midnight and the nearest clinic to a parent's new flat are the same tool at different emotional temperatures — distance-ranked, calmly."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Presence is not openness",
+   "body": [
+    {
+     "t": "The finder lists what the map records at that spot — a pharmacy that exists. Whether it is open at 2 a.m. is its own listing's business; the finder finds the candidates, their pages carry the hours."
+    }
+   ]
+  },
+  {
+   "label": "Example · Straight-line, honestly labelled",
+   "body": [
+    {
+     "t": "Rankings run on straight-line distance from your point. The café 300 m away across a river may be a 15-minute walk — the list gives the geography; the bridge situation is the map's next layer, and routers settle it."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the results rest on",
+  "intro": "Open data's strengths and edges, stated.",
+  "columns": [
+   "Aspect",
+   "Reality"
+  ],
+  "rows": [
+   [
+    "Source",
+    "OpenStreetMap's community record"
+   ],
+   [
+    "Coverage",
+    "Deep in cities and mapped regions; thinner in rural areas"
+   ],
+   [
+    "Ranking",
+    "Straight-line distance from your point"
+   ],
+   [
+    "Freshness",
+    "As current as the last volunteer's edit — usually recent, never guaranteed"
+   ]
+  ],
+  "note": "A place missing from the results is missing from the record, not necessarily from the street. In well-mapped cities the record is remarkably complete; the tool's honesty is in naming its source."
+ },
+ "faq": [
+  [
+   "Which categories can I search?",
+   "The everyday essentials map data records well: food and drink, pharmacies, fuel, lodging, stations, shops, services and more — the form lists the categories the data supports at your point."
+  ],
+  [
+   "How near is 'nearby'?",
+   "Results rank outward from the point until the list is usefully full — you see the nearest first and can judge the radius that matters; rural searches naturally reach farther."
+  ],
+  [
+   "A place near me is missing.",
+   "Open data is volunteer-built: a new or unmapped business may not be recorded yet. Its absence is the dataset's gap — the map itself (OpenStreetMap) accepts the correction from anyone."
+  ],
+  [
+   "Are ratings or reviews included?",
+   "No — this finder is geography, not reputation. It answers where and how far; quality judgments live with review platforms."
+  ],
+  [
+   "My exact location required?",
+   "No — search a place, paste coordinates or click the map. Browser location is one optional input, per the location tools' standing rule."
+  ],
+  [
+   "Results in a list I can keep?",
+   "The ranked list is yours to note or screenshot; systematic exports belong to the dataset tools, and the underlying OSM data is openly licensed with attribution."
+  ],
+  [
+   "Walking times?",
+   "Distance is the finder's measure; walking time is distance through the road network — the routing family converts properly when the walk matters."
+  ],
+  [
+   "Business owner — my listing is wrong.",
+   "The record is OpenStreetMap's: correcting it there fixes every tool built on it, this one included — a better fix than reporting it app by app."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Your point: "
+  },
+  {
+   "t": "Find My Location",
+   "l": "/tools/find-my-location"
+  },
+  {
+   "t": "; its record: the "
+  },
+  {
+   "t": "Coordinates Lookup Tool",
+   "l": "/tools/coordinates-lookup-tool"
+  },
+  {
+   "t": "; its address: the "
+  },
+  {
+   "t": "Reverse Geocoder",
+   "l": "/tools/reverse-geocoder"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "nearest-postcode-from-list",
   "population-density-compare",

@@ -6,17 +6,154 @@
   "opposite point on earth",
   "antipode finder online"
  ],
- "title": null,
- "description": null,
+ "title": "Antipode Finder: The Opposite Side of Earth",
+ "description": "Find the point exactly opposite any place on Earth with the Antipode Finder — latitude negated, longitude flipped 180 degrees. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, New York's antipode sits at −40.7128, 105.9940 in the Indian Ocean southwest of Australia — while Madrid's lands in the Pacific just east of New Zealand, which is why Spain and New Zealand are Earth's famous antipodal pair.",
+ "quick_answer": "The Antipode Finder computes the point on Earth's surface diametrically opposite a given place — the spot you would reach by tunnelling straight through the planet's centre. Enter a place or coordinates and read its opposite: latitude negated, longitude shifted by 180 degrees, shown on the map.",
+ "steps_intro": "Through the centre, out the other side:",
+ "use_cases": [
+  {
+   "title": "Teaching the globe",
+   "body": [
+    {
+     "t": "Nothing corrects flat-map intuition like digging from your classroom and surfacing in an ocean you did not expect. The "
+    },
+    {
+     "t": "Central Angle Calculator",
+     "l": "/tools/central-angle-from-distance-calculator"
+    },
+    {
+     "t": " prices the full 180° trip."
+    }
+   ]
+  },
+  {
+   "title": "The Spain–New Zealand check",
+   "body": [
+    {
+     "t": "Most of Spain antipodes into New Zealand waters — the rare large land-to-land pairing. Run Madrid, Wellington, Buenos Aires (China) and Quito (Sumatra) and collect Earth's four famous answers."
+    }
+   ]
+  },
+  {
+   "title": "Travel and trivia with receipts",
+   "body": [
+    {
+     "t": "'Directly below us right now is…' answered with coordinates, not gestures — including the honest usual answer: open ocean."
+    }
+   ]
+  },
+  {
+   "title": "Antipodal time and weather intuition",
+   "body": [
+    {
+     "t": "Your antipode is roughly 12 time zones away and in the opposite season — the finder makes both facts a place instead of a slogan."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Quito's jungle antipode",
+   "body": [
+    {
+     "t": "Quito, Ecuador (−0.1807, −78.4678) flips to (0.1807, 101.5322) — land, in the Sumatran jungle of Indonesia. One of the few capital-city antipodes that is not ocean."
+    }
+   ]
+  },
+  {
+   "label": "Example · Buenos Aires to China",
+   "body": [
+    {
+     "t": "Buenos Aires (−34.6037, −58.3816) antipodes to (34.6037, 121.6184) in eastern China near the Yellow Sea coast — the Argentina–China pairing that makes the two countries' trade routes' short way a through-Earth joke."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The flip, mechanically",
+  "intro": "Antipode arithmetic is the simplest on this site.",
+  "columns": [
+   "Input",
+   "Antipode"
+  ],
+  "rows": [
+   [
+    "Latitude φ",
+    "−φ (hemisphere swaps)"
+   ],
+   [
+    "Longitude λ",
+    "λ + 180° if λ < 0, else λ − 180°"
+   ],
+   [
+    "Time of day",
+    "Roughly opposite — solar noon meets solar midnight"
+   ],
+   [
+    "Season",
+    "Opposite — July winter in Sydney's hemisphere logic"
+   ]
+  ],
+  "note": "Roughly 71% of Earth's surface is ocean, and only about 15% of land has a land antipode at all — most digs end in water. Land-to-land pairs concentrate in Spain↔New Zealand, Argentina↔China and Canada↔Antarctica's neighbourhood."
+ },
+ "faq": [
+  [
+   "Will the antipode usually be ocean?",
+   "Yes — most of the time. With oceans covering about 71% of the surface and land clustered unevenly, most points (land or sea) face water on the far side. Land antipodes are the celebrated exception."
+  ],
+  [
+   "Is the antipode the farthest place from me?",
+   "On the surface, yes — the surface distance is half Earth's circumference (about 20,015 km along the great circle), the maximum any two surface points can achieve."
+  ],
+  [
+   "Through-Earth straight-line distance?",
+   "The tunnel chord equals Earth's diameter (about 12,742 km through the centre) — the Earth Chord tools compute chords for shallower angles; the antipode is their limiting case."
+  ],
+  [
+   "Same antipode for my whole city?",
+   "Nearly — a city spans a few hundredths of a degree, so its antipodes span the same few hundredths on the far side. One point stands honestly for the whole town."
+  ],
+  [
+   "What about the exact poles?",
+   "The North Pole's antipode is the South Pole — longitude becomes meaningless at both ends, the one place the flip formula politely breaks."
+  ],
+  [
+   "Do any two capitals antipode exactly?",
+   "Not exactly city-centre to city-centre, but the Madrid–Wellington region and Quito's Sumatran answer come close enough to run pub quizzes worldwide."
+  ],
+  [
+   "Antipode weather right now?",
+   "Opposite season guaranteed by geometry; the weather itself needs live data this finder does not claim to carry."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The trip's angle: the "
+  },
+  {
+   "t": "Central Angle From Distance Calculator",
+   "l": "/tools/central-angle-from-distance-calculator"
+  },
+  {
+   "t": "; the arc: the "
+  },
+  {
+   "t": "Earth Arc Length Calculator",
+   "l": "/tools/earth-arc-length-calculator"
+  },
+  {
+   "t": "; the latitude you flip: the "
+  },
+  {
+   "t": "Distance from Equator Calculator",
+   "l": "/tools/distance-from-equator-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "central-angle-from-distance-calculator",
   "cicada-emergence-map",

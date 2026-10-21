@@ -8,17 +8,184 @@
   "barometric pressure altitude",
   "pressure at height calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Air Pressure by Elevation Calculator",
+ "description": "Estimate standard-atmosphere air pressure at any elevation with the Air Pressure by Elevation Calculator — kPa, hPa and percent of sea level. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, at Denver's 1,609 metres the standard atmosphere gives 83.4 kPa — about 82% of sea-level pressure — which is why a sealed snack bag puffs up on the drive into the mountains.",
+ "quick_answer": "The Air Pressure by Elevation Calculator applies the international standard atmosphere to estimate air pressure at a given elevation. Enter the height and read the pressure in kilopascals, hectopascals and percent of sea level — a weather-free reference value that pilots, hikers and engineers start from.",
+ "steps_intro": "Pressure falls with height on a curve, not a line. Read your point on it:",
+ "use_cases": [
+  {
+   "title": "Calibrating a barometric altimeter",
+   "body": [
+    {
+     "t": "Altimeters measure pressure and call it height; this reference curve separates the atmosphere's normal behaviour from today's weather — the "
+    },
+    {
+     "t": "Pressure Altitude Calculator",
+     "l": "/tools/pressure-altitude-calculator"
+    },
+    {
+     "t": " runs the same physics in aviation's direction."
+    }
+   ]
+  },
+  {
+   "title": "Mountain trip preparation",
+   "body": [
+    {
+     "t": "At 3,000 m the air holds about 69% of sea-level pressure. Breathing, boiling and engine performance all follow that number — the "
+    },
+    {
+     "t": "Boiling Point by Elevation Calculator",
+     "l": "/tools/boiling-point-by-elevation-calculator"
+    },
+    {
+     "t": " shows one consequence."
+    }
+   ]
+  },
+  {
+   "title": "HVAC and fan engineering estimates",
+   "body": [
+    {
+     "t": "Air density scales with pressure; a fan sized at sea level moves thinner air in Albuquerque. Standard pressure is the first correction."
+    }
+   ]
+  },
+  {
+   "title": "Science teaching",
+   "body": [
+    {
+     "t": "The exponential decay of the atmosphere is this curve — half the air below ~5,500 m, three quarters below ~11,000 m, computed from the same formula."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The halfway height",
+   "body": [
+    {
+     "t": "At about 5,500 m the standard pressure is 50.5 kPa — half of sea level. Half of the entire atmosphere's mass sits below that height, which Everest base-camp trekkers feel in every step."
+    }
+   ]
+  },
+  {
+   "label": "Example · Everest's summit",
+   "body": [
+    {
+     "t": "At 8,849 m the standard atmosphere gives about 31 kPa — roughly one third of sea-level pressure (real summit measurements average a little higher, around 34 kPa, because Everest's latitude bulges the atmosphere). Model versus mountain, honestly labelled."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Standard pressure by elevation",
+  "intro": "From the standard-atmosphere formula this calculator uses (troposphere model).",
+  "columns": [
+   "Elevation",
+   "Pressure",
+   "% of sea level"
+  ],
+  "rows": [
+   [
+    "0 m (sea level)",
+    "101.3 kPa / 1,013 hPa",
+    "100%"
+   ],
+   [
+    "500 m",
+    "95.5 kPa",
+    "94.2%"
+   ],
+   [
+    "1,000 m",
+    "89.9 kPa",
+    "88.7%"
+   ],
+   [
+    "1,609 m (Denver)",
+    "83.4 kPa",
+    "82.3%"
+   ],
+   [
+    "3,000 m",
+    "70.1 kPa",
+    "69.2%"
+   ],
+   [
+    "5,500 m",
+    "50.5 kPa",
+    "49.8%"
+   ],
+   [
+    "8,849 m (Everest)",
+    "31.4 kPa",
+    "31.0%"
+   ]
+  ],
+  "note": "The standard atmosphere assumes a fixed temperature profile (15°C at sea level, cooling 6.5°C per km). Real pressure at your height today also rides on weather systems — see the FAQs."
+ },
+ "faq": [
+  [
+   "What model produces these numbers?",
+   "The international standard atmosphere's troposphere formula: pressure = 101,325 × (1 − 2.25577×10⁻⁵ × height in metres)^5.25588 pascals. It models an average atmosphere, not today's sky."
+  ],
+  [
+   "How fast does pressure drop near the ground?",
+   "About 1 hPa per 8.3 metres (roughly 1 inHg per 300 m) in the lowest layers — the rule altimeter pilots feel on climb-out — slowing as the air thins."
+  ],
+  [
+   "My barometer disagrees with the table.",
+   "It should, a little: weather moves real surface pressure ±3% routinely. Barometers report now; this calculator reports standard. The gap between them is literally the weather."
+  ],
+  [
+   "Pressure altitude versus true altitude?",
+   "Pressure altitude is the height the standard atmosphere assigns to a measured pressure. Aviation flies by it so that all aircraft share one ruler; this calculator's curve is that ruler."
+  ],
+  [
+   "Does temperature change the answer?",
+   "In reality yes — warm air is thicker, so pressure falls more slowly with height on hot days. The standard model fixes a reference temperature profile so values stay comparable."
+  ],
+  [
+   "Units beyond kPa and hPa?",
+   "Millimetres of mercury and inHg follow fixed factors (101.325 kPa = 760 mmHg = 29.92 inHg) — the standard sea-level row of the table is the conversion key."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Boiling consequence: the "
+  },
+  {
+   "t": "Boiling Point by Elevation Calculator",
+   "l": "/tools/boiling-point-by-elevation-calculator"
+  },
+  {
+   "t": "; aviation form: the "
+  },
+  {
+   "t": "Pressure Altitude Calculator",
+   "l": "/tools/pressure-altitude-calculator"
+  },
+  {
+   "t": "; temperature twin: the "
+  },
+  {
+   "t": "Temperature Lapse Rate Calculator",
+   "l": "/tools/temperature-lapse-rate-calculator"
+  },
+  {
+   "t": "; a height: the "
+  },
+  {
+   "t": "Elevation Finder",
+   "l": "/tools/elevation-finder"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "antenna-height-distance-calculator",
   "antipode-finder",

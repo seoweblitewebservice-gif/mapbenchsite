@@ -6,17 +6,158 @@
   "sunrise azimuth",
   "where does the sun rise"
  ],
- "title": null,
- "description": null,
+ "title": "Sunrise Direction Compass: Where the Sun Rises",
+ "description": "Find the compass direction of sunrise for your place and date with the Sunrise Direction Compass — degrees from north, season swing included. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, from New York the Sun rises at 58° in June (northeast-ish) but at 122° in December (southeast-ish) — a 63-degree swing along your horizon every year.",
+ "quick_answer": "The Sunrise Direction Compass gives the compass bearing of sunrise for your place and date — where on the horizon the Sun will appear, in degrees from true north. Check it before you pick the viewpoint or align the photo.",
+ "steps_intro": "East is a season, not a constant:",
+ "use_cases": [
+  {
+   "title": "Sunrise photography spots",
+   "body": [
+    {
+     "t": "The shot is geometry: stand where the sunrise bearing crosses your foreground. Pair the bearing with the "
+    },
+    {
+     "t": "Sunrise and Sunset Calculator",
+     "l": "/tools/sunrise-sunset-calculator"
+    },
+    {
+     "t": "'s time and the plan is complete."
+    }
+   ]
+  },
+  {
+   "title": "Alignment dates for landmarks",
+   "body": [
+    {
+     "t": "Avenues and avenues of stones align on specific dates (Manhattanhenge is the famous grid case). The compass finds which dates your street catches."
+    }
+   ]
+  },
+  {
+   "title": "Home and garden light",
+   "body": [
+    {
+     "t": "Which windows get dawn light in June versus December is this bearing, read at both solstices."
+    }
+   ]
+  },
+  {
+   "title": "Hiking and camping starts",
+   "body": [
+    {
+     "t": "Facing the dawn or avoiding its glare on the trail — know the bearing before the boots."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The equinox anchor",
+   "body": [
+    {
+     "t": "Around March 20 and September 22 the Sun rises at almost exactly 90° — due east — nearly everywhere on Earth (90.6° computed for New York on March 20). Every other date drifts from that anchor."
+    }
+   ]
+  },
+  {
+   "label": "Example · The solstice extremes",
+   "body": [
+    {
+     "t": "New York: 58.3° (June) and 121.6° (December). London swings wider: June sunrise at 50.3°, closing on northeast — higher latitude, longer lean."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Sunrise bearing through the year (New York)",
+  "intro": "Computed azimuths at sunrise — the horizon point migrates monthly.",
+  "columns": [
+   "Date",
+   "Sunrise azimuth"
+  ],
+  "rows": [
+   [
+    "March 20 (equinox)",
+    "90.6° — due east"
+   ],
+   [
+    "June 21 (solstice)",
+    "58.3° — north of east"
+   ],
+   [
+    "September 22 (equinox)",
+    "~90° — due east again"
+   ],
+   [
+    "December 21 (solstice)",
+    "121.6° — south of east"
+   ]
+  ],
+  "note": "Bearings are true (geographic north). Sunset mirrors sunrise about north-south: sunset azimuth = 360° − sunrise azimuth on the same date."
+ },
+ "faq": [
+  [
+   "Is the degree exact?",
+   "To the standard algorithm's precision for the Sun's centre at a level horizon — within a fraction of a degree. Your hill, tower or treeline decides what you actually see, and when."
+  ],
+  [
+   "Why doesn't the Sun rise due east?",
+   "Earth's tilt gives the Sun a seasonal declination; the rise point slides along the horizon toward the summer pole's side. Due east happens only at the equinoxes."
+  ],
+  [
+   "True north or magnetic north?",
+   "True. A physical compass needs the local declination added — the True North vs Magnetic page on this site handles the conversion."
+  ],
+  [
+   "Sunset direction too?",
+   "By symmetry: 360° minus the sunrise figure. The Sun Azimuth Calculator tracks the bearing all day if you need the full sweep."
+  ],
+  [
+   "How wide is the Sun itself?",
+   "About half a degree across — 'first gleam' and 'full disc up' differ by that much bearing and a couple of minutes."
+  ],
+  [
+   "Near the poles?",
+   "Bearings swing wildly and, inside the circles, the Sun may not rise or set at all on your date — the Polar Day / Night Checker rules there."
+  ],
+  [
+   "Southern hemisphere?",
+   "The seasons swap: December brings the northern-style northern sunrise. The compass computes your hemisphere as it finds it."
+  ],
+  [
+   "Can I find the date the Sun rises over a landmark?",
+   "Read the landmark's bearing from your spot, then scan dates until the compass matches it — the alignment-date hunt in one loop."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "All-day bearing: the "
+  },
+  {
+   "t": "Sun Azimuth Calculator",
+   "l": "/tools/sun-azimuth-calculator"
+  },
+  {
+   "t": "; times: the "
+  },
+  {
+   "t": "Sunrise and Sunset Calculator",
+   "l": "/tools/sunrise-sunset-calculator"
+  },
+  {
+   "t": "; golden light: the "
+  },
+  {
+   "t": "Golden Hour Calculator",
+   "l": "/tools/golden-hour-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "astronomical-twilight-calculator",
   "civil-twilight-calculator",

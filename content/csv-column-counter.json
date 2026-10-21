@@ -8,17 +8,154 @@
   "csv column counter checker",
   "csv column counter validator"
  ],
- "title": null,
- "description": null,
+ "title": "CSV Column Counter: Check the Header Shape",
+ "description": "Count the fields in a CSV header line with the CSV Column Counter — the quick shape check imports demand before you upload. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a store export whose header reads name,lat,lon,address,phone counts 5 columns — and if your import template expects 4, you have just saved a failed upload.",
+ "quick_answer": "The CSV Column Counter counts the comma-separated fields in the first non-empty line of a pasted CSV snippet — usually the header. Paste the snippet and read the count — the ten-second check that a file matches the column structure an import expects.",
+ "steps_intro": "Imports fail on shape before content. Check the shape first:",
+ "use_cases": [
+  {
+   "title": "Pre-import sanity checks",
+   "body": [
+    {
+     "t": "The template says 6 columns; the file says 7. Find out here, not from the importer’s error log. Rows get the same treatment in the "
+    },
+    {
+     "t": "CSV Row Counter",
+     "l": "/tools/csv-row-counter"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Vendor file inspection",
+   "body": [
+    {
+     "t": "A supplier swears the format never changes — until the month it does. A header count is the tripwire that catches silent format drift."
+    }
+   ]
+  },
+  {
+   "title": "Spreadsheet-free environments",
+   "body": [
+    {
+     "t": "On a server console or a locked-down machine with no Excel, a pasted header still answers the only question that matters right now."
+    }
+   ]
+  },
+  {
+   "title": "Debugging your own exports",
+   "body": [
+    {
+     "t": "Your script emits CSV; the counter verifies the header it actually wrote — quoted commas inside fields included in the caveat below."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The name,lat,lon standard",
+   "body": [
+    {
+     "t": "‘name,lat,lon’ counts 3 — the minimum viable coordinate file. Add ‘address’ and the count says 4; the number is trivial, and catching its change early is the whole value."
+    }
+   ]
+  },
+  {
+   "label": "Example · The trailing comma trap",
+   "body": [
+    {
+     "t": "A header ending in a comma (‘name,lat,lon,’) counts a phantom empty fourth field. Importers disagree about that ghost column — the count makes it visible before they argue."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the count tells you",
+  "intro": "Header shapes and their usual meanings.",
+  "columns": [
+   "Count",
+   "Typical file"
+  ],
+  "rows": [
+   [
+    "2",
+    "Bare lat,lon pairs — no names, no attributes"
+   ],
+   [
+    "3",
+    "Labelled points (name, lat, lon)"
+   ],
+   [
+    "4–8",
+    "Points with working attributes (address, category, phone)"
+   ],
+   [
+    "Dozens",
+    "A database export — check which columns are coordinates before mapping"
+   ]
+  ],
+  "note": "The counter reads the first non-empty line and splits on commas — a deliberately simple instrument. Quoted fields containing commas need a full CSV parser; the method note on this page says so plainly."
+ },
+ "faq": [
+  [
+   "Does it count data rows too?",
+   "No — columns live in the header. The CSV Row Counter is the sibling that counts records; together they describe a file’s shape in two numbers."
+  ],
+  [
+   "What if the file has no header?",
+   "Then the first non-empty line is data, and the count still describes its field shape — which is often the question (‘how many fields per row?’) anyway."
+  ],
+  [
+   "Semicolon-separated files?",
+   "European Excel loves semicolons. This counter splits on commas as its method states; a semicolon file will count 1, which is itself the diagnosis."
+  ],
+  [
+   "Quoted fields with commas inside?",
+   "‘\"Smith, John\",40.7,-74.0’ fools simple splitting (it would count the name as two). For quoted-heavy files, use a real parser — the tool’s simplicity is stated, not hidden."
+  ],
+  [
+   "Tabs or pipes?",
+   "Different delimiters need different tools; the count of 1 across a pasted TSV is the tell that you are in comma territory with the wrong-shaped file."
+  ],
+  [
+   "Empty lines at the top?",
+   "Skipped — the first non-empty line is the measured one, matching how importers hunt for headers."
+  ],
+  [
+   "Can it check every row has the same count?",
+   "That is full validation — the CSV Coordinate Validator family checks coordinate content; row-shape auditing belongs to spreadsheet or script checks."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Rows: the "
+  },
+  {
+   "t": "CSV Row Counter",
+   "l": "/tools/csv-row-counter"
+  },
+  {
+   "t": "; content checks: the "
+  },
+  {
+   "t": "CSV Coordinate Validator",
+   "l": "/tools/csv-coordinate-validator"
+  },
+  {
+   "t": "; convert: the "
+  },
+  {
+   "t": "CSV to GeoJSON Converter",
+   "l": "/tools/csv-to-geojson-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

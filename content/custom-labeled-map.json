@@ -6,17 +6,170 @@
   "custom pin labels",
   "presentation map"
  ],
- "title": null,
- "description": null,
+ "title": "Custom Labeled Pin Map: Your Names on the Map",
+ "description": "Build a Custom Labeled Pin Map in the browser — drop pins, write your own labels, and capture the result for slides, guides and handouts. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a walking-tour guide pins six stops on a Custom Labeled Pin Map, names them in visiting order, and the screenshot becomes page one of the handout.",
+ "quick_answer": "The Custom Labeled Pin Map lets you drop pins on a map and write your own label for each one — no account, nothing saved on a server. Build the labelled view in your browser, then capture it for slides, guides and handouts exactly as arranged.",
+ "steps_intro": "Your places, your words — pinned in the order you would tell them:",
+ "use_cases": [
+  {
+   "title": "Tour and itinerary handouts",
+   "body": [
+    {
+     "t": "Stops in order, named as the group will hear them — 'Lunch here', 'Bus pickup'. A screenshot of the labelled map beats a list of addresses nobody can picture. For unlabelled quick pins, the "
+    },
+    {
+     "t": "Pin Map Maker",
+     "l": "/tools/pin-map-maker"
+    },
+    {
+     "t": " is the lighter tool."
+    }
+   ]
+  },
+  {
+   "title": "Real-estate and venue guides",
+   "body": [
+    {
+     "t": "Label the school, the station and the listing with walking-minute notes. Readers trust a map that admits it was made for them."
+    }
+   ]
+  },
+  {
+   "title": "Fieldwork and site plans",
+   "body": [
+    {
+     "t": "Sample points, survey markers, photo spots — labels in your project's own shorthand, captured before the tab closes. Formal collection belongs in the "
+    },
+    {
+     "t": "Map Data Collection Form Builder",
+     "l": "/tools/map-data-collection-form-builder"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Teaching local geography",
+   "body": [
+    {
+     "t": "Students pin and label their own landmarks — the school, the library, the river crossing. Labelling a map you made yourself is how the neighbourhood becomes knowledge."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · A six-stop walking tour",
+   "body": [
+    {
+     "t": "Pins labelled 1 to 6 in walking order, with the lunch stop named. The captured image drops into the tour PDF — no legend needed because the numbers tell the story in sequence."
+    }
+   ]
+  },
+  {
+   "label": "Example · Before-and-after labels",
+   "body": [
+    {
+     "t": "A community group pins 'Flooded, March' and 'Dry, August' on the same bend of river for a council meeting. Two labels did what a page of minutes could not."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Label writing that works",
+  "intro": "Short, ordered, written for the reader who was not in the room.",
+  "columns": [
+   "Do",
+   "Why",
+   "Example"
+  ],
+  "rows": [
+   [
+    "Number sequential stops",
+    "Order is information",
+    "1 Station, 2 Market, 3 Castle"
+   ],
+   [
+    "Put the landmark first",
+    "Readers scan names, not notes",
+    "Castle — steep steps at the end"
+   ],
+   [
+    "Add one useful fact",
+    "The label earns its space",
+    "Library — open till 8 pm"
+   ],
+   [
+    "Keep labels under ~5 words",
+    "Maps punish paragraphs",
+    "Ferry pier (last boat 18:40)"
+   ]
+  ],
+  "note": "Labels live in your browser session and in any link the page generates — they are not stored on a MapBench server, so capture or export the finished map before you close the tab."
+ },
+ "faq": [
+  [
+   "How do I capture the finished map?",
+   "Use the Map PNG Export tool or a screenshot once your labels sit where you want them — what you see is the deliverable, so zoom and pan to the final framing first."
+  ],
+  [
+   "Can I edit a label after placing the pin?",
+   "Yes — select the pin and revise its text; the map you capture reflects the latest wording. Nothing is locked until you export."
+  ],
+  [
+   "How many pins can I add?",
+   "There is no account tier counting your pins; practical limits are readability. Past a few dozen labels, switch to a legend-driven map or split the map by theme."
+  ],
+  [
+   "Can I import pins from a spreadsheet?",
+   "For bulk pins with coordinates, CSV to Map is the import route — then label the important ones here. Hand-placing suits dozens, not thousands."
+  ],
+  [
+   "Will my labels show if I share the link?",
+   "Where the tool offers a share link, the labels travel in the URL itself. Treat that link as the document: anyone with it sees the labels, so do not label anything private."
+  ],
+  [
+   "Can I use my own pin colours?",
+   "Colour choices are deliberately simple so labels stay readable. If colour-coding by category is the point, the Map with Legend tool organises entries with swatches instead."
+  ],
+  [
+   "Does it work for a printed poster?",
+   "Capture at the largest framing and check the PNG's resolution before sending it to a print shop — screen-perfect can still be print-soft at poster size."
+  ],
+  [
+   "What basemap sits under my labels?",
+   "A standard open street map (OpenStreetMap data). Your labels are the personal layer; the streets underneath stay neutral so the handout ages well."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Start with quick pins in the "
+  },
+  {
+   "t": "Pin Map Maker",
+   "l": "/tools/pin-map-maker"
+  },
+  {
+   "t": ", add category colours and a legend with "
+  },
+  {
+   "t": "Map with Legend",
+   "l": "/tools/map-with-legend"
+  },
+  {
+   "t": ", and export the result through "
+  },
+  {
+   "t": "Map PNG Export",
+   "l": "/tools/map-png-export"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "advanced-map-embed-generator",
   "blank-map",

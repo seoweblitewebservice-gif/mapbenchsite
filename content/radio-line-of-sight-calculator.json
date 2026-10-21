@@ -8,17 +8,164 @@
   "radio horizon calculator",
   "antenna range calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Radio Line-of-Sight Calculator: The 4/3 Earth",
+ "description": "Calculate radio line of sight between antennas with the Radio Line-of-Sight Calculator — geometric and 4/3-Earth radio horizons compared. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, two 30 m antennas enjoy a radio horizon of about 45.2 km between them — the air's refraction stretches their reach some 6 km past the 39.1 km that pure geometry allows.",
+ "quick_answer": "The Radio Line-of-Sight Calculator computes how far two antennas can see each other, comparing the pure geometric horizon with the 4/3-Earth radio-horizon model that accounts for atmospheric refraction. Enter both antenna heights and read each model's range — the first number every radio link plan stands on.",
+ "steps_intro": "Radio waves bend a little. The plan prices both truths:",
+ "use_cases": [
+  {
+   "title": "Point-to-point link feasibility",
+   "body": [
+    {
+     "t": "Before Fresnel clearance and path profiles, the horizon gate: if the 4/3 range does not reach, no antenna gain saves the plan. Clearance scoring lives on the "
+    },
+    {
+     "t": "Fresnel Clearance Percentage Calculator",
+     "l": "/tools/fresnel-clearance-percentage"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Repeater and coverage siting",
+   "body": [
+    {
+     "t": "A repeater's service edge is its horizon against the users' antenna heights — this page draws that circle honestly, twice (guaranteed and typical)."
+    }
+   ]
+  },
+  {
+   "title": "Ham radio VHF/UHF planning",
+   "body": [
+    {
+     "t": "Beyond-FM-simplex range questions are horizon questions. Two home stations at 10 m talk across about 26 km of radio horizon on flat land — terrain permitting, as always."
+    }
+   ]
+  },
+  {
+   "title": "Explaining 'impossible' contacts",
+   "body": [
+    {
+     "t": "Tropospheric ducting can multiply ranges many-fold on special days — the calculator's standard model is the baseline those miracles are measured against."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 4/3 gift",
+   "body": [
+    {
+     "t": "A 100 m tower against a 10 m rooftop: geometric range 35.7 + 11.3 = 47.0 km; radio range 41.2 + 13.0 = 54.2 km. Refraction hands the planner 7 km — on standard days. Links engineered to need the gift on all days are engineered to fail on some."
+    }
+   ]
+  },
+  {
+   "label": "Example · Handheld reality",
+   "body": [
+    {
+     "t": "Two handhelds at head height (1.8 m): radio horizons of about 5.5 km each, 11 km combined over perfect flatness. Real terrain, trees and buildings take their cut from there — which matches every hiker's experience of '5-mile' radios."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Antenna horizon distances",
+  "intro": "One antenna's reach to the horizon, both models — combine two for a link.",
+  "columns": [
+   "Antenna height",
+   "Geometric",
+   "Radio (4/3 Earth)"
+  ],
+  "rows": [
+   [
+    "1.8 m (handheld)",
+    "4.8 km",
+    "5.5 km"
+   ],
+   [
+    "10 m (rooftop)",
+    "11.3 km",
+    "13.0 km"
+   ],
+   [
+    "30 m (tower)",
+    "19.6 km",
+    "22.6 km"
+   ],
+   [
+    "100 m (mast)",
+    "35.7 km",
+    "41.2 km"
+   ],
+   [
+    "500 m (mountain site)",
+    "79.8 km",
+    "92.2 km"
+   ]
+  ],
+  "note": "Antenna height means height above the surrounding terrain along the path — a 30 m mast in a deep valley starts its horizon from the valley's terms, not the sea's."
+ },
+ "faq": [
+  [
+   "Does antenna gain extend the horizon?",
+   "Gain focuses power — it extends the range at which a usable signal arrives once a path exists, but it does not bend the horizon. Beyond-horizon paths need refraction luck, diffraction loss budgets, or a relay."
+  ],
+  [
+   "What about diffraction over a ridge?",
+   "Signals do bend over knife edges at a loss — engineered paths sometimes use it deliberately. This page computes the clean-horizon models; diffraction design is the path engineer's next layer."
+  ],
+  [
+   "Lower frequencies reach farther?",
+   "HF signals refract off the ionosphere and ignore horizons entirely; VHF and up are the horizon-bound world this page serves. Frequency also fattens the Fresnel zone — the other half of link planning."
+  ],
+  [
+   "Height above sea level or above ground?",
+   "Above the terrain the path crosses — the horizon forms against the local surface. A mountain-top site's sea-level elevation is famous precisely because it is also its path advantage."
+  ],
+  [
+   "The 4/3 model fails when?",
+   "Under sub-refraction (unusual temperature/humidity gradients) the effective Earth can shrink below even the geometric case — coastal and desert paths know these moods. Conservative designs keep margin for them."
+  ],
+  [
+   "Two different heights?",
+   "Add their separate horizons — the table's rows are per-antenna contributions, which is why one tall site serves so many small ones."
+  ],
+  [
+   "Mobile and vehicle antennas?",
+   "A 1.5–2 m vehicle whip lives in the handheld row of the table: roughly 11 km of ideal combined range to another vehicle, before terrain edits it."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Visual version: the "
+  },
+  {
+   "t": "Line of Sight Helper",
+   "l": "/tools/line-of-sight-helper"
+  },
+  {
+   "t": "; clearance: the "
+  },
+  {
+   "t": "Fresnel Zone Calculator",
+   "l": "/tools/fresnel-zone-calculator"
+  },
+  {
+   "t": "; mid-path planet: the "
+  },
+  {
+   "t": "Earth Bulge Calculator",
+   "l": "/tools/earth-bulge-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "air-pressure-by-elevation",
   "antenna-height-distance-calculator",

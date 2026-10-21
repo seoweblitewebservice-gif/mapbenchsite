@@ -7,17 +7,162 @@
   "IANA timezone map",
   "UTC offset map"
  ],
- "title": null,
- "description": null,
+ "title": "World Time Zone Map: Zones and Offsets Live",
+ "description": "Explore the world's time zones on the World Time Zone Map — coloured bands, UTC offsets and the political kinks straightened nowhere. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, China spans five geographic zones' worth of longitude yet keeps one time (UTC+8) — on the map it is a single colour from Kashgar to Shanghai, the widest kink in the system.",
+ "quick_answer": "The World Time Zone Map shows the Earth's time zones as they are — coloured bands with UTC offsets, bent by borders and politics, not by longitude. Explore the map to read any region's zone and offset — and why the tidy school diagram survives nowhere.",
+ "steps_intro": "Twenty-four tidy bands went in; forty-odd real zones came out:",
+ "use_cases": [
+  {
+   "title": "Orientation before conversion",
+   "body": [
+    {
+     "t": "See the zone before converting the time — the map explains the "
+    },
+    {
+     "t": "Time Zone Converter",
+     "l": "/tools/time-zone-converter"
+    },
+    {
+     "t": "'s answers geographically."
+    }
+   ]
+  },
+  {
+   "title": "Teaching the date line",
+   "body": [
+    {
+     "t": "The line's zigzags (around islands, between Alaska and Siberia) make sense only on a map — this one."
+    }
+   ]
+  },
+  {
+   "title": "Travel and logistics intuition",
+   "body": [
+    {
+     "t": "Why does Spain keep Berlin's hour? Why is Nepal 15 minutes off India? The map raises the questions the articles answer."
+    }
+   ]
+  },
+  {
+   "title": "Spotting the odd offsets",
+   "body": [
+    {
+     "t": "Half-hour and quarter-hour zones (India, Iran, Nepal, the Chatham Islands) stand out once the bands are coloured."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Spain's borrowed hour",
+   "body": [
+    {
+     "t": "Spain sits at London's longitude but keeps UTC+1 (a 1940 political choice aligned with Berlin) — solar noon in Galicia can fall near 14:30 by the clock in summer."
+    }
+   ]
+  },
+  {
+   "label": "Example · The date line's diplomacy",
+   "body": [
+    {
+     "t": "Kiribati pulled the line east around its islands in 1995, becoming the first country to greet the new day (UTC+14) — the map's easternmost bulge is that decision."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Time zone extremes",
+  "intro": "The records the map displays.",
+  "columns": [
+   "Extreme",
+   "Holder"
+  ],
+  "rows": [
+   [
+    "Earliest offset",
+    "UTC+14 — Line Islands (Kiribati)"
+   ],
+   [
+    "Latest offset",
+    "UTC−12 — Baker and Howland Islands (US)"
+   ],
+   [
+    "Total spread",
+    "26 hours between the extremes — more than a day"
+   ],
+   [
+    "Widest single zone",
+    "China, UTC+8 across ~5 zones of longitude"
+   ],
+   [
+    "Oddest offset",
+    "UTC+5:45 — Nepal"
+   ],
+   [
+    "Countries with most zones",
+    "France (12, counting its territories)"
+   ]
+  ],
+  "note": "Offsets shown are standard time; daylight saving advances many zones an hour in their summer — the map and converter both date-stamp their answers."
+ },
+ "faq": [
+  [
+   "Are the coloured areas exact political boundaries?",
+   "They show the standard published zone boundaries at map scale — authoritative for orientation. Border hamlets occasionally keep a neighbour's time informally; official IANA data governs conversion."
+  ],
+  [
+   "Does the offset update for daylight saving?",
+   "The map's context is date-aware where it displays current times; the safe habit is to convert specific dates with the Time Zone Converter, which applies the rules."
+  ],
+  [
+   "Why half-hour and quarter-hour offsets?",
+   "History: many zones were set from capital-city solar time before standardisation (Mumbai's legacy) or as political compromises (Nepal's +5:45 sets it apart from India deliberately)."
+  ],
+  [
+   "Why does France appear to have twelve time zones?",
+   "Metropolitan France keeps one; its overseas territories — from French Guiana to New Caledonia — span the globe and keep their own, totalling twelve. The map colours them all."
+  ],
+  [
+   "Is an IANA zone better than a fixed offset?",
+   "Yes — a name like America/New_York carries the rule history (past and future DST changes); a raw −5 breaks twice a year. Store names, not numbers."
+  ],
+  [
+   "Why 24 zones in theory but more in practice?",
+   "Longitude suggests 24; politics, geography and history deliver ~38 distinct offsets today. The map is the practice."
+  ],
+  [
+   "Does the ocean use zones?",
+   "Ships run on nautical time (by longitude band) and often switch to the destination's zone — the map's ocean bands are the nautical skeleton."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Convert: the "
+  },
+  {
+   "t": "Time Zone Converter",
+   "l": "/tools/time-zone-converter"
+  },
+  {
+   "t": "; US detail: the "
+  },
+  {
+   "t": "US Time Zone Map",
+   "l": "/tools/us-time-zone-map"
+  },
+  {
+   "t": "; offset at a point: the "
+  },
+  {
+   "t": "UTC Offset by Coordinates",
+   "l": "/tools/utc-offset-by-coordinates"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "golden-hour-calculator",
   "moon-age-calculator",

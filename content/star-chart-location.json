@@ -6,17 +6,154 @@
   "astronomy coordinates",
   "night sky location"
  ],
- "title": null,
- "description": null,
+ "title": "Star Chart Location Setup: Sky App Coordinates",
+ "description": "Set up any star chart or planetarium app with your exact coordinates using Star Chart Location Setup — latitude is destiny for the night sky. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, from New York (latitude 40.758°) Polaris sits 40.8 degrees above the northern horizon and the celestial equator culminates 49.2 degrees up in the south — your latitude writes your sky.",
+ "quick_answer": "Star Chart Location Setup gives you the precise latitude and longitude your telescope apps, planetarium software and night-sky charts need to draw YOUR sky. Find or confirm your coordinates here, enter them in the app, and the chart's horizon, pole and planet positions finally match the sky above your garden.",
+ "steps_intro": "A star chart is only as good as the location it is set for:",
+ "use_cases": [
+  {
+   "title": "Planetarium and telescope apps",
+   "body": [
+    {
+     "t": "Stellarium, SkySafari and their kin all ask for a location before anything else. Supply coordinates, not just a town — the "
+    },
+    {
+     "t": "Latitude Longitude Finder",
+     "l": "/tools/latitude-longitude-finder"
+    },
+    {
+     "t": " finds them for any observing site."
+    }
+   ]
+  },
+  {
+   "title": "Dark-site trips",
+   "body": [
+    {
+     "t": "Driving to darker skies changes your latitude little and your longitude's clock a lot — update the app at the site and the chart's timing snaps back to truth."
+    }
+   ]
+  },
+  {
+   "title": "Astrophotography planning",
+   "body": [
+    {
+     "t": "Polar alignment, target rise times and twilight depth all compute from the site's coordinates. Wrong farm, wrong night."
+    }
+   ]
+  },
+  {
+   "title": "Checking an app's auto-location",
+   "body": [
+    {
+     "t": "Apps guess from networks and get fields wrong by kilometres. Verify the stored location against a known pair here."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Latitude is the sky's tilt",
+   "body": [
+    {
+     "t": "Polaris's altitude equals your latitude (40.8° from New York, ~51.5° from London, near the horizon at the equator). No other single number rearranges a star chart more — which is why apps ask for it first."
+    }
+   ]
+  },
+  {
+   "label": "Example · Longitude is the sky's clock",
+   "body": [
+    {
+     "t": "Two observers on the same latitude see the same sky at different clock times — longitude shifts when stars culminate. A chart set to your town but timed for the meridian's town drifts visibly."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What your coordinates control",
+  "intro": "Each input's job inside a star chart.",
+  "columns": [
+   "Input",
+   "Controls"
+  ],
+  "rows": [
+   [
+    "Latitude",
+    "The sky's tilt: Polaris altitude, which stars are circumpolar, how high the ecliptic climbs"
+   ],
+   [
+    "Longitude",
+    "Timing: local sidereal time, rise/set and culmination clock times"
+   ],
+   [
+    "Date and time (with time zone)",
+    "Earth's rotation angle for the moment"
+   ],
+   [
+    "Horizon and light pollution (your inputs)",
+    "What the chart should bother showing you"
+   ]
+  ],
+  "note": "Altitude/elevation above sea level barely moves a star chart — it matters for horizon dip and refraction at the extremes, not for finding your sky. Coordinates and clock are the whole game."
+ },
+ "faq": [
+  [
+   "How precise must my coordinates be?",
+   "Town-level precision draws a chart indistinguishable to the eye. Arc-minute precision matters for telescope GoTo pointing and occultation timing — take the pair from a map click at your exact observing spot for those."
+  ],
+  [
+   "The app shows a different sky than I see.",
+   "Check in order: location, then time zone, then the device clock. Nine times in ten the stored location is a stale auto-guess from another town."
+  ],
+  [
+   "Southern hemisphere?",
+   "Everything mirrors: the south celestial pole is the pivot, Polaris vanishes, and latitude's sign does the tilting. The setup is the same — the sky is not."
+  ],
+  [
+   "Why does the app want elevation too?",
+   "For horizon and refraction niceties and satellite passes — provide it if asked, but know coordinates and time carry the chart."
+  ],
+  [
+   "Daylight saving traps?",
+   "Charts compute in UTC internally; a phone in the wrong DST state shifts the sky by an hour's rotation (15 degrees). Verify the clock when the chart looks rotated."
+  ],
+  [
+   "Can I plan for a future trip's sky?",
+   "Set the destination's coordinates and the trip's date — planetariums happily draw next month's sky over a place you have not reached yet."
+  ],
+  [
+   "ISS and satellite passes?",
+   "They are brutally location-sensitive (a few kilometres change the pass) — site-exact coordinates, as this page insists, are the price of seeing one."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Get the pair: the "
+  },
+  {
+   "t": "Latitude and Longitude Finder",
+   "l": "/tools/latitude-longitude-finder"
+  },
+  {
+   "t": "; the Sun's schedule: the "
+  },
+  {
+   "t": "Sunrise Sunset Calculator",
+   "l": "/tools/sunrise-sunset-calculator"
+  },
+  {
+   "t": "; twilight: the "
+  },
+  {
+   "t": "Golden Hour Calculator",
+   "l": "/tools/golden-hour-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "arcminutes-to-decimal-degrees-converter",
   "arcseconds-to-ground-distance-calculator",

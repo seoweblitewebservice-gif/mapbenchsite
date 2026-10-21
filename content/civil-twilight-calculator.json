@@ -8,17 +8,173 @@
   "civil twilight calculator tool",
   "how to calculate civil twilight calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Civil Twilight Calculator: Dawn and Dusk Windows",
+ "description": "Find civil dawn and dusk — Sun 6° below the horizon — for any place and date with the Civil Twilight Calculator. Headlights-on light, computed. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, in New York on 21 June 2026 civil dawn begins about 04:51 and civil dusk ends about 21:03 (computed) — roughly 33 extra minutes of usable light wrapped around the day at each end.",
+ "quick_answer": "The Civil Twilight Calculator finds civil dawn and civil dusk — the times the Sun crosses 6 degrees below the horizon — for any place and date. Enter yours and read the window of usable light without the Sun: the practical boundary for headlights and evening plans.",
+ "steps_intro": "The Sun is down but the light is not — Sun between 0° and −6°:",
+ "use_cases": [
+  {
+   "title": "Driving and legal light",
+   "body": [
+    {
+     "t": "Many jurisdictions tie headlight and streetlight rules to civil twilight's definition. Know your local window — and the "
+    },
+    {
+     "t": "Sunrise Sunset Calculator",
+     "l": "/tools/sunrise-sunset-calculator"
+    },
+    {
+     "t": " for the endpoints inside it."
+    }
+   ]
+  },
+  {
+   "title": "Outdoor work and sport scheduling",
+   "body": [
+    {
+     "t": "Evening training, site work and matches can run to civil dusk without floodlights in summer. The window is longest exactly when evenings feel endless — check it instead of guessing."
+    }
+   ]
+  },
+  {
+   "title": "Photography's other hour",
+   "body": [
+    {
+     "t": "Civil twilight is the blue hour's home: city lights balance the sky. Photographers chasing the deeper dark use the "
+    },
+    {
+     "t": "Astronomical Twilight Calculator",
+     "l": "/tools/astronomical-twilight-calculator"
+    },
+    {
+     "t": "; portrait shooters live here."
+    }
+   ]
+  },
+  {
+   "title": "Fishing, hunting and regulation times",
+   "body": [
+    {
+     "t": "Regulations in many places define legal shooting and fishing light off twilight boundaries. Compute the day's window and carry it with the licence."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The winter squeeze in London",
+   "body": [
+    {
+     "t": "On 21 December 2026 London's civil dawn is about 07:23 and dusk about 16:33 (computed) — the whole usable day, twilight included, fits inside a working day, with true daylight just 7 hours 50 minutes of it."
+    }
+   ]
+  },
+  {
+   "label": "Example · Thirty-three minutes, twice",
+   "body": [
+    {
+     "t": "New York's midsummer civil twilight lasts about 33 minutes each end (sunrise 05:24, civil dawn 04:51). Toward the equator it shrinks toward 20 minutes; toward the poles it can stretch for hours — the Sun's slant is everything."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Where civil twilight sits",
+  "intro": "The first landing on the twilight staircase, against its neighbours.",
+  "columns": [
+   "Boundary",
+   "Sun's position",
+   "What it governs"
+  ],
+  "rows": [
+   [
+    "Sunrise / sunset",
+    "−0.83° (upper limb)",
+    "The day itself"
+   ],
+   [
+    "Civil twilight ends",
+    "−6°",
+    "Usable outdoor light, many legal definitions"
+   ],
+   [
+    "Nautical twilight ends",
+    "−12°",
+    "Horizon visibility at sea"
+   ],
+   [
+    "Astronomical twilight ends",
+    "−18°",
+    "True darkness"
+   ]
+  ],
+  "note": "Computed with the standard solar algorithm (within a few minutes). The −0.83° sunrise convention accounts for the Sun's disc and atmospheric refraction — the day is a little longer than the geometry of a point Sun."
+ },
+ "faq": [
+  [
+   "Why 6 degrees specifically?",
+   "At −6° the sky's brightness drops to roughly the level where artificial light takes over for ordinary outdoor activity — the convention almanacs, aviation and many laws adopted. Like all twilight bounds it is a chosen standard on a smooth dimming curve."
+  ],
+  [
+   "Is civil dawn the same as first light?",
+   "In everyday speech, near enough. Formally this page computes the −6° crossing; 'first light' in military and hunting usage usually means the start of civil twilight — the same instant wearing a field name."
+  ],
+  [
+   "How long does civil twilight last where I live?",
+   "Roughly 20–25 minutes near the equator, about half an hour at mid-latitudes, and hours near the poles in season. Latitude and date set it — the calculator answers for your point rather than the average."
+  ],
+  [
+   "Can civil twilight last all night?",
+   "Yes — poleward of about 60.5° latitude at the solstice the Sun never reaches −6°, and 'night' is one long civil twilight. White nights in St Petersburg and Reykjavik are this geometry with better poetry."
+  ],
+  [
+   "Does weather change the computed times?",
+   "The times are astronomical and fixed; clouds decide whether the light feels like the definition. A stormy dusk goes dark early in practice while the computed boundary stands."
+  ],
+  [
+   "Aviation uses a different one?",
+   "Aviation leans on civil twilight too (night definitions in many regulations reference it), while mariners own the nautical grade and astronomers the 18° line. One staircase, three professions."
+  ],
+  [
+   "Morning or evening — which is 'dusk'?",
+   "Civil dusk is the evening crossing, civil dawn the morning one. The pair bound the night; each day's twilight length is the same geometry read in two directions, weather permitting."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Deeper dark: the "
+  },
+  {
+   "t": "Nautical Twilight Calculator",
+   "l": "/tools/nautical-twilight-calculator"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Astronomical Twilight Calculator",
+   "l": "/tools/astronomical-twilight-calculator"
+  },
+  {
+   "t": "; endpoints: the "
+  },
+  {
+   "t": "Sunrise Sunset Calculator",
+   "l": "/tools/sunrise-sunset-calculator"
+  },
+  {
+   "t": "; pretty light: the "
+  },
+  {
+   "t": "Golden Hour Calculator",
+   "l": "/tools/golden-hour-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "moon-age-calculator",
   "moon-illumination-calculator",

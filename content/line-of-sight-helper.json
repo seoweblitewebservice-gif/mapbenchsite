@@ -6,17 +6,173 @@
   "los map",
   "visibility distance"
  ],
- "title": null,
- "description": null,
+ "title": "Line of Sight Helper: Two-Point Visibility",
+ "description": "Estimate line of sight between two points with the Line of Sight Helper — combined horizon ranges, endpoint elevations and curvature checks. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, two 30 m towers on flat ground can see each other's tops at 39.1 km — each contributes its own 19.6 km horizon, and the sight line just grazes the curve between them.",
+ "quick_answer": "The Line of Sight Helper estimates geometric line of sight between two points: it combines both endpoints' horizon distances and compares their elevations for a rough visibility verdict. Enter the two heights and read whether the curve of the Earth alone permits the view.",
+ "steps_intro": "Two horizons, added — then terrain gets its say:",
+ "use_cases": [
+  {
+   "title": "Tower-to-tower and rooftop links",
+   "body": [
+    {
+     "t": "Before radio specifics ("
+    },
+    {
+     "t": "Radio Line-of-Sight",
+     "l": "/tools/radio-line-of-sight-calculator"
+    },
+    {
+     "t": " handles those), the pure sight question: can these two tops see each other over the curve at all?"
+    }
+   ]
+  },
+  {
+   "title": "Viewpoint pairing",
+   "body": [
+    {
+     "t": "Summit-to-lighthouse, house-to-water-tower: paired elevations plus distance give the geometric verdict — terrain between them is checked on the "
+    },
+    {
+     "t": "Elevation Profile",
+     "l": "/tools/elevation-profile"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Camera and sensor placement",
+   "body": [
+    {
+     "t": "CCTV, wildfire lookout cameras and wildlife monitors all ask the same question this page prices: what ground is mutually visible?"
+    }
+   ]
+  },
+  {
+   "title": "School and scout demonstrations",
+   "body": [
+    {
+     "t": "Two hilltops, two torches, one calculation — the helper is the worksheet version of the horizon's geometry."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The equal towers",
+   "body": [
+    {
+     "t": "Two 30 m towers: 19.6 + 19.6 = 39.1 km of combined range. Put them 45 km apart and the Earth's curve alone forbids the view — no mast paint or optimism changes it; taller towers or a relay are the only votes that count."
+    }
+   ]
+  },
+  {
+   "label": "Example · The lopsided pair",
+   "body": [
+    {
+     "t": "A 500 m hill (horizon 79.8 km) watching a harbour buoy (height ~3 m, horizon 6.2 km): range ≈ 86 km. One high endpoint does nearly all the work — height is the currency, and it is not shared equally."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Combined sight ranges (geometric)",
+  "intro": "Sum of the two endpoints' horizon distances — the pattern this helper applies.",
+  "columns": [
+   "Endpoint heights",
+   "Combined range"
+  ],
+  "rows": [
+   [
+    "Eye level ↔ eye level (1.8 m)",
+    "9.6 km"
+   ],
+   [
+    "10 m ↔ 10 m",
+    "22.6 km"
+   ],
+   [
+    "30 m ↔ 30 m",
+    "39.1 km"
+   ],
+   [
+    "100 m ↔ 30 m",
+    "55.3 km"
+   ],
+   [
+    "500 m ↔ 3 m",
+    "86.0 km"
+   ],
+   [
+    "1,000 m ↔ 1,000 m",
+    "225.8 km"
+   ]
+  ],
+  "note": "Ranges assume a smooth spherical Earth and clear air. Real paths add terrain, buildings, trees — and refraction, which typically stretches these figures by about 8%."
+ },
+ "faq": [
+  [
+   "What does 'rough' mean in the verdict?",
+   "The helper judges the planet's curve and the endpoints only. A ridge, a wood or a city between the points can block a geometrically open line — profile the path for the full answer."
+  ],
+  [
+   "Where does refraction fit?",
+   "Standard refraction lengthens both horizons (the 7⁄6-radius model), adding roughly 8% to ranges on a typical day. The helper's headline numbers stay geometric so the margin is yours to see."
+  ],
+  [
+   "One endpoint at sea level?",
+   "Then its horizon is ~0 and the range is just the high end's horizon — a ship's masthead sighting a lighthouse works exactly this way, in reverse."
+  ],
+  [
+   "Heights above sea level or above ground?",
+   "What matters is height above the surface the sight line grazes — hilltop elevation plus structure height, in the terrain's own terms. A 30 m tower in a valley is not a 30 m advantage over the ridge next door."
+  ],
+  [
+   "Can I check a specific obstruction?",
+   "That is the Hidden Height and path-profile work: this helper sets the outer bound (can the endpoints see each other at all over the curve), profiles settle the middle."
+  ],
+  [
+   "Night viewing — lights change it?",
+   "A bright light can be detected slightly beyond the visual horizon by its glow and loom — the geometry of the lamp itself is unchanged, and this page prices the lamp, not the loom."
+  ],
+  [
+   "Underwater or underground?",
+   "No — line of sight here is the surface geometry of light travelling straight. Sound, radio diffraction and seismic paths each bend by their own rules."
+  ],
+  [
+   "Longest possible surface sight line?",
+   "Summit-to-summit records run past 480 km in exceptional clarity (the famous Pyrenees–Alps photographs) — combined horizons of two high peaks plus generous refraction. The arithmetic scales; the air rarely cooperates."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "One horizon: "
+  },
+  {
+   "t": "Horizon Distance",
+   "l": "/tools/horizon-distance"
+  },
+  {
+   "t": "; radio paths: the "
+  },
+  {
+   "t": "Radio Line-of-Sight Calculator",
+   "l": "/tools/radio-line-of-sight-calculator"
+  },
+  {
+   "t": "; the path's middle: the "
+  },
+  {
+   "t": "Earth Bulge Calculator",
+   "l": "/tools/earth-bulge-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boiling-point-by-elevation-calculator",
   "central-angle-from-distance-calculator",

@@ -7,17 +7,171 @@
   "running performance comparison",
   "pace comparison gpx"
  ],
- "title": null,
- "description": null,
+ "title": "Route Performance History Comparison: Two GPX",
+ "description": "Compare two GPX efforts on a route with Route Performance History Comparison — distance, pace, elevation and heart rate, file versus file. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, last month's 10.02 km in 52:30 (5:14.4/km) against today's 10.05 km in 50:12 (4:59.7/km) is 14.7 seconds per kilometre faster — a 4.67% improvement the comparison computes, not vibes.",
+ "quick_answer": "The Route Performance History Comparison loads two GPX files — an earlier effort and a later one — and compares distance, time, average pace, elevation gain and average heart rate where recorded. Your files never leave the browser; the comparison is computed locally from the two recordings you choose.",
+ "steps_intro": "Same route, two days, one honest table:",
+ "use_cases": [
+  {
+   "title": "Training progress checks",
+   "body": [
+    {
+     "t": "Monthly benchmark efforts on one course are the runner's controlled experiment. This comparison is its lab report — feed the files from the "
+    },
+    {
+     "t": "GPX Route Stats",
+     "l": "/tools/gpx-route-stats"
+    },
+    {
+     "t": " family you already trust."
+    }
+   ]
+  },
+  {
+   "title": "Pacing strategy reviews",
+   "body": [
+    {
+     "t": "Was the faster day faster early or late? Average pace plus the elevation context starts the answer; segment tools finish it."
+    }
+   ]
+  },
+  {
+   "title": "Equipment comparisons",
+   "body": [
+    {
+     "t": "New shoes, new bike setup, same loop: the pair of files either supports the purchase or politely doesn't."
+    }
+   ]
+  },
+  {
+   "title": "Comeback tracking",
+   "body": [
+    {
+     "t": "Post-injury rebuilds measured against the pre-injury baseline — heart rate at matched pace is the number coaches watch first."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 14.7-second improvement",
+   "body": [
+    {
+     "t": "March: 10.02 km, 52:30 → 314.4 s/km (5:14.4). April: 10.05 km, 50:12 → 299.7 s/km (4:59.7). Difference: 14.7 s/km, 4.67% faster — at similar heart rate, that is fitness; at much higher heart rate, that is effort. The comparison shows both, because one without the other misleads."
+    }
+   ]
+  },
+  {
+   "label": "Example · Distance mismatch warning",
+   "body": [
+    {
+     "t": "If the two files differ by 400 m, they are not the same route or one GPS cut a corner. Compare paces only when distances roughly agree — the tool shows both distances precisely so this check is yours to make."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The comparison, field by field",
+  "intro": "What is compared, and how to read each row.",
+  "columns": [
+   "Field",
+   "Compared as",
+   "Reading"
+  ],
+  "rows": [
+   [
+    "Distance",
+    "km/mi, both files",
+    "Must roughly match for a fair fight"
+   ],
+   [
+    "Moving/total time",
+    "From timestamps in the files",
+    "Pace's denominator"
+   ],
+   [
+    "Average pace",
+    "Time ÷ distance, per km and per mile",
+    "Lower is faster — the headline"
+   ],
+   [
+    "Elevation gain",
+    "Summed climbs per the file's ele data",
+    "A hillier day excuses a slower pace"
+   ],
+   [
+    "Average heart rate",
+    "Where <extensions> or HR data exists",
+    "Effort's witness — pace without it is half the story"
+   ]
+  ],
+  "note": "Both files must contain the fields being compared. Missing heart rate or elevation in one file narrows the comparison to what both honestly hold."
+ },
+ "faq": [
+  [
+   "Do the files need to be the same route?",
+   "The comparison works on any pair, but it means something only for the same course in the same direction. Different routes compare numbers; same routes compare performances."
+  ],
+  [
+   "One file has no heart rate.",
+   "Then heart-rate rows compare as absent — the rest of the comparison stands. Many watches record HR only with a strap or optical sensor enabled."
+  ],
+  [
+   "Moving time versus total time?",
+   "Files with pauses contain both stories. The comparison uses the file's recorded spans consistently for both efforts — consistency matters more than the choice."
+  ],
+  [
+   "Elevation gain differs between my watch and this.",
+   "Gain algorithms differ (thresholds smooth small bumps differently). Comparing two files under one algorithm here is fairer than comparing two devices' own summaries."
+  ],
+  [
+   "The distances differ by 2%.",
+   "GPS variance on identical routes runs 1–2% normally. Paces computed per-file remain comparable; treat sub-1% pace differences as noise."
+  ],
+  [
+   "Can it compare a plan against an effort?",
+   "A route file (plan) against a track (effort) compares distance and elevation only — no times exist in a plan. Still useful for course-checking."
+  ],
+  [
+   "Where does 'history' live?",
+   "Nowhere but your files. There is no account and no stored history — your archive is your history, which is why the comparison asks for two files each time."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "One file's stats: "
+  },
+  {
+   "t": "GPX Route Stats",
+   "l": "/tools/gpx-route-stats"
+  },
+  {
+   "t": "; speed focus: the "
+  },
+  {
+   "t": "GPX Average Speed Calculator",
+   "l": "/tools/gpx-average-speed-calculator"
+  },
+  {
+   "t": "; heart rate: the "
+  },
+  {
+   "t": "GPX Heart Rate Analyzer",
+   "l": "/tools/gpx-heart-rate-analyzer"
+  },
+  {
+   "t": "; gain: the "
+  },
+  {
+   "t": "GPX Elevation Gain Calculator",
+   "l": "/tools/gpx-elevation-gain-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

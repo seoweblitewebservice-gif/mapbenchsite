@@ -6,17 +6,175 @@
   "multi ring map",
   "multiple radius map online"
  ],
- "title": null,
- "description": null,
+ "title": "Multiple Radius Map: Rings Around a Point",
+ "description": "Draw several radius rings around one centre on the Multiple Radius Map — 5, 10 and 25-mile circles compared area by area. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, rings of 5, 10 and 25 miles around one centre enclose 78.5, 314.2 and 1,963.5 square miles — the outer ring holds twenty-five times the inner one's ground.",
+ "quick_answer": "The Multiple Radius Map draws several concentric radius circles around a single centre point, so distances compare in bands — who falls within 5 miles, what 10 adds, how far 25 reaches. Set the centre, add your radii and read the map — delivery zones and catchments in one picture.",
+ "steps_intro": "One centre, several honest circles:",
+ "use_cases": [
+  {
+   "title": "Delivery and service zoning",
+   "body": [
+    {
+     "t": "Free delivery inside 5 miles, a fee inside 10, none beyond 25 — the tier map customers and drivers both understand. Ring areas price the zones; gaps between two centres' circles are the "
+    },
+    {
+     "t": "Service Coverage Gap",
+     "l": "/tools/service-coverage-gap"
+    },
+    {
+     "t": "'s subject."
+    }
+   ]
+  },
+  {
+   "title": "Catchment comparisons",
+   "body": [
+    {
+     "t": "A store's 5/10/25 bands structure the trade-area report: each annulus is a population question the "
+    },
+    {
+     "t": "Population Within Radius",
+     "l": "/tools/population-within-radius"
+    },
+    {
+     "t": " tool answers per ring."
+    }
+   ]
+  },
+  {
+   "title": "Emergency and response planning",
+   "body": [
+    {
+     "t": "Five minutes is not five miles — but distance bands are the first sketch of coverage before road networks refine them into drive-time shapes."
+    }
+   ]
+  },
+  {
+   "title": "Real-estate search bands",
+   "body": [
+    {
+     "t": "‘Near the office’ at three tolerances: the rings turn a vague preference into commutable geography a listing search can honour."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Area grows with the square",
+   "body": [
+    {
+     "t": "Doubling the radius quadruples the area: 5 mi → 78.5 sq mi; 10 mi → 314.2. The 10–25 ring alone (1,649.3 sq mi) holds more than five times the entire 10-mile circle — outer rings are vaster than they look, which is the map's standing lesson."
+    }
+   ]
+  },
+  {
+   "label": "Example · Two circles, one overlap",
+   "body": [
+    {
+     "t": "Two 10-mile circles whose centres stand 10 miles apart overlap by 39.1% of each circle — the geometry behind duplicate-coverage audits when two branches' rings are drawn together."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Ring anatomy for 5 / 10 / 25 miles",
+  "intro": "Computed from π r² — the numbers behind the map's bands.",
+  "columns": [
+   "Band",
+   "Area",
+   "Ring adds"
+  ],
+  "rows": [
+   [
+    "Within 5 mi",
+    "78.5 sq mi (203 km²)",
+    "—"
+   ],
+   [
+    "5–10 mi ring",
+    "235.6 sq mi",
+    "3× the inner circle"
+   ],
+   [
+    "Within 10 mi",
+    "314.2 sq mi (814 km²)",
+    "—"
+   ],
+   [
+    "10–25 mi ring",
+    "1,649.3 sq mi",
+    "5.25× the 10-mi circle"
+   ],
+   [
+    "Within 25 mi",
+    "1,963.5 sq mi (5,085 km²)",
+    "25× the 5-mi circle"
+   ]
+  ],
+  "note": "Circumferences for scale: the 5-mile ring runs 31.4 miles around; the 25-mile ring, 157.1 — a two-hour drive just to trace the boundary."
+ },
+ "faq": [
+  [
+   "How many rings can I draw?",
+   "As many as the comparison needs — three to five bands is the readable range; beyond that the map becomes a target and the story blurs. Choose radii that match decisions (fees, times, policies), not round numbers alone."
+  ],
+  [
+   "Miles or kilometres?",
+   "Both — rings accept either unit, and mixed-unit comparisons (a 5-mile and a 10-km ring) draw faithfully side by side."
+  ],
+  [
+   "Is the area inside a ring the service area?",
+   "Geographically yes, operationally not quite: roads, rivers and one-way systems make real reach irregular. Rings are the honest first draft; drive-time tools draw the working version."
+  ],
+  [
+   "Centres other than my location?",
+   "Any address or coordinate can anchor the rings — a depot, a store, a competitor. The geometry does not care whose centre it is."
+  ],
+  [
+   "Two centres' rings on one map?",
+   "Comparing two locations' bands is the classic site-selection sketch — draw each centre in turn, or use the store catchment tools for the formal version."
+  ],
+  [
+   "Printing and sharing?",
+   "Ring maps screenshot and share like any map view; where the tool offers export or share links, the radii travel with the centre so the picture is reproducible."
+  ],
+  [
+   "Why do outer rings look thin but hold so much?",
+   "Because area grows with radius squared while the ring's width on screen grows linearly — the map's most reliable optical illusion, and the reason this page tabulates areas beside the picture."
+  ],
+  [
+   "Population inside each ring?",
+   "That is a data join, not geometry: the Population Within Radius tool counts people per circle, and repeating it per radius builds the band table."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "One circle: the "
+  },
+  {
+   "t": "Map Radius",
+   "l": "/tools/map-radius"
+  },
+  {
+   "t": "; people per ring: the "
+  },
+  {
+   "t": "Population Within Radius",
+   "l": "/tools/population-within-radius"
+  },
+  {
+   "t": "; two-centre gaps: the "
+  },
+  {
+   "t": "Service Coverage Gap Finder",
+   "l": "/tools/service-coverage-gap"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-area-from-radius",

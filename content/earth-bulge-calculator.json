@@ -8,17 +8,169 @@
   "midpoint earth bulge",
   "earth curvature calculator bulge"
  ],
- "title": null,
- "description": null,
+ "title": "Earth Bulge Calculator: Midpoint Rise",
+ "description": "Calculate the midpoint bulge of a straight line over distance with the Earth Bulge Calculator — the hump long links, canals and shots must clear. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a perfectly straight line spanning 50 km has the Earth's surface bulging 49 metres up toward its midpoint — the hump every long radio link and canal survey must reckon with.",
+ "quick_answer": "The Earth Bulge Calculator computes how far the Earth's surface rises toward the midpoint of a straight chord spanning a surface distance. Enter the span and read the bulge in metres or feet — the clearance a laser or radio path must allow for.",
+ "steps_intro": "Straight line, round Earth — the surface meets it halfway:",
+ "use_cases": [
+  {
+   "title": "Radio and microwave link planning",
+   "body": [
+    {
+     "t": "The bulge eats the middle of long paths: add it to terrain and tree heights before judging clearance, then check the "
+    },
+    {
+     "t": "Fresnel Zone Calculator",
+     "l": "/tools/fresnel-zone-calculator"
+    },
+    {
+     "t": " for the signal's own space needs."
+    }
+   ]
+  },
+  {
+   "title": "Long shots and sighting",
+   "body": [
+    {
+     "t": "Extreme-range marksmen and surveyors both correct for the midpoint rise — over 5 km it is already about half a metre (0.49 m)."
+    }
+   ]
+  },
+  {
+   "title": "Canals, pipelines and lasers",
+   "body": [
+    {
+     "t": "Water and light both refuse to follow the curve for free. The bulge is the first correction in any long, straight design."
+    }
+   ]
+  },
+  {
+   "title": "Checking flat-Earth claims",
+   "body": [
+    {
+     "t": "The bulge is measurable with a theodolite and two boats — the number this page computes is the number those demonstrations keep finding."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The one-mile reality check",
+   "body": [
+    {
+     "t": "A straight chord one mile long: the surface bulges toward its middle by 0.051 m — almost exactly 2 inches. Small at a mile, decisive at fifty kilometres (49 m). The bulge grows with the square of the span."
+    }
+   ]
+  },
+  {
+   "label": "Example · A 20 km path",
+   "body": [
+    {
+     "t": "Twenty kilometres across: bulge 7.85 m at the midpoint — a two-storey house of planet standing in the middle of your 'flat' path, before any hill gets a vote."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Midpoint bulge by span (spherical Earth)",
+  "intro": "Computed exactly as R − √(R² − (d/2)²) — the calculator's own formula.",
+  "columns": [
+   "Span",
+   "Bulge at midpoint",
+   "In feet"
+  ],
+  "rows": [
+   [
+    "1 km",
+    "0.02 m",
+    "0.06"
+   ],
+   [
+    "5 km",
+    "0.49 m",
+    "1.6"
+   ],
+   [
+    "10 km",
+    "1.96 m",
+    "6.4"
+   ],
+   [
+    "20 km",
+    "7.85 m",
+    "25.7"
+   ],
+   [
+    "50 km",
+    "49.05 m",
+    "160.9"
+   ],
+   [
+    "100 km",
+    "196.20 m",
+    "643.7"
+   ]
+  ],
+  "note": "Bulge is measured at the midpoint, where it peaks. Off-centre, the rise follows the same circle geometry — the drop from a tangent is the Earth Curvature Calculator's framing of the identical fact."
+ },
+ "faq": [
+  [
+   "What is the difference between bulge and curvature drop?",
+   "Two views of one circle: drop is how far the surface falls away under a tangent line from one end; bulge is how far it rises toward a chord joining both ends. At the same distance the tangent drop is four times the midpoint bulge — geometry, not disagreement."
+  ],
+  [
+   "Where is the bulge largest?",
+   "Exactly at the midpoint. A third of the way along, the rise is about 89% of the midpoint value — the circle's shoulders are broad."
+  ],
+  [
+   "Do engineers add refraction?",
+   "For radio paths, yes: standard refraction bends rays slightly Earthward, modelled as a larger effective Earth (the 4/3 model on the Radio Line-of-Sight page), which shrinks the effective bulge. This calculator gives the pure geometric figure it is named for."
+  ],
+  [
+   "What about terrain between the endpoints?",
+   "The bulge is the planet's contribution only. Real clearance work adds terrain elevation, structures and vegetation on top — the Elevation Profile page supplies the terrain half."
+  ],
+  [
+   "Sagitta — is that this?",
+   "Yes: the bulge is the sagitta of the Earth's arc, the surveyor's and astronomer's word for the same rise of the arc above its chord."
+  ],
+  [
+   "How long a span before it matters?",
+   "For centimetre-grade work, a few hundred metres. For eye-level judgements, around 5 km (half a metre). For radio links, always — it is in the standard path profile."
+  ],
+  [
+   "Does the bulge depend on direction?",
+   "On a sphere, no — the number follows the span alone. The real ellipsoid varies it by a fraction of a percent with latitude and azimuth, beneath most uses' concern."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The tangent view: the "
+  },
+  {
+   "t": "Earth Curvature Calculator",
+   "l": "/tools/earth-curvature-calculator"
+  },
+  {
+   "t": "; radio paths: the "
+  },
+  {
+   "t": "Radio Line-of-Sight Calculator",
+   "l": "/tools/radio-line-of-sight-calculator"
+  },
+  {
+   "t": "; signal clearance: the "
+  },
+  {
+   "t": "Fresnel Zone Calculator",
+   "l": "/tools/fresnel-zone-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "air-pressure-by-elevation",
   "antenna-height-distance-calculator",

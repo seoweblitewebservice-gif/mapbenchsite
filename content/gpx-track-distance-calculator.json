@@ -8,17 +8,161 @@
   "gpx route distance",
   "gpx file distance"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Track Distance Calculator: File to Miles",
+ "description": "Sum the great-circle distance of a GPX track or route with the GPX Track Distance Calculator — read locally, roads not assumed. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a five-point sample track through Manhattan — segments of 1.271, 1.081, 1.147 and 0.756 km — sums to 4.255 km (2.64 miles), each segment a straight great-circle hop between recorded points.",
+ "quick_answer": "The GPX Track Distance Calculator reads a GPX file locally and sums the great-circle distance between consecutive track and route points, reporting the total in kilometres and miles. Drop the file and read the distance it describes — no roads assumed, no upload, just recorded geometry.",
+ "steps_intro": "The file already knows how far it went. Add it up honestly:",
+ "use_cases": [
+  {
+   "title": "Verifying a workout's distance",
+   "body": [
+    {
+     "t": "Your watch said 10.02 km; the file says what the points say. Dense recordings agree closely — and the "
+    },
+    {
+     "t": "GPX Route Stats",
+     "l": "/tools/gpx-route-stats"
+    },
+    {
+     "t": " page widens the picture to pace and elevation."
+    }
+   ]
+  },
+  {
+   "title": "Measuring a planned route",
+   "body": [
+    {
+     "t": "Routes drawn in a planner carry sparse points; the summed chords slightly under-measure curvy paths. Knowing that bias is using the number correctly."
+    }
+   ]
+  },
+  {
+   "title": "Comparing two recordings of one ride",
+   "body": [
+    {
+     "t": "Two devices differ because their point spacing differs: sparse points cut corners, dense points trace them. Same road, honest different sums."
+    }
+   ]
+  },
+  {
+   "title": "Trail and hike logging",
+   "body": [
+    {
+     "t": "A downloaded trail GPX gets its real length before you commit boots to it — trailhead signage and file geometry often disagree, and feet believe the file at their peril."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · A Manhattan sample track",
+   "body": [
+    {
+     "t": "Five points from Times Square northeast toward Central Park: segments 1.271 + 1.081 + 1.147 + 0.756 km = 4.255 km total (2.64 mi). Every segment is the haversine hop between neighbours — the calculator's entire method, visible."
+    }
+   ]
+  },
+  {
+   "label": "Example · The corner-cutting effect",
+   "body": [
+    {
+     "t": "A switchbacking trail recorded every 30 seconds can sum 5–10% shorter than the ground truth, because each chord shortcuts its switchbacks. Denser sampling shrinks the lie; it never fully vanishes."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "How the distance is built",
+  "intro": "Segment by segment, on the sphere — the stated method of this calculator.",
+  "columns": [
+   "Step",
+   "Detail"
+  ],
+  "rows": [
+   [
+    "Read points in order",
+    "Trackpoints within each segment; route points within each route"
+   ],
+   [
+    "Hop distance",
+    "Haversine great-circle between consecutive points (Earth radius 6,371.0088 km)"
+   ],
+   [
+    "Segment breaks",
+    "A pause or segment gap is not bridged — no phantom distance across it"
+   ],
+   [
+    "Total",
+    "Sum of hops, shown in km and miles"
+   ]
+  ],
+  "note": "This is the distance of the polyline through the recorded points — not road distance, not ground-truth path length. Dense, clean recordings approach the truth from slightly below."
+ },
+ "faq": [
+  [
+   "Multiple tracks in one file?",
+   "Each track sums separately and a grand total is given — a tour file reports per-day and whole-trip distances together, with segment gaps never bridged."
+  ],
+  [
+   "Why is it shorter than my car's odometer?",
+   "Chords cut corners: every curve becomes a straight shortcut. Sparse points cut more. The effect is a few percent on winding roads, negligible on straight ones."
+  ],
+  [
+   "Are elevation changes included (3D distance)?",
+   "The sum is horizontal (surface) distance. On a sustained 10% grade the true slope distance is only about 0.5% longer — small, and stated so you know which number you hold."
+  ],
+  [
+   "What about gaps when GPS signal dropped?",
+   "A signal gap inside a segment becomes one long straight hop between the last and next fix — GPS dropouts in tunnels and canyons therefore under-report in a characteristic straight-line way."
+  ],
+  [
+   "Routes and tracks both?",
+   "Both are measured; routes are plans with sparse points, so expect their sums to sit slightly under the ridden truth."
+  ],
+  [
+   "A trackpoint every second versus every ten?",
+   "Sampling interval changes the sum measurably on curves — the single biggest reason two honest tools report two honest distances."
+  ],
+  [
+   "Stationary drift adds distance?",
+   "It can: a stopped device wandering ±10 m stacks small hops into phantom metres. Long stops are why raw sums sometimes beat the route you actually took — filtering drift is a separate step."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Full stats: "
+  },
+  {
+   "t": "GPX Route Stats",
+   "l": "/tools/gpx-route-stats"
+  },
+  {
+   "t": "; climbing: the "
+  },
+  {
+   "t": "GPX Elevation Gain Calculator",
+   "l": "/tools/gpx-elevation-gain-calculator"
+  },
+  {
+   "t": "; count the points: the "
+  },
+  {
+   "t": "GPX Total Point Counter",
+   "l": "/tools/gpx-total-point-counter"
+  },
+  {
+   "t": "; view it: the "
+  },
+  {
+   "t": "GPX Viewer",
+   "l": "/tools/gpx-viewer"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

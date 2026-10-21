@@ -6,17 +6,154 @@
   "where would I come out if I dug through the earth",
   "map tunnel online"
  ],
- "title": null,
- "description": null,
+ "title": "Map Tunnel: Dig Straight Through the Earth",
+ "description": "See where a tunnel straight through the Earth would come out with Map Tunnel — your antipode on the far side of the planet. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, digging from New York lands you in the Indian Ocean southwest of Australia — while digging from Madrid surfaces just off New Zealand, one of the rare land-to-land trips.",
+ "quick_answer": "Map Tunnel shows the exact point on the opposite side of the Earth from anywhere you pick — the antipode, where a straight tunnel through the planet's centre would emerge. Choose a starting point and watch the second globe answer with the far side's coordinates and country or ocean.",
+ "steps_intro": "Pick a place; meet its opposite:",
+ "use_cases": [
+  {
+   "title": "The classroom classic",
+   "body": [
+    {
+     "t": "“Dig to China” is wrong for almost every US kid (the tunnel from most of America surfaces in the Indian Ocean) — and right from Buenos Aires, which faces China across the planet. The "
+    },
+    {
+     "t": "Earth Chord Length Calculator",
+     "l": "/tools/earth-chord-length-calculator"
+    },
+    {
+     "t": " prices the tunnel such a dig implies."
+    }
+   ]
+  },
+  {
+   "title": "Antipode geography intuition",
+   "body": [
+    {
+     "t": "Only a minority of land faces land. Playing the tunnel game across continents rewires a student's sense of the globe faster than any flat map."
+    }
+   ]
+  },
+  {
+   "title": "Fiction and worldbuilding",
+   "body": [
+    {
+     "t": "Stories that send characters through the Earth owe their readers a real exit point — this page keeps the geography honest."
+    }
+   ]
+  },
+  {
+   "title": "Planning an antipode trip",
+   "body": [
+    {
+     "t": "A small, delighted travel niche visits both a place and its antipode. The tunnel finds the far point; the "
+    },
+    {
+     "t": "Coordinate Converter",
+     "l": "/tools/coordinate-converter"
+    },
+    {
+     "t": " dresses its coordinates for the GPS."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The famous pairs",
+   "body": [
+    {
+     "t": "Madrid ↔ just off New Zealand's North Island. Quito, Ecuador ↔ Sumatra, Indonesia (land to land). Buenos Aires ↔ off China's coast. New York ↔ empty Indian Ocean. The pairs are the game's high scores."
+    }
+   ]
+  },
+  {
+   "label": "Example · Why 'dig to China' fails",
+   "body": [
+    {
+     "t": "China's antipodes lie mostly in Argentina and Chile — southern South America is the true 'opposite' of East Asia. From the US, the shovel was always aimed at the ocean; the phrase survives because it is fun, not because it is aimed well."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Antipode facts",
+  "intro": "The far side, by the numbers.",
+  "columns": [
+   "Fact",
+   "Figure"
+  ],
+  "rows": [
+   [
+    "Distance through the Earth",
+    "12,742 km — the diameter, every tunnel, everywhere"
+   ],
+   [
+    "Ocean antipodes",
+    "Most points: about 71% of Earth's surface is ocean, so most exits are wet"
+   ],
+   [
+    "Land facing land",
+    "A small minority of the surface — Iberia↔New Zealand and Argentina↔China are the famous big patches"
+   ],
+   [
+    "The 42-minute legend",
+    "A frictionless tunnel train (uniform-Earth physics) falls through in about 42 minutes — the chord's party trick"
+   ]
+  ],
+  "note": "Antipode of (φ, λ) is (−φ, λ ± 180°) — the entire computation, which the globes perform the moment you move."
+ },
+ "faq": [
+  [
+   "Does the tunnel pass through the centre?",
+   "The straight line between antipodes does — every antipodal tunnel is a diameter. Off-antipode 'tunnels' would be chords shorter than 12,742 km, and this page's pairs are exact opposites by construction."
+  ],
+  [
+   "What place name is shown for ocean exits?",
+   "The honest one: open ocean, with the nearest land context where the data supports it. Most of the planet's far sides have no town to name."
+  ],
+  [
+   "Is any city exactly antipodal to another?",
+   "None perfectly, but a few are close enough to delight: Madrid and the New Zealand countryside near Weber are within a short drive of true antipody, and Cuenca (Spain) nearly mirrors Hamilton (NZ)."
+  ],
+  [
+   "Gravity train — would it work?",
+   "As physics theatre, yes: in a uniform-density, frictionless Earth you would oscillate through in ~42 minutes each way forever. Real rock, heat and pressure file their objections immediately."
+  ],
+  [
+   "Why do both globes move together?",
+   "So the pairing stays visceral: drag one side of the planet and the exit point tracks in real time — antipodes are a relationship, not a lookup."
+  ],
+  [
+   "My antipode is near an island — landfall?",
+   "If the exit coordinates fall in the sea a few kilometres off a coast, it is an ocean antipode with a view. The coordinate, not the wish, decides."
+  ],
+  [
+   "Can I get the antipode's coordinates as numbers?",
+   "Yes — the far point is a normal coordinate pair, copyable into any converter or distance tool on this site."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The tunnel's length: the "
+  },
+  {
+   "t": "Earth Chord Length Calculator",
+   "l": "/tools/earth-chord-length-calculator"
+  },
+  {
+   "t": "; needle versus map north at the exit: the "
+  },
+  {
+   "t": "Magnetic Declination Calculator",
+   "l": "/tools/magnetic-declination"
+  },
+  {
+   "t": "; antipode tools family: see the map tools index."
+  }
+ ],
  "more_tools": [
   "air-pressure-by-elevation",
   "antenna-height-distance-calculator",

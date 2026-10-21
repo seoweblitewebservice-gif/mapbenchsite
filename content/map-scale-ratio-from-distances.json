@@ -8,17 +8,154 @@
   "map scale ratio from distances converter",
   "map scale ratio from distances formula"
  ],
- "title": null,
- "description": null,
+ "title": "Map Scale Ratio from Distances: Recover 1:n",
+ "description": "Recover a map's 1:n scale ratio from a measured map distance and its true ground distance with Map Scale Ratio from Distances. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a runway that measures 4.2 cm on an unlabelled sheet and runs 2.1 km on the ground gives 210,000 ÷ 4.2 = 50,000 — the sheet is a 1:50,000 map, whatever its legend forgot to say.",
+ "quick_answer": "Map Scale Ratio from Distances recovers a map's scale ratio from two matched measurements: a distance measured on the map and the same distance's true length on the ground. Enter both and read the 1:n ratio — the identification every unlabelled sheet, shrunken photocopy and mystery screenshot eventually needs.",
+ "steps_intro": "Two measurements of the same thing; the ratio between them is the scale:",
+ "use_cases": [
+  {
+   "title": "Unlabelled and cropped maps",
+   "body": [
+    {
+     "t": "Screenshots crop legends away. One known feature — a runway, a lake, a surveyed road — restores the scale the crop removed, and the "
+    },
+    {
+     "t": "Map Scale Paper Distance Calculator",
+     "l": "/tools/map-scale-paper-distance-calculator"
+    },
+    {
+     "t": " takes over from there."
+    }
+   ]
+  },
+  {
+   "title": "Photocopy and scan forensics",
+   "body": [
+    {
+     "t": "Copiers rescale silently. Measuring a known distance exposes the true effective ratio, which is the only one measurements on that sheet may use."
+    }
+   ]
+  },
+  {
+   "title": "Verifying a claimed scale",
+   "body": [
+    {
+     "t": "A sheet claims 1:25,000. Trust but verify: one feature check confirms the claim or reprices every measurement you were about to take from it."
+    }
+   ]
+  },
+  {
+   "title": "Historical maps",
+   "body": [
+    {
+     "t": "Old sheets state scales in dead units or not at all. A feature that still exists — a church-to-bridge distance — ties the antique to the modern ratio system."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The runway test",
+   "body": [
+    {
+     "t": "Runways are ideal: exactly documented lengths, dead straight, visible on everything. 4.2 cm on paper against 2.1 km true gives 1:50,000 — and the check takes one feature because a true map has one scale everywhere."
+    }
+   ]
+  },
+  {
+   "label": "Example · The perspective warning",
+   "body": [
+    {
+     "t": "A photograph of a map, or a screenshot in perspective, has no single scale — near and far edges disagree. Two features at opposite ends returning different ratios is the signature of distortion, and the honest response is to abandon the sheet for measurement."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Doing it reliably",
+  "intro": "The method's accuracy lives in the measurement choices.",
+  "columns": [
+   "Choice",
+   "Why"
+  ],
+  "rows": [
+   [
+    "Longest measurable feature",
+    "Relative measurement error shrinks as the feature grows"
+   ],
+   [
+    "Same units before dividing",
+    "The ratio is unitless — 2.1 km must meet 4.2 cm as 210,000 cm"
+   ],
+   [
+    "Two features, two ratios",
+    "Agreement certifies a uniform-scale sheet"
+   ],
+   [
+    "Round to a standard scale",
+    "Sheets are printed at standard ratios — 1:49,700 measured is a 1:50,000 sheet plus your ruler's honesty"
+   ]
+  ],
+  "note": "Ground truth for the feature can come from a second, trusted source: a distance computed between its endpoints with the coordinate tools here, an official length, or a surveyed record."
+ },
+ "faq": [
+  [
+   "What if my two features disagree?",
+   "The sheet has no single scale — perspective, distortion or a locally stretched scan. Report both ratios with their features, and do not measure the sheet for anything that matters."
+  ],
+  [
+   "Can I use a screen image's pixels?",
+   "Yes — pixels are a unit like centimetres if the ground length is known and the image is a flat, undistorted map render. Perspective photos of screens fail the same test paper does."
+  ],
+  [
+   "How precise is the recovered ratio?",
+   "As precise as your shorter measurement. A 4.2 cm feature read to ±0.05 cm gives roughly ±1% — plenty to identify the standard scale the sheet was printed at."
+  ],
+  [
+   "The ratio is not a round number.",
+   "Round to the nearest standard scale for identification, but keep the measured ratio for calculations on that particular (possibly rescaled) sheet — both facts are yours to use."
+  ],
+  [
+   "Ground distance from where?",
+   "Compute it between the feature's endpoints with the distance tools here, or take a documented length (runways publish theirs). The ratio inherits that source's accuracy."
+  ],
+  [
+   "Does Earth's curvature matter?",
+   "Not at sheet scales: a printed map already projects the ground, and the ratio describes the sheet. Continental wall maps are the exception that cartographers, not ratios, handle."
+  ],
+  [
+   "Verbal scales recovered too?",
+   "Any recovered 1:n converts to words ('one inch to…') through the Map Unit Converter — the ratio is the canonical form the others derive from."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Use the ratio: the "
+  },
+  {
+   "t": "Map Scale Paper Distance Calculator",
+   "l": "/tools/map-scale-paper-distance-calculator"
+  },
+  {
+   "t": "; all units: the "
+  },
+  {
+   "t": "Map Unit Converter",
+   "l": "/tools/map-unit-converter"
+  },
+  {
+   "t": "; ground truth: the "
+  },
+  {
+   "t": "Driving Distance Calculator",
+   "l": "/tools/driving-distance-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "closest-facility-finder",
   "compass-bearing-visualizer",

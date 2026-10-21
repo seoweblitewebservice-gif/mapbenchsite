@@ -6,17 +6,163 @@
   "share coordinates",
   "map share url"
  ],
- "title": null,
- "description": null,
+ "title": "Shareable Map Link Helper: Links and Embeds",
+ "description": "Build shareable map links and simple embeds for a place with the Shareable Map Link Helper — no API key, copy and paste. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a small business's 'visit us' page can carry a live embedded map of its exact corner — built from one address, with no developer and no API key.",
+ "quick_answer": "The Shareable Map Link Helper builds the link and embed forms of a map view — the shareable URL, the directions link and the simple iframe embed — from one place or coordinate pair. Enter the location, choose the form, and copy code that works anywhere.",
+ "steps_intro": "A map view has more than one shareable shape. Build the one you need:",
+ "use_cases": [
+  {
+   "title": "Small business pages",
+   "body": [
+    {
+     "t": "The 'visit us' embed and a directions button are most of what a location page needs. The plain point link comes from the "
+    },
+    {
+     "t": "Share Location Link Generator",
+     "l": "/tools/share-location-link-generator"
+    },
+    {
+     "t": "; this helper is the website-shaped version."
+    }
+   ]
+  },
+  {
+   "title": "Event invitations",
+   "body": [
+    {
+     "t": "Invites with a real map embed get fewer lost guests than invites with a typed address — the venue pin carries parking-lot precision."
+    }
+   ]
+  },
+  {
+   "title": "Real-estate and rental listings",
+   "body": [
+    {
+     "t": "A neighbourhood embed sells the area honestly — the pin is the property; the map around it is the context buyers actually judge."
+    }
+   ]
+  },
+  {
+   "title": "Community and club pages",
+   "body": [
+    {
+     "t": "Meetup points, trailheads and pitch locations embedded once serve every season's newcomers without a webmaster."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Link versus embed",
+   "body": [
+    {
+     "t": "A link takes the reader away to the map; an embed brings the map to your page. Same underlying view, opposite journeys — choose by whether your page or the map should keep the reader."
+    }
+   ]
+  },
+  {
+   "label": "Example · Directions change the intent",
+   "body": [
+    {
+     "t": "A directions link opens with the destination pre-filled and asks only 'from where?' — one field between your visitor and a route. It is the highest-converting form of map sharing a small site can use."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The shareable forms, compared",
+  "intro": "Pick by the reader's next action.",
+  "columns": [
+   "Form",
+   "Reader does",
+   "Best for"
+  ],
+  "rows": [
+   [
+    "Point link",
+    "Opens the map at the pin",
+    "Messages, chats, emails"
+   ],
+   [
+    "Directions link",
+    "Gets routed to the place",
+    "Businesses, venues, events"
+   ],
+   [
+    "Iframe embed",
+    "Explores without leaving your page",
+    "Websites, listings, guides"
+   ],
+   [
+    "Static image",
+    "Sees a picture of the map",
+    "Documents and print — the Static Map URL Helper's craft"
+   ]
+  ],
+  "note": "Embeds load the provider's live map in the reader's browser — no key for the standard embed forms, and the provider's terms govern their use, as the base FAQs note."
+ },
+ "faq": [
+  [
+   "Do I need an API key for the embed?",
+   "Not for the standard iframe embed forms this helper builds — they load the provider's public embed. Key-based APIs are a developer product with quotas; a copy-paste embed is not that."
+  ],
+  [
+   "Will the embed slow my page?",
+   "It loads when the page does; lazy-loading the iframe (a one-word attribute) defers it until scrolled to. The helper's output accepts the attribute cleanly."
+  ],
+  [
+   "Can the pin be an address instead of coordinates?",
+   "Yes — place names and addresses resolve to the map's own point. For survey-exact pins, coordinates are the unambiguous input."
+  ],
+  [
+   "Mobile readers?",
+   "Embeds are responsive in modern site builders; the link forms hand off to the native map app, which mobile readers usually prefer anyway."
+  ],
+  [
+   "Can I style or brand the embed?",
+   "The public embed wears the provider's design. Branded, styled maps are the key-based APIs' territory — an honest boundary of the free form."
+  ],
+  [
+   "Directions from the reader's location?",
+   "Directions links ask the reader's map app for the start — their own location, with their permission, in their app. Your page never sees it."
+  ],
+  [
+   "Multiple pins?",
+   "One view, one focus pin is the embed's grammar. Multi-pin maps are the Store Locator Map Builder's job."
+  ],
+  [
+   "Is sharing a map of my home wise?",
+   "Share the neighbourhood zoom, not the doorstep pin — the zoom choice is a privacy dial, and this helper makes it yours to set."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Plain links: the "
+  },
+  {
+   "t": "Share Location Link Generator",
+   "l": "/tools/share-location-link-generator"
+  },
+  {
+   "t": "; images: the "
+  },
+  {
+   "t": "Static Map URL Helper",
+   "l": "/tools/static-map-url-helper"
+  },
+  {
+   "t": "; many pins: the "
+  },
+  {
+   "t": "Store Locator Map Builder",
+   "l": "/tools/store-locator-map-builder"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "county-choropleth",
   "custom-labeled-map",

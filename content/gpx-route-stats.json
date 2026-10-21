@@ -6,17 +6,173 @@
   "gpx distance",
   "gpx track length"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Route Stats: Distance and Summary",
+ "description": "Summarise a GPX file's route geometry with GPX Route Stats — path length and the headline numbers for training logs. Free, in your browser.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a four-point park loop whose segments run 0.656, 0.749 and 0.656 kilometres reports a path length of 2.06 kilometres — every stats page on Earth is this addition, scaled up.",
+ "quick_answer": "GPX Route Stats loads a GPX file and summarises its route geometry — path length first among the headline numbers — for training logs and quick briefings. Drop the file locally and read the summary — what the recording covers, without a full GIS or training platform.",
+ "steps_intro": "The file's headline numbers, honestly labelled:",
+ "use_cases": [
+  {
+   "title": "Training-log entries",
+   "body": [
+    {
+     "t": "The distance line of a log entry, from the file itself — then depth from the specialists: "
+    },
+    {
+     "t": "gain",
+     "l": "/tools/gpx-elevation-gain-calculator"
+    },
+    {
+     "t": ", "
+    },
+    {
+     "t": "duration",
+     "l": "/tools/gpx-duration-calculator"
+    },
+    {
+     "t": ", "
+    },
+    {
+     "t": "average speed",
+     "l": "/tools/gpx-average-speed-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Comparing route variants",
+   "body": [
+    {
+     "t": "Two candidate loops, one summary each: lengths side by side settle the 'which is longer?' question before legs vote."
+    }
+   ]
+  },
+  {
+   "title": "Verifying platform numbers",
+   "body": [
+    {
+     "t": "Your platform's distance and your file's geometry occasionally disagree (smoothing, gap handling). The file's own sum is the reference both should answer to."
+    }
+   ]
+  },
+  {
+   "title": "Briefing a group",
+   "body": [
+    {
+     "t": "“Saturday's route: this long, this shape” — a stats summary is the sentence a ride leader needs, extracted in seconds."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · How path length accumulates",
+   "body": [
+    {
+     "t": "Length is the sum of great-circle hops between consecutive points: 0.656 + 0.749 + 0.656 = 2.06 km for the worked loop. Dense recordings trace curves faithfully; sparse ones cut corners — literally — and under-measure winding paths."
+    }
+   ]
+  },
+  {
+   "label": "Example · The corner-cutting discount",
+   "body": [
+    {
+     "t": "A switchbacking trail recorded every 30 seconds reads shorter than the same trail at 1-second density: straight hops chord across the bends. Length is a function of sampling, a truth every stats page inherits."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the summary covers",
+  "intro": "The headline layer — with the specialist tools that own each deeper number.",
+  "columns": [
+   "Statistic",
+   "From",
+   "Deeper tool"
+  ],
+  "rows": [
+   [
+    "Path length",
+    "Summed point-to-point hops",
+    "Sequential Distance Checker for the running total"
+   ],
+   [
+    "Point census",
+    "Element counts",
+    "Track Point Counter"
+   ],
+   [
+    "Extent",
+    "Min/max coordinates",
+    "Bounding Box Tool"
+   ],
+   [
+    "Elevation story",
+    "The <ele> channel where present",
+    "Gain / Loss Calculators"
+   ]
+  ],
+  "note": "Stats are computed from the file as recorded — no smoothing, no gap-filling, no platform seasoning. That rawness is the point: every other number can be audited back to this one."
+ },
+ "faq": [
+  [
+   "Tracks and routes both summarised?",
+   "Both geometries carry length; the summary treats the file's path elements as the route it holds. Recordings and plans read by the same geometry — their authority differs, their arithmetic does not."
+  ],
+  [
+   "Why is the distance shorter than the signposted trail?",
+   "Corner-cutting from sparse sampling, GPS shortcuts across switchbacks, or a trail whose sign counts a spur you skipped. The file measures where the device went, at the density it sampled."
+  ],
+  [
+   "Units — miles too?",
+   "Kilometres and miles both, per this site's convention. The underlying sum is metric; the display serves both audiences."
+  ],
+  [
+   "Does it count stopped time or pauses?",
+   "Length does not care about time at all — a paused hour adds zero metres. Time statistics live in the duration and speed tools."
+  ],
+  [
+   "Multiple tracks in one file?",
+   "The summary covers the file's geometry as a whole; per-track breakdowns follow from splitting or merging deliberately with the family's tools."
+  ],
+  [
+   "Elevation included in length?",
+   "Length is horizontal (map) distance, the universal convention — slope distance overstates travel and nobody's odometer uses it. Vertical totals live in the elevation tools."
+  ],
+  [
+   "Accuracy expectations?",
+   "Consumer recordings typically land within a percent or two of truth on open ground; urban canyons and forests worsen it, and sampling density bends winding routes downward."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Running totals: the "
+  },
+  {
+   "t": "GPX Sequential Distance Checker",
+   "l": "/tools/gpx-sequential-distance-checker"
+  },
+  {
+   "t": "; exports: the "
+  },
+  {
+   "t": "GPX to CSV Converter",
+   "l": "/tools/gpx-to-csv-converter"
+  },
+  {
+   "t": "; counts: the "
+  },
+  {
+   "t": "GPX Track Point Counter",
+   "l": "/tools/gpx-point-counter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

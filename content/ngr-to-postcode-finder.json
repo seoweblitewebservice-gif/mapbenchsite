@@ -7,17 +7,150 @@
   "find postcode from grid reference",
   "os grid to postcode"
  ],
- "title": null,
- "description": null,
+ "title": "Grid Reference to Postcode Finder: NGR Lookup",
+ "description": "Find the nearest UK postcode for an Ordnance Survey grid reference with the Grid Reference to Postcode Finder — via postcodes.io data. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a grid reference paced out on a paper map for a Cotswold barn converts to coordinates, and the finder returns the postcode the Royal Mail would recognise for that ground.",
+ "quick_answer": "The Grid Reference to Postcode Finder takes an Ordnance Survey grid reference, converts it to coordinates, and returns the nearest UK postcode using postcodes.io data. Paste the reference and read the postcode — the bridge between the paper-map world of letters and digits and the delivery world of postal addresses.",
+ "steps_intro": "Grid references name squares; postcodes name delivery points. Translate:",
+ "use_cases": [
+  {
+   "title": "Site visits and deliveries",
+   "body": [
+    {
+     "t": "A survey note gives a grid reference; the van needs a postcode for the satnav. This finder joins the two Britains — the reverse trip runs through the "
+    },
+    {
+     "t": "Postcode to National Grid Converter",
+     "l": "/tools/postcode-to-national-grid-converter"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Report completion",
+   "body": [
+    {
+     "t": "Field reports recorded by grid reference get their postal line filled in for correspondence and invoicing."
+    }
+   ]
+  },
+  {
+   "title": "Event and access logistics",
+   "body": [
+    {
+     "t": "A rural venue known by its map reference acquires the postcode guests' phones can navigate to."
+    }
+   ]
+  },
+  {
+   "title": "Checking old records",
+   "body": [
+    {
+     "t": "Historic site files cite references; attaching the modern postcode makes the archive searchable by everyone else's tools."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Nearest, honestly labelled",
+   "body": [
+    {
+     "t": "A point in open fields has no postcode of its own — the finder returns the NEAREST postcode the data holds and labels it as such. Nearest is orientation, not a postal address for the field."
+    }
+   ]
+  },
+  {
+   "label": "Example · The two-step, exposed",
+   "body": [
+    {
+     "t": "Grid references are OSGB36-flavoured; postcodes.io works in coordinates. The finder converts datum-aware — skipping that step is how naive tools land a field's postcode in the next parish."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the answer means",
+  "intro": "Postcode semantics — the finder reports them straight.",
+  "columns": [
+   "Situation",
+   "What you get"
+  ],
+  "rows": [
+   [
+    "Point in a built-up area",
+    "The postcode of the nearest delivery point in the data"
+   ],
+   [
+    "Point in open country",
+    "The nearest postcode, possibly a lane or farm away"
+   ],
+   [
+    "Point at a postcode boundary",
+    "The geographically nearest — boundaries are delivery rounds, not fences"
+   ],
+   [
+    "New or changed postcode",
+    "The dataset's current record; Royal Mail revisions flow in as data updates"
+   ]
+  ],
+  "note": "Postcodes identify delivery points (typically around 15 addresses per full postcode, varying widely) — they were never designed as area codes, and this finder treats them accordingly."
+ },
+ "faq": [
+  [
+   "Whose postcode data does it use?",
+   "postcodes.io — the open service built on the Office for National Statistics and Royal Mail-derived open data. Its record is the finder's record."
+  ],
+  [
+   "A postcode for a mountain summit?",
+   "The nearest valley postcode is what exists to return — labelled nearest. Summits do not receive post, and the finder does not pretend otherwise."
+  ],
+  [
+   "Terminated postcodes?",
+   "Old postcodes vanish from current data; a historic address's code may return its successor area instead."
+  ],
+  [
+   "How near is 'nearest'?",
+   "In towns, metres to a street away; in sparse country, it can be a kilometre or more — the finder reports the postcode, and the map shows you the gap."
+  ],
+  [
+   "Can I use the postcode for navigation?",
+   "Yes — that is its best use. For a formal address, pair it with the street and locality from the map record."
+  ],
+  [
+   "Business parks and large users?",
+   "Large organisations hold dedicated postcodes; a point inside one can return that code — correct, if occasionally surprising."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Reverse: the "
+  },
+  {
+   "t": "Postcode to National Grid Converter",
+   "l": "/tools/postcode-to-national-grid-converter"
+  },
+  {
+   "t": "; references: the "
+  },
+  {
+   "t": "National Grid Reference Converter",
+   "l": "/tools/national-grid-reference-converter"
+  },
+  {
+   "t": " and its "
+  },
+  {
+   "t": "National Grid Reference Map",
+   "l": "/tools/national-grid-reference-map"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "arcminutes-to-decimal-degrees-converter",
   "arcseconds-to-ground-distance-calculator",

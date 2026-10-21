@@ -7,17 +7,173 @@
   "annotate map online",
   "draw polygon on map"
  ],
- "title": null,
- "description": null,
+ "title": "Map Drawer: Draw, Measure, Export GeoJSON",
+ "description": "Use the Map Drawer to sketch lines and polygons on the map — lengths, areas and perimeters measured geodesically as you draw, GeoJSON out. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, trace a park's boundary in a dozen clicks and the drawer reports its perimeter and area as you go — a rough fence quote before anyone books a surveyor.",
+ "quick_answer": "The Map Drawer lets you click to draw lines and polygons directly on the map, measuring as you go: lines report geodesic length, polygons report area and perimeter. When the shape is right, export everything as GeoJSON — drawing, measuring and keeping, all in your browser.",
+ "steps_intro": "Click for vertices, watch the measurements keep up:",
+ "use_cases": [
+  {
+   "title": "Land and garden estimates",
+   "body": [
+    {
+     "t": "Fence lines, plot splits, a new orchard's rows — draw the shape and get area and perimeter good enough to price materials and argue with quotes. Legal boundaries still belong to surveyors."
+    }
+   ]
+  },
+  {
+   "title": "Route and trail sketching",
+   "body": [
+    {
+     "t": "A proposed path, a race course, a cable run: draw it as a line and read its true length. Serious route planning then moves to the "
+    },
+    {
+     "t": "Map Area Calculator",
+     "l": "/tools/map-area-calculator"
+    },
+    {
+     "t": "'s companions and routing tools."
+    }
+   ]
+  },
+  {
+   "title": "Annotating a study area",
+   "body": [
+    {
+     "t": "Draw the boundary you keep describing in words — for a grant application, a survey brief, the "
+    },
+    {
+     "t": "Map Data Collection Form Builder",
+     "l": "/tools/map-data-collection-form-builder"
+    },
+    {
+     "t": " crew's instructions."
+    }
+   ]
+  },
+  {
+   "title": "Quick geometry for other tools",
+   "body": [
+    {
+     "t": "The exported GeoJSON drops into viewers, converters and GIS — the drawer is the sketchpad the rest of the map stack reads from. Share the view itself with the "
+    },
+    {
+     "t": "Shareable Map Link Helper",
+     "l": "/tools/shareable-map-link-helper"
+    },
+    {
+     "t": "."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · A short city line",
+   "body": [
+    {
+     "t": "Draw from Times Square to Grand Central Terminal — about 0.91 km as the crow flies. The drawer measures the geodesic, not the walk: the streets you would actually walk add turns the straight line skips."
+    }
+   ]
+  },
+  {
+   "label": "Example · The almost-rectangle field",
+   "body": [
+    {
+     "t": "Four clicks make a polygon; the fifth click closes it. Area appears with the close — and dragging a corner to the real fence line updates it live, which is where rough estimates become defensible ones."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What gets measured, and how",
+  "intro": "Geodesic maths on the sphere — not pixel counting, not flat-map arithmetic.",
+  "columns": [
+   "Shape",
+   "Measurements",
+   "How"
+  ],
+  "rows": [
+   [
+    "Line (open)",
+    "Total geodesic length",
+    "Segment by segment along great circles"
+   ],
+   [
+    "Polygon (closed)",
+    "Area and perimeter",
+    "Spherical geometry on WGS84 coordinates"
+   ],
+   [
+    "Single point",
+    "Coordinates",
+    "For dropping into other tools"
+   ],
+   [
+    "Export",
+    "GeoJSON file",
+    "Points, lines and polygons with their geometry intact"
+   ]
+  ],
+  "note": "Geodesic measurement means a line drawn across a whole country is priced along the curved Earth — the same class of maths behind the distance tools, not the shorter-looking lie a flat projection would give."
+ },
+ "faq": [
+  [
+   "Can I edit a shape after drawing it?",
+   "Vertices can be adjusted and shapes removed as you work — get the geometry right before exporting, since the GeoJSON simply records what is on the map at export time."
+  ],
+  [
+   "What units can I read?",
+   "Lengths and areas switch between metric and imperial — kilometres and miles, hectares and acres — so a fence quote and a land listing can both be served from one drawing."
+  ],
+  [
+   "Can I draw over satellite imagery?",
+   "Where the basemap offers an aerial view, drawing over it is the fastest way to trace real fence lines and field edges. The measurements are the map's coordinates, so imagery alignment sets the practical precision."
+  ],
+  [
+   "How do I draw a perfect circle?",
+   "A polygon with many close vertices approximates one; for a true radius shape, the dedicated radius tools (Map Radius and friends) draw exact circles the drawer deliberately does not fake."
+  ],
+  [
+   "Can I import a shape to edit?",
+   "Bring existing geometry in through the GeoJSON Viewer ecosystem or redraw it here — the drawer is primarily a creation tool, and redrawing a simple boundary takes a minute."
+  ],
+  [
+   "Does area account for hills?",
+   "No — it is surface area on the ellipsoid (the map's footprint), not the true sloping ground area. Hillside parcels measure larger in boots than on paper; surveyors handle that distinction."
+  ],
+  [
+   "Can I measure in a straight line between two far cities?",
+   "You can draw it, and the geodesic length will be the great-circle distance — the same answer the distance calculators give, with the line visible for free."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Drop labelled pins instead with the "
+  },
+  {
+   "t": "Pin Map Maker",
+   "l": "/tools/pin-map-maker"
+  },
+  {
+   "t": ", formalise labels with the "
+  },
+  {
+   "t": "Custom Labeled Pin Map",
+   "l": "/tools/custom-labeled-map"
+  },
+  {
+   "t": ", and compute areas of named places with the "
+  },
+  {
+   "t": "Map Area Calculator",
+   "l": "/tools/map-area-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "advanced-map-embed-generator",
   "blank-map",

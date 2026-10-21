@@ -8,17 +8,154 @@
   "encoded polyline decoder tool",
   "how to calculate encoded polyline decoder"
  ],
- "title": null,
- "description": null,
+ "title": "Encoded Polyline Decoder: String to Coordinates",
+ "description": "Decode Google's encoded polyline strings back to coordinates with the Encoded Polyline Decoder — the algorithm's own test string verified. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, Google’s canonical test string _p~iF~ps|U_ulLnnqC_mqNvxq`@ decodes to (38.5, −120.2), (40.7, −120.95) and (43.252, −126.453) — the three points from the format’s own documentation.",
+ "quick_answer": "The Encoded Polyline Decoder turns encoded polyline strings — the compressed coordinate format Google’s APIs return for routes — back into latitude/longitude pairs. Paste the string and read the points: the binary-delta encoding undone step by step, in your browser, at the standard precision of five decimal places.",
+ "steps_intro": "A route compressed into punctuation, expanded again:",
+ "use_cases": [
+  {
+   "title": "Debugging routing API responses",
+   "body": [
+    {
+     "t": "The directions API returned a string; your map drew it in the wrong ocean. Decode it here and read the actual points — the bug is usually precision or a lat/lon flip. The reverse craft is the "
+    },
+    {
+     "t": "Encoded Polyline Encoder",
+     "l": "/tools/encoded-polyline-encoder"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Recovering routes from logs",
+   "body": [
+    {
+     "t": "Old logs and URLs carry polylines long after the originals vanished. Decoding resurrects the geometry as coordinates any tool here can use."
+    }
+   ]
+  },
+  {
+   "title": "Learning the format",
+   "body": [
+    {
+     "t": "Decode the canonical example, change one character, decode again — the delta encoding’s behaviour teaches itself faster than any spec."
+    }
+   ]
+  },
+  {
+   "title": "Feeding other tools",
+   "body": [
+    {
+     "t": "Decoded pairs paste into distance, mapping and conversion tools. The string was a container; the points are the content."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The canonical string",
+   "body": [
+    {
+     "t": "_p~iF~ps|U_ulLnnqC_mqNvxq`@ is the worked example from Google’s own documentation, decoding to the three California-to-Oregon points (38.5, −120.2), (40.7, −120.95), (43.252, −126.453). Any decoder that cannot reproduce these is not a decoder."
+    }
+   ]
+  },
+  {
+   "label": "Example · One character’s damage",
+   "body": [
+    {
+     "t": "Polylines are delta chains: corrupt one character early and every later point shifts. A route that starts right and wanders increasingly wrong has a mid-string wound — decoding exposes where sanity ends."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "How the encoding works",
+  "intro": "The algorithm the decoder reverses.",
+  "columns": [
+   "Step",
+   "What happens"
+  ],
+  "rows": [
+   [
+    "Scale",
+    "Coordinates × 100,000 (5-decimal precision), rounded to integers"
+   ],
+   [
+    "Delta",
+    "Each value stored as the difference from the previous one"
+   ],
+   [
+    "Sign folding",
+    "Negatives transformed (left-shift, invert) so small numbers stay small"
+   ],
+   [
+    "Chunking",
+    "Values split into 5-bit chunks, +63, printed as ASCII characters"
+   ]
+  ],
+  "note": "Precision 5 is the Google standard; some libraries (OSRM, Mapbox options) use precision 6. A string decoded at the wrong precision yields points 10× too near the equator/prime meridian — the classic symptom."
+ },
+ "faq": [
+  [
+   "What precision does it use?",
+   "Five decimal places — the original Google format. Strings from precision-6 systems need a decoder set to 6; the symptom of a mismatch is unmistakable (points huddle near 0,0 scaled wrong)."
+  ],
+  [
+   "Can it draw the route?",
+   "Decoding produces the coordinate list — paste the points into mapping tools to draw. This page’s craft is the faithful expansion of the string."
+  ],
+  [
+   "Elevation in the string?",
+   "The standard format encodes latitude/longitude only. Some extensions smuggle altitude as a third value per point — those are non-standard dialects, flagged when they appear."
+  ],
+  [
+   "Why does my string start with letters like ‘o’ or ‘_’?",
+   "The characters are ASCII 63–126 — punctuation and lowercase letters mostly. A string starting ‘_p~iF’ is geography’s most famous fingerprint (the canonical example)."
+  ],
+  [
+   "Truncated strings?",
+   "A string cut mid-value decodes a partial final point or fails — the decoder reports what decoded cleanly rather than inventing a tail."
+  ],
+  [
+   "Is it the same as a geohash?",
+   "No — geohashes name single cells; polylines encode sequences of points. Both compress coordinates into strings, for opposite jobs."
+  ],
+  [
+   "Flex polyline (HERE)?",
+   "A related but different format (variable precision, third dimension support). It needs its own decoder — do not feed it here and blame the string."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Reverse: the "
+  },
+  {
+   "t": "Encoded Polyline Encoder",
+   "l": "/tools/encoded-polyline-encoder"
+  },
+  {
+   "t": "; use the points: the "
+  },
+  {
+   "t": "Coordinate Converter",
+   "l": "/tools/coordinate-converter"
+  },
+  {
+   "t": "; line lengths: the "
+  },
+  {
+   "t": "GeoJSON Length Calculator",
+   "l": "/tools/geojson-length-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

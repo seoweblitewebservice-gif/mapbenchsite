@@ -8,17 +8,154 @@
   "geojson beautifier",
   "beautify geojson"
  ],
- "title": null,
- "description": null,
+ "title": "GeoJSON Formatter: Pretty-Print for Humans",
+ "description": "Format minified or messy GeoJSON into clean, readable, indented JSON with the GeoJSON Formatter — locally in your browser. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a one-line 669-byte sample file unfolds into 88 readable lines — same data, same coordinates, but finally a document a human can review, diff and debug.",
+ "quick_answer": "The GeoJSON Formatter formats minified or messy GeoJSON into clean, consistently indented JSON — locally in your browser, without uploading the file. Paste the tangle and read the structure: features, geometries and properties laid out line by line, exactly as valid as before and infinitely easier to work with.",
+ "steps_intro": "Nobody can review a one-line file. Unfold it:",
+ "use_cases": [
+  {
+   "title": "Code review and diffs",
+   "body": [
+    {
+     "t": "Version control diffs are line-based: pretty GeoJSON shows the one changed feature; minified GeoJSON shows one changed line the size of a city. Format before committing — and minify only for the wire with the "
+    },
+    {
+     "t": "GeoJSON Minifier",
+     "l": "/tools/geojson-minifier"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Debugging API responses",
+   "body": [
+    {
+     "t": "The endpoint returned something odd. Formatted, the oddity has a line number and a neighbourhood; unformatted, it has a scroll bar."
+    }
+   ]
+  },
+  {
+   "title": "Hand-editing data",
+   "body": [
+    {
+     "t": "Fixing one property or deleting one feature by hand demands visible structure. Format, edit, and (if the consumer prefers) re-minify."
+    }
+   ]
+  },
+  {
+   "title": "Documentation and tickets",
+   "body": [
+    {
+     "t": "Pasting a readable excerpt into a ticket gets answers; pasting a 40,000-character line gets silence."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 56% that was only air",
+   "body": [
+    {
+     "t": "A sample collection measures 1,521 bytes pretty and 669 minified — indentation is more than half the file. Formatting buys readability with bytes; minifying buys bytes with readability. Know which currency your moment needs."
+    }
+   ]
+  },
+  {
+   "label": "Example · Structure you can finally see",
+   "body": [
+    {
+     "t": "Formatted, the nesting tells the story at a glance: FeatureCollection → features → Feature → geometry/properties. Data problems (a property parked in the wrong feature, a Polygon wearing Point coordinates) become visible to the naked eye."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Formatting changes and non-changes",
+  "intro": "The contract the formatter keeps.",
+  "columns": [
+   "Changes",
+   "Never changes"
+  ],
+  "rows": [
+   [
+    "Whitespace and indentation",
+    "Any coordinate value"
+   ],
+   [
+    "Line breaks between elements",
+    "Any property key or value"
+   ],
+   [
+    "Key order as stored (preserved)",
+    "The geometry’s meaning"
+   ],
+   [
+    "Trailing newline at end of file",
+    "The data itself, in any way"
+   ]
+  ],
+  "note": "Formatting is lossless by definition — it re-lays the same JSON. If a formatter ever changed a number, it would be a bug, not a style choice."
+ },
+ "faq": [
+  [
+   "Does it work offline?",
+   "Yes — formatting runs locally in your browser. Once the page has loaded, no network is involved and the file never leaves your machine, which is why this page is safe for data you would not paste into a server-side tool."
+  ],
+  [
+   "What indentation does it use?",
+   "Consistent two-space indentation, the JSON community’s house style — readable nesting without runaway width on deep geometry arrays."
+  ],
+  [
+   "It rejected my file.",
+   "Then the input is not valid JSON — the formatter’s parse error is your first debugging gift: it localises the breakage better than a blank map does."
+  ],
+  [
+   "Trailing commas?",
+   "JSON forbids them; JavaScript tolerates them. Files ‘almost JSON’ from JS literals need the commas stripped before any strict formatter can help."
+  ],
+  [
+   "Can it format huge files?",
+   "Browser memory is the ceiling; ordinary datasets format instantly. Multi-hundred-megabyte files belong to streaming formatters (jq) applying the same idea."
+  ],
+  [
+   "Key sorting?",
+   "Formatting preserves the file’s key order — deliberate, because GeoJSON writers’ ordering (type, geometry, properties) is a readability feature, not noise."
+  ],
+  [
+   "Numbers get reformatted?",
+   "The numeric values are preserved; their textual dress (40.0 versus 40) may normalise through parse-and-print — the value is identical, the archaeology of its typing is not sacred."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Compact again: the "
+  },
+  {
+   "t": "GeoJSON Minifier",
+   "l": "/tools/geojson-minifier"
+  },
+  {
+   "t": "; measure the difference: the "
+  },
+  {
+   "t": "GeoJSON Minified Size Calculator",
+   "l": "/tools/geojson-minified-size-calculator"
+  },
+  {
+   "t": "; inspect the structure: the "
+  },
+  {
+   "t": "GeoJSON Geometry Type Counter",
+   "l": "/tools/geojson-geometry-type-counter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

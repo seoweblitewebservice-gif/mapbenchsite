@@ -8,17 +8,169 @@
   "wkt validator tool",
   "how to calculate wkt validator"
  ],
- "title": null,
- "description": null,
+ "title": "WKT Validator: Syntax and Structure Checks",
+ "description": "Validate Well-Known Text geometry with the WKT Validator — keyword, parentheses, coordinate and ring-closure checks in one pass. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, POLYGON ((0 0, 10 0, 10 10, 0 10)) fails ring closure — first pair (0 0) never repeats at the end — and the validator names that exact fault instead of a generic 'invalid'.",
+ "quick_answer": "The WKT Validator checks a Well-Known Text geometry for syntactic and structural validity — correct keywords, balanced parentheses, numeric coordinate pairs, closed polygon rings and sane nesting. Paste the WKT and read a specific verdict: valid, or the particular fault and where it sits.",
+ "steps_intro": "Invalid WKT fails downstream at the worst moment. Fail it here, specifically:",
+ "use_cases": [
+  {
+   "title": "Pre-import gatekeeping",
+   "body": [
+    {
+     "t": "A CSV of WKT headed for PostGIS gets sampled and validated first; one bad row found here saves a rolled-back import at midnight."
+    }
+   ]
+  },
+  {
+   "title": "Debugging generated geometry",
+   "body": [
+    {
+     "t": "Your generator emits WKT that the database rejects. The validator's named fault (unbalanced parens at a position, a stray third ordinate) localises the generator's bug."
+    }
+   ]
+  },
+  {
+   "title": "Checking hand-written fixtures",
+   "body": [
+    {
+     "t": "Test data and documentation examples rot quietly. Validating them keeps the docs honest — the "
+    },
+    {
+     "t": "WKT / GeoJSON Helper",
+     "l": "/tools/wkt-geojson-helper"
+    },
+    {
+     "t": " then shows the valid string actually draws the intended shape."
+    }
+   ]
+  },
+  {
+   "title": "Ring and shell audits",
+   "body": [
+    {
+     "t": "Self-intersecting rings pass syntax yet fail geometry rules; the validator separates 'parses' from 'sound' so you know which class of trouble you hold."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The comma family of errors",
+   "body": [
+    {
+     "t": "POINT (-73.9855, 40.758) is wrong in WKT — coordinates inside a pair are space-separated, commas separate pairs. Half the invalid WKT on Earth is that one comma, imported from GeoJSON habits and everyday writing."
+    }
+   ]
+  },
+  {
+   "label": "Example · Valid syntax, invalid geometry",
+   "body": [
+    {
+     "t": "A bow-tie POLYGON (edges crossing) is perfectly formed WKT and broken geometry. Two verdicts, both reported: syntax valid, ring self-intersects. Conflating them is how bad data gets a clean bill."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The check list",
+  "intro": "What the validator examines, in order.",
+  "columns": [
+   "Check",
+   "Catches"
+  ],
+  "rows": [
+   [
+    "Keyword and type",
+    "POINTS, LineString typos, unknown types"
+   ],
+   [
+    "Parenthesis balance",
+    "Truncated strings, bad concatenation"
+   ],
+   [
+    "Number formation",
+    "Commas inside pairs, text contamination, NaN/∞ tokens"
+   ],
+   [
+    "Ring closure",
+    "First pair ≠ last pair in a polygon ring"
+   ],
+   [
+    "Minimum vertices",
+    "Rings under 4 positions, lines under 2"
+   ],
+   [
+    "Dimensional consistency",
+    "Mixed 2D/3D tuples inside one geometry"
+   ]
+  ],
+  "note": "Validity has layers — lexical, syntactic, geometric (OGC simple-features rules). The validator reports which layer failed; all three passing is the real 'valid'."
+ },
+ "faq": [
+  [
+   "Is self-intersection checked?",
+   "Ring self-intersection (the bow-tie class) is screened and reported as a geometric fault, distinct from syntax errors. Full OGC validity suites in a database remain the deepest audit."
+  ],
+  [
+   "SRID prefixes?",
+   "EWKT's SRID=4326; prefix is accepted and the SRID reported; the geometry after it is validated normally."
+  ],
+  [
+   "Z and M geometries?",
+   "POINT Z, LINESTRING M, ZM forms validate with their declared dimensionality applied consistently across all tuples."
+  ],
+  [
+   "EMPTY geometries?",
+   "POINT EMPTY and kin are valid WKT — validated as proper empties, not errors."
+  ],
+  [
+   "Curved types (CIRCULARSTRING, CURVEPOLYGON)?",
+   "Recognised as types; their control-point structure is checked lexically, while true arc-geometry rules sit beyond this validator's stated scope."
+  ],
+  [
+   "It says valid but PostGIS rejects it.",
+   "PostGIS adds its own strictness (and geography-type casting rules). The usual suspect is ring orientation or a type/SRID mismatch — the validator's layer report tells you syntax is innocent, pointing the hunt at semantics."
+  ],
+  [
+   "Batch validation?",
+   "One string per pass here — the gatekeeper for samples and suspects; column-scale validation belongs in the database's own ST_IsValid pass, specified by this same rule list."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Convert it: the "
+  },
+  {
+   "t": "WKT / GeoJSON Helper",
+   "l": "/tools/wkt-geojson-helper"
+  },
+  {
+   "t": "; box it: the "
+  },
+  {
+   "t": "WKT Bounding Box Calculator",
+   "l": "/tools/wkt-bounding-box"
+  },
+  {
+   "t": "; count it: the "
+  },
+  {
+   "t": "WKT Coordinate Counter",
+   "l": "/tools/wkt-coordinate-counter"
+  },
+  {
+   "t": "; GeoJSON kin: the "
+  },
+  {
+   "t": "GeoJSON Validator",
+   "l": "/tools/geojson-validator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

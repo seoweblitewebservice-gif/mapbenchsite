@@ -8,17 +8,171 @@
   "contour line count calculator tool",
   "how to calculate contour line count calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Contour Line Count Calculator: Count the Lines",
+ "description": "Count the contour lines across an elevation range with the Contour Line Count Calculator — relief divided by interval, index lines included. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, terrain rising 2,400 feet mapped at a 40-foot contour interval carries 60 contour intervals — and every fifth line is an index contour, so 12 of them are drawn bold.",
+ "quick_answer": "The Contour Line Count Calculator estimates how many contour intervals fit inside an elevation range: relief divided by the contour interval. Enter the lowest and highest elevations and the map's interval and read the line count — the quick way to judge a topo map's density before you open it.",
+ "steps_intro": "Lines are relief, sliced evenly. Count the slices:",
+ "use_cases": [
+  {
+   "title": "Judging a topo sheet before buying",
+   "body": [
+    {
+     "t": "A quadrangle spanning 2,400 ft of relief at a 40 ft interval is a busy sheet — 60 lines deep. Mountain quads at fine intervals can be nearly solid brown; this count predicts it. The terrain itself is profiled on the "
+    },
+    {
+     "t": "Elevation Profile",
+     "l": "/tools/elevation-profile"
+    },
+    {
+     "t": " page."
+    }
+   ]
+  },
+  {
+   "title": "Planning a route's climb reading",
+   "body": [
+    {
+     "t": "Count the lines your route crosses on the map and you have its minimum climb in interval units — the paper version of ascent, checked against the "
+    },
+    {
+     "t": "Relief Ratio Calculator",
+     "l": "/tools/relief-ratio-calculator"
+    },
+    {
+     "t": " for steepness."
+    }
+   ]
+  },
+  {
+   "title": "Teaching map reading",
+   "body": [
+    {
+     "t": "Students grasp intervals when the count is arithmetic: range first, interval second, divide. The calculator makes the lesson self-checking."
+    }
+   ]
+  },
+  {
+   "title": "Comparing map series",
+   "body": [
+    {
+     "t": "USGS 7.5-minute quads use intervals from 5 to 100 ft depending on terrain; the same ground at two intervals gives two very different line counts — and reading experiences."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · A mountain quad",
+   "body": [
+    {
+     "t": "Relief 3,900 ft (a valley floor at 1,100 ft, a summit at 5,000 ft) at a 30 ft interval: 3,900 ÷ 30 = 130 intervals. One hundred and thirty lines between bottom and top — expect a steep, tightly banded sheet."
+    }
+   ]
+  },
+  {
+   "label": "Example · Metric sheet",
+   "body": [
+    {
+     "t": "A European 1:25,000 sheet with 1,200 m of relief and a 20 m interval: 60 intervals. Same arithmetic, rounder numbers — intervals are chosen per terrain, not per country."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Common contour intervals (USGS practice)",
+  "intro": "Intervals are picked so a quad stays readable — flat land gets fine slices, mountains get coarse ones.",
+  "columns": [
+   "Terrain",
+   "Typical interval",
+   "Lines per 1,000 ft of relief"
+  ],
+  "rows": [
+   [
+    "Coastal plain / prairie",
+    "5–10 ft",
+    "100–200"
+   ],
+   [
+    "Rolling hills",
+    "20 ft",
+    "50"
+   ],
+   [
+    "Mountains",
+    "40 ft",
+    "25"
+   ],
+   [
+    "Alaska Range scale relief",
+    "100 ft",
+    "10"
+   ],
+   [
+    "Metric sheets (Europe)",
+    "10–20 m",
+    "15–30 per 1,000 ft equivalent"
+   ]
+  ],
+  "note": "Every fifth line is an index contour (heavier, labelled with its elevation) — the count here includes them; they are lines too, just louder ones."
+ },
+ "faq": [
+  [
+   "What if the range does not divide evenly?",
+   "The remainder means the topmost interval is partial — a summit area inside the last band rather than a line at the very top. Lines drawn equal floor(relief ÷ interval) full crossings plus the boundary lines the map actually prints, which is why the count is stated as intervals."
+  ],
+  [
+   "Do depression contours count?",
+   "Yes — closed contours with tick marks (hachures) count the same way; a crater or sink adds its rings to the total exactly like a hill."
+  ],
+  [
+   "What interval do USGS quads use most?",
+   "20 ft and 40 ft are the workhorses for 7.5-minute quads in the lower 48; flat coastal sheets drop to 5 or 10 ft so the land gets any lines at all."
+  ],
+  [
+   "Can I count lines a route crosses instead?",
+   "That is this same arithmetic aimed at a path: high minus low along the route, divided by the interval — a lower bound on climbing, since routes dip as well as rise."
+  ],
+  [
+   "Why do some maps use supplementary contours?",
+   "In very flat terrain, half-interval dashed lines are added so subtle relief (a levee, a drumlin) does not vanish between full intervals. They are extra information, not part of the standard count."
+  ],
+  [
+   "Metric maps?",
+   "Intervals of 10 or 20 m are standard on European 1:25,000 series; the division is identical — only the unit changes."
+  ],
+  [
+   "Does a bigger count mean harder hiking?",
+   "Not by itself: line count is total relief, while difficulty lives in spacing — lines packed tight mean steep ground. Count tells you how much up exists; spacing tells you how it is arranged."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The profile view: "
+  },
+  {
+   "t": "Elevation Profile",
+   "l": "/tools/elevation-profile"
+  },
+  {
+   "t": "; steepness: the "
+  },
+  {
+   "t": "Relief Ratio Calculator",
+   "l": "/tools/relief-ratio-calculator"
+  },
+  {
+   "t": "; heights themselves: the "
+  },
+  {
+   "t": "Elevation Finder",
+   "l": "/tools/elevation-finder"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "central-angle-from-distance-calculator",
   "cicada-emergence-map",

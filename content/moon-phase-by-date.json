@@ -8,17 +8,186 @@
   "moon phase by date tool",
   "how to calculate moon phase by date"
  ],
- "title": null,
- "description": null,
+ "title": "Moon Phase by Date: Any Day, Any Year",
+ "description": "Find the Moon's phase name for any specific date with Moon Phase by Date — weddings, birthdays, historical nights and future plans. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, 3 March 2026 falls on a full moon — the model says so, and the total lunar eclipse that actually occurred that night agrees; eclipses only happen on the exact phase.",
+ "quick_answer": "Moon Phase by Date estimates the Moon's phase name for any specific date you give it — past, present or future — from the mean synodic cycle. Enter the date and read the phase: what the Moon was doing on a birthday, wedding night or historical evening.",
+ "steps_intro": "Pick the date first — the Moon's name for that night follows:",
+ "use_cases": [
+  {
+   "title": "Weddings, parties and proposals",
+   "body": [
+    {
+     "t": "A full moon is the most requested sky in event planning. Check candidate dates before booking the venue — the "
+    },
+    {
+     "t": "Next Full Moon Calculator",
+     "l": "/tools/next-full-moon-calculator"
+    },
+    {
+     "t": " finds the exact evenings when this month's dates miss."
+    }
+   ]
+  },
+  {
+   "title": "Birthdays and anniversaries",
+   "body": [
+    {
+     "t": "The phase on the night someone was born is a permanent party fact. This page answers it for any year the cycle can be counted back through."
+    }
+   ]
+  },
+  {
+   "title": "Historical nights",
+   "body": [
+    {
+     "t": "What lit the battlefield, the crossing, the escape? Phase-by-date reconstructs the Moon's contribution to any dated event — novelists and historians both keep it bookmarked."
+    }
+   ]
+  },
+  {
+   "title": "Verifying old claims",
+   "body": [
+    {
+     "t": "'There was a full moon that night' appears in a thousand memoirs. Most are wrong by a week; this is the thirty-second check."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The eclipse test",
+   "body": [
+    {
+     "t": "Ask for 12 August 2026 and the answer is new moon — necessarily, because a total solar eclipse crosses Iceland and Spain that day and solar eclipses happen only at new. The model's big dates check out against the sky's biggest events."
+    }
+   ]
+  },
+  {
+   "label": "Example · A solstice Moon",
+   "body": [
+    {
+     "t": "21 June 2026 computes to a waxing crescent-to-quarter Moon, age about 6.2 days and roughly 38% lit — a modest evening Moon riding the year's longest day."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The eight named phases",
+  "intro": "The names this page returns, in cycle order, with their age bands.",
+  "columns": [
+   "Phase",
+   "Age band (days)",
+   "Look"
+  ],
+  "rows": [
+   [
+    "New",
+    "0 – 1.8",
+    "Dark disc"
+   ],
+   [
+    "Waxing crescent",
+    "1.8 – 5.5",
+    "Right-lit sliver growing"
+   ],
+   [
+    "First quarter",
+    "5.5 – 9.2",
+    "Half lit, waxing"
+   ],
+   [
+    "Waxing gibbous",
+    "9.2 – 12.9",
+    "Bulging toward full"
+   ],
+   [
+    "Full",
+    "12.9 – 16.6",
+    "Whole face lit"
+   ],
+   [
+    "Waning gibbous",
+    "16.6 – 20.3",
+    "Bulge shrinking"
+   ],
+   [
+    "Last quarter",
+    "20.3 – 23.9",
+    "Half lit, waning"
+   ],
+   [
+    "Waning crescent",
+    "23.9 – 27.7",
+    "Left-lit sliver fading"
+   ]
+  ],
+  "note": "Names and bands follow the mean cycle in the northern-hemisphere view; southern observers see the lit side mirrored. Band edges are conventions — a Moon at 12.95 days is 'full' for every practical purpose."
+ },
+ "faq": [
+  [
+   "How far back and forward does it work?",
+   "The mean cycle counts indefinitely in both directions, but its error grows slowly with distance from the present era — hours of drift per century-scale jumps, days across millennia. For ancient dates, treat the name as approximate."
+  ],
+  [
+   "My birthday shows a different phase on two sites.",
+   "Sites differ in model precision and in which instant of the date they evaluate (midnight UTC versus local evening). A phase near a band edge flips between honest models. The Moon Age Calculator shows the underlying number so you can see how close the call is."
+  ],
+  [
+   "Does the time of day matter?",
+   "The Moon ages about half a day across a single date's span of timezones. Borderline dates genuinely have two answers on one planet — pick the evening of the place you mean."
+  ],
+  [
+   "Why 'waxing' and 'waning'?",
+   "Waxing is growing (the lit part increases toward full), waning is shrinking after full. The old words survive because they are exact: the Moon really does wax and wane like the candle metaphor they came from."
+  ],
+  [
+   "Was there really a full moon on the famous date?",
+   "Sometimes. Apollo 11's landing night (20 July 1969) had a waxing crescent a day or so past new in the evening sky over the Pacific — history's most famous Moon was mostly absent from its own landing. Check any claim here in seconds."
+  ],
+  [
+   "Blue moons and supermoons?",
+   "Calendar labels, not phases: a blue moon is a second full in a month; a supermoon is a full moon near perigee. Both ride on the phase this page names — the names here stay astronomical."
+  ],
+  [
+   "Can I get the exact full-moon instant?",
+   "This page names the phase for a date; the Next Full Moon Calculator targets the event and its timing. Use the pair: date first, precision second."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The number behind the name: the "
+  },
+  {
+   "t": "Moon Age Calculator",
+   "l": "/tools/moon-age-calculator"
+  },
+  {
+   "t": "; exact events: the "
+  },
+  {
+   "t": "Next Full Moon Calculator",
+   "l": "/tools/next-full-moon-calculator"
+  },
+  {
+   "t": "; lit fraction: the "
+  },
+  {
+   "t": "Moon Illumination Calculator",
+   "l": "/tools/moon-illumination-calculator"
+  },
+  {
+   "t": "; the month view: the "
+  },
+  {
+   "t": "Moon Phase Calendar Map",
+   "l": "/tools/moon-phase-calendar-map"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "moon-illumination-calculator",
   "moon-phase-calculator",

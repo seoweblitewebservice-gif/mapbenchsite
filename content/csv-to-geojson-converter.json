@@ -8,17 +8,159 @@
   "csv to geojson converter tool",
   "how to calculate csv to geojson converter"
  ],
- "title": null,
- "description": null,
+ "title": "CSV to GeoJSON Converter: Points as Features",
+ "description": "Convert a coordinate CSV into GeoJSON points with the CSV to GeoJSON Converter — properties carried across, browser-local. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, five city rows become five GeoJSON Point features — New York at [−74.0060, 40.7128] — with name kept as a property on every feature.",
+ "quick_answer": "The CSV to GeoJSON Converter turns a spreadsheet of coordinates into a GeoJSON FeatureCollection of points, carrying the other columns across as properties. Paste a clean CSV and download web-map-ready geography: the format Leaflet, MapLibre, QGIS and every geo API already speak, produced in your browser.",
+ "steps_intro": "Rows in, features out — longitude first, as GeoJSON demands:",
+ "use_cases": [
+  {
+   "title": "Web map data prep",
+   "body": [
+    {
+     "t": "The spreadsheet is where data lives; GeoJSON is where maps read. This converter is the bridge — after it, style and publish. Validate the input first with the "
+    },
+    {
+     "t": "CSV Coordinate Validator",
+     "l": "/tools/csv-coordinate-validator"
+    },
+    {
+     "t": " so only good rows become features."
+    }
+   ]
+  },
+  {
+   "title": "GIS imports",
+   "body": [
+    {
+     "t": "QGIS and friends ingest GeoJSON natively. Converting once beats fighting CSV dialect settings in every project."
+    }
+   ]
+  },
+  {
+   "title": "API and database loading",
+   "body": [
+    {
+     "t": "GeoJSON is the interchange dialect of geo APIs and PostGIS loaders. A clean FeatureCollection is the deliverable they all accept."
+    }
+   ]
+  },
+  {
+   "title": "Sharing locations as data",
+   "body": [
+    {
+     "t": "Email a file, not a screenshot: recipients open features with properties intact, ready to map their own way."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Anatomy of one converted row",
+   "body": [
+    {
+     "t": "The row ‘New York,40.7128,-74.0060’ becomes a Feature whose geometry is a Point at [−74.0060, 40.7128] — note the order flip: GeoJSON is longitude,latitude, always — and whose properties carry {name: ‘New York’}."
+    }
+   ]
+  },
+  {
+   "label": "Example · Numbers stay numbers",
+   "body": [
+    {
+     "t": "Coordinate cells become JSON numbers in the geometry; other columns ride as properties. A rating of 4.5 in your CSV is a string or a number downstream depending on the cell — worth a glance before analysis treats it as text."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "CSV versus GeoJSON",
+  "intro": "What changes in the crossing.",
+  "columns": [
+   "Aspect",
+   "CSV",
+   "GeoJSON"
+  ],
+  "rows": [
+   [
+    "Structure",
+    "Flat rows and columns",
+    "Features nesting geometry + properties"
+   ],
+   [
+    "Coordinate order",
+    "Usually lat, lon columns",
+    "[lon, lat] pairs, always"
+   ],
+   [
+    "Types",
+    "Everything is text",
+    "Numbers, strings, booleans distinguished"
+   ],
+   [
+    "Consumers",
+    "Spreadsheets, databases",
+    "Maps, GIS, geo APIs"
+   ]
+  ],
+  "note": "GeoJSON coordinates are WGS84 longitude/latitude by specification (RFC 7946). Projected spreadsheet coordinates must be converted to degrees before this crossing, or the features land in the ocean off Africa."
+ },
+ "faq": [
+  [
+   "Which columns become the point?",
+   "The latitude and longitude columns the file declares — matched by header. The remaining columns become the feature’s properties, names and all."
+  ],
+  [
+   "Lines or polygons from CSV?",
+   "This converter mints points — one feature per row. Lines and polygons are authored as GeoJSON directly or built in GIS from ordered points."
+  ],
+  [
+   "What happens to bad rows?",
+   "Rows without valid coordinates cannot become points. Validate first; converting a dirty file and hunting missing features afterwards is the slow path."
+  ],
+  [
+   "How big a file?",
+   "Browser conversion handles ordinary datasets — thousands to tens of thousands of rows. Beyond that, command-line tools (ogr2ogr) wear the same conversion at scale."
+  ],
+  [
+   "Are properties’ types preserved?",
+   "Text stays text; coordinate cells become numbers. If a property must be numeric downstream, check its cells carry no units or text."
+  ],
+  [
+   "Can I convert back?",
+   "GeoJSON to CSV is a flattening (points only, properties to columns) — other tools here and in GIS do it; geometry beyond points has no honest CSV shape."
+  ],
+  [
+   "Delimiter and quoting?",
+   "Standard comma CSV with quoted fields honoured. Semicolon exports should be re-exported or converted to commas first."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Validate first: the "
+  },
+  {
+   "t": "CSV Coordinate Validator",
+   "l": "/tools/csv-coordinate-validator"
+  },
+  {
+   "t": "; then shrink: the "
+  },
+  {
+   "t": "GeoJSON Minifier",
+   "l": "/tools/geojson-minifier"
+  },
+  {
+   "t": "; inspect the result: the "
+  },
+  {
+   "t": "GeoJSON Feature Counter",
+   "l": "/tools/geojson-feature-counter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

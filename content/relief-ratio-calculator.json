@@ -8,17 +8,158 @@
   "relief ratio calculator tool",
   "how to calculate relief ratio calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Relief Ratio Calculator: Terrain Steepness Index",
+ "description": "Calculate a basin's relief ratio with the Relief Ratio Calculator — relief divided by length, the geomorphologist's steepness index. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a drainage basin dropping 850 m over its 12.4 km length has a relief ratio of 0.0685 — equivalent to an average slope of about 3.9 degrees from rim to mouth.",
+ "quick_answer": "The Relief Ratio Calculator computes the relief ratio of a basin or slope — its total elevation drop divided by its horizontal length. Enter the relief and the length and read the ratio: the compact steepness index geomorphologists use to compare basins, predict sediment behaviour and characterise terrain.",
+ "steps_intro": "Drop over length — one ratio, many landscapes compared:",
+ "use_cases": [
+  {
+   "title": "Watershed and erosion studies",
+   "body": [
+    {
+     "t": "Relief ratio tracks how energetically a basin can move sediment — steeper ratios mean faster water and coarser loads. Basin heights come from the "
+    },
+    {
+     "t": "Elevation Profile",
+     "l": "/tools/elevation-profile"
+    },
+    {
+     "t": " across the drainage."
+    }
+   ]
+  },
+  {
+   "title": "Comparing terrain objectively",
+   "body": [
+    {
+     "t": "'Mountainous' versus 'rolling' becomes a number two field crews can share — Appalachian basins versus Alpine ones stop being adjectives."
+    }
+   ]
+  },
+  {
+   "title": "Trail and road corridor screening",
+   "body": [
+    {
+     "t": "A corridor's relief ratio previews its grading burden before anyone profiles it in detail — the screening number that decides which valleys get the survey."
+    }
+   ]
+  },
+  {
+   "title": "Geomorphology coursework",
+   "body": [
+    {
+     "t": "Schumm's relief ratio (1956) is a first-week computation in drainage-basin analysis — this page is the worked-example machine for it."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Two basins",
+   "body": [
+    {
+     "t": "Gentle basin: 300 m of relief over 20 km → 0.015 (a lazy 0.86° average). Mountain basin: 1,500 m over 8 km → 0.1875 (10.6°). Same formula, landscapes an order of magnitude apart in behaviour."
+    }
+   ]
+  },
+  {
+   "label": "Example · Reading the ratio as a slope",
+   "body": [
+    {
+     "t": "The ratio is the tangent of the average slope angle: 0.0685 ↔ 3.92°, 0.1875 ↔ 10.62°. Converting ratio to degrees is how field intuition checks the spreadsheet."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Relief ratio, interpreted (rules of thumb)",
+  "intro": "Bands used in drainage-basin geomorphology — guides, not laws.",
+  "columns": [
+   "Relief ratio",
+   "Landscape character"
+  ],
+  "rows": [
+   [
+    "Under 0.02",
+    "Low-relief plains and mature basins"
+   ],
+   [
+    "0.02–0.05",
+    "Rolling terrain, gentle uplands"
+   ],
+   [
+    "0.05–0.10",
+    "Hilly basins, energetic streams"
+   ],
+   [
+    "0.10–0.20",
+    "Mountain basins"
+   ],
+   [
+    "Over 0.20",
+    "Extreme relief — young, steep, fast-eroding terrain"
+   ]
+  ],
+  "note": "Definition: maximum basin relief (highest minus lowest elevation) divided by the basin's longest horizontal dimension parallel to the main drainage. State your length convention when publishing — ratios compare only like with like."
+ },
+ "faq": [
+  [
+   "Relief ratio versus average slope?",
+   "Closely related but not identical: the ratio uses the basin's total relief and longest dimension, while average slope averages local gradients. Two basins can share a ratio with very different internal slopes."
+  ],
+  [
+   "Which length do I measure?",
+   "The standard (Schumm) uses the maximum basin length parallel to the principal drainage line. The longest-dimension convention is what makes published ratios comparable."
+  ],
+  [
+   "Units?",
+   "Unitless — metres over metres or feet over feet, the ratio cancels. Mixed units are the one way to break it, so convert first (the elevation converters on this site oblige)."
+  ],
+  [
+   "What about Melton ruggedness?",
+   "A cousin index: relief divided by the square root of basin area. Relief ratio is the older, length-based measure; ruggedness suits fan and debris-flow screening better."
+  ],
+  [
+   "Can a ratio exceed 1?",
+   "For whole basins, practically never; for a single slope face or a short gully reach, yes — cliffs are locally ratio-rich, which is why the index is defined at basin scale."
+  ],
+  [
+   "Data sources for relief?",
+   "Highest and lowest points from a terrain model or topo sheet — the Elevation Finder supplies spot heights, profiles supply the range along a line."
+  ],
+  [
+   "Why do geomorphologists love ratios?",
+   "Scale-free comparison: a ratio lets a 2 km Scottish glen and a 200 km Himalayan basin sit in the same table without lying about either."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The shape itself: the "
+  },
+  {
+   "t": "Elevation Profile",
+   "l": "/tools/elevation-profile"
+  },
+  {
+   "t": "; lines across it: the "
+  },
+  {
+   "t": "Contour Line Count Calculator",
+   "l": "/tools/contour-line-count-calculator"
+  },
+  {
+   "t": "; summit references: the "
+  },
+  {
+   "t": "Peak Elevation Lookup",
+   "l": "/tools/peak-elevation-profile"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "central-angle-from-distance-calculator",
   "cicada-emergence-map",

@@ -8,17 +8,162 @@
   "gpx coordinate count",
   "gpx vertex count"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Track Point Counter: Count Every Point",
+ "description": "Count trackpoints, route points and waypoints in a GPX file with the GPX Track Point Counter — the file's census, read locally. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a weekend file holding two tracks of 1,200 and 850 trackpoints, one 64-point route and 12 waypoints reports 2,126 points in total — counted by kind, not just in sum.",
+ "quick_answer": "The GPX Track Point Counter inspects a GPX file and counts its points by kind — trackpoints (<trkpt>), route points (<rtept>) and waypoints (<wpt>). Load the file locally and read the census: the quickest structural X-ray a GPX file can get, before any deeper analysis begins.",
+ "steps_intro": "Three kinds of points live in a GPX file. Count each:",
+ "use_cases": [
+  {
+   "title": "Estimating processing weight",
+   "body": [
+    {
+     "t": "Point count predicts what a file will cost any tool — rendering, simplifying, converting. Count first; the "
+    },
+    {
+     "t": "GeoJSON Simplify Helper",
+     "l": "/tools/geojson-simplify-helper"
+    },
+    {
+     "t": "'s world has the same economics."
+    }
+   ]
+  },
+  {
+   "title": "Comparing exports",
+   "body": [
+    {
+     "t": "Two platforms export 'the same' ride with 5,400 and 900 points. The census explains the file-size gap and the detail gap in one glance."
+    }
+   ]
+  },
+  {
+   "title": "Verifying a merge or split",
+   "body": [
+    {
+     "t": "Merge three files, count the union: the total should equal the sum of the parts. Arithmetic audits catch silent drops — the "
+    },
+    {
+     "t": "GPX Merger",
+     "l": "/tools/gpx-merger"
+    },
+    {
+     "t": "'s receipt."
+    }
+   ]
+  },
+  {
+   "title": "Recording-settings insight",
+   "body": [
+    {
+     "t": "Points per hour reveals the device's sampling: 3,600/hour is one-second recording; a few hundred is smart recording stretching its legs."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The census of a real-shaped file",
+   "body": [
+    {
+     "t": "2 tracks (1,200 + 850 trkpt) + 1 route (64 rtept) + 12 wpt = 2,126 points. Reported by kind, the numbers already describe the file: a weekend's recording with one planned route riding along."
+    }
+   ]
+  },
+  {
+   "label": "Example · Points are not distance",
+   "body": [
+    {
+     "t": "A 100-point file can span 500 km (a flight) while a 10,000-point file covers a 5 km run recorded every second. Count measures resolution, not size — the bounding box and route stats supply the geography."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The three point kinds",
+  "intro": "Same lat/lon dress, three different jobs in the GPX schema.",
+  "columns": [
+   "Element",
+   "Lives in",
+   "Means"
+  ],
+  "rows": [
+   [
+    "<trkpt>",
+    "Track segments",
+    "A recorded moment — where the device actually was"
+   ],
+   [
+    "<rtept>",
+    "Routes",
+    "A planned point — where a route intends to go"
+   ],
+   [
+    "<wpt>",
+    "Top level",
+    "A standalone place — a summit, a camp, a trailhead"
+   ],
+   [
+    "<trkseg> boundaries",
+    "Inside tracks",
+    "Recording pauses — segments split, points do not connect across"
+   ]
+  ],
+  "note": "Counting is structural: the tool counts elements as the XML holds them, including points inside extensions-free plain files and multi-segment tracks alike."
+ },
+ "faq": [
+  [
+   "Are extension data points counted?",
+   "Extensions live inside trackpoints (heart rate, power) — they add data to a point, not points. The census counts the points; the channels are the analyzers' subject."
+  ],
+  [
+   "Does it count metadata or bounds corners?",
+   "No — only the three point elements. A file's <bounds> corners are summary values, not recorded points."
+  ],
+  [
+   "Empty segments?",
+   "A <trkseg> with no points counts as zero and drags nothing — the census reports points, and an empty segment is structure without substance."
+  ],
+  [
+   "How fast is counting for huge files?",
+   "Counting is the cheapest operation a file can undergo — even million-point files tally quickly in the browser, long before rendering them would be wise."
+  ],
+  [
+   "Points per kilometre?",
+   "Divide the count by the route's length from the stats tools — the density figure that predicts how smooth the track draws and how honest its elevation sum can be."
+  ],
+  [
+   "Can it count CSV or GeoJSON points instead?",
+   "Those formats have their own counters in the file family (rows and features) — this page speaks GPX elements specifically."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Routes census: the "
+  },
+  {
+   "t": "GPX Route Count Tool",
+   "l": "/tools/gpx-route-count-tool"
+  },
+  {
+   "t": "; merge them: the "
+  },
+  {
+   "t": "GPX Merger",
+   "l": "/tools/gpx-merger"
+  },
+  {
+   "t": "; box them: the "
+  },
+  {
+   "t": "GPX Bounding Box Tool",
+   "l": "/tools/gpx-bounding-box-tool"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

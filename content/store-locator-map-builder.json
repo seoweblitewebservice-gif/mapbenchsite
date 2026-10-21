@@ -7,17 +7,161 @@
   "location finder map",
   "dealer locator tool"
  ],
- "title": null,
- "description": null,
+ "title": "Store Locator Map Builder: Locations Mapped",
+ "description": "Build a store locator map from your own location list with the Store Locator Map Builder — nearest-first results, no platform lock-in. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a visitor at Times Square with three Manhattan-area stores sees them ranked 6.0, 11.0 and 13.5 miles away — nearest first, the only order a locator is allowed to use.",
+ "quick_answer": "The Store Locator Map Builder turns a list of your own locations into a locator map — visitors see your stores on a map and ranked by distance from where they search. Paste your locations and build the locator — the small-business essential chains take for granted.",
+ "steps_intro": "Your locations, a map, and honest nearest-first ranking:",
+ "use_cases": [
+  {
+   "title": "Independent retailers and cafes",
+   "body": [
+    {
+     "t": "Three branches or thirty — a locator that does not send customers to a competitor's platform first. Pair with the "
+    },
+    {
+     "t": "Share Location Link Generator",
+     "l": "/tools/share-location-link-generator"
+    },
+    {
+     "t": " for per-store share links."
+    }
+   ]
+  },
+  {
+   "title": "Service and franchise networks",
+   "body": [
+    {
+     "t": "Clinics, gyms, depots and agents: any network whose customers ask 'which is nearest to me?' gets its answer from its own list, not a directory's."
+    }
+   ]
+  },
+  {
+   "title": "Event and pop-up locations",
+   "body": [
+    {
+     "t": "Temporary sites on one map for the season — farmers' markets, tour stops, enrolment centres — then taken down when the season ends."
+    }
+   ]
+  },
+  {
+   "title": "Internal territory checks",
+   "body": [
+    {
+     "t": "Plot the network and look at it: gaps and overlaps are visible on a locator map in a way a spreadsheet of addresses never shows. The "
+    },
+    {
+     "t": "Voronoi Map Generator",
+     "l": "/tools/voronoi-map-generator"
+    },
+    {
+     "t": " draws each store's natural catchment from the same list."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Straight-line first, roads second",
+   "body": [
+    {
+     "t": "The ranking example above uses straight-line distance — the locator's honest first sort (its own base FAQ asks exactly this). The nearest by air is occasionally not the nearest by road; mature locators say which measure they rank by."
+    }
+   ]
+  },
+  {
+   "label": "Example · The list is the product",
+   "body": [
+    {
+     "t": "A locator with a stale address is worse than none — it sends a customer to a shuttered shop with total confidence. The builder makes rebuilding cheap precisely so the list stays young."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "A good locator's ingredients",
+  "intro": "What visitors judge you by, in order.",
+  "columns": [
+   "Ingredient",
+   "Why it matters"
+  ],
+  "rows": [
+   [
+    "Accurate coordinates per store",
+    "An address geocoded to the wrong block ranks you wrong"
+   ],
+   [
+    "Distance shown per result",
+    "Visitors plan journeys, not impressions"
+   ],
+   [
+    "Hours and phone per pin",
+    "The locator's answer is 'go here, now' — completeness is kindness"
+   ],
+   [
+    "A rebuild habit",
+    "Lists rot; the map must not"
+   ]
+  ],
+  "note": "Store data stays yours — the base FAQs cover where the list goes (processed in the browser for this tool's workflow) and remind you that customer-facing accuracy is a maintenance job, not a launch event."
+ },
+ "faq": [
+  [
+   "What format should my location list be in?",
+   "Name plus address — or name plus coordinates for exactness — one location per entry, in the shape the builder's form shows. Coordinates remove the geocoder's guesswork entirely."
+  ],
+  [
+   "How many locations can it handle?",
+   "Small and mid-size networks comfortably — the locator's natural habitat. National chains with thousands of stores belong on database-backed platforms."
+  ],
+  [
+   "Driving directions from each result?",
+   "Each store's entry can hand off to the visitor's map app for directions — the locator finds the store, the phone's maps do the driving."
+  ],
+  [
+   "Can visitors search by ZIP or postcode?",
+   "Yes — the search resolves the code's area and ranks your stores by distance from it, the way customers actually think ('near 90210')."
+  ],
+  [
+   "Does it collect my customers' locations?",
+   "The locator ranks for the visitor in their browser; a well-built locator (and this builder's philosophy) does not need to harvest searches to do its job."
+  ],
+  [
+   "Branding and styling?",
+   "The builder keeps the provider map's clean default look. Full brand theatre is the custom-platform tier — the honest trade of a free builder."
+  ],
+  [
+   "Seasonal hours and closures?",
+   "They belong in the list data you rebuild with — a locator is only as current as its last rebuild, which is why the rebuild is one paste away."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Catchments: the "
+  },
+  {
+   "t": "Voronoi Map Generator",
+   "l": "/tools/voronoi-map-generator"
+  },
+  {
+   "t": "; single links: the "
+  },
+  {
+   "t": "Share Location Link Generator",
+   "l": "/tools/share-location-link-generator"
+  },
+  {
+   "t": "; crowds: the "
+  },
+  {
+   "t": "ZIP Code Map",
+   "l": "/tools/zip-code-map"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "blank-map",
   "color-a-map",

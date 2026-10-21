@@ -8,17 +8,169 @@
   "nautical miles between coordinates tool",
   "how to use nautical miles between coordinates"
  ],
- "title": null,
- "description": null,
+ "title": "Nautical Miles Between Coordinates",
+ "description": "Compute the great-circle distance in nautical miles between two coordinates with Nautical Miles Between Coordinates — sea miles, exact. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, JFK to London Heathrow is 2,991.4 nautical miles — at a freighter's 15 knots that is 199 hours at sea, about 8.3 days, before weather gets its vote.",
+ "quick_answer": "Nautical Miles Between Coordinates measures the great-circle distance between two coordinate points and reports it in nautical miles — the sea and air unit, defined as exactly 1.852 kilometres. Enter the pair and read the sea distance: the number passage plans, ETAs and fuel calculations are built from.",
+ "steps_intro": "The ocean measures itself in nautical miles. Convert your pair into them:",
+ "use_cases": [
+  {
+   "title": "Passage time estimates",
+   "body": [
+    {
+     "t": "Distance divided by knots is hours underway — 2,991 nm at 15 knots is 199 hours. The arithmetic is why this unit exists; the "
+    },
+    {
+     "t": "Nautical Bearing Calculator",
+     "l": "/tools/nautical-bearing-calculator"
+    },
+    {
+     "t": " adds the course."
+    }
+   ]
+  },
+  {
+   "title": "Fuel and range planning",
+   "body": [
+    {
+     "t": "Consumption lives in miles-per-hour-of-fuel terms at sea. The sea distance is the input every range calculation trusts or regrets."
+    }
+   ]
+  },
+  {
+   "title": "Comparing sea and land routes",
+   "body": [
+    {
+     "t": "The ferry crossing versus the drive around: sea miles here, road miles from the routing tools — one decision, two honest numbers."
+    }
+   ]
+  },
+  {
+   "title": "Aviation legs",
+   "body": [
+    {
+     "t": "Air distance in nautical miles is aviation's bookkeeping standard — flight plans, ETOPS circles and range rings all count in them."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The Atlantic in sea miles",
+   "body": [
+    {
+     "t": "JFK–Heathrow: 5,540.0 km = 2,991.4 nm. A jet at ~500 mph covers the same ground in about 6.9 hours of flying — the unit stays nautical in the cockpit because charts, and the latitude scale itself, are built on it."
+    }
+   ]
+  },
+  {
+   "label": "Example · Why the unit fits the sea",
+   "body": [
+    {
+     "t": "One nautical mile is one arcminute of latitude — sail 60 nm north and your latitude gains exactly one degree. No land unit marries the chart like that, which is why this conversion is a translation between civilisations, not just numbers."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Nautical miles, translated",
+  "intro": "The unit against the land world's measures.",
+  "columns": [
+   "Nautical miles",
+   "Kilometres",
+   "Statute miles"
+  ],
+  "rows": [
+   [
+    "1",
+    "1.852 (exact)",
+    "1.151"
+   ],
+   [
+    "10",
+    "18.52",
+    "11.51"
+   ],
+   [
+    "60 (≈1° of latitude)",
+    "111.1",
+    "69.0"
+   ],
+   [
+    "100",
+    "185.2",
+    "115.1"
+   ],
+   [
+    "1,000",
+    "1,852",
+    "1,150.8"
+   ],
+   [
+    "2,991.4 (JFK–LHR)",
+    "5,540.0",
+    "3,442.6"
+   ]
+  ],
+  "note": "The international nautical mile is exactly 1,852 metres by definition (1929, adopted universally since). Historical sea miles varied by nation — modern charts and this calculator use the exact figure."
+ },
+ "faq": [
+  [
+   "How is the distance computed?",
+   "Great-circle (haversine) between the coordinates on a spherical Earth, converted at exactly 1.852 km per nautical mile — the method the tool's own note states, at full precision."
+  ],
+  [
+   "Why not road or shipping-lane distance?",
+   "This is the geometric sea distance between the points. Real passages follow lanes, coasts and weather, and run longer — the plan adds those; the baseline must be the true minimum first."
+  ],
+  [
+   "Knots to time — how?",
+   "Hours = nautical miles ÷ knots, by the unit's definition. 165.3 nm (New York–Boston) at 20 knots is about 8.3 hours of steaming, harbour time excluded."
+  ],
+  [
+   "Coordinates in which format?",
+   "Decimal degrees paste directly; DMS and other dresses convert first with the Coordinate Converter, so the pair enters cleanly."
+  ],
+  [
+   "Accuracy limits?",
+   "Spherical geometry costs well under a percent against the ellipsoid — irrelevant beside weather routing. Bad coordinates, as ever, are the true error source."
+  ],
+  [
+   "Statute miles shown too?",
+   "Yes, alongside kilometres — but the nautical figure leads, because at sea the other two are the translations, not the original."
+  ],
+  [
+   "Really old charts (geographical miles)?",
+   "Historical units varied (the old British sea mile ran 6,080 feet). Modern work uses exactly 1,852 m; antique distances deserve antique suspicion and a conversion note."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "With course: the "
+  },
+  {
+   "t": "Nautical Bearing Calculator",
+   "l": "/tools/nautical-bearing-calculator"
+  },
+  {
+   "t": "; land version: the "
+  },
+  {
+   "t": "Driving Distance Calculator",
+   "l": "/tools/driving-distance-calculator"
+  },
+  {
+   "t": "; minutes of arc: the "
+  },
+  {
+   "t": "Arcminutes to Decimal Degrees Converter",
+   "l": "/tools/arcminutes-to-decimal-degrees-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "compass-bearing-visualizer",
   "competitor-distance-map",

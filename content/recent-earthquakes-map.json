@@ -6,17 +6,162 @@
   "recent earthquakes",
   "seismic activity"
  ],
- "title": null,
- "description": null,
+ "title": "Recent Earthquakes Map: Latest Seismic Activity",
+ "description": "See recent earthquakes on the map with the Recent Earthquakes Map — USGS-fed events with magnitude, depth and location for awareness and education. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, on a typical day the map carries dozens of fresh pins: the USGS locates roughly 500,000 earthquakes a year, though only about 100,000 are felt by anyone.",
+ "quick_answer": "The Recent Earthquakes Map visualises the latest seismic events from open USGS earthquake feeds — magnitude, location, depth and time for quakes around the world. Open it for awareness and education: what shook, where, how deep and how strong, on the record of the world's most complete public seismic catalogue.",
+ "steps_intro": "The planet's daily trembling, on one map:",
+ "use_cases": [
+  {
+   "title": "After feeling a tremor",
+   "body": [
+    {
+     "t": "The first question — was that an earthquake, and how big? — is answered here from the same feed officials use. Cross-check the epicentre against your location with the "
+    },
+    {
+     "t": "Earth Curvature Calculator",
+     "l": "/tools/earth-curvature-calculator"
+    },
+    {
+     "t": "'s sibling distance tools if 'how far away?' follows."
+    }
+   ]
+  },
+  {
+   "title": "Travel awareness",
+   "body": [
+    {
+     "t": "Heading to Japan, Chile, Türkiye or Indonesia? A glance at recent activity frames the region's normal background — the Ring of Fire is a statistic before it is a headline."
+    }
+   ]
+  },
+  {
+   "title": "Geology teaching",
+   "body": [
+    {
+     "t": "A week of pins draws the plate boundaries more honestly than any textbook plate diagram — students watch subduction zones trace themselves."
+    }
+   ]
+  },
+  {
+   "title": "News verification",
+   "body": [
+    {
+     "t": "Social feeds exaggerate magnitudes within minutes. The catalogue's reviewed values settle what actually happened and where the early numbers came from."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Magnitude is not a volume knob",
+   "body": [
+    {
+     "t": "Each whole magnitude step releases about 32 times more energy: a magnitude 6 releases roughly 1,000 times a magnitude 4's energy (32 × 32). The map's small pins and large pins live in different physical worlds that the shared scale politely flattens."
+    }
+   ]
+  },
+  {
+   "label": "Example · Depth changes the story",
+   "body": [
+    {
+     "t": "A magnitude 6 at 10 km depth under a city is a disaster; the same at 600 km under the ocean is a scientific notice. The feed's depth column is why the map shows more than dots — read it with the magnitude, always."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "How many earthquakes, really (USGS long-term averages)",
+  "intro": "Published catalogue statistics — the background rate the map samples.",
+  "columns": [
+   "Magnitude band",
+   "Average per year"
+  ],
+  "rows": [
+   [
+    "8.0 and above ('great')",
+    "About 1"
+   ],
+   [
+    "7.0–7.9 ('major')",
+    "About 15"
+   ],
+   [
+    "4.0–4.9",
+    "About 13,000"
+   ],
+   [
+    "Felt by people",
+    "About 100,000"
+   ],
+   [
+    "Detected and located",
+    "About 500,000"
+   ]
+  ],
+  "note": "Roughly 90% of the world's earthquakes occur around the Pacific 'Ring of Fire'. Depth classes: shallow under 70 km, intermediate 70–300 km, deep 300–700 km — the deepest quakes on record approach 700 km."
+ },
+ "faq": [
+  [
+   "How fast do events appear?",
+   "USGS automatic solutions post within minutes for well-instrumented regions, then seismologists review and refine magnitude and location. Early pins can shift — the catalogue treats revision as honesty, not error."
+  ],
+  [
+   "Why do two sources report different magnitudes?",
+   "Magnitude has flavours (local ML, moment Mw, body-wave mb) computed from different signals; they agree roughly and differ in detail. Moment magnitude (Mw) is the reference for large events."
+  ],
+  [
+   "What is the largest ever recorded?",
+   "Magnitude 9.5, Chile, 1960 — the Valdivia earthquake, on the moment magnitude scale. The 2004 Sumatra (9.1) and 2011 Tōhoku (9.1) events follow it in the catalogue."
+  ],
+  [
+   "Can earthquakes be predicted?",
+   "No — not the time-place-magnitude prediction the word implies. Science offers probabilities over decades ( hazard maps ) and seconds of early warning once one begins. Anyone selling prediction is selling fiction."
+  ],
+  [
+   "Does a swarm mean a big one is coming?",
+   "Statistically, most swarms end quietly; each magnitude-5 raises the short-term odds of a larger event modestly (aftershock sequences follow known laws, like Omori's and Båth's). Agencies communicate the numbers; the map shows the events."
+  ],
+  [
+   "Tsunami information?",
+   "Tsunami warnings come from dedicated centres (NOAA's PTWC and national agencies) within minutes for qualifying submarine quakes. This map is for awareness — warnings belong to the warning systems, loud and official."
+  ],
+  [
+   "Man-made events appear?",
+   "The catalogue includes quarry blasts and induced events where networks classify them — depth near zero and odd hours are the usual tells, and the feed's event-type field says so where known."
+  ],
+  [
+   "Historical earthquakes?",
+   "This page's window is recent activity; the USGS catalogue search reaches back more than a century for the historical record — the 1906 San Francisco and 1811–12 New Madrid sequences included."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The ground itself: the "
+  },
+  {
+   "t": "Elevation Finder",
+   "l": "/tools/elevation-finder"
+  },
+  {
+   "t": "; water risk after quakes starts with zones: the "
+  },
+  {
+   "t": "Flood Zone Check",
+   "l": "/tools/flood-zone-check"
+  },
+  {
+   "t": "; terrain relief: the "
+  },
+  {
+   "t": "Relief Ratio Calculator",
+   "l": "/tools/relief-ratio-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boiling-point-by-elevation-calculator",
   "central-angle-from-distance-calculator",

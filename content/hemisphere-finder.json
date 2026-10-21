@@ -8,17 +8,176 @@
   "hemisphere finder online",
   "free hemisphere finder"
  ],
- "title": null,
- "description": null,
+ "title": "Hemisphere Finder: Your Quarter of Earth",
+ "description": "Use the Hemisphere Finder to work out which northern, southern, eastern and western hemispheres any place belongs to — and the rare overlaps. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, New York is northern and western, Sydney is southern and eastern — and Kiribati is the only country that sits in all four hemispheres at once.",
+ "quick_answer": "The Hemisphere Finder tells you which hemispheres any place on Earth belongs to — northern or southern by the equator, eastern or western by the prime meridian. Enter a location or coordinates and read its quarter of the globe, with the edge cases explained.",
+ "steps_intro": "Every point on Earth has a hemisphere address with four possible labels:",
+ "use_cases": [
+  {
+   "title": "School geography, made concrete",
+   "body": [
+    {
+     "t": "Worksheets ask 'which hemisphere is Brazil in?' and the honest answer is three of them. Tools like this turn a trick question into a real lesson. Check the boundary lines with the "
+    },
+    {
+     "t": "Equator Finder",
+     "l": "/tools/equator-finder"
+    },
+    {
+     "t": " and the "
+    },
+    {
+     "t": "Prime Meridian Finder",
+     "l": "/tools/prime-meridian-finder"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Season planning for travel",
+   "body": [
+    {
+     "t": "Southern hemisphere means flipped seasons — Sydney's December is summer. Checking hemispheres before booking explains weather expectations better than any brochure."
+    }
+   ]
+  },
+  {
+   "title": "Sanity-checking coordinates",
+   "body": [
+    {
+     "t": "A sign error in latitude or longitude flips a hemisphere. If a dataset claims a point is in the northern hemisphere but plots off Perth, the finder exposes the mistake."
+    }
+   ]
+  },
+  {
+   "title": "Trivia and teaching moments",
+   "body": [
+    {
+     "t": "Which country spans all four hemispheres? Only Kiribati. Which continent sits in all four? Africa. These make the abstract grid memorable."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Brazil breaks the simple answer",
+   "body": [
+    {
+     "t": "Brazil is mostly southern and entirely western — but its northern states cross the equator, so the country spans northern, southern and western hemispheres at once. Most large countries refuse a single label."
+    }
+   ]
+  },
+  {
+   "label": "Example · The point in all four",
+   "body": [
+    {
+     "t": "Only one spot is in all four hemispheres simultaneously: 0°, 0° in the Gulf of Guinea, where the equator and prime meridian cross — open ocean, marked by a weather buoy, not a monument."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Hemisphere membership at a glance",
+  "intro": "How familiar places distribute across the four halves.",
+  "columns": [
+   "Place",
+   "North/South",
+   "East/West"
+  ],
+  "rows": [
+   [
+    "New York, USA",
+    "Northern",
+    "Western"
+   ],
+   [
+    "Sydney, Australia",
+    "Southern",
+    "Eastern"
+   ],
+   [
+    "London, UK",
+    "Northern",
+    "Both — the prime meridian crosses it"
+   ],
+   [
+    "Quito, Ecuador",
+    "Southern (just)",
+    "Western"
+   ],
+   [
+    "Nairobi, Kenya",
+    "Southern (just)",
+    "Eastern"
+   ],
+   [
+    "Kiribati",
+    "Both",
+    "Both — the only four-hemisphere country"
+   ]
+  ],
+  "note": "East/west follows the common convention: eastern hemisphere runs 0° to 180°E, western 0° to 180°W. Some textbooks draw the divide at 20°W and 160°E to keep continents whole — a convention, not a law."
+ },
+ "faq": [
+  [
+   "How are the hemispheres defined?",
+   "Northern/southern split at the equator (0° latitude); eastern/western split at the prime meridian (0° longitude) and the 180° meridian on the far side. Latitude sign gives the first pair, longitude sign the second."
+  ],
+  [
+   "Which country is in all four hemispheres?",
+   "Kiribati. Its islands stretch across the equator and across the 180° meridian region of the Pacific, giving it territory in the northern, southern, eastern and western hemispheres — a distinction no other nation holds."
+  ],
+  [
+   "Which continent is in all four?",
+   "Africa. It crosses the equator and the prime meridian (through Ghana, near Accra — only about 21 km of parallel arc from Greenwich's line), and extends past both divides."
+  ],
+  [
+   "Is most of Earth's land in one hemisphere?",
+   "Yes — the northern hemisphere holds roughly two thirds of all land, which is why 'winter' in December describes most of the world's population but not most of its surface."
+  ],
+  [
+   "What hemisphere is the UK in?",
+   "Northern, and split on east/west: the prime meridian runs through Greenwich, so Britain has ground in both the eastern and western hemispheres within the same city — London straddles the line."
+  ],
+  [
+   "Does hemisphere change the seasons?",
+   "North/south does — the seasons are six months out of phase across the equator. East/west changes only clock time, not season."
+  ],
+  [
+   "Where do the hemispheres all meet?",
+   "At two points: 0°, 0° in the Gulf of Guinea (all four meet) and 0°, 180° in the Pacific. The poles belong to every longitude's hemisphere argument and settle none."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Find the dividing lines themselves with the "
+  },
+  {
+   "t": "Equator Finder",
+   "l": "/tools/equator-finder"
+  },
+  {
+   "t": " and the "
+  },
+  {
+   "t": "Prime Meridian Finder",
+   "l": "/tools/prime-meridian-finder"
+  },
+  {
+   "t": ", then measure your distance from the equator with "
+  },
+  {
+   "t": "Distance to Equator",
+   "l": "/tools/distance-to-equator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "distance-from-prime-meridian-calculator",
   "distance-from-tropic-of-cancer",

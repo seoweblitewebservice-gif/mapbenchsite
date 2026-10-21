@@ -8,17 +8,159 @@
   "zip code list by state",
   "ZIP Codes by State"
  ],
- "title": null,
- "description": null,
+ "title": "ZIP Codes by State, County & City Lists",
+ "description": "Browse ZIP Codes by State, County & City with the ZIP Codes by State, County & City explorer — the list for a place, structured three ways. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, asking for Chicago's ZIPs and asking for Cook County's are different questions with overlapping answers — Chicago spills past Cook into DuPage, and the county list catches what the city list cannot.",
+ "quick_answer": "ZIP Codes by State, County & City lists the ZIP codes belonging to a state, a county or a city — the same postal geography sliced three ways. Choose the place and read its codes — the list behind territory planning and mailing work.",
+ "steps_intro": "One postal geography, three honest slices:",
+ "use_cases": [
+  {
+   "title": "Territory and franchise lists",
+   "body": [
+    {
+     "t": "A territory defined as 'these counties' becomes a mailing list only through the county-to-ZIP slice — the step franchise agreements quietly depend on."
+    }
+   ]
+  },
+  {
+   "title": "Mailing and outreach targeting",
+   "body": [
+    {
+     "t": "Campaigns buy geography by the slice they think in: a city's codes for an event, a state's for a launch. The list in hand ends the guessing."
+    }
+   ]
+  },
+  {
+   "title": "Data validation",
+   "body": [
+    {
+     "t": "A record claiming ZIP 60601 in 'DuPage County' is wrong — it is Cook. The county slice is the audit table the CRM never had."
+    }
+   ]
+  },
+  {
+   "title": "Service-area definitions",
+   "body": [
+    {
+     "t": "Insurers, utilities and delivery zones publish coverage by ZIP. Building your own list starts from one of the three slices, checked against the "
+    },
+    {
+     "t": "ZIP Code Boundary Viewer",
+     "l": "/tools/zip-code-boundary-viewer"
+    },
+    {
+     "t": " where edges matter."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · City versus county, Chicago",
+   "body": [
+    {
+     "t": "Chicago's city ZIPs cluster in the 606xx range; Cook County adds the suburban 600xx–608xx ring that is not Chicago at all. Overlapping but different lists — choosing the wrong slice mails the suburbs and calls it the city."
+    }
+   ]
+  },
+  {
+   "label": "Example · The straddling ZIP",
+   "body": [
+    {
+     "t": "Some ZIP areas cross county and even city lines — a delivery route does not stop for a surveyor. Such codes appear on both counties' lists, because the postal geography and the civic geography were never the same map."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The three slices",
+  "intro": "Same codes, different questions.",
+  "columns": [
+   "Slice",
+   "Answers",
+   "Watch out"
+  ],
+  "rows": [
+   [
+    "By state",
+    "What is the state's full postal footprint?",
+    "Multi-metro states are enormous lists"
+   ],
+   [
+    "By county",
+    "Which codes touch this county?",
+    "Straddling codes appear on neighbours too"
+   ],
+   [
+    "By city",
+    "Which codes does this city use?",
+    "Postal city names differ from municipal boundaries"
+   ],
+   [
+    "Any slice",
+    "A working list",
+    "ZIPs are routes — areas here are ZCTA approximations"
+   ]
+  ],
+  "note": "The standing ZIP caveat applies: ZIP codes are USPS delivery constructs, and list membership follows the best public ZIP-to-place data — the USPS itself is the authority for delivery questions."
+ },
+ "faq": [
+  [
+   "Why is a ZIP on two counties' lists?",
+   "Its delivery area crosses the line. Postal routes were drawn for mail, not for census neatness — dual membership is the honest representation, not a bug."
+  ],
+  [
+   "Postal city versus real city?",
+   "USPS assigns each ZIP a preferred city name that can differ from the municipality the address sits in. The city slice follows postal naming and says so; civic truth lives with the boundary tools."
+  ],
+  [
+   "Are unique ZIPs (single buildings) included?",
+   "Codes serving one facility exist in the postal file; list tools vary in carrying them. For mailing work their absence rarely matters; for completeness claims, the note on the list governs."
+  ],
+  [
+   "How often do ZIP lists change?",
+   "USPS creates, splits and retires codes continuously as delivery grows. Any frozen list is a snapshot — for production mail, current CASS-grade data is the standard."
+  ],
+  [
+   "Can I get the list as a file?",
+   "The results copy out as text for your documents and spreadsheets — the working form of a reference list — with the map view one click away in the ZIP Code Map."
+  ],
+  [
+   "Canadian or UK equivalents?",
+   "Different systems, different tools: Canada's FSAs and UK postcode districts live in the Location family's postcode tools, sliced their own ways."
+  ],
+  [
+   "What about ZIP+4?",
+   "The +4 refines delivery within a ZIP and multiplies the list a thousandfold — reference lists live at the 5-digit level, where geography still means something."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Plot them: the "
+  },
+  {
+   "t": "ZIP Code Map",
+   "l": "/tools/zip-code-map"
+  },
+  {
+   "t": "; inside a circle: "
+  },
+  {
+   "t": "ZIP Codes Within Radius",
+   "l": "/tools/zip-codes-within-radius"
+  },
+  {
+   "t": "; Australia's system: "
+  },
+  {
+   "t": "Australia Postcodes by State & Suburb",
+   "l": "/tools/australia-postcodes-by-state-suburb"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "australia-postcodes-by-state-suburb",
   "census-geography-finder",

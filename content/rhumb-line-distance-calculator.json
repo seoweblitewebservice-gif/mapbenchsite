@@ -8,17 +8,164 @@
   "rhumb line distance calculator tool",
   "how to use rhumb line distance calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Rhumb Line Distance Calculator: Loxodrome Miles",
+ "description": "Measure rhumb-line distance between two coordinates with the Rhumb Line Distance Calculator — and see exactly what the constant heading costs. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, the rhumb line from London to New York runs 5,758.6 km against the great circle's 5,540.0 km — the constant heading costs 218.6 km, about 4% more ocean.",
+ "quick_answer": "The Rhumb Line Distance Calculator measures the distance along a rhumb line — the constant-compass-bearing path between two coordinates. Enter the endpoints and read the loxodrome distance in kilometres, miles or nautical miles, with the great-circle comparison that shows what steering one steady heading costs over the shortest route.",
+ "steps_intro": "The steady heading is longer. Here is exactly how much longer:",
+ "use_cases": [
+  {
+   "title": "Passage distance for constant-heading legs",
+   "body": [
+    {
+     "t": "If the plan is to steer one course, the fuel and time math must use the rhumb distance, not the crow-flies one — with the bearing from the "
+    },
+    {
+     "t": "Rhumb Line Bearing Calculator",
+     "l": "/tools/rhumb-line-bearing-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Route comparison studies",
+   "body": [
+    {
+     "t": "Students and navigators quantify the great-circle saving route by route: 39 km JFK–LAX, 219 km across the Atlantic, and far more in the high southern latitudes."
+    }
+   ]
+  },
+  {
+   "title": "Chart-measured distances",
+   "body": [
+    {
+     "t": "Distances scaled off a Mercator chart with dividers are rhumb distances. The calculator reproduces them without the chart."
+    }
+   ]
+  },
+  {
+   "title": "GIS and mapping checks",
+   "body": [
+    {
+     "t": "A 'straight line' measured in a Mercator-based GIS is a rhumb measurement in disguise — this page names and numbers it."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Coast to coast, two answers",
+   "body": [
+    {
+     "t": "JFK to LAX: great circle 3,974.3 km; rhumb 4,013.0 km. The 38.7 km difference (0.97%) is the price of steering 259.3° without a single course change."
+    }
+   ]
+  },
+  {
+   "label": "Example · The Atlantic penalty",
+   "body": [
+    {
+     "t": "New York to London: great circle 5,570.3 km; rhumb 5,794.2 km — 223.9 km (4.0%) longer. High latitude stretches rhumb lines because parallels shrink while the heading holds its angle."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Rhumb versus great circle, computed distances",
+  "intro": "From this site's reference coordinates — the penalty grows with latitude and distance.",
+  "columns": [
+   "Route",
+   "Great circle",
+   "Rhumb line",
+   "Extra"
+  ],
+  "rows": [
+   [
+    "JFK → LAX",
+    "3,974.3 km",
+    "4,013.0 km",
+    "+38.7 km (+1.0%)"
+   ],
+   [
+    "London → New York",
+    "5,540.0 km",
+    "5,758.6 km",
+    "+218.6 km (+3.9%)"
+   ],
+   [
+    "New York → London",
+    "5,570.3 km",
+    "5,794.2 km",
+    "+223.9 km (+4.0%)"
+   ],
+   [
+    "Along the equator",
+    "Identical",
+    "Identical",
+    "0 — the lines coincide"
+   ]
+  ],
+  "note": "Along meridians and the equator the two geometries agree exactly; the gap opens as routes lean east-west at high latitude."
+ },
+ "faq": [
+  [
+   "What formula does it use?",
+   "The spherical loxodrome formula: distance from the latitude difference and the logarithmic (Mercator) latitude difference, scaled by the mean Earth radius — the standard rhumb computation on this site's WGS84-flavoured sphere."
+  ],
+  [
+   "Why is the rhumb line longer?",
+   "It refuses the shortcut. The great circle cuts toward the pole where meridians converge; the rhumb holds its angle and walks the longer, parallel-hugging road."
+  ],
+  [
+   "Nautical miles available?",
+   "Yes — divide kilometres by 1.852; a 5,758.6 km Atlantic rhumb is about 3,110 nautical miles. Mariners plan in those units natively."
+  ],
+  [
+   "Short distances — does it matter?",
+   "Barely. Under a few hundred miles at temperate latitudes the two distances agree within a fraction of a percent, which is why coastal work never noticed the difference."
+  ],
+  [
+   "Due east along a parallel?",
+   "The rhumb follows the parallel itself (a small circle); the great circle dips toward the pole and wins. At 45°N the saving on a long east-west run is the classic textbook result."
+  ],
+  [
+   "Can the rhumb distance be shorter than great circle?",
+   "Never — the great circle is the shortest path on a sphere by definition. Any tool claiming otherwise has a bug, and this comparison is how you catch it."
+  ],
+  [
+   "Which should a flight plan use?",
+   "Airlines fly great-circle-based routes (in airway segments), because 4% of an ocean is real fuel. Ships balance the saving against weather routing; both start from these two numbers."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Its bearing: the "
+  },
+  {
+   "t": "Rhumb Line Bearing Calculator",
+   "l": "/tools/rhumb-line-bearing-calculator"
+  },
+  {
+   "t": "; the shortest path: the "
+  },
+  {
+   "t": "Distance Between Two Places",
+   "l": "/tools/distance-between-two-places"
+  },
+  {
+   "t": "; sea time on it: the "
+  },
+  {
+   "t": "Nautical Travel Time Calculator",
+   "l": "/tools/nautical-travel-time-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "compass-bearing-visualizer",
   "competitor-distance-map",

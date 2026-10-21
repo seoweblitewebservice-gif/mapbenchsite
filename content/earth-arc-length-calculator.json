@@ -8,17 +8,176 @@
   "earth arc length calculator tool",
   "how to calculate earth arc length calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Earth Arc Length Calculator: Surface Distance",
+ "description": "Compute the surface arc length between two angles with the Earth Arc Length Calculator — degrees or radians in, kilometres and miles out. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a 45-degree arc of the Earth's surface runs 5,003.8 km — one eighth of the way around the planet, from the equator to the pole is exactly two of those.",
+ "quick_answer": "The Earth Arc Length Calculator converts a central angle — in degrees or radians — into the distance travelled along the Earth's surface, the arc. Enter the angle and read kilometres or miles: the surface distance behind every 'degrees apart' statement about places, satellites and seismic waves.",
+ "steps_intro": "Angles at the centre become distances on the surface:",
+ "use_cases": [
+  {
+   "title": "Understanding great-circle distances",
+   "body": [
+    {
+     "t": "Every great-circle distance is an arc: the angle between two points' radius lines, priced in kilometres. The "
+    },
+    {
+     "t": "Earth Chord Length Calculator",
+     "l": "/tools/earth-chord-length-calculator"
+    },
+    {
+     "t": " is the same geometry measured through the planet instead of around it."
+    }
+   ]
+  },
+  {
+   "title": "Seismology first steps",
+   "body": [
+    {
+     "t": "Earthquake distances are quoted in degrees from the epicentre — the angle seismologists actually measure. This calculator turns those degrees into the surface kilometres the waves travelled."
+    }
+   ]
+  },
+  {
+   "title": "Satellite and coverage geometry",
+   "body": [
+    {
+     "t": "A satellite's footprint and ground-station visibility are stated as Earth-central angles; arc length is what those angles mean for the people underneath."
+    }
+   ]
+  },
+  {
+   "title": "Checking degree-distance rules",
+   "body": [
+    {
+     "t": "“One degree is about 111 km” — here it is exact on the mean sphere: 111.19 km (69.09 miles). Latitude's real degree wobbles around it, priced on the "
+    },
+    {
+     "t": "Earth Circumference at Latitude",
+     "l": "/tools/earth-circumference-at-latitude"
+    },
+    {
+     "t": " page."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The quarter planet",
+   "body": [
+    {
+     "t": "Equator to pole is a 90° arc: 10,007.6 km. Double it for the full meridian half (180°): 20,015.1 km from pole to pole over the surface — the arc every antipode pair sits at the ends of."
+    }
+   ]
+  },
+  {
+   "label": "Example · A known hop in degrees",
+   "body": [
+    {
+     "t": "New York to Boston is 306.1 km of surface — a central angle of 2.753°. Small angles, real journeys: most city pairs on Earth live inside five degrees."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Arc lengths on the mean sphere (R = 6,371.01 km)",
+  "intro": "Computed as angle × π/180 × radius — the calculator's own arithmetic.",
+  "columns": [
+   "Central angle",
+   "Arc length",
+   "In miles"
+  ],
+  "rows": [
+   [
+    "1°",
+    "111.2 km",
+    "69.1"
+   ],
+   [
+    "5°",
+    "556.0 km",
+    "345.5"
+   ],
+   [
+    "10°",
+    "1,111.9 km",
+    "690.9"
+   ],
+   [
+    "45°",
+    "5,003.8 km",
+    "3,109.2"
+   ],
+   [
+    "90°",
+    "10,007.6 km",
+    "6,218.4"
+   ],
+   [
+    "180°",
+    "20,015.1 km",
+    "12,436.8"
+   ]
+  ],
+  "note": "These use Earth's mean radius. On the real ellipsoid a degree of latitude runs 110.574 km at the equator to 111.694 km at the poles — under 1% of variation the mean sphere smooths away."
+ },
+ "faq": [
+  [
+   "What radius does it use?",
+   "Earth's mean radius, 6,371.01 km (the IUGG value) — the standard sphere for arc geometry. Ellipsoid-exact arcs need the endpoints' latitudes and belong to geodesic tools."
+  ],
+  [
+   "Degrees or radians?",
+   "Both — radians are the formula's native unit (arc = R × angle), degrees convert at π/180. Satellite and seismic literature uses degrees; mathematics uses radians."
+  ],
+  [
+   "Arc versus straight-line distance?",
+   "The arc rides the surface; the chord cuts through. They differ by under 1% below about 25° of separation, then diverge — at 180° the arc is 20,015 km, the chord 12,742 km."
+  ],
+  [
+   "Why do seismologists quote degrees?",
+   "Because their measurements are angles: P-wave and S-wave arrival behaviour is charted against epicentral degrees. The conversion to kilometres is this page, and it depends only on the radius chosen."
+  ],
+  [
+   "The Moon or Mars?",
+   "The formula is radius-agnostic — enter another body's radius in a general calculator and the same arithmetic prices its arcs (the Moon's degree is about 30 km)."
+  ],
+  [
+   "Negative or over-360 angles?",
+   "Arcs are taken as the positive sweep; past 180° the shorter way around is the other direction, and honest tools say which they computed."
+  ],
+  [
+   "Surface distance versus flight distance?",
+   "Flights ride a few kilometres above the sphere — at cruising altitude the arc grows by roughly the altitude's fraction (about 0.2% at 11 km), a correction pilots' systems make and this page's surface framing states."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Through the planet: the "
+  },
+  {
+   "t": "Earth Chord Length Calculator",
+   "l": "/tools/earth-chord-length-calculator"
+  },
+  {
+   "t": "; the bulge version: the "
+  },
+  {
+   "t": "Earth Bulge Calculator",
+   "l": "/tools/earth-bulge-calculator"
+  },
+  {
+   "t": "; full circles: "
+  },
+  {
+   "t": "Earth Circumference at Latitude",
+   "l": "/tools/earth-circumference-at-latitude"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boiling-point-by-elevation-calculator",
   "cicada-emergence-map",

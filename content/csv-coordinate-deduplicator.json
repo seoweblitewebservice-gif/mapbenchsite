@@ -8,17 +8,161 @@
   "csv coordinate deduplicator checker",
   "csv coordinate deduplicator validator"
  ],
- "title": null,
- "description": null,
+ "title": "CSV Coordinate Deduplicator: Count the Repeats",
+ "description": "Audit a coordinate CSV for repeated points with the CSV Coordinate Deduplicator — valid pairs, unique count and repeat count. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a six-row city file with Denver pasted twice reports 5 unique pairs and 1 repeat — the row that would have drawn two pins on the same spot and voted twice in every average.",
+ "quick_answer": "The CSV Coordinate Deduplicator audits a coordinate list for repeated map points before the file reaches a map, a routing workflow or a spatial database. Paste the CSV and read the verdict: how many valid pairs exist, how many are unique, and how many repeat a pair.",
+ "steps_intro": "Duplicates hide in plain sight. Count them before they cost you:",
+ "use_cases": [
+  {
+   "title": "Pre-import cleaning",
+   "body": [
+    {
+     "t": "Merged exports breed repeats. Dedupe the audit here, clean in your editor, and import once — the "
+    },
+    {
+     "t": "CSV Coordinate Validator",
+     "l": "/tools/csv-coordinate-validator"
+    },
+    {
+     "t": " checks the survivors’ validity."
+    }
+   ]
+  },
+  {
+   "title": "Pin-map honesty",
+   "body": [
+    {
+     "t": "Two pins on one spot look like one pin and count like two in every statistic. The deduplicator tells you how much of your map is echo."
+    }
+   ]
+  },
+  {
+   "title": "Join diagnostics",
+   "body": [
+    {
+     "t": "A join that doubles rows doubles coordinates. When the row count smells wrong, the repeat count here isolates the geometry side of the bug."
+    }
+   ]
+  },
+  {
+   "title": "Survey and collection QA",
+   "body": [
+    {
+     "t": "Field devices re-upload; sync tools hiccup. A repeat census after each collection round keeps the master file honest."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The Denver double",
+   "body": [
+    {
+     "t": "Six rows, five cities, Denver twice: unique 5, repeats 1. Nothing about the rows looks wrong individually — deduplication is a whole-file property, which is why eyeballing never finds it."
+    }
+   ]
+  },
+  {
+   "label": "Example · Near-duplicates are not duplicates",
+   "body": [
+    {
+     "t": "40.7128 and 40.71280 are the same number; 40.7128 and 40.7129 (11 metres apart) are different pairs and both count as unique. Exact-pair matching is the rule — rounding games belong to deliberate cleaning, discussed in the FAQs."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the counts mean",
+  "intro": "Three numbers, three different jobs.",
+  "columns": [
+   "Count",
+   "Meaning",
+   "Watch out"
+  ],
+  "rows": [
+   [
+    "Valid pairs",
+    "Rows with parseable, in-range coordinates",
+    "Invalid rows are a validator’s story, told separately"
+   ],
+   [
+    "Unique pairs",
+    "Distinct coordinate pairs",
+    "The map’s true point count"
+   ],
+   [
+    "Repeat rows",
+    "Rows re-stating an earlier pair",
+    "May be errors — or legitimate frequency"
+   ]
+  ],
+  "note": "Matching is on the exact coordinate pair. Trailing-zero dress (40.71280) parses to the same number and matches; genuinely different coordinates never merge by accident."
+ },
+ "faq": [
+  [
+   "Does it delete the duplicates?",
+   "It audits and reports — the deleting is yours, in your editor, with the counts as your checklist. Tools that silently delete rows teach users not to trust tools."
+  ],
+  [
+   "What about rows that differ only in name?",
+   "Same coordinates, different labels still repeat as points. Whether they are one place with two names or two tenants of one building is your knowledge, not the pair’s."
+  ],
+  [
+   "Invalid rows counted where?",
+   "A row without valid coordinates is not a pair at all — the validator’s census covers it. This tool counts within the valid universe."
+  ],
+  [
+   "Case or spacing differences?",
+   "Coordinates are numbers; ‘40.7128’ and ‘ 40.7128 ’ parse alike. Text-column quirks do not reach the pair comparison."
+  ],
+  [
+   "Rounding before deduping?",
+   "Rounding coordinates to 4–5 decimals first (the Coordinate Rounding Tool) merges jitter-twins from GPS re-reads — a legitimate cleaning strategy when the jitter is noise, a data crime when it is signal."
+  ],
+  [
+   "Legitimate repeats?",
+   "Deliveries, visits and events repeat at addresses by nature. If repeats are frequency, keep them and let them weigh — dedupe is for accidents."
+  ],
+  [
+   "Order of rows matter?",
+   "The first occurrence is the original; later ones are the repeats. The count is order-blind, the labels are not."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Validity: the "
+  },
+  {
+   "t": "CSV Coordinate Validator",
+   "l": "/tools/csv-coordinate-validator"
+  },
+  {
+   "t": "; shape: the "
+  },
+  {
+   "t": "CSV Row Counter",
+   "l": "/tools/csv-row-counter"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "CSV Column Counter",
+   "l": "/tools/csv-column-counter"
+  },
+  {
+   "t": "; convert the clean file: the "
+  },
+  {
+   "t": "CSV to GeoJSON Converter",
+   "l": "/tools/csv-to-geojson-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

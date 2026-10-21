@@ -8,17 +8,179 @@
   "au postcodes near",
   "Australia Postcodes by State &amp"
  ],
- "title": null,
- "description": null,
+ "title": "Australia Postcodes by State & Suburb",
+ "description": "Browse Australia Postcodes by State & Suburb — postcode ranges for NSW, Victoria, Queensland and every state and territory. Free reference.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, Sydney's 2000, Melbourne's 3000 and Perth's 6000 show the system's logic at a glance: in most states the thousands digit is the state's signature.",
+ "quick_answer": "Australia Postcodes by State & Suburb organises Australian postcodes the way Australia Post allocates them — by state and territory, then by suburb. Pick a state and browse its ranges: the 2xxx block is New South Wales, 3xxx Victoria, 4xxx Queensland, and so on across the national postcode map.",
+ "steps_intro": "Australia's postcodes are allocated in state blocks. Browse them the way they were issued:",
+ "use_cases": [
+  {
+   "title": "Address and form validation",
+   "body": [
+    {
+     "t": "A postcode that starts with 7 cannot be in Victoria — the state blocks make a first-pass sanity check for Australian address data before any lookup runs."
+    }
+   ]
+  },
+  {
+   "title": "Delivery and territory planning",
+   "body": [
+    {
+     "t": "Service areas in Australia are quoted by postcode ranges. The state blocks turn a coverage promise ('all of metro Sydney') into an enumerable list."
+    }
+   ]
+  },
+  {
+   "title": "Data cleaning",
+   "body": [
+    {
+     "t": "Suburb-postcode mismatches in a CRM surface fastest when the state's whole range is in front of you — browse the block and the strangers stand out."
+    }
+   ]
+  },
+  {
+   "title": "Relocating within Australia",
+   "body": [
+    {
+     "t": "Learning a new city's postcode neighbourhoods — Sydney spans 2000 out past 2234 into the greater metro — is how newcomers build their mental map. Distances across it price out with the "
+    },
+    {
+     "t": "Driving Distance Calculator",
+     "l": "/tools/driving-distance-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Sydney to Melbourne",
+   "body": [
+    {
+     "t": "The 2000 (Sydney CBD) and 3000 (Melbourne CBD) centroids sit about 713 km apart — the two biggest postcode blocks' capitals, an overnight drive apart. The blocks' capitals define most Australians' sense of the system."
+    }
+   ]
+  },
+  {
+   "label": "Example · The leading-zero states",
+   "body": [
+    {
+     "t": "Darwin is 0800, in the Northern Territory's 0xxx block — always write the zero. Dropping it (800) breaks forms, sorts and lookups, the most common Australian postcode bug in imported data."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Postcode blocks by state and territory",
+  "intro": "Australia Post's allocation — the thousands digit does most of the work.",
+  "columns": [
+   "State / Territory",
+   "Main ranges",
+   "Capital's postcode"
+  ],
+  "rows": [
+   [
+    "New South Wales",
+    "2000–2599 (plus 2618–2620 shared ACT border area)",
+    "Sydney 2000"
+   ],
+   [
+    "Victoria",
+    "3000–3999",
+    "Melbourne 3000"
+   ],
+   [
+    "Queensland",
+    "4000–4999",
+    "Brisbane 4000"
+   ],
+   [
+    "South Australia",
+    "5000–5999",
+    "Adelaide 5000"
+   ],
+   [
+    "Western Australia",
+    "6000–6999",
+    "Perth 6000"
+   ],
+   [
+    "Tasmania",
+    "7000–7999",
+    "Hobart 7000"
+   ],
+   [
+    "Northern Territory",
+    "0800–0899",
+    "Darwin 0800"
+   ],
+   [
+    "Australian Capital Territory",
+    "2600–2617",
+    "Canberra 2600"
+   ]
+  ],
+  "note": "Ranges are the allocation blocks in general use; individual postcodes are created, retired and shared by suburbs over time, and a handful of codes serve large mail users. Australia Post's own lookup is the authority for a specific address."
+ },
+ "faq": [
+  [
+   "Why do some postcodes serve many suburbs?",
+   "A postcode is a mail-sorting area, not a suburb boundary — dense city centres stack many suburbs into one code, while rural codes spread across a district. Suburb and postcode are cousins, not twins."
+  ],
+  [
+   "Can a suburb have several postcodes?",
+   "Yes — large suburbs split across codes, and new developments redraw the map. The browse shows the common allocations; an exact address belongs to Australia Post's finder."
+  ],
+  [
+   "What about PO Box and large-user postcodes?",
+   "Some codes exist only for post office boxes or single large recipients and never appear on a street map. Their absence from suburb lists is correct behaviour."
+  ],
+  [
+   "Islands and external territories?",
+   "Christmas Island (6798), Cocos (6799) and Norfolk Island (2899) sit inside the state blocks' leftovers — the ranges table's fine print, findable in their host blocks."
+  ],
+  [
+   "How current is the list?",
+   "Postcode allocations change as Australia Post creates and retires codes. Treat this browse as the reference map of the system; verify a critical address at the source."
+  ],
+  [
+   "Postcodes versus time zones or area codes?",
+   "No relation — telephone area codes (02, 03, 07, 08) roughly echo states by historical accident of the same federation, but the systems are independent."
+  ],
+  [
+   "Why does NSW include 2620 near Canberra?",
+   "Geography ignores the territory border — a few NSW postcodes wrap around the ACT. The table notes the shared corner rather than hiding it."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The US cousin: "
+  },
+  {
+   "t": "ZIP Codes by State, County & City",
+   "l": "/tools/zip-codes-by-state-county-city"
+  },
+  {
+   "t": "; Australian distances: the "
+  },
+  {
+   "t": "Driving Distance Calculator",
+   "l": "/tools/driving-distance-calculator"
+  },
+  {
+   "t": "; postal logic: the "
+  },
+  {
+   "t": "ZIP Code Map",
+   "l": "/tools/zip-code-map"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "census-geography-finder",
   "cities-within-radius",

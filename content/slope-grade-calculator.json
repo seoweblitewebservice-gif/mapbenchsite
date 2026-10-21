@@ -6,17 +6,180 @@
   "grade percent",
   "hill grade"
  ],
- "title": null,
- "description": null,
+ "title": "Slope Grade Calculator: Rise, Run and Percent",
+ "description": "Relate elevation change and run distance to grade with the Slope Grade Calculator — sampled elevations along your path, percent out. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a path that climbs 60 metres over a 1,000-metre run works out to a 6% grade — the steepness of a serious mountain road, read straight off the elevation change.",
+ "quick_answer": "The Slope Grade Calculator relates the elevation change along a path to the horizontal distance it covers, giving the grade as a percent. Sample the elevations, enter the rise and the run, and read the grade — the number road builders, trail crews and cyclists all argue about.",
+ "steps_intro": "Grade is rise divided by run. Sample the path, then divide honestly:",
+ "use_cases": [
+  {
+   "title": "Road and driveway checks",
+   "body": [
+    {
+     "t": "A proposed drive that gains 8 feet over 100 feet of run is an 8% grade — fine for most cars, lively in ice. Check the alignment before the concrete truck agrees with you."
+    }
+   ]
+  },
+  {
+   "title": "Trail and path steepness",
+   "body": [
+    {
+     "t": "Trail crews quote grade because legs understand it. Pair this with the "
+    },
+    {
+     "t": "Slope & Gradient Calculator",
+     "l": "/tools/slope-gradient-calculator"
+    },
+    {
+     "t": " when you also need the angle and ratio forms."
+    }
+   ]
+  },
+  {
+   "title": "Drainage falls",
+   "body": [
+    {
+     "t": "Patios, gutters and French drains live at 1–2% — enough fall to move water, not enough to notice. The calculator prices a 'gentle' slope in real percent."
+    }
+   ]
+  },
+  {
+   "title": "Reading a route profile",
+   "body": [
+    {
+     "t": "An elevation profile's steep segments are grades waiting to be measured — the "
+    },
+    {
+     "t": "Elevation Profile",
+     "l": "/tools/elevation-profile"
+    },
+    {
+     "t": " draws them, this page numbers them."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · A mountain-road grade",
+   "body": [
+    {
+     "t": "Rise 60 m over a 1,000 m run: 60 ÷ 1,000 = 6.0% grade, an angle of 3.43°. Six percent is the figure often cited as a design ceiling for interstate highways in mountainous terrain — sustained, it works engines and brakes hard."
+    }
+   ]
+  },
+  {
+   "label": "Example · The same hill, two honest numbers",
+   "body": [
+    {
+     "t": "A ramp rising 1 unit for every 12.5 of run is an 8% grade but only a 4.57° angle. Percent and degrees are different dialects of steepness — confusing them is the classic slope error, and it grows with the hill."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Grade, angle and ratio together",
+  "intro": "Computed conversions (angle = atan of the grade) — the three dialects of one steepness.",
+  "columns": [
+   "Grade",
+   "Angle",
+   "Ratio (rise : run)"
+  ],
+  "rows": [
+   [
+    "2%",
+    "1.15°",
+    "1 : 50"
+   ],
+   [
+    "4%",
+    "2.29°",
+    "1 : 25"
+   ],
+   [
+    "6%",
+    "3.43°",
+    "1 : 16.7"
+   ],
+   [
+    "10%",
+    "5.71°",
+    "1 : 10"
+   ],
+   [
+    "25%",
+    "14.04°",
+    "1 : 4"
+   ],
+   [
+    "100%",
+    "45.00°",
+    "1 : 1"
+   ]
+  ],
+  "note": "A 100% grade is 45 degrees, not vertical — a wall is an infinite grade. Percent answers 'how much rise per hundred of run', nothing more mystical."
+ },
+ "faq": [
+  [
+   "What is the difference between grade and slope angle?",
+   "Grade is the ratio rise ÷ run, expressed as a percent. Slope angle is the geometric angle of the surface in degrees. They describe the same hill in different units — 10% grade is 5.71°, not 10°."
+  ],
+  [
+   "How steep is too steep for a road vehicle?",
+   "Ordinary cars manage short 15–20% grades; sustained highway grades are usually designed under about 6%. The steepest public streets in San Francisco exceed 30% — possible, but not a design goal."
+  ],
+  [
+   "Does the calculator use map distance or road distance?",
+   "Grade needs the horizontal run. If you enter road distance (measured along the slope), the answer comes out slightly low on steep ground — the Slope Length Calculator separates the two distances."
+  ],
+  [
+   "Can a grade be over 100%?",
+   "Yes — any slope steeper than 45° has a grade above 100%, because the rise exceeds the run. Ski-slope pitches and roofs live up there; roads sensibly do not."
+  ],
+  [
+   "What grade do wheelchair ramps use?",
+   "Accessibility standards in the US cap ramp running slope at 1:12 (about 8.33%) — a figure worth checking against current local code before building, since this page does arithmetic, not compliance."
+  ],
+  [
+   "Why does my GPS app show a different grade?",
+   "Apps average elevation change over different windows and filter GPS noise differently. Short windows exaggerate, long windows smooth — the method matters more than the device."
+  ],
+  [
+   "Is downhill grade negative?",
+   "By convention, descents are often written as negative grades (−6%) or just called a 6% downgrade. The steepness is the same; the sign records direction."
+  ],
+  [
+   "What run should I measure for a whole climb?",
+   "Total rise over total run gives the average grade — useful for effort, blind to the steep ramp hiding in the middle. Segment the climb when the steepest part is what matters."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Convert every form: the "
+  },
+  {
+   "t": "Slope & Gradient Calculator",
+   "l": "/tools/slope-gradient-calculator"
+  },
+  {
+   "t": "; true surface distance: the "
+  },
+  {
+   "t": "Slope Length Calculator",
+   "l": "/tools/slope-length-calculator"
+  },
+  {
+   "t": "; elevations: the "
+  },
+  {
+   "t": "Elevation Finder",
+   "l": "/tools/elevation-finder"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boiling-point-by-elevation-calculator",
   "central-angle-from-distance-calculator",

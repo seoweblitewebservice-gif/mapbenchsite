@@ -8,17 +8,164 @@
   "earth chord length calculator tool",
   "how to calculate earth chord length calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Earth Chord Length Calculator: Through Earth",
+ "description": "Compute the straight chord through the Earth for any surface separation with the Earth Chord Length Calculator — tunnel distances, computed. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, New York to Los Angeles is 3,974 km around the surface but only 3,910 km through the planet — a straight tunnel would pass 307 km beneath the midpoint's surface.",
+ "quick_answer": "The Earth Chord Length Calculator computes the straight-line distance through the Earth between two surface points, from their surface separation or central angle. Enter the arc distance or angle and read the chord — the tunnel that does not exist, and the geometry behind antipodes.",
+ "steps_intro": "Around is the long way. This is the shortcut's length:",
+ "use_cases": [
+  {
+   "title": "Antipode geometry",
+   "body": [
+    {
+     "t": "Antipodes are the limiting case: chord = diameter, 12,742 km through the centre. The "
+    },
+    {
+     "t": "Map Tunnel",
+     "l": "/tools/map-tunnel"
+    },
+    {
+     "t": " shows where your own tunnel would surface."
+    }
+   ]
+  },
+  {
+   "title": "Seismic wave paths",
+   "body": [
+    {
+     "t": "Deep-focus earthquake waves chord through the mantle and core — their travel times are read against chord-style paths, which is why seismology keeps this geometry close."
+    }
+   ]
+  },
+  {
+   "title": "Gravity-train physics",
+   "body": [
+    {
+     "t": "The classic thought experiment — a frictionless tunnel train falling to the other side in about 42 minutes — starts from the chord and its depth. This page supplies both halves of the setup."
+    }
+   ]
+  },
+  {
+   "title": "Explaining arc versus straight",
+   "body": [
+    {
+     "t": "Students feel the sphere when the numbers separate: at 10° apart the chord is only 4 km shorter than the arc; at 90° it is nearly 1,000 km shorter."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · New York to Los Angeles",
+   "body": [
+    {
+     "t": "Surface arc 3,974.3 km (central angle 35.74°). Chord: 3,910.2 km. Deepest point of the straight tunnel: 307.4 km below the surface at midpoint — well into the mantle, which is why this stays a thought experiment."
+    }
+   ]
+  },
+  {
+   "label": "Example · The quarter chord",
+   "body": [
+    {
+     "t": "Points 90° apart (equator to pole): arc 10,007.6 km, chord 9,010.0 km — R√2. The chord saves 10% and bottoms out 1,866 km below the midpoint surface (R − R·cos 45°)."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Arc versus chord (mean sphere)",
+  "intro": "Same endpoints, two distances — the gap grows with the angle.",
+  "columns": [
+   "Central angle",
+   "Arc (surface)",
+   "Chord (through)"
+  ],
+  "rows": [
+   [
+    "1°",
+    "111.2 km",
+    "111.2 km"
+   ],
+   [
+    "10°",
+    "1,111.9 km",
+    "1,110.5 km"
+   ],
+   [
+    "35.74° (NYC–LA)",
+    "3,974.3 km",
+    "3,910.2 km"
+   ],
+   [
+    "90°",
+    "10,007.6 km",
+    "9,010.0 km"
+   ],
+   [
+    "180° (antipodes)",
+    "20,015.1 km",
+    "12,742.0 km"
+   ]
+  ],
+  "note": "Chord = 2R sin(θ/2). At small angles the sine and the angle nearly agree, which is why flat maps work locally at all."
+ },
+ "faq": [
+  [
+   "What inputs does it take?",
+   "Either the surface (arc) distance or the central angle — they convert into each other through the radius, and the chord follows from 2R sin(θ/2)."
+  ],
+  [
+   "Why is the chord never longer than the arc?",
+   "A straight line is the shortest path between two points in space; the arc is constrained to the sphere's surface. The chord wins every time the angle is nonzero."
+  ],
+  [
+   "What radius is used?",
+   "The mean radius 6,371.01 km, matching this family's other Earth-geometry pages so their numbers cross-check exactly."
+  ],
+  [
+   "How deep does the NYC–LA tunnel go?",
+   "307.4 km at midpoint — the sagitta of that chord. Depth grows fast: a 90° chord bottoms out about 1,866 km down, in the lower mantle."
+  ],
+  [
+   "Do any real tunnels use this?",
+   "None through the planet — but neutrino detectors and seismic stations live on chord geometry, and the chord is the reference every 'straight through' claim is measured against."
+  ],
+  [
+   "Chord for my antipode?",
+   "Exactly the diameter: 12,742.02 km on the mean sphere. Every antipode pair shares it."
+  ],
+  [
+   "Ellipsoid corrections?",
+   "The real Earth's polar and equatorial diameters differ by about 43 km; chord work at the precision where that matters is geodesy, and this page's spherical framing is stated on it."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Around the surface: the "
+  },
+  {
+   "t": "Earth Arc Length Calculator",
+   "l": "/tools/earth-arc-length-calculator"
+  },
+  {
+   "t": "; your tunnel's exit: the "
+  },
+  {
+   "t": "Map Tunnel",
+   "l": "/tools/map-tunnel"
+  },
+  {
+   "t": "; the midpoint rise: the "
+  },
+  {
+   "t": "Earth Bulge Calculator",
+   "l": "/tools/earth-bulge-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boiling-point-by-elevation-calculator",
   "cicada-emergence-map",

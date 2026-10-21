@@ -8,17 +8,159 @@
   "seed quantity per acre calculator tool",
   "how to calculate seed quantity per acre calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Seed Quantity Per Acre Calculator",
+ "description": "Work out total seed needed from a per-acre rate with the Seed Quantity Per Acre Calculator — pounds, bags and seed counts for the whole field. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, wheat at 120 lb per acre over 40 acres needs 4,800 lb of seed — exactly 96 fifty-pound bags, a number the supplier's quote should match to the bag.",
+ "quick_answer": "The Seed Quantity Per Acre Calculator multiplies a seeding rate by the field's acreage to give the total seed to buy — in pounds, bags or raw seed counts depending on the crop. Enter rate and acres and read the order quantity, before the planter is hitched.",
+ "steps_intro": "Rate times acres equals the order. Get it before planting day:",
+ "use_cases": [
+  {
+   "title": "Ordering without the shortage run",
+   "body": [
+    {
+     "t": "Running out mid-field costs a day and a delivery fee. The calculator's total, plus a sensible margin, is the order — field size from the "
+    },
+    {
+     "t": "Acreage Map Calculator",
+     "l": "/tools/acreage-map-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Comparing seed quotes",
+   "body": [
+    {
+     "t": "Suppliers quote per bag, per unit, per pound. Total quantity in one unit makes the quotes comparable — arithmetic as negotiation armour."
+    }
+   ]
+  },
+  {
+   "title": "Count-based crops",
+   "body": [
+    {
+     "t": "Corn and soybeans are planted by population: 32,000 corn seeds per acre over 80 acres is 2,560,000 seeds — 32 bags of 80,000. The calculator speaks both languages."
+    }
+   ]
+  },
+  {
+   "title": "Leftover and carry-over planning",
+   "body": [
+    {
+     "t": "Last year's partial bags subtract from this year's total. The calculator gives the gross; your store-room count gives the net."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Soybeans by the unit",
+   "body": [
+    {
+     "t": "140,000 seeds per acre × 25 acres = 3,500,000 seeds = 25 units of 140,000. Seed units exist so this multiplication lands on whole numbers."
+    }
+   ]
+  },
+  {
+   "label": "Example · The margin question",
+   "body": [
+    {
+     "t": "Headlands, overlaps and a spilled bag argue for 5–10% over the bare total. The calculator gives the bare total honestly; the margin is your judgment, added openly."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Typical seeding rates (reference)",
+  "intro": "Common US rates — your variety, soil and extension guidance govern the real choice.",
+  "columns": [
+   "Crop",
+   "Typical rate",
+   "Sold as"
+  ],
+  "rows": [
+   [
+    "Wheat",
+    "90–120 lb/acre",
+    "50 lb bags"
+   ],
+   [
+    "Corn (grain)",
+    "~32,000 seeds/acre",
+    "80,000-seed bags"
+   ],
+   [
+    "Soybeans",
+    "~140,000 seeds/acre",
+    "140,000-seed units"
+   ],
+   [
+    "Alfalfa",
+    "15–20 lb/acre",
+    "50 lb bags"
+   ]
+  ],
+  "note": "Rates are agronomy, not geometry — the calculator multiplies faithfully whatever rate your seed tag and local guidance specify, including germination adjustments."
+ },
+ "faq": [
+  [
+   "Should I adjust for germination?",
+   "Yes — divide the target population by the germination fraction (a 90% germ tag needs ~11% more seed). The calculator totals the rate you enter; enter the adjusted rate."
+  ],
+  [
+   "Pure live seed (PLS)?",
+   "Professional buyers compute PLS from purity × germination on the seed tag. This page's totals are the field arithmetic around that figure."
+  ],
+  [
+   "Odd field shapes?",
+   "Acreage is acreage however the field is shaped — measure the drawn area and multiply. Shape changes drilling patterns, not totals."
+  ],
+  [
+   "Mixed or cover-crop blends?",
+   "Total the blend's rate, then split by the blend's percentages per component — the calculator handles the total; the ratio is the blend's label."
+  ],
+  [
+   "Leftover seed storage?",
+   "Most seed keeps a season if kept cool and dry, with a germination retest before relying on it. The order total can assume the retest, not the hope."
+  ],
+  [
+   "Bags are a different size here.",
+   "Enter the total weight the calculator gives and divide by your local bag size — the pounds are universal, bags are regional."
+  ],
+  [
+   "Precision planters change rates?",
+   "Singulation accuracy can trim waste versus drills, but target populations come from agronomy first; equipment follows the number, not the reverse."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Field size: the "
+  },
+  {
+   "t": "Acreage Map Calculator",
+   "l": "/tools/acreage-map-calculator"
+  },
+  {
+   "t": "; layout: the "
+  },
+  {
+   "t": "Rows Per Field Calculator",
+   "l": "/tools/rows-per-field-calculator"
+  },
+  {
+   "t": "; row length: the "
+  },
+  {
+   "t": "Crop Row Length Calculator",
+   "l": "/tools/crop-row-length-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-area-from-radius",

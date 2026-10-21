@@ -8,17 +8,158 @@
   "property land cost calculator",
   "land value per square foot"
  ],
- "title": null,
- "description": null,
+ "title": "Land Cost Per Square Foot Calculator",
+ "description": "Work out land price per square foot from a total price and lot size with the Land Cost Per Square Foot Calculator — urban land's native unit. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a $200,000 lot of 10,000 square feet prices at $20 per square foot — and the same rate stretched over a whole acre would be $871,200, which is why city land talks in feet.",
+ "quick_answer": "The Land Cost Per Square Foot Calculator divides a lot's total price by its square footage to give the cost per square foot of land. Enter the price and the area and read the per-foot figure — the unit urban land is priced in, per-acre equivalent alongside.",
+ "steps_intro": "City land is priced by the foot. Divide and compare:",
+ "use_cases": [
+  {
+   "title": "Comparing city and suburban lots",
+   "body": [
+    {
+     "t": "Two lots, two sizes, one rate: $20 per sq ft exposes which listing is rich without a spreadsheet. The rural translation lives in the "
+    },
+    {
+     "t": "Land Cost Per Acre Calculator",
+     "l": "/tools/land-cost-per-acre-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Builders' land math",
+   "body": [
+    {
+     "t": "A developer's feasibility starts as land cost per buildable square foot. This division is the first line of every pro forma that ever pencilled — or didn't."
+    }
+   ]
+  },
+  {
+   "title": "Pricing a partial sale",
+   "body": [
+    {
+     "t": "Selling a side strip or an easement corridor? Its square footage times the land's per-foot rate is the opening number, before lawyers adjust for everything else."
+    }
+   ]
+  },
+  {
+   "title": "Checking an appraisal's land line",
+   "body": [
+    {
+     "t": "Appraisals allocate value between land and improvements. Recomputing the land's per-foot figure from their allocation is the reviewer's first sanity check."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The acre conversion shock",
+   "body": [
+    {
+     "t": "$20 per sq ft sounds modest until it meets 43,560 sq ft: $871,200 per acre. Urban per-foot pricing and rural per-acre pricing describe the same reality at scales where each unit stays readable — the calculator keeps both in view."
+    }
+   ]
+  },
+  {
+   "label": "Example · Small differences, real money",
+   "body": [
+    {
+     "t": "At $30 per sq ft, a full acre is $1,306,800. A $2-per-foot difference on a 10,000 sq ft lot is $20,000 — per-foot negotiations are worth having precisely because the unit looks small."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Per-foot to per-acre",
+  "intro": "The exchange rate between the two pricing dialects (× 43,560).",
+  "columns": [
+   "Per square foot",
+   "Per acre"
+  ],
+  "rows": [
+   [
+    "$1",
+    "$43,560"
+   ],
+   [
+    "$5",
+    "$217,800"
+   ],
+   [
+    "$10",
+    "$435,600"
+   ],
+   [
+    "$20",
+    "$871,200"
+   ],
+   [
+    "$30",
+    "$1,306,800"
+   ]
+  ],
+  "note": "The per-acre column assumes the rate holds across a full acre — in practice larger parcels usually price lower per foot. The table translates units, not market behaviour."
+ },
+ "faq": [
+  [
+   "Land only, or land plus house?",
+   "This figure prices the land. A listing's total includes buildings; ask for the land allocation (or estimate the improvements' value) before computing a land rate, or you are pricing bricks as dirt."
+  ],
+  [
+   "Why is per-foot pricing rare for farms?",
+   "At farm scale the per-foot number collapses to cents — $8,500 an acre is $0.20 per sq ft — and humans negotiate badly in fractions. Units follow the scale of the deal."
+  ],
+  [
+   "Buildable versus total square feet?",
+   "Wetlands, easements and setbacks may be unbuildable. Sophisticated buyers compute both rates: per total foot for the deal, per buildable foot for the project. This calculator takes whichever area you give it."
+  ],
+  [
+   "Frontage lots priced differently?",
+   "Corner and high-frontage lots command premiums per foot. A single per-foot rate flattens those differences — use it for comparison, then let location specifics speak."
+  ],
+  [
+   "How do I get the lot's square footage?",
+   "From the survey or listing, or measure the boundary in the Map Area Calculator — and for a rectangle, length × width in the Lot Size Calculator."
+  ],
+  [
+   "Commercial land in other units?",
+   "Downtown parcels sometimes trade per square foot of permitted floor area (FAR-based). That is a different denominator — buildable floor space, not land — and worth a clarifying question in any serious negotiation."
+  ],
+  [
+   "Metric listings?",
+   "Per-square-metre pricing converts at 10.7639 sq ft per m²: $20 per sq ft is about $215 per m². The calculator's equivalents keep the translation visible."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "By the acre: the "
+  },
+  {
+   "t": "Land Cost Per Acre Calculator",
+   "l": "/tools/land-cost-per-acre-calculator"
+  },
+  {
+   "t": "; measure it: the "
+  },
+  {
+   "t": "Lot Size Calculator",
+   "l": "/tools/lot-size-calculator"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Map Area Calculator",
+   "l": "/tools/map-area-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "acreage-map-calculator",
   "acres-to-hectares-converter",

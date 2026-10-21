@@ -6,17 +6,170 @@
   "territory radius",
   "sales coverage map"
  ],
- "title": null,
- "description": null,
+ "title": "Sales Territory Radius Planner: Hub Coverage",
+ "description": "Plan sales territories by radius from a hub with the Sales Territory Radius Planner — fair sizes, honest reach, before road refinement. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a territory of 500 square miles drawn as a circle has a radius of 12.6 miles — the planner's answer when management asks 'how far will the rep actually have to drive?'",
+ "quick_answer": "The Sales Territory Radius Planner defines territory size by distance from a sales hub — enter the hub and a radius, or the area you need, and see the territory's size on the map — fair circles first, roads later.",
+ "steps_intro": "Circles first, roads second — size the territory before routing it:",
+ "use_cases": [
+  {
+   "title": "Sizing territories from a target area",
+   "body": [
+    {
+     "t": "Management sets 500 sq mi per rep; the planner converts that to a 12.6-mile hub radius. The "
+    },
+    {
+     "t": "Sales Territory Area Calculator",
+     "l": "/tools/sales-territory-area-calculator"
+    },
+    {
+     "t": " checks the resulting shapes."
+    }
+   ]
+  },
+  {
+   "title": "Comparing branch reaches",
+   "body": [
+    {
+     "t": "Draw every branch's radius and the overlaps and dead zones stand up on the map — the "
+    },
+    {
+     "t": "Service Coverage Gap Viewer",
+     "l": "/tools/service-coverage-gap"
+    },
+    {
+     "t": " formalises the gap hunt."
+    }
+   ]
+  },
+  {
+   "title": "New-hub siting",
+   "body": [
+    {
+     "t": "Slide a candidate hub and watch its circle swallow or strand the accounts that matter. Radius first, lease second."
+    }
+   ]
+  },
+  {
+   "title": "Honest customer promises",
+   "body": [
+    {
+     "t": "'Within our service radius' becomes a drawn fact rather than a slogan — customers inside 12.6 miles of the hub are in, and the map can prove it."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Chicago's 25-mile test",
+   "body": [
+    {
+     "t": "A 25-mile hub circle around Chicago covers about 1,963 sq mi and takes in Oak Park (8.0 mi), Evanston (11.7) and Gary, Indiana (24.5) — while Naperville (28.4) and Joliet (33.7) sit outside. State lines do not bend circles."
+    }
+   ]
+  },
+  {
+   "label": "Example · Area to radius",
+   "body": [
+    {
+     "t": "1,000 sq mi ↔ radius 17.8 miles; 200 sq mi ↔ 8.0 miles. The square root is the whole trick: radius grows slowly while area gallops."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Area and radius equivalents",
+  "intro": "The planner's core conversion, computed both ways.",
+  "columns": [
+   "Target area",
+   "Hub radius",
+   "Roughly"
+  ],
+  "rows": [
+   [
+    "200 sq mi",
+    "8.0 mi",
+    "A metro patch"
+   ],
+   [
+    "500 sq mi",
+    "12.6 mi",
+    "A suburban county pair"
+   ],
+   [
+    "1,000 sq mi",
+    "17.8 mi",
+    "A small region"
+   ],
+   [
+    "2,000 sq mi",
+    "25.2 mi",
+    "A multi-county territory"
+   ]
+  ],
+  "note": "Radius reach is straight-line. Real territories follow roads, and the planner's own framing says so — refine with drive-time tools before promises are printed."
+ },
+ "faq": [
+  [
+   "How do I choose a fair radius?",
+   "Start from the target area or account load, convert with this planner, then compare across hubs. Equal areas are the fair baseline; account density adjusts from there."
+  ],
+  [
+   "Can two hubs share accounts in the overlap?",
+   "Policy decides; geometry reports. The planner shows the overlap plainly so the policy conversation happens with a map open."
+  ],
+  [
+   "What about a hub near the coast or border?",
+   "The circle still draws; half of it may be water or another country. Effective territory is the landward, legal part — the planner shows the circle, judgment trims it."
+  ],
+  [
+   "Miles or kilometres?",
+   "Both — European territories plan in km with the same square-root arithmetic."
+  ],
+  [
+   "Travel time instead of distance?",
+   "The refined second pass: drive-time catchments bend with roads and traffic. Radius planning is the honest first draft both methods share."
+  ],
+  [
+   "One hub or many?",
+   "As many as the plan has — draw them all and read overlaps and gaps off the combined picture."
+  ],
+  [
+   "Can I export the territory?",
+   "The radius and hub are the territory's definition; note them and any map tool redraws it. Boundaries for contracts deserve the drawn-region method."
+  ],
+  [
+   "seasonal territories?",
+   "Radii are cheap to redraw — seasonal plans can carry seasonal radii, with the dates written next to them so nobody sells last summer's map."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Areas: the "
+  },
+  {
+   "t": "Sales Territory Area Calculator",
+   "l": "/tools/sales-territory-area-calculator"
+  },
+  {
+   "t": "; gaps: the "
+  },
+  {
+   "t": "Service Coverage Gap Viewer",
+   "l": "/tools/service-coverage-gap"
+  },
+  {
+   "t": "; draw the circle: the "
+  },
+  {
+   "t": "Map Radius",
+   "l": "/tools/map-radius"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "acreage-map-calculator",
   "acres-to-hectares-converter",

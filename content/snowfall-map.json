@@ -8,17 +8,165 @@
   "ski areas map",
   "historical snowfall"
  ],
- "title": null,
- "description": null,
+ "title": "Snowfall Totals Map (Season Archive) Explorer",
+ "description": "Explore a full winter's snowfall totals around any point with the Snowfall Totals Map (Season Archive) — ERA5 weather-archive data, mapped. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, lake-effect country near Buffalo, New York averages roughly 95 inches (241 cm) of snow a season in published climate records — the kind of total this archive map lets you compare winter by winter.",
+ "quick_answer": "The Snowfall Totals Map (Season Archive) maps the total snowfall for a winter season around your point, summed from the ERA5 weather archive rather than measured live. Pick a point and a season and read the totals cell by cell — last winter against the famous ones.",
+ "steps_intro": "Not today's snow — a whole season's, from the archive:",
+ "use_cases": [
+  {
+   "title": "Comparing winters honestly",
+   "body": [
+    {
+     "t": "Was last winter really snowier, or just better timed? Season totals from one consistent archive settle the argument the way memory cannot."
+    }
+   ]
+  },
+  {
+   "title": "Relocation and ski-country research",
+   "body": [
+    {
+     "t": "A town's snow reputation versus its archived totals — check several seasons before believing either the brochure or the complaint. The "
+    },
+    {
+     "t": "Rainfall Totals Map",
+     "l": "/tools/world-rainfall-map"
+    },
+    {
+     "t": " is the wet-season sibling."
+    }
+   ]
+  },
+  {
+   "title": "Plowing, roofing and operations planning",
+   "body": [
+    {
+     "t": "Seasonal totals size contracts, roof-load expectations and salt budgets better than any single storm headline."
+    }
+   ]
+  },
+  {
+   "title": "Climate curiosity with receipts",
+   "body": [
+    {
+     "t": "Lake-effect belts, elevation bands and rain-shadow edges all sign their names in season totals. The archive lets you read the signature."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · What a cell means",
+   "body": [
+    {
+     "t": "Each cell sums the archive's daily snowfall from December 1 to March 31 for the chosen season, over a 5×5 grid spanning about 25 miles. A cell is a neighbourhood's winter, not one garden's."
+    }
+   ]
+  },
+  {
+   "label": "Example · Lake effect in numbers",
+   "body": [
+    {
+     "t": "Published climate averages put Syracuse, New York near 127 inches (323 cm) in a typical season — among the snowiest US cities — driven by Lake Ontario. Archive maps show the narrow bands that produce those averages."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "How to read the season totals",
+  "intro": "The archive's terms, stated plainly.",
+  "columns": [
+   "Item",
+   "What it is"
+  ],
+  "rows": [
+   [
+    "Source",
+    "ERA5 reanalysis archive (Open-Meteo archive API)"
+   ],
+   [
+    "Season window",
+    "December 1 to March 31 totals"
+   ],
+   [
+    "Grid",
+    "5×5 cells spanning roughly 25 miles around your point"
+   ],
+   [
+    "Units",
+    "Centimetres and inches of snowfall"
+   ],
+   [
+    "Not this",
+    "Live conditions, snow depth on the ground, or a forecast"
+   ]
+  ],
+  "note": "Reanalysis blends observations into a model grid (roughly 25–30 km cells), so a single valley or ridge can differ from its cell. Treat totals as regional truth, not fence-post truth."
+ },
+ "faq": [
+  [
+   "Which winters can I look up?",
+   "Any season the ERA5 archive covers — the reanalysis reaches back decades, so famous historical winters and last winter sit in the same dataset, computed the same way."
+  ],
+  [
+   "Why does my town's official total differ?",
+   "Official station totals are point measurements; archive cells are area averages from a model grid. Lake-effect bands and elevation can put a station well above or below its cell — both numbers are honest answers to different questions."
+  ],
+  [
+   "Snowfall versus snow depth — settled how?",
+   "The map totals new snowfall across the season. A place can receive 200 cm of snow and never hold more than 40 cm on the ground, because depth melts, settles and blows away between storms."
+  ],
+  [
+   "Does it include snow outside December to March?",
+   "The season window is fixed at December 1 to March 31, so October and April snow — real in northern and mountain country — is outside this map's totals."
+  ],
+  [
+   "How far back does the archive go?",
+   "ERA5 reanalysis extends back to 1940 in its current form, with the densest observation support in recent decades. Early seasons carry wider uncertainty."
+  ],
+  [
+   "Can I use this for a roof-load or insurance decision?",
+   "As background only. Design loads and claims use official station records and engineering standards — the archive is a comparison tool, not an authority."
+  ],
+  [
+   "Why is there snow in a cell over the ocean?",
+   "Lake and sea surfaces do receive snowfall in the model world, and coastal cells mix land and water. Read coastal cells as the blend they are."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Rain instead: the "
+  },
+  {
+   "t": "Rainfall Totals Map",
+   "l": "/tools/world-rainfall-map"
+  },
+  {
+   "t": "; elevation context: the "
+  },
+  {
+   "t": "World Elevation Atlas",
+   "l": "/tools/world-elevation-atlas"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Terrain Elevation Grid Map",
+   "l": "/tools/terrain-elevation-grid-map"
+  },
+  {
+   "t": "; ski country: "
+  },
+  {
+   "t": "Mountain Peaks Near Me",
+   "l": "/tools/mountain-peaks-near-me"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "air-pressure-by-elevation",
   "antenna-height-distance-calculator",

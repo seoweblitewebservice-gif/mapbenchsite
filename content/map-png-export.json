@@ -6,17 +6,172 @@
   "map png",
   "save map image"
  ],
- "title": null,
- "description": null,
+ "title": "Map PNG Export: Map Images for Documents",
+ "description": "Use Map PNG Export to prepare and capture a map view as a PNG image for documents, slides and reports — framed right, credited properly. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a consultant frames the project site once, exports the PNG, and the same clean map image appears in the proposal, the appendix and the council presentation.",
+ "quick_answer": "Map PNG Export helps you prepare a map view and capture it as a PNG image for documents, presentations and reports. Frame the view — centre, zoom, layers — and export an image that drops into Word, slides or a PDF cleanly.",
+ "steps_intro": "An export is a screenshot with standards — frame first, then capture:",
+ "use_cases": [
+  {
+   "title": "Reports and proposals",
+   "body": [
+    {
+     "t": "One authoritative map image, reused across the document set, beats five cropped screenshots that disagree. Frame it alongside a "
+    },
+    {
+     "t": "Map with Legend",
+     "l": "/tools/map-with-legend"
+    },
+    {
+     "t": " view when the picture must explain itself."
+    }
+   ]
+  },
+  {
+   "title": "Slides and teaching materials",
+   "body": [
+    {
+     "t": "A clean PNG survives projectors better than a live map demo — no loading spinner in front of 200 people. Start from a "
+    },
+    {
+     "t": "Blank Map",
+     "l": "/tools/blank-map"
+    },
+    {
+     "t": " when labels would only distract."
+    }
+   ]
+  },
+  {
+   "title": "Print handouts",
+   "body": [
+    {
+     "t": "Field briefings and walking guides need ink-friendly maps. Export at the largest framing offered and test-print one page before the batch."
+    }
+   ]
+  },
+  {
+   "title": "Records and evidence",
+   "body": [
+    {
+     "t": "A dated map image freezes 'what the map showed' for a file or a dispute — pair it with the coordinates from the "
+    },
+    {
+     "t": "Pin Map Maker",
+     "l": "/tools/pin-map-maker"
+    },
+    {
+     "t": " session that made it."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The proposal map",
+   "body": [
+    {
+     "t": "Framed at zoom 14 with the site centred and breathing room for a north arrow in the layout, the export drops into the proposal at full column width — crisp, because it was exported at size rather than stretched."
+    }
+   ]
+  },
+  {
+   "label": "Example · The classroom wall",
+   "body": [
+    {
+     "t": "A teacher exports the region at the widest framing, prints A3, and the class annotates the paper copy all term. The PNG is the master; the wall copy is expendable."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Framing checklist before you export",
+  "intro": "Thirty seconds here saves the re-export round trip.",
+  "columns": [
+   "Check",
+   "Why it matters"
+  ],
+  "rows": [
+   [
+    "Centre and margins",
+    "The subject should sit with room for captions and arrows"
+   ],
+   [
+    "Zoom",
+    "Export at the zoom you will display — enlarging later pixelates"
+   ],
+   [
+    "Labels and clutter",
+    "Turn off layers the document does not discuss"
+   ],
+   [
+    "Attribution",
+    "Base-map credit (© OpenStreetMap contributors) should survive into the document"
+   ]
+  ],
+  "note": "A PNG is a picture of a map, not map data: it cannot be re-measured or restyled later. Keep the live view's link or the GeoJSON alongside the image in your project file."
+ },
+ "faq": [
+  [
+   "What size is the exported image?",
+   "The export captures the prepared view at screen-class resolution suitable for documents and slides. For wall-size printing, frame the widest view offered and check the result at 100% before committing paper."
+  ],
+  [
+   "Can I export a map I annotated?",
+   "Yes — build the annotated view first (pins, labels, legend) in the maker tools, then export the composed view so the image carries your layer, not just the basemap."
+  ],
+  [
+   "Is the PNG free to publish?",
+   "The tool is free; the basemap inside the picture carries its own licence. OpenStreetMap data asks for a visible credit (© OpenStreetMap contributors) — keep the attribution line in your document and you are on solid ground."
+  ],
+  [
+   "Why not just take a screenshot?",
+   "You can — and for quick chats it is fine. The export path exists to frame deliberately, capture cleanly at a known size and avoid browser chrome, cursors and half-loaded tiles in the deliverable."
+  ],
+  [
+   "Can I get a vector (SVG) instead?",
+   "This tool's promise is PNG for documents. Vector outlines live in the Blank Map family for country and state shapes; street-level vector export is GIS territory."
+  ],
+  [
+   "The text looks small in my document.",
+   "Text size is fixed by the basemap at capture zoom. Export at a closer zoom, or present the map larger — shrinking a wide-area export into a narrow column makes every label microscopic."
+  ],
+  [
+   "Can I export in satellite view?",
+   "If the view you prepare is the satellite basemap, the export captures that view. Same framing rules apply — and satellite imagery carries its provider's credit line too."
+  ],
+  [
+   "Does the export include a scale bar?",
+   "For print-critical scale, prepare the view with the Printable Map with Scale Context tool so the scale is designed for paper rather than inherited from the screen."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Prepare printable scale with the "
+  },
+  {
+   "t": "Printable Map with Scale Context",
+   "l": "/tools/printable-scale-bar-map"
+  },
+  {
+   "t": ", annotate before exporting with "
+  },
+  {
+   "t": "Map with Legend",
+   "l": "/tools/map-with-legend"
+  },
+  {
+   "t": ", and start from outlines via "
+  },
+  {
+   "t": "Blank Map",
+   "l": "/tools/blank-map"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "custom-labeled-map",
   "embed-map-link-helper",

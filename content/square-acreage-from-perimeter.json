@@ -8,17 +8,164 @@
   "square acreage from perimeter tool",
   "how to use square acreage from perimeter"
  ],
- "title": null,
- "description": null,
+ "title": "Square Acreage From Perimeter",
+ "description": "Get a square plot's acreage from its perimeter with Square Acreage From Perimeter — fence length to side to acres, in one chain. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a square plot fenced with 1,320 ft of fence (a quarter mile) has 330 ft sides and covers exactly 2.5 acres — the perimeter knew the acreage all along.",
+ "quick_answer": "Square Acreage From Perimeter turns a square plot's perimeter into its acreage: divide the perimeter by four for the side, square it for the area, convert to acres. Enter the boundary total and read the acreage — for plots easier to walk around than across.",
+ "steps_intro": "The boundary you can measure holds the area you cannot:",
+ "use_cases": [
+  {
+   "title": "Fencing quotes in reverse",
+   "body": [
+    {
+     "t": "The fence quote states 2,640 ft of fencing around a square paddock: side 660 ft, area 10 acres exactly. The acreage was inside the quote all along — compare with the "
+    },
+    {
+     "t": "Square Perimeter From Area Calculator",
+     "l": "/tools/square-perimeter-from-area"
+    },
+    {
+     "t": " running the other way."
+    }
+   ]
+  },
+  {
+   "title": "Deed checks",
+   "body": [
+    {
+     "t": "Old deeds give boundary lengths; square parcels convert straight to acreage for the record comparison."
+    }
+   ]
+  },
+  {
+   "title": "Pasture and plot planning",
+   "body": [
+    {
+     "t": "A square field's grazing area from its walked boundary — stocking maths starts here."
+    }
+   ]
+  },
+  {
+   "title": "Estate listings",
+   "body": [
+    {
+     "t": "'Square plot, quarter-mile of frontage total' becomes 2.5 acres — listings phrase it poetically, the calculator states it numerically."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The square mile's fence",
+   "body": [
+    {
+     "t": "Perimeter 21,120 ft (4 miles) → side 5,280 ft → 27,878,400 sq ft = 640 acres: the full section, the largest square in American land survey, priced by its fence."
+    }
+   ]
+  },
+  {
+   "label": "Example · Small gardens count too",
+   "body": [
+    {
+     "t": "Perimeter 200 ft → side 50 ft → 2,500 sq ft = 0.057 acres. The chain works at every scale because it is pure geometry."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Perimeter to acreage (square plots)",
+  "intro": "Computed — the quarter-mile rows are worth memorising.",
+  "columns": [
+   "Perimeter",
+   "Side",
+   "Area",
+   "Acres"
+  ],
+  "rows": [
+   [
+    "660 ft",
+    "165 ft",
+    "27,225 sq ft",
+    "0.625"
+   ],
+   [
+    "1,320 ft",
+    "330 ft",
+    "108,900 sq ft",
+    "2.500"
+   ],
+   [
+    "2,640 ft",
+    "660 ft",
+    "435,600 sq ft",
+    "10.000"
+   ],
+   [
+    "21,120 ft",
+    "1 mi",
+    "1 sq mi",
+    "640.000"
+   ]
+  ],
+  "note": "Square only: for a given perimeter, the square is the maximum-area rectangle — every other rectangle with the same fence holds less, which the shape assumption here spends honestly."
+ },
+ "faq": [
+  [
+   "What if the plot is rectangular, not square?",
+   "Perimeter alone cannot fix a rectangle's area (long thin and square share perimeters, not areas). Measure one side too — then the Rectangular Lot Acreage Calculator finishes it."
+  ],
+  [
+   "Metres and hectares?",
+   "Yes — metres in, hectares out alongside acres (1 ha = 10,000 m²)."
+  ],
+  [
+   "Part of the boundary is a river or road?",
+   "The perimeter is the total boundary as deeded, whatever it runs along. Measure the legal boundary, not the walkable one, if they differ."
+  ],
+  [
+   "Fence sits inside the boundary?",
+   "Fences often sit a margin inside the true line. For acreage, the deeded boundary governs; the fence is a clue, not the title."
+  ],
+  [
+   "Why does the square maximise area?",
+   "For fixed perimeter, area peaks when all sides equalise — a rectangle 660 × 0 holds nothing; 330 × 330 holds the most the same fence can enclose."
+  ],
+  [
+   "Sloped plots?",
+   "Deeded area is plan (horizontal) area. A hillside's fence runs longer than its plan perimeter — survey figures, not slope figures, feed this calculator."
+  ],
+  [
+   "Rounding of old deeds?",
+   "Chains and rods convert (1 chain = 66 ft; 1 rod = 16.5 ft) — convert the boundary to feet first, then the chain of divisions proceeds."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Reverse: the "
+  },
+  {
+   "t": "Square Perimeter From Area Calculator",
+   "l": "/tools/square-perimeter-from-area"
+  },
+  {
+   "t": "; rectangles: the "
+  },
+  {
+   "t": "Rectangular Lot Acreage Calculator",
+   "l": "/tools/rectangular-lot-acreage-calculator"
+  },
+  {
+   "t": "; drawn areas: the "
+  },
+  {
+   "t": "Acreage Map Calculator",
+   "l": "/tools/acreage-map-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-area-from-radius",

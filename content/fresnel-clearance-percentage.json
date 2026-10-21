@@ -8,17 +8,158 @@
   "fresnel zone clearance",
   "rf clearance percentage"
  ],
- "title": null,
- "description": null,
+ "title": "Fresnel Clearance Percentage Calculator",
+ "description": "Check obstacle clearance against the Fresnel zone with the Fresnel Clearance Percentage Calculator — measured against the 60% planning target. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a 10 km link at 2.4 GHz whose path keeps 12.0 m clear of its 17.67 m first Fresnel radius is 67.9% clear — passing the classic 60% planning target with a little to spare.",
+ "quick_answer": "The Fresnel Clearance Percentage Calculator compares the clearance your radio path actually has against the first Fresnel zone radius at the obstacle, and reports it as a percentage. Enter the clearance and zone radius and read the percentage — checked against the 60% working minimum.",
+ "steps_intro": "Percent of the zone you keep clear is the link budget's quiet term:",
+ "use_cases": [
+  {
+   "title": "Judging an existing path",
+   "body": [
+    {
+     "t": "A survey says the ridge clears the line of sight by so much — this page converts 'clears it' into the percentage engineers actually specify. The radius itself comes from the "
+    },
+    {
+     "t": "Fresnel Zone Calculator",
+     "l": "/tools/fresnel-zone-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Tree-growth margins",
+   "body": [
+    {
+     "t": "Trees grow into zones. A path at 75% today with fast pines below is a 55% path in five years — the percentage makes the maintenance schedule arithmetic."
+    }
+   ]
+  },
+  {
+   "title": "Acceptance testing",
+   "body": [
+    {
+     "t": "Installers sign off links against a clearance spec. Measuring the delivered percentage against the promised one is the acceptance conversation, in one number."
+    }
+   ]
+  },
+  {
+   "title": "Explaining flaky links",
+   "body": [
+    {
+     "t": "A link at 40% clearance often 'works' — until rain, growth or a new structure takes the rest. The percentage explains why marginal paths fail seasonally."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Passing with margin",
+   "body": [
+    {
+     "t": "At the obstruction point the first Fresnel radius is 17.67 m (10 km, 2.4 GHz, midpoint). Clearance above the obstacle: 12.0 m → 12.0 ÷ 17.67 = 67.9% — comfortably above the 60% target, with the remainder as growth margin."
+    }
+   ]
+  },
+  {
+   "label": "Example · The knife-edge truth",
+   "body": [
+    {
+     "t": "At exactly 0% (grazing the obstacle's edge) a link loses roughly 6 dB to diffraction in the classic knife-edge model — it works, wounded. Below the line of sight entirely, losses climb steeply. Percentages below 60 are borrowed performance."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Clearance percentage, interpreted",
+  "intro": "The planner's reading of the scale.",
+  "columns": [
+   "Clearance",
+   "Verdict"
+  ],
+  "rows": [
+   [
+    "100%+",
+    "Full first-zone clearance — the textbook path"
+   ],
+   [
+    "60–100%",
+    "The working standard: near-free-space performance"
+   ],
+   [
+    "40–60%",
+    "Usable but compromised — expect some diffraction loss"
+   ],
+   [
+    "0–40%",
+    "Marginal: weather and growth will find it"
+   ],
+   [
+    "Below line of sight",
+    "Obstructed — redesign, raise, or relay"
+   ]
+  ],
+  "note": "Clearance is measured at each obstruction point against the zone radius at that point (the zone is fattest at mid-path). Earth bulge and terrain heights enter the clearance figure itself — see the path-profile tools."
+ },
+ "faq": [
+  [
+   "Where do I get the radius at my obstacle?",
+   "From the Fresnel Zone Calculator with the obstacle's distances to each end — the radius swells toward mid-path, so position matters, not just the link's total length."
+  ],
+  [
+   "Clearance above what, exactly?",
+   "Above the highest obstruction (terrain, trees, structures) measured perpendicular to the direct line between antennas — the free space between the obstacle's top and the zone's lower boundary is the figure that counts."
+  ],
+  [
+   "Can clearance exceed 100%?",
+   "Yes — it means the obstacle misses the zone entirely. Numbers above 100% are margins against growth and survey error, not waste."
+  ],
+  [
+   "One obstacle or many?",
+   "Every significant obstruction gets its own percentage; the link inherits the worst one. A path is only as clear as its tightest point."
+  ],
+  [
+   "Does rain change the percentage?",
+   "Rain does not change geometry — but wet foliage swells into the zone and refraction shifts under weather, which is why marginal percentages fail first in storms."
+  ],
+  [
+   "Antenna height fixes?",
+   "Raising either end lifts the line and fattens clearance everywhere; the percentage at the binding obstacle is how you size the raise before buying the mast."
+  ],
+  [
+   "Negative percentage?",
+   "It means the obstruction pokes through the line of sight itself by that share of the radius — the language stays consistent so bad news is still one number."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Get the radius: the "
+  },
+  {
+   "t": "Fresnel Zone Calculator",
+   "l": "/tools/fresnel-zone-calculator"
+  },
+  {
+   "t": "; the path's bulge: the "
+  },
+  {
+   "t": "Earth Bulge Calculator",
+   "l": "/tools/earth-bulge-calculator"
+  },
+  {
+   "t": "; radio horizon: the "
+  },
+  {
+   "t": "Radio Line-of-Sight Calculator",
+   "l": "/tools/radio-line-of-sight-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "air-pressure-by-elevation",
   "antipode-finder",

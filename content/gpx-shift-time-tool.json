@@ -8,17 +8,161 @@
   "gpx shift time tool tool",
   "how to calculate gpx shift time tool"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Shift Time Tool: Move Every Timestamp +1h",
+ "description": "Shift all timestamps in a GPX file by an hour with the GPX Shift Time Tool — fix the wrong-clock recording, download the corrected file. Free, local.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a watch that recorded local time as if it were UTC shifts cleanly: a 07:30:00 stamp becomes 08:30:00, the whole file moving together so durations and speeds never notice.",
+ "quick_answer": "The GPX Shift Time Tool moves every timestamp in a GPX file forward by one hour and downloads a corrected copy. Load the file, shift the clock, and fix the classic recording error — a device stamping local time into a UTC format.",
+ "steps_intro": "One hour, applied to every stamp, geometry untouched:",
+ "use_cases": [
+  {
+   "title": "The timezone mistake",
+   "body": [
+    {
+     "t": "The watch was set an hour off (or recorded local time as UTC). Every photo geotags an hour wrong until the file shifts — after shifting, check against the "
+    },
+    {
+     "t": "GPX Timestamp Span Calculator",
+     "l": "/tools/gpx-timestamp-span-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Camera-clock alignment",
+   "body": [
+    {
+     "t": "Photos carry camera-local stamps; tracks carry UTC. When the camera's clock itself was an hour out, shifting the track (or accounting for the shift) aligns the two records."
+    }
+   ]
+  },
+  {
+   "title": "Multi-device merges",
+   "body": [
+    {
+     "t": "Two devices, two clock settings, one outing. Shift the wrong device's file into agreement before the "
+    },
+    {
+     "t": "GPX Merger",
+     "l": "/tools/gpx-merger"
+    },
+    {
+     "t": " combines them into a coherent day."
+    }
+   ]
+  },
+  {
+   "title": "Daylight-saving boundary files",
+   "body": [
+    {
+     "t": "Recordings from the changeover weekend sometimes carry a device's confused hour. A one-hour shift is the surgical repair when the offset is uniform."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · What stays identical",
+   "body": [
+    {
+     "t": "Duration before: 4:24:36. Duration after the shift: 4:24:36. Speeds, distances, elevation — untouched. Only the stamps' reading on the clock changes, which is the definition of a pure time translation."
+    }
+   ]
+  },
+  {
+   "label": "Example · Date rollover",
+   "body": [
+    {
+     "t": "A stamp at 23:40 becomes 00:40 the next day after the shift — the date moves with the time, correctly, because the tool shifts instants, not clock-face text."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The shift, precisely",
+  "intro": "What moves, what cannot move, and the assumption underneath.",
+  "columns": [
+   "Aspect",
+   "Behaviour"
+  ],
+  "rows": [
+   [
+    "Every <time> in trackpoints",
+    "Shifted +1 hour"
+   ],
+   [
+    "Waypoint and metadata times",
+    "Shifted with the rest — a consistent file"
+   ],
+   [
+    "Coordinates and elevation",
+    "Untouched"
+   ],
+   [
+    "Durations and spans",
+    "Invariant — both endpoints move together"
+   ],
+   [
+    "Assumption",
+    "The error is a uniform one hour across the whole file"
+   ]
+  ],
+  "note": "GPX stamps are UTC (the Z suffix) by the format's convention. Shifting is the right repair only when the recording's offset from truth is a constant hour — a device that drifted gradually needs different medicine."
+ },
+ "faq": [
+  [
+   "Why exactly one hour?",
+   "The classic errors are one-hour errors: a timezone mis-set by one zone, a DST toggle missed. This tool implements that single, well-defined repair rather than a free-form editor — if your offset is different, the honest options are a text-level edit or a fuller tool."
+  ],
+  [
+   "What if my offset is 30 minutes (or 5:30)?",
+   "Some zones differ by half hours, and a device set to one of those needs a 30-minute correction this fixed shift does not perform. The file's stamps can be adjusted in a text editor with care — every <time> by the same amount."
+  ],
+  [
+   "Does it handle the date change at midnight?",
+   "Yes — shifting instants rolls dates forward correctly, including month and year boundaries, because the arithmetic is on timestamps, not on clock text."
+  ],
+  [
+   "Negative shift (back an hour)?",
+   "The mirror error exists (a file stamped an hour ahead). Where the tool offers direction, choose it; the invariant guarantees — duration, geometry — hold in both directions."
+  ],
+  [
+   "Creation-date metadata?",
+   "The metadata <time> shifts with the trackpoints: a corrected file should be consistent in its header too, or the next tool to read it inherits the confusion."
+  ],
+  [
+   "Photos still mismatch after shifting?",
+   "Check the other clock: cameras drift and get set wrong independently. Align one known moment (a photo of the trailhead sign against the track's start) and compute the true offset."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Check the window: the "
+  },
+  {
+   "t": "GPX Timestamp Span Calculator",
+   "l": "/tools/gpx-timestamp-span-calculator"
+  },
+  {
+   "t": "; remove times instead: the "
+  },
+  {
+   "t": "GPX Timestamp Remover",
+   "l": "/tools/gpx-remove-timestamps"
+  },
+  {
+   "t": "; durations: the "
+  },
+  {
+   "t": "GPX Duration Calculator",
+   "l": "/tools/gpx-duration-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-centroid-calculator",
   "csv-coordinate-deduplicator",

@@ -6,17 +6,165 @@
   "kml viewer online",
   "free kml viewer"
  ],
- "title": null,
- "description": null,
+ "title": "KML Viewer: Placemarks, Paths and Polygons",
+ "description": "Open a KML or KMZ file and see its placemarks, paths and polygons in the browser with the KML Viewer — parsed locally, nothing uploaded. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a council's KMZ of proposed cycle lanes unzips in the browser and draws every route and zone — no Google Earth install, no upload, just the map the file describes.",
+ "quick_answer": "The KML Viewer draws a KML or KMZ file's placemarks, paths and polygons on a map, entirely in your browser. Drop the file and inspect what it contains — geometry, names and structure — before it goes into a GIS, a presentation or the ground.",
+ "steps_intro": "KML files promise maps. This one shows the map:",
+ "use_cases": [
+  {
+   "title": "Opening files without Google Earth",
+   "body": [
+    {
+     "t": "KML arrives from planners, councils and clients who assume Earth is installed. The viewer opens it anywhere — and the "
+    },
+    {
+     "t": "KML Placemark Counter",
+     "l": "/tools/kml-placemark-counter"
+    },
+    {
+     "t": " sizes it first if it looks huge."
+    }
+   ]
+  },
+  {
+   "title": "Checking an export before sending",
+   "body": [
+    {
+     "t": "What you exported is what they will see: polygons closed, paths in the right county, labels attached. Thirty seconds here prevents the recall email."
+    }
+   ]
+  },
+  {
+   "title": "Presenting a proposal",
+   "body": [
+    {
+     "t": "A boundary or route file becomes a shareable picture for a meeting — screenshot the view, keep the file itself for the record."
+    }
+   ]
+  },
+  {
+   "title": "Auditing inherited GIS data",
+   "body": [
+    {
+     "t": "A decade of KML in a shared drive becomes browsable. Files that draw nothing, or draw in the ocean, announce themselves instantly."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The polygon in the sea",
+   "body": [
+    {
+     "t": "A site boundary drawn offshore means coordinates were written lat,lon into a format that demands lon,lat. KML's order is the single most common cause — the viewer makes the error visible, the source system must fix it."
+    }
+   ]
+  },
+  {
+   "label": "Example · KMZ is a zip, not a mystery",
+   "body": [
+    {
+     "t": "A KMZ is KML plus its assets in a zip archive (doc.kml inside). The viewer opens the package directly; counters that ask for 'the KML' mean the doc.kml within."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the viewer renders",
+  "intro": "KML content, as drawn.",
+  "columns": [
+   "Content",
+   "Rendered as"
+  ],
+  "rows": [
+   [
+    "Placemark + Point",
+    "A pin with its name"
+   ],
+   [
+    "LineString",
+    "A path polyline"
+   ],
+   [
+    "Polygon (outer + inner rings)",
+    "A filled area, holes honoured"
+   ],
+   [
+    "GroundOverlay",
+    "The image draped on its LatLonBox"
+   ],
+   [
+    "Folders",
+    "Organisation — contents drawn, structure respected"
+   ]
+  ],
+  "note": "Advanced Earth features (3D Models, photo tours, gx:Tracks) are simplified or skipped by a 2D web viewer — stated plainly so their absence is expected, not alarming."
+ },
+ "faq": [
+  [
+   "Does it open KMZ directly?",
+   "Yes — the viewer unpacks the archive in the browser and draws the doc.kml inside, with its bundled icons and images where the file provides them."
+  ],
+  [
+   "My polygons have no fill colour.",
+   "KML styling lives in <Style> elements; unstyled geometry draws with defaults. Missing styles are a file property, not a viewer failure."
+  ],
+  [
+   "Labels missing on placemarks?",
+   "Labels come from each Placemark's <name>. The Named Placemark Counter audits exactly that coverage."
+  ],
+  [
+   "NetworkLinks?",
+   "Links to remote KML are not fetched and executed blindly — load the linked file itself if you need its contents. A deliberate safety posture."
+  ],
+  [
+   "Can I edit in the viewer?",
+   "Viewing is read-only by design. Edits belong to Earth or a GIS, where change tracking exists."
+  ],
+  [
+   "The file draws but in the wrong place entirely.",
+   "Datum surprises are rare in KML (it is WGS84 by specification); axis order is the usual culprit — see the sea-polygon example."
+  ],
+  [
+   "Share the view?",
+   "Screenshot it — the picture is the portable artefact; the file remains the data of record."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Count first: the "
+  },
+  {
+   "t": "KML Placemark Counter",
+   "l": "/tools/kml-placemark-counter"
+  },
+  {
+   "t": "; measure paths: "
+  },
+  {
+   "t": "KML Path Length",
+   "l": "/tools/kml-path-length"
+  },
+  {
+   "t": "; GPX sibling: the "
+  },
+  {
+   "t": "GPX Viewer",
+   "l": "/tools/gpx-viewer"
+  },
+  {
+   "t": "; GeoJSON sibling: the "
+  },
+  {
+   "t": "GeoJSON Viewer",
+   "l": "/tools/geojson-viewer"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

@@ -7,17 +7,162 @@
   "terrain explorer",
   "click for elevation anywhere"
  ],
- "title": null,
- "description": null,
+ "title": "World Elevation Atlas: Sample Any Point on Earth",
+ "description": "Sample a 7×7 grid of real elevations around any point with the World Elevation Atlas — from Everest's 8,849 m to the Dead Sea's shore. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, the atlas's ceiling is Everest at 8,849 metres (29,032 ft) and its floor is the Dead Sea shore at roughly −430 metres (−1,411 ft) — every sampled point on Earth lives between those two published extremes.",
+ "quick_answer": "The World Elevation Atlas samples a 7×7 grid of real elevations around any point on Earth, so you can read a place's height pattern rather than a single number. Set a centre, choose an area size, and read forty-nine elevations at once — the neighbourhood's relief in one view.",
+ "steps_intro": "One point's elevation is a fact; forty-nine are a landscape:",
+ "use_cases": [
+  {
+   "title": "Relief reconnaissance anywhere",
+   "body": [
+    {
+     "t": "Planning in unfamiliar country — a trek, a site, a purchase — starts with how the land rises. The "
+    },
+    {
+     "t": "Terrain Elevation Grid Map",
+     "l": "/tools/terrain-elevation-grid-map"
+    },
+    {
+     "t": " turns the same kind of sampling into slopes."
+    }
+   ]
+  },
+  {
+   "title": "Comparing places' terrain character",
+   "body": [
+    {
+     "t": "Two candidate towns, two grids: the spread between a grid's lowest and highest cells is the place's relief personality in one glance."
+    }
+   ]
+  },
+  {
+   "title": "Checking a single-point reading",
+   "body": [
+    {
+     "t": "A suspicious elevation from one source gets cross-examined by its neighbours. Terrain is continuous; a cell that disagrees with all forty-eight neighbours is the dataset clearing its throat."
+    }
+   ]
+  },
+  {
+   "title": "Geography education",
+   "body": [
+    {
+     "t": "Sample the Nile delta, the Tibetan Plateau's edge and the Netherlands in one lesson — relief stops being a colour scale and becomes numbers students can argue with."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The Denver mile",
+   "body": [
+    {
+     "t": "Denver's official elevation is 5,280 feet by civic pride and about 1,609 metres by survey — 'mile high' within a rounding of the published figure. An atlas grid around the city shows the plains' gentle rise toward the foothills instead."
+    }
+   ]
+  },
+  {
+   "label": "Example · Below sea level, honestly",
+   "body": [
+    {
+     "t": "Sample the Dead Sea shore and the grid returns negative elevations around −430 m — land below the ocean's level, protected by geography. Death Valley's Badwater Basin reads about −86 m on the same scale."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Landmark elevations (published figures)",
+  "intro": "The reference points the atlas's numbers live among — official or widely published values.",
+  "columns": [
+   "Place",
+   "Elevation"
+  ],
+  "rows": [
+   [
+    "Mount Everest (surveyed 2020)",
+    "8,849 m (29,032 ft)"
+   ],
+   [
+    "Denali, Alaska",
+    "6,190 m (20,308 ft)"
+   ],
+   [
+    "Denver, Colorado",
+    "≈1,609 m (5,279 ft)"
+   ],
+   [
+    "Amsterdam, Netherlands",
+    "≈−2 m (below sea level)"
+   ],
+   [
+    "Badwater Basin, Death Valley",
+    "≈−86 m (−282 ft)"
+   ],
+   [
+    "Dead Sea shore",
+    "≈−430 m (−1,411 ft)"
+   ]
+  ],
+  "note": "Grid values come from global terrain-model sampling (via the elevation API), which smooths sharp peaks and narrow ridges — a sampled Everest cell can read lower than the surveyed summit. Published point surveys outrank grid samples at famous points."
+ },
+ "faq": [
+  [
+   "How accurate are the grid elevations?",
+   "They inherit the source terrain model's accuracy — typically a few metres in gentle country, coarser on cliffs and narrow ridges. Fine for relief reading; not a substitute for a survey where a boundary or a building depends on it."
+  ],
+  [
+   "Why a 7×7 grid instead of one point?",
+   "Terrain questions are pattern questions. Forty-nine samples expose slope direction, drainage hints and dataset oddities that one number hides — at the cost of nothing but a wider click."
+  ],
+  [
+   "Does the ocean return zero?",
+   "Ocean cells in elevation models generally read at or near sea level (bathymetry is usually outside these land models), so read sea cells as 'surface', not as seabed depth."
+  ],
+  [
+   "What area sizes make sense?",
+   "Match the question: a property wants hundreds of metres across; a mountain range wants tens of kilometres. The same grid logic serves both — cell spacing scales with the area you pick."
+  ],
+  [
+   "Why can the atlas disagree with my GPS altitude?",
+   "GPS altitude is ellipsoidal and noisy (often ±10–30 m vertically in consumer gear); the atlas is a terrain model tied to sea level. A disagreement of a few metres is normal; a hundred metres is a story worth investigating."
+  ],
+  [
+   "Highest and lowest possible readings?",
+   "The land surface spans Everest's 8,849 m down to the Dead Sea shore near −430 m — both published survey figures. Any grid value outside that span is a data error, not a discovery."
+  ],
+  [
+   "Can I sample the poles or mid-ocean islands?",
+   "Yes — the atlas is global. Polar and island grids work wherever the underlying model has coverage, which for modern global terrain data is effectively everywhere on land."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Slopes from samples: the "
+  },
+  {
+   "t": "Terrain Elevation Grid Map",
+   "l": "/tools/terrain-elevation-grid-map"
+  },
+  {
+   "t": "; one point: the "
+  },
+  {
+   "t": "Elevation Finder",
+   "l": "/tools/elevation-finder"
+  },
+  {
+   "t": "; profiles: the "
+  },
+  {
+   "t": "Elevation Profile",
+   "l": "/tools/elevation-profile"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "air-pressure-by-elevation",
   "antenna-height-distance-calculator",

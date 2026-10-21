@@ -8,17 +8,173 @@
   "csv coordinate centroid calculator checker",
   "csv coordinate centroid calculator validator"
  ],
- "title": null,
- "description": null,
+ "title": "CSV Coordinate Centroid Calculator",
+ "description": "Find the mean latitude and longitude of a coordinate CSV with the CSV Coordinate Centroid Calculator — the file's balance point, honestly simple. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, five US cities (New York, Chicago, Los Angeles, Houston, Denver) balance at 37.2285, −96.0479 — in Kansas, south of Wichita, where no city on the list actually is.",
+ "quick_answer": "The CSV Coordinate Centroid Calculator finds the simple arithmetic mean latitude and longitude of a coordinate list — the file’s balance point. Paste the CSV and read the centre: a first map centre and an honest mean — not population-weighted, not a polygon’s mass centroid.",
+ "steps_intro": "The average place your points describe:",
+ "use_cases": [
+  {
+   "title": "Initial map centring",
+   "body": [
+    {
+     "t": "Centre the first view on the data’s mean instead of a default — users land on their geography immediately. For polygon centres of mass, the "
+    },
+    {
+     "t": "GeoJSON Centroid Calculator",
+     "l": "/tools/geojson-centroid-calculator"
+    },
+    {
+     "t": " family discusses the differences."
+    }
+   ]
+  },
+  {
+   "title": "Dataset summarising",
+   "body": [
+    {
+     "t": "‘Our sites centre on Kansas’ is a sentence stakeholders understand. The centroid compresses a file into one defensible coordinate."
+    }
+   ]
+  },
+  {
+   "title": "Comparing distributions",
+   "body": [
+    {
+     "t": "This quarter’s mean versus last quarter’s shows drift — a sales territory creeping west announces itself in the centroid before any report."
+    }
+   ]
+  },
+  {
+   "title": "Meeting and logistics seeds",
+   "body": [
+    {
+     "t": "A mean point is a starting guess for central facilities — refine it with road-network tools afterwards, but start from the data’s balance, not a hunch."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The Kansas answer",
+   "body": [
+    {
+     "t": "Five cities average to 37.2285, −96.0479. Los Angeles pulls west, Houston pulls south, and the mean lands where means land — the balance point is a statistic, not a destination, and Kansas is used to hosting them."
+    }
+   ]
+  },
+  {
+   "label": "Example · Outliers drag means",
+   "body": [
+    {
+     "t": "Add one Honolulu row to a mainland file and the centroid swims hundreds of kilometres into the Pacific. Means listen to every row — which is their honesty and their weakness. The "
+    },
+    {
+     "t": "CSV Coordinate Deduplicator",
+     "l": "/tools/csv-coordinate-deduplicator"
+    },
+    {
+     "t": " and a glance at the "
+    },
+    {
+     "t": "CSV Coordinate Bounding Box",
+     "l": "/tools/csv-coordinate-bounding-box"
+    },
+    {
+     "t": " tame wild files first."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Mean centre versus its cousins",
+  "intro": "Three ‘centres’ that must not be confused.",
+  "columns": [
+   "Centre",
+   "Definition",
+   "Use"
+  ],
+  "rows": [
+   [
+    "Mean centre (this tool)",
+    "Average of the points’ lat/lon",
+    "Dataset summary, first map centre"
+   ],
+   [
+    "Bounding-box midpoint",
+    "Middle of the extent’s edges",
+    "Viewport fitting"
+   ],
+   [
+    "Polygon centroid",
+    "Centre of mass of an area",
+    "Labelling shapes, geometry"
+   ],
+   [
+    "Population-weighted centre",
+    "Mean weighted by people",
+    "Demographics, official statistics"
+   ]
+  ],
+  "note": "The arithmetic mean treats latitude and longitude as flat numbers — right for local and national files. Planet-spanning sets and date-line crossers belong to spherical averaging (the Coordinate Mean Calculator)."
+ },
+ "faq": [
+  [
+   "Is the centroid a real place in my data?",
+   "Usually not — it is the balance point of all rows, which may sit in a lake or a neighbouring state. It summarises the file; it is not one of the file’s points."
+  ],
+  [
+   "Weighted by a column?",
+   "This calculator is the plain mean — every row counts once. Weighted centres need the weight column honoured, which is a deliberate step up in tooling."
+  ],
+  [
+   "What if rows repeat?",
+   "Duplicates vote twice. Deduplicate first if repeats are accidents; keep them if repeats are frequency (deliveries per address is a weight in disguise)."
+  ],
+  [
+   "Bad rows?",
+   "Unparseable rows cannot join the average. Validate the file first so the centre is computed from the data you meant."
+  ],
+  [
+   "Latitude averaged flat — is that wrong?",
+   "For files within a country it is the standard exploratory statistic. The distortion grows near poles and across the date line; the spherical mean is the upgrade path, linked from this page."
+  ],
+  [
+   "Centre of a route’s stops?",
+   "The mean of the stop list — a fair summary of where the route lives, though the route’s operational centre is a road question."
+  ],
+  [
+   "Can I centre a map on it?",
+   "That is its day job: paste the pair into any map or the Latitude Longitude Finder and the view opens on your data’s balance."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Extent: the "
+  },
+  {
+   "t": "CSV Coordinate Bounding Box",
+   "l": "/tools/csv-coordinate-bounding-box"
+  },
+  {
+   "t": "; dedupe first: the "
+  },
+  {
+   "t": "CSV Coordinate Deduplicator",
+   "l": "/tools/csv-coordinate-deduplicator"
+  },
+  {
+   "t": "; spherical upgrade: the "
+  },
+  {
+   "t": "Coordinate Mean Calculator",
+   "l": "/tools/coordinate-mean-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-deduplicator",
   "csv-latlng-validator",

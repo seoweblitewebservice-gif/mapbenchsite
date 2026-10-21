@@ -6,17 +6,176 @@
   "polar night",
   "midnight sun"
  ],
- "title": null,
- "description": null,
+ "title": "Polar Day / Night Checker: Midnight Sun Test",
+ "description": "Check whether a place and date fall in polar day or polar night with the Polar Day / Night Checker — midnight sun and winter dark, by latitude. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, Tromsø, Norway (69.65°N) gets a geometric midnight-sun run from about May 23 to July 22 — and a matching polar-night stretch around the December solstice.",
+ "quick_answer": "The Polar Day / Night Checker tells you whether the Sun rises at all — or sets at all — at a place on a date, from its latitude and the Sun's seasonal declination. Enter place and date and read the verdict: polar day, polar night, or an ordinary day.",
+ "steps_intro": "Poleward of the circles, the daily rulebook breaks:",
+ "use_cases": [
+  {
+   "title": "Arctic trip planning",
+   "body": [
+    {
+     "t": "Tromsø, Svalbard, northern Alaska: whether your July trip has a sunset (it may not) changes sleep, photos and sanity. The circles themselves are mapped on the "
+    },
+    {
+     "t": "Arctic Circle",
+     "l": "/tools/arctic-circle"
+    },
+    {
+     "t": " page."
+    }
+   ]
+  },
+  {
+   "title": "Winter darkness checks",
+   "body": [
+    {
+     "t": "A December posting or expedition near the pole — how many weeks without sunrise is a logistics fact, not a vibe."
+    }
+   ]
+  },
+  {
+   "title": "Teaching the seasons",
+   "body": [
+    {
+     "t": "The checker turns axial tilt into a yes/no answer students can test at any latitude — the "
+    },
+    {
+     "t": "Seasons by Latitude",
+     "l": "/tools/seasons-by-latitude"
+    },
+    {
+     "t": " page explains the machinery."
+    }
+   ]
+  },
+  {
+   "title": "Solar project screening",
+   "body": [
+    {
+     "t": "A site with a month of polar night has a solar problem no panel angle fixes; check before the feasibility study."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Tromsø's two extremes",
+   "body": [
+    {
+     "t": "At 69.65°N the Sun stays up geometrically from about May 23 to July 22 (longer counting refraction and elevation), and stays down for a matching stretch centred on the December solstice."
+    }
+   ]
+  },
+  {
+   "label": "Example · The circle's boundary case",
+   "body": [
+    {
+     "t": "Exactly on the Arctic Circle (66.56°N), the Sun just grazes: one day a year it never quite sets, one day it never quite rises — the line is drawn where the grazing happens."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "How the windows grow with latitude",
+  "intro": "Approximate polar-day length at the summer solstice season, geometric.",
+  "columns": [
+   "Latitude",
+   "Midnight-sun run"
+  ],
+  "rows": [
+   [
+    "66.56° (the circle)",
+    "~1 day"
+   ],
+   [
+    "70°",
+    "~two months"
+   ],
+   [
+    "75°",
+    "~three and a half months"
+   ],
+   [
+    "80°",
+    "~four and a half months"
+   ],
+   [
+    "90° (the pole)",
+    "~six months — one sunrise, one sunset a year"
+   ]
+  ],
+  "note": "Windows are computed from solar declination versus latitude; refraction, observer height and terrain stretch real sunrises a few days beyond the geometric edges."
+ },
+ "faq": [
+  [
+   "What counts as polar day?",
+   "The Sun's centre never dips below the horizon for a full 24 hours — including days when it merely skims. The checker uses the geometric definition and says so."
+  ],
+  [
+   "What about twilight during polar night?",
+   "Polar night is not all pitch black: near the circles, midday brings hours of civil twilight — a blue noon without a sunrise."
+  ],
+  [
+   "Why do the circles sit at 66.56°?",
+   "90° minus Earth's axial tilt (23.44°). The tilt sets the circles, the tropics, and this checker's thresholds."
+  ],
+  [
+   "Does the checker handle the Antarctic?",
+   "Yes — southern latitudes mirror the north with seasons flipped: polar day around December, polar night around June."
+  ],
+  [
+   "Refraction and mountains change it?",
+   "Yes — real horizons and atmospheric bending add sunrises at the margins. The checker reports the geometric rule; local almanacs fine-tune."
+  ],
+  [
+   "Can the whole winter really lack sunrise?",
+   "At the pole, yes — one sunset in September, one sunrise in March. Settlements like Svalbard's live a ~two-month version of it."
+  ],
+  [
+   "Midnight sun versus 24-hour daylight?",
+   "Same phenomenon; 'midnight sun' is the friendlier name. Civil twilight swapping in at the edges is the softer variant the checker also flags by latitude."
+  ],
+  [
+   "Where does it never happen?",
+   "Everywhere equatorward of the two circles — which is most of the inhabited world, and why visitors find it so strange."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The lines: the "
+  },
+  {
+   "t": "Arctic Circle",
+   "l": "/tools/arctic-circle"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Antarctic Circle",
+   "l": "/tools/antarctic-circle"
+  },
+  {
+   "t": "; the machinery: "
+  },
+  {
+   "t": "Seasons by Latitude",
+   "l": "/tools/seasons-by-latitude"
+  },
+  {
+   "t": "; day lengths: the "
+  },
+  {
+   "t": "Day Length Calculator",
+   "l": "/tools/day-length-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "moon-age-calculator",
   "moon-illumination-calculator",

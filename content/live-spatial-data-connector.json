@@ -7,17 +7,166 @@
   "csv endpoint map",
   "open data map viewer"
  ],
- "title": null,
- "description": null,
+ "title": "Live Spatial Data Connector: Feeds on a Map",
+ "description": "Connect a public GeoJSON or CSV feed with the Live Spatial Data Connector and watch it render on a map — refresh re-reads the source. Free, in-browser.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, paste the USGS earthquake feed address and the map fills with the past hour's quakes — hit refresh in ten minutes and new ones have arrived, because the map re-reads the feed, not a copy.",
+ "quick_answer": "The Live Spatial Data Connector renders a public data endpoint — a GeoJSON feed or a CSV with latitude and longitude columns — directly onto a map in your browser. Paste the feed address and the map draws it; refresh re-reads the source.",
+ "steps_intro": "No uploads, no server of ours — your browser talks to the feed directly:",
+ "use_cases": [
+  {
+   "title": "Earthquake and weather watching",
+   "body": [
+    {
+     "t": "Public science feeds (USGS earthquakes, river gauges, storm tracks) were published to be mapped. This connector is the two-minute route from feed address to situational picture."
+    }
+   ]
+  },
+  {
+   "title": "Open-data exploration",
+   "body": [
+    {
+     "t": "City and national open-data portals offer GeoJSON endpoints for everything from trees to planning applications. Preview one here before building anything around it. Static files open in the "
+    },
+    {
+     "t": "GeoJSON Viewer",
+     "l": "/tools/geojson-viewer"
+    },
+    {
+     "t": " instead."
+    }
+   ]
+  },
+  {
+   "title": "Checking a feed before you build on it",
+   "body": [
+    {
+     "t": "Developers: paste the endpoint and see what actually comes back — geometry types, coverage, freshness — before writing a line of integration code."
+    }
+   ]
+  },
+  {
+   "title": "Pairing with your own field data",
+   "body": [
+    {
+     "t": "Collect points with the "
+    },
+    {
+     "t": "Map Data Collection Form Builder",
+     "l": "/tools/map-data-collection-form-builder"
+    },
+    {
+     "t": ", publish or host the export, and watch it beside the public feeds it relates to."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The earthquake hour",
+   "body": [
+    {
+     "t": "The USGS 'all earthquakes, past hour' GeoJSON feed regenerates about every minute. Connect it on a quiet morning and the map still shows a dozen small quakes — the Earth is never actually still, and a live feed proves it."
+    }
+   ]
+  },
+  {
+   "label": "Example · The feed that was not live",
+   "body": [
+    {
+     "t": "A 'live' city dashboard endpoint turns out to be a file someone exported in March. The connector shows the data faithfully — the timestamps inside it confess the rest. Liveness is a property of the source, not the map."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the connector accepts",
+  "intro": "Two honest formats, fetched straight from the source by your browser.",
+  "columns": [
+   "Source",
+   "Requirement",
+   "Typical publisher"
+  ],
+  "rows": [
+   [
+    "GeoJSON endpoint",
+    "A URL returning a FeatureCollection",
+    "USGS, open-data portals, ArcGIS services"
+   ],
+   [
+    "CSV endpoint",
+    "Columns recognisable as latitude and longitude",
+    "Data dashboards, GitHub-hosted datasets"
+   ],
+   [
+    "Refresh",
+    "Re-fetches the same URL",
+    "You control when — the map is as fresh as your last refresh"
+   ],
+   [
+    "Not accepted",
+    "Feeds behind logins or keys",
+    "Those belong in the publisher's own app"
+   ]
+  ],
+  "note": "Honest limits: the fetch happens in your browser, so the endpoint must allow cross-origin access (CORS) — many public feeds do, some do not, and the tool cannot (and should not) sneak around a publisher who said no."
+ },
+ "faq": [
+  [
+   "Does MapBench store the feed or its data?",
+   "No. Your browser requests the endpoint directly and renders what returns; nothing is proxied through or kept on a MapBench server. Close the tab and the connection is gone."
+  ],
+  [
+   "What kinds of feeds work best?",
+   "Small-to-medium GeoJSON FeatureCollections and tidy CSVs with clear latitude/longitude columns. A national dataset with a million features will make any browser sweat — use a bounded or summarised endpoint where the publisher offers one."
+  ],
+  [
+   "Can I connect a private or key-protected API?",
+   "No — deliberately. The connector works with public endpoints only; if a feed needs credentials, use it through its owner's tools rather than pasting keys into a web page."
+  ],
+  [
+   "How do I know the data is current?",
+   "Read the feed's own timestamps — good feeds carry generated-at or per-feature times. The connector renders faithfully; judging freshness is reading, and the map makes stale data easy to spot."
+  ],
+  [
+   "Why does the map show nothing for my CSV?",
+   "Usually the coordinate columns: headers the parser cannot recognise as latitude/longitude, coordinates in the wrong order, or a delimiter surprise. Open the endpoint in a tab and look at the first rows — the diagnosis is almost always visible."
+  ],
+  [
+   "Can I style the points by a data field?",
+   "The connector renders a clear default view so you can judge the data. Styled, classified presentation is dashboard work — the Spatial Dashboard Builder is the heavier sibling for that job."
+  ],
+  [
+   "Does it work with KML feeds?",
+   "KML files you have belong in the KML Viewer. For a hosted KML endpoint, many publishers also expose the same data as GeoJSON — that is the version to connect here."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Open static files with the "
+  },
+  {
+   "t": "GeoJSON Viewer",
+   "l": "/tools/geojson-viewer"
+  },
+  {
+   "t": " or "
+  },
+  {
+   "t": "KML Viewer",
+   "l": "/tools/kml-viewer"
+  },
+  {
+   "t": ", and create your own feed-worthy data with the "
+  },
+  {
+   "t": "Map Data Collection Form Builder",
+   "l": "/tools/map-data-collection-form-builder"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "advanced-map-embed-generator",
   "blank-map",

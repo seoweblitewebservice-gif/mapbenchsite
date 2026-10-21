@@ -8,17 +8,158 @@
   "mulch volume calculator tool",
   "how to use mulch volume calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Mulch Volume Calculator: Yards, Feet and Bags",
+ "description": "Calculate mulch volume for any bed with the Mulch Volume Calculator — dimensions and depth into cubic yards, cubic feet and bag counts. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a 20 × 10 ft bed at 3 inches deep takes 50 cubic feet of mulch — 1.85 cubic yards, or 25 bags — the order written before the wheelbarrow ever moves.",
+ "quick_answer": "The Mulch Volume Calculator works out how much mulch a bed needs from its dimensions and depth, reporting cubic yards for bulk delivery, cubic feet for pickup loads and the bag count for bagged product. Enter the bed's size and depth and read exactly what to buy.",
+ "steps_intro": "Dimensions × depth, then every unit a supplier might speak:",
+ "use_cases": [
+  {
+   "title": "The garden-centre run",
+   "body": [
+    {
+     "t": "One bed, one trip, the right number of bags. If your bed's area is already known and only the volume is missing, the "
+    },
+    {
+     "t": "Mulch Volume by Area Calculator",
+     "l": "/tools/mulch-volume-by-area-calculator"
+    },
+    {
+     "t": " starts one step later."
+    }
+   ]
+  },
+  {
+   "title": "Bulk delivery sizing",
+   "body": [
+    {
+     "t": "A yard too much is a month's driveway sculpture; a yard too few is a second delivery fee. Volume-first ordering is how both are avoided."
+    }
+   ]
+  },
+  {
+   "title": "Comparing quotes",
+   "body": [
+    {
+     "t": "Two landscapers quote 'mulch included' at different prices — the volume exposes whose includes 2 inches and whose includes 4, which is the whole difference."
+    }
+   ]
+  },
+  {
+   "title": "Play areas and paths",
+   "body": [
+    {
+     "t": "Deep, even coverage over a defined footprint is a volume spec before it is a product choice — playgrounds and woodland paths are ordered exactly this way."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The standard bed",
+   "body": [
+    {
+     "t": "20 × 10 ft at 3 in: 200 sq ft × 0.25 ft = 50 ft³ = 1.85 yd³. In bags: 25 of the 2 ft³ size, or 63 of the small 0.8 ft³ size — the small bags' convenience tax made visible."
+    }
+   ]
+  },
+  {
+   "label": "Example · Depth is the budget lever",
+   "body": [
+    {
+     "t": "The same bed at 4 inches needs 66.7 ft³ (2.47 yd³); at 2 inches, 33.3 ft³ (1.23 yd³). Every inch of depth on 200 sq ft is 16.7 ft³ — depth decisions are volume decisions."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Bag equivalents",
+  "intro": "What a cubic yard becomes in the bag aisle.",
+  "columns": [
+   "Measure",
+   "Equals"
+  ],
+  "rows": [
+   [
+    "1 cubic yard",
+    "27 cubic feet"
+   ],
+   [
+    "1 cubic yard in 2 ft³ bags",
+    "13.5 bags — buy 14"
+   ],
+   [
+    "1 cubic yard in 0.8 ft³ bags",
+    "33.75 bags — buy 34"
+   ],
+   [
+    "1 cubic yard in 3 ft³ bags",
+    "9 bags"
+   ],
+   [
+    "Coverage of 1 yd³ at 3 in",
+    "108 sq ft"
+   ]
+  ],
+  "note": "Bag volumes are nominal loose fill; manufacturers' compaction varies a few percent. The calculator's whole numbers round up — a calculated 24.2 bags is a 25-bag purchase."
+ },
+ "faq": [
+  [
+   "How deep should mulch be?",
+   "Three inches for established beds (suppression plus moisture), two for a refresh, up to four for new beds. The calculator prices any depth; the horticulture picks the number."
+  ],
+  [
+   "Should I round the order up?",
+   "Yes — volumes round up to whole bags and sensible bulk fractions, and 10–20% extra covers settling and the bed that was bigger than remembered. Mulch keeps; delivery fees recur."
+  ],
+  [
+   "What about mulch against the house and trunks?",
+   "Keep mulch a few inches from siding and never volcano it against trunks — depth there is a pest and rot invitation. Those exclusions barely move the volume; they matter enormously to the trees."
+  ],
+  [
+   "Dyed, bark, straw, rubber — same volume math?",
+   "Identical geometry. Products differ in settling (straw compresses most, rubber least) and longevity, not in the cubic arithmetic of covering a bed."
+  ],
+  [
+   "Weight of a cubic yard?",
+   "Roughly 400–800 lb depending on moisture and material — a half-ton pickup carries about a yard comfortably. Wet mulch after rain is the heavy end; the calculator's volume is innocent of the weather."
+  ],
+  [
+   "Irregular or curved beds?",
+   "Measure the area on the map or by sectioning the bed into rectangles and circles, then enter the total area — the by-area sibling starts exactly there."
+  ],
+  [
+   "How often to re-mulch?",
+   "As depth decays below about 2 inches — typically a light annual refresh for wood mulch in temperate climates. The volume for a refresh is the missing depth, not the full depth."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Area known already: the "
+  },
+  {
+   "t": "Mulch Volume by Area Calculator",
+   "l": "/tools/mulch-volume-by-area-calculator"
+  },
+  {
+   "t": "; soil sibling: the "
+  },
+  {
+   "t": "Soil Volume Calculator",
+   "l": "/tools/soil-volume-calculator"
+  },
+  {
+   "t": "; measure the bed: the "
+  },
+  {
+   "t": "Map Area Calculator",
+   "l": "/tools/map-area-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-area-from-radius",

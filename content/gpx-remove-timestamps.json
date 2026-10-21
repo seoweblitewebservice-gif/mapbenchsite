@@ -8,17 +8,161 @@
   "gpx remove time",
   "remove timestamps gps track"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Timestamp Remover: Strip the <time> Tags",
+ "description": "Remove time elements from a GPX file with the GPX Timestamp Remover — geometry preserved, clock gone, processed locally. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, stripping <time> from a typical trackpoint shrinks it from 97 to 64 bytes — a third of every point — and the track becomes a pure shape that says where, never when.",
+ "quick_answer": "The GPX Timestamp Remover strips the <time> elements from a GPX file and downloads a geometry-preserving copy without them. Load the file locally, remove the clock, and share the route as pure geography — useful when the path is public information but your schedule is not.",
+ "steps_intro": "The route stays; the timetable goes:",
+ "use_cases": [
+  {
+   "title": "Privacy before sharing",
+   "body": [
+    {
+     "t": "Timestamps reveal when you were where — home departure times included. A timeless copy shares the trail without the diary. Strip altitude the same way with the "
+    },
+    {
+     "t": "GPX Elevation Remover",
+     "l": "/tools/gpx-remove-elevation"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Route libraries and guidebooks",
+   "body": [
+    {
+     "t": "A published route is a plan, not a recording. Removing times stops readers mistaking your Tuesday for the route's property."
+    }
+   ]
+  },
+  {
+   "title": "Fixing a wrong-clock file",
+   "body": [
+    {
+     "t": "A device with a dead clock stamped everything 2015. If the times cannot be repaired (the "
+    },
+    {
+     "t": "GPX Shift Time Tool",
+     "l": "/tools/gpx-shift-time-tool"
+    },
+    {
+     "t": " handles honest offsets), an untimed file beats a lying one."
+    }
+   ]
+  },
+  {
+   "title": "Feeding geometry-only tools",
+   "body": [
+    {
+     "t": "Some minimal consumers expect pure geometry; the stripped copy is the compatible edition, with speed expectations removed along with the stamps."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · One point, before and after",
+   "body": [
+    {
+     "t": "Before: <trkpt lat=\"40.768100\" lon=\"-73.971900\"><ele>102.4</ele><time>2026-10-04T07:00:00Z</time></trkpt> — 97 bytes. After: 64 bytes, same coordinates, same elevation, no clock. The shape of the day survives; its schedule does not."
+    }
+   ]
+  },
+  {
+   "label": "Example · What breaks downstream",
+   "body": [
+    {
+     "t": "Speed, pace, duration and every time-based statistic go silent on a timeless file — there is nothing to divide distance by. That silence is the feature when privacy is the point, and the cost when it is not."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What is removed, what survives",
+  "intro": "The operation's exact scope.",
+  "columns": [
+   "Element",
+   "Fate"
+  ],
+  "rows": [
+   [
+    "<time> in trackpoints",
+    "Removed"
+   ],
+   [
+    "<time> in waypoints and metadata",
+    "Removed"
+   ],
+   [
+    "lat / lon and <ele>",
+    "Untouched — the geometry and altitude stay"
+   ],
+   [
+    "Names, descriptions, extensions",
+    "Untouched"
+   ],
+   [
+    "File creation stamp in metadata",
+    "Removed with the rest — a timeless file should not confess in its header"
+   ]
+  ],
+  "note": "The edit happens on a browser-side copy; your original is never modified. Keep the original as the private record and share only the stripped edition."
+ },
+ "faq": [
+  [
+   "Can timestamps be reconstructed later?",
+   "Not from the stripped file. Order survives (points keep their sequence), so relative pacing is implicit in spacing — but absolute time is gone by design."
+  ],
+  [
+   "Does point order still show the direction?",
+   "Yes — sequence remains, so start-to-finish direction reads as before. Reversing is a different tool's job, and an untimed file reverses just as well."
+  ],
+  [
+   "Platforms rejecting timeless files?",
+   "Some training platforms require times for activity imports and may refuse or assume. Route-oriented platforms accept timeless geometry happily — know your destination's appetite."
+  ],
+  [
+   "Speed limit evidence and disputes?",
+   "A timeless file cannot testify about pace — which protects privacy and forfeits proof in equal measure. Keep originals for anything contested."
+  ],
+  [
+   "Partial stripping (one day of many)?",
+   "This tool strips the whole file. Split first (per-day files), strip the public day, keep the rest timed."
+  ],
+  [
+   "Does it also remove the file's own created date?",
+   "Yes — metadata <time> goes too, as the table states. A stripped file that confesses its birthday in the header would be theatre, not privacy."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Strip altitude: the "
+  },
+  {
+   "t": "GPX Elevation Remover",
+   "l": "/tools/gpx-remove-elevation"
+  },
+  {
+   "t": "; fix times instead: the "
+  },
+  {
+   "t": "GPX Shift Time Tool",
+   "l": "/tools/gpx-shift-time-tool"
+  },
+  {
+   "t": "; strip places: the "
+  },
+  {
+   "t": "GPX Remove Waypoints Tool",
+   "l": "/tools/gpx-remove-waypoints-tool"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

@@ -6,17 +6,175 @@
   "coverage map",
   "service area map online"
  ],
- "title": null,
- "description": null,
+ "title": "Service Area Map: Draw Your Coverage",
+ "description": "Plan delivery and service coverage on a Service Area Map — distance rings and reach around your base, before live-traffic refinement. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a 10-mile service ring around a depot covers 314 square miles — the map makes that either a confident promise or an obvious overreach, in one look.",
+ "quick_answer": "A Service Area Map plans delivery or service coverage using distance and reach around a base — draw the ring, read the ground it covers, and judge the promise before customers test it. This page works in straight-line reach, the honest first draft that drive-time tools later refine.",
+ "steps_intro": "Draw the reach you can actually keep:",
+ "use_cases": [
+  {
+   "title": "Delivery zone design",
+   "body": [
+    {
+     "t": "Zones drawn by radius around the kitchen or depot are how delivery promises start. The "
+    },
+    {
+     "t": "Delivery Radius Area Calculator",
+     "l": "/tools/delivery-radius-area-calculator"
+    },
+    {
+     "t": " prices each ring's ground."
+    }
+   ]
+  },
+  {
+   "title": "Trades and call-out coverage",
+   "body": [
+    {
+     "t": "Plumbers, locksmiths and appliance repair live inside a service ring — the map is the website's coverage page and the dispatcher's sanity check in one."
+    }
+   ]
+  },
+  {
+   "title": "Franchise territory checks",
+   "body": [
+    {
+     "t": "A new outlet's ring overlapping an existing one's is visible instantly — the "
+    },
+    {
+     "t": "Service Coverage Gap Viewer",
+     "l": "/tools/service-coverage-gap"
+    },
+    {
+     "t": " takes the overlap analysis further."
+    }
+   ]
+  },
+  {
+   "title": "Honest marketing",
+   "body": [
+    {
+     "t": "'We serve the metro area' becomes a drawn boundary customers can check — which is why the honest version outsells the vague one over time."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Paris, 20 kilometres",
+   "body": [
+    {
+     "t": "A 20 km ring around central Paris covers about 1,257 km² and takes in Saint-Denis (8.9 km), Orly (12.7) and Versailles (17.4) — a capital-sized promise that ring makes legible at a glance."
+    }
+   ]
+  },
+  {
+   "label": "Example · The ring's edge is the story",
+   "body": [
+    {
+     "t": "Customers just inside the ring get served; one street beyond, they don't. Drawing the ring forces the edge conversation before a disappointed caller has it for you."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Ring sizes around a base",
+  "intro": "What common service radii actually cover.",
+  "columns": [
+   "Radius",
+   "Area covered",
+   "Feels like"
+  ],
+  "rows": [
+   [
+    "3 mi",
+    "28.3 sq mi",
+    "A town and its edge"
+   ],
+   [
+    "5 mi",
+    "78.5 sq mi",
+    "A small city"
+   ],
+   [
+    "10 mi",
+    "314.2 sq mi",
+    "A metro core"
+   ],
+   [
+    "15 mi",
+    "706.9 sq mi",
+    "A county-scale promise"
+   ],
+   [
+    "25 mi",
+    "1,963.5 sq mi",
+    "A regional operation"
+   ]
+  ],
+  "note": "Straight-line area is the ring's geography, not its driveability — rivers, motorways and traffic bend real coverage, which the refinement tools account for."
+ },
+ "faq": [
+  [
+   "Does it use live traffic?",
+   "No — this map works in distance and reach, which do not change with the rush hour. Drive-time service areas are the refinement layer; the ring is the stable planning draft."
+  ],
+  [
+   "Multiple bases?",
+   "Draw each base's ring and read the union with your eyes; the coverage-gap tool analyses overlaps and holes between centres formally."
+  ],
+  [
+   "Rings or polygons?",
+   "Rings are the promise customers understand; polygons follow roads and boundaries for the operational version. Start with the ring, refine to the polygon."
+  ],
+  [
+   "What radius should I choose?",
+   "The one your operation can serve well on its worst day, not its best. The map shows candidates; your service times decide."
+  ],
+  [
+   "Customers just outside?",
+   "Policy, made visible: the map lets you set an outer enquiry ring ('ask us') beyond the guaranteed one — honesty with a door left open."
+  ],
+  [
+   "Kilometres for Europe?",
+   "Of course — the arithmetic is identical and the examples on this page run in both."
+  ],
+  [
+   "Can I put the map on my website?",
+   "The ring's definition (base + radius) is yours to publish however you draw it; a drawn boundary customers can verify is the trust asset."
+  ],
+  [
+   "Seasonal service areas?",
+   "Redraw and republish with dates — gardens and holiday trades honestly shrink and grow their reach across the year."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Ring areas: the "
+  },
+  {
+   "t": "Delivery Radius Area Calculator",
+   "l": "/tools/delivery-radius-area-calculator"
+  },
+  {
+   "t": "; gaps: the "
+  },
+  {
+   "t": "Service Coverage Gap Viewer",
+   "l": "/tools/service-coverage-gap"
+  },
+  {
+   "t": "; stores: the "
+  },
+  {
+   "t": "Store Locator Radius Map",
+   "l": "/tools/store-locator-radius"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-area-from-radius",

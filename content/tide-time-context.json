@@ -8,17 +8,165 @@
   "Coastal Time &amp",
   "Sun Context"
  ],
- "title": null,
- "description": null,
+ "title": "Coastal Time & Sun Context: Tides, Moon, Light",
+ "description": "Put a beach day in context with Coastal Time & Sun Context — tide rhythm, moon phase and sun times together, with honest limits. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, where tides are semidiurnal, high water returns every ~12 hours 25 minutes — so today's 9:00 high tide becomes roughly 9:50 tomorrow, marching ~50 minutes later each day with the Moon.",
+ "quick_answer": "Coastal Time & Sun Context gathers what a shore visit runs on — the tide's twice-daily rhythm, the Moon phase driving it, and the sun times framing the day — in one place. Context only: official tide tables remain the authority for heights and exact times.",
+ "steps_intro": "The Moon pulls the tide, the Sun lights the day — read both clocks together:",
+ "use_cases": [
+  {
+   "title": "Beach-day planning",
+   "body": [
+    {
+     "t": "Sand width, rock pools and safe swimming all ride the tide's phase; light rides the Sun. This page is the pre-check before the "
+    },
+    {
+     "t": "Sunrise and Sunset Calculator",
+     "l": "/tools/sunrise-sunset-calculator"
+    },
+    {
+     "t": " and the official tide table."
+    }
+   ]
+  },
+  {
+   "title": "Understanding a tide table",
+   "body": [
+    {
+     "t": "Why high tide shifts ~50 minutes daily, why springs follow the full moon — the context that turns a printed table into a system you can sanity-check. Full moons: the "
+    },
+    {
+     "t": "Next Full Moon Calculator",
+     "l": "/tools/next-full-moon-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Coastal walks and causeways",
+   "body": [
+    {
+     "t": "Tidal causeways and strandings are context failures. Know the rhythm, then verify the day's official times before boots touch sand."
+    }
+   ]
+  },
+  {
+   "title": "Fishing and foraging trips",
+   "body": [
+    {
+     "t": "Feeding windows and exposed beds follow the ebb; moon phase grades the springs and neaps your week will see."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 12:25 heartbeat",
+   "body": [
+    {
+     "t": "The lunar day is ~24 h 50 min (the Moon orbits while Earth spins), so semidiurnal tides beat every ~12 h 25 min and drift ~50 min later daily — arithmetic you can verify against any week's table."
+    }
+   ]
+  },
+  {
+   "label": "Example · Springs and neaps",
+   "body": [
+    {
+     "t": "At new and full moon, Sun and Moon pull together: higher highs, lower lows (springs). At the quarter moons they pull at right angles: gentler neaps. The phase calendar predicts the fortnight's character, not its centimetres."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The context, piece by piece",
+  "intro": "What this page tells you — and what it deliberately does not.",
+  "columns": [
+   "Element",
+   "What you learn"
+  ],
+  "rows": [
+   [
+    "Tide rhythm",
+    "~12 h 25 min semidiurnal beat (some coasts are diurnal or mixed)"
+   ],
+   [
+    "Moon phase",
+    "Where you are in the spring–neap fortnight"
+   ],
+   [
+    "Sun times",
+    "Sunrise, sunset and twilight for the same shore day"
+   ],
+   [
+    "Not included",
+    "Tide heights and minute-exact local times — official tables own those"
+   ]
+  ],
+  "note": "Local tide times lag the Moon by a port-specific amount (the 'establishment') shaped by bays and shelves — which is exactly why predictions belong to official tables."
+ },
+ "faq": [
+  [
+   "Does it give tide heights?",
+   "No — heights and exact local times come from official tide tables for your port, which this page points you toward rather than imitating. Context here, authority there."
+  ],
+  [
+   "Why do tides follow the Moon, not the Sun?",
+   "The Moon is far closer, so its tidal pull wins despite its size. The Sun modulates — hence springs at alignment (new/full) and neaps at quarters."
+  ],
+  [
+   "What are spring tides? (Not the season.)",
+   "The fortnightly big tides near new and full moon — 'spring' from the old word for leap/rise, unrelated to March."
+  ],
+  [
+   "Are all tides twice-daily?",
+   "No — semidiurnal (two a day) dominates the Atlantic; the Gulf of Mexico leans diurnal (one a day); parts of the Pacific mix both. Your coast's type is in its official table."
+  ],
+  [
+   "How late does high tide get each day?",
+   "About 50 minutes later per day on semidiurnal coasts, tracking the Moon's ~24 h 50 min day."
+  ],
+  [
+   "Sun times at the coast — why included?",
+   "Dawn patrols, golden-hour beach photos and safe returns all hang on the same day's light. One page, whole shore day."
+  ],
+  [
+   "Can I plan a tidal-island visit from this?",
+   "Use this for the rhythm, then confirm the exact safe window in the official table for that island — causeway crossings are not a place for estimates."
+  ],
+  [
+   "Moonrise over the sea?",
+   "The Moon Position Map and Moonrise pages on this site give the Moon's own schedule — beautiful with an incoming tide."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Sun frame: the "
+  },
+  {
+   "t": "Sunrise and Sunset Calculator",
+   "l": "/tools/sunrise-sunset-calculator"
+  },
+  {
+   "t": "; the driver: the "
+  },
+  {
+   "t": "Next Full Moon Calculator",
+   "l": "/tools/next-full-moon-calculator"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Moonrise and Moonset",
+   "l": "/tools/moonrise-moonset"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "moon-age-calculator",
   "moon-illumination-calculator",

@@ -6,17 +6,171 @@
   "embed google map",
   "google maps embed code generator online"
  ],
- "title": null,
- "description": null,
+ "title": "Google Maps Embed Code Generator: No Key Needed",
+ "description": "Generate Google Maps iframe code without an API key using the Google Maps Embed Code Generator — enter a place, set zoom and size, preview, copy. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, type a bakery's name, choose zoom 16 and a 450-pixel height, and the copied iframe drops a working, interactive Google Map into the contact page — no developer account involved.",
+ "quick_answer": "The Google Maps Embed Code Generator builds the iframe code for a Google Map of any place you name — no API key, no billing account. Enter the location, choose zoom and height, preview the map, and copy ready-to-paste code that Google serves for free in this basic embed form.",
+ "steps_intro": "The free embed path, without the developer console detour:",
+ "use_cases": [
+  {
+   "title": "Small-business contact pages",
+   "body": [
+    {
+     "t": "The classic job: a real, pannable Google Map on the 'Find us' page, generated in a minute. For an OpenStreetMap-flavoured embed with more controls, see the "
+    },
+    {
+     "t": "Advanced Map Embed Code Generator",
+     "l": "/tools/advanced-map-embed-generator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Property and venue listings",
+   "body": [
+    {
+     "t": "A map under the photos answers 'but where is it, really?' before the enquiry is written. Zoom 15–16 shows the neighbourhood without exposing more precision than a listing should."
+    }
+   ]
+  },
+  {
+   "title": "Event pages",
+   "body": [
+    {
+     "t": "One venue, one map, zero 'which entrance?' emails. Pair the embed with a written landmark note and arrivals get easy."
+    }
+   ]
+  },
+  {
+   "title": "Replacing a maps plugin",
+   "body": [
+    {
+     "t": "WordPress sites groan under plugin weight for a job an iframe does natively. Generate the code, paste it in a custom-HTML block, delete the plugin."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The bakery contact page",
+   "body": [
+    {
+     "t": "Query: the bakery's name and street. Zoom 16, height 450. The preview shows the pin on the right corner — one regeneration with the full address fixed a same-name shop two towns away, before it ever went live."
+    }
+   ]
+  },
+  {
+   "label": "Example · Coordinates instead of a name",
+   "body": [
+    {
+     "t": "A trailhead with no address embeds by latitude and longitude instead — the map centres on the point and the pin carries no misleading place name. Get the pair from the "
+    },
+    {
+     "t": "Latitude Longitude Finder",
+     "l": "/tools/latitude-longitude-finder"
+    },
+    {
+     "t": "."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Zoom levels, translated",
+  "intro": "Google's zoom scale, in human terms — pick by what the visitor needs to recognise.",
+  "columns": [
+   "Zoom",
+   "You see",
+   "Use it for"
+  ],
+  "rows": [
+   [
+    "11–12",
+    "A whole city and its ring roads",
+    "Service-area pages"
+   ],
+   [
+    "14",
+    "A district with main streets named",
+    "Neighbourhood guides"
+   ],
+   [
+    "16",
+    "A few streets; the venue's block is obvious",
+    "Contact and listing pages"
+   ],
+   [
+    "18",
+    "Individual buildings and entrances",
+    "Trailheads, gates, precise doors"
+   ],
+   [
+    "20",
+    "Rooftop detail",
+    "Rarely — usually too close to orient anyone"
+   ]
+  ],
+  "note": "The basic place embed this generator builds is the key-less kind Google offers for simple maps. Directions, Street View panoramas and place-details embeds are different products that do need the Maps Embed API and a key."
+ },
+ "faq": [
+  [
+   "Will Google charge me for the embed?",
+   "The simple place embed generated here is free and key-less. Charges enter the picture for the API-driven products (dynamic maps, directions, places data) — a different integration than a pasted iframe."
+  ],
+  [
+   "Can I make the map responsive?",
+   "Yes — wrap the iframe in a container with a percentage width (and an aspect-ratio or padding trick in CSS) and set the iframe width to 100%. The generator gives you fixed dimensions to start from; your stylesheet makes them fluid."
+  ],
+  [
+   "Can I show satellite view?",
+   "The basic embed opens in Google's default map view; satellite toggling is available to visitors in the embedded map's own controls where Google offers it. For a guaranteed satellite-first presentation, that is API territory."
+  ],
+  [
+   "Why does my place show the wrong business?",
+   "Name collisions: add the street, town or postcode to the query and check the preview. The generator shows you Google's match before you copy anything — trust the preview, not the query."
+  ],
+  [
+   "Does the embed slow my page?",
+   "An iframe loads its own resources after your page's HTML — use the loading='lazy' attribute so off-screen maps wait their turn, and keep to one embed per page where you can."
+  ],
+  [
+   "Can I embed multiple locations on one map?",
+   "This generator makes single-place embeds. For many pins on one map, build it in the Pin Map Maker or Google My Maps and embed that instead."
+  ],
+  [
+   "Is an API key ever required?",
+   "Only when you outgrow the basic embed: directions, Street View, or programmatic control. Most contact pages never do — which is why the key-less generator covers most real websites."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "For a marker-plus-bbox embed on open data, use the "
+  },
+  {
+   "t": "Advanced Map Embed Code Generator",
+   "l": "/tools/advanced-map-embed-generator"
+  },
+  {
+   "t": "; for links instead of iframes, the "
+  },
+  {
+   "t": "Embed / Link Map Helper",
+   "l": "/tools/embed-map-link-helper"
+  },
+  {
+   "t": "; and to get coordinates for a nameless spot, the "
+  },
+  {
+   "t": "Latitude Longitude Finder",
+   "l": "/tools/latitude-longitude-finder"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "advanced-map-embed-generator",
   "blank-map",

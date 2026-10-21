@@ -6,17 +6,170 @@
   "catchment radius",
   "store locator map"
  ],
- "title": null,
- "description": null,
+ "title": "Store Locator Radius Map: Catchment Rings",
+ "description": "Place a store pin and draw catchment rings with the Store Locator Radius Map — the 'near me' geography customers and planners share. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, rings at 1, 3 and 5 miles around a store show at a glance which neighbourhoods are walk-ins, which are drives, and where the next store's rings will collide.",
+ "quick_answer": "The Store Locator Radius Map places a store pin and draws catchment rings around it for marketing and operations planning. Set the store and the radii and read the map your customers already imagine when they search 'near me' — rings that turn a location into a trade area.",
+ "steps_intro": "One pin, honest rings:",
+ "use_cases": [
+  {
+   "title": "Marketing area definition",
+   "body": [
+    {
+     "t": "Leaflet drops, local ads and sponsorships buy by geography — the rings define the buy. Areas per ring come from the "
+    },
+    {
+     "t": "Store Catchment Area Calculator",
+     "l": "/tools/store-catchment-area-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Delivery and click-and-collect zones",
+   "body": [
+    {
+     "t": "Service promises drawn as rings are promises customers can verify — the operations team inherits the same map marketing publishes."
+    }
+   ]
+  },
+  {
+   "title": "New store siting",
+   "body": [
+    {
+     "t": "Candidate pins compared by what their rings capture and whose rings they raid — the "
+    },
+    {
+     "t": "Service Coverage Gap Viewer",
+     "l": "/tools/service-coverage-gap"
+    },
+    {
+     "t": " runs the network analysis."
+    }
+   ]
+  },
+  {
+   "title": "Customer communication",
+   "body": [
+    {
+     "t": "'Now serving within 5 miles' with the ring drawn beats a postcode list nobody reads."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Ring collisions",
+   "body": [
+    {
+     "t": "Two stores 6 miles apart with 5-mile rings overlap in a lens between them — shared ground where both stores legitimately claim trade, and where a third store would be a mistake the map prevents."
+    }
+   ]
+  },
+  {
+   "label": "Example · The edge street",
+   "body": [
+    {
+     "t": "Every ring has an edge street: inside gets the leaflet, outside doesn't. Drawing rings forces the edge decision in the office instead of at a customer's door."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Ring conventions by format",
+  "intro": "The radii formats actually draw — a starting point, not a law.",
+  "columns": [
+   "Format",
+   "Typical rings",
+   "Why"
+  ],
+  "rows": [
+   [
+    "Coffee and convenience",
+    "0.5 / 1 / 3 mi",
+    "Walking and short drives"
+   ],
+   [
+    "Supermarket",
+    "1 / 3 / 5 mi",
+    "Weekly-shop drives"
+   ],
+   [
+    "DIY and furniture",
+    "5 / 10 / 20 mi",
+    "Destination trips"
+   ],
+   [
+    "Trade counters",
+    "10 / 20 mi",
+    "Van economics"
+   ]
+  ],
+  "note": "Rings are straight-line; real catchments bend along roads and rivers. The rings are the shared public promise — drive-time analysis refines operations behind them."
+ },
+ "faq": [
+  [
+   "Multiple stores on one map?",
+   "Yes — the locator view is built for the chain's whole estate; overlaps and gaps between stores are the strategic picture."
+  ],
+  [
+   "Can customers use it?",
+   "That is the point of the format: a pin and rings explain coverage faster than any paragraph. What you publish should match what operations honours."
+  ],
+  [
+   "Radii in kilometres?",
+   "For European estates, yes — the rings are unit-agnostic."
+  ],
+  [
+   "Rings or postcodes?",
+   "Postcodes follow mail, rings follow distance. Marketing buys both; the map keeps them from being confused with each other."
+  ],
+  [
+   "What about online-only trade?",
+   "Delivery zones are rings by another name — the map serves them identically."
+  ],
+  [
+   "A store near a coast?",
+   "Half its rings are water; the effective catchment is the landward part, and the map shows that honestly at a glance."
+  ],
+  [
+   "How often to redraw?",
+   "When stores open, close or the offer changes — and date the published version, because an old ring is a broken promise with a map attached."
+  ],
+  [
+   "Competitor pins?",
+   "Plotting rivals' rings alongside your own is the oldest competitive habit in retail — the map does not care whose pins they are."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Ring areas: the "
+  },
+  {
+   "t": "Store Catchment Area Calculator",
+   "l": "/tools/store-catchment-area-calculator"
+  },
+  {
+   "t": "; network gaps: the "
+  },
+  {
+   "t": "Service Coverage Gap Viewer",
+   "l": "/tools/service-coverage-gap"
+  },
+  {
+   "t": "; service areas: the "
+  },
+  {
+   "t": "Service Area Map",
+   "l": "/tools/service-area-map"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "acreage-map-calculator",
   "acres-to-hectares-converter",

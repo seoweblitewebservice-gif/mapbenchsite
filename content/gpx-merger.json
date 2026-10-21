@@ -8,17 +8,154 @@
   "GPX file merger",
   "merge GPS tracks"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Merger: Combine Tracks Into One File",
+ "description": "Merge GPX files in your browser with the GPX Merger — tracks, routes and waypoints combined, each source preserved as its own element. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, three day-files of 48 KB, 120 KB and 35 KB combine into one 203 KB archive of the trip — every track still separate inside, nothing stitched into a fake continuous line.",
+ "quick_answer": "The GPX Merger combines tracks, routes and waypoints from two or more GPX files into a single file, locally in your browser, keeping each source element separate. Drop the files and download the union — one trip archive instead of fragments, without pretending separate outings were continuous.",
+ "steps_intro": "A union, not a weld:",
+ "use_cases": [
+  {
+   "title": "Trip archives",
+   "body": [
+    {
+     "t": "A week of day-files becomes the trip's single GPX — the file you share, back up and load into the "
+    },
+    {
+     "t": "GPX Route Stats",
+     "l": "/tools/gpx-route-stats"
+    },
+    {
+     "t": " for totals."
+    }
+   ]
+  },
+  {
+   "title": "Combining device outputs",
+   "body": [
+    {
+     "t": "Watch file plus phone backup plus the route you planned: three sources, one document, each part still identifiable."
+    }
+   ]
+  },
+  {
+   "title": "Building a trail library file",
+   "body": [
+    {
+     "t": "A club's season of hikes merged per-region gives newcomers one download per area instead of forty fragments."
+    }
+   ]
+  },
+  {
+   "title": "Pre-processing for other tools",
+   "body": [
+    {
+     "t": "Analyzers that take one file get the merged union — point counts, boxes and spans then describe the whole set at once."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · What 'keeping separate' means",
+   "body": [
+    {
+     "t": "File A's morning track and file B's evening track enter the merge as two <trk> elements. A viewer draws both; a stats tool sums both; nobody's software draws a phantom straight line from the morning's end to the evening's start across the lunch break."
+    }
+   ]
+  },
+  {
+   "label": "Example · Waypoints from everywhere",
+   "body": [
+    {
+     "t": "Campsites saved on the phone, summits from the watch, the bothy from a friend's file: waypoints pool into one <wpt> set — the trip's gazetteer in a single document."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What combines, what stays distinct",
+  "intro": "The merge is a set union at the element level.",
+  "columns": [
+   "Element",
+   "Merge behaviour"
+  ],
+  "rows": [
+   [
+    "Tracks (<trk>)",
+    "All carried over, as separate tracks"
+   ],
+   [
+    "Segments (<trkseg>)",
+    "Stay inside their own track — never joined across files"
+   ],
+   [
+    "Routes (<rte>)",
+    "All carried over, as separate routes"
+   ],
+   [
+    "Waypoints (<wpt>)",
+    "Pooled into the combined file"
+   ],
+   [
+    "Metadata",
+    "The merged file gets a fresh header; the sources' internal data rides with their elements"
+   ]
+  ],
+  "note": "Nothing is resampled, re-timed or re-ordered within an element — merging changes the container, not the recordings. Duplicate points across overlapping files remain duplicates; cleaning is the deduplication family's job."
+ },
+ "faq": [
+  [
+   "In what order do elements appear?",
+   "By source file, in the order you add them — each file's contents intact. Chronology inside the merged file follows your file order, so add day-files in date order for a tidy archive."
+  ],
+  [
+   "Same-named tracks?",
+   "They coexist; GPX readers distinguish tracks by position and content, not only by name. Rename before merging if your library software sorts by name."
+  ],
+  [
+   "Extensions (heart rate, power)?",
+   "Trackpoints carry their extension data with them — the channels survive merging because the points themselves are copied whole."
+  ],
+  [
+   "One file ends where another begins — joined?",
+   "No: proximity is not stitched. Two tracks that happen to touch remain two tracks, which is the truth of how they were recorded."
+  ],
+  [
+   "How many files at once?",
+   "As many as your browser's memory comfortably holds — a season of ordinary recordings is fine; a decade of 1-second tracks belongs to desktop tooling."
+  ],
+  [
+   "Does merging change timestamps?",
+   "No — every stamp is copied as recorded. If the sources disagree about clocks, that was true before the merge and stays visible after."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Totals of the union: "
+  },
+  {
+   "t": "GPX Route Stats",
+   "l": "/tools/gpx-route-stats"
+  },
+  {
+   "t": "; count it: the "
+  },
+  {
+   "t": "GPX Track Point Counter",
+   "l": "/tools/gpx-point-counter"
+  },
+  {
+   "t": "; box it: the "
+  },
+  {
+   "t": "GPX Bounding Box Tool",
+   "l": "/tools/gpx-bounding-box-tool"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

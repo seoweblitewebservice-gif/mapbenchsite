@@ -8,17 +8,165 @@
   "csv coordinate validator checker",
   "csv coordinate validator validator"
  ],
- "title": null,
- "description": null,
+ "title": "CSV Coordinate Validator: Catch Bad Rows First",
+ "description": "Validate a coordinate CSV before mapping with the CSV Coordinate Validator — missing columns, non-numeric values and out-of-range pairs caught. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a CRM export with one latitude of 140.7 and two blank longitudes fails here in seconds — instead of failing silently on the customer’s map an hour later.",
+ "quick_answer": "The CSV Coordinate Validator checks a coordinate CSV before you map it, catching missing coordinate columns, non-numeric values and latitude/longitude pairs outside WGS84 ranges. Paste the file and read the row-level verdicts — the QA step that keeps bad rows off your map.",
+ "steps_intro": "Maps forgive nothing. Validate before you plot:",
+ "use_cases": [
+  {
+   "title": "CRM and spreadsheet exports",
+   "body": [
+    {
+     "t": "Business data was never born geospatial. The validator finds the rows where an address, a note or a stray comma moved into the coordinate columns. Clean files then flow to the "
+    },
+    {
+     "t": "CSV to GeoJSON Converter",
+     "l": "/tools/csv-to-geojson-converter"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Import gatekeeping",
+   "body": [
+    {
+     "t": "Spatial databases reject or — worse — misplace bad rows. Gate the import here and the database stays trustworthy."
+    }
+   ]
+  },
+  {
+   "title": "Vendor deliverable checks",
+   "body": [
+    {
+     "t": "A purchased list’s quality is measurable: the share of invalid rows is the number the refund conversation needs."
+    }
+   ]
+  },
+  {
+   "title": "Pre-geocoding hygiene",
+   "body": [
+    {
+     "t": "Rows that already carry valid coordinates should skip geocoding entirely. Validation separates the done from the to-do before credits burn."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The three classic failures",
+   "body": [
+    {
+     "t": "Latitude 140.7 (a longitude in the wrong column), longitude ‘N/A’ (a note in a number’s chair), and an empty pair (a row that never had coordinates). Every bad file you will ever meet is variations on these three."
+    }
+   ]
+  },
+  {
+   "label": "Example · Valid but swapped",
+   "body": [
+    {
+     "t": "A row reading lat −73.98, lon 40.75 passes the range gate — latitude −73.98 exists (in the southern ocean). Validators certify form; swap-spotting needs the "
+    },
+    {
+     "t": "CSV Coordinate Bounding Box",
+     "l": "/tools/csv-coordinate-bounding-box"
+    },
+    {
+     "t": " to look wrong on the map of your expectations."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The checks, in order",
+  "intro": "What each row must survive.",
+  "columns": [
+   "Check",
+   "Catches"
+  ],
+  "rows": [
+   [
+    "Coordinate columns exist",
+    "Missing or renamed lat/lon headers"
+   ],
+   [
+    "Values parse as numbers",
+    "Text, notes, units and stray characters in numeric fields"
+   ],
+   [
+    "Latitude within ±90",
+    "Longitudes filed as latitudes, degree errors"
+   ],
+   [
+    "Longitude within ±180",
+    "Concatenated fields, projected coordinates pasted as degrees"
+   ],
+   [
+    "Both values present",
+    "Half-coordinates — the loneliest failure in mapping"
+   ]
+  ],
+  "note": "Validation is about form, not truth: a row can be valid and still be the wrong place. Provenance is checked against sources; form is checked here, completely."
+ },
+ "faq": [
+  [
+   "Which headers does it expect?",
+   "Common latitude/longitude spellings (lat, latitude, y and lon, lng, longitude, x among them). Exotic headers can be renamed in the pasted snippet — the snippet is a copy, your file stays untouched."
+  ],
+  [
+   "Does it fix the bad rows?",
+   "It names them and their failure. Fixes belong in your editor, where the row’s story is visible — a tool that silently ‘repairs’ coordinates invents geography."
+  ],
+  [
+   "Projected coordinates (UTM metres)?",
+   "Six-digit eastings fail the degree ranges loudly — that failure is the diagnosis. Convert projected data with GIS before validating here."
+  ],
+  [
+   "What about 0,0 rows?",
+   "Valid in form, famous in practice: 0,0 in the Gulf of Guinea collects every defaulted and un-geocoded row in history. The validator passes them; your eyebrow should not."
+  ],
+  [
+   "DMS text in cells?",
+   "‘40°45′N’ is text to a CSV parser. Convert to decimals first (the DMS converters here), then validate the numeric file."
+  ],
+  [
+   "Delimiter problems?",
+   "Semicolon files parse as one wide column and the coordinate columns go missing — the validator’s first check reports exactly that, which is the fix’s signpost."
+  ],
+  [
+   "How many rows can I paste?",
+   "Paste-sized files run instantly in the browser. Million-row pipelines belong to scripts — with this page defining the rules they should implement."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Convert the clean file: the "
+  },
+  {
+   "t": "CSV to GeoJSON Converter",
+   "l": "/tools/csv-to-geojson-converter"
+  },
+  {
+   "t": "; repeats: the "
+  },
+  {
+   "t": "CSV Coordinate Deduplicator",
+   "l": "/tools/csv-coordinate-deduplicator"
+  },
+  {
+   "t": "; extent smell-test: the "
+  },
+  {
+   "t": "CSV Coordinate Bounding Box",
+   "l": "/tools/csv-coordinate-bounding-box"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

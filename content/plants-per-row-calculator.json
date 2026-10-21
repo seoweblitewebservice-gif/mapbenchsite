@@ -8,17 +8,164 @@
   "plants per row calculator tool",
   "how to use plants per row calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Plants Per Row Calculator: Count Along the Row",
+ "description": "Calculate how many plants fit in one row from its length and spacing with the Plants Per Row Calculator — garden rows to field rows. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a 100-foot row at 18-inch spacing holds 66 plants — or 67 if you plant both ends, a one-plant argument every gardener has had with a calculator.",
+ "quick_answer": "The Plants Per Row Calculator divides a row's length by the in-row spacing to give the number of plants that row holds. Enter the row length and the spacing and read the count — for seed packets, transplant trays and bed planning, with the end-plant convention explained rather than hidden.",
+ "steps_intro": "Length ÷ spacing — plus one old argument about the ends:",
+ "use_cases": [
+  {
+   "title": "Garden bed planning",
+   "body": [
+    {
+     "t": "A 4 × 8 ft raised bed is three 8-ft rows of lettuce at 8-inch spacing: 12 per row, 36 per bed. The calculator turns seed-packet optimism into a layout. Whole-field populations scale up through the "
+    },
+    {
+     "t": "Plants Per Field Calculator",
+     "l": "/tools/plants-per-field-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Transplant tray counts",
+   "body": [
+    {
+     "t": "Rows × plants per row = seedlings to start, plus the nursery's customary overage. Trays come in fixed cells; the row count decides how many to sow."
+    }
+   ]
+  },
+  {
+   "title": "Vineyard and orchard rows",
+   "body": [
+    {
+     "t": "A 600-ft vine row at 8-ft spacing is 75 vines — trellis posts, drippers and replacements all derive from the same count."
+    }
+   ]
+  },
+  {
+   "title": "Checking planter settings",
+   "body": [
+    {
+     "t": "Seed monitors promise a spacing; the row count over a measured run is the ground truth the monitor is audited against at the field's edge."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The ends argument, settled honestly",
+   "body": [
+    {
+     "t": "100 ft at 18-in spacing: 100 ÷ 1.5 = 66.7 spaces. Planting strictly inside gives 66 plants; planting a plant at position zero and every 18 inches thereafter gives 67 with the last at 99 ft. Both conventions are defensible — the calculator uses full spaces (66) and this example names the difference."
+    }
+   ]
+  },
+  {
+   "label": "Example · Field-scale rows",
+   "body": [
+    {
+     "t": "A half-mile row (2,640 ft) of corn at 6.9-in spacing holds about 4,591 plants — the per-row view of the 30,303-per-acre population, useful when a single row's seed tube is the unit of failure."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Plants per 100 feet of row",
+  "intro": "Full-space counts (the calculator's convention).",
+  "columns": [
+   "In-row spacing",
+   "Per 100 ft",
+   "Per 200 ft"
+  ],
+  "rows": [
+   [
+    "6 in",
+    "200",
+    "400"
+   ],
+   [
+    "12 in",
+    "100",
+    "200"
+   ],
+   [
+    "18 in",
+    "66",
+    "133"
+   ],
+   [
+    "24 in",
+    "50",
+    "100"
+   ],
+   [
+    "36 in",
+    "33",
+    "66"
+   ]
+  ],
+  "note": "Fractional remainders are dropped — a row cannot hold two-thirds of a plant, and the shortfall collects at the row's end, where the headland forgives it."
+ },
+ "faq": [
+  [
+   "Why does my count differ by one from the calculator?",
+   "The end-plant convention: starting a plant at the very start of the row adds one whenever the division is exact or the gardener cheats the last spacing. The FAQ example shows both counts; pick the convention your planting actually follows."
+  ],
+  [
+   "Leave space at the ends?",
+   "Real rows start and end inside the field — headland room for turning, or the bed's frame. Subtract your end margins from the row length before dividing; the calculator assumes the length you give is plantable."
+  ],
+  [
+   "Double rows and twin rows?",
+   "Count each line separately: a bed with two lines is two rows sharing a length. The per-row number stays honest; the bed total is rows × per-row."
+  ],
+  [
+   "Drip emitter spacing instead of plants?",
+   "Same division — emitters per line is how drip layouts are counted, and plant-per-emitter is the design rule the count feeds."
+  ],
+  [
+   "Staggered (offset) planting?",
+   "Staggering changes the pattern along neighbouring rows, not the count within one row — this page's number stands; the field page prices the density gain."
+  ],
+  [
+   "Rows on a slope or curve?",
+   "Use the row's true length along the ground or curve, not its map projection — a curved row at the field's edge can run several percent longer than its chord."
+  ],
+  [
+   "Seed packets by weight?",
+   "Packet counts vary by variety; weigh or count a sample to calibrate seeds-per-gramme, then the row count becomes a weight at the kitchen scale's resolution."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Whole field: the "
+  },
+  {
+   "t": "Plants Per Field Calculator",
+   "l": "/tools/plants-per-field-calculator"
+  },
+  {
+   "t": "; rows in the field: the "
+  },
+  {
+   "t": "Rows Per Field Calculator",
+   "l": "/tools/rows-per-field-calculator"
+  },
+  {
+   "t": "; row length totals: the "
+  },
+  {
+   "t": "Crop Row Length Calculator",
+   "l": "/tools/crop-row-length-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-area-from-radius",

@@ -8,17 +8,200 @@
   "moon illumination calculator tool",
   "how to calculate moon illumination calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Moon Illumination Calculator: How Lit Is It?",
+ "description": "Estimate the illuminated fraction of the Moon for any date with the Moon Illumination Calculator — percent lit, phase angle and what it means. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, on 22 October 2026 the Moon computes to about 86% illuminated — bright enough to hike by and to wash out faint stars, three days before the full Moon's 100%.",
+ "quick_answer": "The Moon Illumination Calculator estimates what fraction of the Moon's face is lit for a chosen date, from its position in the synodic cycle. Enter the date and read the percent illuminated — the number deciding whether the night is dark for telescopes or bright for hiking.",
+ "steps_intro": "A percent that runs the night — from 0 at new to 100 at full:",
+ "use_cases": [
+  {
+   "title": "Astrophotography and observing plans",
+   "body": [
+    {
+     "t": "Deep-sky targets want illumination under roughly 25%; lunar photography wants the terminator drama of 30–70%. The "
+    },
+    {
+     "t": "Astronomical Twilight Calculator",
+     "l": "/tools/astronomical-twilight-calculator"
+    },
+    {
+     "t": " supplies the darkness window to pair with it."
+    }
+   ]
+  },
+  {
+   "title": "Night hiking and paddling safety",
+   "body": [
+    {
+     "t": "Above about 70% the Moon is a real light source once it is up. Combine the percent with rise times from "
+    },
+    {
+     "t": "Moonrise and Moonset",
+     "l": "/tools/moonrise-moonset"
+    },
+    {
+     "t": " before promising anyone a moonlit walk."
+    }
+   ]
+  },
+  {
+   "title": "Explaining a bright 'day Moon'",
+   "body": [
+    {
+     "t": "A pale Moon in a blue afternoon sky at 50% is the quarters doing their geometry — visible because the Sun lights it from the side while your sky is lit from above."
+    }
+   ]
+  },
+  {
+   "title": "Calendar and content planning",
+   "body": [
+    {
+     "t": "Photographers, tour operators and stargazing events schedule around the bright nights. The month view lives in the "
+    },
+    {
+     "t": "Moon Phase Calendar Map",
+     "l": "/tools/moon-phase-calendar-map"
+    },
+    {
+     "t": "."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The quarters are the halfway light",
+   "body": [
+    {
+     "t": "At first and last quarter the illumination is exactly 50% in the model — half the disc lit — even though the phase is a quarter of the cycle. The names count the cycle; the percent counts the light. Confusing them is the oldest Moon mistake."
+    }
+   ]
+  },
+  {
+   "label": "Example · Eclipse-day checks",
+   "body": [
+    {
+     "t": "The model returns 100% for 3 March 2026 — the date of a total lunar eclipse, which can only happen at full. And about 1% for 12 August 2026, the solar-eclipse date. Extremes landing on eclipse dates is how the model earns trust."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Illumination through the cycle",
+  "intro": "Computed from the phase angle, (1 − cos θ) ÷ 2 — the model's own arithmetic.",
+  "columns": [
+   "Moon age",
+   "Illumination",
+   "Phase name"
+  ],
+  "rows": [
+   [
+    "0 days",
+    "0%",
+    "New"
+   ],
+   [
+    "3.7 days",
+    "≈15%",
+    "Waxing crescent"
+   ],
+   [
+    "7.4 days",
+    "50%",
+    "First quarter"
+   ],
+   [
+    "11.1 days",
+    "≈86%",
+    "Waxing gibbous"
+   ],
+   [
+    "14.8 days",
+    "100%",
+    "Full"
+   ],
+   [
+    "18.5 days",
+    "≈86%",
+    "Waning gibbous"
+   ],
+   [
+    "22.1 days",
+    "50%",
+    "Last quarter"
+   ],
+   [
+    "25.8 days",
+    "≈15%",
+    "Waning crescent"
+   ]
+  ],
+  "note": "Percent lit is not percent bright in your sky: a 50% Moon near the horizon through haze lights far less than the number suggests. Altitude and air finish what geometry starts."
+ },
+ "faq": [
+  [
+   "Why does a 'half moon' show 50% at the quarter?",
+   "Because the geometry agrees for once: at the quarters, exactly half the visible disc is sunlit. The quarter names the cycle position (a quarter and three-quarters around), the percent names the light — they coincide at 50% by design of the sphere."
+  ],
+  [
+   "Is 100% ever exactly reached?",
+   "In the mean model, at the full-moon instant. In the real sky the Moon usually passes slightly north or south of perfect alignment, so true illumination kisses 100% briefly — eclipses are the rare exact hit."
+  ],
+  [
+   "Does my hemisphere change the percent?",
+   "No — illumination is a whole-Earth property at an instant. Hemispheres change the lit side's orientation (the Moon looks mirrored from Australia), never the fraction."
+  ],
+  [
+   "How bright is 86% in practice?",
+   "Very — within a day or two of full the difference is subtle. Landscape brightness depends more on the Moon's altitude: a high 70% Moon out-lights a low 95% one dragging through murk."
+  ],
+  [
+   "Why is the crescent's dark side sometimes faintly visible?",
+   "Earthshine: sunlight reflected off Earth lights the Moon's night side softly — 'the old Moon in the new Moon's arms'. It is strongest near new, when Earth is fullest as seen from the Moon."
+  ],
+  [
+   "Can illumination be negative or over 100?",
+   "No — the fraction is bounded by the geometry. Tools that say '-3% lit' are showing a signed phase convention, not this fraction."
+  ],
+  [
+   "How does this pair with moonrise times?",
+   "Percent tells how much light; rise and set tell when it is available. A 95% Moon that sets at 21:00 leaves a dark late night — the two tools together are the full forecast."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The age behind it: the "
+  },
+  {
+   "t": "Moon Age Calculator",
+   "l": "/tools/moon-age-calculator"
+  },
+  {
+   "t": "; when it shines: "
+  },
+  {
+   "t": "Moonrise and Moonset",
+   "l": "/tools/moonrise-moonset"
+  },
+  {
+   "t": "; the dashboard: the "
+  },
+  {
+   "t": "Moon Phase Calculator",
+   "l": "/tools/moon-phase-calculator"
+  },
+  {
+   "t": "; the month: the "
+  },
+  {
+   "t": "Moon Phase Calendar Map",
+   "l": "/tools/moon-phase-calendar-map"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "golden-hour-calculator",
   "moon-phase-calculator",

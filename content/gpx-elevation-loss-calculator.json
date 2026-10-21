@@ -8,17 +8,155 @@
   "total descent gpx",
   "gpx downhill meters"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Elevation Loss Calculator: Total Descent",
+ "description": "Sum the negative elevation changes in a GPX track with the GPX Elevation Loss Calculator — total descent from the recording. Free, in-browser.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, the profile 100 → 112 → 108 → 125 → 121 → 140 metres loses only 8 metres — the two small dips of 4 metres each — while gaining 48.",
+ "quick_answer": "The GPX Elevation Loss Calculator adds up every downward step between consecutive points in a GPX file to give the total descent. Load the file locally and read the drop — the number descents and ski days are measured by, from the recording itself.",
+ "steps_intro": "Every downward step, summed; every rise, forgiven:",
+ "use_cases": [
+  {
+   "title": "Descent-focused sports",
+   "body": [
+    {
+     "t": "Ski tours, downhill rides and point-to-point descents are bought with loss, not gain. The mirror tool is the "
+    },
+    {
+     "t": "GPX Elevation Gain Calculator",
+     "l": "/tools/gpx-elevation-gain-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Knee-aware planning",
+   "body": [
+    {
+     "t": "Descents punish knees more than climbs punish lungs. Last route's recorded loss is next route's planning datum."
+    }
+   ]
+  },
+  {
+   "title": "Checking loop honesty",
+   "body": [
+    {
+     "t": "A true loop must satisfy gain − loss = 0 (same start and finish elevation). Files that break the identity by hundreds of metres are telling you about their altitude noise."
+    }
+   ]
+  },
+  {
+   "title": "Vehicle and logistics descents",
+   "body": [
+    {
+     "t": "Brake and battery planning on mountain drives cares about cumulative descent; a recorded drive's loss is the rehearsal's data."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The sum, step by step",
+   "body": [
+    {
+     "t": "Elevations 100, 112, 108, 125, 121, 140: drops are −4 and −4, so loss = 8 m, while rises total 48 m. Gain − loss = +40 m = last minus first elevation — the identity every profile must satisfy, and a one-line audit of any platform's numbers."
+    }
+   ]
+  },
+  {
+   "label": "Example · The point-to-point day",
+   "body": [
+    {
+     "t": "Start at a 2,400 m pass, finish at a 900 m village with two 150 m re-climbs between: loss = (2,400 − 900) + 300 = 1,800 m. The descents include re-descending every re-climb — loss counts ground, not intentions."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Loss, gain and net — the identity",
+  "intro": "Three measures, one equation that must always hold: gain − loss = net change.",
+  "columns": [
+   "Measure",
+   "Definition",
+   "Point-to-point example"
+  ],
+  "rows": [
+   [
+    "Total loss",
+    "Sum of all downward steps",
+    "1,800 m"
+   ],
+   [
+    "Total gain",
+    "Sum of all upward steps",
+    "300 m"
+   ],
+   [
+    "Net change",
+    "Finish minus start elevation",
+    "−1,500 m"
+   ],
+   [
+    "Check",
+    "300 − 1,800 = −1,500 ✓",
+    "Always"
+   ]
+  ],
+  "note": "Platforms that threshold small changes lower both gain and loss together; the identity survives only if their filtering is symmetric. A broken identity is a fingerprint of one-sided processing."
+ },
+ "faq": [
+  [
+   "Why is loss not just start minus finish?",
+   "Because terrain undulates: every dip after a rise adds descent the endpoints never confess. Endpoint subtraction gives net change; loss is the accumulated downhill you actually travelled."
+  ],
+  [
+   "Does it smooth the elevation first?",
+   "The sum runs over the recorded steps as they stand. GPS altitude jitter adds phantom descents on flat ground — platforms threshold them away, which is why their loss figures sit below a raw sum like this one."
+  ],
+  [
+   "What if points have no <ele>?",
+   "They contribute no step, and sparse elevation understates loss. The honest reading notes how many points carried elevation at all."
+  ],
+  [
+   "Feet as well as metres?",
+   "Both — descents are quoted in feet by American skiers and metres by European ones, and the converter's convention covers both audiences."
+  ],
+  [
+   "Barometric versus GPS altitude?",
+   "Barometric series descend more smoothly; GPS altitude jitters, manufacturing small false losses on the flat. The file's source explains its own bias."
+  ],
+  [
+   "Loops must have loss equal to gain?",
+   "Within noise, yes — a closed loop returns to its start elevation, so gain − loss ≈ 0. A big mismatch is altitude noise confessing itself."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The way up: the "
+  },
+  {
+   "t": "GPX Elevation Gain Calculator",
+   "l": "/tools/gpx-elevation-gain-calculator"
+  },
+  {
+   "t": "; strip it: "
+  },
+  {
+   "t": "GPX Elevation Remover",
+   "l": "/tools/gpx-remove-elevation"
+  },
+  {
+   "t": "; full picture: "
+  },
+  {
+   "t": "GPX Route Stats",
+   "l": "/tools/gpx-route-stats"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

@@ -6,17 +6,155 @@
   "os grid converter",
   "ngr converter"
  ],
- "title": null,
- "description": null,
+ "title": "National Grid Reference Converter: OS Grid",
+ "description": "Convert coordinates to an Ordnance Survey grid reference with the National Grid Reference Converter — letters, digits and precision. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a GPS point anywhere in London falls in the TQ 100-kilometre square — the National Grid Reference Converter then refines it digit by digit, from a 1 km square down to a single metre.",
+ "quick_answer": "The National Grid Reference Converter turns a GPS coordinate pair into its Ordnance Survey National Grid reference — the two-letter square plus digits used on every British paper map. Enter latitude and longitude and read the reference at the precision you choose, from a 1-kilometre square to a metre.",
+ "steps_intro": "From GPS numbers to the reference a paper map understands:",
+ "use_cases": [
+  {
+   "title": "Quoting locations the British way",
+   "body": [
+    {
+     "t": "Planning applications, heritage records and walking guides cite grid references. Convert the GPS pair before you write the report — the "
+    },
+    {
+     "t": "British National Grid Helper",
+     "l": "/tools/bng-converter"
+    },
+    {
+     "t": " covers the wider workflow."
+    }
+   ]
+  },
+  {
+   "title": "Working with paper OS maps",
+   "body": [
+    {
+     "t": "Your GPS says decimals; the Landranger sheet says letters and digits. This converter is the customs post between the two Britains."
+    }
+   ]
+  },
+  {
+   "title": "Checking a recorded reference",
+   "body": [
+    {
+     "t": "A notebook reference from years ago: convert the spot's modern coordinates and compare — digit slips confess immediately."
+    }
+   ]
+  },
+  {
+   "title": "Teaching the grid",
+   "body": [
+    {
+     "t": "Students convert their school, home and summit and watch the letter squares tile the country — the grid stops being exam fog."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The precision ladder",
+   "body": [
+    {
+     "t": "Same point, four references: 4 figures name its 1 km square, 6 figures a 100 m square, 8 figures 10 m, 10 figures 1 m. Each extra digit pair divides both sides by ten — quote only the precision your source earns."
+    }
+   ]
+  },
+  {
+   "label": "Example · Letters first, always",
+   "body": [
+    {
+     "t": "A reference without its two letters is a local address with no town: 100 km squares repeat their digit patterns across Britain, so '292796' alone could sit in several squares. The converter always emits the letters."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Anatomy of a grid reference",
+  "intro": "The parts the converter produces, in order.",
+  "columns": [
+   "Part",
+   "Meaning",
+   "Scale"
+  ],
+  "rows": [
+   [
+    "Two letters",
+    "The 100 km square (the letter I is skipped)",
+    "Country narrowed to one square"
+   ],
+   [
+    "Easting digits",
+    "Distance east across the square",
+    "First half of the digits"
+   ],
+   [
+    "Northing digits",
+    "Distance north across the square",
+    "Second half"
+   ],
+   [
+    "Digit count",
+    "Precision: 4 → 1 km, 6 → 100 m, 8 → 10 m, 10 → 1 m",
+    "Even counts only"
+   ]
+  ],
+  "note": "The grid rides on the OSGB36 datum, not WGS84 — the same ground point carries slightly different numbers in each, differing by up to roughly a hundred metres across Britain. The converter's handling of that shift is declared in its method note, never hidden."
+ },
+ "faq": [
+  [
+   "Why does the letter I never appear?",
+   "It is skipped in the lettering scheme to avoid confusion with the digit 1 — a small mercy from the grid's designers that every recorder of references appreciates."
+  ],
+  [
+   "What is the grid's false origin?",
+   "The grid's zero point sits in the sea southwest of the Isles of Scilly, chosen so every easting and northing in Britain is a positive number — no minus signs on muddy notebooks."
+  ],
+  [
+   "How old is the National Grid?",
+   "It dates from the Ordnance Survey's retriangulation of Britain begun in 1936 — the framework every OS map since has been drawn on."
+  ],
+  [
+   "Does it cover Northern Ireland?",
+   "No — Northern Ireland uses the Irish Grid, a separate system with its own letter squares, covered by the Irish Grid Helper on this site."
+  ],
+  [
+   "Can a reference name a point offshore?",
+   "The projection extends over coastal waters, but references are a land habit; at sea, latitude and longitude rule."
+  ],
+  [
+   "Eastings before northings — why that order?",
+   "The standing mnemonic is 'along the corridor, then up the stairs': eastings (horizontal) are always read first, in Britain and in most grid systems."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The wider workflow: the "
+  },
+  {
+   "t": "British National Grid Helper",
+   "l": "/tools/bng-converter"
+  },
+  {
+   "t": "; the map view: the "
+  },
+  {
+   "t": "National Grid Reference Map",
+   "l": "/tools/national-grid-reference-map"
+  },
+  {
+   "t": "; from a postcode: the "
+  },
+  {
+   "t": "Postcode to National Grid Converter",
+   "l": "/tools/postcode-to-national-grid-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "arcminutes-to-decimal-degrees-converter",
   "arcseconds-to-ground-distance-calculator",

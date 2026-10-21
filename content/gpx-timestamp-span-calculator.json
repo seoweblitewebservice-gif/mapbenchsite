@@ -8,17 +8,157 @@
   "gpx timestamp span calculator tool",
   "how to calculate gpx timestamp span calculator"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Timestamp Span Calculator: First to Last",
+ "description": "Calculate the time span between the earliest and latest timestamps in a GPX file with the GPX Timestamp Span Calculator. Free, local.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, stamps running from 2026-10-04T07:00:00Z to 11:24:36Z span 15,876 seconds — 4 hours, 24 minutes, 36 seconds — the recording's full window on the clock.",
+ "quick_answer": "The GPX Timestamp Span Calculator computes the elapsed time between the earliest and latest timestamps anywhere in a GPX file. Load the file locally and read the span with its endpoints — the window durations and averages are built from.",
+ "steps_intro": "Earliest stamp, latest stamp, and the distance between them:",
+ "use_cases": [
+  {
+   "title": "Auditing a file's window",
+   "body": [
+    {
+     "t": "Before trusting any time-based statistic, read the window it came from. The "
+    },
+    {
+     "t": "GPX Duration Calculator",
+     "l": "/tools/gpx-duration-calculator"
+    },
+    {
+     "t": " consumes exactly this span; the span page shows its endpoints for inspection."
+    }
+   ]
+  },
+  {
+   "title": "Spotting wrong-clock files",
+   "body": [
+    {
+     "t": "A span beginning at 03:00 for a hike you started at 09:00 is a timezone error confessing — the "
+    },
+    {
+     "t": "GPX Shift Time Tool",
+     "l": "/tools/gpx-shift-time-tool"
+    },
+    {
+     "t": " is the repair when the offset is one clean hour."
+    }
+   ]
+  },
+  {
+   "title": "Merging multi-device days",
+   "body": [
+    {
+     "t": "Two devices' windows should overlap for one outing. Disjoint spans mean different days or different clocks — know before merging."
+    }
+   ]
+  },
+  {
+   "title": "Event and permit windows",
+   "body": [
+    {
+     "t": "A recording offered as evidence of presence stands or falls first on its window: did the file even cover the hours in question?"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Endpoints, not order",
+   "body": [
+    {
+     "t": "The span reads earliest and latest wherever they sit in the document. A file whose segments were appended out of order still yields its true window — the calculator sorts the evidence instead of trusting the filing."
+    }
+   ]
+  },
+  {
+   "label": "Example · The span that exposes the merge",
+   "body": [
+    {
+     "t": "Two outings merged carelessly span 26 hours with a night's sleep inside. The span does not object — it reports — and the overnight canyon in the middle is the reader's clue that averages over this file are fiction."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Span versus duration — the same window, two framings",
+  "intro": "Sibling tools, deliberately overlapping jobs.",
+  "columns": [
+   "",
+   "Timestamp span (this tool)",
+   "Duration"
+  ],
+  "rows": [
+   [
+    "Reports",
+    "Earliest instant, latest instant, and the elapsed between",
+    "The elapsed, as the headline"
+   ],
+   [
+    "Best for",
+    "Inspecting and auditing the window itself",
+    "Quoting how long the outing lasted"
+   ],
+   [
+    "Timezones",
+    "Endpoints shown in UTC (Z), as GPX stores them",
+    "Timezone-free by construction"
+   ]
+  ],
+  "note": "GPX timestamps are UTC ISO 8601 instants. Local readings of the endpoints depend on the viewer's zone; the span between them never does."
+ },
+ "faq": [
+  [
+   "What if only some points carry timestamps?",
+   "The span is computed from the stamps that exist. Points without <time> neither extend nor shrink the window — and their existence is worth knowing, since time-based tools will skip them silently."
+  ],
+  [
+   "A single timestamp in the whole file?",
+   "The span is zero — one instant makes a window of no width. The tool reports the instant and the zero honestly."
+  ],
+  [
+   "Segments days apart?",
+   "The span covers the whole gulf, days included. Whether that is one expedition or two files' accident is context the reader supplies."
+  ],
+  [
+   "Fractional seconds?",
+   "Honoured where present — some devices stamp tenths. The span's precision follows the file's finest stamps."
+  ],
+  [
+   "Stamps in local time (no Z)?",
+   "Sloppy writers omit the Z or write offsets. The span arithmetic treats the stamps as one consistent frame; if a file mixes frames, its window is unreliable in a way no calculator can launder."
+  ],
+  [
+   "Can the span be negative?",
+   "No — earliest-to-latest is positive by construction. A file whose document order runs backwards still yields its true positive window, with the disorder visible in its endpoints."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Quote it: the "
+  },
+  {
+   "t": "GPX Duration Calculator",
+   "l": "/tools/gpx-duration-calculator"
+  },
+  {
+   "t": "; repair it: the "
+  },
+  {
+   "t": "GPX Shift Time Tool",
+   "l": "/tools/gpx-shift-time-tool"
+  },
+  {
+   "t": "; strip it: the "
+  },
+  {
+   "t": "GPX Timestamp Remover",
+   "l": "/tools/gpx-remove-timestamps"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

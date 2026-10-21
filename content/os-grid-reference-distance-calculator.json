@@ -7,17 +7,166 @@
   "os grid distance calculator",
   "ngr distance"
  ],
- "title": null,
- "description": null,
+ "title": "OS Grid Reference Distance Calculator",
+ "description": "Measure straight-line distance between two OS grid references with the OS Grid Reference Distance Calculator — eastings and northings, exactly. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, TQ 300 800 to TQ 330 840 is exactly 5.00 km — a 3-4-5 triangle hiding inside London's grid: 3 km east, 4 km north, 5 km between the points.",
+ "quick_answer": "The OS Grid Reference Distance Calculator measures the straight-line distance between two Ordnance Survey grid references by converting them to eastings and northings and applying Pythagoras. Enter both references and read the distance in metres, kilometres or miles — the grid's own flat geometry, exact within the references' precision.",
+ "steps_intro": "Grid references are coordinates in disguise. Subtract, square, root:",
+ "use_cases": [
+  {
+   "title": "Walking route checks",
+   "body": [
+    {
+     "t": "Start and finish references on a Landranger map become a crow-flies distance in seconds — context for the winding path the "
+    },
+    {
+     "t": "Trail Distance Estimator",
+     "l": "/tools/trail-distance-estimator"
+    },
+    {
+     "t": " prices properly."
+    }
+   ]
+  },
+  {
+   "title": "Archaeology and survey logs",
+   "body": [
+    {
+     "t": "Finds logged by grid reference get their separations computed without converting to lat/lon first — the grid is self-sufficient for distances. Letters and squares are explained by the "
+    },
+    {
+     "t": "British National Grid Helper",
+     "l": "/tools/bng-converter"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Planning and site work",
+   "body": [
+    {
+     "t": "Two site corners as references: the diagonal is a subtraction away, in the units the drawings already use."
+    }
+   ]
+  },
+  {
+   "title": "Teaching grid skills",
+   "body": [
+    {
+     "t": "Students verify their map-measured distances against the computed ones — the 3-4-5 example on this page is the classic classroom check."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · A 3-4-5 triangle in London",
+   "body": [
+    {
+     "t": "TQ 300 800 → easting 530,000, northing 180,000. TQ 330 840 → 533,000 and 184,000. Differences: 3,000 m east, 4,000 m north; distance = √(3,000² + 4,000²) = 5,000 m exactly."
+    }
+   ]
+  },
+  {
+   "label": "Example · Precision sets the floor",
+   "body": [
+    {
+     "t": "Two 6-figure references locate their points within 100 m squares, so their distance carries up to ~140 m of inherited fuzz. Ten-figure references (1 m squares) make the same calculation survey-crisp. The distance cannot be better than the references."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "From reference to metres",
+  "intro": "How each part of a reference becomes a number.",
+  "columns": [
+   "Reference part",
+   "Becomes",
+   "Example (TQ 330 840)"
+  ],
+  "rows": [
+   [
+    "Two letters",
+    "The 100 km square's origin",
+    "TQ origin: 500,000 E, 100,000 N"
+   ],
+   [
+    "First digit group",
+    "Easting offset inside the square",
+    "330 → +33,000 m"
+   ],
+   [
+    "Second digit group",
+    "Northing offset",
+    "840 → +84,000 m"
+   ],
+   [
+    "Total",
+    "Absolute easting/northing",
+    "533,000 E, 184,000 N"
+   ]
+  ],
+  "note": "Within Britain the grid is a plane, so distances are plain Pythagoras — no spherical correction is needed at grid scale, which is the grid's founding convenience."
+ },
+ "faq": [
+  [
+   "Which references can I enter?",
+   "Standard National Grid references with a two-letter square and an even number of digits — 4, 6, 8 or 10 figures are the usual precisions."
+  ],
+  [
+   "Different letter squares?",
+   "Fine — both references resolve to absolute eastings/northings first, so cross-square distances (even across the whole country) compute identically."
+  ],
+  [
+   "Why not measure on the map with a ruler?",
+   "You can — the calculator is the same geometry without the ruler's parallax and the paper's stretch. Checking one against the other is good practice either way."
+  ],
+  [
+   "Is this the walking distance?",
+   "No — it is the straight line between the points. Paths, roads and terrain only add length; treat this as the floor every real route exceeds."
+  ],
+  [
+   "Metres or kilometres or miles?",
+   "All three are reported or convertible — grid natives think in metres and kilometres; the mile figure rides along for road-brain translation."
+  ],
+  [
+   "Northern Ireland references?",
+   "The Irish Grid is a separate system with its own lettering — the Irish Grid Helper covers it; mixing the two systems' references produces confident nonsense."
+  ],
+  [
+   "What datum sits under the grid?",
+   "OSGB36. GPS lat/lon (WGS84) for the same ground can sit up to roughly a hundred metres away from the grid's reading — the BNG helper explains the shift."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The grid itself: the "
+  },
+  {
+   "t": "British National Grid Helper",
+   "l": "/tools/bng-converter"
+  },
+  {
+   "t": "; Ireland: the "
+  },
+  {
+   "t": "Irish Grid Helper",
+   "l": "/tools/irish-grid-helper"
+  },
+  {
+   "t": "; global grids: the "
+  },
+  {
+   "t": "MGRS Converter",
+   "l": "/tools/mgrs-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "airport-distance-calculator",
   "airport-midpoint-by-coordinates",

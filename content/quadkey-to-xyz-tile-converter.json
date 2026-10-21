@@ -8,17 +8,167 @@
   "quadkey to xyz tile converter tool",
   "how to calculate quadkey to xyz tile converter"
  ],
- "title": null,
- "description": null,
+ "title": "Quadkey to XYZ Tile Converter: Decode the Key",
+ "description": "Decode a Bing quadkey into its XYZ tile numbers with the Quadkey to XYZ Tile Converter — zoom from length, x and y from the bits. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, quadkey 032010110132021 decodes to zoom 15, tile x 9649, y 12314 — Times Square's tile, recovered from a single string of digits 0–3.",
+ "quick_answer": "The Quadkey to XYZ Tile Converter decodes a quadkey string into the tile it names: the zoom (the string's length) and the x and y tile numbers (its interleaved bits, unpicked). Paste a quadkey and read the XYZ address — the translation Bing-keyed data needs for the tile world.",
+ "steps_intro": "A string walks in; three numbers walk out:",
+ "use_cases": [
+  {
+   "title": "Joining Bing-keyed datasets",
+   "body": [
+    {
+     "t": "Statistics and imagery published by quadkey become XYZ-addressable rows after this decode — then the "
+    },
+    {
+     "t": "Latitude Longitude to Map Tile Calculator",
+     "l": "/tools/lat-lon-to-map-tile-calculator"
+    },
+    {
+     "t": "'s world can consume them."
+    }
+   ]
+  },
+  {
+   "title": "Debugging tile pipelines",
+   "body": [
+    {
+     "t": "A quadkey that decodes to the wrong ocean exposes flipped bits or stripped leading zeros upstream."
+    }
+   ]
+  },
+  {
+   "title": "Reading logs and URLs",
+   "body": [
+    {
+     "t": "Quadkeys hide in tile URLs and cache keys; decoding one tells you which geography a request actually served."
+    }
+   ]
+  },
+  {
+   "title": "Verifying an encoder",
+   "body": [
+    {
+     "t": "Round-trip it: encode with the "
+    },
+    {
+     "t": "XYZ Tile to Quadkey Converter",
+     "l": "/tools/xyz-tile-to-quadkey-converter"
+    },
+    {
+     "t": ", decode here, and the identity must hold — the pair is its own test suite."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Unpicking the bits",
+   "body": [
+    {
+     "t": "Each quadkey digit contributes one bit to x and one to y, most significant first: digit 3 sets both bits, 1 sets x's, 2 sets y's, 0 sets neither. Fifteen digits unpick into x 9649 and y 12314 exactly."
+    }
+   ]
+  },
+  {
+   "label": "Example · The stripped-zero disaster",
+   "body": [
+    {
+     "t": "'32010110132021' (a leading zero eaten by a spreadsheet) decodes to a zoom-14 tile in a different place — valid-looking, wholly wrong. Quadkeys are strings; treat them as strings."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The decoding, digit by digit",
+  "intro": "What each digit contributes at its level.",
+  "columns": [
+   "Digit",
+   "x bit",
+   "y bit",
+   "Quadrant"
+  ],
+  "rows": [
+   [
+    "0",
+    "0",
+    "0",
+    "Northwest"
+   ],
+   [
+    "1",
+    "1",
+    "0",
+    "Northeast"
+   ],
+   [
+    "2",
+    "0",
+    "1",
+    "Southwest"
+   ],
+   [
+    "3",
+    "1",
+    "1",
+    "Southeast"
+   ]
+  ],
+  "note": "Zoom is the string's length — no separate z field exists to disagree with the digits, one of the format's quiet elegances."
+ },
+ "faq": [
+  [
+   "How long can a quadkey be?",
+   "Bing's system defines up to 23 digits (zoom 23). Real datasets rarely pass the high teens — each digit quadruples the tile count."
+  ],
+  [
+   "Invalid characters?",
+   "Anything outside 0–3 is not a quadkey digit — the converter flags it rather than guessing. Letters mean you are holding a geohash or another system entirely."
+  ],
+  [
+   "Leading zeros lost in my spreadsheet.",
+   "The classic injury. Pad left with zeros to the intended zoom if you know it; if you do not, the decode is ambiguous between zooms — a data-loss lesson the whole industry has learned once."
+  ],
+  [
+   "Does it handle TMS-flipped data?",
+   "Quadkeys are defined on the XYZ (unflipped) grid. TMS-derived keys need their y un-flipped before or after decoding — know your source stack."
+  ],
+  [
+   "The decoded tile's bounds?",
+   "The Map Tile Bounds Calculator turns z/x/y into the tile's geographic edges — decode first, bound second."
+  ],
+  [
+   "Centre coordinate of the decoded tile?",
+   "The Map Tile Center Calculator — the pipeline is decode, then locate."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Reverse: the "
+  },
+  {
+   "t": "XYZ Tile to Quadkey Converter",
+   "l": "/tools/xyz-tile-to-quadkey-converter"
+  },
+  {
+   "t": "; the bridge: the "
+  },
+  {
+   "t": "Quadkey / Tile XYZ Helper",
+   "l": "/tools/quadkey-tile-helper"
+  },
+  {
+   "t": "; bounds: the "
+  },
+  {
+   "t": "Map Tile Bounds Calculator",
+   "l": "/tools/map-tile-bounds-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "city-from-coordinates",
   "coordinate-bounding-box-generator",

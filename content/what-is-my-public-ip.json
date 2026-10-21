@@ -6,16 +6,166 @@
   "public ip",
   "my ip address"
  ],
- "title": null,
- "description": null,
+ "title": "What Is My Public IP? Your Address, Explained",
+ "description": "Answer 'What Is My Public IP?' instantly — see the public address your connection presents to the internet, and what it does and does not reveal. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
- "more_tools": []
+ "summary_sentence": "For example, the address shown is the one every website you visit already sees — which is why checking it with a VPN on and off is the quickest privacy sanity check there is.",
+ "quick_answer": "What Is My Public IP? is the question every connection answers silently — this page shows you the address your network presents to the internet — the one websites see when you connect. Read it here, with what it reveals — and what it never can (your name or street).",
+ "steps_intro": "The address the internet sees when it looks at you:",
+ "use_cases": [
+  {
+   "title": "VPN sanity checks",
+   "body": [
+    {
+     "t": "VPN on: the page should show the exit city's address. VPN off: your ISP's. Any other result is a leak or a misconfiguration worth knowing about now — the general lookup is the "
+    },
+    {
+     "t": "IP Address Lookup",
+     "l": "/tools/ip-address-lookup"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Remote-access setup",
+   "body": [
+    {
+     "t": "Whitelisting your home or office connection for a server starts with this number — and the knowledge that it may change when your ISP reassigns it."
+    }
+   ]
+  },
+  {
+   "title": "Support calls",
+   "body": [
+    {
+     "t": "“What IP are you coming from?” is support's way of finding your session in their logs. This page is the answer, ready to read aloud."
+    }
+   ]
+  },
+  {
+   "title": "Understanding shared addresses",
+   "body": [
+    {
+     "t": "Offices, schools and carrier networks put many people behind one public address (NAT) — the page showing the same number on every desk is the architecture working, not a fault."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · On and off the VPN",
+   "body": [
+    {
+     "t": "Two refreshes, two addresses, two geographies — the pair of results is the entire privacy model of a VPN in one gesture: sites see the exit, not you. If both refreshes agree while the VPN claims to run, something is leaking."
+    }
+   ]
+  },
+  {
+   "label": "Example · The number changes — whose fault?",
+   "body": [
+    {
+     "t": "Most home connections hold dynamic addresses that rotate on reconnects or lease cycles. Yesterday's address being different is your ISP's normal housekeeping, not an intruder — security alerts live elsewhere."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Your public IP, decoded",
+  "intro": "What the displayed address is made of.",
+  "columns": [
+   "Aspect",
+   "Reality"
+  ],
+  "rows": [
+   [
+    "Whose address it is",
+    "Your network's exit point — router, carrier gateway or VPN server"
+   ],
+   [
+    "What sites learn from it",
+    "Network owner, rough geography, address family (IPv4/IPv6)"
+   ],
+   [
+    "What it never carries",
+    "Your name, account or street address"
+   ],
+   [
+    "How stable it is",
+    "Often sticky for months at home; changes on VPN, network or ISP reassignment"
+   ],
+   [
+    "How many exist",
+    "IPv4: 4,294,967,296 total — the scarcity that NAT and IPv6 answer"
+   ]
+  ],
+  "note": "This page reflects the connection that loaded it: open it through a different network (phone off Wi-Fi, say) and you are a different address. There is no single 'your IP' independent of the path taken."
+ },
+ "faq": [
+  [
+   "Is my public IP the same as my device's IP?",
+   "No — your device usually holds a private address (192.168…) inside your network; the router translates it to the one public address this page shows. The distinction is NAT, and it is why the whole street can share one public number."
+  ],
+  [
+   "Can someone find my home from this address?",
+   "Not from the address alone: public data resolves it to a network and an approximate area. Precise subscriber details sit with the ISP, released under legal process — the honest boundary, again."
+  ],
+  [
+   "Why does the page show IPv6 sometimes?",
+   "If your connection offers both families, browsers pick per site — the address displayed is the family that actually carried this page load. Dual-stack connections genuinely have two public identities."
+  ],
+  [
+   "My IP says a different city than mine.",
+   "Carrier and ISP routing centres concentrate addresses in hub cities. The shown geography is your network's, and for mobile connections it can sit a state away without anything being wrong."
+  ],
+  [
+   "Should I hide my IP?",
+   "A VPN shifts what sites see to the VPN's exit — a legitimate privacy tool with real trade-offs (speed, trust moved to the provider). This page is the measuring instrument either way: it shows what the world sees, so you can verify the choice works."
+  ],
+  [
+   "What is a static IP, and do I need one?",
+   "A fixed address that never rotates — sold by ISPs for servers and remote access. Most households neither have nor need one; dynamic addresses changing is normal, documented above."
+  ],
+  [
+   "Does the address reveal my browsing?",
+   "No — the address identifies a connection point, not activity. What you did on a site is that site's logs' business; the IP is merely the return address on the envelope."
+  ],
+  [
+   "The number changed mid-day.",
+   "Lease renewal, router reboot or carrier renumbering — all mundane. If it changes only when you toggle the VPN, that is the VPN working; if it changes despite it, check for leaks."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Any address: the "
+  },
+  {
+   "t": "IP Address Lookup",
+   "l": "/tools/ip-address-lookup"
+  },
+  {
+   "t": "; your device location: "
+  },
+  {
+   "t": "Find My Location",
+   "l": "/tools/find-my-location"
+  },
+  {
+   "t": "; the point's record: the "
+  },
+  {
+   "t": "Coordinates Lookup Tool",
+   "l": "/tools/coordinates-lookup-tool"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "ip-address-lookup",
+  "what-city-am-i-in",
+  "timezone-map-finder",
+  "latitude-longitude-finder"
+ ]
 }

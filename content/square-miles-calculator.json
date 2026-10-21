@@ -6,17 +6,173 @@
   "sq mi calculator",
   "area square miles"
  ],
- "title": null,
- "description": null,
+ "title": "Square Miles Calculator: Drawn Region Areas",
+ "description": "Measure a drawn region's area in square miles with the Square Miles Calculator — regions, parks and study zones, with other units alongside. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, New York's Central Park measures 843 acres — 1.317 square miles, the drawn-region arithmetic this calculator performs on any outline you give it.",
+ "quick_answer": "The Square Miles Calculator measures the area of a region you draw or define, reported in square miles with acres and square kilometres alongside. Draw the boundary for a park, study zone or territory and read its true ground area — not the bounding box's flattering overestimate.",
+ "steps_intro": "Outline the ground; the area follows the outline:",
+ "use_cases": [
+  {
+   "title": "Parks, estates and study zones",
+   "body": [
+    {
+     "t": "Irregular regions have no length × width. The drawn measurement is the honest one — the rectangle tools ("
+    },
+    {
+     "t": "Rectangular Lot Acreage Calculator",
+     "l": "/tools/rectangular-lot-acreage-calculator"
+    },
+    {
+     "t": ") serve the rectangular minority."
+    }
+   ]
+  },
+  {
+   "title": "Territory and district sizing",
+   "body": [
+    {
+     "t": "Political and sales regions drawn by their real boundaries get true areas — feed them to the "
+    },
+    {
+     "t": "Sales Territory Area Calculator",
+     "l": "/tools/sales-territory-area-calculator"
+    },
+    {
+     "t": " comparisons."
+    }
+   ]
+  },
+  {
+   "title": "Environmental reporting",
+   "body": [
+    {
+     "t": "Habitat patches, flood zones and burn scars are reported in square miles and hectares — drawn areas, converted cleanly, with the boundary stated."
+    }
+   ]
+  },
+  {
+   "title": "Checking published areas",
+   "body": [
+    {
+     "t": "A region's claimed area against a fresh traced outline: disagreements usually trace to boundary vintage, and now you can show which boundary gives which number."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The bounding-box lie",
+   "body": [
+    {
+     "t": "A diagonal region's bounding box can hold twice the region's true area. Anyone quoting the box's area for a diagonal county is inflating by geometry, not by malice — the drawn measurement is the correction."
+    }
+   ]
+  },
+  {
+   "label": "Example · Units in one breath",
+   "body": [
+    {
+     "t": "Central Park: 843 acres = 1.317 sq mi = 3.41 km². One outline, three dialects — the calculator reports them together so no audience converts alone."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Square-mile anchors",
+  "intro": "Sizes that calibrate the unit in the mind.",
+  "columns": [
+   "Place or thing",
+   "Area"
+  ],
+  "rows": [
+   [
+    "One acre",
+    "0.00156 sq mi"
+   ],
+   [
+    "Central Park, New York",
+    "1.317 sq mi"
+   ],
+   [
+    "A US land-survey township",
+    "36 sq mi"
+   ],
+   [
+    "Los Angeles (city)",
+    "469 sq mi"
+   ],
+   [
+    "Delaware (land)",
+    "1,949 sq mi"
+   ],
+   [
+    "Yellowstone National Park",
+    "3,468 sq mi"
+   ]
+  ],
+  "note": "1 sq mi = 640 acres = 2.590 km² exactly-ish (2.58999). Drawn areas inherit the boundary's precision — tracing care is the accuracy budget."
+ },
+ "faq": [
+  [
+   "How exact is a drawn area?",
+   "As exact as the boundary you trace and the data under it. Points placed carefully on a good map give areas good to a fraction of a percent — plenty for planning, short of legal survey."
+  ],
+  [
+   "Land only, or water included?",
+   "Your outline decides: trace the shoreline for land area, the full boundary for total. Published 'areas' mix conventions; yours can state its own."
+  ],
+  [
+   "Acres and km² too?",
+   "Yes — the result reports the family together (acres, sq mi, km², hectares) because audiences differ."
+  ],
+  [
+   "Islands and multi-part regions?",
+   "Draw each part and add — or the map's region tools handle multi-polygons where supported. The arithmetic is addition either way."
+  ],
+  [
+   "Why not just use the official figure?",
+   "When one exists and suits, do. Drawing earns its keep for custom regions — study zones, proposed districts, your own boundary that no office has measured."
+  ],
+  [
+   "Boundary follows a river's centre or bank?",
+   "Your trace, your convention — centre-line is the survey habit. State the choice next to the number."
+  ],
+  [
+   "Tiny regions?",
+   "Zoom in and trace carefully; the calculator's arithmetic is scale-free, and small polygons deserve the same vertex care as counties."
+  ],
+  [
+   "Can I redo a boundary?",
+   "Always — the outline is editable until the area is quoted; after quoting, save the outline beside the number so the figure stays reproducible."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Territories: the "
+  },
+  {
+   "t": "Sales Territory Area Calculator",
+   "l": "/tools/sales-territory-area-calculator"
+  },
+  {
+   "t": "; convert areas: the "
+  },
+  {
+   "t": "Square Miles to Square Kilometers Converter",
+   "l": "/tools/square-miles-to-square-kilometers-converter"
+  },
+  {
+   "t": "; acreage drawn: the "
+  },
+  {
+   "t": "Acreage Map Calculator",
+   "l": "/tools/acreage-map-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "circle-area-from-radius",
   "circle-circumference-from-radius",
