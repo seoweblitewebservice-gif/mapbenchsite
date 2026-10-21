@@ -21,6 +21,7 @@ import { FLAGSHIP_TOOLS } from "@/data/toolsFlagship";
 import { CENSUS_US_TOOLS } from "@/data/toolsCensusUS";
 import { CENSUS_EXPLORER_TOOLS } from "@/data/toolsCensusExplorer";
 import { LIVE_SEO_OVERRIDES } from "@/data/toolsLiveSeoOverrides";
+import { LIST_ADDITIONS } from "@/data/toolsListAdditions";
 
 export type CategoryId =
   | "location" | "distance" | "radius" | "routing" | "coordinates"
@@ -80,6 +81,7 @@ const RAW_TOOLS: ToolDef[] = [
   ...CENSUS_US_TOOLS,
   ...CENSUS_EXPLORER_TOOLS,
   ...LIVE_SEO_OVERRIDES,
+  ...LIST_ADDITIONS,
 ];
 
 const canonicalTools = new Map<string, ToolDef>();
