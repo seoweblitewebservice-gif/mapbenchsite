@@ -1,0 +1,30 @@
+{
+ "slug": "encoded-polyline-encoder",
+ "primary_keyword": "Encoded Polyline Encoder",
+ "secondary_keywords": [
+  "encoded polyline encoder online",
+  "free encoded polyline encoder",
+  "encoded polyline encoder calculator",
+  "encoded polyline encoder tool",
+  "how to calculate encoded polyline encoder"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "csv-coordinate-bounding-box",
+  "csv-coordinate-centroid-calculator",
+  "csv-coordinate-deduplicator",
+  "csv-coordinate-validator",
+  "csv-latlng-validator",
+  "csv-row-counter"
+ ]
+}

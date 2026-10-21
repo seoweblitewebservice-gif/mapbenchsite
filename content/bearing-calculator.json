@@ -1,0 +1,199 @@
+{
+ "slug": "bearing-calculator",
+ "primary_keyword": "Bearing Calculator",
+ "secondary_keywords": [
+  "bearing",
+  "compass direction",
+  "bearing calculator online"
+ ],
+ "title": "Bearing Calculator: Initial and Reverse Bearings",
+ "description": "Get the great-circle initial bearing and reverse bearing between two points with the Bearing Calculator, plus the distance in miles and km. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, New York to London starts on a bearing of approx. 51.4° — northeast, not east — while the return trip starts at 287.9°, because a great circle is not a two-way straight line on the map.",
+ "quick_answer": "The Bearing Calculator works out the direction between two points on the Earth: the initial great-circle bearing you set off on, the reverse bearing for the way back, and the distance between them in miles and kilometres. Set two places and read the three numbers from one spherical calculation.",
+ "steps_intro": "A bearing is a promise about direction that only spherical geometry can keep. Two steps:",
+ "use_cases": [
+  {
+   "title": "Hiking and outdoor navigation",
+   "body": [
+    {
+     "t": "A compass course between two waypoints starts as a calculated bearing. Get it here, then correct it for magnetic declination before trusting the needle — the "
+    },
+    {
+     "t": "Magnetic Declination",
+     "l": "/tools/magnetic-declination"
+    },
+    {
+     "t": " tool handles that step."
+    }
+   ]
+  },
+  {
+   "title": "Radio and antenna pointing",
+   "body": [
+    {
+     "t": "Amateur radio operators and dish installers aim along great-circle bearings: the short path to a distant station is the bearing this page computes, not the direction a flat map suggests."
+    }
+   ]
+  },
+  {
+   "title": "Sailing and flight planning study",
+   "body": [
+    {
+     "t": "The initial bearing is the first heading of a great-circle passage. Watching how it differs from the reverse bearing is the fastest way to understand why ocean routes are planned as a sequence of waypoints."
+    }
+   ]
+  },
+  {
+   "title": "Surveying and GIS checks",
+   "body": [
+    {
+     "t": "When a dataset gives you two coordinates and a claimed direction, this calculator is the independent check — same formula, no shared code path with your GIS."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · United States",
+   "body": [
+    {
+     "t": "New York → Chicago: distance approx. 711.0 miles (1,144.3 km). Miami → New York starts at approx. 18.4° — just east of north — which matches the coastal shape of the route even though the journey feels purely “up the coast”."
+    }
+   ]
+  },
+  {
+   "label": "Example · Europe and beyond",
+   "body": [
+    {
+     "t": "London Heathrow → New York JFK starts at approx. 287.9° — west-northwest — while the outward JFK → Heathrow leg starts at 51.4°. The pair is the cleanest classroom demonstration that great-circle bearings are not mirror images."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reference bearings between major airports",
+  "intro": "Initial bearings computed with the standard spherical formula from published coordinates — approx. values you can reproduce for any pair in the tool.",
+  "columns": [
+   "From → To",
+   "Initial bearing",
+   "Reverse initial",
+   "Distance (mi)"
+  ],
+  "rows": [
+   [
+    "New York JFK → London Heathrow",
+    "51.4°",
+    "287.9°",
+    "3,442.4"
+   ],
+   [
+    "New York JFK → Los Angeles LAX",
+    "273.8°",
+    "65.9°",
+    "2,469.5"
+   ],
+   [
+    "Miami → New York JFK",
+    "18.4°",
+    "202.0°",
+    "1,091.7"
+   ],
+   [
+    "San Francisco → Chicago O'Hare",
+    "69.7°",
+    "272.2°",
+    "1,841.8"
+   ],
+   [
+    "London Heathrow → Paris CDG",
+    "140.9°",
+    "323.2°",
+    "215.6"
+   ],
+   [
+    "London Heathrow → Frankfurt",
+    "100.6°",
+    "287.6°",
+    "406.1"
+   ],
+   [
+    "Paris CDG → Frankfurt",
+    "73.0°",
+    "257.5°",
+    "278.9"
+   ],
+   [
+    "Los Angeles LAX → San Francisco",
+    "319.9°",
+    "137.6°",
+    "337.8"
+   ]
+  ],
+  "note": "Reverse initial means the bearing you start on for the return journey — not the outward bearing plus 180°, a difference that grows with distance and latitude."
+ },
+ "faq": [
+  [
+   "True bearing or magnetic bearing — which is this?",
+   "True. Bearings here are measured from true (geographic) north on the sphere. A compass reads magnetic north; the difference at your location is its magnetic declination, which you must apply before walking the bearing."
+  ],
+  [
+   "Why does the bearing change along the route?",
+   "A great circle crosses each meridian at a different angle. Only the initial bearing is a single number; a long route is a continuously changing heading, which is why navigators break it into waypoint legs."
+  ],
+  [
+   "What is the reverse bearing used for?",
+   "Planning the return: it is the heading you start on when travelling back. Because the sphere curves, it is not simply the outward bearing plus or minus 180°."
+  ],
+  [
+   "How is the bearing measured?",
+   "Clockwise from true north, 0° to 360°: 0° north, 90° east, 180° south, 270° west. The formula uses the two points' latitudes and the longitude difference on the sphere."
+  ],
+  [
+   "Can I use it for short distances, like across a town?",
+   "Yes — at short range the great-circle and flat-map answers converge. The same calculation serves a 2 km hike and a 5,000 km flight; only the map's distortion changes."
+  ],
+  [
+   "What if both points are on the equator or a meridian?",
+   "Those are the tidy cases: along the equator due east or west stays 90°/270°, and along a meridian the bearing is a constant 0° or 180° all the way."
+  ],
+  [
+   "Does the calculator give a rhumb-line bearing instead?",
+   "No — this is the great-circle (shortest path) bearing. A rhumb line holds one constant bearing but travels further; for that model use the rhumb-line tools in the coordinates section."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "See the same geometry drawn, in the "
+  },
+  {
+   "t": "Compass Bearing Visualizer",
+   "l": "/tools/compass-bearing-visualizer"
+  },
+  {
+   "t": "; take the dedicated starting-azimuth version in the "
+  },
+  {
+   "t": "Initial Great Circle Bearing Calculator",
+   "l": "/tools/initial-great-circle-bearing-calculator"
+  },
+  {
+   "t": "; and correct any bearing for the compass with "
+  },
+  {
+   "t": "Magnetic Declination",
+   "l": "/tools/magnetic-declination"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "compass-bearing-visualizer",
+  "competitor-distance-map",
+  "coordinate-distance-table-generator",
+  "crow-flies-distance",
+  "distance-between-cities",
+  "distance-between-zip-codes"
+ ]
+}

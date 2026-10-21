@@ -1,0 +1,28 @@
+{
+ "slug": "nearby-places-finder",
+ "primary_keyword": "Nearby Places Finder",
+ "secondary_keywords": [
+  "nearby places",
+  "places near me",
+  "amenities near"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "nearest-postcode-from-list",
+  "population-density-compare",
+  "population-within-radius",
+  "us-county-demographic-explorer",
+  "zip-codes-by-state-county-city",
+  "zip-codes-within-radius"
+ ]
+}

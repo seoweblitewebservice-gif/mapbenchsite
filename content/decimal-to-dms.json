@@ -1,0 +1,186 @@
+{
+ "slug": "decimal-to-dms",
+ "primary_keyword": "Decimal to DMS",
+ "secondary_keywords": [
+  "degrees minutes seconds",
+  "decimal to dms online",
+  "free decimal to dms"
+ ],
+ "title": "Decimal to DMS Converter: Charts and Forms",
+ "description": "Convert decimal latitude and longitude to degrees-minutes-seconds with Decimal to DMS — hemisphere letters included, chart-ready. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 40.7580, −73.9855 becomes 40°45′28.8″N, 73°59′07.8″W — the dress that paper charts, legal descriptions and older GPS units still insist on.",
+ "quick_answer": "Decimal to DMS converts decimal latitude and longitude into degrees-minutes-seconds strings for charts and forms. Type the decimal pair and read the DMS with hemisphere letters — the classical dress of coordinates, produced exactly, without the hand-carry arithmetic that makes manual conversion an error farm.",
+ "steps_intro": "Decimals in, classical coordinates out:",
+ "use_cases": [
+  {
+   "title": "Chart and map annotation",
+   "body": [
+    {
+     "t": "Annotating a position on a printed chart or in a logbook calls for DMS — convert once, write once, correctly. The reverse lane is "
+    },
+    {
+     "t": "DMS to Decimal",
+     "l": "/tools/dms-to-decimal"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Legal and official forms",
+   "body": [
+    {
+     "t": "Property descriptions, permits and filings still demand DMS in many jurisdictions. The converter's output pastes without retyping digits."
+    }
+   ]
+  },
+  {
+   "title": "Older equipment",
+   "body": [
+    {
+     "t": "Legacy GPS units and radios programmed in DMS meet modern decimal data here — the translator between generations of kit."
+    }
+   ]
+  },
+  {
+   "title": "Checking published coordinates",
+   "body": [
+    {
+     "t": "A guidebook's DMS against your decimal log: convert yours and compare strings — mismatches show at the seconds, where typos live."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Times Square in DMS",
+   "body": [
+    {
+     "t": "40.7580 → 40°45′28.8″N (0.7580 × 60 = 45.48′; 0.48 × 60 = 28.8″). And −73.9855 → 73°59′07.8″W (0.9855 × 60 = 59.13′; 0.13 × 60 = 7.8″). Every carry shown, none fumbled."
+    }
+   ]
+  },
+  {
+   "label": "Example · The 60-carry",
+   "body": [
+    {
+     "t": "A value like 40.99999° produces seconds that round to 60 — the converter carries into minutes and degrees properly (41°00′00″), the step hand conversion botches most."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The conversion, step by step",
+  "intro": "What the converter does with the fractional part — worth knowing once, then never doing by hand again.",
+  "columns": [
+   "Step",
+   "Operation",
+   "Example (40.7580)"
+  ],
+  "rows": [
+   [
+    "1",
+    "Whole degrees stay",
+    "40°"
+   ],
+   [
+    "2",
+    "Fraction × 60 → minutes",
+    "0.7580 × 60 = 45.48 → 45′"
+   ],
+   [
+    "3",
+    "Minutes' fraction × 60 → seconds",
+    "0.48 × 60 = 28.8″"
+   ],
+   [
+    "4",
+    "Hemisphere from sign",
+    "N for +, W for − longitude"
+   ]
+  ],
+  "note": "Seconds precision is a display choice: one decimal of seconds is ~3 m of latitude — plenty for charts; the precision tools govern the choice."
+ },
+ "faq": [
+  [
+   "Are hemisphere letters included?",
+   "Yes — N/S for latitude, E/W for longitude, derived from the signs. Signed DMS (minus with letters) is a contradiction the output avoids by construction."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 decimals in, DMS of the same point out — format changes, datum never."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "Seconds decimals beyond one are resolution theatre for most sources (0.1″ ≈ 3 m). The converter defaults sensibly; the precision family explains the ladder."
+  ],
+  [
+   "Can I copy the result into GIS software?",
+   "GIS prefers decimals — this output is for charts, forms and humans. The Coordinate Converter returns the decimal dress when the software asks."
+  ],
+  [
+   "Seconds exactly 60?",
+   "Carried upward properly — the converter normalises 60″ into +1′, and 60′ into +1°, always."
+  ],
+  [
+   "Both coordinates at once?",
+   "Yes — the pair converts together, latitudes and longitudes each with their hemisphere."
+  ],
+  [
+   "Zero values?",
+   "0°00′00.0″ with the conventional hemisphere — the equator and the prime meridian convert without drama."
+  ],
+  [
+   "Why do forms still want DMS?",
+   "Institutional inertia plus genuine chart tradition. The converter exists so the tradition costs you ten seconds, not ten minutes."
+  ],
+  [
+   "Aviation and marine exams?",
+   "The conversion these exams test, done here for checking your hand work — learn the steps from the table, then let the tool audit them."
+  ],
+  [
+   "Degrees-minutes instead?",
+   "The sibling format (DDM) is produced by the Coordinate Converter — same arithmetic, one subdivision fewer."
+  ],
+  [
+   "My seconds have many decimals.",
+   "Display precision — trim with intent using the grain ladder (0.1″ ≈ 3 m is the usual chart choice)."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Reverse: "
+  },
+  {
+   "t": "DMS to Decimal",
+   "l": "/tools/dms-to-decimal"
+  },
+  {
+   "t": "; all formats: the "
+  },
+  {
+   "t": "Coordinate Converter",
+   "l": "/tools/coordinate-converter"
+  },
+  {
+   "t": "; detect: the "
+  },
+  {
+   "t": "Coordinate Format Detector",
+   "l": "/tools/coordinate-format-detector"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator",
+  "coordinate-offset-calculator"
+ ]
+}

@@ -1,0 +1,178 @@
+{
+ "slug": "what-timezone-am-i-in",
+ "primary_keyword": "What Timezone Am I In?",
+ "secondary_keywords": [
+  "timezone",
+  "what timezone am i in",
+  "what timezone am i in? online"
+ ],
+ "title": "What Timezone Am I In? Zone, Offset and Time",
+ "description": "Answer 'What Timezone Am I In?' from your point — IANA zone name, UTC offset and current local time, by click or GPS. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a traveller waking in a border motel reads America/Chicago, UTC−5, daylight saving in force — three facts that rebuild the day's schedule in one glance.",
+ "quick_answer": "What Timezone Am I In? shows the timezone name, UTC offset and current local time for your point. Click the map or use GPS and read the zone — the IANA name your calendar and code actually use, with the offset for today and daylight saving's state applied.",
+ "steps_intro": "Your point has a zone. Read it like a local system would:",
+ "use_cases": [
+  {
+   "title": "Travel recovery",
+   "body": [
+    {
+     "t": "Landed somewhere with the phone confused: the point's zone, offset and local time settle what to set and what to believe. The "
+    },
+    {
+     "t": "Timezone Converter",
+     "l": "/tools/timezone-converter"
+    },
+    {
+     "t": " rebuilds the home call from it."
+    }
+   ]
+  },
+  {
+   "title": "Debugging calendar chaos",
+   "body": [
+    {
+     "t": "A meeting rendered at the wrong hour is usually a zone assumption. This page gives the ground truth for the place in question."
+    }
+   ]
+  },
+  {
+   "title": "Remote-site facts",
+   "body": [
+    {
+     "t": "Cabins, rigs and field stations keep zones too. Their IANA names belong in the site file; get them here."
+    }
+   ]
+  },
+  {
+   "title": "The DST state, live",
+   "body": [
+    {
+     "t": "Whether your point is in daylight saving right now — the fact that changes two weekends a year and confuses every static chart."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Name beats abbreviation",
+   "body": [
+    {
+     "t": "CST means Chicago, Beijing or Havana depending on the map — the IANA name (America/Chicago) is the unambiguous answer this page leads with."
+    }
+   ]
+  },
+  {
+   "label": "Example · Offset is a snapshot",
+   "body": [
+    {
+     "t": "UTC−6 today can be UTC−5 in July at the same point. The page shows today's, labelled with DST's state — because an offset without a date is half an answer."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What you get",
+  "intro": "The three facts and their jobs.",
+  "columns": [
+   "Fact",
+   "Example shape",
+   "Job"
+  ],
+  "rows": [
+   [
+    "IANA zone name",
+    "America/Chicago",
+    "The permanent identity"
+   ],
+   [
+    "UTC offset now",
+    "-5:00",
+    "Today's arithmetic"
+   ],
+   [
+    "Local time now",
+    "The point's clock, live",
+    "Sanity, instantly"
+   ],
+   [
+    "DST state",
+    "In force / not",
+    "The changeover awareness"
+   ]
+  ],
+  "note": "Everything derives from the tz database's rules for the resolved zone — the same source your devices use when they behave."
+ },
+ "faq": [
+  [
+   "Is DST shown?",
+   "Yes — the current daylight-saving state is part of the answer, and the offset shown is today's, DST included where in force."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — click any point instead of GPS; the answer is about the point, not about you."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Zone borders are political and occasionally move; databases vintage differently, so a fresh change can read differently across tools briefly."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No — a GPS fix serves the answer and is not kept."
+  ],
+  [
+   "Zone name versus abbreviation?",
+   "The IANA name is shown because abbreviations collide worldwide (CST, IST, BST all have multiple meanings). The name never collides."
+  ],
+  [
+   "My phone disagrees.",
+   "Phones cache carrier and settings quirks; the point's zone from the database is the reference. Check the phone's automatic-zone setting next."
+  ],
+  [
+   "Ocean points?",
+   "Maritime zones answer (Etc/GMT bands and the like) — a zone exists even where no one sets a table by it."
+  ],
+  [
+   "Indiana and Arizona puzzles?",
+   "Both resolve per point — county-level Eastern/Central splits and Arizona's DST abstention are the database's home territory."
+  ],
+  [
+   "Historical zone for an old timestamp?",
+   "Rules carry history in the database; this page's headline is the present. Timestamp converters on this site handle dated instants."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Any point: the "
+  },
+  {
+   "t": "Timezone Map Finder",
+   "l": "/tools/timezone-map-finder"
+  },
+  {
+   "t": "; the US board: the "
+  },
+  {
+   "t": "US Time Zone Map",
+   "l": "/tools/us-time-zone-map"
+  },
+  {
+   "t": "; conversions: the "
+  },
+  {
+   "t": "Timezone Converter",
+   "l": "/tools/timezone-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder"
+ ]
+}

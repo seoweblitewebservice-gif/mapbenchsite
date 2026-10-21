@@ -1,0 +1,196 @@
+{
+ "slug": "coordinate-precision-tool",
+ "primary_keyword": "Coordinate Precision Tool",
+ "secondary_keywords": [
+  "coordinate precision",
+  "round lat long",
+  "decimal places gps"
+ ],
+ "title": "Coordinate Precision Tool: Decimal Places",
+ "description": "Control how many decimal places you keep when copying coordinates with the Coordinate Precision Tool — matched to real accuracy. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a phone fix honest to about 5 metres deserves 5 decimals (1.1 m grain) — the 8th decimal your app displays is measuring the table your phone sits on, not the world.",
+ "quick_answer": "The Coordinate Precision Tool controls how many decimal places you keep when copying latitude and longitude for forms and APIs. Set the places and read the trimmed pair — precision chosen on purpose, matched to your source's real accuracy instead of inherited from a screen's enthusiasm.",
+ "steps_intro": "Decimals are a claim. Make the claim your data can defend:",
+ "use_cases": [
+  {
+   "title": "Form and API compliance",
+   "body": [
+    {
+     "t": "Some systems demand exactly 6 places, others choke on 8. Trim deliberately here rather than letting a form truncate silently — mid-digit truncations move points."
+    }
+   ]
+  },
+  {
+   "title": "Honest publication",
+   "body": [
+    {
+     "t": "Publishing a sensitive site's coordinates at 3 places (111 m grain) is the standard fuzz — sized by the "
+    },
+    {
+     "t": "Decimal Degree Precision Calculator",
+     "l": "/tools/decimal-degree-precision-calculator"
+    },
+    {
+     "t": "'s table, applied by this tool."
+    }
+   ]
+  },
+  {
+   "title": "Consistent datasets",
+   "body": [
+    {
+     "t": "Mixed-precision columns look sloppy and join badly. Normalise the column's dress to its least-accurate member's honesty."
+    }
+   ]
+  },
+  {
+   "title": "Report writing",
+   "body": [
+    {
+     "t": "Coordinates in prose should carry the precision the method earned — typically 5 for GPS fieldwork, 4 for map-read points."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The grain ladder",
+   "body": [
+    {
+     "t": "4 places ≈ 11 m, 5 ≈ 1.1 m, 6 ≈ 0.11 m (latitude grain, computed). Choosing 6 for a handheld GPS fix overclaims by two orders of magnitude — the ladder makes the overclaim visible."
+    }
+   ]
+  },
+  {
+   "label": "Example · Truncation versus rounding",
+   "body": [
+    {
+     "t": "Cutting digits (truncation) biases every point one way; rounding is neutral. This tool rounds — a small professionalism with systematic consequences at scale."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Decimal places and ground grain",
+  "intro": "Latitude grain (longitude's is finer away from the equator) — computed from WGS84 degree lengths.",
+  "columns": [
+   "Decimals",
+   "Grain",
+   "Honest source"
+  ],
+  "rows": [
+   [
+    "2",
+    "~1.1 km",
+    "A town reference"
+   ],
+   [
+    "3",
+    "~111 m",
+    "A map-read point"
+   ],
+   [
+    "4",
+    "~11 m",
+    "A decent map click"
+   ],
+   [
+    "5",
+    "~1.1 m",
+    "A good phone fix"
+   ],
+   [
+    "6",
+    "~0.11 m",
+    "Survey-adjacent kit"
+   ],
+   [
+    "7+",
+    "Centimetres and below",
+    "Geodetic instruments — or fiction"
+   ]
+  ],
+  "note": "Grain is resolution, not accuracy: a 7-decimal point can still be 50 m wrong if the fix was. Precision displays; accuracy is earned upstream."
+ },
+ "faq": [
+  [
+   "How many decimals should I keep?",
+   "One more than your accuracy earns: phone fixes 5, map clicks 4, survey kit 6. The table on this page prices each place in metres — choose with it open."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 — precision choices are datum-independent, but the pair being trimmed is assumed WGS84 like the rest of this family."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — the site's standing answer, quantified here: places set the grain of the claim, the source sets its truth."
+  ],
+  [
+   "Can I copy the result into GIS software?",
+   "Yes — trimmed pairs paste anywhere decimals do."
+  ],
+  [
+   "Rounding or truncation?",
+   "Rounding — truncation systematically drags points southwest (northeast in southern/eastern sign terms), a bias invisible per-point and obvious per-dataset."
+  ],
+  [
+   "The form wants exactly N places.",
+   "Set N here and copy the dressed value — trailing zeros included, which is what 'exactly N' usually means."
+  ],
+  [
+   "Privacy fuzzing?",
+   "Dropping to 3 or 2 places is the standard deliberate fuzz for sensitive locations — size it with the grain table so the fuzz matches the intent."
+  ],
+  [
+   "Longitude grain differs?",
+   "Yes — finer by the cosine of latitude. The table quotes latitude (the conservative axis); your longitude grain at 60° is half the table's."
+  ],
+  [
+   "Negative zero and edge dress?",
+   "Rounded outputs normalise cosmetic oddities (−0.0000 becomes 0.0000) — parsers downstream appreciate it."
+  ],
+  [
+   "Batch trimming?",
+   "One pair at a time here; the rounding tool is its sibling for quick jobs, and scripts wear the bulk work."
+  ],
+  [
+   "Should I store full precision anyway?",
+   "Store the fullest honest value; dress copies for use. Storage precision is cheap — false display precision is the sin, not the digits themselves."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Grain maths: the "
+  },
+  {
+   "t": "Decimal Degree Precision Calculator",
+   "l": "/tools/decimal-degree-precision-calculator"
+  },
+  {
+   "t": "; rounding sibling: the "
+  },
+  {
+   "t": "Coordinate Rounding Tool",
+   "l": "/tools/coordinate-rounding-tool"
+  },
+  {
+   "t": "; seconds: the "
+  },
+  {
+   "t": "Arcseconds to Ground Distance Calculator",
+   "l": "/tools/arcseconds-to-ground-distance-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator",
+  "coordinate-offset-calculator"
+ ]
+}

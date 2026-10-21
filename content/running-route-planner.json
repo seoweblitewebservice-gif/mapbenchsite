@@ -1,0 +1,196 @@
+{
+ "slug": "running-route-planner",
+ "primary_keyword": "Running Route Planner",
+ "secondary_keywords": [
+  "run route planner",
+  "jogging route planner",
+  "running distance calculator",
+  "plan a running route",
+  "running map route"
+ ],
+ "title": "Running Route Planner: Plan Runs with GPX",
+ "description": "Plan a running route on the pedestrian network with the Running Route Planner — distance, map line and GPX export for your watch. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a planned riverside 8.2 km with the distance known before the laces are tied — the session prescribed, measured and exportable.",
+ "quick_answer": "The Running Route Planner creates a route between start and finish on the pedestrian network — streets and paths a runner can use — and reports its distance, drawn on the map. Plan the run, check the distance needed, and export GPX for your watch or phone.",
+ "steps_intro": "A run planned is a run measured. Build it on the network runners are allowed:",
+ "use_cases": [
+  {
+   "title": "Session planning",
+   "body": [
+    {
+     "t": "The plan prescribes distance, not geography: build the route that delivers exactly the kilometres — loops are the "
+    },
+    {
+     "t": "Running Route Loop Generator",
+     "l": "/tools/running-route-loop-generator"
+    },
+    {
+     "t": "'s craft when home is both ends."
+    }
+   ]
+  },
+  {
+   "title": "New-city running",
+   "body": [
+    {
+     "t": "Travel runs on unknown streets deserve a pedestrian-legal route and a known distance. This is the traveller's local knowledge, generated."
+    }
+   ]
+  },
+  {
+   "title": "Route sharing",
+   "body": [
+    {
+     "t": "GPX is the runner's lingua franca: plan here, send the file, and the whole club runs the same line on Saturday."
+    }
+   ]
+  },
+  {
+   "title": "Race reconnaissance",
+   "body": [
+    {
+     "t": "An unfamiliar race town's training runs, planned before arrival — distances known, surfaces checkable in the "
+    },
+    {
+     "t": "Route Surface and Road Type Finder",
+     "l": "/tools/route-surface-and-road-type-finder"
+    },
+    {
+     "t": "."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The prescribed distance",
+   "body": [
+    {
+     "t": "Training says 12 km easy. The planner iterates a route until its reported distance is the session's distance — the map bends to the plan, not the reverse."
+    }
+   ]
+  },
+  {
+   "label": "Example · GPX to the watch",
+   "body": [
+    {
+     "t": "Exported, the planned line becomes the watch's breadcrumb. The run you designed at the desk is the run your feet execute."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Planner versus loop generator",
+  "intro": "Two running-route tools, two shapes of question — this page is the start-to-finish column.",
+  "columns": [
+   "Question",
+   "This planner",
+   "Loop generator"
+  ],
+  "rows": [
+   [
+    "Shape",
+    "Start → finish",
+    "Start → start"
+   ],
+   [
+    "Distance",
+    "Whatever the route measures",
+    "Aims at your target"
+   ],
+   [
+    "Network",
+    "Pedestrian",
+    "Pedestrian or cycling"
+   ],
+   [
+    "Export",
+    "GPX built in",
+    "Via this planner"
+   ],
+   [
+    "Best for",
+    "Planned sessions, travel runs",
+    "Breaking the routine"
+   ]
+  ],
+  "note": "Pedestrian routing follows the open network data; a path the data does not know cannot be planned on — local signs remain the law."
+ },
+ "faq": [
+  [
+   "Does it know every trail?",
+   "It knows the pedestrian network as OpenStreetMap records it — streets, paths and trails that mappers have drawn. Remote or new trails may be missing; coverage is the data's, stated plainly."
+  ],
+  [
+   "Is running speed included?",
+   "The planner reports distance; your pace turns it into time — the Pace to Speed Calculator converts, and the Hiking Pace tools measure your real pace on foot."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Runners share roads with traffic but are not routed by it; crossings are the runner's judgement, always."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "The pedestrian network winds like every network. The reported distance is the run's real length."
+  ],
+  [
+   "Can route results change over time?",
+   "Yes — new paths appear in the data and old ones get corrected. A cherished route deserves a fresh plan each season."
+  ],
+  [
+   "Can I export to my watch?",
+   "GPX export is built in, and GPX is the format watches and run apps import. Plan here, run there."
+  ],
+  [
+   "Point to point leaves me far from home.",
+   "Then the run is a journey — or generate a loop instead. Many runners plan one-way runs toward a train station on purpose."
+  ],
+  [
+   "Does it avoid main roads?",
+   "Pedestrian routing prefers paths and pavements where the data offers them; a road section appears when the network has no gentler link."
+  ],
+  [
+   "Can I plan interval sessions?",
+   "Plan the route for distance, then run the session on it — the planner measures the stage, your watch conducts the play."
+  ],
+  [
+   "My watch wants a different format.",
+   "GPX is the common tongue; if a device insists otherwise, its own app converts GPX happily."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Loops are the "
+  },
+  {
+   "t": "Running Route Loop Generator",
+   "l": "/tools/running-route-loop-generator"
+  },
+  {
+   "t": "; paces convert in the "
+  },
+  {
+   "t": "Pace to Speed Calculator",
+   "l": "/tools/pace-to-speed-calculator"
+  },
+  {
+   "t": "; and rides get the "
+  },
+  {
+   "t": "Cycling Route Planner",
+   "l": "/tools/cycling-route-planner"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner"
+ ]
+}

@@ -1,0 +1,198 @@
+{
+ "slug": "degrees-to-radians-converter",
+ "primary_keyword": "Degrees to Radians Converter",
+ "secondary_keywords": [
+  "degrees to radians converter online",
+  "free degrees to radians converter",
+  "degrees to radians converter calculator",
+  "degrees to radians converter converter",
+  "degrees to radians converter formula"
+ ],
+ "title": "Degrees to Radians Converter: Angles for Code",
+ "description": "Convert degrees to radians with the Degrees to Radians Converter — the angle unit mathematics and code actually use. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, Times Square's latitude, 40.7580 degrees, is 0.7114 radians — the form every trigonometric function in every programming language expects it in.",
+ "quick_answer": "The Degrees to Radians Converter converts angles from degrees to radians by the exact factor π ÷ 180. Enter the degrees and read the radians — the unit of angles in mathematics, physics and code, where a forgotten conversion is the most common silent bug in all of geospatial programming.",
+ "steps_intro": "Degrees are for humans; radians are for functions. Convert before you compute:",
+ "use_cases": [
+  {
+   "title": "Geospatial coding",
+   "body": [
+    {
+     "t": "Every haversine implementation begins with this conversion — do it explicitly here when checking code by hand, and the "
+    },
+    {
+     "t": "Coordinate Converter",
+     "l": "/tools/coordinate-converter"
+    },
+    {
+     "t": "'s pair output makes sense."
+    }
+   ]
+  },
+  {
+   "title": "Physics and engineering study",
+   "body": [
+    {
+     "t": "Angular velocity, pendulums, AC phase — radians are the working unit; the converter is the homework's honest checker."
+    }
+   ]
+  },
+  {
+   "title": "Bearings and headings in code",
+   "body": [
+    {
+     "t": "A bearing of 45° is 0.7854 rad. Feeding 45 into a sine is the classic 44.98-error nobody notices until the map disagrees."
+    }
+   ]
+  },
+  {
+   "title": "Reading technical papers",
+   "body": [
+    {
+     "t": "Formulas assume radians silently. Converting the paper's example values is how you verify you read the formula right."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The landmarks",
+   "body": [
+    {
+     "t": "90° = π/2 ≈ 1.5708 rad; 180° = π ≈ 3.1416; 45° = π/4 ≈ 0.7854; 1° ≈ 0.01745 rad; and 1 radian ≈ 57.2958° — the exchange rates of the angle world."
+    }
+   ]
+  },
+  {
+   "label": "Example · A latitude in radians",
+   "body": [
+    {
+     "t": "40.7580° → 0.7114 rad; −73.9855° → −1.2913 rad. Negative angles convert with their sign — west and south survive translation, as they must."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Degree-radian anchors",
+  "intro": "The conversions worth memorising — the converter handles the rest.",
+  "columns": [
+   "Degrees",
+   "Radians (exact)",
+   "Radians (decimal)"
+  ],
+  "rows": [
+   [
+    "30°",
+    "π/6",
+    "0.5236"
+   ],
+   [
+    "45°",
+    "π/4",
+    "0.7854"
+   ],
+   [
+    "60°",
+    "π/3",
+    "1.0472"
+   ],
+   [
+    "90°",
+    "π/2",
+    "1.5708"
+   ],
+   [
+    "180°",
+    "π",
+    "3.1416"
+   ],
+   [
+    "360°",
+    "2π",
+    "6.2832"
+   ]
+  ],
+  "note": "The factor is exact (π/180); decimals shown are rounded for the table, while the converter keeps full float precision for your code."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Degrees multiplied by π/180 — radians, at full precision, sign preserved."
+  ],
+  [
+   "Is the calculation done locally?",
+   "Yes — instantly in your browser."
+  ],
+  [
+   "How accurate is the result?",
+   "Exact factor, float precision — the conversion contributes no error worth discussing; wrong-unit inputs are the real hazard."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "Angles are datum-free; the coordinates this site serves are WGS84."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "Radians for code should keep full precision — rounding angles early compounds through trig. Display rounding is for humans, not pipelines."
+  ],
+  [
+   "Reverse conversion?",
+   "Multiply by 180/π — the Coordinate Converter family and a radians-to-degrees lane handle the return trip."
+  ],
+  [
+   "Why do libraries use radians?",
+   "Because calculus makes radians natural: the derivative of sine is cosine only in radians. Two centuries of mathematics voted; code complies."
+  ],
+  [
+   "Bearings over 360°?",
+   "They convert fine (450° = 7.854 rad) — normalising to a revolution is your code's choice, not the conversion's."
+  ],
+  [
+   "Gradians?",
+   "The 400-per-circle survey unit exists; this converter's lane is the degree-radian pair the world runs on."
+  ],
+  [
+   "Small angles?",
+   "For tiny angles, radians ≈ the angle's sine and tangent — the approximation astronomers live by, visible in the converter's output."
+  ],
+  [
+   "DMS input?",
+   "Convert DMS to decimal degrees first (DMS to Decimal), then to radians — two clean steps beat one muddy one."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Pairs in radians: the "
+  },
+  {
+   "t": "Coordinate Converter",
+   "l": "/tools/coordinate-converter"
+  },
+  {
+   "t": "; DMS first: "
+  },
+  {
+   "t": "DMS to Decimal",
+   "l": "/tools/dms-to-decimal"
+  },
+  {
+   "t": "; arcminutes: the "
+  },
+  {
+   "t": "Decimal Degrees to Arcminutes Converter",
+   "l": "/tools/decimal-degrees-to-arcminutes-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator"
+ ]
+}

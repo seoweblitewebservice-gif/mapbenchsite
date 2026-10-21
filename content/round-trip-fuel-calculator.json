@@ -1,0 +1,202 @@
+{
+ "slug": "round-trip-fuel-calculator",
+ "primary_keyword": "Round Trip Fuel Calculator",
+ "secondary_keywords": [
+  "return trip fuel calculator",
+  "round trip gas calculator",
+  "fuel for return journey",
+  "two way trip fuel",
+  "round trip mileage fuel"
+ ],
+ "title": "Round Trip Fuel Calculator: Return Trip Fuel",
+ "description": "Double a one-way distance and estimate the full round trip's fuel with the Round Trip Fuel Calculator — gallons or litres. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 212-mile one-way trip at 31 mpg needs 6.8 gallons to get there — and 13.7 gallons for the whole round trip, the figure the tank plan needs.",
+ "quick_answer": "The Round Trip Fuel Calculator doubles a one-way distance and applies your fuel consumption to estimate the complete return journey's fuel. Enter the one-way distance and the economy figure and read the round-trip fuel — because tanks, budgets and passengers' splits all belong to the whole journey, not the half.",
+ "steps_intro": "Fuel is burned in both directions. Budget for the whole journey:",
+ "use_cases": [
+  {
+   "title": "Tank planning",
+   "body": [
+    {
+     "t": "Will one tank do the round trip? Round fuel versus tank size is the whole question — stops placed by the "
+    },
+    {
+     "t": "Fuel Stop Planner",
+     "l": "/tools/fuel-stop-planner"
+    },
+    {
+     "t": " if not."
+    }
+   ]
+  },
+  {
+   "title": "Splitting the real total",
+   "body": [
+    {
+     "t": "Passengers split the journey they shared — the round total. The "
+    },
+    {
+     "t": "Fuel Cost Split Calculator",
+     "l": "/tools/fuel-cost-split-calculator"
+    },
+    {
+     "t": " divides it once this page sizes it."
+    }
+   ]
+  },
+  {
+   "title": "Airport and station runs",
+   "body": [
+    {
+     "t": "The collection run burns fuel twice. Anyone reimbursing 'the trip to pick you up' owes the doubled figure."
+    }
+   ]
+  },
+  {
+   "title": "Comparing destinations",
+   "body": [
+    {
+     "t": "Two candidate visits at different one-way distances: their round fuels are the honest comparison — double both, then decide."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The visit",
+   "body": [
+    {
+     "t": "212 mi one-way → 424 round ÷ 31 mpg = 13.68 gal. The one-way figure (6.84) would have under-budgeted the day by half."
+    }
+   ]
+  },
+  {
+   "label": "Example · The metric round",
+   "body": [
+    {
+     "t": "180 km one-way at 7.2 L/100 km: 360 km × 7.2 ÷ 100 = 25.9 L for the round trip — just over half a typical tank, planned."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Round-trip fuel for common one-ways",
+  "intro": "One-way distance doubled, then divided by economy — the table that ends one-way budgeting.",
+  "columns": [
+   "One-way",
+   "Round fuel at 25 mpg",
+   "At 31 mpg",
+   "At 40 mpg"
+  ],
+  "rows": [
+   [
+    "50 mi",
+    "4.0 gal",
+    "3.2 gal",
+    "2.5 gal"
+   ],
+   [
+    "120 mi",
+    "9.6 gal",
+    "7.7 gal",
+    "6.0 gal"
+   ],
+   [
+    "212 mi",
+    "17.0 gal",
+    "13.7 gal",
+    "10.6 gal"
+   ],
+   [
+    "350 mi",
+    "28.0 gal",
+    "22.6 gal",
+    "17.5 gal"
+   ],
+   [
+    "600 mi",
+    "48.0 gal",
+    "38.7 gal",
+    "30.0 gal"
+   ]
+  ],
+  "note": "Detours and diversions add real miles the doubling cannot foresee — the calculator offers a detour allowance for exactly that honesty."
+ },
+ "faq": [
+  [
+   "Does it include detours?",
+   "You can add a detour allowance on top of the doubled distance — real journeys include the scenic error and the closed road. Without one, the figure is the clean route's fuel."
+  ],
+  [
+   "Is traffic included?",
+   "Not separately — your real-world economy figure already contains your traffic pattern. Enter the honest mpg."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. This is quantity arithmetic over a doubled distance."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Double the road one-way distance — fuel follows the wheels both ways."
+  ],
+  [
+   "Can route results change over time?",
+   "Your economy figure drifts with load and season; the return leg with a roof box is not the outbound's equal. Recompute for the loaded case."
+  ],
+  [
+   "What if the return is a different route?",
+   "Enter the average of the two one-ways as the 'one-way' distance — the doubling then prices the asymmetric round honestly."
+  ],
+  [
+   "Gallons or litres?",
+   "Both habits are served: miles/mpg here, and the Liters Needed tool for km and L/100 km."
+  ],
+  [
+   "Roof box on the return only.",
+   "Use the worse economy for the round figure or average the two legs' economies — the honest estimate sits between the two one-way answers."
+  ],
+  [
+   "I only know the round-trip distance.",
+   "Halve it for the one-way input — the doubling inside restores it, with the detour allowance still available."
+  ],
+  [
+   "Does the empty return really burn the same?",
+   "Slightly less, usually — but planning on the symmetric figure errs on the survivable side."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Time for the same journey is the "
+  },
+  {
+   "t": "Round Trip Driving Time Calculator",
+   "l": "/tools/round-trip-driving-time-calculator"
+  },
+  {
+   "t": "; one-way quantities are "
+  },
+  {
+   "t": "Gallons Needed for Distance",
+   "l": "/tools/gallons-needed-for-distance"
+  },
+  {
+   "t": "; and money is the "
+  },
+  {
+   "t": "Fuel Cost Calculator",
+   "l": "/tools/fuel-cost-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner"
+ ]
+}

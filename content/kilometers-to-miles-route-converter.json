@@ -1,0 +1,201 @@
+{
+ "slug": "kilometers-to-miles-route-converter",
+ "primary_keyword": "Kilometers to Miles Route Converter",
+ "secondary_keywords": [
+  "kilometers to miles route converter online",
+  "free kilometers to miles route converter",
+  "kilometers to miles route converter calculator",
+  "kilometers to miles route converter converter",
+  "kilometers to miles route converter formula"
+ ],
+ "title": "Kilometers to Miles Route Converter",
+ "description": "Convert route distances from kilometres to miles with the Kilometers to Miles Route Converter — the exact 0.621371 factor. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 500 km European tour leg is 310.7 miles — the figure an American co-driver actually thinks in.",
+ "quick_answer": "The Kilometers to Miles Route Converter turns route distances in kilometres into miles using the exact definition of the mile: one kilometre is 0.621371 miles. Enter the distance from your European plan, your car's trip computer or a guidebook and read the miles instantly, without the arithmetic at the border.",
+ "steps_intro": "One exact factor, applied to the distances journeys are made of:",
+ "use_cases": [
+  {
+   "title": "European road trips for US drivers",
+   "body": [
+    {
+     "t": "The itinerary is in kilometres; the driver's intuition is in miles. Convert the legs before departure and the days size themselves honestly — pair with the "
+    },
+    {
+     "t": "Driving Days Calculator",
+     "l": "/tools/driving-days-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Imported vehicles and trip computers",
+   "body": [
+    {
+     "t": "A car reporting in km meets roads signed in miles. The converter reconciles the dashboard with the signs."
+    }
+   ]
+  },
+  {
+   "title": "Guidebook and rally notes",
+   "body": [
+    {
+     "t": "Route books cross unit systems mid-journey. One canonical conversion keeps a whole rally's notes consistent."
+    }
+   ]
+  },
+  {
+   "title": "Data and log cleaning",
+   "body": [
+    {
+     "t": "Mixed-unit trip logs become one unit here, applied uniformly — the same discipline as the nautical converter applies at sea."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The tour leg",
+   "body": [
+    {
+     "t": "500 km × 0.621371 = 310.7 miles. A '500 day' in Europe is a 311-mile day — substantial either way, but now honestly named in both."
+    }
+   ]
+  },
+  {
+   "label": "Example · The round hundred",
+   "body": [
+    {
+     "t": "100 km = 62.14 miles. The 100 km/h speed limit that feels stately is 62 mph — conversions recalibrate intuitions, not just numbers."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Kilometres to miles for route legs",
+  "intro": "Exact-factor conversions for the distances road journeys come in.",
+  "columns": [
+   "Kilometres",
+   "Miles",
+   "Kilometres",
+   "Miles"
+  ],
+  "rows": [
+   [
+    "25",
+    "15.53",
+    "400",
+    "248.55"
+   ],
+   [
+    "50",
+    "31.07",
+    "500",
+    "310.69"
+   ],
+   [
+    "100",
+    "62.14",
+    "750",
+    "466.03"
+   ],
+   [
+    "150",
+    "93.21",
+    "1,000",
+    "621.37"
+   ],
+   [
+    "200",
+    "124.27",
+    "1,500",
+    "932.06"
+   ],
+   [
+    "300",
+    "186.41",
+    "2,000",
+    "1,242.74"
+   ]
+  ],
+  "note": "Factors: miles = km × 0.6213711922, from the mile's exact definition as 1,609.344 metres."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Miles from kilometres, at the exact conversion factor — route distances in particular, though any length converts identically."
+  ],
+  [
+   "Is the calculation done locally?",
+   "Yes, in your browser as you type. No account, nothing uploaded."
+  ],
+  [
+   "How accurate is the result?",
+   "Exact to the factor. A kilometre is defined through the metre, as is the mile, so the conversion carries no approximation."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No — this is unit conversion, not routing. Traffic belongs to the journey, not to its units."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Unrelated to conversion, happily: both numbers describe the same road once converted. Convert the road distance you measured."
+  ],
+  [
+   "A quick mental shortcut?",
+   "Multiply by 0.6 for a rough idea, then by 1.036 for the truth — or just use this page and skip the folklore."
+  ],
+  [
+   "The reverse conversion?",
+   "Miles × 1.609344 — the Miles to Kilometers Route Converter is organised for that direction."
+  ],
+  [
+   "Speed limits: 130 km/h in mph?",
+   "130 × 0.621371 = 80.8 mph — the conversion that keeps a US driver legal and unsurprised on the autoroute."
+  ],
+  [
+   "Odometer in km, fuel in gallons — mixed logs?",
+   "Convert the distance here, then the Gallons Needed tool takes over with miles and mpg. One conversion, at the seam, keeps the log clean."
+  ],
+  [
+   "Is a kilometre exactly 0.621371 miles?",
+   "To six figures, yes — 0.6213711922 in full. The definitions leave no wobble."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The reverse is the "
+  },
+  {
+   "t": "Miles to Kilometers Route Converter",
+   "l": "/tools/miles-to-kilometers-route-converter"
+  },
+  {
+   "t": "; the sea-going cousin is the "
+  },
+  {
+   "t": "Kilometers to Nautical Miles Converter",
+   "l": "/tools/kilometers-to-nautical-miles-converter"
+  },
+  {
+   "t": "; and distances worth converting come from the "
+  },
+  {
+   "t": "Driving Distance Calculator",
+   "l": "/tools/driving-distance-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-route-planner",
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator",
+  "drive-time-map"
+ ]
+}

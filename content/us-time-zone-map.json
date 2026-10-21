@@ -1,0 +1,196 @@
+{
+ "slug": "us-time-zone-map",
+ "primary_keyword": "US Time Zone Map",
+ "secondary_keywords": [
+  "what time zone am i in",
+  "us time zones live",
+  "us time zone map online"
+ ],
+ "title": "US Time Zone Map: Live Zones and Local Clocks",
+ "description": "Resolve any point to its IANA zone on the US Time Zone Map — live local clock, UTC offset and DST status, plus six ticking zone cards. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, the six zone cards at a winter noon in Chicago read 1 p.m. Eastern, 12 Central, 11 Mountain, 10 Pacific, 8 Alaska and 7 Hawaii-Aleutian — the whole country's afternoon in one glance.",
+ "quick_answer": "The US Time Zone Map resolves points to their IANA time zone with a live clock, UTC offset and DST status, plus six US zone cards ticking in real time. Click the map or use GPS and read the zone — then tap any card to inspect its current time.",
+ "steps_intro": "America's six clocks, live on one map:",
+ "use_cases": [
+  {
+   "title": "Cross-country scheduling",
+   "body": [
+    {
+     "t": "The cards answer 'what time is it there now' for every US zone at once — the "
+    },
+    {
+     "t": "Meeting Time Planner",
+     "l": "/tools/meeting-time-planner"
+    },
+    {
+     "t": " builds calls on top of it."
+    }
+   ]
+  },
+  {
+   "title": "Border-point verification",
+   "body": [
+    {
+     "t": "Click the exact property, depot or trailhead: panhandles and river borders put zone lines where reputations do not."
+    }
+   ]
+  },
+  {
+   "title": "Broadcast and support hours",
+   "body": [
+    {
+     "t": "“9 to 5 Eastern” rendered in the caller's zone in one look — the support page's favourite screenshot."
+    }
+   ]
+  },
+  {
+   "title": "Teaching the map",
+   "body": [
+    {
+     "t": "Why does Arizona sit out DST, and what does that do to its card in July? The live map teaches it better than the paragraph (its card matches Pacific in summer)."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Arizona's summer disguise",
+   "body": [
+    {
+     "t": "Mountain Standard year-round (the Navajo Nation excepted) means Arizona's clock matches Pacific Daylight all summer and Mountain Standard all winter. The cards show the effect live; no footnote required."
+    }
+   ]
+  },
+  {
+   "label": "Example · Clicking the ocean",
+   "body": [
+    {
+     "t": "Offshore clicks resolve to the tz geography's ocean zones — the map's honesty about water, where no state claims the clock."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The six zone cards",
+  "intro": "The continental system plus Alaska and Hawaii-Aleutian — standard offsets, with DST states as the cards apply them.",
+  "columns": [
+   "Zone",
+   "Standard offset",
+   "DST?"
+  ],
+  "rows": [
+   [
+    "Eastern",
+    "UTC-5",
+    "Yes"
+   ],
+   [
+    "Central",
+    "UTC-6",
+    "Yes"
+   ],
+   [
+    "Mountain",
+    "UTC-7",
+    "Yes — except most of Arizona"
+   ],
+   [
+    "Pacific",
+    "UTC-8",
+    "Yes"
+   ],
+   [
+    "Alaska",
+    "UTC-9",
+    "Yes"
+   ],
+   [
+    "Hawaii-Aleutian",
+    "UTC-10",
+    "Hawaii: no; Aleutian chain: yes"
+   ]
+  ],
+  "note": "US territories (Puerto Rico UTC-4, Guam UTC+10 and others) keep their own clocks beyond the six cards. Indiana's zone split is the map's best click-along puzzle."
+ },
+ "faq": [
+  [
+   "How is the time zone determined?",
+   "The clicked or GPS point is resolved against the tz database's boundary geography to its IANA zone; the clock, offset and DST status are then computed live from that zone's rules."
+  ],
+  [
+   "What if I click on the ocean?",
+   "Ocean points resolve to the database's maritime zones (typically Etc/GMT bands). The map reports them rather than pretending a state owns the water."
+  ],
+  [
+   "Does it handle daylight saving?",
+   "Yes — live. The DST status shown is the zone's state right now, and changeover dates follow the current federal and state rules."
+  ],
+  [
+   "Which zones are on the cards?",
+   "Eastern, Central, Mountain, Pacific, Alaska and Hawaii-Aleutian — the six primary US zones, each ticking in real time. US territories keep additional clocks beyond the cards."
+  ],
+  [
+   "Does it work outside the US?",
+   "Points worldwide resolve to their IANA zones the same way — the map's framing is American, its engine is the world database. Your own zone answer lives on the What Timezone Am I In page too."
+  ],
+  [
+   "Arizona does not change?",
+   "Most of Arizona stays on Mountain Standard year-round (the Navajo Nation observes DST; the Hopi Nation inside it does not — the map's most instructive few clicks)."
+  ],
+  [
+   "Indiana?",
+   "Split between Eastern and Central by county groups, tidier now than historically. Click the county in question; the map answers per point."
+  ],
+  [
+   "Why live cards instead of a static map?",
+   "Because zones are rules in motion — a printed offset table is wrong two weekends a year, and the cards never are."
+  ],
+  [
+   "Territories?",
+   "Puerto Rico (Atlantic, UTC-4, no DST), Guam (Chamorro, UTC+10) and others resolve by click even though they hold no card."
+  ],
+  [
+   "Samoa and Guam clocks?",
+   "Territories resolve by click: American Samoa keeps UTC-11, Guam UTC+10 — the map's engine is worldwide even where its cards are continental."
+  ],
+  [
+   "Why does the map show my zone wrong at a border?",
+   "Click precisely on your point — zone lines run through towns and even properties. A metre's click can cross the line, which is the map being right loudly."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Your zone: "
+  },
+  {
+   "t": "What Time Zone Am I In",
+   "l": "/tools/what-timezone-am-i-in"
+  },
+  {
+   "t": "; world finder: the "
+  },
+  {
+   "t": "Timezone Map Finder",
+   "l": "/tools/timezone-map-finder"
+  },
+  {
+   "t": "; group calls: the "
+  },
+  {
+   "t": "Meeting Time Planner",
+   "l": "/tools/meeting-time-planner"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location"
+ ]
+}

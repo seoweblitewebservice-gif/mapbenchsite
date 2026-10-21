@@ -1,0 +1,191 @@
+{
+ "slug": "crop-row-length-calculator",
+ "primary_keyword": "Crop Row Length Calculator",
+ "secondary_keywords": [
+  "crop row length calculator online",
+  "free crop row length calculator",
+  "crop row length calculator calculator",
+  "crop row length calculator tool",
+  "how to calculate crop row length calculator"
+ ],
+ "title": "Crop Row Length Calculator: Rows and Total Feet",
+ "description": "Work out row count and total row length for a field with the Crop Row Length Calculator — from field width, length and row spacing. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 20-acre field 660 ft wide planted at 30-inch spacing holds 264 rows — and 66.0 miles of total row in a single field.",
+ "quick_answer": "The Crop Row Length Calculator turns a field's width, length and row spacing into the two numbers planting and spraying consume: how many rows the field holds, and total row length. Enter the three figures and read both — no paced estimates, no surprises at the seed order.",
+ "steps_intro": "Rows are where fieldwork is measured — in feet and miles, not acres. Three inputs:",
+ "use_cases": [
+  {
+   "title": "Seed and planting planning",
+   "body": [
+    {
+     "t": "Seed quantity follows row length and in-row spacing. Total row feet from this calculator is the input the seed maths needs — acres alone cannot give it."
+    }
+   ]
+  },
+  {
+   "title": "Drip line and plastic mulch orders",
+   "body": [
+    {
+     "t": "Drip tape and mulch film are bought by the foot of row. A 66-mile answer changes the order from guesswork to a quantity."
+    }
+   ]
+  },
+  {
+   "title": "Spray and pass planning",
+   "body": [
+    {
+     "t": "Each pass covers one or several rows; total row length ÷ implement width in rows gives pass count, and the "
+    },
+    {
+     "t": "Field Coverage Time Calculator",
+     "l": "/tools/field-coverage-time-calculator"
+    },
+    {
+     "t": " turns passes into hours."
+    }
+   ]
+  },
+  {
+   "title": "Comparing field layouts",
+   "body": [
+    {
+     "t": "Wider spacing means fewer, longer-lasting rows; narrower means more row-miles per field. The trade is visible in one calculation each way."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 20-acre field",
+   "body": [
+    {
+     "t": "Field 1,320 × 660 ft (exactly 20.0 acres), rows along the long side at 30-inch (2.5 ft) spacing: 660 ÷ 2.5 = 264 rows, each 1,320 ft — total 348,480 ft = 66.0 miles of row. A single field, a marathon × 2.5 of row."
+    }
+   ]
+  },
+  {
+   "label": "Example · Wide rows",
+   "body": [
+    {
+     "t": "The same field at 36-inch spacing: 220 rows, 55.0 miles total. The spacing decision moves total row length by eleven miles — which is why it is made with a calculator, not a habit."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Row spacing on a 660 ft-wide field",
+  "intro": "Row counts and totals for the 20-acre example field (1,320 ft long) at common spacings — pure division and multiplication.",
+  "columns": [
+   "Row spacing",
+   "Rows across 660 ft",
+   "Total row length (ft)",
+   "Total (miles)"
+  ],
+  "rows": [
+   [
+    "20 in",
+    "396",
+    "522,720",
+    "99.0"
+   ],
+   [
+    "30 in",
+    "264",
+    "348,480",
+    "66.0"
+   ],
+   [
+    "36 in",
+    "220",
+    "290,400",
+    "55.0"
+   ],
+   [
+    "38 in",
+    "208",
+    "274,560",
+    "52.0"
+   ],
+   [
+    "40 in",
+    "198",
+    "261,360",
+    "49.5"
+   ]
+  ],
+  "note": "Headlands and turn rows reduce plantable length slightly in real fields — the calculator gives the geometric figure; your headland habit adjusts it."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "From field width, field length and row spacing: the number of rows that fit across the width, and the total row length (rows × length), in feet and miles."
+  ],
+  [
+   "Do I need an account?",
+   "No — the calculation is instant and free, like the rest of the site."
+  ],
+  [
+   "Can I use the result for professional work?",
+   "Yes, for ordering and planning. It assumes straight parallel rows across a rectangular field; irregular fields should be split into rectangles and summed."
+  ],
+  [
+   "Which width do the rows run along?",
+   "Rows are counted across the field's width and run along its length — swap the two inputs if your rows run the other way; the calculator follows the convention you enter."
+  ],
+  [
+   "Does it allow for headlands?",
+   "The geometric answer does not; subtract your headland allowance from the row length before ordering materials if your turns eat into the planted length."
+  ],
+  [
+   "Metric fields?",
+   "The same division works in metres: width ÷ spacing (in metres) = rows; rows × length = total metres. A 200 m-wide field at 0.75 m spacing holds 266 rows (rounding down — partial rows are not planted)."
+  ],
+  [
+   "Why miles of row in one field?",
+   "Because implements travel rows, not acres. Row-miles are the unit fuel, time and wear actually accumulate in."
+  ],
+  [
+   "Rows run the short way — what changes?",
+   "Swap width and length: rows are counted across the dimension they run perpendicular to. The total row length is the same product either way only if spacing is counted across the other side — check which side your planter crosses."
+  ],
+  [
+   "How does this help with planter calibration?",
+   "Seed per foot of row × total row feet = seed for the field. This total is the multiplier every per-row rate needs."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Turn rows into hours with the "
+  },
+  {
+   "t": "Field Coverage Time Calculator",
+   "l": "/tools/field-coverage-time-calculator"
+  },
+  {
+   "t": ", measure the field itself in the "
+  },
+  {
+   "t": "Acreage Map Calculator",
+   "l": "/tools/acreage-map-calculator"
+  },
+  {
+   "t": ", and price its inputs with the "
+  },
+  {
+   "t": "Fertilizer Amount Calculator",
+   "l": "/tools/fertilizer-amount-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "center-of-polygon",
+  "circle-area-from-radius",
+  "circle-circumference-from-radius",
+  "cities-within-drawn-area-finder",
+  "customer-radius-area-calculator",
+  "delivery-radius-area-calculator"
+ ]
+}

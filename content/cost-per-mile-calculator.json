@@ -1,0 +1,201 @@
+{
+ "slug": "cost-per-mile-calculator",
+ "primary_keyword": "Cost Per Mile Calculator",
+ "secondary_keywords": [
+  "price per mile calculator",
+  "driving cost per mile",
+  "trip cost per mile",
+  "vehicle cost per mile",
+  "travel cost mile"
+ ],
+ "title": "Cost Per Mile Calculator",
+ "description": "Turn any journey's total cost into a per-mile figure with the Cost Per Mile Calculator — the honest comparison for trips and vehicles. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a $455 road trip over 850 miles costs $0.54 per mile — the number that tells you what the same trip costs next year, whatever its route.",
+ "quick_answer": "The Cost Per Mile Calculator divides a journey's or a vehicle's total cost by the miles covered and returns the per-mile figure. Enter the total spend and the distance and read the unit cost — the honest way to compare two trips, two cars or a car against the train.",
+ "steps_intro": "Totals are stories; unit costs are evidence. Two inputs:",
+ "use_cases": [
+  {
+   "title": "Trip comparisons",
+   "body": [
+    {
+     "t": "The direct route cost $62 over 214 miles = $0.29/mile; the scenic route's figure will be higher and now quantifiably so. Decide with the premium priced."
+    }
+   ]
+  },
+  {
+   "title": "True vehicle running costs",
+   "body": [
+    {
+     "t": "A month of fuel, tolls, parking and wear over the month's miles — your car's real cost per mile, the number ownership decisions deserve. The "
+    },
+    {
+     "t": "Branch Travel Cost Calculator",
+     "l": "/tools/branch-travel-cost-calculator"
+    },
+    {
+     "t": " applies it to company travel."
+    }
+   ]
+  },
+  {
+   "title": "Reimbursement checks",
+   "body": [
+    {
+     "t": "If your employer's mileage rate sits below your computed cost per mile, the gap is a fact you can raise — politely, with arithmetic."
+    }
+   ]
+  },
+  {
+   "title": "Pricing driving work",
+   "body": [
+    {
+     "t": "Anyone paid to drive needs cost per mile as a floor. The "
+    },
+    {
+     "t": "Courier Distance Charge Calculator",
+     "l": "/tools/courier-distance-charge-calculator"
+    },
+    {
+     "t": " builds the charge on top of it."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The road trip",
+   "body": [
+    {
+     "t": "$455 ÷ 850 mi = $0.535/mile. Next year's version of the same trip budgets itself from this figure — multiply by the new distance."
+    }
+   ]
+  },
+  {
+   "label": "Example · The commute month",
+   "body": [
+    {
+     "t": "$310 of fuel and tolls over 1,240 commuting miles = $0.25/mile. The train pass can now be compared against a number instead of a feeling about petrol prices."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Cost per mile, worked",
+  "intro": "Totals divided by miles — the dilution pattern again: longer steady trips spread fixed costs thinner.",
+  "columns": [
+   "Total cost",
+   "Distance",
+   "Cost per mile"
+  ],
+  "rows": [
+   [
+    "$38.00",
+    "95 mi",
+    "$0.40"
+   ],
+   [
+    "$62.00",
+    "214 mi",
+    "$0.29"
+   ],
+   [
+    "$118.00",
+    "430 mi",
+    "$0.27"
+   ],
+   [
+    "$310.00",
+    "1,240 mi",
+    "$0.25"
+   ],
+   [
+    "$455.00",
+    "850 mi",
+    "$0.54"
+   ],
+   [
+    "$890.00",
+    "3,900 mi",
+    "$0.23"
+   ]
+  ],
+  "note": "The $0.54 row is the fully-loaded road trip (fuel, tolls, parking, food-adjacent stops excluded or included by your rules) — category discipline is what makes rows comparable."
+ },
+ "faq": [
+  [
+   "What costs can I include?",
+   "Fuel, tolls, parking, hire charges, wear — your consistent list. The figure means what your categories say it means; keep them the same across comparisons."
+  ],
+  [
+   "Is this a tax mileage rate?",
+   "No. Tax and employer rates are published allowances; this is your actual unit cost computed from your actual spend. The two are compared, not confused."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. This is cost accounting over a completed or planned distance; traffic belongs to the ETA tools."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Roads follow terrain and networks, not geometry. Cost follows the road figure — the miles your wheels actually turned."
+  ],
+  [
+   "Can route results change over time?",
+   "Costs drift with fuel prices and tolls; recompute per period. The division itself never changes."
+  ],
+  [
+   "How do I get cost per kilometre instead?",
+   "Divide the total by kilometres, or use the Cost Per Kilometer Calculator — its answers convert at 1.609344 km per mile."
+  ],
+  [
+   "Should depreciation be included?",
+   "For a vehicle's true cost per mile, yes — it is often the largest term. For a trip's marginal cost, no. Decide which question you are answering."
+  ],
+  [
+   "One-way or round trip?",
+   "Use the miles the wheels turned — usually the round trip. A one-way figure for a journey you also drove back understates the truth by half."
+  ],
+  [
+   "Does it work for a bicycle or on foot?",
+   "The division works for any mode with a cost and a distance; the categories (cake, shoe leather) are yours to price."
+  ],
+  [
+   "How often should I recompute?",
+   "Per fuel-price era or per vehicle change. A figure older than a price shock is history, not data."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The metric twin is the "
+  },
+  {
+   "t": "Cost Per Kilometer Calculator",
+   "l": "/tools/cost-per-kilometer-calculator"
+  },
+  {
+   "t": "; fuel-only costs come from the "
+  },
+  {
+   "t": "Fuel Cost Calculator",
+   "l": "/tools/fuel-cost-calculator"
+  },
+  {
+   "t": "; and business travel is the "
+  },
+  {
+   "t": "Branch Travel Cost Calculator",
+   "l": "/tools/branch-travel-cost-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner",
+  "cycling-speed-calculator",
+  "cycling-time-calculator"
+ ]
+}

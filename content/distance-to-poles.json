@@ -1,0 +1,199 @@
+{
+ "slug": "distance-to-poles",
+ "primary_keyword": "Distance to Poles",
+ "secondary_keywords": [
+  "distance to north pole",
+  "distance to south pole",
+  "how far to pole"
+ ],
+ "title": "Distance to Poles: How Far to 90°N and 90°S",
+ "description": "Measure your great-circle distance to the geographic North and South Poles with Distance to Poles — miles and km from any place on Earth. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, New York sits approx. 3,405 miles (5,481 km) from the North Pole and approx. 9,031 miles (14,535 km) from the South Pole — polar distance is just latitude, measured.",
+ "quick_answer": "Distance to Poles measures the great-circle distance from any place to the North Pole and South Pole. Because the poles sit at the ends of the Earth's axis, the answer is latitude geometry: your distance to the nearer pole depends only on how far your latitude is from ninety degrees.",
+ "steps_intro": "Two fixed points, every place on Earth, one clean piece of geometry:",
+ "use_cases": [
+  {
+   "title": "Geography teaching",
+   "body": [
+    {
+     "t": "The poles make latitude tangible: a class can watch the North Pole distance shrink by about 69 miles for every degree travelled north, because that is literally what a degree of latitude is."
+    }
+   ]
+  },
+  {
+   "title": "Expedition and aurora context",
+   "body": [
+    {
+     "t": "Polar-night and aurora questions are latitude questions. This measure frames how 'polar' a place like Tromsø or Fairbanks really is before the detailed planning starts."
+    }
+   ]
+  },
+  {
+   "title": "Trivia with receipts",
+   "body": [
+    {
+     "t": "Which is closer to a pole, Reykjavík or Anchorage? The argument ends here, with a method anyone can rerun — the "
+    },
+    {
+     "t": "Distance Between Two Places",
+     "l": "/tools/distance-between-two-places"
+    },
+    {
+     "t": " tool then settles the city-to-city version."
+    }
+   ]
+  },
+  {
+   "title": "Antipode and extremes exploration",
+   "body": [
+    {
+     "t": "Pair this with the antipode tools to explore the planet's extremes: farthest from the pole, farthest from your own antipode, closest to the axis ends."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · New York",
+   "body": [
+    {
+     "t": "New York (40.7128° N): to the North Pole approx. 5,480.5 km (3,405.4 mi) — that is (90 − 40.7128) = 49.2872° of arc; to the South Pole approx. 14,534.6 km (9,031.4 mi). The two always sum to the half-circumference, approx. 20,015 km."
+    }
+   ]
+  },
+  {
+   "label": "Example · London",
+   "body": [
+    {
+     "t": "London (51.5072° N) to the South Pole: approx. 15,734.9 km (9,777.2 mi) — near the maximum any northern city can be from the far pole. Its North Pole distance is correspondingly shorter, which the tool shows side by side."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The latitude ladder",
+  "intro": "Distance to the North Pole depends only on latitude: it is (90° − latitude) of arc on the site model. Read your latitude, read your polar distance.",
+  "columns": [
+   "Latitude",
+   "To North Pole (km)",
+   "To North Pole (mi)",
+   "To South Pole (km)"
+  ],
+  "rows": [
+   [
+    "80° N",
+    "1,112.0",
+    "690.9",
+    "18,903.2"
+   ],
+   [
+    "60° N",
+    "3,335.9",
+    "2,072.8",
+    "16,679.3"
+   ],
+   [
+    "51.5° N (London)",
+    "4,280.6",
+    "2,659.8",
+    "15,734.9"
+   ],
+   [
+    "40.7° N (New York)",
+    "5,480.5",
+    "3,405.4",
+    "14,534.6"
+   ],
+   [
+    "30° N",
+    "6,671.7",
+    "4,145.5",
+    "13,343.4"
+   ],
+   [
+    "0° (Equator)",
+    "10,007.6",
+    "6,218.4",
+    "10,007.6"
+   ],
+   [
+    "30° S",
+    "13,343.4",
+    "8,291.1",
+    "6,671.7"
+   ],
+   [
+    "60° S",
+    "16,679.3",
+    "10,363.7",
+    "3,335.9"
+   ]
+  ],
+  "note": "Figures are (90 ∓ latitude) × 111.195 km per degree on the mean sphere, rounded — the tool computes the exact haversine for your point."
+ },
+ "faq": [
+  [
+   "Why does only latitude matter?",
+   "The poles are the axis endpoints: every meridian runs into them. Moving east or west changes your longitude but not your angular distance to the pole, so the great-circle distance to a pole is set by latitude alone."
+  ],
+  [
+   "What are the poles' coordinates?",
+   "The geographic North Pole is 90° N (longitude is undefined there — every direction from it is south) and the South Pole is 90° S, where every direction is north. The tool uses those fixed points."
+  ],
+  [
+   "Is the reverse bearing from the pole meaningful?",
+   "No — and the tool will not pretend otherwise. From the North Pole every heading is 180° (south). Bearings to the pole are clean; bearings from it are a special case the geometry honestly refuses."
+  ],
+  [
+   "Geographic pole or magnetic pole?",
+   "Geographic — the axis endpoints. The magnetic poles wander (the north magnetic pole is in the Canadian Arctic) and belong to the Magnetic Declination tool's subject, not this one."
+  ],
+  [
+   "Why do the two distances sum to about 20,015 km?",
+   "Because pole-to-pole along any meridian is a half circumference: π × 6,371.0088 km ≈ 20,015 km. Your two distances are the two pieces of that arc through your meridian."
+  ],
+  [
+   "Can a place be equidistant from both poles?",
+   "Yes — everywhere on the equator, at approx. 10,007.6 km (6,218.4 mi) from each. It is the only parallel with that property."
+  ],
+  [
+   "Does the tool work in the southern hemisphere?",
+   "Yes — the ladder simply reads the other way: southern places are close to the South Pole and far from the North."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "For the opposite extreme — the point furthest from you in every direction — the "
+  },
+  {
+   "t": "Antipode Finder",
+   "l": "/tools/antipode-finder"
+  },
+  {
+   "t": " is the companion tool; the general measure is "
+  },
+  {
+   "t": "Distance Between Two Places",
+   "l": "/tools/distance-between-two-places"
+  },
+  {
+   "t": "; and the latitude arithmetic behind this page is explored in "
+  },
+  {
+   "t": "Latitude Degrees to Nautical Miles",
+   "l": "/tools/latitude-degrees-to-nautical-miles"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "closest-facility-finder",
+  "compass-bearing-visualizer",
+  "competitor-distance-map",
+  "coordinate-distance-table-generator",
+  "crow-flies-distance",
+  "distance-between-cities"
+ ]
+}

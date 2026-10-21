@@ -1,0 +1,200 @@
+{
+ "slug": "running-route-loop-generator",
+ "primary_keyword": "Running Route Loop Generator",
+ "secondary_keywords": [
+  "running route generator",
+  "loop route planner",
+  "circular run route",
+  "bike loop generator"
+ ],
+ "title": "Running Route Loop Generator: Circular Routes",
+ "description": "Generate a loop route of your target distance from any start point with the Running Route Loop Generator — real streets, sampled climb. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, set a 10 km target from your front door and get a loop whose real, routed distance and climb are reported — not the same out-and-back you have run forty times.",
+ "quick_answer": "The Running Route Loop Generator builds a circular route on real streets and paths from your start point, aiming at the target distance you set, and reports the loop's actual routed distance with its elevation gain sampled along the way. Set the start, choose the length, and run somewhere new.",
+ "steps_intro": "Variety is a training input. Generate a loop and let the streets surprise you safely:",
+ "use_cases": [
+  {
+   "title": "Breaking the out-and-back rut",
+   "body": [
+    {
+     "t": "Loops see more world per mile. Generate three candidates and the week's long run chooses itself — one-way routes belong to the "
+    },
+    {
+     "t": "Running Route Planner",
+     "l": "/tools/running-route-planner"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Training away from home",
+   "body": [
+    {
+     "t": "A hotel, a target distance, no local knowledge: the generator is the local runner you have not met."
+    }
+   ]
+  },
+  {
+   "title": "Distance-target sessions",
+   "body": [
+    {
+     "t": "The plan says 15 km. A loop that measures 15 km (checked, not hoped) makes the session honest — pace it with the "
+    },
+    {
+     "t": "Pace to Speed Calculator",
+     "l": "/tools/pace-to-speed-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Cycling loops too",
+   "body": [
+    {
+     "t": "Set run or cycle and the loop builds on the right network — a 40 km Sunday loop is the same request at a different scale."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The honest target",
+   "body": [
+    {
+     "t": "Street networks rarely allow exactly 10.00 km. The generator aims at the target and reports the loop it actually built — 9.7 or 10.4 km — so your log records the truth."
+    }
+   ]
+  },
+  {
+   "label": "Example · Climb as a dial",
+   "body": [
+    {
+     "t": "Generate two loops of the same length in a hilly town and their sampled climbs differ wildly. Choose flat for the easy day, hills for the session — the numbers make the choice."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Loop targets and their sessions",
+  "intro": "Common target distances and the training they usually serve — the generator builds any of them from your door.",
+  "columns": [
+   "Target",
+   "Session it serves",
+   "Loop character"
+  ],
+  "rows": [
+   [
+    "5 km",
+    "Parkrun-length effort",
+    "One compact circuit"
+   ],
+   [
+    "10 km",
+    "Tempo or steady day",
+    "A neighbourhood-scale loop"
+   ],
+   [
+    "15 km",
+    "Long-run building",
+    "Two districts, one loop"
+   ],
+   [
+    "21.1 km",
+    "Half-marathon distance",
+    "A proper morning"
+   ],
+   [
+    "42.2 km",
+    "Marathon distance",
+    "The full tour of everywhere"
+   ],
+   [
+    "40 km cycle",
+    "Sunday ride",
+    "Streets and lanes at bike scale"
+   ]
+  ],
+  "note": "Generated loops follow the street and path network the data knows; a loop is only as explorable as the map is complete."
+ },
+ "faq": [
+  [
+   "Will the loop be exactly my target distance?",
+   "It aims at it and reports the real distance of the loop it built — street geometry rarely permits the exact figure, and the honest report beats a rounded claim."
+  ],
+  [
+   "How is the loop built?",
+   "From your start point, the generator shapes a circuit over the local street and path network toward the target length, then routes it properly and samples its climb."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Loops are geometry and network; run them with a runner's own road sense at crossings."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "A loop's distance is the streets it follows — the only distance your legs will meet. The generator reports that figure."
+  ],
+  [
+   "Can route results change over time?",
+   "New paths and better data change what loops are possible; regenerate in a new season and the town has quietly grown new runs."
+  ],
+  [
+   "Can I export the loop?",
+   "The Running Route Planner exports GPX for point-to-point routes; a generated loop can be re-created there as a route if your device needs the file."
+  ],
+  [
+   "Run or cycle — does it matter?",
+   "Yes: the networks differ (paths a bike cannot use, roads a runner should not). Set the mode and the loop respects it."
+  ],
+  [
+   "The loop crosses a river twice — intended?",
+   "Bridges are the network's gifts; the loop uses the crossings the map offers. Enjoy the out-and-back skyline."
+  ],
+  [
+   "Can I ask for a hillier loop?",
+   "Generate a few and compare their sampled climbs — selection is the current dial for hilliness."
+  ],
+  [
+   "Loops for a pram or wheelchair?",
+   "Stick to the paved network by choosing city starts; the surface finder can audit a generated loop before little wheels commit."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Point-to-point runs are the "
+  },
+  {
+   "t": "Running Route Planner",
+   "l": "/tools/running-route-planner"
+  },
+  {
+   "t": "; climb analysis is the "
+  },
+  {
+   "t": "Route Elevation Gain Calculator",
+   "l": "/tools/route-elevation-gain-calculator"
+  },
+  {
+   "t": "; and surfaces are the "
+  },
+  {
+   "t": "Route Surface and Road Type Finder",
+   "l": "/tools/route-surface-and-road-type-finder"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner"
+ ]
+}

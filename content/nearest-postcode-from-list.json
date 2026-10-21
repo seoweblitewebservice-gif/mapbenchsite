@@ -1,0 +1,29 @@
+{
+ "slug": "nearest-postcode-from-list",
+ "primary_keyword": "Nearest Postcode From Your List Finder",
+ "secondary_keywords": [
+  "nearest postcode from list",
+  "closest zip from list",
+  "rank postcodes by distance",
+  "postcode list distance"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "australia-postcodes-by-state-suburb",
+  "census-geography-finder",
+  "cities-within-radius",
+  "city-comparison-tool",
+  "cost-of-living-compare",
+  "nearby-places-finder"
+ ]
+}

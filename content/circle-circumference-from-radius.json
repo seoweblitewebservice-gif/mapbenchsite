@@ -1,0 +1,207 @@
+{
+ "slug": "circle-circumference-from-radius",
+ "primary_keyword": "Circle Circumference From Radius",
+ "secondary_keywords": [
+  "circle circumference from radius online",
+  "free circle circumference from radius",
+  "circle circumference from radius calculator",
+  "circle circumference from radius tool",
+  "how to calculate circle circumference from radius"
+ ],
+ "title": "Circle Circumference From Radius",
+ "description": "Get a circle's circumference from its radius with Circle Circumference From Radius — C = 2πr in feet, metres or miles. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 100 ft radius has a circumference of approx. 628 ft — the fencing, edging or walking distance around the pond, not across it.",
+ "quick_answer": "Circle Circumference From Radius applies C = 2πr: enter the radius and it returns the distance around the circle in matching units. It is the perimeter figure behind fence rings, track layouts, edging orders and every 'how far around' question a radius creates.",
+ "steps_intro": "Around, not across — one formula, carefully unit-checked:",
+ "use_cases": [
+  {
+   "title": "Fencing and edging a round feature",
+   "body": [
+    {
+     "t": "A circular pen, bed or pond is fenced on its circumference. Order from this number (plus a gate allowance), not from a paced guess — the "
+    },
+    {
+     "t": "Fence Length Calculator",
+     "l": "/tools/fence-length-calculator"
+    },
+    {
+     "t": " handles straight runs."
+    }
+   ]
+  },
+  {
+   "title": "Tracks and layouts",
+   "body": [
+    {
+     "t": "A running loop or a circular drive is laid out by its circumference. Coaches and groundskeepers both start here."
+    }
+   ]
+  },
+  {
+   "title": "Checking the area tools",
+   "body": [
+    {
+     "t": "Circumference and area are the radius's two children; computing both (with "
+    },
+    {
+     "t": "Circle Area From Radius",
+     "l": "/tools/circle-area-from-radius"
+    },
+    {
+     "t": ") cross-checks any circle a map tool draws."
+    }
+   ]
+  },
+  {
+   "title": "Teaching π honestly",
+   "body": [
+    {
+     "t": "π stops being a button when a class measures a real circle's radius and predicts its circumference before walking it."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The pond ring",
+   "body": [
+    {
+     "t": "Radius 50 ft: C = 2π × 50 ≈ 314.16 ft of edging or low fence. Note the pleasing echo: the circumference at r = 50 equals the area digits at r = 10 — π's arithmetic has these symmetries everywhere."
+    }
+   ]
+  },
+  {
+   "label": "Example · A walking loop",
+   "body": [
+    {
+     "t": "Radius 1 km: C ≈ 6.28 km. A 'round the lake' path designer reads that as about an hour and a quarter's stroll — the circumference is the experience, not the radius."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Radius to circumference",
+  "intro": "C = 2πr tabulated. Circumference grows linearly — double the radius, double the walk around — unlike area's square law.",
+  "columns": [
+   "Radius",
+   "Circumference",
+   "Diameter (for reference)"
+  ],
+  "rows": [
+   [
+    "10 ft",
+    "62.83 ft",
+    "20 ft"
+   ],
+   [
+    "50 ft",
+    "314.16 ft",
+    "100 ft"
+   ],
+   [
+    "100 ft",
+    "628.32 ft",
+    "200 ft"
+   ],
+   [
+    "10 m",
+    "62.83 m",
+    "20 m"
+   ],
+   [
+    "25 m",
+    "157.08 m",
+    "50 m"
+   ],
+   [
+    "1 mi",
+    "6.28 mi",
+    "2 mi"
+   ],
+   [
+    "3 mi",
+    "18.85 mi",
+    "6 mi"
+   ],
+   [
+    "5 mi",
+    "31.42 mi",
+    "10 mi"
+   ]
+  ],
+  "note": "Circumference ÷ diameter is π at every row — divide any row's second column by its third to watch it happen."
+ },
+ "faq": [
+  [
+   "What formula does it use?",
+   "C = 2πr — twice π times the radius. If you know the diameter instead, C = πd gives the same answer in one step."
+  ],
+  [
+   "What does this tool calculate?",
+   "The perimeter of a circle from its radius, in the units you enter — feet, metres, miles or kilometres — with the diameter shown for reference."
+  ],
+  [
+   "Do I need an account?",
+   "No. The conversion is instant and runs locally in your browser."
+  ],
+  [
+   "Can I use the result for professional work?",
+   "For ordering materials and planning layouts, yes. Add a sensible waste and gate allowance to any fencing figure — the formula is exact, the ground is not."
+  ],
+  [
+   "Why is circumference linear but area quadratic?",
+   "Walking around grows like the radius itself; filling in grows like radius squared. The two tables on these sibling pages show the contrast side by side."
+  ],
+  [
+   "Radius or diameter — the classic mistake?",
+   "Entering the diameter where the radius belongs doubles the answer here (and quadruples it in the area calculator). Check which one you measured before trusting the result."
+  ],
+  [
+   "Does this work for a circle on the Earth?",
+   "For everyday radii the flat formula is the practical answer. Very large circles belong to the geodesic tools, where the sphere's own geometry takes over."
+  ],
+  [
+   "What if I only know the area?",
+   "Recover the radius first: r = √(A ÷ π). A circle of area 314.16 has radius 10, and therefore circumference 62.83."
+  ],
+  [
+   "Is circumference affected by the units?",
+   "Only in name: measure the radius in metres and the circumference is in metres. The ratio C ÷ r is always 2π, whatever the unit."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The filled-in twin is "
+  },
+  {
+   "t": "Circle Area From Radius",
+   "l": "/tools/circle-area-from-radius"
+  },
+  {
+   "t": "; both quantities appear together on drawn circles in the "
+  },
+  {
+   "t": "Map Radius Tool",
+   "l": "/tools/map-radius"
+  },
+  {
+   "t": "; and two circles' shared region is the "
+  },
+  {
+   "t": "Equal Circle Overlap Calculator",
+   "l": "/tools/equal-circle-overlap-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "center-of-polygon",
+  "cities-within-drawn-area-finder",
+  "crop-row-length-calculator",
+  "customer-radius-area-calculator",
+  "delivery-radius-area-calculator",
+  "delivery-radius-checker"
+ ]
+}

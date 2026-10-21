@@ -1,0 +1,28 @@
+{
+ "slug": "color-a-map",
+ "primary_keyword": "Color a Map",
+ "secondary_keywords": [
+  "color countries on map",
+  "map coloring tool",
+  "paint countries map"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "advanced-map-embed-generator",
+  "country-size-comparison",
+  "county-choropleth",
+  "embed-map-link-helper",
+  "google-maps-embed-code-generator",
+  "historical-map-context"
+ ]
+}

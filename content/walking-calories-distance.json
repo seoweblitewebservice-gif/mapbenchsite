@@ -1,0 +1,202 @@
+{
+ "slug": "walking-calories-distance",
+ "primary_keyword": "Walking Calories by Distance",
+ "secondary_keywords": [
+  "walking calories calculator",
+  "calories burned walking distance",
+  "walking calorie calculator",
+  "walk calories by km",
+  "walk calories by mile"
+ ],
+ "title": "Walking Calories by Distance: Kcal Estimates",
+ "description": "Estimate calories burned over a walking distance with Walking Calories by Distance — weight-based, clearly approximate. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, under the simple model this page uses, a 160 lb walker covers a mile at roughly 56 kcal — so a 5-mile walk is about 280 kcal, before hills comment.",
+ "quick_answer": "Walking Calories by Distance estimates the energy a walk costs from the walker's weight and the distance covered. Enter both and read an approximate kilocalorie figure — a planning estimate built on a simple, stated model that leaves out hills, pace and terrain, and says so on the page.",
+ "steps_intro": "An estimate wearing its assumptions openly. Two inputs:",
+ "use_cases": [
+  {
+   "title": "Step-goal translation",
+   "body": [
+    {
+     "t": "Steps become miles become calories: the chain every fitness dashboard performs. This page does the last link transparently, with the model showing."
+    }
+   ]
+  },
+  {
+   "title": "Weight-management walks",
+   "body": [
+    {
+     "t": "The daily walk's energy, estimated honestly, is the figure diets are planned around — pair it with your real pace from the "
+    },
+    {
+     "t": "Walking Pace Calculator",
+     "l": "/tools/walking-pace-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Charity and challenge walks",
+   "body": [
+    {
+     "t": "A 26-mile challenge day is an energy event. Estimate it, then plan the food like the logistics it is."
+    }
+   ]
+  },
+  {
+   "title": "Comparing walk versus ride",
+   "body": [
+    {
+     "t": "The same distance on a bike burns differently — "
+    },
+    {
+     "t": "Cycling Calories by Distance",
+     "l": "/tools/cycling-calories-distance"
+    },
+    {
+     "t": " runs the wheeled model. Walking is the expensive way to travel, gloriously."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The five-mile walk",
+   "body": [
+    {
+     "t": "160 lb × 5 miles at the model's roughly 0.35 kcal per pound per mile ≈ 280 kcal. Brisk hills will argue upward; the model is the floor, labelled as one."
+    }
+   ]
+  },
+  {
+   "label": "Example · The marathon walk",
+   "body": [
+    {
+     "t": "26.2 miles at the same rate ≈ 1,467 kcal — a day's deliberate walking is a serious energy undertaking, which the challenge-walk food plan must respect."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Distance to calories (simple walking model)",
+  "intro": "Estimates at an explicitly stated assumption of roughly 0.35 kcal per pound of body weight per mile — a planning model, not a measurement. Faster and hillier walking burns more.",
+  "columns": [
+   "Walk",
+   "At 140 lb",
+   "At 160 lb",
+   "At 200 lb"
+  ],
+  "rows": [
+   [
+    "1 mi",
+    "49",
+    "56",
+    "70"
+   ],
+   [
+    "3 mi",
+    "147",
+    "168",
+    "210"
+   ],
+   [
+    "5 mi",
+    "245",
+    "280",
+    "350"
+   ],
+   [
+    "10 mi",
+    "490",
+    "560",
+    "700"
+   ],
+   [
+    "26.2 mi",
+    "1,284",
+    "1,467",
+    "1,834"
+   ]
+  ],
+  "note": "Your watch's figure and this model's will differ; consistency in your own tracking beats agreement between models."
+ },
+ "faq": [
+  [
+   "Does this replace a specialist tool or professional measurement?",
+   "No — it is a weight-and-distance estimate with its assumption printed. Wearables with heart-rate data estimate closer; a lab measures. This is the planning figure."
+  ],
+  [
+   "Is my input uploaded?",
+   "No. Weight and distance are used in your browser and go nowhere."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Traffic does not burn the walker's calories; hills do, and the model omits them — treat the output as a floor."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "You burn calories over the ground you actually walk. Enter the walked distance."
+  ],
+  [
+   "Can route results change over time?",
+   "Your weight and fitness do; the model stays fixed so your log stays comparable across the change."
+  ],
+  [
+   "Why does weight matter so much?",
+   "Walking is carrying: energy scales with the mass moved over the distance. The model is linear for the same reason the physics is."
+  ],
+  [
+   "Net or gross calories?",
+   "The model estimates the walk's energy cost as a planning figure. Net-versus-gross bookkeeping is a dietitian's refinement beyond a distance model."
+  ],
+  [
+   "Why do step counters disagree with the model?",
+   "They count motion; the model prices distance and weight. Two honest instruments, two questions — a log should pick one ruler."
+  ],
+  [
+   "Walking with a backpack?",
+   "Add the pack to the carried weight in spirit: energy follows total mass moved. The model takes body weight; your judgement adds the rucksack."
+  ],
+  [
+   "Downhill walks burn less?",
+   "Yes — gravity assists. The flat model overstates a descent day and understates the climb back. Net days average out honestly."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Paces are the "
+  },
+  {
+   "t": "Walking Pace Calculator",
+   "l": "/tools/walking-pace-calculator"
+  },
+  {
+   "t": ", times the "
+  },
+  {
+   "t": "Walking Time Calculator",
+   "l": "/tools/walking-time-calculator"
+  },
+  {
+   "t": ", and the wheeled model is "
+  },
+  {
+   "t": "Cycling Calories by Distance",
+   "l": "/tools/cycling-calories-distance"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner"
+ ]
+}

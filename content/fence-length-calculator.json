@@ -1,0 +1,198 @@
+{
+ "slug": "fence-length-calculator",
+ "primary_keyword": "Fence Length Calculator",
+ "secondary_keywords": [
+  "fence length calculator online",
+  "free fence length calculator",
+  "fence length calculator calculator",
+  "fence length calculator tool",
+  "how to calculate fence length calculator"
+ ],
+ "title": "Fence Length Calculator: Perimeter to Materials",
+ "description": "Total up a fence run with the Fence Length Calculator — perimeter from side lengths or field dimensions, in feet and metres. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a square 20-acre field has sides of approx. 933 ft and a fence line of approx. 3,734 ft — before gates, corners and the waste allowance every real order needs.",
+ "quick_answer": "The Fence Length Calculator totals the fencing a boundary needs: enter the side lengths, or a field's dimensions, and it returns the full perimeter in feet and metres. It is the figure behind wire, rail and post orders — measured once, on purpose, instead of paced off and regretted.",
+ "steps_intro": "A fence is a perimeter with a price tag. Measure the perimeter properly:",
+ "use_cases": [
+  {
+   "title": "Farm and ranch fencing",
+   "body": [
+    {
+     "t": "Paddocks are priced by the foot of wire and the count of posts. The perimeter from this calculator starts the order; the "
+    },
+    {
+     "t": "Fence Post Count Calculator",
+     "l": "/tools/fence-post-count-calculator"
+    },
+    {
+     "t": " finishes it."
+    }
+   ]
+  },
+  {
+   "title": "Garden and yard fencing",
+   "body": [
+    {
+     "t": "Panels come in fixed widths, so a garden perimeter converts straight into a panel count — with the offcut visible before you buy, not after."
+    }
+   ]
+  },
+  {
+   "title": "Checking a contractor's quote",
+   "body": [
+    {
+     "t": "A fencing quote is a length claim. Measure the same boundary here and compare — the conversation improves immediately."
+    }
+   ]
+  },
+  {
+   "title": "Fields measured on the map",
+   "body": [
+    {
+     "t": "Draw the parcel in the "
+    },
+    {
+     "t": "Acreage Map Calculator",
+     "l": "/tools/acreage-map-calculator"
+    },
+    {
+     "t": " and its outline is the fence line; this calculator prices runs you specify by hand."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The square 20 acres",
+   "body": [
+    {
+     "t": "Side = √871,200 ≈ 933.4 ft, perimeter ≈ 3,733.5 ft. Add two 12 ft gates' worth of planning and a 5% waste allowance and the order writes itself."
+    }
+   ]
+  },
+  {
+   "label": "Example · The classic acre",
+   "body": [
+    {
+     "t": "One acre as a furlong × chain strip (660 × 66 ft) has a perimeter of 1,452 ft — more fence per acre than any squarer shape of the same area, which is why shape, not just size, prices a fence."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Perimeter by shape (1 acre each)",
+  "intro": "The same area in different shapes needs very different fence lengths — the table that ends 'an acre is an acre' thinking.",
+  "columns": [
+   "Shape (1 acre)",
+   "Dimensions (ft)",
+   "Perimeter (ft)",
+   "Perimeter (m)"
+  ],
+  "rows": [
+   [
+    "Square",
+    "208.7 × 208.7",
+    "834.8",
+    "254.5"
+   ],
+   [
+    "Rectangle 2:1",
+    "295.2 × 147.6",
+    "885.5",
+    "269.9"
+   ],
+   [
+    "Rectangle 4:1",
+    "417.4 × 104.4",
+    "1,043.6",
+    "318.1"
+   ],
+   [
+    "Furlong × chain",
+    "660 × 66",
+    "1,452.0",
+    "442.6"
+   ],
+   [
+    "Circle",
+    "radius 117.8",
+    "739.8",
+    "225.5"
+   ]
+  ],
+  "note": "The circle wins, as circles do: least fence per acre. Rectangles pay for their corners' convenience in wire."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Total fence length: the perimeter of the boundary you describe, summed in feet and metres, ready to become a materials list."
+  ],
+  [
+   "Do I need an account?",
+   "No. Enter the runs, read the total, order the fence."
+  ],
+  [
+   "Can I use the result for professional work?",
+   "Yes, for estimating and ordering with a sensible waste allowance. Legal boundary placement still belongs to survey; this measures the fence you intend to build."
+  ],
+  [
+   "Should I add extra for gates and waste?",
+   "Yes — gates interrupt runs (measure them in or out consistently) and cuts waste material. Five to ten percent overage is the common planning allowance."
+  ],
+  [
+   "What about slopes?",
+   "A fence follows the ground, and sloping ground is longer than its map projection. On steep runs, measure the slope distance or add allowance — flat perimeters understate hill fences."
+  ],
+  [
+   "How do posts relate to length?",
+   "Posts divide the length by their spacing. The Fence Post Count Calculator turns this total into post numbers for common spacings."
+  ],
+  [
+   "Can it handle several separate runs?",
+   "Add them: a fence project is a list of runs, and the total is their sum. Keep gates and corners noted per run."
+  ],
+  [
+   "How do I allow for corners?",
+   "Corners do not change total length — the perimeter already includes them. They change the post and bracing specification, which the post calculator's notes cover."
+  ],
+  [
+   "My boundary is curved. How do I measure it?",
+   "Break the curve into short straight chords and sum them; more, shorter chords hug the curve closer. On the map, the acreage outline does this for you."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Count the posts in the "
+  },
+  {
+   "t": "Fence Post Count Calculator",
+   "l": "/tools/fence-post-count-calculator"
+  },
+  {
+   "t": ", measure the land inside with the "
+  },
+  {
+   "t": "Acreage Map Calculator",
+   "l": "/tools/acreage-map-calculator"
+  },
+  {
+   "t": ", and draw setback lines with the "
+  },
+  {
+   "t": "Buffer Zone Map",
+   "l": "/tools/buffer-zone-map"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "center-of-polygon",
+  "circle-area-from-radius",
+  "circle-circumference-from-radius",
+  "cities-within-drawn-area-finder",
+  "crop-row-length-calculator",
+  "customer-radius-area-calculator"
+ ]
+}

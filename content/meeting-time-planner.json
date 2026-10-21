@@ -1,0 +1,184 @@
+{
+ "slug": "meeting-time-planner",
+ "primary_keyword": "Meeting Time Planner",
+ "secondary_keywords": [
+  "meeting planner",
+  "time zone meeting",
+  "best time to call",
+  "world meeting time"
+ ],
+ "title": "Meeting Time Planner: Times That Align",
+ "description": "Find when local times align across cities with the Meeting Time Planner — daylight-saving rules included. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 9:00 a.m. in New York is 2:00 p.m. in London and 7:30 p.m. in Mumbai — a workable three-continent slot that survives most of the year, and the planner shows you the weeks when it does not.",
+ "quick_answer": "The Meeting Time Planner lines up several locations' local clocks for a candidate time so you can see when a call actually works for everyone. Add the cities, pick a time, and compare everyone's clock — daylight-saving rules included, since changeover weeks are where recurring meetings die.",
+ "steps_intro": "Somebody's midnight is hiding in your recurring invite. Find it before they do:",
+ "use_cases": [
+  {
+   "title": "Standing team calls",
+   "body": [
+    {
+     "t": "Set the recurring slot from the overlap, not from headquarters' convenience — and recheck it at the DST changeovers with the "
+    },
+    {
+     "t": "Daylight Saving Checker",
+     "l": "/tools/daylight-saving-checker"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Family video calls",
+   "body": [
+    {
+     "t": "Three generations, three continents: the planner finds the kind hour — awake for the kids, not midnight for the grandparents."
+    }
+   ]
+  },
+  {
+   "title": "Client and vendor calls",
+   "body": [
+    {
+     "t": "Proposing a time inside everyone's workday is basic courtesy made visible. Send the planner's result as the receipt."
+    }
+   ]
+  },
+  {
+   "title": "Event and stream timing",
+   "body": [
+    {
+     "t": "A launch at 9:00 New York is 14:00 London and 19:30 Mumbai — prime time or dead air, depending on the audience you wanted."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The golden slot",
+   "body": [
+    {
+     "t": "9:00 New York (winter, EST) = 14:00 UTC = 14:00 London, 15:00 Berlin, 19:30 Mumbai. In summer New York's 9:00 becomes 13:00 UTC and London stays 14:00 (BST) — the slot survives, which is why it is a classic."
+    }
+   ]
+  },
+  {
+   "label": "Example · The Sydney problem",
+   "body": [
+    {
+     "t": "Add Sydney and the same slot lands at 1:00 a.m. (winter, AEDT next day). No single hour flatters four continents — rotate the pain or split the meeting; the planner makes the cost explicit instead of surprising."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "One moment, five clocks",
+  "intro": "A winter weekday, 9:00 a.m. New York rendered everywhere — computed with standard-time offsets; the planner applies each city's live rules.",
+  "columns": [
+   "City",
+   "Local time",
+   "Zone state"
+  ],
+  "rows": [
+   [
+    "New York",
+    "9:00 a.m.",
+    "EST (UTC-5)"
+   ],
+   [
+    "London",
+    "2:00 p.m.",
+    "GMT (UTC+0)"
+   ],
+   [
+    "Berlin",
+    "3:00 p.m.",
+    "CET (UTC+1)"
+   ],
+   [
+    "Mumbai",
+    "7:30 p.m.",
+    "IST (UTC+5:30)"
+   ],
+   [
+    "Sydney",
+    "1:00 a.m. next day",
+    "AEDT (UTC+11)"
+   ]
+  ],
+  "note": "Half-hour offsets (Mumbai) and date-line flips (Sydney) are why planners exist. DST weeks shift some rows by an hour — the planner's rules account for the date you pick."
+ },
+ "faq": [
+  [
+   "Is DST included?",
+   "Yes — the planner applies each location's daylight-saving rules for the date, which is exactly the feature spreadsheets lack and changeover weeks punish."
+  ],
+  [
+   "How many cities can I add?",
+   "Several — enough for a genuinely global team. Beyond six or so, the overlap usually vanishes and the tool's honest answer is to rotate times or split the call."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — cities are typed, never detected. Your location is not a participant unless you add it."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Cities resolve via open geocoding; zone rules come from the tz database, the same source your calendar uses — disagreements are rare and usually vintage."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "What counts as a workable hour?",
+   "Your call — the planner shows clocks, you judge lives. A common courtesy band is 8 a.m. to 7 p.m. local; the table makes breaches visible."
+  ],
+  [
+   "Recurring meeting across a changeover?",
+   "The slot can shift for a few weeks between regions' change dates. Recheck in March and October — a calendar habit worth more than the tool."
+  ],
+  [
+   "Half-hour zones?",
+   "Handled exactly — Mumbai's :30 is arithmetic the planner does natively."
+  ],
+  [
+   "Can it send the invitation?",
+   "No — it finds the time. Your calendar sends the invite; paste the local times for each city into it as the courtesy receipt."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Rules behind it: the "
+  },
+  {
+   "t": "Daylight Saving Checker",
+   "l": "/tools/daylight-saving-checker"
+  },
+  {
+   "t": "; overlap math: the "
+  },
+  {
+   "t": "Working Hours Overlap Calculator",
+   "l": "/tools/working-hours-overlap-calculator"
+  },
+  {
+   "t": "; conversions: the "
+  },
+  {
+   "t": "Timezone Converter",
+   "l": "/tools/timezone-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location"
+ ]
+}

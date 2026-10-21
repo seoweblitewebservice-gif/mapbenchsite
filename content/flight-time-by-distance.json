@@ -1,0 +1,192 @@
+{
+ "slug": "flight-time-by-distance",
+ "primary_keyword": "Flight Time by Distance Calculator",
+ "secondary_keywords": [
+  "flight time by distance calculator online",
+  "free flight time by distance calculator",
+  "flight time by distance calculator calculator",
+  "flight time by distance calculator tool",
+  "how to use flight time by distance calculator"
+ ],
+ "title": "Flight Time by Distance Calculator",
+ "description": "Turn a distance into a rough flight time with the Flight Time by Distance Calculator — a cruise-speed reference table for planning. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 3,000 km at a representative 850 km/h cruise works out to about 3 hours 32 minutes of still-air flying — before taxi, climb and winds have their say.",
+ "quick_answer": "The Flight Time by Distance Calculator converts a flight distance into a rough airborne time using a representative cruise speed. Enter the distance and read the still-air estimate — useful for comparing routes and sanity-checking schedules, and deliberately labelled rough because real flights add taxi, climb, descent and weather.",
+ "steps_intro": "Distance is the input you have; time is the answer you need — with the assumptions shown:",
+ "use_cases": [
+  {
+   "title": "Comparing route options",
+   "body": [
+    {
+     "t": "Two routings with different distances become comparable as times: an extra 500 km is roughly an extra 35 minutes at cruise — the unit travellers actually feel."
+    }
+   ]
+  },
+  {
+   "title": "Sanity-checking an itinerary",
+   "body": [
+    {
+     "t": "If a schedule claims a block time wildly off the distance-implied cruise time, winds, a stop or a slow aircraft explain it — or the itinerary deserves a second look. Distance first from the "
+    },
+    {
+     "t": "Flight Distance Calculator",
+     "l": "/tools/flight-distance-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Estimating unfamiliar routes",
+   "body": [
+    {
+     "t": "Charter quotes, sim flights and 'could we fly there?' questions all start with distance ÷ cruise speed. This tool is that arithmetic, done carefully and labelled honestly."
+    }
+   ]
+  },
+  {
+   "title": "Teaching estimation",
+   "body": [
+    {
+     "t": "Fermi-style estimation lessons love this calculation: one division turns a map measurement into a journey length a class can argue about productively."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · A medium-haul leg",
+   "body": [
+    {
+     "t": "2,000 km — about New York to Miami scale — at 850 km/h is approx. 2 hours 21 minutes still-air. Published schedules for such legs run longer; the difference is the real world's overhead, itemised in the FAQ."
+    }
+   ]
+  },
+  {
+   "label": "Example · A long-haul leg",
+   "body": [
+    {
+     "t": "7,500 km at the same reference speed is approx. 8 hours 49 minutes. Long hauls bend the simple model least in cruise and most at the ends — which is why the estimate is a floor, not a promise."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Distance to still-air time (850 km/h reference)",
+  "intro": "Pure division at a representative jet cruise of 850 km/h — a reference scale for the tool's estimates, labelled approx. throughout. Real block times are longer.",
+  "columns": [
+   "Distance (km)",
+   "Distance (mi)",
+   "Still-air time"
+  ],
+  "rows": [
+   [
+    "250",
+    "155",
+    "0h 18m"
+   ],
+   [
+    "500",
+    "311",
+    "0h 35m"
+   ],
+   [
+    "1,000",
+    "621",
+    "1h 11m"
+   ],
+   [
+    "2,000",
+    "1,243",
+    "2h 21m"
+   ],
+   [
+    "3,000",
+    "1,864",
+    "3h 32m"
+   ],
+   [
+    "5,000",
+    "3,107",
+    "5h 53m"
+   ],
+   [
+    "7,500",
+    "4,660",
+    "8h 49m"
+   ],
+   [
+    "10,000",
+    "6,214",
+    "11h 46m"
+   ]
+  ],
+  "note": "Add taxi, climb and descent (commonly 30–60 minutes of schedule across a flight) and wind effects before comparing with a timetable — the table is the cruise-only ingredient."
+ },
+ "faq": [
+  [
+   "What cruise speed does the estimate use?",
+   "A representative jet cruise of about 850 km/h. Turboprops and short-haul aircraft cruise slower; the tool's figure is a reference for jet routes, which are most distance-to-time questions."
+  ],
+  [
+   "Why is the real flight always longer?",
+   "Block time includes taxi-out, climb, descent, approach and taxi-in, plus wind and routing. The still-air cruise figure is the irreducible core; everything else is overhead the schedule honestly adds."
+  ],
+  [
+   "Can headwinds really change it that much?",
+   "Yes — a strong jet-stream headwind on a long westbound leg can add an hour against the still-air figure, and the same wind returns the favour eastbound. That asymmetry is normal, not an airline trick."
+  ],
+  [
+   "Should I use this to plan a connection?",
+   "No. Connections need published schedules with their buffers. Use this estimate to understand and compare, never to cut a connection fine."
+  ],
+  [
+   "Does it work for driving distances?",
+   "The arithmetic is generic, but the speed assumption is a jet's. For road time, the driving tools use network speeds instead — a very different model."
+  ],
+  [
+   "How accurate is the estimate?",
+   "As a still-air cruise figure, exact by construction. As a prediction of a real flight, rough by design — the page labels it that way rather than dress an estimate as a timetable."
+  ],
+  [
+   "Can I enter miles instead of kilometres?",
+   "The table shows both scales; the calculator accepts the distance you have. Miles ÷ 528 gives the same reference hours at 850 km/h (528 mph ≈ 850 km/h)."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Get the distance first from the "
+  },
+  {
+   "t": "Flight Distance Calculator",
+   "l": "/tools/flight-distance-calculator"
+  },
+  {
+   "t": " or between named airports from the "
+  },
+  {
+   "t": "Airport Distance Calculator",
+   "l": "/tools/airport-distance-calculator"
+  },
+  {
+   "t": "; for the route's shape and headings, the "
+  },
+  {
+   "t": "Great Circle Flight Route Calculator",
+   "l": "/tools/great-circle-flight-route-calculator"
+  },
+  {
+   "t": " completes the picture."
+  }
+ ],
+ "more_tools": [
+  "closest-facility-finder",
+  "compass-bearing-visualizer",
+  "competitor-distance-map",
+  "coordinate-distance-table-generator",
+  "crow-flies-distance",
+  "distance-between-cities"
+ ]
+}

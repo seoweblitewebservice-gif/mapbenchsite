@@ -1,0 +1,28 @@
+{
+ "slug": "what3words-converter",
+ "primary_keyword": "What3Words-Style Location Helper",
+ "secondary_keywords": [
+  "what3words",
+  "location words",
+  "3 word address"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator"
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "slug": "service-coverage-gap",
+ "primary_keyword": "Service Coverage Gap Viewer",
+ "secondary_keywords": [
+  "coverage gap",
+  "service gap map",
+  "network coverage"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "center-of-polygon",
+  "circle-area-from-radius",
+  "circle-circumference-from-radius",
+  "cities-within-drawn-area-finder",
+  "crop-row-length-calculator",
+  "customer-radius-area-calculator"
+ ]
+}

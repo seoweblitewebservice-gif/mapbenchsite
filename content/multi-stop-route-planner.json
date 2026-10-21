@@ -1,0 +1,190 @@
+{
+ "slug": "multi-stop-route-planner",
+ "primary_keyword": "Multi-Stop Route Planner",
+ "secondary_keywords": [
+  "multi stop route",
+  "route planner",
+  "multi-stop route planner online"
+ ],
+ "title": "Multi-Stop Route Planner: Up to 30 Stops",
+ "description": "Route up to 30 stops with a per-leg breakdown using the Multi-Stop Route Planner — total road distance and time for the whole round. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a nine-stop delivery round returns nine legs and a total — the day's skeleton, measurable before the van leaves the yard.",
+ "quick_answer": "The Multi-Stop Route Planner routes a journey through up to 30 stops in your order, along real roads, and breaks it into legs with total distance and time. Add the stops, reorder them freely, and read the round as a whole before committing the day to it.",
+ "steps_intro": "A round is legs plus a total. See both before you drive either:",
+ "use_cases": [
+  {
+   "title": "Delivery and service rounds",
+   "body": [
+    {
+     "t": "The round's total is the shift's truth. If the order matters — and it usually does — the "
+    },
+    {
+     "t": "Route Optimizer",
+     "l": "/tools/route-optimizer"
+    },
+    {
+     "t": " trials better orders of the same stops."
+    }
+   ]
+  },
+  {
+   "title": "Estate-agent and viewing days",
+   "body": [
+    {
+     "t": "Six viewings across a county become one routed day with leg times — the schedule clients can actually be given."
+    }
+   ]
+  },
+  {
+   "title": "Errand chains",
+   "body": [
+    {
+     "t": "School, depot, shop, home: the chain routed once is shorter than the chain improvised four times."
+    }
+   ]
+  },
+  {
+   "title": "Road trips with stops",
+   "body": [
+    {
+     "t": "The scenic detours are stops too. Route them in and the trip's real distance replaces the fantasy figure — costs follow from the "
+    },
+    {
+     "t": "Road Trip Cost Calculator",
+     "l": "/tools/road-trip-cost-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The leg table",
+   "body": [
+    {
+     "t": "Each leg is reported with its own distance and time, so the day's pinch points show themselves: the 40-minute leg between stops 6 and 7 is where the schedule will break, visible at breakfast."
+    }
+   ]
+  },
+  {
+   "label": "Example · Order is money",
+   "body": [
+    {
+     "t": "The same stops in a thoughtless order can add a quarter to the round. This planner prices the order you give it; the Optimizer exists to beat it."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the planner reports",
+  "intro": "The output, field by field — what to check before the day is committed.",
+  "columns": [
+   "Output",
+   "What it tells you",
+   "Decide from it"
+  ],
+  "rows": [
+   [
+    "Per-leg distance",
+    "Each hop's road miles",
+    "Where the day stretches"
+   ],
+   [
+    "Per-leg time",
+    "Routing estimate per hop",
+    "Appointment spacing"
+   ],
+   [
+    "Total distance",
+    "The round's full length",
+    "Fuel and cost"
+   ],
+   [
+    "Total time",
+    "Driving time summed",
+    "Shift feasibility"
+   ],
+   [
+    "Stop order",
+    "Your sequence, routed",
+    "Whether to optimise"
+   ]
+  ],
+  "note": "Times are routing estimates without live traffic — pad the legs that end in appointments."
+ },
+ "faq": [
+  [
+   "Does it optimise the order?",
+   "This planner routes the order you give it, faithfully. Reordering to cut distance is the Route Optimizer's job — the two are designed to be used in sequence."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Leg times are network estimates; the day's real traffic is the day's own surprise."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Legs follow roads between stops. The total is the driven round, not the geometry of the dots."
+  ],
+  [
+   "Can route results change over time?",
+   "Road data improves and roads change; re-run a standing round each season rather than trusting an old total."
+  ],
+  [
+   "How many stops can I add?",
+   "Up to 30 — enough for a full delivery round or a very ambitious Saturday."
+  ],
+  [
+   "Can the route start and end at the same place?",
+   "Yes — add the depot as both first and last stop and the round closes on itself."
+  ],
+  [
+   "Can I export the route?",
+   "The roadbook and GPX tools elsewhere on the site cover documents and devices; this page's craft is the routed round itself."
+  ],
+  [
+   "Can a stop appear twice?",
+   "Yes — a hub visited morning and evening is two stops. The leg table treats each visit as its own row, which is the day's truth."
+  ],
+  [
+   "What if two stops share an address?",
+   "Keep both if the visits are genuinely separate; delete one if it was a typing echo. The planner routes what it is given."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Better orders come from the "
+  },
+  {
+   "t": "Route Optimizer",
+   "l": "/tools/route-optimizer"
+  },
+  {
+   "t": "; documents from the "
+  },
+  {
+   "t": "Route Roadbook Generator",
+   "l": "/tools/route-roadbook-generator"
+  },
+  {
+   "t": "; and costs from the "
+  },
+  {
+   "t": "Road Trip Cost Calculator",
+   "l": "/tools/road-trip-cost-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-calories-distance",
+  "cycling-route-planner",
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator"
+ ]
+}

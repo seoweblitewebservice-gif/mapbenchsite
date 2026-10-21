@@ -1,0 +1,182 @@
+{
+ "slug": "airport-midpoint-by-coordinates",
+ "primary_keyword": "Airport Midpoint by Coordinates",
+ "secondary_keywords": [
+  "airport midpoint by coordinates online",
+  "free airport midpoint by coordinates",
+  "airport midpoint by coordinates calculator",
+  "airport midpoint by coordinates tool",
+  "how to use airport midpoint by coordinates"
+ ],
+ "title": "Airport Midpoint by Coordinates",
+ "description": "Find the geographic halfway point between two airports with the Airport Midpoint by Coordinates tool — coordinates and half-distance. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, the midpoint of JFK and LAX sits at 39.457, −97.141 in Kansas — approx. 1,987 km (1,235 miles) from each airport along the great circle.",
+ "quick_answer": "The Airport Midpoint by Coordinates tool finds the halfway point between two airports on the surface of the Earth. Enter both airports and it returns the midpoint's coordinates with the equal distance to each side, computed on the sphere rather than by averaging the two positions on a flat map.",
+ "steps_intro": "The middle of a flight is rarely where flat-map intuition puts it — this tool does the spherical version:",
+ "use_cases": [
+  {
+   "title": "Diversion and alternates thinking",
+   "body": [
+    {
+     "t": "Pilots and dispatchers think in halfway terms: the point where turning back and pressing on cost the same distance. This tool gives that point's coordinates for any airport pair."
+    }
+   ]
+  },
+  {
+   "title": "Meeting aircraft and crews",
+   "body": [
+    {
+     "t": "Where two flights from different bases could rendezvous, or where a crew swap is geographically fair, starts with the midpoint — then practical choices (airspace, fields, weather) refine it."
+    }
+   ]
+  },
+  {
+   "title": "Route studies",
+   "body": [
+    {
+     "t": "Students comparing great-circle and rhumb routes use the midpoint as a checkpoint: the great circle's midpoint is displaced toward the pole relative to the straight line on a Mercator chart."
+    }
+   ]
+  },
+  {
+   "title": "Long-haul curiosity, answered properly",
+   "body": [
+    {
+     "t": "“Where will we be halfway to Sydney?” deserves a computed answer, not a guess — this tool returns coordinates you can paste into any map."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · United States",
+   "body": [
+    {
+     "t": "JFK ↔ LAX (approx. 3,974.3 km, 2,469.5 mi): the midpoint is 39.457, −97.141 in Kansas, approx. 1,987.2 km (1,234.8 mi) from each airport. Averaging the two airports' coordinates on paper would place the point noticeably further south."
+    }
+   ]
+  },
+  {
+   "label": "Example · Europe",
+   "body": [
+    {
+     "t": "Heathrow ↔ Paris CDG (approx. 347.0 km): the midpoint is 50.250, 1.086 — in the English Channel, as any London–Paris midpoint must be. Short hops still reward the spherical method; the principle does not shrink with the distance."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Airport midpoints at a glance",
+  "intro": "Midpoints computed on the sphere for well-known pairs, using published airport coordinates — approx. positions you can reproduce in the tool.",
+  "columns": [
+   "Pair",
+   "Total (km)",
+   "Half-distance (km)",
+   "Midpoint"
+  ],
+  "rows": [
+   [
+    "JFK ↔ LAX",
+    "3,974.3",
+    "1,987.2",
+    "39.457, −97.141"
+   ],
+   [
+    "Heathrow ↔ Paris CDG",
+    "347.0",
+    "173.5",
+    "50.250, 1.086"
+   ],
+   [
+    "JFK ↔ Heathrow",
+    "5,540.0",
+    "2,770.0",
+    "North Atlantic"
+   ],
+   [
+    "O'Hare ↔ Dallas/Fort Worth",
+    "1,290.0",
+    "645.0",
+    "Mid-continent US"
+   ],
+   [
+    "San Francisco ↔ O'Hare",
+    "2,964.0",
+    "1,482.0",
+    "Great Plains"
+   ],
+   [
+    "Miami ↔ JFK",
+    "1,756.9",
+    "878.5",
+    "US East Coast"
+   ]
+  ],
+  "note": "Descriptive locations are given where a coordinate alone is hard to picture; the tool always returns the exact coordinates for the pair you enter."
+ },
+ "faq": [
+  [
+   "Why not just average the two airports' latitudes and longitudes?",
+   "Averaging treats the map as flat graph paper. Over long distances the averaged point can sit hundreds of kilometres from the true surface midpoint, always dragged toward the equator side of the great circle. This tool bisects the great-circle path itself."
+  ],
+  [
+   "Is the midpoint the point of no return?",
+   "It is the equal-distance point. A real point of no return also depends on fuel burn, winds and reserves, which this geographic tool deliberately does not model."
+  ],
+  [
+   "Can I enter coordinates instead of airport names?",
+   "Yes — the tool works from coordinates, which is what its name promises. Airport names resolve to their published coordinates first."
+  ],
+  [
+   "What if the midpoint is over an ocean?",
+   "That is the honest answer for most long pairs — the JFK–Heathrow midpoint is in the North Atlantic. The coordinates are still the correct halfway reference for range and timing questions."
+  ],
+  [
+   "Does the midpoint lie on the flown route?",
+   "It lies on the great-circle route, the shortest surface path. Flown routes deviate for airways and weather, so the operational halfway point of a specific flight can differ modestly."
+  ],
+  [
+   "Can I get the bearing at the midpoint?",
+   "Bearings change continuously along a great circle. The Bearing Calculator gives the initial bearing from either airport; the midpoint itself is a position, not a heading."
+  ],
+  [
+   "How accurate are the coordinates?",
+   "They are exact for the spherical model the distances use. For flight planning they are a reference, not a navigation fix."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Start from the pair itself in the "
+  },
+  {
+   "t": "Airport Distance Calculator",
+   "l": "/tools/airport-distance-calculator"
+  },
+  {
+   "t": ", check for a non-stop in the "
+  },
+  {
+   "t": "Airport Route Finder",
+   "l": "/tools/airport-route-finder"
+  },
+  {
+   "t": ", and for two ordinary places rather than airports, the "
+  },
+  {
+   "t": "Halfway Between Two Places",
+   "l": "/tools/halfway-between-two-places"
+  },
+  {
+   "t": " calculator applies the same geometry."
+  }
+ ],
+ "more_tools": [
+  "compass-bearing-visualizer",
+  "competitor-distance-map",
+  "coordinate-distance-table-generator",
+  "crow-flies-distance",
+  "distance-between-cities",
+  "distance-between-two-places"
+ ]
+}

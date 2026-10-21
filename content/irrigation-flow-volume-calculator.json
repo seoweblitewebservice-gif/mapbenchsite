@@ -1,0 +1,197 @@
+{
+ "slug": "irrigation-flow-volume-calculator",
+ "primary_keyword": "Irrigation Flow Volume Calculator",
+ "secondary_keywords": [
+  "irrigation flow volume calculator online",
+  "free irrigation flow volume calculator",
+  "irrigation flow volume calculator calculator",
+  "irrigation flow volume calculator tool",
+  "how to use irrigation flow volume calculator"
+ ],
+ "title": "Irrigation Flow Volume Calculator",
+ "description": "Convert flow rate and run time into total water volume with the Irrigation Flow Volume Calculator — gallons, litres and acre-inches. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a zone flowing at 20 gallons per minute for 90 minutes delivers exactly 1,800 gallons (about 6,814 litres) — the tank drawdown, computed before it surprises anyone.",
+ "quick_answer": "The Irrigation Flow Volume Calculator multiplies a system's flow rate by its run time and returns the total water delivered, in gallons and litres. Enter gallons per minute and minutes and read the volume — for tank checks, session comparisons and spotting the zone that drinks more than its neighbours.",
+ "steps_intro": "Flow × time is volume. It is the whole formula — and the whole point:",
+ "use_cases": [
+  {
+   "title": "Tank and cistern checks",
+   "body": [
+    {
+     "t": "Will the tank survive tonight's schedule? Sum the sessions' volumes here before the pump answers the question at 3 a.m."
+    }
+   ]
+  },
+  {
+   "title": "Zone comparisons",
+   "body": [
+    {
+     "t": "Zones on the same controller should deliver comparable volumes for comparable areas. The outlier zone this arithmetic exposes is usually a leak, a stuck valve or a design debt."
+    }
+   ]
+  },
+  {
+   "title": "Water-bill forecasting",
+   "body": [
+    {
+     "t": "Sessions × volume × price is a bill predicted in April instead of discovered in July — with coverage areas from the "
+    },
+    {
+     "t": "Irrigation Coverage Calculator",
+     "l": "/tools/irrigation-coverage-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Acre-inch planning",
+   "body": [
+    {
+     "t": "Farm water is ordered in acre-inches. Converting a pump's gallons into acre-inches (÷ 27,154) puts well, pump and crop on one page."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The garden zone",
+   "body": [
+    {
+     "t": "20 gpm × 90 min = 1,800 gallons ≈ 6,813.7 litres. Spread over the 5,027 sq ft of a 40 ft sprinkler circle, that is about 0.57 inches of water — the depth figure growers actually manage by."
+    }
+   ]
+  },
+  {
+   "label": "Example · The farm pump",
+   "body": [
+    {
+     "t": "500 gpm for 2 hours = 60,000 gallons ÷ 27,154 ≈ 2.21 acre-inches. Two hours of that pump is a meaningful slice of a field's weekly water — now it is a number, not a feeling."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Flow × time volumes",
+  "intro": "Total gallons for common flows and session lengths — the multiplication tabulated so the outlier zones stand out.",
+  "columns": [
+   "Flow rate",
+   "30 min",
+   "60 min",
+   "90 min",
+   "120 min"
+  ],
+  "rows": [
+   [
+    "5 gpm",
+    "150 gal",
+    "300 gal",
+    "450 gal",
+    "600 gal"
+   ],
+   [
+    "10 gpm",
+    "300",
+    "600",
+    "900",
+    "1,200"
+   ],
+   [
+    "20 gpm",
+    "600",
+    "1,200",
+    "1,800",
+    "2,400"
+   ],
+   [
+    "50 gpm",
+    "1,500",
+    "3,000",
+    "4,500",
+    "6,000"
+   ],
+   [
+    "100 gpm",
+    "3,000",
+    "6,000",
+    "9,000",
+    "12,000"
+   ]
+  ],
+  "note": "Volumes assume the stated flow is sustained — pressure drop across a long session is real systems' quiet correction to this tidy table."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Total volume from flow rate and time: gallons per minute × minutes = gallons, with litres and acre-inches alongside."
+  ],
+  [
+   "Is the result exact?",
+   "The multiplication is exact; the flow is the estimate. A system's true gpm varies with pressure and simultaneous zones — measure yours once and the calculator becomes precise for your system."
+  ],
+  [
+   "Do I need an account?",
+   "No. Flow and time in, volume out."
+  ],
+  [
+   "What is an acre-inch?",
+   "The water that covers one acre one inch deep: 27,154 gallons. It is the unit wells, water rights and farm irrigation are planned in across much of the US."
+  ],
+  [
+   "Litres per second instead?",
+   "Metric systems rate in L/s: multiply by 60 for L/min, and the same volume logic follows. A 2 L/s line for an hour delivers 7,200 litres."
+  ],
+  [
+   "How deep is the water on my area?",
+   "Volume ÷ area: 1,800 gallons over 5,027 sq ft is about 0.57 inches (using 1 inch over 1 sq ft ≈ 0.623 gallons). Depth is the figure plants experience."
+  ],
+  [
+   "Can it detect leaks?",
+   "Indirectly: if a zone's computed volume at its known flow and time keeps exceeding what its area should need, the water is going somewhere — that comparison is the leak hunt's first step."
+  ],
+  [
+   "How do I find my system's real flow?",
+   "Time a meter reading over a known run, or catch a zone's output: volume ÷ minutes is your gpm. One measurement makes every later calculation yours instead of the brochure's."
+  ],
+  [
+   "Two zones run together — total volume?",
+   "Add their flows, then multiply by the shared run time. Combined flow is also the figure that tests whether the supply can hold pressure."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The area those volumes land on comes from the "
+  },
+  {
+   "t": "Irrigation Coverage Calculator",
+   "l": "/tools/irrigation-coverage-calculator"
+  },
+  {
+   "t": "; session timing at field scale is the "
+  },
+  {
+   "t": "Field Coverage Time Calculator",
+   "l": "/tools/field-coverage-time-calculator"
+  },
+  {
+   "t": "; and whole fields are measured in the "
+  },
+  {
+   "t": "Acreage Map Calculator",
+   "l": "/tools/acreage-map-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "center-of-polygon",
+  "circle-area-from-radius",
+  "circle-circumference-from-radius",
+  "cities-within-drawn-area-finder",
+  "crop-row-length-calculator",
+  "customer-radius-area-calculator"
+ ]
+}

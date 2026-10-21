@@ -1,0 +1,189 @@
+{
+ "slug": "cycling-calories-distance",
+ "primary_keyword": "Cycling Calories by Distance",
+ "secondary_keywords": [
+  "cycling calories calculator",
+  "calories burned cycling distance",
+  "bike calorie calculator",
+  "cycling kcal calculator",
+  "bike calories by km"
+ ],
+ "title": "Cycling Calories by Distance: Kcal Estimates",
+ "description": "Estimate calories burned over a cycling distance with Cycling Calories by Distance — from rider weight and distance, clearly approximate. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, under the simple model this page uses, a 170 lb rider covers 30 miles at roughly 40 kcal per mile — about 1,200 kcal for the ride, before hills argue.",
+ "quick_answer": "Cycling Calories by Distance estimates the energy a ride costs from the rider's weight and distance covered. Enter both and read an approximate kilocalorie figure for the ride — a planning estimate built on a stated model, honest about everything it leaves out: hills, wind, speed and the rider's engine.",
+ "steps_intro": "An estimate with its assumptions printed on it. Two inputs:",
+ "use_cases": [
+  {
+   "title": "Fuelling a long ride",
+   "body": [
+    {
+     "t": "Energy out is the budget food must roughly match. The estimate sizes the flapjack problem before the ride, not at mile 40 — route distances from the "
+    },
+    {
+     "t": "Cycling Route Planner",
+     "l": "/tools/cycling-route-planner"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Training logs",
+   "body": [
+    {
+     "t": "A consistent estimate, applied the same way every ride, is what a log needs. Precision matters less than the same ruler each time."
+    }
+   ]
+  },
+  {
+   "title": "Comparing commute options",
+   "body": [
+    {
+     "t": "The bike commute's calorie figure is the one part of its cost that pays you. Priceless — but here, quantified."
+    }
+   ]
+  },
+  {
+   "title": "Weight-management planning",
+   "body": [
+    {
+     "t": "Distance-based estimates set expectations honestly: riding burns real energy, and the number is smaller than the appetite it creates. Plan with the figure, not the feeling."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The weekend ride",
+   "body": [
+    {
+     "t": "170 lb rider, 30 miles, at the model's roughly 40 kcal/mile: ≈ 1,200 kcal. Ride it into a headwind or up a pass and the truth is higher — the model is the floor of the story, labelled as such."
+    }
+   ]
+  },
+  {
+   "label": "Example · The metric century",
+   "body": [
+    {
+     "t": "100 km (62.1 mi) at the same rough rate: ≈ 2,485 kcal. A metric century is a day's eating on top of a day's eating, which is why century riders plan food like logistics."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Distance to calories (simple model)",
+  "intro": "Estimates at an assumed roughly 40 kcal per mile for a mid-weight adult riding moderately — an explicitly stated planning assumption, not a measurement. Heavier riders and harder riding burn more.",
+  "columns": [
+   "Ride distance",
+   "Approx. kcal",
+   "Ride distance",
+   "Approx. kcal"
+  ],
+  "rows": [
+   [
+    "5 mi (8 km)",
+    "200",
+    "40 mi (64 km)",
+    "1,600"
+   ],
+   [
+    "10 mi (16 km)",
+    "400",
+    "50 mi (80 km)",
+    "2,000"
+   ],
+   [
+    "20 mi (32 km)",
+    "800",
+    "62 mi (100 km)",
+    "2,485"
+   ],
+   [
+    "30 mi (48 km)",
+    "1,200",
+    "100 mi (161 km)",
+    "4,000"
+   ]
+  ],
+  "note": "Treat the table as an order of magnitude with a signpost: your power meter, if you have one, outranks any model — kilojoules of work ≈ kilocalories of food energy is the cyclist's useful coincidence."
+ },
+ "faq": [
+  [
+   "Does this replace a specialist tool or professional measurement?",
+   "No. It is a simple distance-and-weight estimate. A power meter measures actual work; a lab measures actual metabolism. This is the planning figure for riders who have neither."
+  ],
+  [
+   "Is my input uploaded?",
+   "No — weight and distance are used in your browser for the estimate and go nowhere else."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Traffic does not burn calories; hills and wind do, and the simple model omits them — ride the estimate as a floor."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Roads wind, and cyclists ride roads. Use the ridden distance — calories follow the wheels, not the crow."
+  ],
+  [
+   "Can route results change over time?",
+   "Your fitness does, happily. The model is fixed so your log stays comparable; the rider improves against it."
+  ],
+  [
+   "Do heavier riders really burn more?",
+   "Yes — moving mass costs energy, especially uphill and accelerating. Weight is in the model for exactly that reason."
+  ],
+  [
+   "What about e-bikes?",
+   "Assistance subtracts rider work by an amount only the assist level knows. Treat the estimate as the unassisted equivalent and discount it by feel."
+  ],
+  [
+   "Does speed change the estimate?",
+   "In the simple model, barely — distance and weight carry it. In truth, faster riding burns more per mile into the wind; treat fast rides as above the estimate."
+  ],
+  [
+   "Why do apps give different numbers?",
+   "Different models: some price heart rate, some power, some speed bands. Consistency inside your own log beats consensus among apps."
+  ],
+  [
+   "Calories in or out — is this net?",
+   "It is an estimate of energy expended on the ride. What you eat back is a separate, usually larger, number."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Plan the route in the "
+  },
+  {
+   "t": "Cycling Route Planner",
+   "l": "/tools/cycling-route-planner"
+  },
+  {
+   "t": ", pace it with the "
+  },
+  {
+   "t": "Cycling Speed Calculator",
+   "l": "/tools/cycling-speed-calculator"
+  },
+  {
+   "t": ", and time it with the "
+  },
+  {
+   "t": "Cycling Time Calculator",
+   "l": "/tools/cycling-time-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator"
+ ]
+}

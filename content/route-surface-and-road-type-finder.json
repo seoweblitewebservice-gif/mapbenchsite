@@ -1,0 +1,194 @@
+{
+ "slug": "route-surface-and-road-type-finder",
+ "primary_keyword": "Route Surface & Road Type Finder",
+ "secondary_keywords": [
+  "route surface finder",
+  "road surface types route",
+  "gravel road route planner",
+  "paved vs unpaved route",
+  "Route Surface &amp"
+ ],
+ "title": "Route Surface & Road Type Finder",
+ "description": "Analyse a route's surfaces and road types from OpenStreetMap with the Route Surface & Road Type Finder — paved, gravel, tracks, climb. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 'mostly paved' tour can turn out to carry 11 miles of gravel and a farm track the road bike would rather know about tonight than meet tomorrow.",
+ "quick_answer": "The Route Surface & Road Type Finder routes your journey, samples its roads in OpenStreetMap, and reports the recorded surfaces and road types — paved, unpaved, gravel, tracks and more — together with the route's elevation gain. Add start and destination and read what the road is made of.",
+ "steps_intro": "A route is not one road; it is a census of them. Take the census before the tyres vote:",
+ "use_cases": [
+  {
+   "title": "Gravel and adventure riding",
+   "body": [
+    {
+     "t": "Gravel riders hunt unpaved miles; road riders avoid them. Both need the same census — this page takes it. Climb joins from the "
+    },
+    {
+     "t": "Route Elevation Gain Calculator",
+     "l": "/tools/route-elevation-gain-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Loaded touring",
+   "body": [
+    {
+     "t": "A loaded tourer's enemy is the surprise surface at mile 60. Surfaces sampled in advance turn the route into a known quantity."
+    }
+   ]
+  },
+  {
+   "title": "Vehicle suitability",
+   "body": [
+    {
+     "t": "Low cars, hire cars with unpaved restrictions, classic cars: the surface report is a suitability opinion based on data, not hope."
+    }
+   ]
+  },
+  {
+   "title": "Route comparison",
+   "body": [
+    {
+     "t": "Two routes, similar distances: the one whose surfaces suit your wheels wins, with the counts as the evidence."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The honest label",
+   "body": [
+    {
+     "t": "A route advertised by a friend as 'all tarmac' samples at 82% paved, 11% gravel, 7% track. Both riders reroute one section and keep the friendship."
+    }
+   ]
+  },
+  {
+   "label": "Example · Missing data, stated",
+   "body": [
+    {
+     "t": "Where OpenStreetMap records no surface, the report says so instead of guessing — an 'unknown' share is part of the census, and on remote routes it can be the biggest slice."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Surface types you will meet",
+  "intro": "The vocabulary of the report — what the OpenStreetMap surface and road-type values mean for wheels.",
+  "columns": [
+   "Recorded as",
+   "Means",
+   "Wheels' verdict"
+  ],
+  "rows": [
+   [
+    "Asphalt / paved",
+    "Sealed surface",
+    "Everything rolls"
+   ],
+   [
+    "Gravel",
+    "Loose stone, graded",
+    "Road bikes crawl, gravel bikes feast"
+   ],
+   [
+    "Dirt / ground",
+    "Unsealed earth",
+    "Weather decides"
+   ],
+   [
+    "Track",
+    "Farm or forest track",
+    "Adventure territory"
+   ],
+   [
+    "Cobblestone / sett",
+    "Stone blocks",
+    "Historic centres, slow and loud"
+   ],
+   [
+    "Unknown",
+    "Not recorded in OSM",
+    "Treat as a question, not a promise"
+   ]
+  ],
+  "note": "Counts come from sampling the roads along the routed path in OpenStreetMap — a census of recorded data, with the gaps labelled as gaps."
+ },
+ "faq": [
+  [
+   "What if a road has no surface recorded?",
+   "It is counted as unknown and reported as such. The finder never upgrades a gap into a guess — the unknown share is printed with the rest."
+  ],
+  [
+   "How is the sampling done?",
+   "The routed path is sampled along its length and each sample's road is looked up in OpenStreetMap for its surface and type tags; the shares are tallied from the samples."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Surfaces change with seasons and works, not with traffic."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "The route sampled is the road route — surfaces belong to roads, not to crow lines."
+  ],
+  [
+   "Can route results change over time?",
+   "Yes, happily: OpenStreetMap's surface coverage improves as mappers record more roads. A re-run next season can shrink the unknown share."
+  ],
+  [
+   "Does it show elevation too?",
+   "Yes — the route's elevation gain rides along, because surface and climb together grade a route's difficulty."
+  ],
+  [
+   "Can it force a gravel-only or paved-only route?",
+   "It analyses the route it is given rather than constraining it. Choose or adjust the route with the surface census in hand."
+  ],
+  [
+   "Can it tell me a road is closed?",
+   "No — surfaces and types, not closures. A mapped gravel road may still be gated; local signs outrank data."
+  ],
+  [
+   "Why does my route show 100% unknown?",
+   "Rural and newly mapped areas can lack surface tags entirely. The census reports the gap; OpenStreetMap improves as mappers pass."
+  ],
+  [
+   "Cobblestone counts as paved?",
+   "It is sealed but slow — the report lists it as its own recorded value so you can judge it as your wheels would."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Climb is the "
+  },
+  {
+   "t": "Route Elevation Gain Calculator",
+   "l": "/tools/route-elevation-gain-calculator"
+  },
+  {
+   "t": "; the flown preview is the "
+  },
+  {
+   "t": "Route Flyover Preview",
+   "l": "/tools/route-flyover-preview"
+  },
+  {
+   "t": "; and loops to analyse start in the "
+  },
+  {
+   "t": "Running Route Loop Generator",
+   "l": "/tools/running-route-loop-generator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-speed-calculator"
+ ]
+}

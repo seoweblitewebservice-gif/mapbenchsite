@@ -1,0 +1,186 @@
+{
+ "slug": "national-park-finder",
+ "primary_keyword": "National Park Finder",
+ "secondary_keywords": [
+  "nearest national park",
+  "national parks near me",
+  "closest national park to me"
+ ],
+ "title": "National Park Finder: Nearest US Parks Ranked",
+ "description": "Find the nearest US National Parks to any place with the National Park Finder — 20 closest ranked by distance, map and CSV export. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a driver crossing the Midwest discovers a celebrated park sits one state away rather than 'out west somewhere' — the ranked twenty turn a someday idea into a detour decision.",
+ "quick_answer": "The National Park Finder ranks the 20 nearest US National Parks to your place by straight-line distance, with a map, per-park map links and a CSV export. Search a place, click the map, or use GPS, and read the ranking — all 63 parks measured from your point, closest first.",
+ "steps_intro": "America's best idea, measured from your door:",
+ "use_cases": [
+  {
+   "title": "Road-trip routing",
+   "body": [
+    {
+     "t": "Parks near the route beat parks near the dream. The twenty-list finds the detour that fits the drive — pair with the "
+    },
+    {
+     "t": "Walking Route Planner",
+     "l": "/tools/walking-route-planner"
+    },
+    {
+     "t": " for the arrival day."
+    }
+   ]
+  },
+  {
+   "title": "Pass and season planning",
+   "body": [
+    {
+     "t": "Which parks cluster near you decides whether an annual pass pays. The CSV export feeds the family spreadsheet where these decisions live."
+    }
+   ]
+  },
+  {
+   "title": "Relocation daydreams, priced",
+   "body": [
+    {
+     "t": "“Live near the parks” becomes a ranked list instead of a poster. Compare two candidate towns' twenties and the daydream gets data."
+    }
+   ]
+  },
+  {
+   "title": "Teaching the system",
+   "body": [
+    {
+     "t": "63 parks, one map: students see the system's geography — clustered in the West, scattered gems in the East — better than any list teaches it."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Straight-line honesty",
+   "body": [
+    {
+     "t": "Distances are straight-line to the park's reference point, so a park across a mountain range ranks closer than the road will drive. The per-park map link hands you to routing for the real number."
+    }
+   ]
+  },
+  {
+   "label": "Example · The full sixty-three",
+   "body": [
+    {
+     "t": "Every congressionally designated National Park is measured — the ranking is over the complete set, so 'nearest' means nearest of all, not nearest of a sample."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the ranking gives you",
+  "intro": "Output fields and their honest limits.",
+  "columns": [
+   "Output",
+   "Meaning",
+   "Limit"
+  ],
+  "rows": [
+   [
+    "20 nearest parks",
+    "Ranked by straight-line distance",
+    "Road distance will differ"
+   ],
+   [
+    "Distance",
+    "To the park's reference point",
+    "Big parks span counties; entrances differ"
+   ],
+   [
+    "Map + per-park links",
+    "The park in context",
+    "—"
+   ],
+   [
+    "CSV export",
+    "The ranking as data",
+    "For your own planning sheets"
+   ]
+  ],
+  "note": "Park reference points are representative locations (typically a central or visitor point). A vast park's nearest boundary can be much closer than its reference point — check the map for boundary-scale parks."
+ },
+ "faq": [
+  [
+   "How is the distance measured?",
+   "Straight-line (great-circle) from your point to each park's reference location — the honest comparison metric. Road distance depends on your route; the per-park map links hand off to routing for that."
+  ],
+  [
+   "Are all 63 parks included?",
+   "Yes — the ranking measures the complete set of 63 US National Parks from your point and shows the nearest 20."
+  ],
+  [
+   "How accurate are the park coordinates?",
+   "Reference points are representative (a central or visitor location). For enormous parks the boundary can be far closer than the point — the map shows the context."
+  ],
+  [
+   "Can I export the ranking?",
+   "Yes — CSV export is built in, made for exactly the spreadsheet planning this ranking invites."
+  ],
+  [
+   "Does it use my GPS?",
+   "Only if you choose it — searching a place or clicking the map works identically, and your location is not stored."
+  ],
+  [
+   "State parks too?",
+   "This finder is the national set. State parks live in their own data elsewhere; the trails finder covers much of that ground locally."
+  ],
+  [
+   "Which entrance should I use?",
+   "The ranking does not choose entrances — park maps and the per-park links do. Big parks have several, hours apart by road."
+  ],
+  [
+   "Passes and fees?",
+   "Not covered here — the NPS site owns prices. The ranking's job is distance; the budget is a separate, worthy page."
+  ],
+  [
+   "Parks outside the US?",
+   "The set is the US system. Other countries' parks are found via the general trails and places tools."
+  ],
+  [
+   "Park anniversaries and free days?",
+   "Fee-free days are announced by the NPS yearly — the ranking does not track them; the parks' own pages do."
+  ],
+  [
+   "Territories' parks?",
+   "The 63 are the designated National Parks of the system, including American Samoa and the US Virgin Islands entries — distance-ranked from your point like all the rest."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Under the parks: "
+  },
+  {
+   "t": "Hiking Trails Near Me",
+   "l": "/tools/hiking-trails-near-me"
+  },
+  {
+   "t": "; peaks: "
+  },
+  {
+   "t": "Mountain Peaks Near Me",
+   "l": "/tools/mountain-peaks-near-me"
+  },
+  {
+   "t": "; your start point: "
+  },
+  {
+   "t": "Find My Location",
+   "l": "/tools/find-my-location"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location"
+ ]
+}

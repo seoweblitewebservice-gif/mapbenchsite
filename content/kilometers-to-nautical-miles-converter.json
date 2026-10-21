@@ -1,0 +1,192 @@
+{
+ "slug": "kilometers-to-nautical-miles-converter",
+ "primary_keyword": "Kilometers to Nautical Miles Converter",
+ "secondary_keywords": [
+  "kilometers to nautical miles converter online",
+  "free kilometers to nautical miles converter",
+  "kilometers to nautical miles converter calculator",
+  "kilometers to nautical miles converter converter",
+  "kilometers to nautical miles converter formula"
+ ],
+ "title": "Kilometers to Nautical Miles Converter",
+ "description": "Convert kilometres to nautical miles instantly with the Kilometers to Nautical Miles Converter — the exact 1.852 factor, both ways explained. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 5,540 km transatlantic crossing is approx. 2,991 nautical miles — the unit the crew actually thinks in, from the distance the map reports.",
+ "quick_answer": "The Kilometers to Nautical Miles Converter turns a distance in kilometres into nautical miles using the exact definition: one nautical mile is 1.852 kilometres. Enter any distance and read the conversion instantly, with statute miles alongside — the unit translation every chart, logbook and flight plan quietly assumes.",
+ "steps_intro": "One exact factor, no rounding games — but the reason behind it is worth the ten seconds:",
+ "use_cases": [
+  {
+   "title": "Chart and logbook work",
+   "body": [
+    {
+     "t": "Charts think in nautical miles; GPS exports and road atlases think in kilometres. Converting cleanly, with the exact factor, keeps a passage log consistent."
+    }
+   ]
+  },
+  {
+   "title": "Aviation study",
+   "body": [
+    {
+     "t": "Student pilots meet distances in both systems depending on the source's age and country. Fluency starts with conversions you can do and check — see also "
+    },
+    {
+     "t": "Latitude Degrees to Nautical Miles",
+     "l": "/tools/latitude-degrees-to-nautical-miles"
+    },
+    {
+     "t": " for where the unit comes from."
+    }
+   ]
+  },
+  {
+   "title": "Race and regatta documents",
+   "body": [
+    {
+     "t": "Course lengths published in kilometres for sponsors and in nautical miles for sailors need a conversion nobody can argue with: the definition itself."
+    }
+   ]
+  },
+  {
+   "title": "Data cleaning",
+   "body": [
+    {
+     "t": "Mixed-unit datasets are a quiet disaster. A single canonical converter — this one — applied to a whole column ends the 1.852-versus-1.609 confusion for good."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The Atlantic in both units",
+   "body": [
+    {
+     "t": "JFK ↔ Heathrow great-circle distance: 5,540.0 km = approx. 2,991.4 nautical miles (5,540 ÷ 1.852). The same journey, two dialects — the conversion is the whole translation."
+    }
+   ]
+  },
+  {
+   "label": "Example · A round hundred",
+   "body": [
+    {
+     "t": "100 km = approx. 54.00 nautical miles, and 100 nautical miles = 185.2 km exactly. The second pair is the one to memorise: it runs on the definition, so it never drifts."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Kilometres to nautical miles",
+  "intro": "Conversions at the exact factor (1 nautical mile = 1.852 km) — the same arithmetic the tool performs, tabulated for the distances people look up most.",
+  "columns": [
+   "Kilometres",
+   "Nautical miles",
+   "Statute miles"
+  ],
+  "rows": [
+   [
+    "1",
+    "0.54",
+    "0.62"
+   ],
+   [
+    "10",
+    "5.40",
+    "6.21"
+   ],
+   [
+    "50",
+    "27.00",
+    "31.07"
+   ],
+   [
+    "100",
+    "54.00",
+    "62.14"
+   ],
+   [
+    "500",
+    "269.98",
+    "310.69"
+   ],
+   [
+    "1,000",
+    "539.96",
+    "621.37"
+   ],
+   [
+    "5,000",
+    "2,699.78",
+    "3,106.86"
+   ],
+   [
+    "10,000",
+    "5,399.57",
+    "6,213.71"
+   ]
+  ],
+  "note": "Nautical miles are labelled approx. because the division rarely terminates; the factor itself (1.852) is exact by international definition."
+ },
+ "faq": [
+  [
+   "What is the exact conversion factor?",
+   "1 nautical mile = 1.852 kilometres, exactly, by international definition since 1929. So nautical miles = kilometres ÷ 1.852, with no approximation in the factor itself."
+  ],
+  [
+   "Why do ships and aircraft use nautical miles?",
+   "Because a nautical mile is one minute of latitude — angles and distances share one scale on a chart. The Latitude Degrees to Nautical Miles page shows that geometry in full."
+  ],
+  [
+   "Is a nautical mile longer than a statute mile?",
+   "Yes: 1.852 km against about 1.609 km — roughly 15% longer. Confusing the two is the classic mixed-unit error this converter exists to prevent."
+  ],
+  [
+   "What is a knot in these units?",
+   "One knot is one nautical mile per hour. A vessel at 20 knots covers 37.04 km every hour — the conversion this page's factor produces."
+  ],
+  [
+   "Does the calculation happen locally?",
+   "Yes — the conversion runs in your browser the moment you type, with no account and nothing uploaded. It is one multiplication; it should be instant, and it is."
+  ],
+  [
+   "How do I convert back?",
+   "Multiply nautical miles by 1.852. The tool is symmetric: enter in either unit and read the other."
+  ],
+  [
+   "How many nautical miles is a degree of latitude?",
+   "About 60.04 on the mean sphere — sixty by the arc-minute definition, with the small excess explained on the latitude conversion page."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The unit's origin story is "
+  },
+  {
+   "t": "Latitude Degrees to Nautical Miles",
+   "l": "/tools/latitude-degrees-to-nautical-miles"
+  },
+  {
+   "t": "; distances worth converting come from the "
+  },
+  {
+   "t": "Flight Distance Calculator",
+   "l": "/tools/flight-distance-calculator"
+  },
+  {
+   "t": " and the "
+  },
+  {
+   "t": "Great Circle Flight Route Calculator",
+   "l": "/tools/great-circle-flight-route-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "closest-facility-finder",
+  "compass-bearing-visualizer",
+  "competitor-distance-map",
+  "coordinate-distance-table-generator",
+  "crow-flies-distance",
+  "distance-between-cities"
+ ]
+}

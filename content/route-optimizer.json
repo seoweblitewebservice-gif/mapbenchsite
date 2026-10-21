@@ -1,0 +1,187 @@
+{
+ "slug": "route-optimizer",
+ "primary_keyword": "Route Optimizer",
+ "secondary_keywords": [
+  "optimise my route",
+  "best order stops",
+  "delivery route planner"
+ ],
+ "title": "Route Optimizer: Best Order for Your Stops",
+ "description": "Find a better visiting order for your stops with the Route Optimizer — trials sequences to cut total road distance, then routes the winner. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, five New York stops visited in the order they were typed can run about a quarter longer than the same stops in geographic order — the optimizer's whole reason to exist, illustrated below.",
+ "quick_answer": "The Route Optimizer takes your start and every stop, trials visiting orders to cut the total road distance, and routes the improved sequence with its legs and total. Add the stops as they occur to you — the optimizer's trials exist because typed order is rarely the road's order.",
+ "steps_intro": "The order of stops is a cost decision hiding in a list. Let trials decide it:",
+ "use_cases": [
+  {
+   "title": "Delivery rounds",
+   "body": [
+    {
+     "t": "A quarter off a daily round is fuel, hours and a second round's capacity. The "
+    },
+    {
+     "t": "Multi-Stop Route Planner",
+     "l": "/tools/multi-stop-route-planner"
+    },
+    {
+     "t": " routes a fixed order; this page improves the order itself."
+    }
+   ]
+  },
+  {
+   "title": "Service and viewing days",
+   "body": [
+    {
+     "t": "Engineers, agents and inspectors chain addresses across a county. The optimised sequence is the difference between a day that fits and one that frays."
+    }
+   ]
+  },
+  {
+   "title": "Errand Saturdays",
+   "body": [
+    {
+     "t": "Six stops typed in worry order become four fewer backtracks in road order. The saving is Saturday itself."
+    }
+   ]
+  },
+  {
+   "title": "Checking your instinct",
+   "body": [
+    {
+     "t": "Think your order is optimal? Run it against the trials. Being right is satisfying; being wrong was costing you miles."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The typed order tax",
+   "body": [
+    {
+     "t": "Illustration with straight-line distances between five New York stops (Manhattan, the Bronx, Queens, Brooklyn, Staten Island, Jersey City): typed order ≈ 116 km of travel; geographic order ≈ 87 km — about 25% less, before roads make both longer but keep the lesson."
+    }
+   ]
+  },
+  {
+   "label": "Example · The depot round",
+   "body": [
+    {
+     "t": "Start fixed at the depot, stops trialled freely, return priced in: the optimizer's sequence is a rota a driver can simply follow — legs and total included."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What optimisation changes",
+  "intro": "The same stops, before and after — reading guide for the optimizer's output, using the illustration's proportions.",
+  "columns": [
+   "Figure",
+   "Typed order",
+   "Optimised order"
+  ],
+  "rows": [
+   [
+    "Stops changed",
+    "—",
+    "None — same list, better sequence"
+   ],
+   [
+    "Total distance",
+    "The long way round",
+    "Cut, often by a fifth or more"
+   ],
+   [
+    "Leg pattern",
+    "Backtracks and crossings",
+    "A sweep across the map"
+   ],
+   [
+    "Driver brief",
+    "A list",
+    "A sequence with legs and times"
+   ],
+   [
+    "Start point",
+    "Fixed",
+    "Fixed — trials move the middle, not the anchor"
+   ]
+  ],
+  "note": "Exact optima for many stops are famously hard in general; the optimizer trials orders heuristically and returns a strong improvement, honestly labelled as such by its totals."
+ },
+ "faq": [
+  [
+   "How many stops can I add?",
+   "The planner family handles rounds up to 30 stops. Trials multiply with count, so very long lists take a moment longer to improve."
+  ],
+  [
+   "Does it fix the start point?",
+   "Yes — your start (and depot return) anchor the sequence; the trials reorder the stops between the anchors."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. The order is chosen on distance over the road network; live traffic can argue for a different order at a specific hour, which is a navigation layer's job."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "The optimised total is road distance between stops in sequence — the figure your fuel and hours will actually meet."
+  ],
+  [
+   "Can route results change over time?",
+   "Road data improves; a standing round deserves a fresh optimisation each season. The best order can change when a bridge opens."
+  ],
+  [
+   "Is the result guaranteed optimal?",
+   "It is a strong heuristic improvement with its distance printed — judge it by the number, not by a promise no honest tool could make for every input."
+  ],
+  [
+   "Timed appointments?",
+   "Stops with fixed times constrain the order in ways distance trials do not know. Optimise the flexible stops; pin the appointments in the Multi-Stop Planner."
+  ],
+  [
+   "Traffic-aware ordering?",
+   "Not here — order is chosen on distance. If one stop has a hard appointment time, pin it in the planner and optimise the rest."
+  ],
+  [
+   "Does it handle one-way streets?",
+   "The routing beneath does — legs are real road legs, one-ways included, so the sequence's total is drivable."
+  ],
+  [
+   "My round has 40 stops.",
+   "Split the day into two optimised rounds of 20. Two good sequences beat one impossible list."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Fixed orders are routed by the "
+  },
+  {
+   "t": "Multi-Stop Route Planner",
+   "l": "/tools/multi-stop-route-planner"
+  },
+  {
+   "t": "; documents come from the "
+  },
+  {
+   "t": "Route Roadbook Generator",
+   "l": "/tools/route-roadbook-generator"
+  },
+  {
+   "t": "; and the round's costs from the "
+  },
+  {
+   "t": "Delivery Cost per KM Calculator",
+   "l": "/tools/delivery-cost-per-km-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner"
+ ]
+}

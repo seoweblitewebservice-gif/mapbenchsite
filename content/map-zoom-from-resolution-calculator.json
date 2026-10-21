@@ -1,0 +1,189 @@
+{
+ "slug": "map-zoom-from-resolution-calculator",
+ "primary_keyword": "Map Zoom From Resolution Calculator",
+ "secondary_keywords": [
+  "map zoom from resolution calculator online",
+  "free map zoom from resolution calculator",
+  "map zoom from resolution calculator calculator",
+  "map zoom from resolution calculator tool",
+  "how to calculate map zoom from resolution calculator"
+ ],
+ "title": "Map Zoom from Resolution Calculator",
+ "description": "Find the zoom level matching a ground resolution with the Map Zoom from Resolution Calculator — metres per pixel to zoom, latitude-aware. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, imagery at 10 metres per pixel matches about zoom 14 at the equator — and zoom 15 at 60°, because resolution's zoom equivalent moves with latitude.",
+ "quick_answer": "The Map Zoom from Resolution Calculator finds the Web Mercator zoom level whose metres-per-pixel matches a given ground resolution, at a stated latitude. Enter the resolution and read the zoom — the translation between the imagery world's '10 m data' and the web map world's 'about zoom 14'.",
+ "steps_intro": "Resolution speaks metres; maps speak zoom. Translate:",
+ "use_cases": [
+  {
+   "title": "Imagery integration",
+   "body": [
+    {
+     "t": "A raster dataset at a known resolution joins a tile stack at its natural zoom — the match computed here instead of eyeballed. The forward rate is the "
+    },
+    {
+     "t": "Meters per Pixel Calculator",
+     "l": "/tools/map-meters-per-pixel-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Choosing max zooms",
+   "body": [
+    {
+     "t": "Serving tiles beyond the source's resolution is empty magnification — set max zoom from the resolution's equivalent and the map stops lying at z19."
+    }
+   ]
+  },
+  {
+   "title": "Comparing data sources",
+   "body": [
+    {
+     "t": "“30 m Landsat” versus “z15 tiles” — one conversion puts both in the same unit and the procurement argument ends."
+    }
+   ]
+  },
+  {
+   "title": "Print and export planning",
+   "body": [
+    {
+     "t": "An export at a target ground resolution corresponds to a zoom's render — plan the render level from the deliverable's spec."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Landsat's zoom",
+   "body": [
+    {
+     "t": "30 m/px: zoom = log2(156,543 ÷ 30) ≈ 12.35 at the equator — serve Landsat-true detail to about z12; beyond it you are interpolating, prettily."
+    }
+   ]
+  },
+  {
+   "label": "Example · Fractional answers are honest",
+   "body": [
+    {
+     "t": "Resolutions rarely land on integer zooms (12.35, not 12). The calculator reports the fraction; tile systems round to integers for addressing, renderers interpolate between."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Resolution to zoom (equator)",
+  "intro": "The matching table — at latitude, zooms effectively rise by the cosine's gift.",
+  "columns": [
+   "Ground resolution",
+   "Zoom (equator)",
+   "Source class"
+  ],
+  "rows": [
+   [
+    "156.5 m/px",
+    "~9",
+    "Coarse climate rasters"
+   ],
+   [
+    "30 m/px",
+    "~12.4",
+    "Landsat-class imagery"
+   ],
+   [
+    "10 m/px",
+    "~13.9",
+    "Sentinel-2-class"
+   ],
+   [
+    "1 m/px",
+    "~17.3",
+    "Aerial orthoimagery"
+   ],
+   [
+    "0.3 m/px",
+    "~19",
+    "Premium aerial surveys"
+   ]
+  ],
+  "note": "Zoom equivalents use the tile standard's equatorial scale; at 60° the same resolution matches one zoom higher (resolution effectively doubles)."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The zoom satisfying m/px = 156,543.03 × cos(lat) ÷ 2^zoom, solved for zoom — reported fractionally, with the neighbouring integer zooms' resolutions for context."
+  ],
+  [
+   "Which map standard does it use?",
+   "The slippy-map standard (Web Mercator, 256-px tiles) shared by OSM, Google and MapLibre."
+  ],
+  [
+   "Can I use this in production GIS?",
+   "The formulas are the production standard itself — yes for web-mapping work."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 — tile systems are defined over it."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — tiles and pixels quantise; decimals beyond the cell are decoration."
+  ],
+  [
+   "Why fractional zooms?",
+   "Resolution is continuous; integer zooms are a tiling convenience. The true match is fractional — libraries with fractional zoom render it natively."
+  ],
+  [
+   "Imagery resolution versus display?",
+   "A dataset's native resolution is its information content; display zoom is presentation. Matching them avoids both blur and empty zoom — this page is the match."
+  ],
+  [
+   "DPI-based data?",
+   "Scanned maps quote DPI at a print scale — convert to ground resolution first (scale ÷ DPI maths), then to zoom."
+  ],
+  [
+   "Higher latitude helps?",
+   "The same zoom resolves finer ground poleward, so a resolution matches a higher zoom — the calculator's latitude input carries the effect."
+  ],
+  [
+   "Max native zoom for tiles?",
+   "Set it at the resolution's ceiling (floor of the fractional zoom) — deeper tiles are upsampling wearing a uniform."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Forward rate: the "
+  },
+  {
+   "t": "Map Meters per Pixel Calculator",
+   "l": "/tools/map-meters-per-pixel-calculator"
+  },
+  {
+   "t": "; measure: the "
+  },
+  {
+   "t": "Map Pixels to Ground Distance",
+   "l": "/tools/map-pixels-to-ground-distance"
+  },
+  {
+   "t": "; widths: the "
+  },
+  {
+   "t": "Map Tile Ground Width Calculator",
+   "l": "/tools/map-tile-ground-width-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator"
+ ]
+}

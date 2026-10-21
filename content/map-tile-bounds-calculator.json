@@ -1,0 +1,179 @@
+{
+ "slug": "map-tile-bounds-calculator",
+ "primary_keyword": "Map Tile Bounds Calculator",
+ "secondary_keywords": [
+  "map tile bounds calculator online",
+  "free map tile bounds calculator",
+  "map tile bounds calculator calculator",
+  "map tile bounds calculator tool",
+  "how to calculate map tile bounds calculator"
+ ],
+ "title": "Map Tile Bounds Calculator: Tile Extents",
+ "description": "Get the geographic bounds of a map tile with the Map Tile Bounds Calculator — west/south/east/north edges from z/x/y. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, tile 15/9649/12314 (Times Square's) spans the ground from about 40.7458°N to 40.7642°N — less than two kilometres of Manhattan in one square.",
+ "quick_answer": "The Map Tile Bounds Calculator returns the geographic extent of a slippy-map tile — its west, south, east and north edges in latitude/longitude — from its z, x and y numbers. Enter the tile address and read the box it covers — the extent tile servers fetch and caches store.",
+ "steps_intro": "Every tile is a little world with four edges. Read them:",
+ "use_cases": [
+  {
+   "title": "Tile debugging and QA",
+   "body": [
+    {
+     "t": "A feature renders in the wrong tile — compare its coordinates against candidate tiles' bounds and the off-by-one confesses. Corner tiles come from the "
+    },
+    {
+     "t": "Tile Calculator",
+     "l": "/tools/lat-lon-to-map-tile-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Cache and prefetch planning",
+   "body": [
+    {
+     "t": "Prefetch regions are tile sets; the bounds of the corner tiles define the true fetched extent, padding included."
+    }
+   ]
+  },
+  {
+   "title": "WMS and API extents",
+   "body": [
+    {
+     "t": "Services ask for bounding boxes in degrees — a tile's bounds are the exact box for single-tile requests."
+    }
+   ]
+  },
+  {
+   "title": "Coverage audits",
+   "body": [
+    {
+     "t": "Which tiles does my dataset actually touch? Bounds-intersection against the dataset's extent is the audit's arithmetic."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · One tile of Manhattan",
+   "body": [
+    {
+     "t": "Tile z15 x9649 y12314 spans roughly 0.92 km of width at its latitude — computed from its metres-per-pixel (3.619 × 256 ≈ 926 m). The next tile east starts exactly where this one ends; the grid admits no gaps."
+    }
+   ]
+  },
+  {
+   "label": "Example · Edges are exact",
+   "body": [
+    {
+     "t": "Tile longitudes fall on exact binary fractions of the world (360/2^z per tile) — west/east edges are tidy; latitudes are Mercator-spaced, tidy in the projection rather than in degrees."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Bounds by the numbers",
+  "intro": "What the four edges mean and how they behave by zoom.",
+  "columns": [
+   "Property",
+   "Behaviour"
+  ],
+  "rows": [
+   [
+    "Longitude span per tile",
+    "360 ÷ 2^z degrees — exact"
+   ],
+   [
+    "Latitude span per tile",
+    "Mercator-computed — taller in degrees near the equator of the grid, compressed poleward in ground terms"
+   ],
+   [
+    "Ground width",
+    "Equatorial width × cos(latitude), roughly"
+   ],
+   [
+    "Neighbouring tiles",
+    "Share edges exactly — the mosaic has no seams in coordinate space"
+   ]
+  ],
+  "note": "Bounds are the tile's WGS84 extent — the same numbers a tile's GeoJSON footprint would carry."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The west/south/east/north geographic bounds of a z/x/y tile, by inverting the slippy-map formulas for its corner pixels."
+  ],
+  [
+   "Which map standard does it use?",
+   "The slippy-map standard (Web Mercator, 256-px tiles) shared by OSM, Google and MapLibre."
+  ],
+  [
+   "Can I use this in production GIS?",
+   "The formulas are the production standard itself — yes for web-mapping work."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 — tile systems are defined over it."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — tiles and pixels quantise; decimals beyond the cell are decoration."
+  ],
+  [
+   "Can I get bounds for a tile range?",
+   "Compute the corner tiles' outer edges — the range's extent is its northwest tile's west/north and its southeast tile's east/south."
+  ],
+  [
+   "TMS tiles?",
+   "Flip y first (y_tms = 2^z − 1 − y_xyz), then compute bounds — dialects differ, geography doesn't."
+  ],
+  [
+   "Bounds in projected metres?",
+   "The Web Mercator page converts the corners; tile edges are straight in Mercator space and very slightly curved in lon/lat space at large scales."
+  ],
+  [
+   "Polar tiles?",
+   "The grid caps at ±85.0511° — the top row of tiles carries that cap as its north edge."
+  ],
+  [
+   "Why does latitude span vary per row?",
+   "Mercator spacing: equal pixel rows cover shrinking degree spans as latitude rises — the bounds make the projection's rhythm visible."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Find a tile: the "
+  },
+  {
+   "t": "Latitude Longitude to Map Tile Calculator",
+   "l": "/tools/lat-lon-to-map-tile-calculator"
+  },
+  {
+   "t": "; its centre: the "
+  },
+  {
+   "t": "Map Tile Center Calculator",
+   "l": "/tools/map-tile-center-calculator"
+  },
+  {
+   "t": "; its width: the "
+  },
+  {
+   "t": "Map Tile Ground Width Calculator",
+   "l": "/tools/map-tile-ground-width-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator"
+ ]
+}

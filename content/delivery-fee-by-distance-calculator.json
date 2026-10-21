@@ -1,0 +1,201 @@
+{
+ "slug": "delivery-fee-by-distance-calculator",
+ "primary_keyword": "Delivery Fee by Distance Calculator",
+ "secondary_keywords": [
+  "delivery fee by distance calculator online",
+  "free delivery fee by distance calculator",
+  "delivery fee by distance calculator calculator",
+  "delivery fee by distance calculator tool",
+  "how to use delivery fee by distance calculator"
+ ],
+ "title": "Delivery Fee by Distance Calculator",
+ "description": "Price a delivery from a base fee plus a per-mile or per-km charge with the Delivery Fee by Distance Calculator — transparent quotes. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a $4.99 base plus $0.89 per mile over 8 miles prices a delivery at $12.11 — the structure customers recognise from every honest quote.",
+ "quick_answer": "The Delivery Fee by Distance Calculator prices a delivery the way delivery pricing is built: a base fee covering pickup and dispatch, plus a distance charge for miles or kilometres travelled. Enter base, rate and trip distance to read the fee a customer can be shown line by line.",
+ "steps_intro": "Base plus distance — the two-line quote that survives scrutiny:",
+ "use_cases": [
+  {
+   "title": "Restaurant and retail delivery pricing",
+   "body": [
+    {
+     "t": "A fee schedule customers can understand is one they argue with less. Base + distance is understood; test your numbers against your "
+    },
+    {
+     "t": "Delivery Cost per KM",
+     "l": "/tools/delivery-cost-per-km-calculator"
+    },
+    {
+     "t": " floor first."
+    }
+   ]
+  },
+  {
+   "title": "Zone design",
+   "body": [
+    {
+     "t": "A distance-priced fee makes zones self-drawing: the fee rises with the road, and the "
+    },
+    {
+     "t": "Delivery Radius Checker",
+     "l": "/tools/delivery-radius-checker"
+    },
+    {
+     "t": " shows where any cap would bite."
+    }
+   ]
+  },
+  {
+   "title": "Comparing your fee to platforms'",
+   "body": [
+    {
+     "t": "Decompose a platform's fee into base and distance parts with the same arithmetic and the comparison stops being apples-to-oranges."
+    }
+   ]
+  },
+  {
+   "title": "Quote consistency",
+   "body": [
+    {
+     "t": "Staff quoting from one formula give one answer. The customer who calls twice and hears two prices does not call a third time."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The standard order",
+   "body": [
+    {
+     "t": "$4.99 + $0.89 × 8.0 mi = $4.99 + $7.12 = $12.11. Every cent of it is explainable at the door."
+    }
+   ]
+  },
+  {
+   "label": "Example · The near neighbour",
+   "body": [
+    {
+     "t": "$4.99 + $0.89 × 1.2 mi = $6.06. The base keeps near deliveries viable; the distance part keeps far ones honest."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Fees at $4.99 base plus $0.89 per mile",
+  "intro": "One example tariff worked out — substitute your own base and rate in the calculator.",
+  "columns": [
+   "Distance",
+   "Distance part",
+   "Total fee"
+  ],
+  "rows": [
+   [
+    "1.2 mi",
+    "$1.07",
+    "$6.06"
+   ],
+   [
+    "3.0 mi",
+    "$2.67",
+    "$7.66"
+   ],
+   [
+    "5.0 mi",
+    "$4.45",
+    "$9.44"
+   ],
+   [
+    "8.0 mi",
+    "$7.12",
+    "$12.11"
+   ],
+   [
+    "12.0 mi",
+    "$10.68",
+    "$15.67"
+   ],
+   [
+    "20.0 mi",
+    "$17.80",
+    "$22.79"
+   ]
+  ],
+  "note": "Minimum-fee and free-delivery thresholds are policy layers on top of this structure — the structure stays the same underneath them."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "A delivery fee: base fee + (per-distance rate × trip distance), decomposed so the quote can be shown to the customer."
+  ],
+  [
+   "Is it free to use?",
+   "Yes — for setting your own prices or auditing someone else's."
+  ],
+  [
+   "How accurate is the result?",
+   "Exact for the tariff entered. Whether the tariff is right is a cost question — check it against your delivery cost per kilometre."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Distance prices the fee; traffic is a cost you absorb or cover with peak policies, not a line in this formula."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Roads wind. Fees are charged on the distance the delivery actually travels — the road figure."
+  ],
+  [
+   "Should distance be one-way or round trip?",
+   "The delivery leg is what the customer sees; the return is inside your rate. State the convention and keep it."
+  ],
+  [
+   "Base fee or minimum fee — same thing?",
+   "Close cousins: a base fee is the starting part of every price; a minimum fee is a floor under the total. Many tariffs use both."
+  ],
+  [
+   "Should the fee cap at some distance?",
+   "Many operators cap and switch to a quote beyond it. The calculator prices the formula's range; the cap is a policy you state."
+  ],
+  [
+   "Free delivery over a threshold?",
+   "A marketing layer on this structure: the fee formula still computes what the 'free' delivery costs you, which the threshold should be set from."
+  ],
+  [
+   "Tips and service charges?",
+   "Separate lines, separate customs. This formula is the delivery fee itself."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Your cost floor is the "
+  },
+  {
+   "t": "Delivery Cost per KM Calculator",
+   "l": "/tools/delivery-cost-per-km-calculator"
+  },
+  {
+   "t": "; the courier framing is the "
+  },
+  {
+   "t": "Courier Distance Charge Calculator",
+   "l": "/tools/courier-distance-charge-calculator"
+  },
+  {
+   "t": "; and zones are drawn in the "
+  },
+  {
+   "t": "Delivery Radius Checker",
+   "l": "/tools/delivery-radius-checker"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-route-planner",
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "drive-time-map",
+  "driving-days-calculator",
+  "driving-distance-calculator"
+ ]
+}

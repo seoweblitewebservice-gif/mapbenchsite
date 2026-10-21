@@ -1,0 +1,29 @@
+{
+ "slug": "country-boundary-downloader",
+ "primary_keyword": "Country Boundary Downloader",
+ "secondary_keywords": [
+  "country boundary download",
+  "country outline kml",
+  "download country geojson",
+  "country border file"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "cluster-map-from-points",
+  "csv-column-counter",
+  "csv-coordinate-bounding-box",
+  "csv-coordinate-centroid-calculator",
+  "csv-coordinate-deduplicator",
+  "csv-coordinate-validator"
+ ]
+}

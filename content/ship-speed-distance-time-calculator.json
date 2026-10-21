@@ -1,0 +1,201 @@
+{
+ "slug": "ship-speed-distance-time-calculator",
+ "primary_keyword": "Ship Speed Distance Time Calculator",
+ "secondary_keywords": [
+  "ship speed distance time calculator online",
+  "free ship speed distance time calculator",
+  "ship speed distance time calculator calculator",
+  "ship speed distance time calculator tool",
+  "how to use ship speed distance time calculator"
+ ],
+ "title": "Ship Speed Distance Time Calculator: Knots",
+ "description": "Solve the sailor's triangle with the Ship Speed Distance Time Calculator — speed in knots, distance in nautical miles, time at sea. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 450 nautical miles at a steady 18 knots is exactly 25 hours at sea — the arithmetic behind every ETA a port has ever been given.",
+ "quick_answer": "The Ship Speed Distance Time Calculator solves the mariner's triangle: given any two of speed in knots, distance in nautical miles and time, it finds the third. Enter the pair known and read the one needed — passage planning, ETA checks and a classic calculation, in its own units.",
+ "steps_intro": "Speed × time = distance, in the units the sea still uses:",
+ "use_cases": [
+  {
+   "title": "Passage planning",
+   "body": [
+    {
+     "t": "Legs are planned in hours at cruising speed. The legs' totals become the passage's shape — distances measured with the "
+    },
+    {
+     "t": "Great Circle Flight Route Calculator",
+     "l": "/tools/great-circle-flight-route-calculator"
+    },
+    {
+     "t": "'s sea-going cousins among the distance tools."
+    }
+   ]
+  },
+  {
+   "title": "ETA checks",
+   "body": [
+    {
+     "t": "A quoted arrival implies an average speed. Divide the passage by the hours and implausible ETAs expose themselves."
+    }
+   ]
+  },
+  {
+   "title": "Fuel and charter estimates",
+   "body": [
+    {
+     "t": "Time at sea is the charter's currency and the fuel curve's input. Hours first, from here."
+    }
+   ]
+  },
+  {
+   "title": "Training and exams",
+   "body": [
+    {
+     "t": "Navigation students live in this triangle. The calculator is the check the worked examples must agree with."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The overnight leg",
+   "body": [
+    {
+     "t": "450 nm ÷ 18 kn = 25.0 hours. Depart at noon, arrive at 13:00 the next day — plus the tide's opinion, which no calculator aboard can overrule."
+    }
+   ]
+  },
+  {
+   "label": "Example · The long haul",
+   "body": [
+    {
+     "t": "1,200 nm at 15 knots = 80 hours = 3 days 8 hours. Ocean legs are quoted in days because the arithmetic says so."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Knots in landsman's units",
+  "intro": "One knot is one nautical mile per hour; a nautical mile is exactly 1.852 km. Conversions computed.",
+  "columns": [
+   "Speed",
+   "km/h",
+   "mph",
+   "Distance in 24 h"
+  ],
+  "rows": [
+   [
+    "5 kn",
+    "9.26",
+    "5.75",
+    "120 nm (222 km)"
+   ],
+   [
+    "10 kn",
+    "18.52",
+    "11.51",
+    "240 nm (444 km)"
+   ],
+   [
+    "15 kn",
+    "27.78",
+    "17.26",
+    "360 nm (667 km)"
+   ],
+   [
+    "18 kn",
+    "33.34",
+    "20.71",
+    "432 nm (800 km)"
+   ],
+   [
+    "20 kn",
+    "37.04",
+    "23.02",
+    "480 nm (889 km)"
+   ],
+   [
+    "25 kn",
+    "46.30",
+    "28.77",
+    "600 nm (1,111 km)"
+   ]
+  ],
+  "note": "Speeds are through the water or over the ground as you enter them — currents are the difference, and they belong to the navigator's corrections, not this triangle."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Any one of speed (knots), distance (nautical miles) and time (hours) from the other two — the speed-distance-time triangle in maritime units."
+  ],
+  [
+   "Is it free to use?",
+   "Yes — aboard, ashore, in the exam hall's doorway."
+  ],
+  [
+   "How accurate is the result?",
+   "Exact arithmetic on your inputs. Real passages add currents, weather and traffic schemes; the triangle gives the plan those corrections amend."
+  ],
+  [
+   "Does the route include live traffic?",
+   "The sea has traffic separation schemes rather than traffic jams; neither is in this calculation. It is the pure triangle."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Sea distances follow channels, headlands and great circles rather than roads — measure the passage as sailed and enter that."
+  ],
+  [
+   "Knots — why not km/h?",
+   "Because the nautical mile is one minute of latitude, which makes charts and knots a single system. The table on this page converts for landlocked intuition."
+  ],
+  [
+   "Speed through water or over ground?",
+   "Enter the one your question uses. GPS reports over ground; logs report through water; passages are planned in whichever, corrected for current."
+  ],
+  [
+   "Average speed versus cruising speed?",
+   "Passages average slower than they cruise — ports, pilots and weather take their share. Plan ETAs on the average."
+  ],
+  [
+   "Can it work in km and km/h?",
+   "The triangle is unit-agnostic; the maritime dress is knots and nautical miles. Convert with the nautical tools if your vessel thinks metric."
+  ],
+  [
+   "River and canal passages?",
+   "Same triangle, lower speeds, plus locks that no formula aboard can hurry. Add lock time as port time."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Sea distances connect to the "
+  },
+  {
+   "t": "Kilometers to Nautical Miles Converter",
+   "l": "/tools/kilometers-to-nautical-miles-converter"
+  },
+  {
+   "t": " and the "
+  },
+  {
+   "t": "Latitude Degrees to Nautical Miles Converter",
+   "l": "/tools/latitude-degrees-to-nautical-miles"
+  },
+  {
+   "t": "; land's version of the triangle is the "
+  },
+  {
+   "t": "ETA Calculator",
+   "l": "/tools/eta-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-calories-distance",
+  "cycling-route-planner",
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator"
+ ]
+}

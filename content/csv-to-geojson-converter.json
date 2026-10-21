@@ -1,0 +1,30 @@
+{
+ "slug": "csv-to-geojson-converter",
+ "primary_keyword": "CSV to GeoJSON Converter",
+ "secondary_keywords": [
+  "csv to geojson converter online",
+  "free csv to geojson converter",
+  "csv to geojson converter calculator",
+  "csv to geojson converter tool",
+  "how to calculate csv to geojson converter"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "csv-coordinate-bounding-box",
+  "csv-coordinate-centroid-calculator",
+  "csv-coordinate-deduplicator",
+  "csv-coordinate-validator",
+  "csv-latlng-validator",
+  "csv-row-counter"
+ ]
+}

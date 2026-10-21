@@ -1,0 +1,198 @@
+{
+ "slug": "decimal-degree-precision-calculator",
+ "primary_keyword": "Decimal Degree Precision Calculator",
+ "secondary_keywords": [
+  "decimal degree precision calculator online",
+  "free decimal degree precision calculator",
+  "decimal degree precision calculator calculator",
+  "decimal degree precision calculator tool",
+  "how to calculate decimal degree precision calculator"
+ ],
+ "title": "Decimal Degree Precision Calculator",
+ "description": "Estimate the ground precision of a decimal-place count with the Decimal Degree Precision Calculator — metres per place, latitude-aware. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 5 decimal places claim a 1.1-metre grain — which is why a phone screenshot showing 7 places is claiming to locate you within the width of this page's full stop.",
+ "quick_answer": "The Decimal Degree Precision Calculator estimates the ground precision a chosen number of decimal places represents, in metres, at your latitude. Pick the places and read the grain — the calculator that turns 'how many decimals?' from superstition into a measurement you can defend.",
+ "steps_intro": "Every decimal place is a claim about the Earth. Price the claim:",
+ "use_cases": [
+  {
+   "title": "Choosing export settings",
+   "body": [
+    {
+     "t": "GIS and GPS exports ask for decimal places. Choose with the grain in view — then apply it with the "
+    },
+    {
+     "t": "Coordinate Precision Tool",
+     "l": "/tools/coordinate-precision-tool"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Evaluating a dataset's dress",
+   "body": [
+    {
+     "t": "A file at 7 places from a consumer source is over-dressed. The calculator gives you the number to say in the review meeting."
+    }
+   ]
+  },
+  {
+   "title": "Privacy fuzz sizing",
+   "body": [
+    {
+     "t": "How coarse must coordinates be to protect a site? The grain table answers in metres, not vibes."
+    }
+   ]
+  },
+  {
+   "title": "Procurement and specs",
+   "body": [
+    {
+     "t": "“Supplied at 6 decimal places” in a contract means 0.11 m grain — this page is the translation the lawyers needed."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The ladder, priced",
+   "body": [
+    {
+     "t": "Latitude grain by places: 3 → ~111 m, 4 → ~11 m, 5 → ~1.1 m, 6 → ~0.11 m, 7 → ~0.011 m. Each place divides the claim by ten — the most ruthless exchange rate in mapping."
+    }
+   ]
+  },
+  {
+   "label": "Example · Longitude's discount",
+   "body": [
+    {
+     "t": "At 60° latitude the longitude grain halves (a degree is 55.8 km there). The calculator's latitude input exists because 'a decimal place' is not one size on a round planet."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Places to ground grain (latitude)",
+  "intro": "Computed from WGS84 degree lengths — the calculator's own table.",
+  "columns": [
+   "Decimal places",
+   "Grain",
+   "Worthy source"
+  ],
+  "rows": [
+   [
+    "2",
+    "~1.1 km",
+    "Gazetteers"
+   ],
+   [
+    "3",
+    "~111 m",
+    "Map reading"
+   ],
+   [
+    "4",
+    "~11 m",
+    "Careful map clicks"
+   ],
+   [
+    "5",
+    "~1.1 m",
+    "Good consumer GPS"
+   ],
+   [
+    "6",
+    "~0.11 m",
+    "Differential GPS and survey kit"
+   ],
+   [
+    "7",
+    "~0.011 m",
+    "Geodesy — or overclaiming"
+   ]
+  ],
+  "note": "Grain is the size of the last place's step, not the error of the fix. A point can sit anywhere within its grain cell and be wrong by much more."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The ground size of one unit in the last decimal place — for latitude and longitude at a stated latitude — from WGS84 degree lengths."
+  ],
+  [
+   "Do I need an account?",
+   "No — places and latitude in, grain out."
+  ],
+  [
+   "Can I rely on this for professional work?",
+   "The grain arithmetic is exact geometry — rely on it. Professional judgment is matching the places to the instrument, which the table guides."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 degree lengths throughout."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — this calculator is the standing refutation, with numbers: places measure resolution, instruments measure accuracy, and the two meet only when chosen honestly."
+  ],
+  [
+   "Why does latitude matter?",
+   "Longitude degrees shrink toward the poles, so a decimal place of longitude is worth fewer metres at 60° than at the equator. Latitude's grain is nearly constant."
+  ],
+  [
+   "Cell versus error?",
+   "Grain is the grid's mesh, not the fix's error. A 5-place coordinate from a 10-metre fix claims a 1.1 m mesh while sitting up to 10 m off — both numbers can be true."
+  ],
+  [
+   "What about DMS seconds?",
+   "Same logic in sexagesimal: 0.1″ ≈ 3 m, 0.01″ ≈ 0.3 m — the Arcseconds to Ground Distance Calculator prices those."
+  ],
+  [
+   "Fuzzing for privacy?",
+   "2–3 places (1.1 km–111 m) is the customary publication fuzz. Size the choice here, apply it in the precision tool."
+  ],
+  [
+   "Trailing zeros meaningful?",
+   "They declare the grain: 40.7580 claims 11 m dress; 40.758 claims 111 m. Honest dressers keep the zero."
+  ],
+  [
+   "Mars coordinates?",
+   "Different planet, different degree lengths — a charming question this Earth-bound calculator declines."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Apply it: the "
+  },
+  {
+   "t": "Coordinate Precision Tool",
+   "l": "/tools/coordinate-precision-tool"
+  },
+  {
+   "t": "; round it: the "
+  },
+  {
+   "t": "Coordinate Rounding Tool",
+   "l": "/tools/coordinate-rounding-tool"
+  },
+  {
+   "t": "; seconds: the "
+  },
+  {
+   "t": "Arcseconds to Ground Distance Calculator",
+   "l": "/tools/arcseconds-to-ground-distance-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-mean-calculator",
+  "coordinate-offset-calculator"
+ ]
+}

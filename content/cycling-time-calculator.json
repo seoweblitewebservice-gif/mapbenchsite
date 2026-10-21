@@ -1,0 +1,208 @@
+{
+ "slug": "cycling-time-calculator",
+ "primary_keyword": "Cycling Time Calculator",
+ "secondary_keywords": [
+  "bike time calculator",
+  "cycling duration calculator",
+  "bike ride time",
+  "cycling distance time",
+  "bicycle time calculator"
+ ],
+ "title": "Cycling Time Calculator: Ride Duration Estimator",
+ "description": "Estimate how long a ride takes from distance and expected speed with the Cycling Time Calculator — honest about stops and terrain. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 68 km at a steady 21 km/h takes about 3 hours 14 minutes of riding — the figure a café stop then extends, by exactly the length of the stop.",
+ "quick_answer": "The Cycling Time Calculator divides a route's distance by the average speed you expect to hold and returns the ride's duration. Enter the distance from your route plan and a realistic average, and read the time — then add your stops deliberately instead of discovering them at dusk.",
+ "steps_intro": "Time is distance wearing the speed you can actually hold. Be honest in both inputs:",
+ "use_cases": [
+  {
+   "title": "Daylight planning",
+   "body": [
+    {
+     "t": "A winter ride must fit the light. Distance from the "
+    },
+    {
+     "t": "Cycling Route Planner",
+     "l": "/tools/cycling-route-planner"
+    },
+    {
+     "t": ", speed from your "
+    },
+    {
+     "t": "Cycling Speed Calculator",
+     "l": "/tools/cycling-speed-calculator"
+    },
+    {
+     "t": " history, answer here — before the ride, not during it."
+    }
+   ]
+  },
+  {
+   "title": "Group ride scheduling",
+   "body": [
+    {
+     "t": "Publish a finish time built from the group's true average, not the leader's. The group's average is the slowest honest number in the chain."
+    }
+   ]
+  },
+  {
+   "title": "Commute commitments",
+   "body": [
+    {
+     "t": "Can you ride to the 9 a.m. meeting? The estimate with your real average — plus changing time — is the professional answer."
+    }
+   ]
+  },
+  {
+   "title": "Tour day sizing",
+   "body": [
+    {
+     "t": "Touring days are sized in hours, then converted to kilometres by this division. Five riding hours at 20 km/h is a 100 km day, whatever the map wishes."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The Saturday ride",
+   "body": [
+    {
+     "t": "68 km at 21 km/h = 3.24 h ≈ 3 h 14 min of riding. Add two 15-minute stops and the door-to-door is 3 h 44 min — the second figure is the one to tell the family."
+    }
+   ]
+  },
+  {
+   "label": "Example · The imperial century check",
+   "body": [
+    {
+     "t": "100 miles at 16 mph = 6 h 15 min riding. Centuries are won by the average held at mile 80, not the one boasted at mile 8 — the calculator takes the average you give it."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Distance at average speeds",
+  "intro": "Riding time (no stops) for common distances at sustainable averages — the table that sizes a ride honestly.",
+  "columns": [
+   "Distance",
+   "At 15 km/h",
+   "At 20 km/h",
+   "At 25 km/h",
+   "At 30 km/h"
+  ],
+  "rows": [
+   [
+    "25 km",
+    "1 h 40 m",
+    "1 h 15 m",
+    "1 h 00 m",
+    "0 h 50 m"
+   ],
+   [
+    "50 km",
+    "3 h 20 m",
+    "2 h 30 m",
+    "2 h 00 m",
+    "1 h 40 m"
+   ],
+   [
+    "68 km",
+    "4 h 32 m",
+    "3 h 24 m",
+    "2 h 43 m",
+    "2 h 16 m"
+   ],
+   [
+    "100 km",
+    "6 h 40 m",
+    "5 h 00 m",
+    "4 h 00 m",
+    "3 h 20 m"
+   ],
+   [
+    "100 mi (161 km)",
+    "10 h 44 m",
+    "8 h 03 m",
+    "6 h 26 m",
+    "5 h 22 m"
+   ]
+  ],
+  "note": "The 68 km row at 21 km/h (3 h 14 m) sits between the 20 and 25 columns, as it should — interpolate, then add stops."
+ },
+ "faq": [
+  [
+   "Does this replace a specialist tool or professional measurement?",
+   "No — it divides distance by your stated average. Route computers estimate from terrain and your history; this is the transparent version you can argue with."
+  ],
+  [
+   "Is my input uploaded?",
+   "No. The estimate is computed in your browser."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Junctions and towns are inside your average if your average came from real rides — another reason to use your own history, not a hope."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Roads wind, and you ride roads. Plan with the routed distance from the Cycling Route Planner."
+  ],
+  [
+   "Can route results change over time?",
+   "Your average changes with fitness and season. Recompute with the current rider, not last summer's."
+  ],
+  [
+   "Should stops be included?",
+   "Deliberately, as additions. The calculator gives riding time; the day is riding time plus stops, and only you know your café discipline."
+  ],
+  [
+   "What average should a beginner use?",
+   "A completed ride's average — from the Cycling Speed Calculator over a known distance — beats any chart. Until then, 15 km/h is a kinder planning assumption than 25."
+  ],
+  [
+   "Headwind forecast — what changes?",
+   "Your sustainable average, by a lot. Drop the input speed honestly (riders often lose 3–5 km/h to a strong headwind) and the plan survives the weather."
+  ],
+  [
+   "Can I plan a relay or audax leg with it?",
+   "Yes — each leg is a distance and an average. Chain the legs and add the controls' stoppage time as additions."
+  ],
+  [
+   "Why is my real time always longer?",
+   "Stops, junctions and the average decaying late in the ride. Add 10–15% to the rolling figure for a door-to-door truth, calibrated by your own history."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Averages come from the "
+  },
+  {
+   "t": "Cycling Speed Calculator",
+   "l": "/tools/cycling-speed-calculator"
+  },
+  {
+   "t": ", distances from the "
+  },
+  {
+   "t": "Cycling Route Planner",
+   "l": "/tools/cycling-route-planner"
+  },
+  {
+   "t": ", and energy from "
+  },
+  {
+   "t": "Cycling Calories by Distance",
+   "l": "/tools/cycling-calories-distance"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "delivery-cost-per-km-calculator"
+ ]
+}

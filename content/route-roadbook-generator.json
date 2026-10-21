@@ -1,0 +1,207 @@
+{
+ "slug": "route-roadbook-generator",
+ "primary_keyword": "Route Roadbook Generator",
+ "secondary_keywords": [
+  "roadbook generator",
+  "route book maker",
+  "rally roadbook",
+  "journey legs printable"
+ ],
+ "title": "Route Roadbook Generator: Printable Leg Table",
+ "description": "Turn a route into a printable roadbook with the Route Roadbook Generator — clean leg table, cumulative totals, ready for PDF. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a five-stop tour becomes five leg rows with distances, times and cumulative totals — the document a co-driver can navigate from while the driver watches the road.",
+ "quick_answer": "The Route Roadbook Generator takes a route built from your start, stops and destination and lays it out as a clean roadbook: a leg-by-leg table with distances, times and cumulative totals, ready to print or save as a PDF. Build the route, generate the book, and carry it on paper.",
+ "steps_intro": "Rally crews trust paper for a reason. Generate yours from the real route:",
+ "use_cases": [
+  {
+   "title": "Road-trip navigation backup",
+   "body": [
+    {
+     "t": "When the phone dies in the mountains, the roadbook drives. Routes built in the "
+    },
+    {
+     "t": "Multi-Stop Route Planner",
+     "l": "/tools/multi-stop-route-planner"
+    },
+    {
+     "t": " become paper here."
+    }
+   ]
+  },
+  {
+   "title": "Rally and tour organisation",
+   "body": [
+    {
+     "t": "Every crew gets the same legs and the same totals — the organiser's single source of truth, printable for the whole field."
+    }
+   ]
+  },
+  {
+   "title": "Co-driver teamwork",
+   "body": [
+    {
+     "t": "Cumulative totals let the passenger call the journey's progress — a job the "
+    },
+    {
+     "t": "Route Distance Percentage Calculator",
+     "l": "/tools/route-distance-percentage-calculator"
+    },
+    {
+     "t": " also serves, live."
+    }
+   ]
+  },
+  {
+   "title": "Delivery round sheets",
+   "body": [
+    {
+     "t": "A printed leg table is a round's manifest: distances to expect, times to beat, totals to check at return."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The leg table's power",
+   "body": [
+    {
+     "t": "A leg row might read 46.2 miles, cumulative 131.8. The co-driver knows — without a screen — exactly where in the journey the next turn belongs."
+    }
+   ]
+  },
+  {
+   "label": "Example · The walking cousin",
+   "body": [
+    {
+     "t": "Treks get the same treatment in the Multi-Day Trek Roadbook, where the legs are days and the totals are the trail."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Inside a roadbook row",
+  "intro": "What each column of the generated table carries — the anatomy of the document.",
+  "columns": [
+   "Column",
+   "Contents",
+   "Used for"
+  ],
+  "rows": [
+   [
+    "Leg",
+    "Start → end of this hop",
+    "Knowing where you are"
+   ],
+   [
+    "Leg distance",
+    "This hop's miles",
+    "Fuel and effort per hop"
+   ],
+   [
+    "Leg time",
+    "Routing estimate",
+    "Pacing the day"
+   ],
+   [
+    "Cumulative distance",
+    "Journey total so far",
+    "Progress calls"
+   ],
+   [
+    "Cumulative time",
+    "Driving time so far",
+    "Arrival honesty"
+   ],
+   [
+    "Totals row",
+    "The whole route",
+    "The plan's bottom line"
+   ]
+  ],
+  "note": "The roadbook carries the route as generated — re-generate after any route change rather than annotating a stale book."
+ },
+ "faq": [
+  [
+   "Does it include turn-by-turn instructions?",
+   "The roadbook is a leg table — distances, times and totals per hop — not a turn list. It navigates by legs, the way rally books do; junction-level guidance is a navigation app's craft."
+  ],
+  [
+   "How do I save it?",
+   "Print it, or save the print view as a PDF — both are the intended outputs, designed for paper from the start."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Leg times are routing estimates; the printed book is a plan, and plans get margins, not traffic feeds."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Legs are road distances — the book's whole honesty is that its numbers are the driven ones."
+  ],
+  [
+   "Can route results change over time?",
+   "Regenerate per trip: road data improves, and a roadbook's authority expires with the route it describes."
+  ],
+  [
+   "How many legs can it hold?",
+   "As many as the route builders hold — the multi-stop family routes up to 30 stops, and each becomes a row."
+  ],
+  [
+   "Is it only for cars?",
+   "Legs are legs: the trek version day-splits walks, and cyclists read roadbooks happily. The table serves any routed journey."
+  ],
+  [
+   "Can the book show kilometres instead?",
+   "The route's units follow the tools' settings — generate the route in metric and the book prints metric legs."
+  ],
+  [
+   "Is a roadbook legal to read while driving?",
+   "It is a passenger's document. Drivers glance at navigation lawfully; roadbooks are read aloud by co-drivers, as rallying intended."
+  ],
+  [
+   "Can I annotate it?",
+   "It is paper's destiny. Print, scribble, survive — the PDF regenerates clean next trip."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Routes come from the "
+  },
+  {
+   "t": "Multi-Stop Route Planner",
+   "l": "/tools/multi-stop-route-planner"
+  },
+  {
+   "t": " and the "
+  },
+  {
+   "t": "Route Optimizer",
+   "l": "/tools/route-optimizer"
+  },
+  {
+   "t": "; the walking version is the "
+  },
+  {
+   "t": "Multi-Day Trek Roadbook",
+   "l": "/tools/multi-day-trek-roadbook"
+  },
+  {
+   "t": "; and the flight over it is the "
+  },
+  {
+   "t": "Route Flyover Preview",
+   "l": "/tools/route-flyover-preview"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner"
+ ]
+}

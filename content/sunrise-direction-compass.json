@@ -1,0 +1,28 @@
+{
+ "slug": "sunrise-direction-compass",
+ "primary_keyword": "Sunrise Direction Compass",
+ "secondary_keywords": [
+  "sunrise direction",
+  "sunrise azimuth",
+  "where does the sun rise"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "astronomical-twilight-calculator",
+  "civil-twilight-calculator",
+  "day-length-calculator",
+  "day-night-map",
+  "moon-age-calculator",
+  "moon-illumination-calculator"
+ ]
+}

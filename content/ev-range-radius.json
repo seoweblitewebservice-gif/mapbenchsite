@@ -1,0 +1,199 @@
+{
+ "slug": "ev-range-radius",
+ "primary_keyword": "EV Range Radius Map",
+ "secondary_keywords": [
+  "ev range map",
+  "electric vehicle radius",
+  "ev distance circle"
+ ],
+ "title": "EV Range Radius Map: See the Range Ring",
+ "description": "Visualise an electric car's usable range as a ring on the map with the EV Range Radius Map — one-way versus out-and-back, honestly drawn. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 240-mile rated range draws a 240-mile one-way ring — but the out-and-back ring, the one a day trip actually lives in, is 120 miles in radius.",
+ "quick_answer": "The EV Range Radius Map draws a vehicle's range as a ring around a point so trip planning starts from geography instead of a brochure number. Enter the range and see the one-way reach — remembering that a trip that must come home lives in half that ring.",
+ "steps_intro": "A range figure is a distance; a trip is a shape. Draw the shape before believing the figure:",
+ "use_cases": [
+  {
+   "title": "Day-trip feasibility",
+   "body": [
+    {
+     "t": "The out-and-back ring is the honest day-trip map: destination inside half-range, with margin. Draw it before promising the scenic route home."
+    }
+   ]
+  },
+  {
+   "title": "House-hunting with an EV",
+   "body": [
+    {
+     "t": "A commute must fit the ring twice a day with charge to spare. Candidate towns inside the half-range ring are the realistic list — check the actual roads in the "
+    },
+    {
+     "t": "Drive Time Map",
+     "l": "/tools/drive-time-map"
+    },
+    {
+     "t": " afterwards."
+    }
+   ]
+  },
+  {
+   "title": "Charging-stop sketches",
+   "body": [
+    {
+     "t": "Rings from successive overnight stops chain a road trip together. Each ring is a simple model — terrain and weather argue with it, as the FAQ is honest about."
+    }
+   ]
+  },
+  {
+   "title": "Fleet and pool-car planning",
+   "body": [
+    {
+     "t": "Which sites can a pool EV serve and return from? The half-range ring around the depot is the first-pass answer."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The half-range rule",
+   "body": [
+    {
+     "t": "Rated range 240 mi: one-way ring area π × 240² ≈ 180,956 mi² of map; out-and-back ring (r = 120) ≈ 45,239 mi². Coming home quarters the playground — the single most useful picture in EV trip planning."
+    }
+   ]
+  },
+  {
+   "label": "Example · A winter haircut",
+   "body": [
+    {
+     "t": "Plan a cold trip at 70% of rated range — a planning allowance, not a measurement — and a 240-mile car becomes a 168-mile one-way ring, 84 miles out-and-back. The map redraws instantly; the disappointment happens indoors."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Rated range to honest rings",
+  "intro": "Ring radii for common rated ranges. The out-and-back column is the planning figure; both are geometry, labelled as the simple model they are.",
+  "columns": [
+   "Rated range",
+   "One-way ring radius",
+   "Out-and-back radius",
+   "Out-and-back area (mi²)"
+  ],
+  "rows": [
+   [
+    "150 mi",
+    "150 mi",
+    "75 mi",
+    "17,671"
+   ],
+   [
+    "200 mi",
+    "200 mi",
+    "100 mi",
+    "31,416"
+   ],
+   [
+    "240 mi",
+    "240 mi",
+    "120 mi",
+    "45,239"
+   ],
+   [
+    "300 mi",
+    "300 mi",
+    "150 mi",
+    "70,686"
+   ],
+   [
+    "350 mi",
+    "350 mi",
+    "175 mi",
+    "96,211"
+   ],
+   [
+    "400 mi",
+    "400 mi",
+    "200 mi",
+    "125,664"
+   ]
+  ],
+  "note": "No battery model hides in this table: terrain, temperature, speed and charging stops all move real range. The ring is the planning sketch, not the promise."
+ },
+ "faq": [
+  [
+   "Does the ring account for terrain and weather?",
+   "No — and it says so. Hills, cold, headwinds and motorway speeds all shrink real range. Treat the ring as the ceiling and plan inside it with a margin you choose."
+  ],
+  [
+   "Is a radius the same as driving distance?",
+   "No. The ring is straight-line reach; roads wind. A destination at 100 straight-line miles can be 130 road miles — check finalists by road before the trip."
+  ],
+  [
+   "Can I use this for service-area planning?",
+   "For EV fleets, as the geographic screen — yes. Depot rings show candidate coverage; charging locations then decide what is actually servable."
+  ],
+  [
+   "Are map measurements legal survey measurements?",
+   "Irrelevant here — a range ring is a planning sketch, not a boundary. Nothing legal hangs on it, which is part of its charm."
+  ],
+  [
+   "Why plan at half range for a return trip?",
+   "Because the battery must fund the journey home. Half is the geometry of out-and-back with zero margin; prudent planners use less than half."
+  ],
+  [
+   "One-way relocation trips?",
+   "Then the full ring is the honest one — a house move or a one-way rental drop can spend the whole range in one direction."
+  ],
+  [
+   "Does charging en route change the picture?",
+   "Completely — a charger at the ring's edge extends the day by another ring. This tool draws one ring at a time; chain them mentally along your route."
+  ],
+  [
+   "Should I plan to the ring's edge?",
+   "No — the edge assumes a full battery, still air and no detours. Experienced EV drivers plan arrivals with a buffer; the ring is the map of the possible, not the advisable."
+  ],
+  [
+   "Why is the ring a circle at all?",
+   "Because it is a first sketch. Real reach follows roads and chargers, which is why this page insists on its own limits and links the road tools."
+  ],
+  [
+   "Does speed change the ring?",
+   "Highway speeds cost range against rated figures, so a motorway day wants a smaller planning ring than a city day in the same car."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The general circle tool is the "
+  },
+  {
+   "t": "Map Radius Tool",
+   "l": "/tools/map-radius"
+  },
+  {
+   "t": "; road-shaped reach is the "
+  },
+  {
+   "t": "Drive Time Map",
+   "l": "/tools/drive-time-map"
+  },
+  {
+   "t": "; and a one-way journey's actual road distance belongs to the "
+  },
+  {
+   "t": "Driving Distance Calculator",
+   "l": "/tools/driving-distance-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "acreage-map-calculator",
+  "acres-to-hectares-converter",
+  "acres-to-square-feet-converter",
+  "buffer-zone-map",
+  "center-of-polygon",
+  "circle-area-from-radius"
+ ]
+}

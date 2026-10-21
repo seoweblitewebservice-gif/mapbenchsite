@@ -1,0 +1,28 @@
+{
+ "slug": "shareable-map-link-helper",
+ "primary_keyword": "Shareable Map Link Helper",
+ "secondary_keywords": [
+  "share map link",
+  "share coordinates",
+  "map share url"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "county-choropleth",
+  "custom-labeled-map",
+  "embed-map-link-helper",
+  "google-maps-embed-code-generator",
+  "historical-map-context",
+  "live-spatial-data-connector"
+ ]
+}

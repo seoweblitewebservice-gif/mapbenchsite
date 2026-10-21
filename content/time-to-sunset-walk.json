@@ -1,0 +1,28 @@
+{
+ "slug": "time-to-sunset-walk",
+ "primary_keyword": "Time to Sunset Walk Planner",
+ "secondary_keywords": [
+  "walk before sunset",
+  "time to sunset",
+  "evening walk planner"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "astronomical-twilight-calculator",
+  "civil-twilight-calculator",
+  "day-length-calculator",
+  "day-night-map",
+  "moon-age-calculator",
+  "moon-illumination-calculator"
+ ]
+}

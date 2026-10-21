@@ -1,0 +1,28 @@
+{
+ "slug": "qr-location-helper",
+ "primary_keyword": "QR Location Helper",
+ "secondary_keywords": [
+  "qr code location",
+  "qr coordinates",
+  "meetup qr map"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator"
+ ]
+}

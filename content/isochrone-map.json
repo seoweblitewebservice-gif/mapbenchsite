@@ -1,0 +1,188 @@
+{
+ "slug": "isochrone-map",
+ "primary_keyword": "Isochrone Map",
+ "secondary_keywords": [
+  "isochrone",
+  "travel time polygon",
+  "isochrone map online"
+ ],
+ "title": "Isochrone Map: Travel-Time Polygons",
+ "description": "Draw travel-time polygons along the road network with the Isochrone Map — drive, cycle or walk reach, as shapes instead of circles. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 30-minute drive-time polygon around a city depot covers the motorway corridor generously and the river's far bank barely — the shape roads actually allow.",
+ "quick_answer": "The Isochrone Map draws the area reachable within a set travel time from one origin, following the road network for driving, cycling or walking. Set the place, mode and minutes and read the polygon — the honest shape of reach that a radius circle only pretends to be.",
+ "steps_intro": "Reach is a shape, not a circle. Draw the true one:",
+ "use_cases": [
+  {
+   "title": "Site and store location",
+   "body": [
+    {
+     "t": "A site is worth its isochrone. Draw candidate locations' 20-minute polygons and compare catchments as shapes — the "
+    },
+    {
+     "t": "Drive Time Map",
+     "l": "/tools/drive-time-map"
+    },
+    {
+     "t": " is this site's other instrument for the same question."
+    }
+   ]
+  },
+  {
+   "title": "Public-service coverage",
+   "body": [
+    {
+     "t": "Response-time duties are isochrone duties: the polygon is the area a station can honestly claim. Population inside it is the next number, from the population tools."
+    }
+   ]
+  },
+  {
+   "title": "House hunting by commute",
+   "body": [
+    {
+     "t": "Draw the 45-minute polygon from the office and house-hunt inside the shape, not inside a circle that includes the estuary."
+    }
+   ]
+  },
+  {
+   "title": "Planning literacy",
+   "body": [
+    {
+     "t": "One isochrone teaches more transport geography than a chapter of text: networks, barriers and corridors are all visible at once."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The corridor effect",
+   "body": [
+    {
+     "t": "A 30-minute driving polygon stretches far along fast roads and barely across slow ones. Two homes the same crow-miles from work can sit one inside and one outside the shape — that is the entire argument for drawing it."
+    }
+   ]
+  },
+  {
+   "label": "Example · Walk versus drive",
+   "body": [
+    {
+     "t": "The 20-minute walking polygon is a compact blob around the origin; the 20-minute driving one is a starburst along the arterials. Same minutes, different cities — mode is a geography of its own."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Isochrone or radius — which shape?",
+  "intro": "Two ways to draw reach. This page is the network column; the Map Radius Tool owns the circle column.",
+  "columns": [
+   "Property",
+   "Radius circle",
+   "Isochrone (this tool)"
+  ],
+  "rows": [
+   [
+    "Follows roads?",
+    "No",
+    "Yes"
+   ],
+   [
+    "Blocked by rivers and rails?",
+    "No",
+    "Yes, as the network is"
+   ],
+   [
+    "Depends on mode?",
+    "No",
+    "Drive, cycle and walk differ"
+   ],
+   [
+    "Symmetrical?",
+    "Always",
+    "Never — corridors stretch it"
+   ],
+   [
+    "Best for",
+    "Quick screens, legal buffers",
+    "Real reach and catchments"
+   ],
+   [
+    "Data",
+    "None needed",
+    "Road network (open data)"
+   ]
+  ],
+  "note": "Isochrones are only as current as the network data beneath them; a new bridge redraws the shape the day the data learns about it."
+ },
+ "faq": [
+  [
+   "Is this the same as the Drive Time Map?",
+   "Cousins, not twins: both draw travel-time reach from the road network. This page is organised around the isochrone concept and its modes; the Drive Time Map around the depot-and-minutes planning workflow. The polygons agree because the network is shared."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Times are the network's typical speeds, not this minute's congestion. Peak-hour reality is slower; the shape is the free-flow truth."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Roads wind — and isochrones exist precisely because reach follows roads, not geometry."
+  ],
+  [
+   "Can route results change over time?",
+   "Yes: new roads and reclassified streets reshape polygons as the open data updates. Re-draw before a decision, not from memory."
+  ],
+  [
+   "Which modes are supported?",
+   "Driving, cycling and walking, each on its legal network — the walk polygon uses paths a car cannot, and vice versa."
+  ],
+  [
+   "How many time bands can I draw?",
+   "Several rings at once — nested isochrones (10/20/30 minutes) are the classic catchment picture this tool is built for."
+  ],
+  [
+   "Can I export the polygon?",
+   "The reach shapes are the working output of the page; the site's export tools elsewhere handle GPX and data formats for routes."
+  ],
+  [
+   "Why is my polygon not a neat set of rings?",
+   "Because roads are not neat. Lobes along fast corridors and bites where barriers sit are the information — a neat shape would be the lie."
+  ],
+  [
+   "30-minute isochrone at 3 a.m. versus 8 a.m.?",
+   "This tool draws typical-speed shapes, closer to the free-flow case. Rush-hour polygons shrink; schedule the real trip with margin the map cannot give you."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The workflow twin is the "
+  },
+  {
+   "t": "Drive Time Map",
+   "l": "/tools/drive-time-map"
+  },
+  {
+   "t": "; the simple circle is the "
+  },
+  {
+   "t": "Map Radius Tool",
+   "l": "/tools/map-radius"
+  },
+  {
+   "t": "; and what lives inside the shape is listed by the "
+  },
+  {
+   "t": "Cities Within a Drawn Area Finder",
+   "l": "/tools/cities-within-drawn-area-finder"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-calories-distance",
+  "cycling-route-planner",
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator"
+ ]
+}

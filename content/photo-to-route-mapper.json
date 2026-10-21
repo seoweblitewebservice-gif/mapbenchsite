@@ -1,0 +1,29 @@
+{
+ "slug": "photo-to-route-mapper",
+ "primary_keyword": "Photo to Route Mapper",
+ "secondary_keywords": [
+  "photos to route",
+  "geotagged photo map",
+  "photo gps route",
+  "jpeg exif map route"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "boundary-kml-downloader",
+  "cluster-map-from-points",
+  "country-boundary-downloader",
+  "csv-column-counter",
+  "csv-coordinate-bounding-box",
+  "csv-coordinate-centroid-calculator"
+ ]
+}

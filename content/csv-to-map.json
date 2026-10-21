@@ -1,0 +1,204 @@
+{
+ "slug": "csv-to-map",
+ "primary_keyword": "CSV to Map",
+ "secondary_keywords": [
+  "plot csv coordinates",
+  "csv to map online",
+  "free csv to map"
+ ],
+ "title": "CSV to Map: Plot Spreadsheet Rows as Pins",
+ "description": "Turn a spreadsheet into a map with CSV to Map: up to 50,000 points plotted from latitude and longitude columns, in your browser. Free, no sign-up.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, the eight-row starter file in the table below becomes eight pins spanning approx. 2,446 miles (3,936 km) from New York to Los Angeles — plotted locally, with nothing uploaded.",
+ "quick_answer": "CSV to Map turns a spreadsheet of places into pins on a map. Give it a CSV file with latitude and longitude columns and it plots every row — up to 50,000 points — in your browser, guessing the right columns automatically and letting you fix them first.",
+ "steps_intro": "If your data already lives in a spreadsheet, the map is three steps away:",
+ "use_cases": [
+  {
+   "title": "Sales and delivery territories",
+   "body": [
+    {
+     "t": "A customer export is a map waiting to happen. Plot every account, spot the clusters worth a rep's day, and notice the outliers a table hides. For the addresses you still need coordinates for, start with the "
+    },
+    {
+     "t": "Batch Geocoder",
+     "l": "/tools/batch-geocoder"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Research and field data",
+   "body": [
+    {
+     "t": "Survey points, sampling sites and observation logs usually end as CSV. Plotting them checks the data as much as it displays it — the swapped latitude or the missing minus sign announces itself as a pin in the wrong ocean."
+    }
+   ]
+  },
+  {
+   "title": "Stores, listings and locations pages",
+   "body": [
+    {
+     "t": "Plot a full store list to sanity-check coverage before it goes public, then build the customer-facing version with the "
+    },
+    {
+     "t": "Store Locator Map Builder",
+     "l": "/tools/store-locator-map-builder"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Teaching and coursework",
+   "body": [
+    {
+     "t": "A class dataset — capitals, earthquakes, weather stations — becomes a pattern students can see instead of a table they skim. The file stays on the student's own machine, which keeps coursework simple."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The eight-office file",
+   "body": [
+    {
+     "t": "The starter table below lists eight city offices with real city-centre coordinates. Saved as CSV and dropped into this tool, it draws eight pins: four in the US, four in Europe. The widest span, New York to Los Angeles, is approx. 3,935.8 km (2,445.6 mi) — the map opens fitted to all eight, so the pattern is visible before you touch a setting."
+    }
+   ]
+  },
+  {
+   "label": "Example · A national list",
+   "body": [
+    {
+     "t": "The point cap is 50,000, so even a country-wide store or customer list fits in a single file. At that size the value is not the pins themselves but the shape they make: plot first, and the territory gaps, duplicates and bad rows stand out before the data drives any decision."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Starter file: eight city offices",
+  "intro": "Copy these eight rows into any spreadsheet, save as CSV, and drop the file into the tool. The first row must be the column headers — the tool reads them to find the latitude and longitude columns automatically.",
+  "columns": [
+   "Name",
+   "Latitude",
+   "Longitude"
+  ],
+  "rows": [
+   [
+    "New York",
+    "40.7128",
+    "-74.0060"
+   ],
+   [
+    "Chicago",
+    "41.8781",
+    "-87.6298"
+   ],
+   [
+    "Los Angeles",
+    "34.0522",
+    "-118.2437"
+   ],
+   [
+    "Houston",
+    "29.7604",
+    "-95.3698"
+   ],
+   [
+    "London",
+    "51.5072",
+    "-0.1276"
+   ],
+   [
+    "Paris",
+    "48.8566",
+    "2.3522"
+   ],
+   [
+    "Berlin",
+    "52.5200",
+    "13.4050"
+   ],
+   [
+    "Rome",
+    "41.9028",
+    "12.4964"
+   ]
+  ],
+  "note": "Coordinates are published city-centre points, given as approx. references you can verify in the Latitude & Longitude Finder. Your own file can use up to 50,000 rows."
+ },
+ "faq": [
+  [
+   "What must my CSV file contain?",
+   "A header row, and at least two numeric columns holding latitude and longitude for each row. A name or label column (the tool looks for headers like name, label or title) is used for the pin labels when present. Everything else in the file is carried as row data you can inspect on the map."
+  ],
+  [
+   "How many rows can I plot?",
+   "Up to 50,000 points in one file. Beyond a few thousand pins the value shifts from individual points to the overall pattern, so for very large files consider splitting the data by region or category first and plotting each file in turn."
+  ],
+  [
+   "Does the tool find the latitude and longitude columns itself?",
+   "Yes — it guesses from the column headers when the file loads. If a file uses unusual header names, pick the correct latitude and longitude columns from the dropdowns; the map only draws once both are set."
+  ],
+  [
+   "My file has addresses, not coordinates. Can I still use it?",
+   "Not directly — this tool plots coordinates. Convert addresses to latitude and longitude first with the Batch Geocoder or the Address to Coordinates tool, save the result as CSV, and then plot it here."
+  ],
+  [
+   "Is my file uploaded to a server?",
+   "No. The file is read and plotted in your browser; your rows are not sent to MapBench. That also means there is nothing to recover if you close the tab — keep your original CSV."
+  ],
+  [
+   "A pin landed in the ocean. What went wrong?",
+   "Almost always a swapped or unsigned coordinate: latitude and longitude in the wrong columns, or a missing minus sign on a western longitude or southern latitude. Check the row against a known place — US longitudes and European latitudes make the pattern easy to spot."
+  ],
+  [
+   "Can I use a TSV or Excel file instead?",
+   "Save or export the sheet as CSV first — every spreadsheet program offers it. CSV is the format this tool parses, including the header detection; a plain text export with commas will work the same way."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Coordinates come first: if your spreadsheet holds addresses instead, run it through the "
+  },
+  {
+   "t": "Batch Geocoder",
+   "l": "/tools/batch-geocoder"
+  },
+  {
+   "t": " or look up single places with "
+  },
+  {
+   "t": "Address to Coordinates",
+   "l": "/tools/address-to-coordinates"
+  },
+  {
+   "t": ". Once the pins look right, the "
+  },
+  {
+   "t": "Store Locator Map Builder",
+   "l": "/tools/store-locator-map-builder"
+  },
+  {
+   "t": " turns a location list into a customer-facing finder, and the "
+  },
+  {
+   "t": "Advanced Map Embed Generator",
+   "l": "/tools/advanced-map-embed-generator"
+  },
+  {
+   "t": " packages a map for your own website."
+  }
+ ],
+ "more_tools": [
+  "csv-coordinate-bounding-box",
+  "csv-coordinate-centroid-calculator",
+  "csv-coordinate-deduplicator",
+  "csv-coordinate-validator",
+  "csv-latlng-validator",
+  "csv-row-counter"
+ ]
+}

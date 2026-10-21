@@ -1,0 +1,30 @@
+{
+ "slug": "gpx-remove-waypoints-tool",
+ "primary_keyword": "GPX Remove Waypoints Tool",
+ "secondary_keywords": [
+  "gpx remove waypoints tool online",
+  "free gpx remove waypoints tool",
+  "gpx remove waypoints tool calculator",
+  "gpx remove waypoints tool tool",
+  "how to calculate gpx remove waypoints tool"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "csv-coordinate-deduplicator",
+  "csv-coordinate-validator",
+  "csv-latlng-validator",
+  "csv-row-counter",
+  "csv-to-geojson-converter",
+  "csv-to-map"
+ ]
+}

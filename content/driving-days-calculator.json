@@ -1,0 +1,199 @@
+{
+ "slug": "driving-days-calculator",
+ "primary_keyword": "Driving Days Calculator",
+ "secondary_keywords": [
+  "driving days calculator online",
+  "free driving days calculator",
+  "driving days calculator calculator",
+  "driving days calculator tool",
+  "how to calculate driving days calculator"
+ ],
+ "title": "Driving Days Calculator: Days for a Long Trip",
+ "description": "Split a long drive into days with the Driving Days Calculator — total distance over your daily target, rounded up honestly. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 2,789-mile cross-country drive at 500 miles a day needs 5.6 days — which means six days of driving, and an itinerary that admits it.",
+ "quick_answer": "The Driving Days Calculator divides a long trip's total road distance by the distance you are willing to drive each day and tells you how many driving days the journey needs, partial days counted honestly. Enter the trip distance and a daily target and plan the nights from the answer.",
+ "steps_intro": "Long trips are planned in days, not miles. Divide the one by the other:",
+ "use_cases": [
+  {
+   "title": "Road-trip itineraries",
+   "body": [
+    {
+     "t": "The day count decides every overnight. Get it from arithmetic, then place the nights with the "
+    },
+    {
+     "t": "Driving Distance Calculator",
+     "l": "/tools/driving-distance-calculator"
+    },
+    {
+     "t": " leg by leg."
+    }
+   ]
+  },
+  {
+   "title": "Relocation drives",
+   "body": [
+    {
+     "t": "Moving across the country with a deadline: days needed versus days available is the first feasibility check — before the truck is booked."
+    }
+   ]
+  },
+  {
+   "title": "Fleet and rota planning",
+   "body": [
+    {
+     "t": "Legal and humane daily limits turn a route into a rota. The day count is the rota's first line."
+    }
+   ]
+  },
+  {
+   "title": "Honest promises",
+   "body": [
+    {
+     "t": "“We'll be there Friday” is a day-count claim. This calculator is how you make it a kept one."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Cross-country",
+   "body": [
+    {
+     "t": "2,789 miles ÷ 500/day = 5.58 → 6 driving days. At 400/day it is 6.97 → 7 days; at 650/day, 4.29 → 5. The daily target is the itinerary's real decision, and it is a decision about people, not arithmetic."
+    }
+   ]
+  },
+  {
+   "label": "Example · The European tour",
+   "body": [
+    {
+     "t": "3,200 km at 450 km/day = 7.1 → 8 days. European tours tempt short daily hops between close cities — the day count keeps the temptation honest about the total."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Trip distance to driving days",
+  "intro": "Days at three sustainable daily targets, rounded up (a part-day is a day of driving, however short) — rest days not included.",
+  "columns": [
+   "Trip distance",
+   "At 400 mi/day",
+   "At 500 mi/day",
+   "At 650 mi/day"
+  ],
+  "rows": [
+   [
+    "1,000 mi",
+    "3 days",
+    "2 days",
+    "2 days"
+   ],
+   [
+    "1,800 mi",
+    "5 days",
+    "4 days",
+    "3 days"
+   ],
+   [
+    "2,789 mi",
+    "7 days",
+    "6 days",
+    "5 days"
+   ],
+   [
+    "4,000 mi",
+    "10 days",
+    "8 days",
+    "7 days"
+   ],
+   [
+    "5,500 mi",
+    "14 days",
+    "11 days",
+    "9 days"
+   ]
+  ],
+  "note": "Add rest days, sightseeing days and reality days on top. The calculator counts driving days; trips are made of both."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Driving days: total road distance ÷ your daily driving target, rounded up to whole days, so a part-day counts as a day."
+  ],
+  [
+   "Do I need an account?",
+   "No. Distance and target in, days out."
+  ],
+  [
+   "Can I rely on this for professional work?",
+   "For planning and rotas, as the arithmetic layer — yes. Legal driving-hours rules for professional drivers are a separate, stricter layer this simple division does not replace."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Traffic stretches hours within a day; the day count uses your daily distance target, which should already reflect the roads you will meet."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Roads wind — and you sleep at the end of road miles, not crow miles. Use the road distance for the trip."
+  ],
+  [
+   "What daily target is realistic?",
+   "On fast highways 500–650 miles is a long but possible day; on mixed or scenic roads 300–400 is kinder. Your own completed days are the honest calibration."
+  ],
+  [
+   "Should rest days be included?",
+   "They are additional to the driving days this returns. Add them in the itinerary — a plan with no rest day in a fortnight is a plan to be tired in week two."
+  ],
+  [
+   "Two drivers — does the count change?",
+   "Legally and humanely, driver swaps stretch the feasible daily distance, so the same trip takes fewer days. Enter the team's daily target, not a solo one."
+  ],
+  [
+   "Border crossings and ferries inside a day?",
+   "They consume driving-day hours without adding miles. Add a reality margin to those days — the count is arithmetic, the borders are not."
+  ],
+  [
+   "Can I do it in fewer days than it says?",
+   "The calculator divides; it does not forbid. It assumes your daily target is your honest sustainable figure — beat it only by breaking the assumption."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Leg distances come from the "
+  },
+  {
+   "t": "Driving Distance Calculator",
+   "l": "/tools/driving-distance-calculator"
+  },
+  {
+   "t": ", day shapes from the "
+  },
+  {
+   "t": "Drive Time Map",
+   "l": "/tools/drive-time-map"
+  },
+  {
+   "t": ", and arrival times from the "
+  },
+  {
+   "t": "ETA Calculator",
+   "l": "/tools/eta-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator"
+ ],
+ "related": [
+  "driving-distance-calculator",
+  "eta-calculator",
+  "drive-time-map",
+  "fuel-cost-calculator"
+ ]
+}

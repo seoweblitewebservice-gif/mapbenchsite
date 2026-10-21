@@ -1,0 +1,201 @@
+{
+ "slug": "flight-bearing-calculator",
+ "primary_keyword": "Flight Bearing Calculator",
+ "secondary_keywords": [
+  "flight bearing calculator online",
+  "free flight bearing calculator",
+  "flight bearing calculator calculator",
+  "flight bearing calculator tool",
+  "how to use flight bearing calculator"
+ ],
+ "title": "Flight Bearing Calculator: Route Headings",
+ "description": "Get the initial great-circle heading for a flight leg with the Flight Bearing Calculator — the course a long-haul route starts on. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, JFK to Heathrow starts on a heading of approx. 051° — northeast — although the destination sits across an ocean most people picture as 'straight east'.",
+ "quick_answer": "The Flight Bearing Calculator gives the initial great-circle heading between two airports or places — the course the shortest flight path starts on. Because the Earth curves, that heading is often far from the direction the destination appears to lie on a flat map, especially on long east–west legs.",
+ "steps_intro": "One leg, one starting course — the first number of every great-circle flight plan:",
+ "use_cases": [
+  {
+   "title": "Flight-plan study",
+   "body": [
+    {
+     "t": "Students building a great-circle plan leg by leg start each leg with its initial bearing. This calculator is the quick check against the manual formula."
+    }
+   ]
+  },
+  {
+   "title": "Explaining a route to passengers",
+   "body": [
+    {
+     "t": "“Why are we flying toward Iceland to reach New York?” ends with the initial bearing and a globe. The number — 288° out of Heathrow — makes the curved route rational."
+    }
+   ]
+  },
+  {
+   "title": "Sim and gaming flight planning",
+   "body": [
+    {
+     "t": "Flight-sim pilots planning long hauls use real initial bearings to fly believable oceanic tracks instead of the sim's straight ruler lines."
+    }
+   ]
+  },
+  {
+   "title": "Cross-checking avionics output",
+   "body": [
+    {
+     "t": "When a GPS leg course looks wrong, an independent spherical calculation from the same coordinates is the fastest referee — see also the "
+    },
+    {
+     "t": "Initial Great Circle Bearing Calculator",
+     "l": "/tools/initial-great-circle-bearing-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Transatlantic",
+   "body": [
+    {
+     "t": "JFK → Heathrow: initial bearing approx. 51.4°. Return, Heathrow → JFK: approx. 287.9°. Two headings, neither the reverse of the other — the signature of great-circle flight over a curved ocean."
+    }
+   ]
+  },
+  {
+   "label": "Example · A US transcontinental",
+   "body": [
+    {
+     "t": "JFK → LAX starts at approx. 273.8° — a few degrees north of due west — and the heading keeps bending south-west as the route progresses. The initial bearing is a starting instruction, not the whole story."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reference flight bearings",
+  "intro": "Initial great-circle bearings between major airports from published coordinates — approx. values, reproducible for any pair in the tool.",
+  "columns": [
+   "Leg",
+   "Initial bearing",
+   "Distance (km)",
+   "Distance (mi)"
+  ],
+  "rows": [
+   [
+    "JFK → Heathrow",
+    "51.4°",
+    "5,540.0",
+    "3,442.4"
+   ],
+   [
+    "Heathrow → JFK",
+    "287.9°",
+    "5,540.0",
+    "3,442.4"
+   ],
+   [
+    "JFK → LAX",
+    "273.8°",
+    "3,974.3",
+    "2,469.5"
+   ],
+   [
+    "San Francisco → O'Hare",
+    "69.7°",
+    "2,964.0",
+    "1,841.8"
+   ],
+   [
+    "Miami → JFK",
+    "18.4°",
+    "1,756.9",
+    "1,091.7"
+   ],
+   [
+    "Heathrow → Frankfurt",
+    "100.6°",
+    "653.5",
+    "406.1"
+   ],
+   [
+    "LAX → San Francisco",
+    "319.9°",
+    "543.7",
+    "337.8"
+   ],
+   [
+    "CDG → Frankfurt",
+    "73.0°",
+    "448.8",
+    "278.9"
+   ]
+  ],
+  "note": "Bearings are initial only: a great-circle heading changes continuously, which is why oceanic flights are planned as a chain of waypoint legs."
+ },
+ "faq": [
+  [
+   "Is the flight bearing the same as the course flown?",
+   "It is the starting course of the great-circle path. Real flights fly airways and organised track systems that approximate the great circle, so the flown headings step around this value leg by leg."
+  ],
+  [
+   "Why is the bearing to a place not toward it on my map?",
+   "Your map is a projection; the bearing is computed on the sphere. For long east–west legs the shortest path genuinely departs toward the pole side of the ruler line."
+  ],
+  [
+   "True or magnetic heading?",
+   "True, measured from geographic north. Cockpit compasses read magnetic; the conversion depends on local variation and the aircraft's systems handle it — study plans should note the distinction."
+  ],
+  [
+   "Can I use cities instead of airports?",
+   "Yes — any two points work. Airport coordinates are simply the natural inputs for flight legs, and the Airport Distance Calculator shares them."
+  ],
+  [
+   "Does wind change the bearing?",
+   "Wind changes the heading needed to hold a course, not the course itself. This tool computes the geometric course; drift correction is a separate, in-flight calculation."
+  ],
+  [
+   "How is this different from the Bearing Calculator?",
+   "Same spherical mathematics, flight framing: airports as inputs, legs as the unit of thought, and examples drawn from real route pairs."
+  ],
+  [
+   "What about the bearing halfway along?",
+   "It differs from the initial bearing — that continuous change is the defining property of great-circle sailing and flying, and why the word 'initial' is in the tool's family name."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The general instrument is the "
+  },
+  {
+   "t": "Bearing Calculator",
+   "l": "/tools/bearing-calculator"
+  },
+  {
+   "t": "; the azimuth specialist is the "
+  },
+  {
+   "t": "Initial Great Circle Bearing Calculator",
+   "l": "/tools/initial-great-circle-bearing-calculator"
+  },
+  {
+   "t": "; and the route itself is drawn by the "
+  },
+  {
+   "t": "Great Circle Flight Route Calculator",
+   "l": "/tools/great-circle-flight-route-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "compass-bearing-visualizer",
+  "competitor-distance-map",
+  "coordinate-distance-table-generator",
+  "crow-flies-distance",
+  "distance-between-cities",
+  "distance-between-two-places"
+ ]
+}

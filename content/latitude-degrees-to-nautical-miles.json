@@ -1,0 +1,218 @@
+{
+ "slug": "latitude-degrees-to-nautical-miles",
+ "primary_keyword": "Latitude Degrees to Nautical Miles",
+ "secondary_keywords": [
+  "latitude degrees to nautical miles online",
+  "free latitude degrees to nautical miles",
+  "latitude degrees to nautical miles calculator",
+  "latitude degrees to nautical miles tool",
+  "how to calculate latitude degrees to nautical miles"
+ ],
+ "title": "Latitude Degrees to Nautical Miles",
+ "description": "Convert latitude degrees to nautical miles with the Latitude Degrees to Nautical Miles calculator — arc distances on the sphere, explained. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "One degree of latitude is approx. 60.04 nautical miles (111.20 km) anywhere on Earth — but one degree of longitude at London's latitude is only approx. 37.4 nautical miles (69.2 km), because the longitude lines converge toward the poles.",
+ "quick_answer": "The Latitude Degrees to Nautical Miles calculator converts an angle of latitude into the surface distance it represents. One degree of latitude equals one sixtieth of a quarter-circumference — about 60.04 nautical miles on the mean sphere — so multiply degrees by sixty for a fast estimate, or convert here.",
+ "steps_intro": "The nautical mile was defined for this exact job — one minute of arc — which makes latitude conversions the cleanest in navigation. Three steps:",
+ "use_cases": [
+  {
+   "title": "Navigation study and exams",
+   "body": [
+    {
+     "t": "Chartwork courses still run on arc distances: a leg that spans two degrees of latitude is a 120-nautical-mile leg before longitude enters the problem. This page is the quick check behind the chart-table arithmetic."
+    }
+   ]
+  },
+  {
+   "title": "Reading GPS and chart data",
+   "body": [
+    {
+     "t": "Positions arrive in degrees and decimals; distances are thought in miles. Converting a latitude span tells you at a glance whether a waypoint jump is a rounding error or a genuinely different place."
+    }
+   ]
+  },
+  {
+   "title": "Aviation and sailing planning",
+   "body": [
+    {
+     "t": "North–south legs convert directly, which is why flight and passage plans decompose routes into latitude and departure (east–west) parts. For the east–west part at a given latitude, pair this with the "
+    },
+    {
+     "t": "Coordinate Converter",
+     "l": "/tools/coordinate-converter"
+    },
+    {
+     "t": " and a distance tool."
+    }
+   ]
+  },
+  {
+   "title": "Teaching the size of a degree",
+   "body": [
+    {
+     "t": "“How big is a degree?” is a first-week geography question with a satisfyingly concrete answer — about sixty nautical miles of latitude, shrinking to nothing for longitude at the poles. The table below makes the contrast visible."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · A degree of longitude in London",
+   "body": [
+    {
+     "t": "At London's latitude (51.5072° N), one degree of longitude spans approx. 69.2 km — 37.4 nautical miles — against 60.04 nautical miles for a degree of latitude at the same place. The shrinkage factor is simply cos(latitude), and it is why east–west distances can never be converted with the latitude rule of thumb."
+    }
+   ]
+  },
+  {
+   "label": "Example · London toward Rome",
+   "body": [
+    {
+     "t": "London (51.5072° N) and Rome (41.9028° N) differ by approx. 9.6 degrees of latitude — about 577 nautical miles (1,068 km) of pure north–south arc. The full city-to-city distance is longer, approx. 1,433.8 km, because the longitude difference adds its own share; the latitude part is the piece this calculator isolates."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Latitude degrees converted",
+  "intro": "Arc distance for spans of latitude on the mean sphere (R = 6,371.0088 km) — the same model the tool uses. Nautical miles use the site's factor of 0.539957 per kilometre.",
+  "columns": [
+   "Degrees of latitude",
+   "Kilometres",
+   "Nautical miles",
+   "Statute miles"
+  ],
+  "rows": [
+   [
+    "0.1°",
+    "11.12",
+    "6.00",
+    "6.91"
+   ],
+   [
+    "0.25°",
+    "27.80",
+    "15.01",
+    "17.27"
+   ],
+   [
+    "0.5°",
+    "55.60",
+    "30.02",
+    "34.55"
+   ],
+   [
+    "1°",
+    "111.20",
+    "60.04",
+    "69.09"
+   ],
+   [
+    "2°",
+    "222.39",
+    "120.08",
+    "138.19"
+   ],
+   [
+    "5°",
+    "555.98",
+    "300.20",
+    "345.47"
+   ],
+   [
+    "10°",
+    "1,111.95",
+    "600.41",
+    "690.93"
+   ],
+   [
+    "45°",
+    "5,003.78",
+    "2,701.83",
+    "3,109.20"
+   ],
+   [
+    "90°",
+    "10,007.56",
+    "5,403.65",
+    "6,218.41"
+   ],
+   [
+    "180°",
+    "20,015.11",
+    "10,807.30",
+    "12,436.82"
+   ]
+  ],
+  "note": "By definition one nautical mile is one arc-minute, so one degree is exactly 60 nautical miles of arc on a perfect sphere; the 60.04 figure appears because the tool measures on the mean Earth sphere of 6,371.0088 km rather than the definition's ideal. Both are shown so the small difference is explained, not hidden."
+ },
+ "faq": [
+  [
+   "Why does the calculator say 60.04 and not exactly 60 nautical miles?",
+   "Because two true things are being combined. By definition, a nautical mile is one arc-minute, so a degree is exactly 60 nautical miles of angle. But this tool converts angle to surface distance on a sphere with the Earth's mean radius (6,371.0088 km), where one degree of arc measures 111.20 km — and 111.20 km is 60.04 nautical miles by the international 1.852 km definition. The 0.04 is the difference between the ideal definition and the mean Earth."
+  ],
+  [
+   "Is a degree of longitude the same distance?",
+   "Only at the equator. Longitude lines meet at the poles, so a degree of longitude shrinks with the cosine of latitude: about 60.04 nautical miles at the equator, 37.4 at London's latitude, and effectively zero at the poles. This calculator's headline conversion is for latitude, where the distance is constant."
+  ],
+  [
+   "What is the difference between a nautical mile and a statute mile?",
+   "A nautical mile is 1.852 km exactly (about 6,076 feet); a statute mile is about 1.609 km (5,280 feet). One nautical mile is roughly 1.15 statute miles. Nautical miles persist at sea and in the air because they tie directly to the Earth's angles, as this page shows."
+  ],
+  [
+   "What is a knot in these terms?",
+   "One knot is one nautical mile per hour. A vessel making 12 knots covers 12 nautical miles — about 0.2 degrees of latitude — every hour, which is why navigators think in these units."
+  ],
+  [
+   "How far is one minute or one second of latitude?",
+   "One arc-minute of latitude is one nautical mile by definition (about 1.85 km); one arc-second is about 30.9 metres. That is why coordinates written to hundredths of a second claim roughly metre-level precision — whether the original measurement deserves it is another question."
+  ],
+  [
+   "Can I convert a whole route with this page?",
+   "This page converts latitude spans. For a full point-to-point distance, the Distance Between Two Places calculator applies the complete spherical calculation; this page is the quick north–south component and the explanation behind it."
+  ],
+  [
+   "Does the conversion change between the northern and southern hemispheres?",
+   "No. A degree of latitude spans the same arc in either hemisphere; only the sign of the coordinate changes. The convergence effect belongs to longitude, not latitude."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Angles become positions in the "
+  },
+  {
+   "t": "Coordinate Converter",
+   "l": "/tools/coordinate-converter"
+  },
+  {
+   "t": ", which writes the same point in decimal degrees, DMS, UTM and MGRS. To find the coordinates of a place in the first place, use the "
+  },
+  {
+   "t": "Latitude & Longitude Finder",
+   "l": "/tools/latitude-longitude-finder"
+  },
+  {
+   "t": ", and for the full distance between two positions — latitude and longitude combined — the "
+  },
+  {
+   "t": "Distance Between Two Places",
+   "l": "/tools/distance-between-two-places"
+  },
+  {
+   "t": " calculator applies the complete formula."
+  }
+ ],
+ "more_tools": [
+  "competitor-distance-map",
+  "coordinate-distance-table-generator",
+  "crow-flies-distance",
+  "distance-between-cities",
+  "distance-between-zip-codes"
+ ],
+ "related": [
+  "coordinate-converter",
+  "latitude-longitude-finder",
+  "distance-between-two-places",
+  "horizon-distance"
+ ]
+}

@@ -1,0 +1,188 @@
+{
+ "slug": "bounding-box-calculator",
+ "primary_keyword": "Bounding Box Calculator",
+ "secondary_keywords": [
+  "bounding box",
+  "bbox",
+  "extent coordinates",
+  "lat long bounding box",
+  "bbox calculator"
+ ],
+ "title": "Bounding Box Calculator: Centre Plus Radius",
+ "description": "Build a latitude/longitude bounding box from a centre and radius with the Bounding Box Calculator — for API queries and spatial filters. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 10-kilometre box around Times Square runs from 40.6679 to 40.8481 latitude and −74.1039 to −73.8671 longitude — computed, ready to paste into an API call.",
+ "quick_answer": "The Bounding Box Calculator takes a centre coordinate and radius and returns the latitude/longitude bounding box around it — the min/max extent APIs, map queries and spatial filters ask for. Enter centre and radius and copy the four numbers that turn a circle into a rectangle a database can search.",
+ "steps_intro": "Databases think in rectangles. Give yours the right one:",
+ "use_cases": [
+  {
+   "title": "API spatial queries",
+   "body": [
+    {
+     "t": "Overpass, geocoding and places APIs filter by bbox. Compute the extent here instead of guessing degree offsets — the "
+    },
+    {
+     "t": "Coordinate Bounding Box Generator",
+     "l": "/tools/coordinate-bounding-box-generator"
+    },
+    {
+     "t": " is the sibling variant."
+    }
+   ]
+  },
+  {
+   "title": "Database pre-filtering",
+   "body": [
+    {
+     "t": "The classic two-step: cheap bbox filter first, exact distance second. The box this page builds is step one done correctly at any latitude."
+    }
+   ]
+  },
+  {
+   "title": "Map viewport extents",
+   "body": [
+    {
+     "t": "Tile and feature requests need extents in degrees — the centre-plus-radius form is how humans think, the box is how servers answer."
+    }
+   ]
+  },
+  {
+   "title": "Data exports by area",
+   "body": [
+    {
+     "t": "Clip a dataset to 'around here' before the heavy geometry starts. The box is the coarse knife that saves the fine one."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Times Square, 10 km",
+   "body": [
+    {
+     "t": "Centre 40.7580, −73.9855, radius 10 km → box lat 40.6679…40.8481, lon −74.1039…−73.8671. Note the longitude span (0.2368°) is wider than the latitude span (0.1802°) — at 41°N, degrees of longitude are shorter, so more of them fit in 10 km."
+    }
+   ]
+  },
+  {
+   "label": "Example · The box is not the circle",
+   "body": [
+    {
+     "t": "The box's corners lie outside the radius (up to ~41% farther at the diagonals). Filters must refine box results with true distance — the FAQ's warning is the professional habit."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Anatomy of the output",
+  "intro": "The four numbers and what each guards.",
+  "columns": [
+   "Value",
+   "Meaning",
+   "Watch out"
+  ],
+  "rows": [
+   [
+    "min_lat / max_lat",
+    "Southern and northern edges",
+    "Radius ÷ ~111 km per degree, ellipsoid-refined"
+   ],
+   [
+    "min_lon / max_lon",
+    "Western and eastern edges",
+    "Span widens toward the poles"
+   ],
+   [
+    "Format order",
+    "APIs differ: (S,W,N,E) or (W,S,E,N)",
+    "Read the API's docs — swapped order is the classic bbox bug"
+   ],
+   [
+    "Date line",
+    "Boxes crossing ±180° split in two",
+    "Handle as two queries"
+   ]
+  ],
+  "note": "Near the poles a radius can reach around the world in longitude — the calculator's handling there is stated in its method note rather than papered over."
+ },
+ "faq": [
+  [
+   "Is the box the same as a radius circle?",
+   "No — the box is the circle's square envelope: it contains the circle plus four corner regions outside it. Use the box to fetch candidates, then true distance to judge them."
+  ],
+  [
+   "Is longitude handling exact near the poles?",
+   "The calculator widens the longitude span as latitude rises and treats polar cases by its stated method — a radius reaching the pole spans all longitudes, and honest tools say so."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 — the extent your APIs expect."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "The box inherits the centre's accuracy; extra decimals in the output are arithmetic, not knowledge."
+  ],
+  [
+   "Can I copy the result into GIS software?",
+   "Yes — the four values paste into extent fields everywhere; mind each product's axis order."
+  ],
+  [
+   "Why is the longitude span wider than latitude's?",
+   "Longitude degrees shrink toward the poles (84.4 km at New York's latitude against 111.0 for latitude). The box compensates — eyeballing equal degree offsets is the amateur error this page prevents."
+  ],
+  [
+   "Kilometres or miles?",
+   "Both units are accepted for the radius, per this site's convention."
+  ],
+  [
+   "Date-line centres?",
+   "A centre near ±180° produces a box that wraps; split it into two queries for APIs that cannot wrap."
+  ],
+  [
+   "How big a radius is sane?",
+   "Boxes are for local extents. Continental radii belong to polygon filters, not envelopes — the corners' distortion grows with size."
+  ],
+  [
+   "Antimeridian and poles aside — marine use?",
+   "Fisheries and shipping queries use bboxes heavily; the same envelope logic applies, with the corner warning doubled at sea."
+  ],
+  [
+   "Can I build the box from two corners instead?",
+   "That is the Coordinate Bounding Box Generator's shape — corners in, normalised extent out."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Corners version: the "
+  },
+  {
+   "t": "Coordinate Bounding Box Generator",
+   "l": "/tools/coordinate-bounding-box-generator"
+  },
+  {
+   "t": "; points on the circle: the "
+  },
+  {
+   "t": "Coordinate Radius Points Generator",
+   "l": "/tools/coordinate-radius-points-generator"
+  },
+  {
+   "t": "; centre math: the "
+  },
+  {
+   "t": "Coordinate Offset Calculator",
+   "l": "/tools/coordinate-offset-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "arcminutes-to-decimal-degrees-converter",
+  "arcseconds-to-ground-distance-calculator",
+  "bng-converter",
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-destination-calculator"
+ ]
+}

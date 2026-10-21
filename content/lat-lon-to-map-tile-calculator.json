@@ -1,0 +1,189 @@
+{
+ "slug": "lat-lon-to-map-tile-calculator",
+ "primary_keyword": "Latitude Longitude to Map Tile Calculator",
+ "secondary_keywords": [
+  "latitude longitude to map tile calculator online",
+  "free latitude longitude to map tile calculator",
+  "latitude longitude to map tile calculator calculator",
+  "latitude longitude to map tile calculator tool",
+  "how to calculate latitude longitude to map tile calculator"
+ ],
+ "title": "Latitude Longitude to Map Tile Calculator",
+ "description": "Find the slippy-map tile numbers for a coordinate at any zoom with the Latitude Longitude to Map Tile Calculator — x, y and z, standard formula. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, Times Square at zoom 15 lives in tile x 9649, y 12314 — the exact tile a map library requests to put Manhattan on your screen.",
+ "quick_answer": "The Latitude Longitude to Map Tile Calculator computes the slippy-map tile numbers (x and y) containing a coordinate at a chosen zoom level. Enter point and zoom and read the tile address — the formula every web map uses to fetch its 256-pixel squares.",
+ "steps_intro": "Every web map is a mosaic. Find your point's tile:",
+ "use_cases": [
+  {
+   "title": "Tile debugging",
+   "body": [
+    {
+     "t": "A layer renders one tile off — compute the expected tile for a known point and compare with the server's log. The "
+    },
+    {
+     "t": "Map Tile to Lat Lon Calculator",
+     "l": "/tools/map-tile-to-lat-lon-calculator"
+    },
+    {
+     "t": " reverses the trip."
+    }
+   ]
+  },
+  {
+   "title": "Pre-seeding and caching",
+   "body": [
+    {
+     "t": "Offline packs are tile ranges. A point's tile at each zoom anchors the range math."
+    }
+   ]
+  },
+  {
+   "title": "Understanding map URLs",
+   "body": [
+    {
+     "t": "The /z/x/y.png in every tile URL stops being numerology once you can compute the triple for your own house."
+    }
+   ]
+  },
+  {
+   "title": "Rate and coverage estimates",
+   "body": [
+    {
+     "t": "How many tiles cover my area at z16? It starts from corner tiles — this calculator's outputs, differenced."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Times Square's tiles",
+   "body": [
+    {
+     "t": "Zoom 10: tile (301, 384). Zoom 15: (9649, 12314). Each added zoom doubles x and y ranges — the z15 tile is the z10 tile's descendant, 32 tiles deeper in each axis."
+    }
+   ]
+  },
+  {
+   "label": "Example · The y-axis flip",
+   "body": [
+    {
+     "t": "Tile y grows southward (screen convention) while latitude grows northward — the formula's (1 − …)/2 term is the flip. Every tile bug in history contains this sentence."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The tile system in one view",
+  "intro": "Zoom, grid size and what a tile covers at the equator.",
+  "columns": [
+   "Zoom",
+   "Grid",
+   "Tile width at equator"
+  ],
+  "rows": [
+   [
+    "0",
+    "1 × 1",
+    "The whole world, 40,075 km"
+   ],
+   [
+    "5",
+    "32 × 32",
+    "~1,253 km"
+   ],
+   [
+    "10",
+    "1,024 × 1,024",
+    "~39.1 km"
+   ],
+   [
+    "15",
+    "32,768 × 32,768",
+    "~1.22 km"
+   ],
+   [
+    "19",
+    "524,288 × 524,288",
+    "~76 m"
+   ]
+  ],
+  "note": "Widths shrink with latitude as Mercator stretches — a z15 tile over New York covers ~926 m of ground width, computed from its metres-per-pixel at 40.758°."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The integer tile x and y for a latitude/longitude at a zoom, by the standard slippy-map formulas — x from longitude linearly, y from latitude through the Mercator function."
+  ],
+  [
+   "Which map standard does it use?",
+   "The OSM/Google slippy-map convention (Web Mercator, 256-px tiles) that effectively all web maps share."
+  ],
+  [
+   "Can I use this in production GIS?",
+   "The formula is the production standard — identical to what tile libraries compute. Cache policies and tile-server usage rules are the operational layer on top."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84, the frame web maps and GPS share — tile and pixel systems on this page are defined over it."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — pixels and tiles quantise the world; extra coordinate decimals beyond the cell size are decoration."
+  ],
+  [
+   "Latitude limits?",
+   "Web Mercator caps at ±85.0511° — beyond it there are no tiles, only ice and honesty. The calculator respects the cap."
+  ],
+  [
+   "TMS versus XYZ?",
+   "TMS flips y. If your stack is TMS, flip y as (2^z − 1 − y) — the calculator speaks XYZ, the web's majority dialect."
+  ],
+  [
+   "Fractional tile position?",
+   "Where inside the tile the point falls is the Map Tile Pixel Offset Calculator's job — this page names the tile."
+  ],
+  [
+   "Antimeridian points?",
+   "Longitude wraps: x computes modulo the grid width, and tile sets crossing the seam need the wrap handled — flagged here rather than hidden."
+  ],
+  [
+   "Tile URLs?",
+   "https://tile.openstreetmap.org/{z}/{x}/{y}.png is the canonical shape — respect the tile usage policy of whichever server you fetch from."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Reverse: "
+  },
+  {
+   "t": "Map Tile to Lat Lon Calculator",
+   "l": "/tools/map-tile-to-lat-lon-calculator"
+  },
+  {
+   "t": "; bounds: the "
+  },
+  {
+   "t": "Map Tile Bounds Calculator",
+   "l": "/tools/map-tile-bounds-calculator"
+  },
+  {
+   "t": "; centre: the "
+  },
+  {
+   "t": "Map Tile Center Calculator",
+   "l": "/tools/map-tile-center-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator"
+ ]
+}

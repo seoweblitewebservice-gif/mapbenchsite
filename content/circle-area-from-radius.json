@@ -1,0 +1,207 @@
+{
+ "slug": "circle-area-from-radius",
+ "primary_keyword": "Circle Area From Radius Calculator",
+ "secondary_keywords": [
+  "circle area from radius calculator online",
+  "free circle area from radius calculator",
+  "circle area from radius calculator calculator",
+  "circle area from radius calculator tool",
+  "how to calculate circle area from radius calculator"
+ ],
+ "title": "Circle Area From Radius Calculator",
+ "description": "Get a circle's area from its radius with the Circle Area From Radius Calculator — A = πr² in sq ft, acres, m² and more. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a radius of 100 ft gives an area of approx. 31,416 sq ft — about 0.72 acres, the size of a generous village pond and its immediate surround.",
+ "quick_answer": "The Circle Area From Radius Calculator applies A = πr²: enter a radius in feet, metres, miles or kilometres and it returns the circle's area in the matching square units. It is the pure geometry underneath radius maps, irrigation circles and tank footprints across this site.",
+ "steps_intro": "One input, one formula — the discipline is in the units:",
+ "use_cases": [
+  {
+   "title": "Irrigation and centre pivots",
+   "body": [
+    {
+     "t": "A centre pivot's coverage is a circle area with the radius on the brochure. Convert it to acres and the water and seed maths can start — the "
+    },
+    {
+     "t": "Irrigation Coverage Calculator",
+     "l": "/tools/irrigation-coverage-calculator"
+    },
+    {
+     "t": " continues from here."
+    }
+   ]
+  },
+  {
+   "title": "Tanks, silos and ponds",
+   "body": [
+    {
+     "t": "Footprints and surface areas of round structures all begin as πr². Planning a liner, a cover or a fence ring starts with this number."
+    }
+   ]
+  },
+  {
+   "title": "Checking a radius map",
+   "body": [
+    {
+     "t": "The "
+    },
+    {
+     "t": "Map Radius Tool",
+     "l": "/tools/map-radius"
+    },
+    {
+     "t": " reports areas for drawn circles; this calculator is the independent check that its geometry is behaving at your radius."
+    }
+   ]
+  },
+  {
+   "title": "School geometry, grounded",
+   "body": [
+    {
+     "t": "A formula students can test against a real pond on the satellite view stops being abstract. Measure the radius, predict the area, compare."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · A pivot field",
+   "body": [
+    {
+     "t": "Radius 400 m: area = π × 400² ≈ 502,655 m² ≈ 50.27 hectares (124.2 acres). A quarter-mile pivot is a serious farm hiding inside one multiplication."
+    }
+   ]
+  },
+  {
+   "label": "Example · A garden pond",
+   "body": [
+    {
+     "t": "Radius 10 ft: area = π × 100 ≈ 314.16 sq ft. Small radii keep areas small — the square law working in your favour for once."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Radius to area",
+  "intro": "A = πr² tabulated — watch the square law: each doubling of radius quadruples the area.",
+  "columns": [
+   "Radius",
+   "Area (sq units)",
+   "Area (acres, if ft/mi as shown)"
+  ],
+  "rows": [
+   [
+    "10 ft",
+    "314.16 sq ft",
+    "0.007 ac"
+   ],
+   [
+    "50 ft",
+    "7,853.98 sq ft",
+    "0.180 ac"
+   ],
+   [
+    "100 ft",
+    "31,415.93 sq ft",
+    "0.721 ac"
+   ],
+   [
+    "10 m",
+    "314.16 m²",
+    "0.031 ha"
+   ],
+   [
+    "25 m",
+    "1,963.50 m²",
+    "0.196 ha"
+   ],
+   [
+    "1 mi",
+    "3.14 mi²",
+    "2,011 ac"
+   ],
+   [
+    "3 mi",
+    "28.27 mi²",
+    "18,096 ac"
+   ],
+   [
+    "5 mi",
+    "78.54 mi²",
+    "50,265 ac"
+   ]
+  ],
+  "note": "The same radius in different units gives the same digits for area (314.16) — the square law does not care about the unit, only the number."
+ },
+ "faq": [
+  [
+   "What formula does it use?",
+   "A = πr², with π to full precision. Enter the radius — half the diameter — and square it before multiplying; the classic error is squaring the diameter."
+  ],
+  [
+   "What does this tool calculate?",
+   "The flat (planar) area of a circle from its radius, in square units matching your input, with conversions to acres or hectares where the scale makes them useful."
+  ],
+  [
+   "Do I need an account?",
+   "No. One input, instant result, nothing to sign up for."
+  ],
+  [
+   "Can I use the result for professional work?",
+   "For planning and estimation, yes — the arithmetic is exact. Legal areas (deeds, regulated setbacks) come from survey, not from a radius formula."
+  ],
+  [
+   "Radius or diameter — which do I enter?",
+   "Radius: centre to edge. If you know the diameter (edge to edge), halve it first — entering the diameter as the radius quadruples the answer."
+  ],
+  [
+   "Why does the area explode as radius grows?",
+   "Because area scales with r². Doubling the radius multiplies area by four; that is the single most useful intuition this calculator teaches."
+  ],
+  [
+   "Is a map circle's area the same?",
+   "At small radii, yes to any practical precision. At continental radii the geodesic area on the sphere differs slightly — the Map Radius Tool handles that case."
+  ],
+  [
+   "What if I only know the diameter?",
+   "Halve it. The radius is half the diameter, and entering the diameter as the radius gives four times the true area — the most common circle error there is."
+  ],
+  [
+   "How many square feet is a 1-acre circle?",
+   "43,560 sq ft by definition of the acre; its radius would be √(43,560 ÷ π) ≈ 117.8 ft."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The perimeter twin is "
+  },
+  {
+   "t": "Circle Circumference From Radius",
+   "l": "/tools/circle-circumference-from-radius"
+  },
+  {
+   "t": "; drawn circles on real ground live in the "
+  },
+  {
+   "t": "Map Radius Tool",
+   "l": "/tools/map-radius"
+  },
+  {
+   "t": "; and where two circles meet, the "
+  },
+  {
+   "t": "Equal Circle Overlap Calculator",
+   "l": "/tools/equal-circle-overlap-calculator"
+  },
+  {
+   "t": " takes over."
+  }
+ ],
+ "more_tools": [
+  "center-of-polygon",
+  "circle-circumference-from-radius",
+  "cities-within-drawn-area-finder",
+  "crop-row-length-calculator",
+  "customer-radius-area-calculator",
+  "delivery-radius-area-calculator"
+ ]
+}

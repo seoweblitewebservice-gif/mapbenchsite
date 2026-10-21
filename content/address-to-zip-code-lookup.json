@@ -1,0 +1,197 @@
+{
+ "slug": "address-to-zip-code-lookup",
+ "primary_keyword": "Address to ZIP Code Lookup",
+ "secondary_keywords": [
+  "address to zip code",
+  "find zip by address",
+  "zip code lookup address",
+  "address zcta lookup"
+ ],
+ "title": "Address to ZIP Code Lookup: ZCTA Explained",
+ "description": "Find an address's ZIP code and see its Census ZCTA with Address to ZIP Code Lookup — the two are related, not identical. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, an address can carry one ZIP for mail while sitting inside a ZCTA built from the surrounding block group — the page shows both and explains the difference instead of hiding it.",
+ "quick_answer": "Address to ZIP Code Lookup finds the postcode for a US address and shows it alongside the Census ZIP Code Tabulation Area (ZCTA) the address falls in, with the ZCTA's boundary and demographic context. Search and read both numbers — because for mail and statistics, they are cousins, not twins.",
+ "steps_intro": "Two systems, two answers, both shown honestly:",
+ "use_cases": [
+  {
+   "title": "Mailing versus analysis",
+   "body": [
+    {
+     "t": "Mail wants the USPS ZIP; analysis wants the ZCTA. Knowing which question you are answering is most of data hygiene — the county companion is "
+    },
+    {
+     "t": "Address to County Lookup",
+     "l": "/tools/address-to-county-lookup"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Demographic context by area",
+   "body": [
+    {
+     "t": "The ZCTA's ACS profile (population, income, housing) describes the neighbourhood statistically — the layer marketers and researchers actually use."
+    }
+   ]
+  },
+  {
+   "title": "Catching dataset mismatches",
+   "body": [
+    {
+     "t": "When two files disagree about an address's ZIP, the ZCTA comparison often reveals one of them was holding Census geography all along."
+    }
+   ]
+  },
+  {
+   "title": "Address homework before mailing",
+   "body": [
+    {
+     "t": "A lookup is not postal certification, but it catches the wrong-city and wrong-state errors before the postage is spent."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The honest disclaimer",
+   "body": [
+    {
+     "t": "USPS ZIP codes are delivery routes, not areas — they can cross the ZCTA's tidy polygon without apologising. The page draws the ZCTA because that is the boundary statistics can stand on."
+    }
+   ]
+  },
+  {
+   "label": "Example · Same street, two lenses",
+   "body": [
+    {
+     "t": "One address: a mailing ZIP from the postal world, a ZCTA from the Census world. Most days they match digit for digit; the days they do not are why this page exists."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "ZIP versus ZCTA",
+  "intro": "The distinction this page is built around — read it once and a hundred dataset arguments end.",
+  "columns": [
+   "Property",
+   "USPS ZIP Code",
+   "Census ZCTA"
+  ],
+  "rows": [
+   [
+    "Owner",
+    "US Postal Service",
+    "US Census Bureau"
+   ],
+   [
+    "Nature",
+    "Delivery routes",
+    "Statistical area built from blocks"
+   ],
+   [
+    "Has a true boundary?",
+    "Not officially",
+    "Yes — a polygon"
+   ],
+   [
+    "Changes",
+    "As routes change",
+    "With each Census cycle"
+   ],
+   [
+    "Use it for",
+    "Mailing",
+    "Demographics and mapping"
+   ],
+   [
+    "This page shows",
+    "The mailing label when available",
+    "The polygon and its context"
+   ]
+  ],
+  "note": "Neither number validates deliverability by itself — USPS certification is a separate, official process this lookup does not impersonate."
+ },
+ "faq": [
+  [
+   "Does this verify that USPS will deliver to the address?",
+   "No. It finds the address's postal label and its Census ZCTA with context. Deliverability certification is USPS's own process; this is a lookup, honestly framed."
+  ],
+  [
+   "Why show both postcode and ZCTA?",
+   "Because users conflate them and datasets mix them. Showing both, labelled, ends the confusion at the source."
+  ],
+  [
+   "Does the map show an official USPS ZIP boundary?",
+   "No — USPS does not publish ZIP boundaries as areas. The polygon drawn is the Census ZCTA, labelled as such."
+  ],
+  [
+   "Can the two numbers differ?",
+   "Yes, at edges and in special cases (PO boxes, unique ZIPs). The page shows the pair so the difference is visible, not discovered later."
+  ],
+  [
+   "Can I use coordinates instead of an address?",
+   "Yes — a point works the same way: the ZCTA containing it, plus any mailing label the data associates."
+  ],
+  [
+   "What vintage is the context?",
+   "ACS estimates with their period stated in the tool — survey estimates, not a live count of your street."
+  ],
+  [
+   "ZIP codes outside the US?",
+   "This page is US-shaped. Other countries' postcode tools (UK, Canada) live elsewhere on the site in their own formats."
+  ],
+  [
+   "My ZIP has letters or a plus-four.",
+   "ZIP+4 refines the route further; this page works at the 5-digit and ZCTA level. Letters mean you are likely looking at a non-US system — the site's country tools handle those."
+  ],
+  [
+   "Why is my neighbourhood's ZCTA named by a different town?",
+   "ZCTAs take the name of the dominant place in the area, which can be the postal city next door. The number is the identity; the name is a label."
+  ],
+  [
+   "Do ZCTAs exist for PO-box ZIPs?",
+   "Not always — box-only ZIPs may have no ZCTA, one of the honest gaps this page surfaces instead of papering over."
+  ],
+  [
+   "Business or residential ZCTA?",
+   "ZCTAs describe all addresses in their blocks together. The ACS context mixes both, as real neighbourhoods do."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "County context: "
+  },
+  {
+   "t": "Address to County Lookup",
+   "l": "/tools/address-to-county-lookup"
+  },
+  {
+   "t": "; deliverability scepticism: "
+  },
+  {
+   "t": "Address Validator",
+   "l": "/tools/address-validator"
+  },
+  {
+   "t": "; bulk work: "
+  },
+  {
+   "t": "Batch Geocoder",
+   "l": "/tools/batch-geocoder"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point"
+ ]
+}

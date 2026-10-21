@@ -1,0 +1,28 @@
+{
+ "slug": "random-point-generator",
+ "primary_keyword": "Random Point in View",
+ "secondary_keywords": [
+  "random point",
+  "random coordinates",
+  "sample point map"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "county-choropleth",
+  "custom-labeled-map",
+  "embed-map-link-helper",
+  "google-maps-embed-code-generator",
+  "historical-map-context",
+  "live-spatial-data-connector"
+ ]
+}

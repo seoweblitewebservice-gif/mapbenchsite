@@ -1,0 +1,194 @@
+{
+ "slug": "delivery-cost-per-km-calculator",
+ "primary_keyword": "Delivery Cost per KM Calculator",
+ "secondary_keywords": [
+  "delivery cost per km calculator online",
+  "free delivery cost per km calculator",
+  "delivery cost per km calculator calculator",
+  "delivery cost per km calculator tool",
+  "how to use delivery cost per km calculator"
+ ],
+ "title": "Delivery Cost per KM Calculator",
+ "description": "Work out what each kilometre of a delivery round really costs with the Delivery Cost per KM Calculator — shift cost over distance, honestly. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a delivery shift costing $214 over 168 km runs at $1.27 per kilometre — the figure below which a per-km delivery price is a slow donation.",
+ "quick_answer": "The Delivery Cost per KM Calculator divides a delivery operation's total cost by the kilometres it covered and returns the cost per kilometre. Enter the shift's or the week's costs and distance, and read the unit figure that per-kilometre pricing, platform payouts and fleet decisions must all answer to.",
+ "steps_intro": "Delivery businesses die by the kilometre they did not price. Compute yours:",
+ "use_cases": [
+  {
+   "title": "Pricing per-km delivery",
+   "body": [
+    {
+     "t": "Your charge per km must clear your cost per km with margin. This number is the floor; the "
+    },
+    {
+     "t": "Delivery Fee by Distance Calculator",
+     "l": "/tools/delivery-fee-by-distance-calculator"
+    },
+    {
+     "t": " builds the customer's price on it."
+    }
+   ]
+  },
+  {
+   "title": "Platform payout audits",
+   "body": [
+    {
+     "t": "A platform's per-drop pay over a shift's kilometres becomes a per-km rate here — comparable, at last, with your own cost figure."
+    }
+   ]
+  },
+  {
+   "title": "Vehicle choice",
+   "body": [
+    {
+     "t": "Van versus car versus e-bike rounds: cost per km is the comparison that survives different shift shapes."
+    }
+   ]
+  },
+  {
+   "title": "Route density lessons",
+   "body": [
+    {
+     "t": "Dense rounds lower cost per km; sparse rounds raise it. Watching the figure across weeks teaches what density is worth — in money."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The van shift",
+   "body": [
+    {
+     "t": "$214 of fuel, wages and wear over 168 km = $1.27/km. Any contract priced under that is subsidised by you; the calculator makes the subsidy visible."
+    }
+   ]
+  },
+  {
+   "label": "Example · The dense round",
+   "body": [
+    {
+     "t": "$96 over 74 km = $1.30/km — similar unit cost on a shorter round, because the shift's fixed costs dominate. Density helps, but fixed costs set the floor."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Shift costs per kilometre",
+  "intro": "Totals divided by distance for typical round shapes — your own figures, entered honestly, replace these illustrations.",
+  "columns": [
+   "Shift cost",
+   "Distance",
+   "Cost per km"
+  ],
+  "rows": [
+   [
+    "$84.00",
+    "52 km",
+    "$1.62"
+   ],
+   [
+    "$96.00",
+    "74 km",
+    "$1.30"
+   ],
+   [
+    "$150.00",
+    "110 km",
+    "$1.36"
+   ],
+   [
+    "$214.00",
+    "168 km",
+    "$1.27"
+   ],
+   [
+    "$320.00",
+    "260 km",
+    "$1.23"
+   ],
+   [
+    "$512.00",
+    "430 km",
+    "$1.19"
+   ]
+  ],
+  "note": "Include the same categories every time (fuel, labour, wear, insurance share) or the trend line lies to you in both directions."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Cost per kilometre for a delivery operation: total cost ÷ kilometres covered, in your currency — the unit economics of the round."
+  ],
+  [
+   "Is it free to use?",
+   "Yes — your costs stay in your browser and your spreadsheet."
+  ],
+  [
+   "How accurate is the result?",
+   "Exactly as accurate as the costs you include. The division is honest; the category list is your discipline."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Traffic shows up inside your costs (time is wages) rather than as a routing input here."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Roads wind. Cost accrues on road kilometres — count those."
+  ],
+  [
+   "Per km or per drop — which metric rules?",
+   "Both: per-km disciplines distance, per-drop disciplines density. A round can win one and lose the other; professionals watch the pair."
+  ],
+  [
+   "How is this different from Cost Per Kilometer Calculator?",
+   "Audience: that page prices a traveller's journey; this one an operator's round, with labour and wear in the categories that matter here."
+  ],
+  [
+   "Peak season changed my figure — normal?",
+   "Yes: overtime wages and worse traffic raise cost per km even as drops multiply. Track it monthly so the season's true margin is visible, not vibes."
+  ],
+  [
+   "Should vehicle depreciation count?",
+   "In a true unit cost, yes — a per-km wear figure belongs in the total. Excluding it flatters every contract you price from the number."
+  ],
+  [
+   "One van or a fleet?",
+   "Compute per vehicle and for the fleet: the fleet figure hides the one bad apple whose cost per km is quietly eating the others' margin."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Customer-facing pricing is the "
+  },
+  {
+   "t": "Delivery Fee by Distance Calculator",
+   "l": "/tools/delivery-fee-by-distance-calculator"
+  },
+  {
+   "t": "; the general unit cost is the "
+  },
+  {
+   "t": "Cost Per Kilometer Calculator",
+   "l": "/tools/cost-per-kilometer-calculator"
+  },
+  {
+   "t": "; and courier tariffs are built in the "
+  },
+  {
+   "t": "Courier Distance Charge Calculator",
+   "l": "/tools/courier-distance-charge-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-route-planner",
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "drive-time-map",
+  "driving-days-calculator",
+  "driving-distance-calculator"
+ ]
+}

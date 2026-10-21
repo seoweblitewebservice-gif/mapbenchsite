@@ -1,0 +1,193 @@
+{
+ "slug": "airport-route-finder",
+ "primary_keyword": "Airport Route Finder",
+ "secondary_keywords": [
+  "airport routes",
+  "non stop flights between airports",
+  "direct flight checker",
+  "route map airports"
+ ],
+ "title": "Airport Route Finder: Non-Stop Routes",
+ "description": "Check any two airports in the Airport Route Finder: is there a non-stop route in the OpenFlights dataset, or a one-stop option via a hub? Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, JFK to LAX comes back as a non-stop in the dataset, while smaller airports are answered with one-stop options through the hubs that actually serve them.",
+ "quick_answer": "The Airport Route Finder checks two airports against the OpenFlights route dataset and answers a simple question: does a non-stop route exist between them, and if not, which hub airports connect them with one stop? Type two IATA codes and read the verdict with great-circle distances for each leg.",
+ "steps_intro": "Airline route maps are marketing; a dataset is an answer. Three steps to a checkable verdict:",
+ "use_cases": [
+  {
+   "title": "Testing a trip idea before booking sites",
+   "body": [
+    {
+     "t": "Before fighting with booking engines, learn whether your pair is even a non-stop. If it is not, the hub the finder names is usually the connection the airlines will sell you anyway."
+    }
+   ]
+  },
+  {
+   "title": "Choosing between two home airports",
+   "body": [
+    {
+     "t": "A slightly further airport with a non-stop often beats the near one plus a connection. Run both pairs and let the route structure, not the drive, make the decision."
+    }
+   ]
+  },
+  {
+   "title": "Aviation coursework and analysis",
+   "body": [
+    {
+     "t": "Network questions — which cities are one stop from everywhere, which regions depend on a single hub — start with pair checks like these against a fixed dataset."
+    }
+   ]
+  },
+  {
+   "title": "Setting expectations for clients",
+   "body": [
+    {
+     "t": "Travel arrangers can answer “is there a direct flight?” with a dataset verdict rather than a shrug, and quote the one-stop hub in the same breath."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · A classic non-stop",
+   "body": [
+    {
+     "t": "JFK → LAX (approx. 3,974.3 km, 2,469.5 mi): the dataset lists non-stop service, as expected on a flagship transcontinental pair. The finder still earns its keep — it proves the assumption instead of repeating it."
+    }
+   ]
+  },
+  {
+   "label": "Example · A short European hop",
+   "body": [
+    {
+     "t": "Heathrow → Frankfurt (approx. 653.5 km, 406.1 mi) is non-stop in the dataset, while many regional pairs of similar length are not — density of service follows demand, not distance. That contrast is exactly what the tool exposes."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Pairs people check first",
+  "intro": "Well-known pairs with their great-circle distances (computed on the site model) — run each in the finder to see its current dataset verdict; route networks change, so the distance is the stable part of the answer.",
+  "columns": [
+   "Pair",
+   "Kilometres",
+   "Miles",
+   "What to look for"
+  ],
+  "rows": [
+   [
+    "JFK ↔ LAX",
+    "3,974.3",
+    "2,469.5",
+    "Flagship non-stop"
+   ],
+   [
+    "JFK ↔ Heathrow",
+    "5,540.0",
+    "3,442.4",
+    "Transatlantic non-stop"
+   ],
+   [
+    "Heathrow ↔ CDG",
+    "347.0",
+    "215.6",
+    "Short-haul non-stop"
+   ],
+   [
+    "O'Hare ↔ Dallas/Fort Worth",
+    "1,290.0",
+    "801.6",
+    "Hub-to-hub non-stop"
+   ],
+   [
+    "LAX ↔ San Francisco",
+    "543.7",
+    "337.8",
+    "Shuttle corridor"
+   ],
+   [
+    "Heathrow ↔ Frankfurt",
+    "653.5",
+    "406.1",
+    "Alliance hub pair"
+   ],
+   [
+    "CDG ↔ Frankfurt",
+    "448.8",
+    "278.9",
+    "Short sector"
+   ],
+   [
+    "Amsterdam ↔ Frankfurt",
+    "365.7",
+    "227.2",
+    "Short sector"
+   ]
+  ],
+  "note": "Verdicts come from the OpenFlights dataset snapshot the tool ships; a route's absence means the dataset lacks it, which the FAQ explains how to sanity-check."
+ },
+ "faq": [
+  [
+   "Is this live schedule data?",
+   "No. The finder reads the OpenFlights route dataset — a community snapshot of routes airlines operate — not today's timetables. It answers “does this route exist in the network”, not “what flies on Tuesday”."
+  ],
+  [
+   "Why might a real route be missing?",
+   "Datasets age: new routes appear, seasonal routes pause, and small carriers are unevenly covered. If a booking engine sells a non-stop the finder lacks, trust the booking engine and treat the dataset as the thing that is out of date."
+  ],
+  [
+   "What does one-stop via a hub mean?",
+   "No non-stop exists in the dataset for your pair, but airport H exists with routes to both sides, so A → H → B is a bookable shape. The finder names the hubs rather than inventing a connection."
+  ],
+  [
+   "Can it find two-stop routes?",
+   "No — the tool answers non-stop and one-stop only, which covers the large majority of practical itineraries and keeps the answer honest."
+  ],
+  [
+   "Are the distances road or air?",
+   "Air: each leg's great-circle distance between airport coordinates, the same model as the Airport Distance Calculator."
+  ],
+  [
+   "Do alliances matter to the result?",
+   "The dataset records operating routes regardless of alliance. In practice one-stop suggestions are most useful when the hub is served by the same alliance you plan to book with — check that at booking time."
+  ],
+  [
+   "Can I use city names instead of IATA codes?",
+   "The finder is built around IATA codes (JFK, LHR, CDG). If you do not know a code, the Airport Distance Calculator's search resolves names to airports first."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Measure the pair in the "
+  },
+  {
+   "t": "Airport Distance Calculator",
+   "l": "/tools/airport-distance-calculator"
+  },
+  {
+   "t": ", find its halfway point with "
+  },
+  {
+   "t": "Airport Midpoint by Coordinates",
+   "l": "/tools/airport-midpoint-by-coordinates"
+  },
+  {
+   "t": ", or plan by city rather than airport in the "
+  },
+  {
+   "t": "Flight Distance Calculator",
+   "l": "/tools/flight-distance-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "airport-distance-calculator",
+  "airport-midpoint-by-coordinates",
+  "bearing-calculator",
+  "closest-facility-finder",
+  "compass-bearing-visualizer",
+  "competitor-distance-map"
+ ]
+}

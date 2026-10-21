@@ -1,0 +1,186 @@
+{
+ "slug": "mountain-peaks-near-me",
+ "primary_keyword": "Mountain Peaks Near Me",
+ "secondary_keywords": [
+  "peaks finder",
+  "summits near me",
+  "named peaks map"
+ ],
+ "title": "Mountain Peaks Near Me: Named Summits Nearby",
+ "description": "Discover the named summits around a place with Mountain Peaks Near Me — recorded elevations where the map carries them. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a valley town in the Lakes or the Alps sits inside a ring of named fells and peaks most visitors never learn the names of — this finder is the introduction.",
+ "quick_answer": "Mountain Peaks Near Me searches a place or your location and lists the named summits recorded around it, each with its recorded elevation where OpenStreetMap carries one. Search the valley town or trailhead, press find, and browse the peaks by distance — the skyline around you, finally introduced by name.",
+ "steps_intro": "Every skyline is a cast of characters. Get their names:",
+ "use_cases": [
+  {
+   "title": "Naming the view",
+   "body": [
+    {
+     "t": "The peak from the cottage window has a name; the finder gives it, with its height for the follow-up argument."
+    }
+   ]
+  },
+  {
+   "title": "Walk shortlisting",
+   "body": [
+    {
+     "t": "Peaks by distance from base, elevation attached where recorded — then grade the day in the "
+    },
+    {
+     "t": "Hiking Route Planner with Elevation",
+     "l": "/tools/hiking-route-planner-with-elevation"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Photography planning",
+   "body": [
+    {
+     "t": "Summit bearings from your viewpoint plan the sunrise shot — pair with the peaks list to know what you photographed afterwards."
+    }
+   ]
+  },
+  {
+   "title": "Local geography literacy",
+   "body": [
+    {
+     "t": "Children (and newcomers) collect their home skyline: the named ring around town is the first atlas anyone should own."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Elevation where recorded",
+   "body": [
+    {
+     "t": "Famous summits nearly always carry elevations in the data; minor tops may arrive name-only. The finder shows the record's state rather than filling gaps with guesses."
+    }
+   ]
+  },
+  {
+   "label": "Example · Distance from the valley",
+   "body": [
+    {
+     "t": "Ranking starts at your search point — valley floor to summit as the crow flies. The walk itself is longer and steeper; the planner pages handle that arithmetic."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading the peaks list",
+  "intro": "What the record knows about a summit, honestly graded.",
+  "columns": [
+   "Field",
+   "Coverage",
+   "Note"
+  ],
+  "rows": [
+   [
+    "Peak name",
+    "Where mapped",
+    "Names can be local-language first"
+   ],
+   [
+    "Elevation",
+    "Often, not always",
+    "Survey-grade for famous tops; rounded for others"
+   ],
+   [
+    "Distance",
+    "Computed for all",
+    "Straight-line from your point"
+   ],
+   [
+    "Prominence and routes",
+    "Not in this list",
+    "The planner and guidebooks own those"
+   ]
+  ],
+  "note": "OpenStreetMap peak coverage follows mapper enthusiasm: dense in the Alps, Lakes, and US ranges with active communities; sparse where fewer walkers map."
+ },
+ "faq": [
+  [
+   "Are the elevations exact?",
+   "They are the recorded values: major summits match official surveys closely; minor tops can be rounded or older. Treat the figure as the map's record, and the national survey as the final word."
+  ],
+  [
+   "Why do some peaks show no elevation?",
+   "The mapper recorded the summit without its height. The peak still appears — presence without a number beats a guessed number."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — search a town or trailhead instead."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Summit names are famously local — the same top can carry different names on different maps and languages; the record shows its own."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "What counts as a peak?",
+   "A summit recorded as such in the map data. Ridges, shoulders and viewpoints enter only when mappers recorded them as peaks."
+  ],
+  [
+   "Can it plan the climb?",
+   "It discovers and ranks; route planning with elevation profiles lives in the hiking planner. Weather and conditions remain the mountain's own announcement."
+  ],
+  [
+   "Highest peak near me?",
+   "Sort the list by the elevation column where present — with the caveat that an unrecorded giant can hide among the numberless."
+  ],
+  [
+   "Peaks across a border?",
+   "Summits ignore borders; the list ranks by distance regardless of country — name languages will change mid-list, honestly."
+  ],
+  [
+   "Prominence rankings?",
+   "Prominence (independence from higher neighbours) is a mountaineering statistic beyond this list's record. Peakbagger resources own it; this finder owns discovery."
+  ],
+  [
+   "Ski areas and lifts?",
+   "Peaks near ski country arrive with their summits; the resort layer is a different map. The elevation column still plans the day."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Walks under them: "
+  },
+  {
+   "t": "Hiking Trails Near Me",
+   "l": "/tools/hiking-trails-near-me"
+  },
+  {
+   "t": "; plan the climb: the "
+  },
+  {
+   "t": "Hiking Route Planner with Elevation",
+   "l": "/tools/hiking-route-planner-with-elevation"
+  },
+  {
+   "t": "; parks: the "
+  },
+  {
+   "t": "National Park Finder",
+   "l": "/tools/national-park-finder"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location"
+ ]
+}

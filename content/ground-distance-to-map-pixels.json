@@ -1,0 +1,200 @@
+{
+ "slug": "ground-distance-to-map-pixels",
+ "primary_keyword": "Ground Distance to Map Pixels",
+ "secondary_keywords": [
+  "ground distance to map pixels online",
+  "free ground distance to map pixels",
+  "ground distance to map pixels calculator",
+  "ground distance to map pixels tool",
+  "how to calculate ground distance to map pixels"
+ ],
+ "title": "Ground Distance to Map Pixels Converter",
+ "description": "Convert a ground distance into map pixels at a zoom and latitude with Ground Distance to Map Pixels — Web Mercator scale, computed honestly. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, at New York's latitude and zoom 15, one pixel is 3.62 metres — so a 100-metre building spans about 28 pixels, and a whole marathon fits in about 11,700.",
+ "quick_answer": "Ground Distance to Map Pixels converts a real-world distance into the number of screen pixels it spans on a Web Mercator map at a given zoom and latitude. Enter distance, zoom and latitude and read the pixels — the bridge between the world's metres and the map's screen.",
+ "steps_intro": "Metres on the ground, pixels on the glass — the exchange rate is zoom and latitude:",
+ "use_cases": [
+  {
+   "title": "UI and overlay design",
+   "body": [
+    {
+     "t": "A 500 m buffer drawn on a web map needs its pixel radius at the user's zoom — compute it instead of eyeballing. The sibling "
+    },
+    {
+     "t": "Map Pixels to Ground Distance",
+     "l": "/tools/map-pixels-to-ground-distance"
+    },
+    {
+     "t": " runs the return trip."
+    }
+   ]
+  },
+  {
+   "title": "Screenshot measurement",
+   "body": [
+    {
+     "t": "Measuring a feature in a map screenshot starts from metres-per-pixel at that zoom and latitude — this converter's core number, from the "
+    },
+    {
+     "t": "Map Meters per Pixel Calculator",
+     "l": "/tools/map-meters-per-pixel-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Scale honesty in reports",
+   "body": [
+    {
+     "t": "“The site is about 200 pixels across in the figure” becomes metres in the caption — reviewers deserve the conversion, not the shrug."
+    }
+   ]
+  },
+  {
+   "title": "Game and world building",
+   "body": [
+    {
+     "t": "Tile-based worlds inherit real scale when ground distances convert to pixels deliberately rather than by vibe."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The marathon in pixels",
+   "body": [
+    {
+     "t": "42,195 m at zoom 15 in New York (3.619 m/px) = ~11,660 pixels — about six screen-widths of running at 1920 across. Absurd numbers are the honest way to feel a zoom level."
+    }
+   ]
+  },
+  {
+   "label": "Example · Latitude's tax",
+   "body": [
+    {
+     "t": "The same 100 m at zoom 15 spans 28 px in New York, ~21 px at the equator (4.77 m/px) and ~42 px at 60° (2.39 m/px): Mercator inflates the poles, and pixels inherit the inflation."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Metres per pixel by zoom (equator)",
+  "intro": "The Web Mercator standard scale — divide by the latitude factor (cos) for your ground.",
+  "columns": [
+   "Zoom",
+   "m/px at equator",
+   "A 100 m feature"
+  ],
+  "rows": [
+   [
+    "10",
+    "152.9 m",
+    "Under 1 px"
+   ],
+   [
+    "13",
+    "19.1 m",
+    "~5 px"
+   ],
+   [
+    "15",
+    "4.77 m",
+    "~21 px"
+   ],
+   [
+    "17",
+    "1.19 m",
+    "~84 px"
+   ],
+   [
+    "19",
+    "0.298 m",
+    "~335 px"
+   ]
+  ],
+  "note": "Each zoom halves the metres per pixel. Latitude multiplies resolution by 1/cos(lat) — at 60°, pixels are worth twice the ground they are at the equator."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Pixels = ground metres ÷ metres-per-pixel at the given zoom and latitude, under the Web Mercator tile standard (256-pixel tiles, equator circumference scale 156,543.03 m/px at zoom 0)."
+  ],
+  [
+   "Which map standard does it use?",
+   "The slippy-map Web Mercator standard used by OSM, Google and MapLibre tiles — the convention your screenshots and embeds actually live in."
+  ],
+  [
+   "Can I use this in production GIS?",
+   "For display-scale conversions, yes — it is the standard formula. Metric measurement of features belongs to geodesic tools, not pixel counts."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84, the frame web maps and GPS share — tile and pixel systems on this page are defined over it."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — pixels and tiles quantise the world; extra coordinate decimals beyond the cell size are decoration."
+  ],
+  [
+   "North-south versus east-west?",
+   "Web Mercator pixels are square on screen and the scale at a point is the same in both directions locally — latitude sets it, direction does not (unlike arcseconds)."
+  ],
+  [
+   "Device pixel ratios?",
+   "CSS pixels versus device pixels differ on retina screens (×2). State which pixel you mean; this converter speaks CSS/map pixels, the tile standard's unit."
+  ],
+  [
+   "Print maps?",
+   "Print has DPI, not zoom — convert via the printed scale bar instead. Pixel logic is screen logic."
+  ],
+  [
+   "Why does latitude matter so much?",
+   "Mercator stretches the map vertically toward the poles to keep angles true; pixel ground-size falls by cos(latitude) in compensation."
+  ],
+  [
+   "Fractional pixels?",
+   "Features land on fractional pixels constantly — the converter reports decimals; rendering rounds, measurement should not."
+  ],
+  [
+   "The reverse (pixels to ground)?",
+   "Map Pixels to Ground Distance is the dedicated return lane."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Reverse: "
+  },
+  {
+   "t": "Map Pixels to Ground Distance",
+   "l": "/tools/map-pixels-to-ground-distance"
+  },
+  {
+   "t": "; the rate itself: the "
+  },
+  {
+   "t": "Map Meters per Pixel Calculator",
+   "l": "/tools/map-meters-per-pixel-calculator"
+  },
+  {
+   "t": "; tiles: the "
+  },
+  {
+   "t": "Latitude Longitude to Map Tile Calculator",
+   "l": "/tools/lat-lon-to-map-tile-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator"
+ ]
+}

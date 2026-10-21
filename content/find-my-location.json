@@ -1,0 +1,185 @@
+{
+ "slug": "find-my-location",
+ "primary_keyword": "Find My Location",
+ "secondary_keywords": [
+  "gps",
+  "where am i",
+  "my location"
+ ],
+ "title": "Find My Location: Coordinates and Address",
+ "description": "Drop a pin where you are with Find My Location — your coordinates and address, computed in your browser and not stored. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, one click on a country walk turns 'somewhere past the second gate' into coordinates you can read to a friend, a taxi or a rescue service.",
+ "quick_answer": "Find My Location uses your device's positioning to drop a pin where you are and shows your coordinates and address. Press the button, allow access, and read the result — the position is computed for this page in your browser, and the address comes from a public reverse geocoder.",
+ "steps_intro": "The most useful coordinate is the one you are standing on:",
+ "use_cases": [
+  {
+   "title": "Telling people where you are",
+   "body": [
+    {
+     "t": "Coordinates end 'near the big tree' geography. Read them out or copy them — the offline card for them is the "
+    },
+    {
+     "t": "Offline Coordinate Card",
+     "l": "/tools/offline-coordinate-card"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Fieldwork and site arrival",
+   "body": [
+    {
+     "t": "Verify you are at the surveyed point before the work begins. Arrival coordinates in the log are the day's first honest entry."
+    }
+   ]
+  },
+  {
+   "title": "Breakdowns and pickups",
+   "body": [
+    {
+     "t": "A driver finds coordinates faster than descriptions. This page is the fastest route from 'I am here' to a shareable fact."
+    }
+   ]
+  },
+  {
+   "title": "Testing your device's fix",
+   "body": [
+    {
+     "t": "Indoors, the fix wanders; outdoors, it settles. Watching the pin teaches what your phone's GPS is worth — the "
+    },
+    {
+     "t": "GPS Speedometer Online",
+     "l": "/tools/gps-speedometer-online"
+    },
+    {
+     "t": " shows the same stream moving."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The accuracy circle",
+   "body": [
+    {
+     "t": "A fix accurate to 10 metres outdoors is a doorstep; downtown among towers, the same phone may wander a street width. The page shows the point the device reports — judge it against the ground."
+    }
+   ]
+  },
+  {
+   "label": "Example · No signal drama",
+   "body": [
+    {
+     "t": "Deny permission and the page simply has no position to show — the choice is yours per visit, and nothing is remembered between them."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the page shows you",
+  "intro": "The result, field by field — all of it computed for this visit.",
+  "columns": [
+   "Field",
+   "What it is",
+   "Good for"
+  ],
+  "rows": [
+   [
+    "Latitude and longitude",
+    "WGS84 coordinates of the fix",
+    "Sharing, logging, other tools"
+   ],
+   [
+    "Address",
+    "Reverse-geocoded from the pair",
+    "Humans and forms"
+   ],
+   [
+    "Map pin",
+    "The fix on the map",
+    "Sanity-checking the fix"
+   ],
+   [
+    "Accuracy",
+    "The device's own estimate, when given",
+    "Judging trust"
+   ]
+  ],
+  "note": "Positioning mixes GPS, Wi-Fi and cell signals depending on the device. The page reports the browser's answer; it does not upgrade it."
+ },
+ "faq": [
+  [
+   "Is my location stored?",
+   "No. The position is obtained for this page's display; MapBench does not store your browser location. The address lookup sends the coordinates to a public reverse geocoder for that one answer."
+  ],
+  [
+   "The position is inaccurate.",
+   "Move to open sky, give it a few seconds, and check the accuracy figure. Tall buildings and indoors scatter fixes; a second reading outdoors usually settles streets away from the first."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "The page's purpose is your location, so it needs the permission — decline it and nothing is read. Other tools here work from typed places instead."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "The address comes from open geocoding data; another service's record can name the same street corner differently."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "It says permission denied.",
+   "Your browser is enforcing your earlier choice. Re-allow location for this site in the browser's settings if you want the pin."
+  ],
+  [
+   "Coordinates but no address?",
+   "In sparse-data country the reverse geocoder may return little. The coordinates remain exact and usable everywhere else on this site."
+  ],
+  [
+   "Which system are the coordinates in?",
+   "WGS84 latitude/longitude — the system GPS and web maps share."
+  ],
+  [
+   "Can I copy the coordinates?",
+   "Yes — that is half the point. The Offline Coordinate Card formats them for field notes."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Format them on the "
+  },
+  {
+   "t": "Offline Coordinate Card",
+   "l": "/tools/offline-coordinate-card"
+  },
+  {
+   "t": "; move with the "
+  },
+  {
+   "t": "GPS Speedometer Online",
+   "l": "/tools/gps-speedometer-online"
+  },
+  {
+   "t": "; reverse them in "
+  },
+  {
+   "t": "Coordinates to Address",
+   "l": "/tools/coordinates-to-address"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location"
+ ]
+}

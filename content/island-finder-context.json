@@ -1,0 +1,178 @@
+{
+ "slug": "island-finder-context",
+ "primary_keyword": "Island / Landmass Context",
+ "secondary_keywords": [
+  "what island am i on",
+  "island finder",
+  "landmass name"
+ ],
+ "title": "Island / Landmass Context: What Island Am I On?",
+ "description": "Click a point to read its island or mainland context with the Island / Landmass Context tool — place names that reveal the landmass. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a point on Long Island answers with the island in its record — while a point ten miles north across the Sound is mainland, and the difference structures ferries, weather and house prices.",
+ "quick_answer": "The Island / Landmass Context tool reads a clicked point's place record for names that indicate island or mainland context, and reports what the record holds. Click the point and read the address and place fields — a quick answer to 'what island is this?' from the map's own vocabulary.",
+ "steps_intro": "The map names landmasses if you ask its record properly:",
+ "use_cases": [
+  {
+   "title": "Trip geography, settled",
+   "body": [
+    {
+     "t": "“Are we on an island here?” decides ferry bookings and bridge tolls. The record's answer is instant — the "
+    },
+    {
+     "t": "Ocean or Land Checker",
+     "l": "/tools/ocean-or-land-checker"
+    },
+    {
+     "t": " is the water-side sibling."
+    }
+   ]
+  },
+  {
+   "title": "Photo and memory sorting",
+   "body": [
+    {
+     "t": "A geotagged point from a boat trip resolves to its island name in the record, ready for the album."
+    }
+   ]
+  },
+  {
+   "title": "Address context",
+   "body": [
+    {
+     "t": "Island addresses behave differently (delivery, evacuation, tides). The context read flags islandhood before those surprises."
+    }
+   ]
+  },
+  {
+   "title": "Curiosity, honoured",
+   "body": [
+    {
+     "t": "Every coastline raises the question. The tool's modest method — read the record's names — is honest about how it knows."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The named islet problem",
+   "body": [
+    {
+     "t": "Great islands announce themselves in every address field. Tiny islets may appear in no field at all — the tool's honesty: named context where names exist, silence where they do not."
+    }
+   ]
+  },
+  {
+   "label": "Example · River islands count",
+   "body": [
+    {
+     "t": "Islands are not only coastal: the record treats river islands by their place names too, which is why a point in a wide river can answer 'island'."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "How the tool knows",
+  "intro": "The method is deliberately simple — here is its strength and its edge.",
+  "columns": [
+   "Signal",
+   "Interpretation",
+   "Confidence"
+  ],
+  "rows": [
+   [
+    "Island name in place fields",
+    "Island context",
+    "High — the record says so"
+   ],
+   [
+    "Mainland admin names only",
+    "Mainland context",
+    "Good in mapped country"
+   ],
+   [
+    "No informative fields",
+    "Unrecorded",
+    "The honest shrug"
+   ],
+   [
+    "Water all around on the map",
+    "Island visually",
+    "Your eyes outrank the fields"
+   ]
+  ],
+  "note": "This is a context reader, not a coastline engine. For the strict land/water test of a coordinate, the Ocean or Land Checker is the companion tool."
+ },
+ "faq": [
+  [
+   "Is every islet named?",
+   "No — the record names what mappers recorded. Small islets, rocks and unnamed land may carry no place name, and the tool reports only what the fields hold rather than guessing."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — click any point on the map."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Place naming is local and layered; other sources may use other names or languages for the same landmass."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "Island versus peninsula?",
+   "The fields usually settle it through names; ambiguous coastal points can read either way in sparse records. The map view is your tie-breaker."
+  ],
+  [
+   "Does it work mid-ocean?",
+   "A mid-ocean point may have no landmass record at all — which is itself the answer, of a wetter kind."
+  ],
+  [
+   "Tidal islands?",
+   "Places like tidal causeway islands carry island names in their records — context yes, tide tables no; check those separately before driving across."
+  ],
+  [
+   "What data does it read?",
+   "The clicked point's reverse-geocode place and address fields from open map data — the same family of records as Coordinates to Address."
+  ],
+  [
+   "Group and archipelago names?",
+   "Where the record carries the group (the wider archipelago), it appears in the fields — the tool shows the record rather than choosing between island and group."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The water test: "
+  },
+  {
+   "t": "Ocean or Land Checker",
+   "l": "/tools/ocean-or-land-checker"
+  },
+  {
+   "t": "; names for points: "
+  },
+  {
+   "t": "Coordinates to Address",
+   "l": "/tools/coordinates-to-address"
+  },
+  {
+   "t": "; your island: "
+  },
+  {
+   "t": "Find My Location",
+   "l": "/tools/find-my-location"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder"
+ ]
+}

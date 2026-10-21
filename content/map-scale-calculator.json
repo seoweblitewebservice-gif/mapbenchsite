@@ -1,0 +1,183 @@
+{
+ "slug": "map-scale-calculator",
+ "primary_keyword": "Map Scale Calculator",
+ "secondary_keywords": [
+  "map scale",
+  "1:50000",
+  "scale calculator",
+  "scale distance calculator",
+  "1 50000 scale calculator"
+ ],
+ "title": "Map Scale Calculator: Ground Distance",
+ "description": "Turn a map measurement into ground distance with the Map Scale Calculator — enter a scale like 1:50,000 and read metres, km and miles. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, on a 1:50,000 hiking map, 5 cm between two points is 2.50 km (1.55 miles) of real ground — the conversion every paper-map walker does with a ruler.",
+ "quick_answer": "The Map Scale Calculator converts a distance measured on a map into the distance on the ground. Enter the map's scale, such as 1:50,000, and your measured centimetres, and it returns ground metres, kilometres and miles — the arithmetic of maps, done without the slip that ruins a walk plan.",
+ "steps_intro": "A scale is a promise: one unit on paper stands for so many on the ground. Cash it in three steps:",
+ "use_cases": [
+  {
+   "title": "Walkers with paper maps",
+   "body": [
+    {
+     "t": "The 1:25,000 and 1:50,000 sheets still rule British and European hiking. Measuring a leg and converting it here turns 'about two centimetres' into a time estimate you can plan lunch around."
+    }
+   ]
+  },
+  {
+   "title": "Students and mapwork exams",
+   "body": [
+    {
+     "t": "Scale conversion is a set-piece skill. Checking a hand calculation against this tool separates method errors from ruler errors before the exam does it for real."
+    }
+   ]
+  },
+  {
+   "title": "Printed plans and drawings",
+   "body": [
+    {
+     "t": "Site plans, planning applications and estate drawings all carry scales. A measured line on the printout becomes a defensible ground figure with this calculator."
+    }
+   ]
+  },
+  {
+   "title": "Model and reproduction work",
+   "body": [
+    {
+     "t": "Enlarging or reducing a map changes its scale silently. Recompute the effective scale from a known feature, then convert with the new ratio — the "
+    },
+    {
+     "t": "Map Scale Ground Distance Calculator",
+     "l": "/tools/map-scale-ground-distance-calculator"
+    },
+    {
+     "t": " is the sibling for that direction."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The classic hiking sheet",
+   "body": [
+    {
+     "t": "At 1:50,000, one centimetre is 500 m of ground. A ridge line measuring 7.4 cm is therefore 3.70 km (2.30 mi) — before the path's bends, which a paper measurement always undercounts slightly."
+    }
+   ]
+  },
+  {
+   "label": "Example · The detailed sheet",
+   "body": [
+    {
+     "t": "At 1:25,000, one centimetre is 250 m, so a 10 cm map distance is exactly 2.50 km. The same walk covers twice the paper on the more detailed sheet — which is the entire trade the scale number describes."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Common map scales",
+  "intro": "What one measured centimetre (and a typical 5 cm leg) means on the ground at the scales walkers and planners meet most. Pure ratio arithmetic.",
+  "columns": [
+   "Scale",
+   "1 cm on map",
+   "5 cm on map (km)",
+   "5 cm on map (mi)"
+  ],
+  "rows": [
+   [
+    "1:10,000",
+    "100 m",
+    "0.50",
+    "0.31"
+   ],
+   [
+    "1:25,000",
+    "250 m",
+    "1.25",
+    "0.78"
+   ],
+   [
+    "1:50,000",
+    "500 m",
+    "2.50",
+    "1.55"
+   ],
+   [
+    "1:100,000",
+    "1,000 m",
+    "5.00",
+    "3.11"
+   ],
+   [
+    "1:250,000",
+    "2,500 m",
+    "12.50",
+    "7.77"
+   ]
+  ],
+  "note": "Scales are ratios, unit-free: 1:50,000 means one of anything on the map stands for 50,000 of the same on the ground."
+ },
+ "faq": [
+  [
+   "What does 1:50,000 actually mean?",
+   "One unit on the map represents 50,000 of the same unit on the ground: 1 cm = 50,000 cm = 500 m. The second number is the denominator you enter in this calculator."
+  ],
+  [
+   "Does projection distortion matter?",
+   "On a single hiking sheet, barely — topographic maps are drawn to keep local scale honest. Across a whole atlas page at small scales, the printed scale is nominal and varies by latitude; treat such conversions as approx."
+  ],
+  [
+   "My map has no printed scale, only a scale bar. Can I still work?",
+   "Yes — measure a known ground distance (or the scale bar itself) to recover the ratio, then use this calculator with that denominator."
+  ],
+  [
+   "What if I photocopied or resized the map?",
+   "The printed scale is then wrong. Recover the effective scale from a feature of known length before converting anything else."
+  ],
+  [
+   "Centimetres or inches?",
+   "The ratio does not care, as long as both sides use the same unit. This calculator takes centimetres, the convention on metric topographic series."
+  ],
+  [
+   "Is a bigger denominator a bigger scale?",
+   "Opposite: 1:25,000 is a larger scale (more detail, less area) than 1:250,000. The fraction is the scale — bigger fraction, bigger scale."
+  ],
+  [
+   "Can it convert ground distance back to map distance?",
+   "Yes — divide the ground distance by the denominator. The sibling Map Scale Ground Distance Calculator is organised around that direction."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The reverse journey is the "
+  },
+  {
+   "t": "Map Scale Ground Distance Calculator",
+   "l": "/tools/map-scale-ground-distance-calculator"
+  },
+  {
+   "t": "; real digital measurement without paper is the "
+  },
+  {
+   "t": "Distance Between Two Places",
+   "l": "/tools/distance-between-two-places"
+  },
+  {
+   "t": " tool; and drawn circles at true scale live in the "
+  },
+  {
+   "t": "Map Radius Tool",
+   "l": "/tools/map-radius"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "airport-distance-calculator",
+  "airport-midpoint-by-coordinates",
+  "airport-route-finder",
+  "bearing-calculator",
+  "closest-facility-finder",
+  "compass-bearing-visualizer"
+ ]
+}

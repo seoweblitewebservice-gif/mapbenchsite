@@ -1,0 +1,29 @@
+{
+ "slug": "county-choropleth",
+ "primary_keyword": "US County Choropleth Map",
+ "secondary_keywords": [
+  "county choropleth map",
+  "US county data map",
+  "choropleth map maker",
+  "FIPS map"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "advanced-map-embed-generator",
+  "blank-map",
+  "color-a-map",
+  "country-size-comparison",
+  "custom-labeled-map",
+  "embed-map-link-helper"
+ ]
+}

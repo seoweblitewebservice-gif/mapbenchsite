@@ -1,0 +1,29 @@
+{
+ "slug": "live-spatial-data-connector",
+ "primary_keyword": "Live Spatial Data Connector",
+ "secondary_keywords": [
+  "geojson url viewer",
+  "live data map connector",
+  "csv endpoint map",
+  "open data map viewer"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "advanced-map-embed-generator",
+  "blank-map",
+  "color-a-map",
+  "country-size-comparison",
+  "county-choropleth",
+  "custom-labeled-map"
+ ]
+}

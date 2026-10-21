@@ -1,0 +1,177 @@
+{
+ "slug": "what-country-am-i-in",
+ "primary_keyword": "What Country Am I In?",
+ "secondary_keywords": [
+  "country",
+  "iso code",
+  "what country am i in? online"
+ ],
+ "title": "What Country Am I In? Country From a Point",
+ "description": "Identify the country for any point — What Country Am I In? reads boundary data by GPS or map click, disputed areas handled honestly. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a border-town click can land in either of two countries depending on which side of the river the pin drops — the page reports the boundary data's verdict for the exact point, not the town's reputation.",
+ "quick_answer": "What Country Am I In? uses OpenStreetMap boundary data to identify the country a point falls in. Use your location or click the map and read the country field — the top of the administrative stack, answered from boundaries rather than from the nearest famous city.",
+ "steps_intro": "The biggest boundary question, answered at the point:",
+ "use_cases": [
+  {
+   "title": "Border travel sanity",
+   "body": [
+    {
+     "t": "Near frontiers, which side you are on decides roaming, currency and rules. The point's answer beats the road sign you passed a mile ago."
+    }
+   ]
+  },
+  {
+   "title": "Geotag and data verification",
+   "body": [
+    {
+     "t": "A dataset's country column gets audited point by point — disputed and coastal points surface exactly where audits should look."
+    }
+   ]
+  },
+  {
+   "title": "The stack beneath it",
+   "body": [
+    {
+     "t": "Country first, then "
+    },
+    {
+     "t": "What State Am I In",
+     "l": "/tools/what-state-am-i-in"
+    },
+    {
+     "t": ", county, city — this page is the top slice of the same honest method."
+    }
+   ]
+  },
+  {
+   "title": "Teaching the map",
+   "body": [
+    {
+     "t": "Enclaves, exclaves and the world's odd corners become findable: click Baarle, Llívia or Kaliningrad and watch students' eyebrows."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Disputed areas, handled straight",
+   "body": [
+    {
+     "t": "Where boundaries are disputed, map data reflects one documented position. The page reports the data's country for the point; the FAQs name the caveat rather than hiding it."
+    }
+   ]
+  },
+  {
+   "label": "Example · The sea point",
+   "body": [
+    {
+     "t": "Click the open ocean and there is no country to report — territorial waters complicate the shallows, but the honest open-sea answer is none."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the answer rests on",
+  "intro": "Boundary data and its known edges.",
+  "columns": [
+   "Situation",
+   "The page's answer"
+  ],
+  "rows": [
+   [
+    "Settled land borders",
+    "The country whose boundary contains the point"
+   ],
+   [
+    "Enclaves and exclaves",
+    "The containing country — geometry, not intuition"
+   ],
+   [
+    "Disputed territory",
+    "The dataset's documented position, caveat attached"
+   ],
+   [
+    "Open ocean",
+    "No country — reported plainly"
+   ],
+   [
+    "Embassies and bases",
+    "The host country's soil per boundary data; legal status is a longer story"
+   ]
+  ],
+  "note": "OpenStreetMap boundaries are community-maintained from official sources. For legal nationality-of-soil questions, governments and treaties are the authority; this page is the map's answer."
+ },
+ "faq": [
+  [
+   "How are disputed areas handled?",
+   "The page reports the country OpenStreetMap's boundary data assigns to the point, which follows the project's documented approach to disputed boundaries. It is a map answer, offered as such — the dispute itself belongs to diplomacy."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — click any point on earth instead of using GPS."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Country names and boundary renderings are political: short names, formal names and claims differ across sources and governments."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "ISO codes too?",
+   "The country identification follows boundary data; ISO country codes are the standard companions and the related tools surface them where the data carries them."
+  ],
+  [
+   "Territorial waters?",
+   "Boundary data centres on land territory. A point just offshore can read as no-country while lying in territorial waters — the dataset's scope, stated plainly."
+  ],
+  [
+   "Antarctica?",
+   "No sovereign country governs it (treaty system instead); the page reports the absence honestly."
+  ],
+  [
+   "Two countries claim my point.",
+   "Then the dataset shows its documented position and the real-world answer is contested. The page gives the map's position, never a pretend certainty."
+  ],
+  [
+   "The country in another language?",
+   "Endonyms and exonyms both exist in the data ecosystem; the page reports the record's naming — maps carry cultures, not just polygons."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Down the stack: "
+  },
+  {
+   "t": "What State Am I In",
+   "l": "/tools/what-state-am-i-in"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "What City Am I In",
+   "l": "/tools/what-city-am-i-in"
+  },
+  {
+   "t": "; older layer: the "
+  },
+  {
+   "t": "Indigenous Lands Map",
+   "l": "/tools/indigenous-lands-map"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder"
+ ]
+}

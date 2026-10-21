@@ -1,0 +1,179 @@
+{
+ "slug": "gps-speedometer-online",
+ "primary_keyword": "GPS Speedometer Online",
+ "secondary_keywords": [
+  "phone speedometer",
+  "live gps speed",
+  "browser speedometer"
+ ],
+ "title": "GPS Speedometer Online: Live Speed in Browser",
+ "description": "Read your live GPS speed in the browser with the GPS Speedometer Online — mph and km/h, peak speed and distance, nothing installed. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a passenger-seat speedometer check on the motorway settles the 'the car reads high' argument in one junction's distance — every car speedometer does, a little, by law and by design.",
+ "quick_answer": "The GPS Speedometer Online reads your device's GPS stream in the browser and shows your current speed in mph and km/h, with peak speed and distance travelled while the page runs. Press start, allow location, and watch — no app to install, and the stream stays on your device.",
+ "steps_intro": "Your phone already knows your speed. Let the browser show it:",
+ "use_cases": [
+  {
+   "title": "Speedometer checks",
+   "body": [
+    {
+     "t": "Compare the car's dial with GPS ground speed on a straight, steady stretch — the classic calibration, no workshop needed."
+    }
+   ]
+  },
+  {
+   "title": "Boats, bikes and trains",
+   "body": [
+    {
+     "t": "Anything that moves without a dial gets one: sailing speed, a borrowed bike, the train window argument about how fast 'this thing' goes."
+    }
+   ]
+  },
+  {
+   "title": "Passenger duties",
+   "body": [
+    {
+     "t": "The navigator's speed readout, hands-free from the driver's dial — and the distance counter for 'how far since the services'."
+    }
+   ]
+  },
+  {
+   "title": "Testing GPS quality",
+   "body": [
+    {
+     "t": "A speed that flickers at a standstill is your fix quality confessing. Open sky settles it; tunnels erase it — see the FAQs."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The standstill test",
+   "body": [
+    {
+     "t": "At rest, a good fix reads 0 with an occasional flicker; a poor fix wanders through small speeds as the position jitters. The flicker is the accuracy of your phone, demonstrated live."
+    }
+   ]
+  },
+  {
+   "label": "Example · Peak and distance",
+   "body": [
+    {
+     "t": "The page remembers the session's peak speed and accumulates distance while it runs — a pocket trip computer for the length of the journey."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "GPS speed versus the car's dial",
+  "intro": "Why the two disagree — and why the disagreement is usually legal and intentional.",
+  "columns": [
+   "Source",
+   "Measures",
+   "Typical bias"
+  ],
+  "rows": [
+   [
+    "Car speedometer",
+    "Wheel rotation, calibrated generously",
+    "Reads slightly high by design and regulation"
+   ],
+   [
+    "GPS (this page)",
+    "Position change over time (and Doppler on many devices)",
+    "Near-true in open sky at steady speed"
+   ],
+   [
+    "Phone GPS indoors",
+    "A struggling fix",
+    "Wanders — ignore it"
+   ],
+   [
+    "GPS in a tunnel",
+    "No fix",
+    "Last value or nothing — honest silence"
+   ]
+  ],
+  "note": "Nothing here is a certified instrument. For legal speed questions, official calibration rules; for everyday truth, GPS in open sky is the better witness."
+ },
+ "faq": [
+  [
+   "How accurate is it?",
+   "In open sky at steady speed, phone GPS speed is typically within a fraction of a mph — better than most car dials. Accuracy collapses indoors, in tunnels and among towers, and the readout's behaviour there tells you so."
+  ],
+  [
+   "Does it work on a laptop?",
+   "If the laptop's browser can get a position (Wi-Fi positioning), a coarse version works; phones and tablets with GPS are the real instrument."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "The speedometer is your location in motion — it needs the permission, and declining it simply means no stream. Nothing is uploaded or stored either way."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Unrelated to speed, but the same data family: maps and records vary by source. Your speed is computed from satellites, not maps."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No — the stream is processed on the device for this page's display."
+  ],
+  [
+   "Why does it flicker at a standstill?",
+   "Position jitter: each fix wobbles by metres, and speed computed from wobbling positions invents small motion. A 'deadband' in your head fixes it."
+  ],
+  [
+   "mph or km/h?",
+   "Both are shown — the pair is the point for travellers crossing the channel of units."
+  ],
+  [
+   "Does it record my trip?",
+   "It accumulates distance and peak while the page runs; close the page and the session is gone. Recording for keeps is a tracker app's job, not this page's."
+  ],
+  [
+   "Battery drain?",
+   "GPS is hungry. For long journeys, a charger is the speedometer's best friend."
+  ],
+  [
+   "Can I use it while driving?",
+   "Passengers only — the driver watches the road and the car's dial. This page is a check and a toy for the passenger seat, stated plainly."
+  ],
+  [
+   "Altitude shown?",
+   "The speedometer's job is speed, peak and distance. Elevation has a dedicated finder on this site for the vertical number."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Your static fix: "
+  },
+  {
+   "t": "Find My Location",
+   "l": "/tools/find-my-location"
+  },
+  {
+   "t": "; paces on foot: the "
+  },
+  {
+   "t": "Walking Pace Calculator",
+   "l": "/tools/walking-pace-calculator"
+  },
+  {
+   "t": "; averages afterwards: the "
+  },
+  {
+   "t": "Road Trip Average Speed Calculator",
+   "l": "/tools/road-trip-average-speed-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location"
+ ]
+}

@@ -1,0 +1,201 @@
+{
+ "slug": "initial-great-circle-bearing-calculator",
+ "primary_keyword": "Initial Great Circle Bearing Calculator",
+ "secondary_keywords": [
+  "initial great circle bearing calculator online",
+  "free initial great circle bearing calculator",
+  "initial great circle bearing calculator calculator",
+  "initial great circle bearing calculator tool",
+  "how to use initial great circle bearing calculator"
+ ],
+ "title": "Initial Great Circle Bearing Calculator",
+ "description": "Calculate the starting azimuth of the shortest spherical route with the Initial Great Circle Bearing Calculator — the first heading, exactly. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, the initial bearing from Heathrow to JFK is approx. 287.9° — while the flat-map guess of 'about 270°' would miss New York by a wide margin over 5,540 km.",
+ "quick_answer": "The Initial Great Circle Bearing Calculator computes the starting azimuth of the shortest route between two coordinates: the direction to set off on at the first point so the great circle carries you to the second. It exists because that first heading is a spherical calculation, not a map measurement.",
+ "steps_intro": "One number, but the right one — the heading that the whole shortest route is built from:",
+ "use_cases": [
+  {
+   "title": "Navigation coursework",
+   "body": [
+    {
+     "t": "The initial-bearing formula is a set-piece of navigation exams. This calculator is the independent check that separates a method error from an arithmetic slip."
+    }
+   ]
+  },
+  {
+   "title": "Passage planning",
+   "body": [
+    {
+     "t": "Sailors laying a great-circle passage need the departure azimuth before the waypoint chain. Get it here; the "
+    },
+    {
+     "t": "Compass Bearing Visualizer",
+     "l": "/tools/compass-bearing-visualizer"
+    },
+    {
+     "t": " then lets you see it."
+    }
+   ]
+  },
+  {
+   "title": "Antenna and link alignment",
+   "body": [
+    {
+     "t": "Long-distance radio paths follow great circles. The initial bearing is the azimuth to point the beam — at the start, which is where the antenna is."
+    }
+   ]
+  },
+  {
+   "title": "GIS validation",
+   "body": [
+    {
+     "t": "When a library's azimuth output disagrees with a hand calculation, a third implementation with shown working settles which one mishandles a quadrant."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The Atlantic test",
+   "body": [
+    {
+     "t": "Heathrow → JFK: initial bearing approx. 287.9°. The naive map reading (~270°, due west) would land hundreds of kilometres off after 5,540 km — the cleanest advertisement for doing this calculation properly."
+    }
+   ]
+  },
+  {
+   "label": "Example · A meridian special case",
+   "body": [
+    {
+     "t": "From any point to the North Pole, the initial bearing is 0.0° exactly — every meridian converges there. Special cases like this are how you sanity-check a bearing tool, including this one."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Initial bearings for reference pairs",
+  "intro": "Starting azimuths computed with the standard spherical formula — approx. values from published coordinates, reproducible in the tool.",
+  "columns": [
+   "From → To",
+   "Initial bearing",
+   "Compass point",
+   "Distance (km)"
+  ],
+  "rows": [
+   [
+    "JFK → Heathrow",
+    "51.4°",
+    "NE",
+    "5,540.0"
+   ],
+   [
+    "Heathrow → JFK",
+    "287.9°",
+    "WNW",
+    "5,540.0"
+   ],
+   [
+    "JFK → LAX",
+    "273.8°",
+    "W",
+    "3,974.3"
+   ],
+   [
+    "Miami → JFK",
+    "18.4°",
+    "NNE",
+    "1,756.9"
+   ],
+   [
+    "Heathrow → CDG",
+    "140.9°",
+    "SE",
+    "347.0"
+   ],
+   [
+    "San Francisco → O'Hare",
+    "69.7°",
+    "ENE",
+    "2,964.0"
+   ],
+   [
+    "LAX → San Francisco",
+    "319.9°",
+    "NNW",
+    "543.7"
+   ],
+   [
+    "CDG → Frankfurt",
+    "73.0°",
+    "ENE",
+    "448.8"
+   ]
+  ],
+  "note": "Compass points use the 16-point rose (each point spans 22.5°). The number is the authority; the point is the shorthand."
+ },
+ "faq": [
+  [
+   "What does 'initial' mean in the name?",
+   "The bearing at the start of the route. A great-circle heading changes continuously as you travel, so a single bearing can only describe one point of it — this tool is precise about which point: the first."
+  ],
+  [
+   "Why is the result not exact at the destination too?",
+   "Because the arrival bearing differs — the same curve crosses the destination's meridian at its own angle. The reverse journey needs its own initial bearing, which this calculator gives when you swap the points."
+  ],
+  [
+   "What formula does it use?",
+   "The standard spherical initial-bearing formula: atan2 of sin Δλ·cos φ₂ against cos φ₁·sin φ₂ − sin φ₁·cos φ₂·cos Δλ, normalised to 0–360°. The guide on this page shows it in full."
+  ],
+  [
+   "Do I need an account?",
+   "No. Enter two coordinates and read the azimuth — the tool is free and runs without sign-up, like the rest of the site."
+  ],
+  [
+   "Initial bearing or rhumb bearing for a short hop?",
+   "At short range they nearly coincide; the difference grows with distance and latitude. Ocean passages care; harbour hops do not."
+  ],
+  [
+   "Can it handle points across the antimeridian?",
+   "Yes — the formula works in longitude differences, and the shortest path across the Pacific is handled without a 360° surprise."
+  ],
+  [
+   "Is the result true or magnetic?",
+   "True (from geographic north). Apply local magnetic declination before using it with a magnetic compass."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The friendlier general tool is the "
+  },
+  {
+   "t": "Bearing Calculator",
+   "l": "/tools/bearing-calculator"
+  },
+  {
+   "t": "; the drawn version is the "
+  },
+  {
+   "t": "Compass Bearing Visualizer",
+   "l": "/tools/compass-bearing-visualizer"
+  },
+  {
+   "t": "; and the flight-framed version is the "
+  },
+  {
+   "t": "Flight Bearing Calculator",
+   "l": "/tools/flight-bearing-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "compass-bearing-visualizer",
+  "competitor-distance-map",
+  "coordinate-distance-table-generator",
+  "crow-flies-distance",
+  "distance-between-cities",
+  "distance-between-two-places"
+ ]
+}

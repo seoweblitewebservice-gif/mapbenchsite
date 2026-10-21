@@ -1,0 +1,188 @@
+{
+ "slug": "coordinate-distance-table-generator",
+ "primary_keyword": "Coordinate Distance Table Generator",
+ "secondary_keywords": [
+  "coordinate distance table",
+  "distance matrix coordinates",
+  "pairwise distance calculator"
+ ],
+ "title": "Coordinate Distance Table Generator",
+ "description": "Paste labelled coordinates and get a full pairwise distance table with the Coordinate Distance Table Generator — CSV copy and download included. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, four US hubs pasted as label,latitude,longitude produce a 4×4 table whose longest leg is New York–Denver at approx. 2,619 km — and whose shortest is Dallas–Denver at 1,066 km.",
+ "quick_answer": "The Coordinate Distance Table Generator turns a pasted list of labelled coordinates into a complete pairwise distance matrix. Give it one point per line as label, latitude, longitude and it computes every point-to-every point distance in kilometres, ready to copy or download as CSV for planning or analysis.",
+ "steps_intro": "A matrix by hand means n×(n−1)/2 separate measurements. Paste the list instead:",
+ "use_cases": [
+  {
+   "title": "Logistics network design",
+   "body": [
+    {
+     "t": "Depot-to-depot matrices are the raw material of network planning. Generate the straight-line table here, then route the handful of legs that matter with the "
+    },
+    {
+     "t": "Drive Distance Matrix Helper",
+     "l": "/tools/drive-distance-matrix"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Research datasets",
+   "body": [
+    {
+     "t": "Field sites, sampling points and observation stations usually live as coordinate lists. A distance table is the first analysis most of them need — and the fastest data-quality check, since one mistyped coordinate produces one absurd row."
+    }
+   ]
+  },
+  {
+   "title": "Sales territory balancing",
+   "body": [
+    {
+     "t": "Rep-to-account and office-to-office matrices expose the territory whose 'local' accounts are quietly 200 km apart. The CSV export drops straight into the spreadsheet where the rebalance happens."
+    }
+   ]
+  },
+  {
+   "title": "Coursework and GIS teaching",
+   "body": [
+    {
+     "t": "A small matrix students generate themselves — five familiar cities — teaches pairwise measurement better than any diagram, and the download gives them data to keep working with."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Four US hubs",
+   "body": [
+    {
+     "t": "Paste New York, Chicago, Dallas and Denver and the table's extremes are Denver–New York at approx. 2,619 km and Dallas–Denver at 1,066 km — with Chicago–Dallas at 1,295 km in between. Six pairs, zero hand measurements."
+    }
+   ]
+  },
+  {
+   "label": "Example · Checking a bad row",
+   "body": [
+    {
+     "t": "If one pasted longitude loses its minus sign, that point's entire row explodes to thousands of kilometres while every other row stays sane. The matrix format makes the classic coordinate typo visible at a glance."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Sample matrix: four US hubs (km)",
+  "intro": "Exactly what the generator returns for the four-hub example — haversine distances on the site model, rounded to whole kilometres.",
+  "columns": [
+   "From \\ To",
+   "New York",
+   "Chicago",
+   "Dallas",
+   "Denver"
+  ],
+  "rows": [
+   [
+    "New York",
+    "0",
+    "1,144",
+    "2,206",
+    "2,619"
+   ],
+   [
+    "Chicago",
+    "1,144",
+    "0",
+    "1,295",
+    "1,478"
+   ],
+   [
+    "Dallas",
+    "2,206",
+    "1,295",
+    "0",
+    "1,066"
+   ],
+   [
+    "Denver",
+    "2,619",
+    "1,478",
+    "1,066",
+    "0"
+   ]
+  ],
+  "note": "The matrix is symmetric — row and column agree — and the diagonal is zero. If a generated table breaks either rule, a pasted coordinate is wrong."
+ },
+ "faq": [
+  [
+   "What format should I paste?",
+   "One point per line: label,latitude,longitude — for example “Denver,39.7392,-104.9903”. Labels can be any text without commas; coordinates are decimal degrees with a minus for west and south."
+  ],
+  [
+   "Are these driving distances?",
+   "No — straight-line (great-circle) distances in kilometres. They are the consistent baseline for planning; validate individual legs by road where the decision needs it."
+  ],
+  [
+   "How many points can I use?",
+   "The generator is built for practical lists — tens of points are comfortable. Remember the table grows with the square of the list: 30 points is 435 pairs, which is a lot of table to read."
+  ],
+  [
+   "Can I export the table?",
+   "Yes — copy it or download the CSV, which is the feature that makes the tool useful inside real workflows: the matrix lands in your spreadsheet unchanged."
+  ],
+  [
+   "Why kilometres only?",
+   "The table is generated in kilometres for compactness. Convert any figure with the distance converters, or halve the work by remembering miles ≈ km × 0.621371."
+  ],
+  [
+   "Does it handle duplicate points?",
+   "Two identical coordinates produce a 0 between them — harmless in the table, and a useful duplicate-detector for messy source lists."
+  ],
+  [
+   "Is my pasted data uploaded?",
+   "The table is generated in your browser from the text you paste; there is no account and nothing to sign in to."
+  ],
+  [
+   "Why is the diagonal of the matrix zero?",
+   "Because every point is zero kilometres from itself. A non-zero diagonal (or an asymmetric table) means a pasted row is malformed — the matrix's built-in sanity checks are a feature, use them."
+  ],
+  [
+   "Can I mix hemispheres in one list?",
+   "Yes — southern latitudes and western longitudes just need their minus signs. The haversine formula handles the mix; the classic failure is a missing minus, which the absurd row it creates advertises immediately."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "For named places picked on a map instead of pasted coordinates, the "
+  },
+  {
+   "t": "Distance Matrix Calculator",
+   "l": "/tools/distance-matrix-calculator"
+  },
+  {
+   "t": " builds the same kind of table; for the road-validated version, the "
+  },
+  {
+   "t": "Drive Distance Matrix Helper",
+   "l": "/tools/drive-distance-matrix"
+  },
+  {
+   "t": "; and for CSV files that need plotting first, "
+  },
+  {
+   "t": "CSV to Map",
+   "l": "/tools/csv-to-map"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "airport-distance-calculator",
+  "airport-midpoint-by-coordinates",
+  "airport-route-finder",
+  "bearing-calculator",
+  "closest-facility-finder",
+  "compass-bearing-visualizer"
+ ]
+}

@@ -1,0 +1,182 @@
+{
+ "slug": "great-circle-flight-route-calculator",
+ "primary_keyword": "Great Circle Flight Route Calculator",
+ "secondary_keywords": [
+  "great circle flight route calculator online",
+  "free great circle flight route calculator",
+  "great circle flight route calculator calculator",
+  "great circle flight route calculator tool",
+  "how to use great circle flight route calculator"
+ ],
+ "title": "Great Circle Flight Route Calculator",
+ "description": "Draw and measure the shortest flight path between two places with the Great Circle Flight Route Calculator — distance, bearings and the arc. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, the great circle from JFK to Heathrow peaks at latitude approx. 53.7° N — north of Ireland — which is why that crossing passes Greenland's southern tip on clear days.",
+ "quick_answer": "The Great Circle Flight Route Calculator draws the shortest path between two places over the surface of the Earth and measures it: total distance, initial bearing, and the arc's shape on the map. It shows the route long-haul flights approximate, including its famous bend toward the nearer pole.",
+ "steps_intro": "The shortest way across a sphere is a curve on every flat map. See it properly:",
+ "use_cases": [
+  {
+   "title": "Understanding a booked route",
+   "body": [
+    {
+     "t": "Passengers puzzled by a northern detour are looking at this curve. Draw the pair and the 'detour' becomes the shortcut it always was."
+    }
+   ]
+  },
+  {
+   "title": "Flight-plan and sim preparation",
+   "body": [
+    {
+     "t": "Oceanic plans chain waypoints along the great circle. This page is the overview — the whole arc at once — before leg-by-leg work in the "
+    },
+    {
+     "t": "Flight Bearing Calculator",
+     "l": "/tools/flight-bearing-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Comparing route philosophies",
+   "body": [
+    {
+     "t": "Great circle versus rhumb line: draw the great circle here, then compare its distance with the constant-heading alternative to see the price of never turning."
+    }
+   ]
+  },
+  {
+   "title": "Geography teaching",
+   "body": [
+    {
+     "t": "No globe handy? The drawn arc plus the peak latitude make the same point a string on a globe makes — the shortest path leaves the ruler line behind."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The North Atlantic",
+   "body": [
+    {
+     "t": "JFK ↔ Heathrow: approx. 5,540.0 km (3,442.4 mi), initial bearing 51.4°, peaking at latitude approx. 53.7° N. The peak is the number that surprises: the route's highest latitude is further north than either the 'straight' line or London itself."
+    }
+   ]
+  },
+  {
+   "label": "Example · The North Pacific",
+   "body": [
+    {
+     "t": "LAX ↔ Tokyo Narita: approx. 8,753 km (5,439 mi), peaking at approx. 47.7° N. The arc explains the Alaska and Aleutian scenery on that crossing — geography, not a scenic detour chosen by the crew."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Anatomy of a great-circle route",
+  "intro": "The quantities this calculator reports, with the JFK–Heathrow figures as the running example — all computed on the site model.",
+  "columns": [
+   "Quantity",
+   "JFK ↔ Heathrow",
+   "Meaning"
+  ],
+  "rows": [
+   [
+    "Total distance",
+    "5,540.0 km (3,442.4 mi)",
+    "The shortest surface path"
+   ],
+   [
+    "Initial bearing",
+    "51.4°",
+    "Heading at departure"
+   ],
+   [
+    "Return initial bearing",
+    "287.9°",
+    "Not 51.4° + 180°"
+   ],
+   [
+    "Peak latitude",
+    "approx. 53.7° N",
+    "The arc's poleward bend"
+   ],
+   [
+    "Midpoint",
+    "North Atlantic",
+    "Half the distance, over ocean"
+   ],
+   [
+    "Ruler-line comparison",
+    "Longer",
+    "Flat-map straight is not shortest"
+   ]
+  ],
+  "note": "Every figure follows from the two endpoints and the sphere — change either city and the whole anatomy recomputes."
+ },
+ "faq": [
+  [
+   "Why is the shortest route curved on the map?",
+   "Because the map is a flat projection of a sphere. The great circle is straight on the globe; projections bend it. The calculator draws the true path and lets the projection take the blame."
+  ],
+  [
+   "Do airlines actually fly the great circle?",
+   "They approximate it. Airways, organised track systems, winds and restricted airspace pull real routes off the ideal arc, usually by a few percent of distance."
+  ],
+  [
+   "What is the peak latitude?",
+   "The highest latitude the arc reaches — its vertex. For northern east–west routes it can sit far poleward of both endpoints, which is why 'up over the top' is a real route shape."
+  ],
+  [
+   "Great circle or rhumb line — which is shorter?",
+   "Great circle, always (except along meridians and the equator, where they coincide). The rhumb line's virtue is a constant heading, bought with extra distance."
+  ],
+  [
+   "Can the route pass over the pole?",
+   "Yes — pairs positioned so their great circle crosses near 90° N produce genuinely polar routes, the extreme case of the poleward bend."
+  ],
+  [
+   "Does it show waypoints?",
+   "The page draws the continuous arc and its headline numbers. Breaking it into waypoint legs with bearings is the Flight Bearing Calculator's and a flight plan's job."
+  ],
+  [
+   "Is the distance the same as the Flight Distance Calculator's?",
+   "Yes — same great-circle model, same result. This page adds the drawn anatomy of the route; that page leads with the number and time estimate."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Measure the pair in the "
+  },
+  {
+   "t": "Flight Distance Calculator",
+   "l": "/tools/flight-distance-calculator"
+  },
+  {
+   "t": ", walk its headings in the "
+  },
+  {
+   "t": "Flight Bearing Calculator",
+   "l": "/tools/flight-bearing-calculator"
+  },
+  {
+   "t": ", and convert its length for maritime company in the "
+  },
+  {
+   "t": "Kilometers to Nautical Miles Converter",
+   "l": "/tools/kilometers-to-nautical-miles-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "closest-facility-finder",
+  "compass-bearing-visualizer",
+  "competitor-distance-map",
+  "coordinate-distance-table-generator",
+  "crow-flies-distance",
+  "distance-between-cities"
+ ]
+}

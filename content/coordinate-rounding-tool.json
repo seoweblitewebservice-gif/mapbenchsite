@@ -1,0 +1,188 @@
+{
+ "slug": "coordinate-rounding-tool",
+ "primary_keyword": "Coordinate Rounding Tool",
+ "secondary_keywords": [
+  "coordinate rounding tool online",
+  "free coordinate rounding tool",
+  "coordinate rounding tool calculator",
+  "coordinate rounding tool tool",
+  "how to calculate coordinate rounding tool"
+ ],
+ "title": "Coordinate Rounding Tool: Round Lat/Lon Cleanly",
+ "description": "Round latitude and longitude to a chosen decimal precision with the Coordinate Rounding Tool — proper rounding, both axes at once. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 40.7580413, −73.9856647 rounds at 4 places to 40.7580, −73.9857 — an 11-metre grain — with the negative longitude rounded correctly, which is where hand-rounding usually slips.",
+ "quick_answer": "The Coordinate Rounding Tool rounds latitude and longitude to a chosen decimal precision, both axes at once, with proper rounding. Paste the pair, choose the places, and copy the result — clean numbers whose grain matches the purpose, without the sign and carry errors hand-rounding invites.",
+ "steps_intro": "Two numbers, one precision, zero hand slips:",
+ "use_cases": [
+  {
+   "title": "Dataset dressing",
+   "body": [
+    {
+     "t": "A column of ragged coordinates gets one house precision — the "
+    },
+    {
+     "t": "Coordinate Precision Tool",
+     "l": "/tools/coordinate-precision-tool"
+    },
+    {
+     "t": " explains the grain choice; this tool applies it."
+    }
+   ]
+  },
+  {
+   "title": "Publication preparation",
+   "body": [
+    {
+     "t": "Round before the report, the post, the shared doc — the reader sees numbers sized to the method."
+    }
+   ]
+  },
+  {
+   "title": "Join keys and dedupe",
+   "body": [
+    {
+     "t": "Points recorded thrice with jitter join cleanly when rounded to the jitter's scale — 4 places swallows GPS noise for place-level joins."
+    }
+   ]
+  },
+  {
+   "title": "Checking a form's demand",
+   "body": [
+    {
+     "t": "The form wants 5 places: round here, paste exactly, keep the original stored at full precision."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The negative-number slip",
+   "body": [
+    {
+     "t": "−73.9856647 to 4 places is −73.9857 (magnitude rounds up). Mental rounding often yields −73.9856 by trimming — a 9-metre error from pure habit. The tool rounds magnitudes correctly."
+    }
+   ]
+  },
+  {
+   "label": "Example · The carry case",
+   "body": [
+    {
+     "t": "40.99997 at 3 places becomes 41.000 — the carry across the degree boundary handled silently, as it should be, every time."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What changes at each precision",
+  "intro": "The ladder, priced — the same grain table the precision family shares.",
+  "columns": [
+   "Places",
+   "Latitude grain",
+   "Typical use"
+  ],
+  "rows": [
+   [
+    "3",
+    "~111 m",
+    "Published references, fuzzing"
+   ],
+   [
+    "4",
+    "~11 m",
+    "Map-read points, place joins"
+   ],
+   [
+    "5",
+    "~1.1 m",
+    "Phone GPS fieldwork"
+   ],
+   [
+    "6",
+    "~0.11 m",
+    "Survey-adjacent data"
+   ]
+  ],
+  "note": "Rounding never adds accuracy — it only stops the display from claiming more than the source has. Keep originals unrounded in storage; round copies."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The input pair rounded to your chosen decimal places — round-half-up on magnitudes, applied symmetrically to latitude and longitude."
+  ],
+  [
+   "Do I need an account?",
+   "No — pair in, rounded pair out."
+  ],
+  [
+   "Can I rely on this for professional work?",
+   "The rounding itself is exact arithmetic — rely on it freely. Professional judgment enters in choosing the places, guided by the grain table."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 values assumed, like the rest of the family; rounding is datum-blind."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — fewer places can be the more honest output. This tool exists to make the honest choice easy."
+  ],
+  [
+   "Truncation instead?",
+   "Truncation biases points systematically; rounding is the professional default. If a spec literally demands truncation, it will say so — few do."
+  ],
+  [
+   "DMS inputs?",
+   "Convert to decimals first (Coordinate Converter), then round — rounding in DMS dress is a seconds decision, not a decimals one."
+  ],
+  [
+   "Half-way cases?",
+   "Rounded half-up on magnitude (away from zero) — the convention stated, which is what makes outputs reproducible."
+  ],
+  [
+   "Batch rounding?",
+   "Single pairs here; a spreadsheet's ROUND column wears the bulk, spot-checked against this tool."
+  ],
+  [
+   "Rounding and privacy?",
+   "Aggressive rounding (2–3 places) is the standard location fuzz — effective precisely because the grain is coarse."
+  ],
+  [
+   "Original value lost?",
+   "Only in the copy you paste onward. Keep the source intact — this tool dresses outputs, it does not edit archives."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The chooser: the "
+  },
+  {
+   "t": "Coordinate Precision Tool",
+   "l": "/tools/coordinate-precision-tool"
+  },
+  {
+   "t": "; grain maths: the "
+  },
+  {
+   "t": "Decimal Degree Precision Calculator",
+   "l": "/tools/decimal-degree-precision-calculator"
+  },
+  {
+   "t": "; convert: the "
+  },
+  {
+   "t": "Coordinate Converter",
+   "l": "/tools/coordinate-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator"
+ ]
+}

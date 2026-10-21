@@ -1,0 +1,187 @@
+{
+ "slug": "lat-lon-to-web-mercator",
+ "primary_keyword": "Latitude Longitude to Web Mercator",
+ "secondary_keywords": [
+  "latitude longitude to web mercator online",
+  "free latitude longitude to web mercator",
+  "latitude longitude to web mercator calculator",
+  "latitude longitude to web mercator tool",
+  "how to calculate latitude longitude to web mercator"
+ ],
+ "title": "Latitude Longitude to Web Mercator Converter",
+ "description": "Convert latitude/longitude to Web Mercator x/y metres with Latitude Longitude to Web Mercator — EPSG:3857, the web map standard. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, Times Square projects to x −8,236,028 m, y 4,976,712 m in Web Mercator — numbers that look absurd until you learn the origin is off West Africa's coast and the units are metres.",
+ "quick_answer": "Latitude Longitude to Web Mercator converts a geographic coordinate into Web Mercator (EPSG:3857) x and y in metres. Enter the point and read its projected position — the system every web map is built on, x east and y north in projected metres.",
+ "steps_intro": "The projection behind every map you have ever scrolled:",
+ "use_cases": [
+  {
+   "title": "GIS and web development",
+   "body": [
+    {
+     "t": "Layers stored in degrees must meet maps drawn in Mercator metres. Convert reference points here to verify your pipeline's reprojection — the "
+    },
+    {
+     "t": "World Pixel Calculator",
+     "l": "/tools/lat-lon-to-world-pixel-calculator"
+    },
+    {
+     "t": " continues to screen space."
+    }
+   ]
+  },
+  {
+   "title": "Reading API responses",
+   "body": [
+    {
+     "t": "Services returning 'coordinates' in the millions are speaking Mercator. This page translates one pair so the rest of the response makes sense."
+    }
+   ]
+  },
+  {
+   "title": "Understanding distortion",
+   "body": [
+    {
+     "t": "Convert two same-sized real features at different latitudes and watch their Mercator sizes diverge — Greenland's famous lie, computed."
+    }
+   ]
+  },
+  {
+   "title": "Extent specifications",
+   "body": [
+    {
+     "t": "Tile servers and WMS services ask for bounding boxes in 3857. Convert your corners here instead of guessing."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The world square",
+   "body": [
+    {
+     "t": "Web Mercator's world is a square: x and y both span ±20,037,508 m (half the equator's circumference). A projection that makes the planet a perfect square for tiling — the convenience that conquered the web."
+    }
+   ]
+  },
+  {
+   "label": "Example · The latitude cap",
+   "body": [
+    {
+     "t": "At 85.0511° the y value reaches the square's edge; beyond it, Mercator runs to infinity and the standard simply stops. Polar research uses other projections — this page's cap is the standard's, stated."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Web Mercator facts",
+  "intro": "The standard's vital statistics.",
+  "columns": [
+   "Property",
+   "Value"
+  ],
+  "rows": [
+   [
+    "EPSG code",
+    "3857"
+   ],
+   [
+    "Units",
+    "Metres (projected, not ground-true away from the equator)"
+   ],
+   [
+    "Sphere radius used",
+    "6,378,137 m (spherical Mercator on WGS84 coordinates)"
+   ],
+   [
+    "Valid latitude",
+    "±85.0511°"
+   ],
+   [
+    "Origin (0,0)",
+    "Equator × prime meridian — in the Gulf of Guinea"
+   ],
+   [
+    "Used by",
+    "Google, OSM, Bing, MapLibre, Leaflet — the web"
+   ]
+  ],
+  "note": "'Pseudo-Mercator' is the honest nickname: a sphere formula applied to ellipsoidal latitudes. The small lie is standardised, which is why everyone's maps agree."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The spherical Web Mercator projection: x = R·λ, y = R·ln(tan(π/4 + φ/2)) with R = 6,378,137 m — EPSG:3857 coordinates from WGS84 latitude/longitude."
+  ],
+  [
+   "Which map standard does it use?",
+   "EPSG:3857 itself — the web's near-universal projected system."
+  ],
+  [
+   "Can I use this in production GIS?",
+   "The formula is the standard's definition — yes for web mapping. Measuring true distances or areas in 3857 is the classic misuse; the projection preserves angles, not sizes."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84, the frame web maps and GPS share — tile and pixel systems on this page are defined over it."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — pixels and tiles quantise the world; extra coordinate decimals beyond the cell size are decoration."
+  ],
+  [
+   "Why not use it for measurements?",
+   "Scale inflates with latitude (×1/cos): a 'metre' at 60° is half a ground metre. Convert back to degrees and measure geodesically for truth."
+  ],
+  [
+   "Reverse conversion?",
+   "x/y back to lat/lon is a closed-form inverse — the tile and pixel tools in this family expose it where needed."
+  ],
+  [
+   "Datum shifts?",
+   "3857 takes WGS84 coordinates as input by definition — no datum shift hides inside it, which is half its charm."
+  ],
+  [
+   "The y at the equator?",
+   "Zero — y counts metres-north-of-equator in projection space, growing to ±20,037,508 at the caps."
+  ],
+  [
+   "Print cartography?",
+   "Serious print uses considered projections per purpose; 3857 is the web's servant, not cartography's king — a distinction this page respects."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Pixels next: the "
+  },
+  {
+   "t": "Latitude Longitude to World Pixel Calculator",
+   "l": "/tools/lat-lon-to-world-pixel-calculator"
+  },
+  {
+   "t": "; tiles: the "
+  },
+  {
+   "t": "Latitude Longitude to Map Tile Calculator",
+   "l": "/tools/lat-lon-to-map-tile-calculator"
+  },
+  {
+   "t": "; scale: the "
+  },
+  {
+   "t": "Map Meters per Pixel Calculator",
+   "l": "/tools/map-meters-per-pixel-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator",
+  "coordinate-offset-calculator"
+ ]
+}

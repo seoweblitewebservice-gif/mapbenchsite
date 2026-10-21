@@ -1,0 +1,195 @@
+{
+ "slug": "minutes-per-mile-to-minutes-per-km",
+ "primary_keyword": "Minutes per Mile to Minutes per KM Converter",
+ "secondary_keywords": [
+  "minutes per mile to minutes per km converter online",
+  "free minutes per mile to minutes per km converter",
+  "minutes per mile to minutes per km converter calculator",
+  "minutes per mile to minutes per km converter converter",
+  "minutes per mile to minutes per km converter formula"
+ ],
+ "title": "Minutes per Mile to Minutes per KM Converter",
+ "description": "Convert running or walking pace from minutes per mile to minutes per kilometre with the Minutes per Mile to Minutes per KM Converter. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, the classic 8:00 mile is a 4:58 kilometre — the split European course markers will actually call out to you.",
+ "quick_answer": "The Minutes per Mile to Minutes per KM Converter divides a pace in minutes per mile by 1.609344 and returns the pace per kilometre. Enter your min/mile and read the min/km — for European races, metric training plans and every course whose markers count kilometres while your habits count miles.",
+ "steps_intro": "Pace converts by the mile's own factor, divided — a kilometre is shorter, so the number shrinks:",
+ "use_cases": [
+  {
+   "title": "Racing in Europe",
+   "body": [
+    {
+     "t": "Your goal is written in miles; the course speaks kilometres every 1 km. Convert the goal once and the splits make sense at every board — routes from the "
+    },
+    {
+     "t": "Running Route Planner",
+     "l": "/tools/running-route-planner"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Metric training plans",
+   "body": [
+    {
+     "t": "European plans prescribe kilometres. An American runner's diary translates through this page, exactly."
+    }
+   ]
+  },
+  {
+   "title": "Parkrun tourism",
+   "body": [
+    {
+     "t": "5 km races worldwide, habits in miles. Your 25-minute parkrun is an 8:03/mile habit and a 5:00/km performance — the same runner, converted."
+    }
+   ]
+  },
+  {
+   "title": "Treadmills in kilometres",
+   "body": [
+    {
+     "t": "Most of the world's gym equipment counts metric. Convert the workout before the belt starts."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The classic mile",
+   "body": [
+    {
+     "t": "8:00 ÷ 1.609344 = 4.971 min = 4:58/km. The eight-minute miler is a sub-five kilometre runner; arithmetic delivers the good news."
+    }
+   ]
+  },
+  {
+   "label": "Example · The marathon shuffle",
+   "body": [
+    {
+     "t": "10:00/mile = 6:13/km. Over 42.2 km that is the 4 h 22 min marathon — the conversion turns a pace into a finish time's building block."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Minutes per mile to minutes per km",
+  "intro": "Pace ÷ 1.609344, computed and rounded to the second.",
+  "columns": [
+   "Per mile",
+   "Per km",
+   "Per mile",
+   "Per km"
+  ],
+  "rows": [
+   [
+    "7:00",
+    "4:21",
+    "10:00",
+    "6:13"
+   ],
+   [
+    "7:30",
+    "4:40",
+    "10:30",
+    "6:31"
+   ],
+   [
+    "8:00",
+    "4:58",
+    "11:00",
+    "6:50"
+   ],
+   [
+    "8:30",
+    "5:17",
+    "12:00",
+    "7:27"
+   ],
+   [
+    "9:00",
+    "5:36",
+    "13:00",
+    "8:05"
+   ]
+  ],
+  "note": "Speed is the reciprocal in either unit: 60 ÷ 8:00/mile = 7.5 mph; 60 ÷ 4:58/km ≈ 12.1 km/h. The Pace to Speed Calculator does that division for you."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Pace per kilometre from pace per mile: min/mile ÷ 1.609344, shown as minutes and seconds per kilometre."
+  ],
+  [
+   "Is the calculation done locally?",
+   "Yes — instantly in your browser, nothing uploaded."
+  ],
+  [
+   "How accurate is the result?",
+   "Exact to the mile's definition; only the final rounding to seconds approximates, and visibly."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. This converts the pace you ran or plan to run; traffic is not a runner's unit problem."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Courses are measured along their paths — which is why your converted pace matches the course's markers: both follow the road, not the crow."
+  ],
+  [
+   "Why divide and not multiply?",
+   "A kilometre is 0.621371 of a mile, so it takes 0.621371 times as long to cover at the same speed. The pace number shrinks with the unit."
+  ],
+  [
+   "The reverse direction?",
+   "Multiply by 1.609344 — the Minutes per KM to Minutes per Mile Converter handles it."
+  ],
+  [
+   "What is a 15:00/mile hike in km?",
+   "9:19/km — hiking paces convert identically; the trail speaks both dialects."
+  ],
+  [
+   "Why does the km pace look so much faster?",
+   "It is the same speed over a shorter unit. The flattery is the unit's, and everyone in metric countries lives with it."
+  ],
+  [
+   "Rounding over a long race?",
+   "Seconds are rounded per split; over 42 splits the drift stays inside a couple of seconds — far below pacing error."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The reverse is the "
+  },
+  {
+   "t": "Minutes per KM to Minutes per Mile Converter",
+   "l": "/tools/minutes-per-km-to-minutes-per-mile"
+  },
+  {
+   "t": "; speed from pace is the "
+  },
+  {
+   "t": "Pace to Speed Calculator",
+   "l": "/tools/pace-to-speed-calculator"
+  },
+  {
+   "t": "; and hiking paces live in the "
+  },
+  {
+   "t": "Hiking Pace Calculator",
+   "l": "/tools/hiking-pace-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-calories-distance",
+  "cycling-route-planner",
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator"
+ ]
+}

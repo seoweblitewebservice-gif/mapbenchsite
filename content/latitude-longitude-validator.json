@@ -1,0 +1,179 @@
+{
+ "slug": "latitude-longitude-validator",
+ "primary_keyword": "Latitude Longitude Validator",
+ "secondary_keywords": [
+  "coordinate validator",
+  "lat long validation",
+  "gps coordinate validator",
+  "validate latitude longitude",
+  "valid coordinate checker"
+ ],
+ "title": "Latitude Longitude Validator: Range and Format",
+ "description": "Validate a latitude/longitude pair with the Latitude Longitude Validator — range checks, swaps and format sanity in one pass. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, the pair (104.2, 39.7) fails instantly — no latitude exceeds 90 — and the validator's swap suggestion (39.7, 104.2, Denver's hemisphere with a sign question) is the diagnosis most bad data needs.",
+ "quick_answer": "The Latitude Longitude Validator checks a coordinate pair for range, format and the classic errors — latitudes beyond ±90, longitudes beyond ±180, swapped axes and implausible hemispheres. Paste the pair and read the verdict: valid, or invalid with the specific reason and the likely fix.",
+ "steps_intro": "Bad coordinates fail loudly here so they never fail silently on a map:",
+ "use_cases": [
+  {
+   "title": "Import gatekeeping",
+   "body": [
+    {
+     "t": "Run suspect pairs through before they enter a dataset — the validator is the bouncer the "
+    },
+    {
+     "t": "Coordinate Parser",
+     "l": "/tools/coordinate-parser"
+    },
+    {
+     "t": " calls first."
+    }
+   ]
+  },
+  {
+   "title": "Debugging empty maps",
+   "body": [
+    {
+     "t": "The layer renders nothing: nine times in ten, a swap, a sign or a range error — each named by the validator in one paste."
+    }
+   ]
+  },
+  {
+   "title": "Form validation logic",
+   "body": [
+    {
+     "t": "Building a form that accepts coordinates? The validator's check list is the specification your validation should implement."
+    }
+   ]
+  },
+  {
+   "title": "Data-cleaning passes",
+   "body": [
+    {
+     "t": "Sample rows from a legacy file, validate, and let the failure pattern (all swapped? all unsigned?) diagnose the whole file."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The classic swap",
+   "body": [
+    {
+     "t": "(-122.4, 37.8) claims latitude −122.4 — impossible. Swapped, it is San Francisco. The validator proposes the swap because the swap is the world's most common coordinate error."
+    }
+   ]
+  },
+  {
+   "label": "Example · Valid but wrong",
+   "body": [
+    {
+     "t": "(40.758, 73.986) passes every range check — and sits in Kazakhstan, not New York. Validation proves form, not truth; hemisphere context is the second gate, and the validator flags the question rather than the verdict."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The check list",
+  "intro": "What gets examined, in order.",
+  "columns": [
+   "Check",
+   "Catches"
+  ],
+  "rows": [
+   [
+    "Latitude range ±90",
+    "Swaps, degree/radian mixes, typos"
+   ],
+   [
+    "Longitude range ±180",
+    "Concatenated fields, unit errors"
+   ],
+   [
+    "Numeric format",
+    "Text contamination, DMS pasted as decimals"
+   ],
+   [
+    "Swap plausibility",
+    "The lon-lat ordering epidemic"
+   ],
+   [
+    "Hemisphere plausibility",
+    "Missing minus signs, when a region is expected"
+   ]
+  ],
+  "note": "A pair can pass all checks and still be the wrong place — validity is necessary, never sufficient. The map click is the final human gate."
+ },
+ "faq": [
+  [
+   "What does this tool validate?",
+   "Range (±90/±180), numeric form, likely axis swaps and — with context — hemisphere plausibility, reporting each failure specifically."
+  ],
+  [
+   "Do I need an account?",
+   "No — pair in, verdict out."
+  ],
+  [
+   "Can I rely on this for professional work?",
+   "The checks are deterministic and complete for form validity — rely on them. Truth of location remains a data-provenance question, as the 'valid but wrong' example shows."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 — the frame GPS produces and web maps consume."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — resolution is not accuracy; the precision tools on this site price each decimal place in metres."
+  ],
+  [
+   "Degrees mixed with radians?",
+   "A latitude of 0.71 is legal — and is Times Square in radians. The validator can flag suspiciously small pairs when the context smells of radians."
+  ],
+  [
+   "0,0 valid?",
+   "Perfectly — and the most suspicious valid pair in existence (Null Island collects every defaulted dataset). The validator passes it and raises an eyebrow in the notes."
+  ],
+  [
+   "Precision policing?",
+   "The validator does not punish decimals; the precision tools judge their honesty. Form first, philosophy second."
+  ],
+  [
+   "Batch validation?",
+   "Single pairs here; columns belong to scripts implementing this same check list — which is printed on the page for exactly that reuse."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Clean strings: the "
+  },
+  {
+   "t": "Coordinate Parser",
+   "l": "/tools/coordinate-parser"
+  },
+  {
+   "t": "; detect dress: the "
+  },
+  {
+   "t": "Coordinate Format Detector",
+   "l": "/tools/coordinate-format-detector"
+  },
+  {
+   "t": "; find pairs: the "
+  },
+  {
+   "t": "Latitude Longitude Finder",
+   "l": "/tools/latitude-longitude-finder"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "arcminutes-to-decimal-degrees-converter",
+  "arcseconds-to-ground-distance-calculator",
+  "bng-converter",
+  "bounding-box-calculator",
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator"
+ ]
+}

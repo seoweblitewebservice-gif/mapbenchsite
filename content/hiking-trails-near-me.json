@@ -1,0 +1,196 @@
+{
+ "slug": "hiking-trails-near-me",
+ "primary_keyword": "Hiking Trails Near Me",
+ "secondary_keywords": [
+  "trails near me",
+  "hiking routes map",
+  "find hiking trails"
+ ],
+ "title": "Hiking Trails Near Me: Mapped Routes Nearby",
+ "description": "Find named, mapped hiking routes near a place with Hiking Trails Near Me — from the open map's hiking data, nearest first. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a village you have driven through for years turns out to have three named round walks starting at its church — the finder's talent is introducing you to your own countryside.",
+ "quick_answer": "Hiking Trails Near Me searches a place or your location and lists the named hiking routes the open map's community has recorded nearby, nearest first. Search the town or trailhead area, press find, and browse routes by distance — the local knowledge of thousands of mappers, ranked for your Sunday.",
+ "steps_intro": "The trails are already mapped by the people who walk them. Ask the map:",
+ "use_cases": [
+  {
+   "title": "Weekend walk discovery",
+   "body": [
+    {
+     "t": "New routes near home beat the same loop. Pair a find with the "
+    },
+    {
+     "t": "Hiking Route Planner with Elevation",
+     "l": "/tools/hiking-route-planner-with-elevation"
+    },
+    {
+     "t": " to time and grade it."
+    }
+   ]
+  },
+  {
+   "title": "Holiday walking",
+   "body": [
+    {
+     "t": "A cottage in unknown country: the finder surfaces the named routes locals actually walk, not just the famous one in the leaflet."
+    }
+   ]
+  },
+  {
+   "title": "Checking a route exists",
+   "body": [
+    {
+     "t": "Guidebook route from 2009? The map's record is the fresher witness — trails get recorded, renamed and extended by the community."
+    }
+   ]
+  },
+  {
+   "title": "Building a walking life in a new town",
+   "body": [
+    {
+     "t": "Move somewhere, find its walks. The list is the town's outdoor autobiography."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Named routes, not just paths",
+   "body": [
+    {
+     "t": "The finder lists recorded routes — waymarked trails with names and lengths where the data carries them — rather than every footpath segment. A route is a walk someone designed; a path is only a line."
+    }
+   ]
+  },
+  {
+   "label": "Example · Distance from your point",
+   "body": [
+    {
+     "t": "Ranking starts at your search point and moves outward, so the answer reads like a local's advice: nearest first, worth-the-drive later."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What counts as a trail here",
+  "intro": "The record's vocabulary — what the finder can surface and what it cannot.",
+  "columns": [
+   "Thing",
+   "In the finder?",
+   "Note"
+  ],
+  "rows": [
+   [
+    "Named hiking routes",
+    "Yes — the core",
+    "Waymarked and recorded routes"
+   ],
+   [
+    "Plain footpaths",
+    "As routes use them",
+    "Segments, not itineraries"
+   ],
+   [
+    "Trail length",
+    "Where recorded",
+    "From the route's data"
+   ],
+   [
+    "Difficulty grade",
+    "Where recorded",
+    "Scales vary by country"
+   ],
+   [
+    "Conditions today",
+    "No",
+    "Weather and boots decide"
+   ],
+   [
+    "Your location stored?",
+    "No",
+    "Search only"
+   ]
+  ],
+  "note": "Coverage follows the hiking community's mapping energy: superb in much of Europe and North America's popular country, thinner where fewer walkers map."
+ },
+ "faq": [
+  [
+   "What counts as a trail here?",
+   "A hiking route recorded in OpenStreetMap — typically a named, often waymarked itinerary made of path segments, recorded by the mapping community."
+  ],
+  [
+   "Does it give trail length and difficulty?",
+   "Where the route's record carries them, yes. Length usually; difficulty grading varies by country and mapper, and absence is shown as absence."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — search a town or area instead. Location is an option, never a toll."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Trail names and place names vary by language and source; the map's record is one honest dialect."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "A trail I know is missing.",
+   "Unrecorded or recorded since the snapshot — OpenStreetMap can be edited by anyone, and walkers mapping their own routes is how this list grows."
+  ],
+  [
+   "Can it plan the walk itself?",
+   "The route exists in the record; your day plan (times, climb) belongs to the Hiking Route Planner with Elevation."
+  ],
+  [
+   "Are these official rights of way?",
+   "Mapped routes usually follow legal paths, but the legal record is your country's or state's own register. Signs and closures on the ground rule the day."
+  ],
+  [
+   "Dog-friendly? Facilities?",
+   "Such tags exist in the data unevenly. Where recorded they help; where not, the trailhead's own information is the guide."
+  ],
+  [
+   "Circular routes specifically?",
+   "Many recorded routes are loops; the record's shape tells. Filter with your eyes on the list's route context — the planner draws the chosen one fully."
+  ],
+  [
+   "Winter conditions and closures?",
+   "Seasonal closures and conditions live with land managers and local notices. The map finds the route; the mountain decides the day."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Plan the day in the "
+  },
+  {
+   "t": "Hiking Route Planner with Elevation",
+   "l": "/tools/hiking-route-planner-with-elevation"
+  },
+  {
+   "t": "; peaks above it: "
+  },
+  {
+   "t": "Mountain Peaks Near Me",
+   "l": "/tools/mountain-peaks-near-me"
+  },
+  {
+   "t": "; parks: the "
+  },
+  {
+   "t": "National Park Finder",
+   "l": "/tools/national-park-finder"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location"
+ ]
+}

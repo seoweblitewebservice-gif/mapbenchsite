@@ -1,0 +1,29 @@
+{
+ "slug": "solar-position-calculator",
+ "primary_keyword": "Solar Position Calculator",
+ "secondary_keywords": [
+  "solar position",
+  "sun azimuth",
+  "sun altitude",
+  "solar angle"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "moon-age-calculator",
+  "moon-illumination-calculator",
+  "moon-phase-by-date",
+  "moon-phase-calculator",
+  "moon-phase-calendar-map",
+  "moon-position-map"
+ ]
+}

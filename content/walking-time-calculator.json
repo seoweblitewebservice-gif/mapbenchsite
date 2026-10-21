@@ -1,0 +1,202 @@
+{
+ "slug": "walking-time-calculator",
+ "primary_keyword": "Walking Time Calculator",
+ "secondary_keywords": [
+  "walking time",
+  "walk duration",
+  "walking time calculator online"
+ ],
+ "title": "Walking Time Calculator: Duration from Distance",
+ "description": "Convert walking distance into duration at your chosen speed with the Walking Time Calculator — honest estimates for real walks. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 6 miles at a textbook 3 mph is exactly 2 hours — the estimate every other walker on the path is silently using too.",
+ "quick_answer": "The Walking Time Calculator converts a walking distance into a duration at the speed you choose. Set places or enter the distance, pick the pace that matches the walker, and read the time — the simple division that turns 'a few miles' into a plan with a clock on it.",
+ "steps_intro": "Time is distance at your speed. Choose the speed as honestly as the distance:",
+ "use_cases": [
+  {
+   "title": "Everyday ETA on foot",
+   "body": [
+    {
+     "t": "“Twenty minutes away” should be a computation, not a courtesy. Distance from the "
+    },
+    {
+     "t": "Walking Route Planner",
+     "l": "/tools/walking-route-planner"
+    },
+    {
+     "t": ", pace from the "
+    },
+    {
+     "t": "Walking Pace Calculator",
+     "l": "/tools/walking-pace-calculator"
+    },
+    {
+     "t": ", answer here."
+    }
+   ]
+  },
+  {
+   "title": "School-run and commute planning",
+   "body": [
+    {
+     "t": "Walking instead of driving is a decision made of minutes. Price it exactly and the decision gets fair."
+    }
+   ]
+  },
+  {
+   "title": "Group walk scheduling",
+   "body": [
+    {
+     "t": "Set the group's pace — the slowest comfortable one — and the pub lunch books itself at the right hour."
+    }
+   ]
+  },
+  {
+   "title": "Daylight checks",
+   "body": [
+    {
+     "t": "Distance and pace versus sunset: the winter walker's first calculation, done before the boots."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The textbook walk",
+   "body": [
+    {
+     "t": "6 miles ÷ 3 mph = 2 h 00 min. Every guidebook's quiet assumption, made visible so you can replace it with your own."
+    }
+   ]
+  },
+  {
+   "label": "Example · The metric ramble",
+   "body": [
+    {
+     "t": "10 km at 4.5 km/h = 2 h 13 min. A gentle pace over a real distance is a real chunk of day — the calculator's job is to say so early."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Walking times at common speeds",
+  "intro": "Duration = distance ÷ speed, at the speeds walkers actually sustain.",
+  "columns": [
+   "Distance",
+   "At 2.5 mph",
+   "At 3 mph",
+   "At 3.5 mph",
+   "At 5 km/h"
+  ],
+  "rows": [
+   [
+    "2 mi",
+    "0 h 48 m",
+    "0 h 40 m",
+    "0 h 34 m",
+    "0 h 39 m"
+   ],
+   [
+    "5 mi",
+    "2 h 00 m",
+    "1 h 40 m",
+    "1 h 26 m",
+    "1 h 37 m"
+   ],
+   [
+    "6 mi",
+    "2 h 24 m",
+    "2 h 00 m",
+    "1 h 43 m",
+    "1 h 56 m"
+   ],
+   [
+    "10 mi",
+    "4 h 00 m",
+    "3 h 20 m",
+    "2 h 51 m",
+    "3 h 13 m"
+   ],
+   [
+    "15 mi",
+    "6 h 00 m",
+    "5 h 00 m",
+    "4 h 17 m",
+    "4 h 50 m"
+   ]
+  ],
+  "note": "Speeds are sustained averages, stops excluded. Hills move you down a column — Naismith's rule in the hiking tools prices climb explicitly."
+ },
+ "faq": [
+  [
+   "What about terrain?",
+   "The calculator takes the speed you set — set a hill speed for a hill walk. For climb priced into the estimate itself, the Hiking Time Calculator applies Naismith's rule."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Crossings cost seconds that live inside a realistic average; the division itself is traffic-free."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Enter the walking distance — from the pedestrian route, not the crow. Time belongs to the ground covered."
+  ],
+  [
+   "Can route results change over time?",
+   "Your speed changes with fitness, load and company. Recompute with the current walker."
+  ],
+  [
+   "What speed should I choose?",
+   "Your measured one — the Walking Pace Calculator derives it from a real walk. Until then, 3 mph flatters most of us slightly."
+  ],
+  [
+   "Children or a dog in tow?",
+   "Choose the party's pace, not yours. A 2.5 mph column exists because toddlers and spaniels are real."
+  ],
+  [
+   "Stops included?",
+   "Add them on top. This is moving time at your speed; the day is moving time plus living time."
+  ],
+  [
+   "Does it work for running?",
+   "Enter a running speed and the same division serves. The running planners elsewhere handle routes; this page is the pure time arithmetic."
+  ],
+  [
+   "Why is my group always slower than the estimate?",
+   "Groups move at the slowest member plus conversation. Set the speed to the party's measured one — the calculator forgives; the sunset does not."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Your pace is measured by the "
+  },
+  {
+   "t": "Walking Pace Calculator",
+   "l": "/tools/walking-pace-calculator"
+  },
+  {
+   "t": "; routes come from the "
+  },
+  {
+   "t": "Walking Route Planner",
+   "l": "/tools/walking-route-planner"
+  },
+  {
+   "t": "; and hills belong to the "
+  },
+  {
+   "t": "Hiking Time Calculator",
+   "l": "/tools/hiking-time-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-calories-distance",
+  "cycling-route-planner",
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator"
+ ]
+}

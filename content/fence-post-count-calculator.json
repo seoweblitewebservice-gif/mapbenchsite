@@ -1,0 +1,178 @@
+{
+ "slug": "fence-post-count-calculator",
+ "primary_keyword": "Fence Post Count Calculator",
+ "secondary_keywords": [
+  "fence post count calculator online",
+  "free fence post count calculator",
+  "fence post count calculator calculator",
+  "fence post count calculator tool",
+  "how to use fence post count calculator"
+ ],
+ "title": "Fence Post Count Calculator: Posts by Spacing",
+ "description": "Count fence posts from length and spacing with the Fence Post Count Calculator — closed loops and straight runs handled correctly. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 3,734 ft paddock loop at 8 ft spacing needs approx. 467 posts — one per bay around a closed loop, corners included in the count by construction.",
+ "quick_answer": "The Fence Post Count Calculator divides a fence length by your post spacing and returns how many posts to buy, handling the difference between a closed loop and a straight run. Enter the length from the Fence Length Calculator and a spacing, and read the count, end-post logic applied.",
+ "steps_intro": "The classic error is one post short at the far end. The count depends on the shape of the run:",
+ "use_cases": [
+  {
+   "title": "Paddock and pasture fencing",
+   "body": [
+    {
+     "t": "Hundreds of posts at farm scale: a spacing decision of one foot moves the order by dozens. Compute both spacings and price the difference."
+    }
+   ]
+  },
+  {
+   "title": "Garden panel fencing",
+   "body": [
+    {
+     "t": "One post per panel join plus one to finish — the straight-run rule this calculator applies so the last panel has something to meet."
+    }
+   ]
+  },
+  {
+   "title": "Temporary and event fencing",
+   "body": [
+    {
+     "t": "Crowd barriers and site fencing are hired by the post-and-panel. A correct count is the difference between a tidy quote and a second delivery."
+    }
+   ]
+  },
+  {
+   "title": "Repair planning",
+   "body": [
+    {
+     "t": "Replacing a storm-damaged run: count the bays, not the surviving posts — the spacing you inherit decides the number."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The closed loop",
+   "body": [
+    {
+     "t": "3,733.5 ft loop at 8 ft spacing: 3,733.5 ÷ 8 = 466.7, so 467 bays — and a closed loop needs exactly one post per bay, 467 posts. The loop closes on itself, so there is no extra end post."
+    }
+   ]
+  },
+  {
+   "label": "Example · The straight run",
+   "body": [
+    {
+     "t": "A 100 ft garden run at 6 ft spacing: 100 ÷ 6 = 16.7, so 17 bays and 18 posts — bays plus one, because a straight run has two ends. This off-by-one is the entire reason the calculator exists."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Posts for a 3,734 ft loop",
+  "intro": "Post counts for the square 20-acre paddock of the Fence Length Calculator, by spacing — closed loop, one post per bay after rounding up.",
+  "columns": [
+   "Post spacing",
+   "Bays (= posts, loop)",
+   "If it were a straight run"
+  ],
+  "rows": [
+   [
+    "6 ft",
+    "623",
+    "624"
+   ],
+   [
+    "8 ft",
+    "467",
+    "468"
+   ],
+   [
+    "10 ft",
+    "374",
+    "375"
+   ],
+   [
+    "12 ft",
+    "312",
+    "313"
+   ],
+   [
+    "16 ft",
+    "234",
+    "235"
+   ]
+  ],
+  "note": "Corner and gate posts are heavier-duty items in real builds — counted here as posts, specified separately in the order."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The number of posts a fence needs: length divided by spacing, rounded up to whole bays, plus the end post when the run is straight rather than a loop."
+  ],
+  [
+   "Is it free to use?",
+   "Yes — and it pairs with the Fence Length Calculator, which supplies the length this count consumes."
+  ],
+  [
+   "How accurate is the result?",
+   "Exact arithmetic for the inputs given. Real fences add corner bracing, gate posts and spares — buy the count, then the extras your design names."
+  ],
+  [
+   "Why does a loop need fewer posts than a run?",
+   "A loop's last bay lands on the first post, so posts equal bays. A straight run's last bay lands on air, so it needs a final post: bays + 1."
+  ],
+  [
+   "What spacing should I choose?",
+   "By fence type: stock fencing commonly 8–12 ft with droppers between, post-and-rail shorter, garden panels fixed by panel width. The table shows what each choice costs in posts."
+  ],
+  [
+   "Do corners need extra posts?",
+   "Corners and gateways take strain and usually get heavier posts and bracing — same count position, beefier item. The calculator counts positions; your design upgrades the corners."
+  ],
+  [
+   "What about a run with a gate in the middle?",
+   "Treat it as two straight runs meeting at gate posts — count each side as its own run and add the gate posts themselves."
+  ],
+  [
+   "What about intermediate droppers or stays?",
+   "Wire fences often add lightweight droppers between posts — they are counted per bay like posts but cost differently. This count is the structural posts; add droppers per bay if your design uses them."
+  ],
+  [
+   "How many spare posts should I buy?",
+   "A few percent for damage and mistakes is the usual practice — the count here is the fence's requirement, the spares are your judgement on top."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Get the length from the "
+  },
+  {
+   "t": "Fence Length Calculator",
+   "l": "/tools/fence-length-calculator"
+  },
+  {
+   "t": ", measure the field it fences in the "
+  },
+  {
+   "t": "Acreage Map Calculator",
+   "l": "/tools/acreage-map-calculator"
+  },
+  {
+   "t": ", and size a garden's beds inside it with the "
+  },
+  {
+   "t": "Garden Bed Area Calculator",
+   "l": "/tools/garden-bed-area-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "circle-area-from-radius",
+  "circle-circumference-from-radius",
+  "cities-within-drawn-area-finder",
+  "crop-row-length-calculator",
+  "customer-radius-area-calculator",
+  "delivery-radius-area-calculator"
+ ]
+}

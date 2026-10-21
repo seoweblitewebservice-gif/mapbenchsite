@@ -1,0 +1,197 @@
+{
+ "slug": "equal-circle-overlap-calculator",
+ "primary_keyword": "Equal Circle Overlap Calculator",
+ "secondary_keywords": [
+  "equal circle overlap calculator online",
+  "free equal circle overlap calculator",
+  "equal circle overlap calculator calculator",
+  "equal circle overlap calculator tool",
+  "how to calculate equal circle overlap calculator"
+ ],
+ "title": "Equal Circle Overlap Calculator: Lens Area",
+ "description": "Find the shared area of two equal circles with the Equal Circle Overlap Calculator — the lens area from radius and centre distance. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, two circles of radius 10 whose centres are 10 apart overlap by approx. 122.84 square units — about 39.1% of either circle.",
+ "quick_answer": "The Equal Circle Overlap Calculator computes the lens-shaped area shared by two circles of the same radius whose centres are a given distance apart. Enter the radius and the centre separation and it returns the overlap area — the geometry behind coverage sharing, Venn diagrams and paired service zones.",
+ "steps_intro": "Two equal circles, one lens. The formula is classical; the inputs are two numbers:",
+ "use_cases": [
+  {
+   "title": "Coverage and signal planning",
+   "body": [
+    {
+     "t": "Two transmitters, sprinklers or sensors with equal range overlap in a lens. Its area is the double-covered zone — sometimes the point, sometimes the waste."
+    }
+   ]
+  },
+  {
+   "title": "Service zone design",
+   "body": [
+    {
+     "t": "Two depots with equal delivery radii double-serve the lens between them. Size it here before deciding whether that is redundancy or resilience — the zones themselves are drawn in the "
+    },
+    {
+     "t": "Delivery Radius Checker",
+     "l": "/tools/delivery-radius-checker"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Irrigation layout",
+   "body": [
+    {
+     "t": "Sprinkler heads are spaced so their circles overlap by design. The lens area tells you how much ground gets watered twice at a given spacing."
+    }
+   ]
+  },
+  {
+   "title": "Teaching circle geometry",
+   "body": [
+    {
+     "t": "The lens (vesica) is the prettiest result in elementary circle geometry, and this calculator lets a class explore it numerically before proving it."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Centres one radius apart",
+   "body": [
+    {
+     "t": "r = 10, d = 10: overlap = 2r² cos⁻¹(d/2r) − (d/2)√(4r² − d²) = 200 × 1.0472 − 5 × 17.32 ≈ 122.84 — 39.1% of either circle (314.16). One radius of separation still shares over a third of each circle."
+    }
+   ]
+  },
+  {
+   "label": "Example · Wider spacing",
+   "body": [
+    {
+     "t": "r = 10, d = 14: the lens shrinks to approx. 59.10, just 18.8% of a circle. Four extra units of separation halved the sharing — the relationship is steep, which the table below maps."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Overlap by separation (r = 10)",
+  "intro": "Lens areas for two radius-10 circles as the centre distance grows — computed from the lens formula, labelled approx. where rounded.",
+  "columns": [
+   "Centre distance d",
+   "Overlap area",
+   "Share of one circle"
+  ],
+  "rows": [
+   [
+    "0 (coincident)",
+    "314.16",
+    "100%"
+   ],
+   [
+    "5",
+    "215.21",
+    "68.5%"
+   ],
+   [
+    "10",
+    "122.84",
+    "39.1%"
+   ],
+   [
+    "14",
+    "59.10",
+    "18.8%"
+   ],
+   [
+    "17",
+    "21.41",
+    "6.8%"
+   ],
+   [
+    "20 (touching externally)",
+    "0",
+    "0%"
+   ]
+  ],
+  "note": "Beyond d = 2r the circles are separate and the overlap is zero; at d = 0 they coincide completely. All the action happens between."
+ },
+ "faq": [
+  [
+   "What formula does it use?",
+   "The circular lens formula: 2r² cos⁻¹(d ÷ 2r) − (d ÷ 2) × √(4r² − d²), for equal radii r and centre distance d. The guide on this page derives it from two circular segments."
+  ],
+  [
+   "What does this tool calculate?",
+   "The area common to two equal circles — nothing else, precisely. Unequal circles need the general two-circle intersection formula, a different calculation."
+  ],
+  [
+   "Do I need an account?",
+   "No. Two inputs, instant answer, nothing uploaded."
+  ],
+  [
+   "Can I use the result for professional work?",
+   "For planning sprinkler, sensor and coverage layouts, yes — the geometry is exact. Field performance (pressure, wind, terrain) then modifies what the geometry promises."
+  ],
+  [
+   "What if the centres are further apart than 2r?",
+   "The overlap is zero — the circles do not meet. The calculator reports 0 rather than a negative fiction."
+  ],
+  [
+   "What if one circle is inside the other?",
+   "With equal radii that only happens at d = 0 (full coincidence). Unequal containment belongs to the general formula."
+  ],
+  [
+   "Why 'equal' circles only?",
+   "Because the symmetric lens has the clean closed form above, and equal-radius pairs (same sprinkler model, same delivery promise) are the common practical case."
+  ],
+  [
+   "What is the overlap when d equals r?",
+   "Approx. 39.1% of either circle — the famous vesica proportion, where each centre lies on the other's circumference."
+  ],
+  [
+   "Can I use it for sprinkler spacing?",
+   "Yes: pick a target overlap share from the table, read off the d it implies for your heads' radius, and space accordingly."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Single circles are covered by "
+  },
+  {
+   "t": "Circle Area From Radius",
+   "l": "/tools/circle-area-from-radius"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Circle Circumference From Radius",
+   "l": "/tools/circle-circumference-from-radius"
+  },
+  {
+   "t": "; drawn pairs on real ground belong to the "
+  },
+  {
+   "t": "Map Radius Tool",
+   "l": "/tools/map-radius"
+  },
+  {
+   "t": " and the "
+  },
+  {
+   "t": "Buffer Zone Map",
+   "l": "/tools/buffer-zone-map"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "center-of-polygon",
+  "circle-area-from-radius",
+  "circle-circumference-from-radius",
+  "cities-within-drawn-area-finder",
+  "crop-row-length-calculator",
+  "customer-radius-area-calculator"
+ ]
+}

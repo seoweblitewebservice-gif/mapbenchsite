@@ -1,0 +1,196 @@
+{
+ "slug": "service-call-cost-calculator",
+ "primary_keyword": "Service Call Cost Calculator",
+ "secondary_keywords": [
+  "service call cost calculator online",
+  "free service call cost calculator",
+  "service call cost calculator calculator",
+  "service call cost calculator tool",
+  "how to use service call cost calculator"
+ ],
+ "title": "Service Call Cost Calculator: Callout Pricing",
+ "description": "Build a service call's price from callout fee, mileage and labour with the Service Call Cost Calculator — quotes with the working shown. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, an $85 callout plus 36 miles at an example $0.67 a mile plus 1½ hours at $95 comes to $251.62 — every line of it explainable at the door.",
+ "quick_answer": "The Service Call Cost Calculator builds the price of sending a technician: a callout fee, mileage to the job at your rate, and labour time at your hourly rate. Enter the figures, the job's distance and its duration, and read a total decomposing into lines a customer can be shown.",
+ "steps_intro": "A callout price is three honest parts. Assemble yours:",
+ "use_cases": [
+  {
+   "title": "Quoting before dispatch",
+   "body": [
+    {
+     "t": "A price given on the phone survives arrival when it was built from fee + miles + time. Distance from the "
+    },
+    {
+     "t": "Driving Distance Calculator",
+     "l": "/tools/driving-distance-calculator"
+    },
+    {
+     "t": ", structure from here."
+    }
+   ]
+  },
+  {
+   "title": "Trade-rate setting",
+   "body": [
+    {
+     "t": "Your mileage and hourly rates must clear your true costs — the "
+    },
+    {
+     "t": "Cost Per Mile Calculator",
+     "l": "/tools/cost-per-mile-calculator"
+    },
+    {
+     "t": " supplies the floor the mileage rate must beat."
+    }
+   ]
+  },
+  {
+   "title": "Out-of-area decisions",
+   "body": [
+    {
+     "t": "A distant job prices itself here before you commit the van. Some distances are profitable; the calculator names which."
+    }
+   ]
+  },
+  {
+   "title": "Invoice consistency",
+   "body": [
+    {
+     "t": "Same structure on every invoice is what 'professional' looks like on paper. Customers compare notes; formulae do not embarrass."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The standard callout",
+   "body": [
+    {
+     "t": "$85.00 fee + 36 × $0.67 mileage ($24.12) + 1.5 × $95 labour ($142.50) = $251.62. The customer asking 'how is it made up?' gets three numbers, not a pause."
+    }
+   ]
+  },
+  {
+   "label": "Example · The near neighbour",
+   "body": [
+    {
+     "t": "Same fee and labour with a 4-mile trip: $85 + $2.68 + $142.50 = $230.18. The callout fee is what proximity cannot discount — it covers showing up at all."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Anatomy of a service-call price",
+  "intro": "The three lines and what each defends — your rates replace the examples in the calculator.",
+  "columns": [
+   "Line",
+   "Covers",
+   "Set it from"
+  ],
+  "rows": [
+   [
+    "Callout fee",
+    "Dispatch, admin, the first mile of everything",
+    "Your fixed cost per job"
+   ],
+   [
+    "Mileage",
+    "Fuel, wear, the driver's travelling time",
+    "Your cost per mile plus margin"
+   ],
+   [
+    "Labour",
+    "The skilled hour on site",
+    "Your trade's rate and your costs"
+   ],
+   [
+    "Parts",
+    "Materials fitted",
+    "Quoted separately, honestly"
+   ],
+   [
+    "Total",
+    "The price",
+    "The sum — never a mood"
+   ]
+  ],
+  "note": "Rates in the examples are illustrations. Your market, trade body and cost base set the real figures."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "A service call's price: callout fee + (mileage rate × distance) + (hourly rate × hours), decomposed line by line."
+  ],
+  [
+   "Is it free to use?",
+   "Yes — for quoting your work or sanity-checking a bill you received."
+  ],
+  [
+   "How accurate is the result?",
+   "Exact for the rates and figures entered. Commercial accuracy — rates that truly cover your costs — starts with your cost-per-mile figure."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Travelling time is priced through your rates; traffic argues for a time-based mileage component, which is a tariff design choice."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Charge the road miles — the van travels those, and the customer's own map will agree with them."
+  ],
+  [
+   "Should the return journey be charged?",
+   "Most callout tariffs fold the return into the rate or the fee. State the convention on the quote and apply it to every job alike."
+  ],
+  [
+   "Do parts belong in the total?",
+   "Listed separately, usually — this calculator prices attendance and labour. A quote that hides parts inside a labour line invites the argument it deserves."
+  ],
+  [
+   "After-hours premiums?",
+   "Apply them to the labour line (or all lines) as your tariff states — the structure holds, the rates change costume."
+  ],
+  [
+   "Two technicians attend?",
+   "Labour doubles or the rate does; price the crew you send. The formula's shape is unchanged."
+  ],
+  [
+   "The customer supplies their own parts.",
+   "Then the parts line is zero and the quote says so — attendance and labour still price exactly as here."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Costs floors are the "
+  },
+  {
+   "t": "Cost Per Mile Calculator",
+   "l": "/tools/cost-per-mile-calculator"
+  },
+  {
+   "t": "; courier kin is the "
+  },
+  {
+   "t": "Courier Distance Charge Calculator",
+   "l": "/tools/courier-distance-charge-calculator"
+  },
+  {
+   "t": "; and distances are the "
+  },
+  {
+   "t": "Driving Distance Calculator",
+   "l": "/tools/driving-distance-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-calories-distance",
+  "cycling-route-planner",
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "drive-time-map"
+ ]
+}

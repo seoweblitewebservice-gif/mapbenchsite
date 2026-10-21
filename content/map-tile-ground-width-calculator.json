@@ -1,0 +1,195 @@
+{
+ "slug": "map-tile-ground-width-calculator",
+ "primary_keyword": "Map Tile Ground Width Calculator",
+ "secondary_keywords": [
+  "map tile ground width calculator online",
+  "free map tile ground width calculator",
+  "map tile ground width calculator calculator",
+  "map tile ground width calculator tool",
+  "how to calculate map tile ground width calculator"
+ ],
+ "title": "Map Tile Ground Width Calculator",
+ "description": "Compute how much ground a map tile covers at a zoom and latitude with the Map Tile Ground Width Calculator — metres across, honestly scaled. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a zoom-15 tile spans 1,222 metres at the equator but only 926 metres in New York and 611 metres at 60° — same tile, shrinking ground.",
+ "quick_answer": "The Map Tile Ground Width Calculator computes the real-world width a 256-pixel map tile covers at a given zoom and latitude. Enter zoom and latitude and read the metres across — the tile's true size on the ground, and what 'one tile off' costs.",
+ "steps_intro": "Tiles are constant on screen and elastic on the ground:",
+ "use_cases": [
+  {
+   "title": "Offline region footprints",
+   "body": [
+    {
+     "t": "A pack of N × M tiles covers ground this page prices per tile — total area follows. Counts come from "
+    },
+    {
+     "t": "Map Tile Count by Zoom",
+     "l": "/tools/map-tile-count-by-zoom"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Debugging in ground units",
+   "body": [
+    {
+     "t": "“The layer is one tile off” — at z15 in Oslo that is 611 m of wrong; at the equator, 1,222. Severity is a ground quantity, not a tile quantity."
+    }
+   ]
+  },
+  {
+   "title": "Render and label planning",
+   "body": [
+    {
+     "t": "Label density and feature generalisation key off ground size per tile — northern tiles hold smaller, denser worlds."
+    }
+   ]
+  },
+  {
+   "title": "Comparing zooms honestly",
+   "body": [
+    {
+     "t": "Zoom steps halve ground width — the table makes the pyramid's geometry felt in metres."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The cos curve in tiles",
+   "body": [
+    {
+     "t": "z15 widths: 1,222 m (equator), 926 m (New York), 864 m (45°), 611 m (60°), 212 m (80°). The tile grid is the Mercator projection's fingerprint — uniform pixels, tapering ground."
+    }
+   ]
+  },
+  {
+   "label": "Example · Height matches width",
+   "body": [
+    {
+     "t": "Tiles are square on the ground locally (Mercator is conformal): ground height ≈ ground width at the tile's latitude — one number describes the footprint, a small mercy."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Ground width of one tile",
+  "intro": "Computed: equatorial circumference ÷ 2^z, scaled by cos(latitude).",
+  "columns": [
+   "Zoom",
+   "Equator",
+   "45°",
+   "60°"
+  ],
+  "rows": [
+   [
+    "10",
+    "39.1 km",
+    "27.7 km",
+    "19.6 km"
+   ],
+   [
+    "13",
+    "4.89 km",
+    "3.46 km",
+    "2.45 km"
+   ],
+   [
+    "15",
+    "1.22 km",
+    "864 m",
+    "611 m"
+   ],
+   [
+    "17",
+    "306 m",
+    "216 m",
+    "153 m"
+   ],
+   [
+    "19",
+    "76 m",
+    "54 m",
+    "38 m"
+   ]
+  ],
+  "note": "Height ≈ width at the tile's own latitude (conformal projection). At the grid's cap (85.0511°) a z15 tile spans ~106 m — the smallest full tiles on Earth."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Tile ground width = (equatorial circumference ÷ 2^zoom) × cos(latitude) — equivalently 256 × metres-per-pixel at that latitude."
+  ],
+  [
+   "Which map standard does it use?",
+   "The slippy-map standard (Web Mercator, 256-px tiles) shared by OSM, Google and MapLibre."
+  ],
+  [
+   "Can I use this in production GIS?",
+   "The formulas are the production standard itself — yes for web-mapping work."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 — tile systems are defined over it."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — tiles and pixels quantise; decimals beyond the cell are decoration."
+  ],
+  [
+   "Why does latitude shrink tiles?",
+   "Mercator stretches the map poleward; the tiles cut uniform screen squares from a stretched map, so their ground footprint contracts by the same cosine."
+  ],
+  [
+   "Width at my exact tile?",
+   "A tile's width varies slightly across its own height (latitude changes within it) — the calculator uses the tile-centre latitude, the standard convention."
+  ],
+  [
+   "Area of a tile?",
+   "Width² approximately, locally — the conformal square makes area a one-line derivation."
+  ],
+  [
+   "Vector tiles same width?",
+   "Identical grid, identical ground width — vector versus raster changes content, not geometry."
+  ],
+  [
+   "Relating to scale bars?",
+   "A tile's width across a known screen size gives the display's true scale — the ground-width number is what scale bars are drawn from."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Counts: the "
+  },
+  {
+   "t": "Map Tile Count by Zoom",
+   "l": "/tools/map-tile-count-by-zoom"
+  },
+  {
+   "t": "; the pixel rate: the "
+  },
+  {
+   "t": "Map Meters per Pixel Calculator",
+   "l": "/tools/map-meters-per-pixel-calculator"
+  },
+  {
+   "t": "; bounds: the "
+  },
+  {
+   "t": "Map Tile Bounds Calculator",
+   "l": "/tools/map-tile-bounds-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator"
+ ]
+}

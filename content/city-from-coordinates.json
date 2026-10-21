@@ -1,0 +1,189 @@
+{
+ "slug": "city-from-coordinates",
+ "primary_keyword": "City from Coordinates Finder",
+ "secondary_keywords": [
+  "city from coordinates",
+  "what city is this latitude longitude",
+  "coordinates to city",
+  "lat long to city name"
+ ],
+ "title": "City from Coordinates Finder: Name That Point",
+ "description": "Get the city or nearest town for a bare coordinate pair with the City from Coordinates Finder — from the map's address record. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a GPS log entry at 40.7580, −73.9855 resolves to New York — the city field of the point's address record, no map-reading required.",
+ "quick_answer": "The City from Coordinates Finder takes a bare latitude/longitude pair and returns the city (or nearest town) for that point from OpenStreetMap's address record. Paste the pair and read the settlement the record assigns — turning GPS logs and photo metadata back into named places.",
+ "steps_intro": "Coordinates are anonymous. Give them back their city:",
+ "use_cases": [
+  {
+   "title": "Photo metadata sorting",
+   "body": [
+    {
+     "t": "EXIF pairs become city names for the album — the "
+    },
+    {
+     "t": "Reverse Geocoder",
+     "l": "/tools/reverse-geocoder"
+    },
+    {
+     "t": " returns the full address stack when the city is not enough."
+    }
+   ]
+  },
+  {
+   "title": "GPS log interpretation",
+   "body": [
+    {
+     "t": "Trackers and dashcams record numbers. This finder narrates them: which city each cluster of points belongs to."
+    }
+   ]
+  },
+  {
+   "title": "Survey and field notes",
+   "body": [
+    {
+     "t": "A note that says only coordinates gets its municipal context — the settlement layer administrators file by."
+    }
+   ]
+  },
+  {
+   "title": "Data cleaning",
+   "body": [
+    {
+     "t": "A coordinates column audited against a claimed city column — mismatches surface the swapped and stale rows."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The countryside answer",
+   "body": [
+    {
+     "t": "A point in open farmland has no containing city; the finder reports the nearest town the record supports, labelled as such. 'Near' is honest; pretending 'in' would not be."
+    }
+   ]
+  },
+  {
+   "label": "Example · Formats accepted",
+   "body": [
+    {
+     "t": "Decimal pairs paste directly; other dresses (DMS, degrees-minutes) convert first in the "
+    },
+    {
+     "t": "Coordinate Converter",
+     "l": "/tools/coordinate-converter"
+    },
+    {
+     "t": " — the finder and the converter are a pipeline."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the answer rests on",
+  "intro": "The address record's settlement logic.",
+  "columns": [
+   "Point type",
+   "Answer shape"
+  ],
+  "rows": [
+   [
+    "Inside a city or town",
+    "That settlement, from its boundary record"
+   ],
+   [
+    "Rural point",
+    "Nearest recorded settlement, labelled as nearest"
+   ],
+   [
+    "Suburban edge",
+    "The containing municipality — which may not be the famous neighbour"
+   ],
+   [
+    "Water point",
+    "No city — the record's emptiness is the information"
+   ]
+  ],
+  "note": "Settlement data is OpenStreetMap's community record: deep in populated regions, thinner where mapping is sparse. Administrative truth for legal purposes lives with authorities; this is the map's answer, fast and honest."
+ },
+ "faq": [
+  [
+   "What if the point is in the countryside?",
+   "The finder reports the nearest town the record supports, as 'nearest' — rural points get orientation, not a pretend municipality."
+  ],
+  [
+   "Which formats can I paste?",
+   "Decimal-degree pairs directly. DMS and other formats convert in seconds with the site's Coordinate Converter, then paste here."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 — paste GPS and web-map coordinates as they come."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — the city answer is identical for a point and its six-decimal twin. Precision beyond the record's grain changes nothing here."
+  ],
+  [
+   "Can I copy the result into GIS software?",
+   "The city name is text; the point stays coordinates. Both travel into GIS as attributes of the same feature."
+  ],
+  [
+   "Postal city versus governing city?",
+   "This finder reads administrative records — the governing settlement. Mail's 'city' follows postal geography and can differ, as the ZIP tools on this site explain."
+  ],
+  [
+   "It named a place I have never heard of.",
+   "Small municipalities hide inside famous metros' shadows. The record's answer is the point's actual settlement — often the day's geography lesson."
+  ],
+  [
+   "Ocean or lake points?",
+   "No city exists to name; the empty result is the correct one, and the Ocean or Land Checker formalises the question."
+  ],
+  [
+   "Batch of coordinates?",
+   "One at a time here; the Batch Geocoder resolves lists when the pile grows."
+  ],
+  [
+   "Towns versus cities — who decides?",
+   "The record's settlement classification. The finder reports the data's term rather than promoting villages for morale."
+  ],
+  [
+   "International points?",
+   "Worldwide where the address data reaches — settlement naming follows the record's local forms."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Full address: the "
+  },
+  {
+   "t": "Reverse Geocoder",
+   "l": "/tools/reverse-geocoder"
+  },
+  {
+   "t": "; country: "
+  },
+  {
+   "t": "Country from Coordinates Finder",
+   "l": "/tools/country-from-coordinates"
+  },
+  {
+   "t": "; municipal depth: "
+  },
+  {
+   "t": "What City Am I In",
+   "l": "/tools/what-city-am-i-in"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "arcminutes-to-decimal-degrees-converter",
+  "arcseconds-to-ground-distance-calculator",
+  "bng-converter",
+  "bounding-box-calculator",
+  "coordinate-bounding-box-generator",
+  "coordinate-destination-calculator"
+ ]
+}

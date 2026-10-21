@@ -1,0 +1,188 @@
+{
+ "slug": "what-county-am-i-in",
+ "primary_keyword": "What County Am I In?",
+ "secondary_keywords": [
+  "what county am i in",
+  "county finder",
+  "county lookup",
+  "county fips lookup",
+  "find county by location"
+ ],
+ "title": "What County Am I In? Census-Verified Counties",
+ "description": "Answer 'What County Am I In?' with Census verification — FIPS code, boundary check and ACS context for US points; mapped data elsewhere. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a point in Chicago resolves to Cook County, FIPS 17031 — verified against Census county geometry, the same key that unlocks the county's ACS estimates.",
+ "quick_answer": "What County Am I In? verifies a US point against U.S. Census county geometry and returns the county, its FIPS code and recent ACS context. Use GPS, search an address, paste coordinates or click the map; outside the US it falls back to mapped administrative data where available.",
+ "steps_intro": "Census-verified in the US, honestly mapped elsewhere:",
+ "use_cases": [
+  {
+   "title": "Filing, forms and jurisdictions",
+   "body": [
+    {
+     "t": "The county a point sits in, with the FIPS code forms quietly want — the "
+    },
+    {
+     "t": "Address to County Lookup",
+     "l": "/tools/address-to-county-lookup"
+    },
+    {
+     "t": " is the address-first sibling."
+    }
+   ]
+  },
+  {
+   "title": "Research joins",
+   "body": [
+    {
+     "t": "FIPS is the join key for American statistics. A verified county per point turns a coordinate list into analysable data."
+    }
+   ]
+  },
+  {
+   "title": "ACS context reading",
+   "body": [
+    {
+     "t": "The page joins recent American Community Survey estimates to the county — read them as estimates with margins, exactly as the Census publishes them."
+    }
+   ]
+  },
+  {
+   "title": "Outside the US",
+   "body": [
+    {
+     "t": "County-equivalents (districts, regions, provinces) come from mapped administrative data — labelled as the fallback it is."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The FIPS is the point",
+   "body": [
+    {
+     "t": "Cook County 17031, Harris County 48201, Los Angeles County 06037: five digits, state plus county, unique nationwide. Names repeat across states — 'Washington County' exists in 31 of them; the code never repeats."
+    }
+   ]
+  },
+  {
+   "label": "Example · Equivalents count",
+   "body": [
+    {
+     "t": "Louisiana parishes, Alaska boroughs, Virginia's independent cities: the Census treats them as county-equivalents and so does this page."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading the result",
+  "intro": "What each part of the answer is for.",
+  "columns": [
+   "Output",
+   "Meaning",
+   "Use"
+  ],
+  "rows": [
+   [
+    "County name",
+    "Verified against Census geometry (US)",
+    "Forms, jurisdictions, records"
+   ],
+   [
+    "FIPS code",
+    "State (2) + county (3) digits",
+    "Data joins of every kind"
+   ],
+   [
+    "ACS context",
+    "Recent Census survey estimates",
+    "Orientation — estimates, with margins"
+   ],
+   [
+    "Boundary highlight",
+    "The county polygon on the map",
+    "Seeing the edge cases"
+   ]
+  ],
+  "note": "ACS figures are survey estimates for their stated vintage — orientation-grade context, republished here as the Census frames them, not invented precision."
+ },
+ "faq": [
+  [
+   "How are U.S. county results verified?",
+   "The point is tested against U.S. Census Bureau county geometry — a point-in-polygon check against the official shapes, which is how the FIPS code attached can be trusted."
+  ],
+  [
+   "Does the tool work outside the United States?",
+   "Yes, via mapped administrative-area data where available — county-equivalents such as districts and regions. The Census verification and FIPS are US-only, and the page labels the difference."
+  ],
+  [
+   "Where do U.S. demographics come from?",
+   "The U.S. Census Bureau's American Community Survey (ACS) — recent estimates joined by FIPS. They are estimates with margins of error, published as context, exactly as the Census intends."
+  ],
+  [
+   "Can I use GPS, an address or coordinates?",
+   "All three, plus a map click — every route resolves to the same verified check on the same point."
+  ],
+  [
+   "Is this suitable for legal boundary decisions?",
+   "It is a strong first answer — Census geometry is the public standard. Legal determinations belong to official authorities and surveys."
+  ],
+  [
+   "What is a FIPS code?",
+   "The Federal Information Processing Standards code: two digits for the state, three for the county — the universal key for US county data."
+  ],
+  [
+   "Independent cities?",
+   "Virginia's independent cities (and a few elsewhere) are county-equivalents with their own FIPS — handled as counties, correctly."
+  ],
+  [
+   "The point is in water.",
+   "Census geometry includes county water areas in places (the Great Lakes especially) — a water point can legitimately return the county whose water it is."
+  ],
+  [
+   "County changed its boundary?",
+   "Annexations and rare reorganisations happen; Census vintages track them. The geometry here follows a stated Census vintage."
+  ],
+  [
+   "County seats and courthouses?",
+   "Beyond the county's identity, its seat is a separate lookup in the county's own records. This page's FIPS unlocks those datasets."
+  ],
+  [
+   "Two counties claim the point?",
+   "Point-in-polygon against one geometry set gives one verdict. Where sources disagree, it is vintage — and the Census set is the reference this page stands on."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Address-first: "
+  },
+  {
+   "t": "Address to County Lookup",
+   "l": "/tools/address-to-county-lookup"
+  },
+  {
+   "t": "; up: "
+  },
+  {
+   "t": "What State Am I In",
+   "l": "/tools/what-state-am-i-in"
+  },
+  {
+   "t": "; postal: "
+  },
+  {
+   "t": "What ZIP Code Am I In",
+   "l": "/tools/what-zip-code-am-i-in"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder"
+ ]
+}

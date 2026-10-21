@@ -1,0 +1,201 @@
+{
+ "slug": "airport-distance-calculator",
+ "primary_keyword": "Airport Distance Calculator",
+ "secondary_keywords": [
+  "distance between airports",
+  "airport to airport distance",
+  "airport miles calculator",
+  "airport km calculator",
+  "air distance between airports"
+ ],
+ "title": "Airport Distance Calculator: Great-Circle Miles",
+ "description": "Compare any two airports with the Airport Distance Calculator: great-circle distance in km and miles plus a rough airborne-time reference. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, New York JFK to Los Angeles LAX measures approx. 3,974 km (2,470 miles) on the great circle — the shortest surface path between the two runways' cities, before airways and weather add their share.",
+ "quick_answer": "The Airport Distance Calculator compares two airports by the shortest path between them — the great-circle distance — and reports it in kilometres and miles with a rough airborne-time reference. Search by airport name or code, and treat the result as the geographic baseline every flight route is longer than.",
+ "steps_intro": "Two airports, one baseline number — the figure airlines, mileage programs and route planners all start from:",
+ "use_cases": [
+  {
+   "title": "Mileage and points planning",
+   "body": [
+    {
+     "t": "Award charts and mileage runs are priced on distance. Checking the great-circle figure between two airports tells you what a ticket should earn before you trust a booking page's estimate."
+    }
+   ]
+  },
+  {
+   "title": "Route feasibility sketches",
+   "body": [
+    {
+     "t": "Before asking whether a non-stop exists — the "
+    },
+    {
+     "t": "Airport Route Finder",
+     "l": "/tools/airport-route-finder"
+    },
+    {
+     "t": " answers that — the distance tells you whether the hop is a regional shuttle or a long-haul commitment for crew, aircraft and fuel."
+    }
+   ]
+  },
+  {
+   "title": "Comparing two candidate airports",
+   "body": [
+    {
+     "t": "Cities with several airports (New York, London, Paris) reward a distance check: the nearer airport to your meeting is not always the one with the shorter flight. Run both pairs and compare totals, not just air time."
+    }
+   ]
+  },
+  {
+   "title": "Teaching and coursework",
+   "body": [
+    {
+     "t": "Airport pairs make great-circle geometry concrete — the numbers are real, the airports are findable on any map, and the curved route surprises every class the first time."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · United States",
+   "body": [
+    {
+     "t": "JFK to LAX: approx. 3,974.3 km (2,469.5 mi), initial bearing 273.8° — almost due west, bending north as the route progresses. Chicago O'Hare to Dallas/Fort Worth is a shorter domestic hop: approx. 1,290.0 km (801.6 mi)."
+    }
+   ]
+  },
+  {
+   "label": "Example · Europe",
+   "body": [
+    {
+     "t": "London Heathrow to Paris Charles de Gaulle is only approx. 347.0 km (215.6 mi) — a distance many travellers drive — while Heathrow to Frankfurt stretches to approx. 653.5 km (406.1 mi). Short European sectors are where airport choice changes the trip most."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Popular airport pairs",
+  "intro": "Great-circle distances between major airports from their published coordinates, computed with the site's haversine model (R = 6,371.0088 km) — approx. baselines, not flown route mileage.",
+  "columns": [
+   "Pair",
+   "Kilometres",
+   "Miles",
+   "Initial bearing"
+  ],
+  "rows": [
+   [
+    "New York JFK ↔ Los Angeles LAX",
+    "3,974.3",
+    "2,469.5",
+    "273.8°"
+   ],
+   [
+    "New York JFK ↔ London Heathrow",
+    "5,540.0",
+    "3,442.4",
+    "51.4°"
+   ],
+   [
+    "London Heathrow ↔ Paris CDG",
+    "347.0",
+    "215.6",
+    "140.9°"
+   ],
+   [
+    "Chicago O'Hare ↔ Dallas/Fort Worth",
+    "1,290.0",
+    "801.6",
+    "221.5°"
+   ],
+   [
+    "San Francisco ↔ Chicago O'Hare",
+    "2,964.0",
+    "1,841.8",
+    "69.7°"
+   ],
+   [
+    "Miami ↔ New York JFK",
+    "1,756.9",
+    "1,091.7",
+    "18.4°"
+   ],
+   [
+    "London Heathrow ↔ Frankfurt",
+    "653.5",
+    "406.1",
+    "100.6°"
+   ],
+   [
+    "Paris CDG ↔ Frankfurt",
+    "448.8",
+    "278.9",
+    "73.0°"
+   ]
+  ],
+  "note": "Bearings are the initial great-circle heading from the first airport; the heading changes continuously along the curved route."
+ },
+ "faq": [
+  [
+   "Why is the flown distance longer than this figure?",
+   "Aircraft follow airways, departure and arrival procedures, and weather-avoidance paths — none of which is the geometric minimum. This calculator reports the baseline great-circle distance; an airline's published mileage for the same pair is normally a few percent higher."
+  ],
+  [
+   "Can I enter IATA codes directly?",
+   "Yes — search accepts airport names and three-letter codes such as JFK, LAX or LHR. If two airports share a name fragment, pick from the matched list so the coordinates are the right ones."
+  ],
+  [
+   "What does the airborne-time reference assume?",
+   "A simple cruise-speed reference for scale only. It ignores climb, descent, taxi and winds, so use it to compare pairs — never to plan a connection."
+  ],
+  [
+   "Are small regional airports included?",
+   "The search covers the airport dataset the site ships, which favours airports with scheduled service and published coordinates. A private strip without a listing can still be measured by entering its coordinates in a point-to-point tool."
+  ],
+  [
+   "Is the distance measured runway to runway?",
+   "It is measured between the airports' published reference coordinates — effectively airport centre to airport centre. For city-scale planning that is the meaningful figure; runway thresholds differ by a kilometre or two at large fields."
+  ],
+  [
+   "Can I find the midpoint between two airports?",
+   "Yes — the Airport Midpoint by Coordinates tool applies the same spherical geometry and returns the halfway point of the pair."
+  ],
+  [
+   "Why does the bearing from A to B not simply reverse?",
+   "On a sphere the return initial bearing is not the outward bearing plus 180°, because the great circle is followed in the opposite direction from a different starting geometry. JFK to LAX starts at 273.8°; LAX to JFK starts at 65.9°, not 93.8°."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Found a pair worth flying? Check whether a non-stop exists in the "
+  },
+  {
+   "t": "Airport Route Finder",
+   "l": "/tools/airport-route-finder"
+  },
+  {
+   "t": ", find the halfway point with "
+  },
+  {
+   "t": "Airport Midpoint by Coordinates",
+   "l": "/tools/airport-midpoint-by-coordinates"
+  },
+  {
+   "t": ", or switch to cities instead of airports in the "
+  },
+  {
+   "t": "Flight Distance Calculator",
+   "l": "/tools/flight-distance-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "airport-midpoint-by-coordinates",
+  "airport-route-finder",
+  "bearing-calculator",
+  "closest-facility-finder",
+  "compass-bearing-visualizer",
+  "competitor-distance-map"
+ ]
+}

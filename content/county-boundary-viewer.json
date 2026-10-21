@@ -1,0 +1,189 @@
+{
+ "slug": "county-boundary-viewer",
+ "primary_keyword": "County Boundary Viewer",
+ "secondary_keywords": [
+  "county boundary",
+  "county map",
+  "county line"
+ ],
+ "title": "County Boundary Viewer: See the Line",
+ "description": "View the county boundary around any location with the County Boundary Viewer — click a point, read its county context. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a click on a farm road near a county line shows the boundary itself — and which side of it the farmhouse, the field and the tax bill sit on.",
+ "quick_answer": "The County Boundary Viewer identifies the county (or county-equivalent) for any location you click or locate, showing the administrative context around the point. Click the map or use your position and read the county — the fastest way to answer 'which county is this in?' with the boundary in view.",
+ "steps_intro": "Some questions need the line drawn, not just the name. Click and see:",
+ "use_cases": [
+  {
+   "title": "Near-the-line questions",
+   "body": [
+    {
+     "t": "Properties, sites and incidents near boundaries need the drawn line, not a mailing city's opinion. The verified version with FIPS is "
+    },
+    {
+     "t": "Address to County Lookup",
+     "l": "/tools/address-to-county-lookup"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Field and site visits",
+   "body": [
+    {
+     "t": "On site, GPS plus boundary answers the jurisdiction question before the paperwork asks it."
+    }
+   ]
+  },
+  {
+   "title": "Local government literacy",
+   "body": [
+    {
+     "t": "Seeing your own county's real shape — its river edges and straight-line compromises — is civics you can point at."
+    }
+   ]
+  },
+  {
+   "title": "Research scoping",
+   "body": [
+    {
+     "t": "A study area's counties are its first sampling frame. View them, list their settlements with the "
+    },
+    {
+     "t": "Cities in a County Finder",
+     "l": "/tools/cities-in-a-county-finder"
+    },
+    {
+     "t": ", proceed."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The river boundary",
+   "body": [
+    {
+     "t": "Many county lines follow rivers — and rivers move. The viewer's line is the current administrative one, which is why old deeds and new maps sometimes argue."
+    }
+   ]
+  },
+  {
+   "label": "Example · The equivalent units",
+   "body": [
+    {
+     "t": "Click in Louisiana and the unit is a parish; in Alaska, a borough; in DC, the District itself. The viewer names the equivalent honestly rather than forcing the word 'county'."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Boundary viewer versus county lookup",
+  "intro": "Two county tools, two depths — this page is the quick visual column.",
+  "columns": [
+   "Question",
+   "This viewer",
+   "Address to County Lookup"
+  ],
+  "rows": [
+   [
+    "Input",
+    "A click or your position",
+    "An address, ZIP or point"
+   ],
+   [
+    "Output",
+    "County at the point, boundary in view",
+    "County, FIPS, demographics, boundary"
+   ],
+   [
+    "Best for",
+    "Fast 'which county?' in the field",
+    "Records, forms, verification"
+   ],
+   [
+    "Legal weight",
+    "Orientation",
+    "Administrative reference — still not a survey"
+   ]
+  ],
+  "note": "Boundaries shown are administrative/statistical references. Parcel and property lines are a different, surveyed dataset this viewer does not draw."
+ },
+ "faq": [
+  [
+   "Does it show parcel lines?",
+   "No — county boundaries, not property parcels. Parcel data is held by counties and assessors in surveyed form; this viewer answers the county question only."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — click anywhere instead; your position is one optional way to place the point."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Boundary datasets update on different cycles and generalise lines at different zooms. The Census framework is the reference the lookup tools here use."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No — a located point is used for the answer and not retained."
+  ],
+  [
+   "What is a county-equivalent?",
+   "Parishes, boroughs, independent cities and DC — units that function as counties in Census geography. The viewer returns whichever contains your point."
+  ],
+  [
+   "The point is in water.",
+   "Counties extend into their waters; the containing unit is still returned — lakes and bays have counties too."
+  ],
+  [
+   "Outside the US?",
+   "Equivalent administrative areas abroad are shown as the data's context provides; the full Census treatment is US-shaped."
+  ],
+  [
+   "How zoomed should I be?",
+   "Near a line, zoom until the boundary and the roads separate clearly — line work at country zoom is how mistakes are made."
+  ],
+  [
+   "The county name differs from the town's.",
+   "Towns straddle and names mislead; the containing polygon is the answer the viewer exists to give."
+  ],
+  [
+   "Can I view several counties at once?",
+   "Pan the map — neighbouring boundaries draw with it. The click identifies the one under the point."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Verified lookups: "
+  },
+  {
+   "t": "Address to County Lookup",
+   "l": "/tools/address-to-county-lookup"
+  },
+  {
+   "t": "; settlements: "
+  },
+  {
+   "t": "Cities in a County Finder",
+   "l": "/tools/cities-in-a-county-finder"
+  },
+  {
+   "t": "; district context: "
+  },
+  {
+   "t": "Congressional District Context",
+   "l": "/tools/congressional-district-context"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder"
+ ]
+}

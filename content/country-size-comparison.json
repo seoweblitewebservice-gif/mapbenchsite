@@ -1,0 +1,28 @@
+{
+ "slug": "country-size-comparison",
+ "primary_keyword": "Country Size Comparison",
+ "secondary_keywords": [
+  "true size of countries",
+  "compare country sizes",
+  "how big is"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "advanced-map-embed-generator",
+  "color-a-map",
+  "county-choropleth",
+  "custom-labeled-map",
+  "embed-map-link-helper",
+  "google-maps-embed-code-generator"
+ ]
+}

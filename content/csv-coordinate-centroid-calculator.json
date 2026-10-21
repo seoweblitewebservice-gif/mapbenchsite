@@ -1,0 +1,30 @@
+{
+ "slug": "csv-coordinate-centroid-calculator",
+ "primary_keyword": "CSV Coordinate Centroid Calculator",
+ "secondary_keywords": [
+  "csv coordinate centroid calculator online",
+  "free csv coordinate centroid calculator",
+  "csv coordinate centroid calculator tool",
+  "csv coordinate centroid calculator checker",
+  "csv coordinate centroid calculator validator"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "csv-coordinate-deduplicator",
+  "csv-latlng-validator",
+  "csv-row-counter",
+  "csv-to-geojson-converter",
+  "csv-to-map",
+  "encoded-polyline-decoder"
+ ]
+}

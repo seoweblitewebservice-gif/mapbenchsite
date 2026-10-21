@@ -1,0 +1,192 @@
+{
+ "slug": "nearest-tube-station-finder",
+ "primary_keyword": "Nearest Tube / Subway Station Finder",
+ "secondary_keywords": [
+  "nearest tube station",
+  "subway station near me",
+  "metro station finder",
+  "underground station near me"
+ ],
+ "title": "Nearest Tube / Subway Station Finder",
+ "description": "Find the nearest tube, subway, metro or underground station to any place with the Nearest Tube / Subway Station Finder — ranked by distance. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, an address in a new city resolves its nearest station in seconds — and the second nearest, which is the one whose line actually goes where you are headed.",
+ "quick_answer": "The Nearest Tube / Subway Station Finder maps the subway, tube, metro and underground stations recorded around a place you search or your location, ranked by distance. Search the place, press find, and read the nearest stations — the first question of any city arrival, answered from open map data.",
+ "steps_intro": "New city, first question: where is my station? Ask the map:",
+ "use_cases": [
+  {
+   "title": "Hotel and rental choice",
+   "body": [
+    {
+     "t": "“Ten minutes from the station” in a listing versus the measured nearest station: this page is the fact-check, before booking."
+    }
+   ]
+  },
+  {
+   "title": "Commute homework",
+   "body": [
+    {
+     "t": "A candidate home's station reality — nearest station, walking distance judged from the map — joins the "
+    },
+    {
+     "t": "Walking Route Planner",
+     "l": "/tools/walking-route-planner"
+    },
+    {
+     "t": " for the door-to-platform truth."
+    }
+   ]
+  },
+  {
+   "title": "Airport arrival orientation",
+   "body": [
+    {
+     "t": "Land, find the hotel's station, ride the right line. The arrival hour gets calmer with the station named."
+    }
+   ]
+  },
+  {
+   "title": "Accessibility scoping",
+   "body": [
+    {
+     "t": "Nearest first is not always step-free first — the ranking frames the question, and transit authorities publish step-free status station by station."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Nearest versus useful",
+   "body": [
+    {
+     "t": "The closest station may sit on the wrong line for your journey; the ranked list exists so the second and third — one stop further, direct line — are one glance away."
+    }
+   ]
+  },
+  {
+   "label": "Example · Every city's word",
+   "body": [
+    {
+     "t": "Tube in London, subway in New York, metro in Paris and most of the world, U-Bahn in Berlin: the finder searches the concept, not the local brand."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the finder covers",
+  "intro": "Rapid transit in the open record — scope and limits.",
+  "columns": [
+   "System type",
+   "Covered",
+   "Note"
+  ],
+  "rows": [
+   [
+    "Metro / subway / tube / underground",
+    "Yes — the core",
+    "Stations as recorded"
+   ],
+   [
+    "Light rail and trams",
+    "Where recorded as stations",
+    "Tagging varies by city"
+   ],
+   [
+    "Mainline rail stations",
+    "Often nearby in data",
+    "This page's focus is rapid transit"
+   ],
+   [
+    "Lines and timetables",
+    "Not shown",
+    "The operator owns live service"
+   ],
+   [
+    "Step-free status",
+    "Where tagged",
+    "Authority's map is definitive"
+   ]
+  ],
+  "note": "Coverage follows the world's mapping communities: comprehensive in the great metro cities, patchier where systems are new or data is young."
+ },
+ "faq": [
+  [
+   "Does it cover every rapid-transit type?",
+   "It searches the recorded station data for subway, metro, tube and underground systems — the family of urban rapid transit. Light rail and tram stops appear where the data records them similarly; tagging varies by city."
+  ],
+  [
+   "Does it show lines and timetables?",
+   "No — stations and distances are this page's data. Lines, fares and live times belong to the transit operator's channels, which the station result helps you choose."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — search any address or place name."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Station names change with sponsorships and renamings (occasionally infamous ones); the map record is one honest vintage of the name."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "The station exists but is not listed.",
+   "Entrances and stations are mapped unevenly; a brand-new station can lag. The operator's map settles a specific hunt."
+  ],
+  [
+   "Walking distance to the entrance?",
+   "Distances rank to the station's recorded point; entrances can sit a street apart. The map view shows the geography your feet will negotiate."
+  ],
+  [
+   "Which station for the airport?",
+   "Rank from the airport's point — airport stations are recorded like others, and the list answers with the terminal's own context."
+  ],
+  [
+   "Night services?",
+   "A timetable question — the operator's night network map decides, not this one."
+  ],
+  [
+   "Stations under construction?",
+   "They enter the record as they open (or as planned entries in some data). A station you cannot enter is marked by reality at the gate — the operator confirms openings."
+  ],
+  [
+   "Interchange stations?",
+   "One station, several lines — the record models the station once. Lines and interchanges are the operator's layer."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Hospitals by postcode: "
+  },
+  {
+   "t": "Nearest Hospital to a UK Postcode",
+   "l": "/tools/nearest-hospital-uk-postcode"
+  },
+  {
+   "t": "; walk it: the "
+  },
+  {
+   "t": "Walking Route Planner",
+   "l": "/tools/walking-route-planner"
+  },
+  {
+   "t": "; your arrival point: "
+  },
+  {
+   "t": "Find My Location",
+   "l": "/tools/find-my-location"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location"
+ ]
+}

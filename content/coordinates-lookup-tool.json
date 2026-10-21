@@ -1,0 +1,186 @@
+{
+ "slug": "coordinates-lookup-tool",
+ "primary_keyword": "Coordinates Lookup Tool",
+ "secondary_keywords": [
+  "coordinates lookup",
+  "lat long lookup",
+  "gps coordinates lookup",
+  "look up latitude longitude"
+ ],
+ "title": "Coordinates Lookup Tool: Map, Record and Facts",
+ "description": "Look up a coordinate pair fully with the Coordinates Lookup Tool — map position, administrative record, antipode heading and equator distance. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, one paste of 40.7580, −73.9855 returns the map pin, the address record, the distance to the equator (about 4,514 km of latitude) and the antipode heading — the whole dossier on two numbers.",
+ "quick_answer": "The Coordinates Lookup Tool does the whole job for a coordinate pair: it shows where the point is on the map, reads its administrative record, and derives facts like the antipode heading and equator distance. Paste the coordinates — or click instead — and read the point's complete dossier.",
+ "steps_intro": "One lookup, the full dossier:",
+ "use_cases": [
+  {
+   "title": "Mystery coordinate triage",
+   "body": [
+    {
+     "t": "A pair arrives from a log, a photo, a colleague. The dossier answers what/where/whose in one paste — deeper fields live in the "
+    },
+    {
+     "t": "Reverse Geocoder",
+     "l": "/tools/reverse-geocoder"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Field verification",
+   "body": [
+    {
+     "t": "Standing at a claimed point? Compare the device's pair against the lookup's record before trusting either."
+    }
+   ]
+  },
+  {
+   "title": "Report dressing",
+   "body": [
+    {
+     "t": "Coordinates in a report deserve their context — place record plus derived facts turns naked numbers into a defensible entry."
+    }
+   ]
+  },
+  {
+   "title": "Curiosity, fully served",
+   "body": [
+    {
+     "t": "Antipode headings and equator distances are the geography-party facts. This page computes them properly instead of letting you guess."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Equator distance",
+   "body": [
+    {
+     "t": "Times Square's latitude of 40.758° is about 4,514 km of meridian arc from the equator — computed from the latitude with WGS84's degree length (the WGS84 meridian arc for that latitude, as the tool's method states)."
+    }
+   ]
+  },
+  {
+   "label": "Example · Antipode heading",
+   "body": [
+    {
+     "t": "Dig straight through from Times Square and you surface in the Indian Ocean southwest of Australia — the lookup's antipode facts give the heading and the far point's coordinates for the map."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The dossier, field by field",
+  "intro": "What one lookup returns — and where each fact comes from.",
+  "columns": [
+   "Field",
+   "Source"
+  ],
+  "rows": [
+   [
+    "Map pin",
+    "The coordinates themselves, plotted"
+   ],
+   [
+    "Administrative record",
+    "Open map data's address stack for the point"
+   ],
+   [
+    "Equator distance",
+    "Computed from latitude (meridian arc)"
+   ],
+   [
+    "Antipode",
+    "Computed — the point through the Earth's centre"
+   ],
+   [
+    "Derived bearings and distances",
+    "Great-circle arithmetic on the sphere"
+   ]
+  ],
+  "note": "Record fields are only as deep as the open data at that point — a rich dossier in mapped country, an honest sparse one at sea."
+ },
+ "faq": [
+  [
+   "What do I get beyond the address?",
+   "The derived layer: antipode heading and point, equator distance and the map context — facts computed from the coordinates themselves, alongside the record's address fields."
+  ],
+  [
+   "Can I click instead of typing?",
+   "Yes — the map accepts clicks as happily as pastes; the dossier builds for the clicked point identically."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 — paste GPS pairs as they come."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "The dossier's record fields saturate quickly (the city is the city at 3 decimals); derived facts keep the input's figures honestly."
+  ],
+  [
+   "Can I copy the result into GIS software?",
+   "Coordinates and fields both copy — the dossier is designed as the paste source for notes, reports and GIS attributes."
+  ],
+  [
+   "Ocean points?",
+   "The record thins to little or nothing, while derived facts (antipode, equator distance) still compute — the page shows which kind of answer each field is."
+  ],
+  [
+   "The record disagrees with my other app.",
+   "Different data vintages and providers. The lookup reports the open record; where it matters, the disagreement itself is the finding."
+  ],
+  [
+   "Batch lookups?",
+   "One pair at a time — the dossier is a per-point instrument. Lists belong to the Batch Geocoder."
+  ],
+  [
+   "Antipode on land?",
+   "Most antipodes are ocean (the planet is mostly water, and land antipodes are rare) — the lookup reports whichever yours is, land naming included where the record reaches."
+  ],
+  [
+   "Equator distance versus latitude degrees?",
+   "Same fact, two dresses: degrees for charts, kilometres for humans. The lookup gives the kilometre reading."
+  ],
+  [
+   "Is my lookup stored?",
+   "No — the pair is processed for the answer, not kept."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Fields only: the "
+  },
+  {
+   "t": "Reverse Geocoder",
+   "l": "/tools/reverse-geocoder"
+  },
+  {
+   "t": "; city only: "
+  },
+  {
+   "t": "City from Coordinates Finder",
+   "l": "/tools/city-from-coordinates"
+  },
+  {
+   "t": "; country only: "
+  },
+  {
+   "t": "Country from Coordinates Finder",
+   "l": "/tools/country-from-coordinates"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "arcminutes-to-decimal-degrees-converter",
+  "arcseconds-to-ground-distance-calculator",
+  "bng-converter",
+  "bounding-box-calculator",
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator"
+ ]
+}

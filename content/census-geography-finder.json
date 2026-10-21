@@ -1,0 +1,29 @@
+{
+ "slug": "census-geography-finder",
+ "primary_keyword": "Census Geography Finder",
+ "secondary_keywords": [
+  "census tract",
+  "census finder",
+  "census geography",
+  "FIPS"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "australia-postcodes-by-state-suburb",
+  "cities-within-radius",
+  "city-comparison-tool",
+  "cost-of-living-compare",
+  "nearby-places-finder",
+  "nearest-postcode-from-list"
+ ]
+}

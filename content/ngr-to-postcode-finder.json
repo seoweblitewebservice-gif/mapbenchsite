@@ -1,0 +1,29 @@
+{
+ "slug": "ngr-to-postcode-finder",
+ "primary_keyword": "Grid Reference to Postcode Finder",
+ "secondary_keywords": [
+  "grid reference to postcode",
+  "ngr to postcode",
+  "find postcode from grid reference",
+  "os grid to postcode"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "arcminutes-to-decimal-degrees-converter",
+  "arcseconds-to-ground-distance-calculator",
+  "bng-converter",
+  "bounding-box-calculator",
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator"
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "slug": "wkt-coordinate-counter",
+ "primary_keyword": "WKT Coordinate Counter",
+ "secondary_keywords": [
+  "wkt coordinate counter online",
+  "free wkt coordinate counter",
+  "wkt coordinate counter calculator",
+  "wkt coordinate counter tool",
+  "how to calculate wkt coordinate counter"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "csv-coordinate-bounding-box",
+  "csv-coordinate-centroid-calculator",
+  "csv-coordinate-deduplicator",
+  "csv-coordinate-validator",
+  "csv-latlng-validator",
+  "csv-row-counter"
+ ]
+}

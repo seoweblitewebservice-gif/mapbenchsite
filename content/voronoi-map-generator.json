@@ -1,0 +1,28 @@
+{
+ "slug": "voronoi-map-generator",
+ "primary_keyword": "Voronoi Map Generator",
+ "secondary_keywords": [
+  "voronoi diagram map",
+  "service territory map",
+  "nearest facility zones"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "advanced-map-embed-generator",
+  "blank-map",
+  "color-a-map",
+  "country-size-comparison",
+  "county-choropleth",
+  "custom-labeled-map"
+ ]
+}

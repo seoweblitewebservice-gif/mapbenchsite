@@ -1,0 +1,184 @@
+{
+ "slug": "map-tile-pixel-offset-calculator",
+ "primary_keyword": "Map Tile Pixel Offset Calculator",
+ "secondary_keywords": [
+  "map tile pixel offset calculator online",
+  "free map tile pixel offset calculator",
+  "map tile pixel offset calculator calculator",
+  "map tile pixel offset calculator tool",
+  "how to calculate map tile pixel offset calculator"
+ ],
+ "title": "Map Tile Pixel Offset Calculator",
+ "description": "Find a point's pixel offset inside its map tile with the Map Tile Pixel Offset Calculator — the remainder after the tile division. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, Times Square's world pixel at zoom 15 leaves an in-tile offset of (157, 166) — the exact spot inside tile 9649/12314 where the crossroads sits.",
+ "quick_answer": "The Map Tile Pixel Offset Calculator finds where inside its tile a point falls — the pixel offset (0–255 in x and y) from the tile's top-left corner. Enter point and zoom and read the offset — the world-pixel division's remainder, used by marker placement and renderers.",
+ "steps_intro": "The tile names the neighbourhood; the offset names the house:",
+ "use_cases": [
+  {
+   "title": "Marker and label placement",
+   "body": [
+    {
+     "t": "Custom renderers draw features at tile-relative pixels. The offset is the draw coordinate, from the world pixel the "
+    },
+    {
+     "t": "World Pixel Calculator",
+     "l": "/tools/lat-lon-to-world-pixel-calculator"
+    },
+    {
+     "t": " computes."
+    }
+   ]
+  },
+  {
+   "title": "Debugging rendering offsets",
+   "body": [
+    {
+     "t": "A feature drawn at the tile's origin instead of its offset is the classic 0–255 px error — this page supplies the expected values to compare against."
+    }
+   ]
+  },
+  {
+   "title": "Static image composition",
+   "body": [
+    {
+     "t": "Cropping a tile around a point needs the point's in-tile position to centre the crop window correctly."
+    }
+   ]
+  },
+  {
+   "title": "Understanding the pyramid's arithmetic",
+   "body": [
+    {
+     "t": "Offset is the modulo of the world pixel — seeing one point decomposed into tile + offset teaches the whole system."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The division, shown",
+   "body": [
+    {
+     "t": "Times Square z15 world pixel (2,470,317, 3,152,566) ÷ 256 → tile (9649, 12314) remainder (157, 166). Tile, remainder, point: the complete address in the pixel world."
+    }
+   ]
+  },
+  {
+   "label": "Example · Edge cases are literal",
+   "body": [
+    {
+     "t": "A point at offset (0, 0) sits exactly on a tile corner — four tiles claim its pixel neighbourhood, and renderers' edge artefacts are born at such points."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The decomposition",
+  "intro": "One point, three coordinate dresses — this page owns the third.",
+  "columns": [
+   "Quantity",
+   "From",
+   "Range"
+  ],
+  "rows": [
+   [
+    "World pixel",
+    "Point through the Mercator pixel formulas",
+    "0 … 256·2^z"
+   ],
+   [
+    "Tile (x, y)",
+    "World pixel ÷ 256, floored",
+    "0 … 2^z − 1"
+   ],
+   [
+    "Offset (px, py)",
+    "World pixel mod 256",
+    "0 … 255 (this page)"
+   ],
+   [
+    "Fractional part",
+    "Sub-pixel remainder",
+    "Renderers keep it; tiles ignore it"
+   ]
+  ],
+  "note": "Offsets are in the tile image's own pixels — the coordinate every tile-space drawing API expects."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The point's pixel position within its tile: world pixel modulo 256 in each axis, at the chosen zoom."
+  ],
+  [
+   "Which map standard does it use?",
+   "The slippy-map standard (Web Mercator, 256-px tiles) shared by OSM, Google and MapLibre."
+  ],
+  [
+   "Can I use this in production GIS?",
+   "The formulas are the production standard itself — yes for web-mapping work."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 — tile systems are defined over it."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — tiles and pixels quantise; decimals beyond the cell are decoration."
+  ],
+  [
+   "Why 0–255?",
+   "Tiles are 256 × 256 — the offset is an address inside that square, origin at the top-left (northwest) corner."
+  ],
+  [
+   "Y grows downward — really?",
+   "Screen convention: pixel y counts south from the tile's top. Latitude's northward growth flips at the world-pixel step, and this page inherits the flip faithfully."
+  ],
+  [
+   "Retina tiles (@2x)?",
+   "512-px tiles double the offset range (0–511) for the same ground — state your tile flavour when comparing values."
+  ],
+  [
+   "Offset for a tile centre?",
+   "(128, 128) by definition — the centre calculator's point has this page's most boring answer."
+  ],
+  [
+   "Sub-pixel precision?",
+   "World pixels are fractional before flooring; offsets can be reported fractionally for smooth rendering — integers serve tile addressing."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "World pixels: the "
+  },
+  {
+   "t": "Latitude Longitude to World Pixel Calculator",
+   "l": "/tools/lat-lon-to-world-pixel-calculator"
+  },
+  {
+   "t": "; tiles: the "
+  },
+  {
+   "t": "Latitude Longitude to Map Tile Calculator",
+   "l": "/tools/lat-lon-to-map-tile-calculator"
+  },
+  {
+   "t": "; centres: the "
+  },
+  {
+   "t": "Map Tile Center Calculator",
+   "l": "/tools/map-tile-center-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator"
+ ]
+}

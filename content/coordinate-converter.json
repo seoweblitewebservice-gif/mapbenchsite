@@ -1,0 +1,207 @@
+{
+ "slug": "coordinate-converter",
+ "primary_keyword": "Coordinate Converter",
+ "secondary_keywords": [
+  "dms converter",
+  "coordinate converter online",
+  "free coordinate converter"
+ ],
+ "title": "Coordinate Converter: DD, DMS, Minutes and More",
+ "description": "Convert coordinate pairs between decimal degrees, DMS and degrees-minutes with the Coordinate Converter — paste a pair, switch formats. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, Times Square is 40.7580, −73.9855 in decimals, 40°45′28.8″N 73°59′07.8″W in DMS, and 40°45.480′N 73°59.130′W in degrees-minutes — one point, three dresses, all converted here.",
+ "quick_answer": "The Coordinate Converter takes a coordinate pair and switches it between the common human and machine formats — decimal degrees, degrees-minutes-seconds, and degrees with decimal minutes. Paste the pair, read every format at once, and copy the one your chart, form or software actually wants.",
+ "steps_intro": "One point, every common format, no hand arithmetic:",
+ "use_cases": [
+  {
+   "title": "Charts to GIS",
+   "body": [
+    {
+     "t": "Paper and PDF charts speak DMS; GIS eats decimals. The converter is the customs post between them — single values ride the "
+    },
+    {
+     "t": "DMS to Decimal",
+     "l": "/tools/dms-to-decimal"
+    },
+    {
+     "t": " and "
+    },
+    {
+     "t": "Decimal to DMS",
+     "l": "/tools/decimal-to-dms"
+    },
+    {
+     "t": " lanes."
+    }
+   ]
+  },
+  {
+   "title": "GPS unit settings",
+   "body": [
+    {
+     "t": "Handhelds offer all three formats; matching the unit's display to your notes' format ends transcription errors at the source."
+    }
+   ]
+  },
+  {
+   "title": "Forms that demand a format",
+   "body": [
+    {
+     "t": "Some portal wants DMS with hemisphere letters; another wants signed decimals. Convert once, paste exactly, never retype digits."
+    }
+   ]
+  },
+  {
+   "title": "Checking mystery coordinates",
+   "body": [
+    {
+     "t": "A pair in an unknown dress? The "
+    },
+    {
+     "t": "Coordinate Format Detector",
+     "l": "/tools/coordinate-format-detector"
+    },
+    {
+     "t": " names it; this page converts it."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Times Square, three ways",
+   "body": [
+    {
+     "t": "Decimal: 40.7580, −73.9855. DMS: 40°45′28.8″N, 73°59′07.8″W. Degrees-minutes: 40°45.480′N, 73°59.130′W. The minus sign and the W are the same fact in two dialects."
+    }
+   ]
+  },
+  {
+   "label": "Example · The sign trap",
+   "body": [
+    {
+     "t": "−73.9855 already means west. Writing '−73.9855 W' double-negates the point to the wrong hemisphere in strict parsers — convert here and let the format carry one convention at a time."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The formats, compared",
+  "intro": "Who uses which dress — and the conversion's one rule (the point never changes).",
+  "columns": [
+   "Format",
+   "Shape",
+   "Home territory"
+  ],
+  "rows": [
+   [
+    "Decimal degrees (DD)",
+    "40.7580, −73.9855",
+    "GIS, web maps, APIs"
+   ],
+   [
+    "Degrees-minutes (DDM)",
+    "40°45.480′N",
+    "Marine GPS, aviation"
+   ],
+   [
+    "DMS",
+    "40°45′28.8″N",
+    "Charts, surveying, legal descriptions"
+   ],
+   [
+    "Radians",
+    "0.7114, −1.2913",
+    "Mathematics and code"
+   ]
+  ],
+  "note": "Conversions are exact arithmetic on subdivisions (60 minutes per degree, 60 seconds per minute). Rounding appears only at display precision — set it deliberately with the precision tools."
+ },
+ "faq": [
+  [
+   "Which datum does it use?",
+   "WGS84 — conversions change the format, never the datum. A point in another datum needs a datum transformation first, which format conversion is not."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 across this site's coordinate family, this converter included."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — format dress does not add knowledge. Six decimals from a two-decimal source is costume, and the precision tools here quantify the honest grain."
+  ],
+  [
+   "Can I copy the result into GIS software?",
+   "Yes — decimal output pastes directly; DMS strings paste into tools that parse them, with hemisphere letters as the safe form."
+  ],
+  [
+   "Hemisphere letters or signs?",
+   "Both are produced; use letters with DMS/DDM and signs with decimals, one convention per value — the sign trap example on this page shows why."
+  ],
+  [
+   "Batch conversion?",
+   "One pair at a time here — lists belong to spreadsheet formulas or GIS, with this page as the spot-checker of their output."
+  ],
+  [
+   "It rejected my input.",
+   "Separators and symbols vary; the Coordinate Parser loosens messy strings into clean values first, then conversion proceeds."
+  ],
+  [
+   "Radians included?",
+   "The degrees-radians lane has its own converter for the pure angle case; pairs in radians convert through the same subdivision arithmetic."
+  ],
+  [
+   "Zero and pole edge cases?",
+   "0,0 and the poles convert mechanically — formats survive where geography gets philosophical."
+  ],
+  [
+   "Which format should I store?",
+   "Signed decimal degrees, full precision, WGS84 noted. Every other format is one conversion away; originals in any other dress invite transcription archaeology."
+  ],
+  [
+   "Minutes can exceed 60 in my input?",
+   "That signals degrees-minutes misread as DMS or a typo — the parser and detector pages help untangle which."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Single lanes: "
+  },
+  {
+   "t": "DMS to Decimal",
+   "l": "/tools/dms-to-decimal"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Decimal to DMS",
+   "l": "/tools/decimal-to-dms"
+  },
+  {
+   "t": "; detect: the "
+  },
+  {
+   "t": "Coordinate Format Detector",
+   "l": "/tools/coordinate-format-detector"
+  },
+  {
+   "t": "; parse: the "
+  },
+  {
+   "t": "Coordinate Parser",
+   "l": "/tools/coordinate-parser"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "arcminutes-to-decimal-degrees-converter",
+  "arcseconds-to-ground-distance-calculator",
+  "bng-converter",
+  "bounding-box-calculator",
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator"
+ ]
+}

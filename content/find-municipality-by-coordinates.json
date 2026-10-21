@@ -1,0 +1,192 @@
+{
+ "slug": "find-municipality-by-coordinates",
+ "primary_keyword": "Municipality Finder by Coordinates",
+ "secondary_keywords": [
+  "municipality finder",
+  "municipality by coordinates",
+  "local council finder",
+  "which municipality am i in"
+ ],
+ "title": "Municipality Finder by Coordinates",
+ "description": "Find the municipality or local government area for exact coordinates with the Municipality Finder by Coordinates — full admin breakdown. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a point just outside a city's famous boundary can belong to a small municipality nobody mentions — the finder names it, because the point does not care about fame.",
+ "quick_answer": "The Municipality Finder by Coordinates reads the administrative record for an exact point from OpenStreetMap's address data and reports its municipality or local government area, with the full breakdown around it. Enter coordinates or click the map and read which municipality governs that spot.",
+ "steps_intro": "Municipality is the layer that empties the bins and paves the street. Name it for any point:",
+ "use_cases": [
+  {
+   "title": "Property and land questions",
+   "body": [
+    {
+     "t": "Which council taxes, permits and serves a parcel starts with its municipality — the county layer is "
+    },
+    {
+     "t": "Address to County Lookup",
+     "l": "/tools/address-to-county-lookup"
+    },
+    {
+     "t": " in the US."
+    }
+   ]
+  },
+  {
+   "title": "Local services eligibility",
+   "body": [
+    {
+     "t": "Libraries, pools and permits run on municipal lines. A point-level answer ends the 'but my neighbour…' argument."
+    }
+   ]
+  },
+  {
+   "title": "Fieldwork records",
+   "body": [
+    {
+     "t": "Samples and sites logged with their municipality file themselves correctly in the report — the breakdown rides along."
+    }
+   ]
+  },
+  {
+   "title": "Moving-house homework",
+   "body": [
+    {
+     "t": "Two streets, two municipalities, two tax and service worlds. Check the exact address's point before the offer."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The unglamorous answer",
+   "body": [
+    {
+     "t": "Famous neighbouring cities cast shadows: points near them often belong to smaller municipalities with their own councils. The finder's answer is the point's, not the postcode's."
+    }
+   ]
+  },
+  {
+   "label": "Example · The world's vocabulary",
+   "body": [
+    {
+     "t": "Commune, Gemeinde, municipio, kommun — the layer exists worldwide under local names. The finder reports the record's own term for the point's country."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Where municipality sits",
+  "intro": "The administrative stack, with this page's layer marked — names vary by country, the stack's idea does not.",
+  "columns": [
+   "Level",
+   "US example",
+   "UK example",
+   "Decides"
+  ],
+  "rows": [
+   [
+    "National",
+    "United States",
+    "United Kingdom",
+    "Law of the land"
+   ],
+   [
+    "Regional",
+    "State",
+    "Nation or county",
+    "Regional services"
+   ],
+   [
+    "Municipality (this finder)",
+    "City, town, township",
+    "District or borough council",
+    "Streets, bins, local permits"
+   ],
+   [
+    "Sub-local",
+    "Neighbourhood",
+    "Parish or ward",
+    "The finest grain"
+   ]
+  ],
+  "note": "Not every country has every level, and some merge them. The finder reports the point's recorded breakdown rather than a theory of how government should stack."
+ },
+ "faq": [
+  [
+   "Which data decides the municipality?",
+   "OpenStreetMap's address and boundary data for the point — the administrative record the map carries, read at the exact coordinates."
+  ],
+  [
+   "What if no municipality is recorded?",
+   "Some points (remote land, some countries' structures) carry no municipality level in the data. The finder reports the breakdown it finds and names the gap."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — type or click any point on earth."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Municipal boundaries merge and split with local reforms; sources update at different speeds."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "Municipality or district?",
+   "Districts are a different layer's word in many countries — the District Finder reads that entry; this page reads the municipality or local government area specifically."
+  ],
+  [
+   "Can I search by address instead?",
+   "An address becomes a point first (Address to Coordinates), then this finder reads the point. The chain is two clicks."
+  ],
+  [
+   "Is the answer legally definitive?",
+   "It is the map data's record — excellent for orientation and first-pass decisions; legal questions deserve the authority's own register."
+  ],
+  [
+   "Unincorporated areas?",
+   "They are the classic gap: the record may show the county or region as the finest level. The finder shows what exists rather than promoting a nearby town."
+  ],
+  [
+   "What about city-states and merged authorities?",
+   "Some places merge tiers (unitary authorities, city-states, consolidated city-counties). The record reflects the merger — the breakdown shows the tiers that actually exist."
+  ],
+  [
+   "Historical municipalities?",
+   "Boundaries carry histories; this finder reads the current record. Genealogy-depth questions belong to archives, with the modern answer as their index."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Siblings: "
+  },
+  {
+   "t": "District Finder by Coordinates",
+   "l": "/tools/district-finder-by-coordinates"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Parish Finder by Coordinates",
+   "l": "/tools/parish-finder-by-coordinates"
+  },
+  {
+   "t": "; US: "
+  },
+  {
+   "t": "Address to County Lookup",
+   "l": "/tools/address-to-county-lookup"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location"
+ ]
+}

@@ -1,0 +1,201 @@
+{
+ "slug": "cycling-route-planner",
+ "primary_keyword": "Cycling Route Planner",
+ "secondary_keywords": [
+  "bike route planner",
+  "bicycle route planner",
+  "cycle route map",
+  "bike distance calculator",
+  "cycling distance calculator"
+ ],
+ "title": "Cycling Route Planner: Bike Routes and GPX",
+ "description": "Plan a cycling route between two places with the Cycling Route Planner — distance, ride-time estimate and GPX export for your device. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a cross-town ride routed on the cycling network usually runs a little longer than the driving route — the price of paths and quiet streets, shown before you set off.",
+ "quick_answer": "The Cycling Route Planner finds a route between two locations on the cycling network — roads and paths a bicycle can actually use — and reports its distance and time. Review the route and export it as GPX for a bike computer or phone app when it looks right.",
+ "steps_intro": "Cars get motorways; bikes get the interesting network. Plan on the right one:",
+ "use_cases": [
+  {
+   "title": "Commute design",
+   "body": [
+    {
+     "t": "The best bike commute is rarely the driving route shortened. The cycling network's paths and quiet links change the answer — then the "
+    },
+    {
+     "t": "Cycling Time Calculator",
+     "l": "/tools/cycling-time-calculator"
+    },
+    {
+     "t": " prices it in minutes."
+    }
+   ]
+  },
+  {
+   "title": "Weekend ride planning",
+   "body": [
+    {
+     "t": "Distance and shape first, café second. Export the GPX and the ride lives on your device, not in your memory of the map."
+    }
+   ]
+  },
+  {
+   "title": "Touring days",
+   "body": [
+    {
+     "t": "A tour is a chain of daily routes. Plan each leg here, check its distance against your daily range, and export the set before departure."
+    }
+   ]
+  },
+  {
+   "title": "New-city riding",
+   "body": [
+    {
+     "t": "Visitors on hired bikes need legal, rideable routes, not local knowledge. The open network data stands in for the local friend."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The honest detour",
+   "body": [
+    {
+     "t": "A cycling route between two points often measures 5–15% longer than the same pair's driving route — the planner's number includes the path the law and the kerbs allow, which is the only number your legs will meet."
+    }
+   ]
+  },
+  {
+   "label": "Example · GPX to device",
+   "body": [
+    {
+     "t": "Export the planned route and it opens in standard bike apps and computers as a track to follow — the plan survives leaving the browser, which is the feature touring riders actually use."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Cycling versus driving the same pair",
+  "intro": "What typically changes when a pair is routed for a bicycle — reading guidance for the planner's output, not measurements of a specific pair.",
+  "columns": [
+   "Aspect",
+   "Driving route",
+   "Cycling route (this tool)"
+  ],
+  "rows": [
+   [
+    "Network",
+    "All motor-legal roads",
+    "Bike-legal roads and paths"
+   ],
+   [
+    "Distance",
+    "Usually shortest by road",
+    "Often slightly longer"
+   ],
+   [
+    "Road types",
+    "Includes fast arterials",
+    "Prefers usable, legal links"
+   ],
+   [
+    "Time basis",
+    "Road speeds",
+    "Cycling speeds"
+   ],
+   [
+    "Export",
+    "Varies",
+    "GPX for devices"
+   ],
+   [
+    "Traffic data",
+    "Sometimes live",
+    "Not live"
+   ]
+  ],
+  "note": "The planner routes on open network data (OpenStreetMap via open routing); a path closed or reclassified since the data's last edit will show as the data believes it to be."
+ },
+ "faq": [
+  [
+   "Does it prioritize protected bike lanes?",
+   "It routes on the bike-usable network the open data describes. Where the data records cycle infrastructure, the route can use it; the planner does not guarantee a protected lane the data does not know about."
+  ],
+  [
+   "Can I export the route?",
+   "Yes — GPX export is built in, for bike computers and the standard route apps. Plan here, ride there."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Cycling routes change with closures and works, not with traffic flow; the data snapshot is the limit, stated plainly."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Both road and path networks wind. The planner's distance is the ridden one — the only one your legs will meet."
+  ],
+  [
+   "Can route results change over time?",
+   "Yes, as the open map data improves: new paths appear, misclassifications get fixed. A route exported last season deserves a fresh look."
+  ],
+  [
+   "Can I add stops along the way?",
+   "Plan leg by leg: route to the stop, then from it. Each leg exports separately and chains on your device."
+  ],
+  [
+   "Does it avoid hills?",
+   "The planner reports the route the network gives; elevation strategy is the rider's — the hiking tools' Naismith thinking applies to legs too: climbs cost time whatever pulls you up them."
+  ],
+  [
+   "Can it plan a round trip loop?",
+   "Route out to a far point and back — or chain legs through waypoints by planning each leg. Loops assemble from legs here."
+  ],
+  [
+   "Are towpaths and trails included?",
+   "Where the open data maps them as rideable, yes. A path's legal status in data is a snapshot; local signs are the final law."
+  ],
+  [
+   "Why did it avoid the main road?",
+   "Because the cycling network prefers rideable links where the data offers them. The route optimises for bicycles, not for the shortest line a car would take."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Time the ride in the "
+  },
+  {
+   "t": "Cycling Time Calculator",
+   "l": "/tools/cycling-time-calculator"
+  },
+  {
+   "t": ", pace it in the "
+  },
+  {
+   "t": "Cycling Speed Calculator",
+   "l": "/tools/cycling-speed-calculator"
+  },
+  {
+   "t": ", fuel it from "
+  },
+  {
+   "t": "Cycling Calories by Distance",
+   "l": "/tools/cycling-calories-distance"
+  },
+  {
+   "t": ", and walk the same ground in the "
+  },
+  {
+   "t": "Hiking Route Planner with Elevation",
+   "l": "/tools/hiking-route-planner-with-elevation"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-speed-calculator"
+ ]
+}

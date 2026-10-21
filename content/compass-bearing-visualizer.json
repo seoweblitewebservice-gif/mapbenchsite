@@ -1,0 +1,199 @@
+{
+ "slug": "compass-bearing-visualizer",
+ "primary_keyword": "Compass Bearing Visualizer",
+ "secondary_keywords": [
+  "compass bearing",
+  "bearing visualizer",
+  "direction between points"
+ ],
+ "title": "Compass Bearing Visualizer: See Both Bearings",
+ "description": "See the initial and reverse bearing between two places drawn on the map with the Compass Bearing Visualizer, with distance in miles and km. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, Heathrow to JFK starts at approx. 287.9° — visibly northwest on the compass rose — even though New York feels like it should be 'straight across' the Atlantic.",
+ "quick_answer": "The Compass Bearing Visualizer draws the direction between two places so you can see it, not only read it: the initial great-circle bearing one way, the reverse bearing for the return, and the distance, all on the map and compass rose. It is the visual companion to a bearing calculation.",
+ "steps_intro": "Bearings confuse people as numbers; as a picture they explain themselves. Two steps:",
+ "use_cases": [
+  {
+   "title": "Teaching bearings without tears",
+   "body": [
+    {
+     "t": "Show a class the rose turning as the destination moves, and the difference between initial and reverse bearings stops being a formula and becomes something they can point at."
+    }
+   ]
+  },
+  {
+   "title": "Checking a compass course",
+   "body": [
+    {
+     "t": "Before walking a bearing from the "
+    },
+    {
+     "t": "Bearing Calculator",
+     "l": "/tools/bearing-calculator"
+    },
+    {
+     "t": ", sight the same line here: if the drawn direction disagrees with your expectation, one of the two points is wrong — find out indoors."
+    }
+   ]
+  },
+  {
+   "title": "Antenna and dish alignment",
+   "body": [
+    {
+     "t": "A visual check that the short path to a distant station really does leave over the neighbour's roof in that direction saves a return trip up the ladder."
+    }
+   ]
+  },
+  {
+   "title": "Route briefings",
+   "body": [
+    {
+     "t": "A drawn bearing communicates in a briefing what three spoken numbers cannot: where the journey starts out pointing, and why it is not the direction of the destination on a flat wall map."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The Atlantic pair",
+   "body": [
+    {
+     "t": "JFK → Heathrow starts at approx. 51.4° (northeast); Heathrow → JFK starts at 287.9° (west-northwest). On the visualizer the two roses are plainly not opposites — the single clearest picture of great-circle geometry in this whole section."
+    }
+   ]
+  },
+  {
+   "label": "Example · A short hop",
+   "body": [
+    {
+     "t": "Heathrow → Paris CDG starts at approx. 140.9° (southeast) and the return at 323.2° (northwest). Even at 347 km the asymmetry is visible, just smaller — the effect never fully switches off."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Compass points and their bearings",
+  "intro": "The 16-point compass rose this visualizer uses, with the bearing at the centre of each point — the reference for reading any result the tool draws.",
+  "columns": [
+   "Point",
+   "Bearing",
+   "Point",
+   "Bearing"
+  ],
+  "rows": [
+   [
+    "N",
+    "0°",
+    "S",
+    "180°"
+   ],
+   [
+    "NNE",
+    "22.5°",
+    "SSW",
+    "202.5°"
+   ],
+   [
+    "NE",
+    "45°",
+    "SW",
+    "225°"
+   ],
+   [
+    "ENE",
+    "67.5°",
+    "WSW",
+    "247.5°"
+   ],
+   [
+    "E",
+    "90°",
+    "W",
+    "270°"
+   ],
+   [
+    "ESE",
+    "112.5°",
+    "WNW",
+    "292.5°"
+   ],
+   [
+    "SE",
+    "135°",
+    "NW",
+    "315°"
+   ],
+   [
+    "SSE",
+    "157.5°",
+    "NNW",
+    "337.5°"
+   ]
+  ],
+  "note": "A bearing like 51.4° sits between NE (45°) and ENE (67.5°) — reported as a number by the calculator, and as a direction you can see here."
+ },
+ "faq": [
+  [
+   "Is this the same as the Bearing Calculator?",
+   "It computes the same spherical bearings; the difference is presentation. The calculator leads with numbers, this tool leads with the drawn line and compass rose. Many people check a number here before trusting it."
+  ],
+  [
+   "Does the rose show magnetic north?",
+   "No — bearings are true (from geographic north). A handheld compass reads magnetic north; apply your local declination before using a drawn bearing outdoors."
+  ],
+  [
+   "Why is the line between the points curved?",
+   "Because the shortest surface path is a great circle, which a flat map projection bends. The bearing shown is the direction at the start of that curved path."
+  ],
+  [
+   "Can I read the bearing at the destination instead?",
+   "The reverse bearing is exactly that perspective: the direction you would set off on from the destination to come back. Both are drawn so you can compare them."
+  ],
+  [
+   "What bearing is due west on the rose?",
+   "270°. Points run clockwise from north: 0° N, 90° E, 180° S, 270° W, with the sixteen named points spaced 22.5° apart."
+  ],
+  [
+   "Does it work for two points in the same town?",
+   "Yes. At short range the curve flattens and the bearing behaves like the flat-map direction — the visual check is still the fastest way to catch a swapped point."
+  ],
+  [
+   "Can I use coordinates instead of searching?",
+   "Yes — set either point by coordinates or by clicking the map when a named search is ambiguous."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "For the numbers-first version, use the "
+  },
+  {
+   "t": "Bearing Calculator",
+   "l": "/tools/bearing-calculator"
+  },
+  {
+   "t": "; for the dedicated starting-azimuth tool, the "
+  },
+  {
+   "t": "Initial Great Circle Bearing Calculator",
+   "l": "/tools/initial-great-circle-bearing-calculator"
+  },
+  {
+   "t": "; and to fly a heading between airports, the "
+  },
+  {
+   "t": "Flight Bearing Calculator",
+   "l": "/tools/flight-bearing-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "competitor-distance-map",
+  "coordinate-distance-table-generator",
+  "crow-flies-distance",
+  "distance-between-cities",
+  "distance-between-two-places",
+  "distance-between-zip-codes"
+ ]
+}

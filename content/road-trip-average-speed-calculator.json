@@ -1,0 +1,206 @@
+{
+ "slug": "road-trip-average-speed-calculator",
+ "primary_keyword": "Road Trip Average Speed Calculator",
+ "secondary_keywords": [
+  "road trip average speed calculator online",
+  "free road trip average speed calculator",
+  "road trip average speed calculator calculator",
+  "road trip average speed calculator tool",
+  "how to calculate road trip average speed calculator"
+ ],
+ "title": "Road Trip Average Speed Calculator",
+ "description": "Calculate a trip's true average speed from distance and elapsed time with the Road Trip Average Speed Calculator — stops in or out. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 850 miles in 14 hours door-to-door averages 60.7 mph — while the same trip's moving average, over 12½ hours of wheels-turning, is 68 mph. Both are true; they answer different questions.",
+ "quick_answer": "The Road Trip Average Speed Calculator divides a trip's total distance by its time and returns the average speed actually achieved. Enter the miles and the hours — elapsed for the honest door-to-door figure, moving for the driving figure — and read the speed your next trip plan should assume.",
+ "steps_intro": "Your real average is the only honest planning input. Measure it once:",
+ "use_cases": [
+  {
+   "title": "Calibrating the ETA habit",
+   "body": [
+    {
+     "t": "Feed last trip's real average into the "
+    },
+    {
+     "t": "ETA Calculator",
+     "l": "/tools/eta-calculator"
+    },
+    {
+     "t": " and next trip's arrival stops being fiction."
+    }
+   ]
+  },
+  {
+   "title": "The stops audit",
+   "body": [
+    {
+     "t": "Elapsed average versus moving average is the cost of your stops, expressed in mph. Some families find the number motivating."
+    }
+   ]
+  },
+  {
+   "title": "Route comparisons",
+   "body": [
+    {
+     "t": "The motorway route's true average versus the cross-country route's: measured on real trips, the argument ends."
+    }
+   ]
+  },
+  {
+   "title": "Towing and load effects",
+   "body": [
+    {
+     "t": "The same journey, loaded, averages less. Measure it once and every future loaded plan inherits the truth."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Two truths",
+   "body": [
+    {
+     "t": "850 miles: elapsed 14 h → 60.7 mph; moving 12.5 h → 68.0 mph. The 7.3 mph difference is 90 minutes of stops wearing a speed's clothing."
+    }
+   ]
+  },
+  {
+   "label": "Example · The humbling commute",
+   "body": [
+    {
+     "t": "A 38-mile commute in 55 minutes averages 41.5 mph on roads signed at 60. Urban averages are like that; planning with them is the fix."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Distance and time to average speed",
+  "intro": "The division tabulated — find your trip's row shape and read what your average really was.",
+  "columns": [
+   "Distance",
+   "In 6 h",
+   "In 10 h",
+   "In 14 h",
+   "In 20 h"
+  ],
+  "rows": [
+   [
+    "300 mi",
+    "50.0 mph",
+    "30.0 mph",
+    "21.4 mph",
+    "15.0 mph"
+   ],
+   [
+    "500 mi",
+    "83.3 mph",
+    "50.0 mph",
+    "35.7 mph",
+    "25.0 mph"
+   ],
+   [
+    "850 mi",
+    "141.7 mph",
+    "85.0 mph",
+    "60.7 mph",
+    "42.5 mph"
+   ],
+   [
+    "1,200 mi",
+    "200.0 mph",
+    "120.0 mph",
+    "85.7 mph",
+    "60.0 mph"
+   ],
+   [
+    "2,000 mi",
+    "333.3 mph",
+    "200.0 mph",
+    "142.9 mph",
+    "100.0 mph"
+   ]
+  ],
+  "note": "Absurd cells are the point: they expose impossible plan assumptions (an 850-mile, 6-hour family drive) before the road does."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Average speed: total distance ÷ total time, in mph and km/h — over elapsed time or moving time, whichever you enter."
+  ],
+  [
+   "Do I need an account?",
+   "No. Distance and hours in, average out."
+  ],
+  [
+   "Can I rely on this for professional work?",
+   "For planning calibrations and log audits, yes — it is the exact division behind every fleet's average. Commercial tachograph rules are a separate legal layer."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Your time already contains the traffic you met; the calculator reports what it did to your average."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Enter the road distance you drove — dividing crow miles by real hours invents a slowness you did not suffer."
+  ],
+  [
+   "Elapsed or moving time — which is right?",
+   "Both, for different questions: elapsed for arrival honesty, moving for driving performance. This page's example shows them side by side for a reason."
+  ],
+  [
+   "Why is my average below the speed limit?",
+   "Towns, junctions, fuel and humanity. The limit is a maximum for moments; the average is the biography of the whole journey."
+  ],
+  [
+   "Why do fleets care about this number?",
+   "It sets schedules that are achievable rather than aspirational. A rota built on a 41 mph average survives; one built on the limit does not."
+  ],
+  [
+   "My car's trip computer shows higher.",
+   "It usually reports moving average and resets flatteringly. Your elapsed division over a known distance is the audit."
+  ],
+  [
+   "Same route, winter versus summer?",
+   "Expect a lower winter figure — light, weather and tyres. Keep seasonal averages and the plans inherit the seasons."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Plan forward with the "
+  },
+  {
+   "t": "ETA Calculator",
+   "l": "/tools/eta-calculator"
+  },
+  {
+   "t": ", arrive with the "
+  },
+  {
+   "t": "Road Trip Arrival Time Calculator",
+   "l": "/tools/road-trip-arrival-time-calculator"
+  },
+  {
+   "t": ", and measure legs with the "
+  },
+  {
+   "t": "Driving Distance Calculator",
+   "l": "/tools/driving-distance-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator",
+  "drive-time-map",
+  "driving-days-calculator"
+ ],
+ "related": [
+  "eta-calculator",
+  "driving-distance-calculator",
+  "road-trip-arrival-time-calculator",
+  "cycling-speed-calculator"
+ ]
+}

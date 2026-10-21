@@ -1,0 +1,188 @@
+{
+ "slug": "local-time-by-coordinates",
+ "primary_keyword": "Local Time by Coordinates",
+ "secondary_keywords": [
+  "local time by coordinates online",
+  "free local time by coordinates",
+  "local time by coordinates calculator",
+  "local time by coordinates tool",
+  "how to calculate local time by coordinates"
+ ],
+ "title": "Local Time by Coordinates: Time at a Point",
+ "description": "Find the local time and time zone for exact coordinates with Local Time by Coordinates — the point's own zone and offset. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a research station, a border farm and a mid-ocean buoy at the same longitude can keep three different clocks — because zones follow politics and land, not just the sun.",
+ "quick_answer": "Local Time by Coordinates resolves the time zone for an exact pair of coordinates and reports the local time and UTC offset there. Enter the point and read its clock — zone name, offset and DST state — the answer for places with coordinates but no famous city name.",
+ "steps_intro": "Every point on earth has a local time. Ask the point:",
+ "use_cases": [
+  {
+   "title": "Field and survey work",
+   "body": [
+    {
+     "t": "Timestamped observations reconcile against the site's own zone, not the office's — the "
+    },
+    {
+     "t": "DST Checker by Coordinates",
+     "l": "/tools/dst-checker-by-coordinates"
+    },
+    {
+     "t": " adds the changeover dates."
+    }
+   ]
+  },
+  {
+   "title": "Remote-place questions",
+   "body": [
+    {
+     "t": "Cabins, stations, anchorages: places without postcodes still have zones. Coordinates are the only address they need here."
+    }
+   ]
+  },
+  {
+   "title": "Software and data QA",
+   "body": [
+    {
+     "t": "Testing a timezone lookup? Feed it edge coordinates from this page and compare the zone names — borders are where lookups go to be wrong."
+    }
+   ]
+  },
+  {
+   "title": "Photography and logs",
+   "body": [
+    {
+     "t": "A geotagged photo's local time settles 'was that sunset or sunrise' arguments — coordinates plus date, answer out."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Solar time versus zone time",
+   "body": [
+    {
+     "t": "A point's zone time can sit far from its solar time — western edges of wide zones run an hour 'late' by the sun. The tool reports zone time: the clock people there actually live by."
+    }
+   ]
+  },
+  {
+   "label": "Example · The border farm",
+   "body": [
+    {
+     "t": "Two fields a mile apart across a zone boundary keep different official times while sharing one sky. Coordinates are how you know which field gets which clock."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the answer contains",
+  "intro": "The fields a coordinate's local time resolves to.",
+  "columns": [
+   "Field",
+   "Meaning",
+   "Example shape"
+  ],
+  "rows": [
+   [
+    "IANA zone",
+    "The point's timezone rulebook",
+    "America/Chicago"
+   ],
+   [
+    "UTC offset now",
+    "Clock difference from UTC today",
+    "-5:00 or -6:00 by season"
+   ],
+   [
+    "Local time",
+    "The point's current wall time",
+    "Computed from the zone rules"
+   ],
+   [
+    "DST state",
+    "Whether daylight saving is in force",
+    "Yes / no with dates nearby"
+   ]
+  ],
+  "note": "Zones and offsets follow the IANA tz database — the world's shared clock rulebook, updated as legislatures move boundaries."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The time zone, current UTC offset and local time for an exact coordinate pair — resolved from the point itself via the tz database's geography."
+  ],
+  [
+   "Do I need an account?",
+   "No — coordinates in, clock out."
+  ],
+  [
+   "Can I use the result for professional work?",
+   "For fieldwork, logging and planning, yes — it reads the same tz database systems build on. Contractual deadlines deserve a second confirmation in your own stack."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — you type the coordinates; your device's position is never the input."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Zone borders are political and revise; databases update on their own cycles, so fresh changes can show differently across sources briefly."
+  ],
+  [
+   "What about ocean points?",
+   "The tz geography assigns zones at sea too (often Etc/GMT bands or the nearest coast's zone). The answer exists; ships themselves keep their own convention."
+  ],
+  [
+   "Half-hour and 45-minute zones?",
+   "Reported exactly — offsets like +5:45 (Nepal) are data, not errors."
+  ],
+  [
+   "Historical times?",
+   "Zone rules carry history in the database; a past date at the point can resolve to a different offset. State the date when you ask a different tool to convert."
+  ],
+  [
+   "Solar noon instead?",
+   "A different quantity — astronomical, not civil. Sun calculators on this site handle that family; this page is the civil clock."
+  ],
+  [
+   "Can it give a future date's time?",
+   "The zone rules project forward — legislatures permitting. The current-rules answer is what the page shows; announced future changes enter the database as they are enacted."
+  ],
+  [
+   "Two points, one zone?",
+   "Common — zones are areas, not points. Both points share the rulebook; their solar times still differ by longitude within it."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "DST at the point: "
+  },
+  {
+   "t": "DST Checker by Coordinates",
+   "l": "/tools/dst-checker-by-coordinates"
+  },
+  {
+   "t": "; offsets: "
+  },
+  {
+   "t": "UTC Offset by Coordinates",
+   "l": "/tools/utc-offset-by-coordinates"
+  },
+  {
+   "t": "; conversions: the "
+  },
+  {
+   "t": "Timezone Converter",
+   "l": "/tools/timezone-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder"
+ ]
+}

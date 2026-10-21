@@ -1,0 +1,187 @@
+{
+ "slug": "continent-finder",
+ "primary_keyword": "Continent Finder",
+ "secondary_keywords": [
+  "which continent",
+  "what continent am i in",
+  "continent finder online"
+ ],
+ "title": "Continent Finder: Which Continent Is It On?",
+ "description": "Resolve any location to its continent with the Continent Finder — including the edge cases maps argue about. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a point in Istanbul resolves to a city on two continents — the Finder gives the location's continental region and the honesty the Bosphorus deserves.",
+ "quick_answer": "The Continent Finder resolves a location — searched, clicked or from your position — to its continental region, using map and geocoding context. Locate the point and read the continent, with the edge cases (transcontinental countries, islands, overseas territories) treated as the genuinely interesting questions they are.",
+ "steps_intro": "Seven continents, several arguments. Resolve the point first:",
+ "use_cases": [
+  {
+   "title": "Geography homework and teaching",
+   "body": [
+    {
+     "t": "The classic classroom question with the map open — plus the edge cases that make the lesson memorable."
+    }
+   ]
+  },
+  {
+   "title": "Data tagging",
+   "body": [
+    {
+     "t": "Datasets with a continent column need a resolver, not a vibe. Points in, regions out — bulk thinking in the "
+    },
+    {
+     "t": "Batch Geocoder",
+     "l": "/tools/batch-geocoder"
+    },
+    {
+     "t": "'s direction."
+    }
+   ]
+  },
+  {
+   "title": "Travel framing",
+   "body": [
+    {
+     "t": "“My third continent” is a claim the Finder audits. Island nations and territories count by the rules you choose — see the FAQs."
+    }
+   ]
+  },
+  {
+   "title": "Quiz and trivia nights",
+   "body": [
+    {
+     "t": "The Bosphorus, the Urals, Suez: the questions that start arguments end here, with the reasoning shown."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Turkey's two answers",
+   "body": [
+    {
+     "t": "Istanbul straddles the Bosphorus: Europe on the west bank, Asia on the east. The point you click decides — which is the only honest way the question can be answered."
+    }
+   ]
+  },
+  {
+   "label": "Example · Egypt and Suez",
+   "body": [
+    {
+     "t": "The Sinai lies east of the Suez Canal in Asia while the rest of Egypt is African. One country, two continents, no contradiction — geography is under no obligation to be tidy."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The classic edge cases",
+  "intro": "Where 'which continent' gets interesting — the conventions most maps and the UN geoscheme broadly use.",
+  "columns": [
+   "Case",
+   "Convention",
+   "Why it argues"
+  ],
+  "rows": [
+   [
+    "Russia and Turkey",
+    "Split at the Urals and Bosphorus",
+    "Transcontinental states"
+   ],
+   [
+    "Egypt",
+    "Sinai in Asia, rest in Africa",
+    "The Suez line"
+   ],
+   [
+    "Central America",
+    "Counted in North America",
+    "Feels like its own region"
+   ],
+   [
+    "Island nations",
+    "By nearest continent and scheme",
+    "Oceans hold no lines"
+   ],
+   [
+    "Overseas territories",
+    "Geography over flag",
+    "A Caribbean island of Europe's politics"
+   ]
+  ],
+  "note": "Continents are conventions layered on geology. The Finder states the convention it applies so the answer can be argued with intelligently."
+ },
+ "faq": [
+  [
+   "What about island states?",
+   "Islands are assigned by the continental scheme in use — usually the nearest continent or the UN geoscheme's region. Distant islands are where conventions differ most; the Finder shows its working."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — search or click any point on earth. Your own position is one optional input among three."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Continental boundaries are conventions: the Urals line, Suez, and the Caucasus are all drawn slightly differently by different authorities."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No — if you use your position, it is used for the lookup and not kept."
+  ],
+  [
+   "Seven continents or fewer?",
+   "Schools differ (some teach six, combining Europe and Asia as Eurasia). The Finder uses the seven-continent model common in US and European atlases."
+  ],
+  [
+   "Is Central America its own continent?",
+   "In the seven-continent model, no — it belongs to North America. The feeling that it is separate is cultural, and the Finder will not pretend otherwise."
+  ],
+  [
+   "Antarctica with no country?",
+   "Points there resolve to Antarctica, population: research stations. The Finder answers geography, not sovereignty."
+  ],
+  [
+   "Where does the Caucasus line run?",
+   "Authorities split Europe and Asia along the Caucasus watershed or the Kuma-Manych depression — the classic 'it depends' of continental geography, flagged here honestly."
+  ],
+  [
+   "Greenland — North America or Europe?",
+   "Geographically North America, politically Denmark. The Finder answers geography first and notes the politics."
+  ],
+  [
+   "What about points in the ocean?",
+   "Far-ocean points belong to no continent; the nearest land's answer is shown for what it is — proximity, not membership."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Points begin in "
+  },
+  {
+   "t": "Address to Coordinates",
+   "l": "/tools/address-to-coordinates"
+  },
+  {
+   "t": "; country context continues in the county and state family via "
+  },
+  {
+   "t": "Address to County Lookup",
+   "l": "/tools/address-to-county-lookup"
+  },
+  {
+   "t": "; coordinates reverse in "
+  },
+  {
+   "t": "Coordinates to Address",
+   "l": "/tools/coordinates-to-address"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder"
+ ]
+}

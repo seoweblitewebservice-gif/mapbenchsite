@@ -1,0 +1,201 @@
+{
+ "slug": "gallons-needed-for-distance",
+ "primary_keyword": "Gallons Needed for Distance Calculator",
+ "secondary_keywords": [
+  "gallons needed calculator",
+  "gas gallons for distance",
+  "miles mpg gallons calculator",
+  "fuel gallons calculator",
+  "how many gallons trip"
+ ],
+ "title": "Gallons Needed for Distance Calculator",
+ "description": "Calculate gallons of fuel for a journey from miles and MPG with the Gallons Needed for Distance Calculator — US gallons, honestly labelled. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 600 miles at 30 mpg needs exactly 20.0 US gallons — which is only about 16.7 UK gallons, the mix-up this page exists to prevent.",
+ "quick_answer": "The Gallons Needed for Distance Calculator divides a journey's miles by your car's miles-per-gallon and returns the US gallons the trip requires. Enter the distance and the economy figure and read the quantity — the number tank planning, fuel budgets and 'will we make it?' all depend on.",
+ "steps_intro": "Miles ÷ mpg = gallons. One division, done with the right gallon:",
+ "use_cases": [
+  {
+   "title": "Trip fuel budgeting",
+   "body": [
+    {
+     "t": "Gallons × local price is the fuel budget; gallons alone is the tank plan. This is the quantity half of the "
+    },
+    {
+     "t": "Fuel Cost Calculator",
+     "l": "/tools/fuel-cost-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Range sufficiency checks",
+   "body": [
+    {
+     "t": "Gallons needed versus gallons aboard is the whole 'do we stop?' decision, computed before the gauge argues."
+    }
+   ]
+  },
+  {
+   "title": "Comparing vehicles over a route",
+   "body": [
+    {
+     "t": "Same miles, two mpg figures, two gallon counts — the difference, priced, is the running-cost argument in its cleanest form."
+    }
+   ]
+  },
+  {
+   "title": "Generator and equipment fuel",
+   "body": [
+    {
+     "t": "Anything rated in gallons per hour or per mile obeys the same division. Distance-based plant on site budgets from this arithmetic."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 600-mile day",
+   "body": [
+    {
+     "t": "600 ÷ 30 = 20.0 gal exactly. At $3.60 that is a $72.00 day of fuel — quantity first, money second, no surprises either way."
+    }
+   ]
+  },
+  {
+   "label": "Example · The efficient tourer",
+   "body": [
+    {
+     "t": "1,240 miles at 38 mpg = 32.6 gal. The efficient car's advantage is not abstract; it is 9 fewer gallons than the 30-mpg car over the same fortnight."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Gallons for common distances",
+  "intro": "Miles ÷ mpg tabulated — the economy figure dominates everything, as always.",
+  "columns": [
+   "Distance",
+   "At 25 mpg",
+   "At 30 mpg",
+   "At 38 mpg",
+   "At 45 mpg"
+  ],
+  "rows": [
+   [
+    "250 mi",
+    "10.0",
+    "8.3",
+    "6.6",
+    "5.6"
+   ],
+   [
+    "600 mi",
+    "24.0",
+    "20.0",
+    "15.8",
+    "13.3"
+   ],
+   [
+    "1,000 mi",
+    "40.0",
+    "33.3",
+    "26.3",
+    "22.2"
+   ],
+   [
+    "1,240 mi",
+    "49.6",
+    "41.3",
+    "32.6",
+    "27.6"
+   ],
+   [
+    "2,500 mi",
+    "100.0",
+    "83.3",
+    "65.8",
+    "55.6"
+   ]
+  ],
+  "note": "All gallons are US gallons (3.78541 L). UK (imperial) gallons are larger — 1 UK gal = 1.20095 US gal."
+ },
+ "faq": [
+  [
+   "What formula is used?",
+   "Gallons = miles ÷ mpg. Nothing hides in it: your two inputs and one division."
+  ],
+  [
+   "UK gallons?",
+   "This calculator uses US gallons. A UK gallon is about 20% larger (4.54609 L vs 3.78541 L), so the same journey needs fewer UK gallons — 20.0 US gal ≈ 16.7 UK gal. Mixing them is the classic transatlantic fuel error."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Traffic is inside your real-world mpg if you enter it honestly."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Roads wind, and fuel is burned on road miles. Enter the road distance."
+  ],
+  [
+   "Can route results change over time?",
+   "Your mpg changes with load, season and maintenance. Measure it per fill-up and this stays accurate."
+  ],
+  [
+   "Is this the same as Liters Needed?",
+   "Same division, different unit system: that tool runs on km and L/100 km. 20.0 US gal = 75.7 L if you need the translation."
+  ],
+  [
+   "How much reserve should I plan?",
+   "The calculator gives the journey's need. Prudent planners arrive with a reserve — the Fuel Stop Planner exists to place the stops that guarantee it."
+  ],
+  [
+   "My trip computer shows a different mpg.",
+   "Trust the fill-up method: gallons bought ÷ miles since the last fill. Trip computers flatter by a few percent on many cars."
+  ],
+  [
+   "What about diesel or LPG?",
+   "The division is fuel-agnostic — miles ÷ the vehicle's stated economy in its unit. Diesel cars often post mpg figures petrol drivers envy; the arithmetic is the same."
+  ],
+  [
+   "Reserve in the tank versus reserve in the plan?",
+   "Both: the plan's margin plus arriving with fuel aboard. The calculator sizes the journey; prudence is added by you, deliberately."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The metric sibling is "
+  },
+  {
+   "t": "Liters Needed for Distance",
+   "l": "/tools/liters-needed-for-distance"
+  },
+  {
+   "t": "; stops are planned in the "
+  },
+  {
+   "t": "Fuel Stop Planner",
+   "l": "/tools/fuel-stop-planner"
+  },
+  {
+   "t": "; and money is the "
+  },
+  {
+   "t": "Fuel Cost Calculator",
+   "l": "/tools/fuel-cost-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner",
+  "cycling-speed-calculator"
+ ]
+}

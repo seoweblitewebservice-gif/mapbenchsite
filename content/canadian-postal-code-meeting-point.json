@@ -1,0 +1,197 @@
+{
+ "slug": "canadian-postal-code-meeting-point",
+ "primary_keyword": "Canadian Postal Code Meeting Point",
+ "secondary_keywords": [
+  "postal code centre canada",
+  "fair meeting point canada",
+  "fsa centroid"
+ ],
+ "title": "Canadian Postal Code Meeting Point",
+ "description": "Find the fair meeting centre for a set of Canadian postal codes with the Canadian Postal Code Meeting Point — each code's travel shown. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a team spread across Toronto (M), Ottawa (K) and Montreal (H) codes gets one balance point with each member's distance to it printed beside their code.",
+ "quick_answer": "The Canadian Postal Code Meeting Point takes a set of Canadian postal codes, resolves each to its location, and computes the balance point — the centre that treats the set fairly — with the distance each code travels to reach it. Paste codes, one per line, and read the centre.",
+ "steps_intro": "Fairness is a coordinate. Compute it from the whole team's codes:",
+ "use_cases": [
+  {
+   "title": "Team meet-ups across provinces",
+   "body": [
+    {
+     "t": "Ontario and Quebec teams stop arguing about whose city hosts: the balance point proposes, the distances dispose. The US cousin is the "
+    },
+    {
+     "t": "Geographic Meeting Point Finder",
+     "l": "/tools/geographic-meeting-point-finder"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Depot and service-centre siting",
+   "body": [
+    {
+     "t": "Serve a set of postal areas from one centre: the balance point is the first candidate, and each code's distance is the fairness audit."
+    }
+   ]
+  },
+  {
+   "title": "Event and reunion planning",
+   "body": [
+    {
+     "t": "Families scattered from Vancouver (V) to Halifax (B) get a centre nobody can call rigged — arithmetic is neutral in a way cousins are not."
+    }
+   ]
+  },
+  {
+   "title": "Territory balancing",
+   "body": [
+    {
+     "t": "A rep added in Calgary (T) moves the centre. Recompute after every roster change and territories stay honest."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · FSA letters are geography",
+   "body": [
+    {
+     "t": "The first letter of a Canadian code is a region: M is Toronto, K eastern Ontario, H metropolitan Montreal, V British Columbia, T Alberta. A set's letters alone sketch the map before the centre is computed."
+    }
+   ]
+  },
+  {
+   "label": "Example · Full code or FSA?",
+   "body": [
+    {
+     "t": "A full code (M5V 1J1) pins a block; the FSA (M5V) pins the district. Sets mixed at FSA level still centre sensibly — precision per member varies, fairness survives."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Canada's first letters, sampled",
+  "intro": "The Forward Sortation Area's first letter names the region — a few anchors for reading your set's spread.",
+  "columns": [
+   "Letter",
+   "Region",
+   "Letter",
+   "Region"
+  ],
+  "rows": [
+   [
+    "A",
+    "Newfoundland and Labrador",
+    "M",
+    "Toronto"
+   ],
+   [
+    "B",
+    "Nova Scotia",
+    "N",
+    "Southwestern Ontario"
+   ],
+   [
+    "G",
+    "Eastern Quebec",
+    "T",
+    "Alberta"
+   ],
+   [
+    "H",
+    "Metropolitan Montreal",
+    "V",
+    "British Columbia"
+   ],
+   [
+    "K",
+    "Eastern Ontario",
+    "X",
+    "Nunavut and Northwest Territories"
+   ]
+  ],
+  "note": "The centre is a geographic balance of the codes' locations. Roads, ferries and the St. Lawrence get their vote afterwards — the driving version is the meeting tools' road family."
+ },
+ "faq": [
+  [
+   "Full codes or just FSAs?",
+   "Both work: full codes resolve precisely, FSAs resolve to their districts. A set of either (or mixed) produces a centre; full codes make it sharpest."
+  ],
+  [
+   "Is the centre always sensible?",
+   "It is always the arithmetic balance — which can sit in a lake or a forest when codes ring one. Treat it as the fair starting point, then nudge to the nearest town."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — the codes you paste are the inputs; your own location is never asked."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Postal geography and municipal geography are different systems drawn by different bodies; a code's area and a town's boundary need not agree."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "Balance point or middle code?",
+   "The balance (centroid-style) point weighs every code; the middle of a road trip is a different idea — the Halfway Between Two Places tool owns that one for pairs."
+  ],
+  [
+   "US ZIP codes in the same set?",
+   "This page is Canadian-shaped. US sets belong to the Geographic Meeting Point Finder, which takes places and ZIPs."
+  ],
+  [
+   "The centre landed in a lake.",
+   "Arithmetic has no shore sense. Nudge to the nearest town on the winning shore — the distances printed tell you what the nudge costs each member."
+  ],
+  [
+   "One code is in the territories.",
+   "Northern codes stretch any centre far north. That is the fairness the set asked for; weighting by travellers per code is the organiser's amendment."
+  ],
+  [
+   "Can businesses use it for a depot?",
+   "As the first candidate, yes — then road distances, not straight lines, should referee the final site. The tool gives the geographic claim; roads audit it."
+  ],
+  [
+   "French or English place names at the centre?",
+   "Both are Canada's reality near Quebec; the centre is a coordinate, and its nearest place answers in the name the map carries."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Pairs meet in "
+  },
+  {
+   "t": "Halfway Between Two Places",
+   "l": "/tools/halfway-between-two-places"
+  },
+  {
+   "t": "; US sets use the "
+  },
+  {
+   "t": "Geographic Meeting Point Finder",
+   "l": "/tools/geographic-meeting-point-finder"
+  },
+  {
+   "t": "; single codes resolve in "
+  },
+  {
+   "t": "Address to Coordinates",
+   "l": "/tools/address-to-coordinates"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location"
+ ]
+}

@@ -1,0 +1,177 @@
+{
+ "slug": "indigenous-lands-map",
+ "primary_keyword": "Indigenous Lands Map",
+ "secondary_keywords": [
+  "indigenous lands",
+  "native territories map",
+  "tribal land map"
+ ],
+ "title": "Indigenous Lands Map: Territories Context",
+ "description": "Explore indigenous lands and treaty context for a place with the Indigenous Lands Map — open datasets for education and awareness. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, an Australian postcode, a Canadian city and a US county each sit within indigenous nations' territories whose names predate the maps by millennia — this layer restores those names to the geography.",
+ "quick_answer": "The Indigenous Lands Map adds layers from open datasets showing indigenous lands and related context for the places you search or click. It is built for education and awareness: read whose traditional territories a place lies within — an introduction to a history, not a legal register.",
+ "steps_intro": "Geography has older names than the street map's. Read them with respect:",
+ "use_cases": [
+  {
+   "title": "Land acknowledgements with substance",
+   "body": [
+    {
+     "t": "An acknowledgement that names the actual nations of the place, spelled as the datasets spell them, means something. The "
+    },
+    {
+     "t": "What Country Am I In",
+     "l": "/tools/what-country-am-i-in"
+    },
+    {
+     "t": " answer next to it shows the layering clearly."
+    }
+   ]
+  },
+  {
+   "title": "Teaching and learning",
+   "body": [
+    {
+     "t": "Classrooms use the layer to start the honest conversation: whose land, under what treaties, with what present-day presence."
+    }
+   ]
+  },
+  {
+   "title": "Travel with awareness",
+   "body": [
+    {
+     "t": "Knowing a landscape's first peoples changes what a traveller sees — and which cultural centres and tours to seek out respectfully."
+    }
+   ]
+  },
+  {
+   "title": "Research starting points",
+   "body": [
+    {
+     "t": "The layer points onward: named nations have their own governments, sites and protocols, which are the sources to follow next."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Overlapping geographies",
+   "body": [
+    {
+     "t": "A single point can sit inside several nations' traditional territories — boundaries in this history overlap and were never the hard lines of a modern cadastre. The layer shows what the datasets carry, overlaps included."
+    }
+   ]
+  },
+  {
+   "label": "Example · Names as data",
+   "body": [
+    {
+     "t": "The dataset's spellings are the nations' own where recorded — orthography here is not pedantry, it is respect encoded in the data."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the layer is — and is not",
+  "intro": "The honest framing this topic deserves, in one table.",
+  "columns": [
+   "Question",
+   "Answer"
+  ],
+  "rows": [
+   [
+    "Purpose",
+    "Education and awareness — context for places"
+   ],
+   [
+    "Source",
+    "Open datasets on indigenous territories and lands"
+   ],
+   [
+    "Legal title?",
+    "No — not a register of ownership or claims"
+   ],
+   [
+    "Boundaries",
+    "Traditional territories; often overlapping and approximate"
+   ],
+   [
+    "Present-day presence",
+    "Nations are living communities with governments — the layer is a doorway, not the whole story"
+   ]
+  ],
+  "note": "If you need legally authoritative information about indigenous title, treaties or consultation duties, the nations themselves and official registers are the sources. This map introduces; it does not adjudicate."
+ },
+ "faq": [
+  [
+   "Is it authoritative title?",
+   "No — deliberately not. The map presents open-dataset context for education and awareness. Legal questions about title, treaties and rights belong to the nations' own governments and official records."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — search or click any place; your own position is never needed."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Territory records differ by dataset and by the nations' own publications; spellings and boundary renderings vary, and overlapping territories are often drawn differently by design."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "Why do territories overlap?",
+   "Traditional territories were not exclusive cadastral parcels — shared use, seasons and kinship made layered geographies. The data reflects that reality."
+  ],
+  [
+   "Who maintains the underlying data?",
+   "Open projects dedicated to this mapping (community and academic efforts worldwide), drawing on the nations' published information. Coverage is strongest in North America, Australia and New Zealand."
+  ],
+  [
+   "How should I use an acknowledgement?",
+   "Name the nations of the specific place, use their preferred spellings, and learn one true thing about their present-day community. Generic words are worse than none."
+  ],
+  [
+   "Does the layer show reservations?",
+   "Where datasets record current indigenous lands and reserves, context may appear — labelled as the dataset labels it, distinct from traditional territories."
+  ],
+  [
+   "Can I contribute corrections?",
+   "The underlying open projects accept evidence-based input; the nations' own published maps outrank everyone else's."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The modern frame: "
+  },
+  {
+   "t": "What Country Am I In",
+   "l": "/tools/what-country-am-i-in"
+  },
+  {
+   "t": "; US admin: "
+  },
+  {
+   "t": "Address to County Lookup",
+   "l": "/tools/address-to-county-lookup"
+  },
+  {
+   "t": "; your point: "
+  },
+  {
+   "t": "Find My Location",
+   "l": "/tools/find-my-location"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder"
+ ]
+}

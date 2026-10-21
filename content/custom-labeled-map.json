@@ -1,0 +1,28 @@
+{
+ "slug": "custom-labeled-map",
+ "primary_keyword": "Custom Labeled Pin Map",
+ "secondary_keywords": [
+  "labeled map",
+  "custom pin labels",
+  "presentation map"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "advanced-map-embed-generator",
+  "blank-map",
+  "color-a-map",
+  "country-size-comparison",
+  "county-choropleth",
+  "embed-map-link-helper"
+ ]
+}

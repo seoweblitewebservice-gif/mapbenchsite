@@ -1,0 +1,182 @@
+{
+ "slug": "equidistance-line-finder",
+ "primary_keyword": "Equidistance Line Finder",
+ "secondary_keywords": [
+  "equidistant line",
+  "equidistance finder",
+  "perpendicular bisector map",
+  "halfway line between two places"
+ ],
+ "title": "Equidistance Line Finder: The Fair Meeting Line",
+ "description": "Draw every point that is the same distance from two places with the Equidistance Line Finder — the perpendicular bisector on a real map. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, between New York and Boston the line passes just west of Hartford — Hartford itself is approx. 100.4 miles from New York but 92.4 from Boston, so it sits on Boston's side of fair.",
+ "quick_answer": "The Equidistance Line Finder draws the line of every point that is exactly the same straight-line distance from two places you choose. It is the perpendicular bisector of the pair, drawn on the real map: stand anywhere on it and neither side has travelled further than the other, geometrically speaking.",
+ "steps_intro": "Two places, one fairness boundary — draw it instead of arguing about it:",
+ "use_cases": [
+  {
+   "title": "Neutral meeting territory",
+   "body": [
+    {
+     "t": "Two offices, two families, two teams: pick anywhere on the line and the geography is neutral. Towns near the line, not the midpoint alone, become the candidate list — the "
+    },
+    {
+     "t": "Halfway Between Two Places",
+     "l": "/tools/halfway-between-two-places"
+    },
+    {
+     "t": " calculator gives the centre point itself."
+    }
+   ]
+  },
+  {
+   "title": "Territory borders that defend themselves",
+   "body": [
+    {
+     "t": "Sales and service territories drawn as equidistance lines need no apology: every customer is served from the nearer base by construction."
+    }
+   ]
+  },
+  {
+   "title": "Voronoi thinking, by hand",
+   "body": [
+    {
+     "t": "Draw equidistance lines between several bases pairwise and you are sketching a Voronoi diagram — the geometry behind coverage maps — one honest line at a time."
+    }
+   ]
+  },
+  {
+   "title": "Classroom geometry with real places",
+   "body": [
+    {
+     "t": "The perpendicular bisector stops being a compass-and-ruler ritual when it runs between two cities students know. The 'aha' is that the line is a great circle, not a ruler line."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · New York ↔ Boston",
+   "body": [
+    {
+     "t": "The midpoint is 41.546, −72.551 in Connecticut. Hartford feels like it should sit on the line — it does not: approx. 100.4 miles to New York against 92.4 to Boston, so the true line runs roughly 4 miles west of the city. Feelings are not measurements; this tool is."
+    }
+   ]
+  },
+  {
+   "label": "Example · Reading the line",
+   "body": [
+    {
+     "t": "Every point on the drawn line checks out the same way Hartford does not: measure from any point on it to both places and the answers match. Move off it and one side wins immediately — the line is a boundary, not a zone."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Towns near the New York–Boston line",
+  "intro": "Straight-line distances to both cities for towns people nominate as 'halfway' — computed on the site model. The line itself is where the difference column would read zero.",
+  "columns": [
+   "Town",
+   "To New York (mi)",
+   "To Boston (mi)",
+   "Difference (mi)"
+  ],
+  "rows": [
+   [
+    "Hartford, CT",
+    "100.4",
+    "92.4",
+    "8.0"
+   ],
+   [
+    "Springfield, MA",
+    "120.8",
+    "80.3",
+    "40.5"
+   ],
+   [
+    "New Haven, CT",
+    "69.7",
+    "120.6",
+    "50.9"
+   ],
+   [
+    "Providence, RI",
+    "155.0",
+    "41.2",
+    "113.8"
+   ],
+   [
+    "Worcester, MA",
+    "156.4",
+    "38.6",
+    "117.8"
+   ]
+  ],
+  "note": "Differences are straight-line; road fairness can shift the practical answer where one side's roads are faster — check finalists by drive time."
+ },
+ "faq": [
+  [
+   "Is every point on the line exactly equidistant?",
+   "Yes, by construction — that is the definition of the perpendicular bisector on the sphere. The drawn line is the set of points whose distances to your two places are equal."
+  ],
+  [
+   "What is the midpoint used for?",
+   "The midpoint is the single point where the line crosses the pair's great-circle path — the fairest single meeting point. The line generalises it: every point on the line is equally fair, just further from both."
+  ],
+  [
+   "Is the line straight on the map?",
+   "It is a great circle, so most flat projections bend it slightly. Over city-scale distances the bend is invisible; over continental pairs it becomes part of the lesson."
+  ],
+  [
+   "Does equal distance mean equal travel time?",
+   "No — roads differ. The line settles the geographic argument; settle the practical one by testing candidate towns on it with a drive-time tool."
+  ],
+  [
+   "Can I draw lines for three places?",
+   "Pairwise — three places make three lines, and where they meet is the point equidistant from all three. For the balanced-centre version, the Geographic Meeting Point Finder computes a centroid instead."
+  ],
+  [
+   "What is this called in mathematics?",
+   "The perpendicular bisector of the segment joining the two points — on a sphere, a great circle through the midpoint at right angles to the pair's great circle."
+  ],
+  [
+   "Why does the line extend so far?",
+   "Equidistance does not expire with distance: points far away can still be equally far from both places, so the line is drawn across the whole map."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The centre point of the same idea is the "
+  },
+  {
+   "t": "Halfway Between Two Places",
+   "l": "/tools/halfway-between-two-places"
+  },
+  {
+   "t": " calculator; the multi-place balance is the "
+  },
+  {
+   "t": "Geographic Meeting Point Finder",
+   "l": "/tools/geographic-meeting-point-finder"
+  },
+  {
+   "t": "; and the underlying pair is measured in "
+  },
+  {
+   "t": "Distance Between Two Places",
+   "l": "/tools/distance-between-two-places"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "airport-distance-calculator",
+  "airport-midpoint-by-coordinates",
+  "airport-route-finder",
+  "bearing-calculator",
+  "closest-facility-finder",
+  "compass-bearing-visualizer"
+ ]
+}

@@ -1,0 +1,200 @@
+{
+ "slug": "arcminutes-to-decimal-degrees-converter",
+ "primary_keyword": "Arcminutes to Decimal Degrees Converter",
+ "secondary_keywords": [
+  "arcminutes to decimal degrees converter online",
+  "free arcminutes to decimal degrees converter",
+  "arcminutes to decimal degrees converter calculator",
+  "arcminutes to decimal degrees converter converter",
+  "arcminutes to decimal degrees converter formula"
+ ],
+ "title": "Arcminutes to Decimal Degrees Converter",
+ "description": "Convert arcminutes to decimal degrees instantly with the Arcminutes to Decimal Degrees Converter — divide by 60, done properly. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, Times Square's latitude is 2,445.48 arcminutes — the same 40.7580 degrees wearing the older unit that nautical miles were built on.",
+ "quick_answer": "The Arcminutes to Decimal Degrees Converter turns arcminutes into decimal degrees by the exact relation 1 degree = 60 arcminutes. Enter the arcminutes and read the decimal result — the conversion behind every degrees-minutes coordinate, chart reading and nautical calculation you will ever meet.",
+ "steps_intro": "Sixty arcminutes make a degree. The converter does the division cleanly:",
+ "use_cases": [
+  {
+   "title": "Reading degrees-and-minutes formats",
+   "body": [
+    {
+     "t": "GPS units and charts love 40° 45.48′ — convert the minutes part here, or the whole coordinate in the "
+    },
+    {
+     "t": "DMS to Decimal",
+     "l": "/tools/dms-to-decimal"
+    },
+    {
+     "t": " converter."
+    }
+   ]
+  },
+  {
+   "title": "Nautical work",
+   "body": [
+    {
+     "t": "The nautical mile is one arcminute of latitude by definition — arcminute fluency is seamanship's arithmetic foundation."
+    }
+   ]
+  },
+  {
+   "title": "Survey and chart transcription",
+   "body": [
+    {
+     "t": "Old plats and charts record minutes; GIS wants decimals. This page is the one-step bridge for the minutes component."
+    }
+   ]
+  },
+  {
+   "title": "Checking a conversion",
+   "body": [
+    {
+     "t": "Multiply back: decimals × 60 must return your arcminutes. The round trip is the audit, and the reverse tool is "
+    },
+    {
+     "t": "Decimal Degrees to Arcminutes",
+     "l": "/tools/decimal-degrees-to-arcminutes-converter"
+    },
+    {
+     "t": "."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · A latitude in minutes",
+   "body": [
+    {
+     "t": "2,445.48′ ÷ 60 = 40.7580° — Times Square's latitude. The check runs backward just as cleanly: 0.7580 × 60 = 45.48′, restoring the minutes."
+    }
+   ]
+  },
+  {
+   "label": "Example · The sea mile hidden inside",
+   "body": [
+    {
+     "t": "Sail 60 arcminutes of latitude and you have covered 60 nautical miles. No other unit conversion on this site carries its own distance standard inside it."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Arcminute anchors",
+  "intro": "The conversions worth recognising on sight.",
+  "columns": [
+   "Arcminutes",
+   "Decimal degrees",
+   "Note"
+  ],
+  "rows": [
+   [
+    "1′",
+    "0.016667°",
+    "One nautical mile of latitude"
+   ],
+   [
+    "6′",
+    "0.1°",
+    "The tidy tenth"
+   ],
+   [
+    "30′",
+    "0.5°",
+    "Half a degree"
+   ],
+   [
+    "45′",
+    "0.75°",
+    "Three quarters"
+   ],
+   [
+    "60′",
+    "1.0°",
+    "The definition itself"
+   ]
+  ],
+  "note": "Exact by definition — arcminutes are a subdivision, not a measurement. Accuracy questions belong to the coordinate you apply them to."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Arcminutes divided by 60, giving decimal degrees — with the precision you enter preserved through the conversion."
+  ],
+  [
+   "Is the calculation done locally?",
+   "Yes — in your browser, instantly. Nothing is sent anywhere to divide by sixty."
+  ],
+  [
+   "How accurate is the result?",
+   "Exactly as accurate as the input: the relation 60′ = 1° is definitional, so all error lives in the source value, none in the conversion."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 — the GPS and web-map standard these pages share."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — they mean finer resolution. A coordinate measured to a metre gains nothing from eight decimals, a fact this site's precision tools quantify."
+  ],
+  [
+   "Can it convert a full coordinate?",
+   "This page converts the minutes component; paste whole coordinates into the Coordinate Converter or DMS to Decimal for the one-shot version."
+  ],
+  [
+   "Arcminutes versus minutes of time?",
+   "Different minutes entirely — 15 arcminutes of longitude pass per hour of Earth's rotation, which is the only bridge between them."
+  ],
+  [
+   "Negative values?",
+   "They convert with their sign — southern and western hemisphere arithmetic stays honest."
+  ],
+  [
+   "What about arcseconds?",
+   "One arcminute holds 60 arcseconds; the Arcseconds to Ground Distance Calculator gives those a physical size."
+  ],
+  [
+   "Why do charts still use minutes?",
+   "Because the nautical mile is built on them. At sea, minutes are not nostalgia — they are the unit system working as designed."
+  ],
+  [
+   "Rounding?",
+   "Results keep sensible precision; round deliberately with the Coordinate Rounding Tool when a form demands fewer places."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Reverse: "
+  },
+  {
+   "t": "Decimal Degrees to Arcminutes Converter",
+   "l": "/tools/decimal-degrees-to-arcminutes-converter"
+  },
+  {
+   "t": "; whole coordinates: the "
+  },
+  {
+   "t": "Coordinate Converter",
+   "l": "/tools/coordinate-converter"
+  },
+  {
+   "t": "; seconds: the "
+  },
+  {
+   "t": "Arcseconds to Ground Distance Calculator",
+   "l": "/tools/arcseconds-to-ground-distance-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator",
+  "coordinate-offset-calculator",
+  "coordinate-parser"
+ ]
+}

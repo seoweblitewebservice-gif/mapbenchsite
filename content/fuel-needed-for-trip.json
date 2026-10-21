@@ -1,0 +1,202 @@
+{
+ "slug": "fuel-needed-for-trip",
+ "primary_keyword": "Fuel Needed for Trip Calculator",
+ "secondary_keywords": [
+  "fuel needed calculator",
+  "fuel required for trip",
+  "trip fuel calculator",
+  "liters needed for trip",
+  "fuel consumption trip calculator"
+ ],
+ "title": "Fuel Needed for Trip Calculator: Litres Required",
+ "description": "Estimate how much fuel a journey needs from distance and L/100 km consumption with the Fuel Needed for Trip Calculator. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 1,200 km tour at 7.5 L/100 km needs exactly 90.0 litres — two ordinary tankfuls, planned before the mountains.",
+ "quick_answer": "The Fuel Needed for Trip Calculator estimates a journey's fuel quantity from its distance in kilometres and your car's consumption in litres per 100 km. Enter both and read the litres required — the figure tank planning, remote routes and rental decisions are quietly built on.",
+ "steps_intro": "Quantity before cost: how much fuel, then what it costs:",
+ "use_cases": [
+  {
+   "title": "Remote-route planning",
+   "body": [
+    {
+     "t": "Where stations are sparse, the question is not price but sufficiency. Litres needed versus tank size is the whole check — the "
+    },
+    {
+     "t": "Fuel Stop Planner",
+     "l": "/tools/fuel-stop-planner"
+    },
+    {
+     "t": " places the stops."
+    }
+   ]
+  },
+  {
+   "title": "Rental and unfamiliar cars",
+   "body": [
+    {
+     "t": "A hire car's stated consumption turns your itinerary into a fuel quantity — no surprises at the return desk's fuel policy."
+    }
+   ]
+  },
+  {
+   "title": "Budgeting the tour",
+   "body": [
+    {
+     "t": "Litres × the price where you are going is the fuel budget in local terms; the "
+    },
+    {
+     "t": "Fuel Cost Calculator",
+     "l": "/tools/fuel-cost-calculator"
+    },
+    {
+     "t": " runs the money version."
+    }
+   ]
+  },
+  {
+   "title": "Comparing itineraries",
+   "body": [
+    {
+     "t": "Two routes, two distances, one consumption: the fuel difference is a real cost of the prettier road, priced in litres."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The long tour",
+   "body": [
+    {
+     "t": "1,200 km × 7.5 ÷ 100 = 90.0 L. On a 50 L tank that is a fill before departure and at least one stop — planned, not discovered."
+    }
+   ]
+  },
+  {
+   "label": "Example · The efficient run",
+   "body": [
+    {
+     "t": "850 km at 5.6 L/100 km = 47.6 L — just inside one generous tank. 'Just inside' is doing work in that sentence; the planner adds a margin."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Litres for common trips",
+  "intro": "Distance × consumption ÷ 100, tabulated — read your car's consumption row, your trip's column.",
+  "columns": [
+   "Distance",
+   "At 5.6 L/100 km",
+   "At 7.5 L/100 km",
+   "At 9.8 L/100 km"
+  ],
+  "rows": [
+   [
+    "300 km",
+    "16.8 L",
+    "22.5 L",
+    "29.4 L"
+   ],
+   [
+    "650 km",
+    "36.4 L",
+    "48.8 L",
+    "63.7 L"
+   ],
+   [
+    "850 km",
+    "47.6 L",
+    "63.8 L",
+    "83.3 L"
+   ],
+   [
+    "1,200 km",
+    "67.2 L",
+    "90.0 L",
+    "117.6 L"
+   ],
+   [
+    "2,500 km",
+    "140.0 L",
+    "187.5 L",
+    "245.0 L"
+   ]
+  ],
+  "note": "Consumption is your car's real-world figure. Hills, loads and winter move it; a planning margin is wisdom, not waste."
+ },
+ "faq": [
+  [
+   "Is this exact?",
+   "The arithmetic is exact; the consumption is your estimate. Real journeys vary with terrain, weather and load — treat the result as the planned quantity and carry a margin."
+  ],
+  [
+   "What consumption format is used?",
+   "Litres per 100 km, the European standard. If you think in mpg, the Gallons Needed tool takes miles and mpg natively."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Consumption already absorbs your driving pattern if you enter your real figure; traffic is not a separate input."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Roads wind — and fuel is burned on the road figure. Enter road kilometres."
+  ],
+  [
+   "Can route results change over time?",
+   "Your car's consumption drifts with maintenance and season. Recheck it per tank and the estimates stay honest."
+  ],
+  [
+   "How much margin should I add?",
+   "Enough for a missed station and a detour — many planners add 10–15% or keep the tank above a quarter. The calculator gives the need; the margin is your judgement."
+  ],
+  [
+   "Does it give the cost too?",
+   "Quantity here; cost in the Fuel Cost Calculator, which multiplies by your price."
+  ],
+  [
+   "Tank smaller than the trip needs — how many fills?",
+   "Divide litres needed by usable tank capacity and round up: 90 L through a 45 L usable tank is two fills after the starting amount. The Fuel Stop Planner places them."
+  ],
+  [
+   "Does air conditioning really change it?",
+   "Measurably on small cars in hot weather — it is inside your real-world consumption if you measured it in summer. Use the season's figure for the season's trip."
+  ],
+  [
+   "Motorway versus mountain consumption?",
+   "Different by a wide margin in most cars. Enter the figure for the terrain the trip actually crosses — or price both halves separately and add."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The imperial sibling is "
+  },
+  {
+   "t": "Gallons Needed for Distance",
+   "l": "/tools/gallons-needed-for-distance"
+  },
+  {
+   "t": "; litres specifically are "
+  },
+  {
+   "t": "Liters Needed for Distance",
+   "l": "/tools/liters-needed-for-distance"
+  },
+  {
+   "t": "; and the money version is the "
+  },
+  {
+   "t": "Fuel Cost Calculator",
+   "l": "/tools/fuel-cost-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner"
+ ]
+}

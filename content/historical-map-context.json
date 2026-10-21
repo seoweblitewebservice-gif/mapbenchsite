@@ -1,0 +1,28 @@
+{
+ "slug": "historical-map-context",
+ "primary_keyword": "Historical Map Context",
+ "secondary_keywords": [
+  "historical map",
+  "old map coordinates",
+  "georeference helper"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "custom-labeled-map",
+  "embed-map-link-helper",
+  "google-maps-embed-code-generator",
+  "live-spatial-data-connector",
+  "map-data-collection-form-builder",
+  "map-drawer"
+ ]
+}

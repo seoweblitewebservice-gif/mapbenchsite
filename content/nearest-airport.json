@@ -1,0 +1,183 @@
+{
+ "slug": "nearest-airport",
+ "primary_keyword": "Nearest Airport",
+ "secondary_keywords": [
+  "closest airport",
+  "nearest airport online",
+  "free nearest airport"
+ ],
+ "title": "Nearest Airport Finder: Closest Major Airports",
+ "description": "Find the nearest major airports to any place with the Nearest Airport finder — distances from a city or your position. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, from central London the list leads with airports approx. 15 miles away at Heathrow — with the City and Gatwick alternatives ranked behind it.",
+ "quick_answer": "The Nearest Airport finder lists the major airports closest to a place you name or your current position, with the distance to each. Search from a city or your location and read the ranked list — the first step in choosing where a trip actually begins.",
+ "steps_intro": "Trips begin at an airport, not at a destination pin. Find the right starting point:",
+ "use_cases": [
+  {
+   "title": "Trip start decisions",
+   "body": [
+    {
+     "t": "The nearest airport is not always the best airport — but the ranked distances are where the comparison starts. Flight thinking continues in the "
+    },
+    {
+     "t": "Flight Distance Calculator",
+     "l": "/tools/flight-distance-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Visitors and pickups",
+   "body": [
+    {
+     "t": "“Which airport are you flying into?” deserves a list, not a guess — especially where a metro area has three."
+    }
+   ]
+  },
+  {
+   "title": "Relocation research",
+   "body": [
+    {
+     "t": "A new city's air links are part of its livability. The nearest major airports, and their distances, are the first paragraph of that research."
+    }
+   ]
+  },
+  {
+   "title": "Rural trip planning",
+   "body": [
+    {
+     "t": "In sparse country the answer may be a two-hour drive — better known at planning time than at booking time."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · London's choice",
+   "body": [
+    {
+     "t": "From the centre: Heathrow approx. 15 miles west, London City much closer but limited, Gatwick approx. 28 miles south. The finder ranks them; your airline's network makes the final call."
+    }
+   ]
+  },
+  {
+   "label": "Example · New York's three",
+   "body": [
+    {
+     "t": "From Manhattan, LaGuardia is approx. 9 miles, JFK approx. 15, Newark approx. 14 — three majors inside a taxi ride, which is why the question needs a list."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading the airport list",
+  "intro": "What the ranking does and does not claim — straight-line proximity is the sort key, and the table says what to weigh next.",
+  "columns": [
+   "Factor",
+   "In the list?",
+   "Weigh it how"
+  ],
+  "rows": [
+   [
+    "Distance from your point",
+    "Yes — the ranking itself",
+    "First filter"
+   ],
+   [
+    "Flights to your destination",
+    "No",
+    "The deciding factor, usually"
+   ],
+   [
+    "Airport size and routes",
+    "Majors only",
+    "More routes, more rescue options"
+   ],
+   [
+    "Ground transport",
+    "No",
+    "A near airport with no train can lose to a farther one with"
+   ],
+   [
+    "Driving distance",
+    "Straight-line shown",
+    "Check the road figure before the taxi maths"
+   ]
+  ],
+  "note": "Distances are approximations from place to airport; “nearest” is a geographic statement, not a booking recommendation."
+ },
+ "faq": [
+  [
+   "Does it list every airstrip?",
+   "No — it lists major airports, the ones with scheduled flights a traveller can book. Grass strips and private fields are a different hobby's map."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No — the distances are geographic. The drive to the airport is a separate, traffic-haunted question for the routing tools."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "The airport distances here are point-to-point; the taxi or train journey will be longer. Budget the road figure, admire the straight one."
+  ],
+  [
+   "Can route results change over time?",
+   "Airports rarely move; the list changes when new majors open or data improves. Rankings by distance are stable civic facts."
+  ],
+  [
+   "From my exact position or a city?",
+   "Either — a named place or your device's position. Position is used to build the list and nothing else."
+  ],
+  [
+   "Which airport should I choose?",
+   "The one with the flight: distance ranks the candidates, routes and times decide among them."
+  ],
+  [
+   "International or domestic?",
+   "Majors of both kinds appear; the destination's needs filter the list better than any label."
+  ],
+  [
+   "The nearest airport has no flight to my destination.",
+   "Common — proximity ranks, networks decide. Take the list to the flight tools and let routes filter it."
+  ],
+  [
+   "Helipads and seaplane bases?",
+   "Not in the majors list. This finder serves scheduled-flight travel, where the airport choice actually changes a booking."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Flight legs are measured in the "
+  },
+  {
+   "t": "Flight Distance Calculator",
+   "l": "/tools/flight-distance-calculator"
+  },
+  {
+   "t": ", midpoints in the "
+  },
+  {
+   "t": "Airport Midpoint by Coordinates",
+   "l": "/tools/airport-midpoint-by-coordinates"
+  },
+  {
+   "t": ", and routes between airports in the "
+  },
+  {
+   "t": "Airport Route Finder",
+   "l": "/tools/airport-route-finder"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-calories-distance",
+  "cycling-route-planner",
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator"
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "slug": "solar-roof-potential-calculator",
+ "primary_keyword": "Solar Roof Potential Calculator",
+ "secondary_keywords": [
+  "solar roof potential",
+  "solar panel roof estimate",
+  "roof solar calculator",
+  "sunlight on my roof"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "astronomical-twilight-calculator",
+  "civil-twilight-calculator",
+  "day-night-map",
+  "golden-hour-calculator",
+  "moon-age-calculator",
+  "moon-illumination-calculator"
+ ]
+}

@@ -1,0 +1,185 @@
+{
+ "slug": "public-restrooms-near-me",
+ "primary_keyword": "Public Restrooms Near Me",
+ "secondary_keywords": [
+  "public toilets map",
+  "restroom finder",
+  "nearest public toilet"
+ ],
+ "title": "Public Restrooms Near Me: Toilets on the Map",
+ "description": "Find public restrooms near any place with Public Restrooms Near Me — toilets recorded in open map data, nearest pin first. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a family in an unfamiliar town centre gets the nearest recorded public toilet in seconds — a small tool that solves, as its intro says, a very real problem.",
+ "quick_answer": "Public Restrooms Near Me shows the public toilets recorded in OpenStreetMap near a place you search or where you are heading. Search, press find, and head for the nearest pin — the restrooms the mapping community recorded, ranked by distance, for the moment no other geography matters.",
+ "steps_intro": "The smallest finder with the most urgent use case:",
+ "use_cases": [
+  {
+   "title": "Families in strange towns",
+   "body": [
+    {
+     "t": "Small passengers run small clocks. Knowing the nearest recorded toilet before the situation graduates is parenting logistics at its finest."
+    }
+   ]
+  },
+  {
+   "title": "Travellers and drivers",
+   "body": [
+    {
+     "t": "Stations, parks, public buildings: the pins cluster where planners put facilities — check the destination's map before arrival, like the "
+    },
+    {
+     "t": "Libraries Near Me Map",
+     "l": "/tools/libraries-near-me-map"
+    },
+    {
+     "t": " for the quiet version."
+    }
+   ]
+  },
+  {
+   "title": "Access needs planning",
+   "body": [
+    {
+     "t": "Where the data records accessibility detail, the entries carry it; where not, presence still narrows the search from a town to a street."
+    }
+   ]
+  },
+  {
+   "title": "Event and market days",
+   "body": [
+    {
+     "t": "Crowds strain facilities. Organisers and visitors alike plan better knowing where the permanent toilets stand."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Recorded, not guaranteed",
+   "body": [
+    {
+     "t": "A pin means a toilet was recorded, not that it is open at 9 p.m. in November. The FAQs carry this honesty; the map still beats wandering."
+    }
+   ]
+  },
+  {
+   "label": "Example · The town that maps well",
+   "body": [
+    {
+     "t": "Tourist towns and European cities are densely recorded; a small US town may show few pins — its facilities live in businesses the data does not class as public toilets."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What to expect from the pins",
+  "intro": "The record's reality, in one honest table.",
+  "columns": [
+   "Question",
+   "Answer"
+  ],
+  "rows": [
+   [
+    "Shown",
+    "Public toilets recorded in OpenStreetMap near your point"
+   ],
+   [
+    "Guaranteed open?",
+    "No — hours and seasons rule; the pin is existence, not a schedule"
+   ],
+   [
+    "Café and store toilets",
+    "Only where recorded as publicly accessible"
+   ],
+   [
+    "Accessibility detail",
+    "Where mappers tagged it"
+   ],
+   [
+    "Your location stored?",
+    "No"
+   ]
+  ],
+  "note": "Coverage is a community artefact: excellent in much of Europe and in mapped city centres, patchier elsewhere. A missing toilet can be added to OpenStreetMap by anyone who finds it."
+ },
+ "faq": [
+  [
+   "Are these guaranteed open?",
+   "No — the map records existence, not hours. Seasonal closures, locked evenings and maintenance happen. Treat the pin as the best lead, and venues like stations and libraries as the reliable backups."
+  ],
+  [
+   "Why is my town's restroom missing?",
+   "It may be unrecorded, or recorded after the data snapshot. OpenStreetMap improves exactly when locals add the facilities they know."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — search where you are heading instead; arguably the smarter use."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Facility records vary by source — councils list theirs, businesses theirs; the open map is the merged, imperfect picture."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "Accessible toilets specifically?",
+   "Where tagged with accessibility detail, the record shows it. The tagging is uneven — phone-ahead certainty belongs to the venue, discovery belongs to this map."
+  ],
+  [
+   "Baby-changing facilities?",
+   "Sometimes tagged, never guaranteed. The same rule: the pin starts the answer."
+  ],
+  [
+   "Does it work in rural areas?",
+   "Village public toilets are recorded where communities map them — trailheads and car parks are the usual rural pins."
+  ],
+  [
+   "Can I add one I know?",
+   "Yes — OpenStreetMap editing is open to all, and a toilet you add helps every traveller after you. The highest use of local knowledge there is."
+  ],
+  [
+   "Pay-to-use toilets?",
+   "Charged facilities exist in stations and some cities; where the record tags a fee, it shows — carry coins or a card in the classic European station case."
+  ],
+  [
+   "Night-time options?",
+   "24-hour venues (stations, services) are the night answer where recorded. The pin's existence plus the venue's hours, checked on the venue, is the complete plan."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Quiet rooms: "
+  },
+  {
+   "t": "Libraries Near Me Map",
+   "l": "/tools/libraries-near-me-map"
+  },
+  {
+   "t": "; fuel for humans' cars: "
+  },
+  {
+   "t": "Petrol Stations Near Me",
+   "l": "/tools/petrol-stations-near-me"
+  },
+  {
+   "t": "; your point: "
+  },
+  {
+   "t": "Find My Location",
+   "l": "/tools/find-my-location"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location"
+ ]
+}

@@ -1,0 +1,187 @@
+{
+ "slug": "irish-grid-helper",
+ "primary_keyword": "Irish Grid Helper",
+ "secondary_keywords": [
+  "irish grid",
+  "itm",
+  "ireland coordinates"
+ ],
+ "title": "Irish Grid Helper: ITM and Irish Grid Workflows",
+ "description": "Bridge GPS coordinates and Irish mapping with the Irish Grid Helper — ITM versus the older Irish Grid, letters and digits explained. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, Dublin sits in the O 100-kilometre square of the Irish Grid — the letter on every Irish site plan and archaeology report, with ITM now the modern system beneath it.",
+ "quick_answer": "The Irish Grid Helper bridges GPS coordinates and Irish mapping workflows, covering both the modern Irish Transverse Mercator (ITM) and the older Irish Grid references found on decades of maps and reports. Learn which system a value belongs to, and convert between the GPS world and Ireland's grids.",
+ "steps_intro": "Two Irish systems, one island — know which one your numbers are:",
+ "use_cases": [
+  {
+   "title": "Reading older Irish maps and reports",
+   "body": [
+    {
+     "t": "Historic site records speak Irish Grid references with letter squares — the helper decodes the system so the archive stays usable. Britain's sibling is the "
+    },
+    {
+     "t": "British National Grid Helper",
+     "l": "/tools/bng-converter"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Modern Irish GIS work",
+   "body": [
+    {
+     "t": "ITM (EPSG:2157) is the current standard for Irish spatial data — GPS points enter Irish workflows through it."
+    }
+   ]
+  },
+  {
+   "title": "Archaeology and planning",
+   "body": [
+    {
+     "t": "Irish planning and heritage records cite grid references habitually. Converting correctly is the difference between the right field and the next county."
+    }
+   ]
+  },
+  {
+   "title": "Cross-border projects",
+   "body": [
+    {
+     "t": "The island has one geography and two grid traditions (plus the UK's). All-island work needs the distinctions this page exists to explain."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · ITM versus Irish Grid",
+   "body": [
+    {
+     "t": "Same point, two coordinate pairs: the older Irish Grid (EPSG:29903) and ITM differ by up to a couple of hundred metres in places — enough to matter, small enough to be confused silently. The systems must be named, not assumed."
+    }
+   ]
+  },
+  {
+   "label": "Example · The letter squares",
+   "body": [
+    {
+     "t": "Irish Grid references pair a lettered 100 km square (A–Z, skipping I) with digits inside it — Dublin's square is O. The pattern mirrors Britain's, with Ireland's own origins and letters."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Ireland's two systems",
+  "intro": "The comparison the helper keeps straight.",
+  "columns": [
+   "",
+   "Irish Grid",
+   "ITM"
+  ],
+  "rows": [
+   [
+    "Era",
+    "Mid-20th century onward",
+    "Modern standard (2001 onward)"
+   ],
+   [
+    "EPSG code",
+    "29903",
+    "2157"
+   ],
+   [
+    "Datum",
+    "Ireland 1975 (modified Airy ellipsoid)",
+    "ETRS89 / GRS80-based"
+   ],
+   [
+    "References",
+    "Letter + digits common",
+    "Easting/northing metres usual"
+   ],
+   [
+    "Found in",
+    "Older maps, heritage records",
+    "Current GIS, planning portals"
+   ]
+  ],
+  "note": "GPS coordinates (WGS84) sit close to ITM's frame but not identical to the old grid's — 'close' at the hundred-metre scale is exactly where field mistakes breed."
+ },
+ "faq": [
+  [
+   "What is the difference between ITM and the older Irish Grid?",
+   "Different datums, projections and origins: ITM (Irish Transverse Mercator, EPSG:2157) is the modern ETRS89-based system; the Irish Grid (EPSG:29903) rides the Ireland 1975 datum. Coordinates for the same point differ — noticeably at field scale. This helper exists to keep the two from being silently mixed."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84, the frame web maps and GPS share — tile and pixel systems on this page are defined over it."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — pixels and tiles quantise the world; extra coordinate decimals beyond the cell size are decoration."
+  ],
+  [
+   "Can I copy the result into GIS software?",
+   "Yes — set the layer CRS correctly (2157 for ITM, 29903 for Irish Grid) or the software will faithfully plot your point in the wrong county."
+  ],
+  [
+   "Northern Ireland?",
+   "Both systems cover the whole island — grid geography ignores the border even where administration does not. UK national mapping additionally uses the British grid for some purposes."
+  ],
+  [
+   "The letter I is missing — typo?",
+   "Deliberate: I is skipped in the letter squares to avoid confusion with 1, the same courtesy as the British grid."
+  ],
+  [
+   "Townland references?",
+   "Ireland's townlands predate grids; references in heritage records pair townland names with grid references. The grid part converts here; the names are their own scholarship."
+  ],
+  [
+   "Precision of digits?",
+   "As with all grid references: digit pairs set the grain — 4 figures = 1 km, 6 = 100 m, 8 = 10 m, 10 = 1 m."
+  ],
+  [
+   "Sea points?",
+   "The grids project over coastal waters; references remain a land habit, and offshore work speaks lat/lon."
+  ],
+  [
+   "Which should new work use?",
+   "ITM — the current national standard. The old grid is for reading the archive, which is half of Irish fieldwork."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Britain: the "
+  },
+  {
+   "t": "British National Grid Helper",
+   "l": "/tools/bng-converter"
+  },
+  {
+   "t": "; global: the "
+  },
+  {
+   "t": "MGRS Converter",
+   "l": "/tools/mgrs-converter"
+  },
+  {
+   "t": "; formats: the "
+  },
+  {
+   "t": "Coordinate Converter",
+   "l": "/tools/coordinate-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator",
+  "coordinate-offset-calculator"
+ ]
+}

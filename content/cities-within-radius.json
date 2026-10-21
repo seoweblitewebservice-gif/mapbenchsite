@@ -1,0 +1,29 @@
+{
+ "slug": "cities-within-radius",
+ "primary_keyword": "Cities Within Radius",
+ "secondary_keywords": [
+  "cities near me",
+  "towns within radius",
+  "cities within miles",
+  "nearby cities map"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "australia-postcodes-by-state-suburb",
+  "census-geography-finder",
+  "city-comparison-tool",
+  "cost-of-living-compare",
+  "nearby-places-finder",
+  "nearest-postcode-from-list"
+ ]
+}

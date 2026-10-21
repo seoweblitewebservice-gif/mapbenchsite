@@ -1,0 +1,194 @@
+{
+ "slug": "road-trip-arrival-time-calculator",
+ "primary_keyword": "Road Trip Arrival Time Calculator",
+ "secondary_keywords": [
+  "road trip arrival time calculator online",
+  "free road trip arrival time calculator",
+  "road trip arrival time calculator calculator",
+  "road trip arrival time calculator tool",
+  "how to calculate road trip arrival time calculator"
+ ],
+ "title": "Road Trip Arrival Time Calculator",
+ "description": "Add a trip's driving duration to its departure time with the Road Trip Arrival Time Calculator — arrival clock time, stops made explicit. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, depart at 07:30 with 9 hours 45 minutes of driving ahead and the wheels stop at 17:15 — before the stops you honestly add.",
+ "quick_answer": "The Road Trip Arrival Time Calculator adds a journey's travel duration to a departure date and time and returns the arrival time. Enter when you leave and how long the driving takes, and read when you arrive — the calculation every 'we'll be there by…' message should pass through first.",
+ "steps_intro": "Departure plus duration equals arrival — with the stops added by you, openly:",
+ "use_cases": [
+  {
+   "title": "The honest text home",
+   "body": [
+    {
+     "t": "“Arriving 17:15, plus a lunch stop” — computed, caveated, kept. The "
+    },
+    {
+     "t": "ETA Calculator",
+     "l": "/tools/eta-calculator"
+    },
+    {
+     "t": " builds the duration from distance and speed when you do not have it yet."
+    }
+   ]
+  },
+  {
+   "title": "Check-in and curfew maths",
+   "body": [
+    {
+     "t": "Hotels, ferries and hosts have clocks. Work backwards from theirs: latest arrival minus duration is the latest departure."
+    }
+   ]
+  },
+  {
+   "title": "Multi-day arrivals",
+   "body": [
+    {
+     "t": "Durations over a day roll the date forward — the calculator handles the calendar so the itinerary cannot pretend day two is day one."
+    }
+   ]
+  },
+  {
+   "title": "Delivery promises",
+   "body": [
+    {
+     "t": "A promised window built from departure + duration is a promise with arithmetic behind it."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The clean day",
+   "body": [
+    {
+     "t": "07:30 + 9 h 45 min = 17:15. Add the 45 minutes of stops you know you will take and the honest message says 18:00."
+    }
+   ]
+  },
+  {
+   "label": "Example · Over the day line",
+   "body": [
+    {
+     "t": "Leave Friday 16:40 with 11 h 25 min of driving done across two days and an overnight stop, and arrival is Saturday afternoon — the calculator's date handling keeps the plan in the right day."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Departure plus duration",
+  "intro": "Clock arithmetic for common patterns — stops excluded, add yours on top.",
+  "columns": [
+   "Departure",
+   "Driving",
+   "Arrival"
+  ],
+  "rows": [
+   [
+    "06:00",
+    "4 h 30 m",
+    "10:30"
+   ],
+   [
+    "07:30",
+    "9 h 45 m",
+    "17:15"
+   ],
+   [
+    "09:15",
+    "6 h 20 m",
+    "15:35"
+   ],
+   [
+    "13:40",
+    "5 h 50 m",
+    "19:30"
+   ],
+   [
+    "18:20",
+    "7 h 05 m",
+    "01:25 next day"
+   ],
+   [
+    "22:45",
+    "3 h 30 m",
+    "02:15 next day"
+   ]
+  ],
+  "note": "Time zones are the trap the table cannot see: a long westward drive can arrive 'earlier' than the arithmetic suggests. Convert the result into the destination's zone."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "An arrival date and time: departure + travel duration, with the calendar rolled correctly across midnight and days."
+  ],
+  [
+   "Do I need an account?",
+   "No. Two inputs, one arrival."
+  ],
+  [
+   "Can I rely on this for professional work?",
+   "For scheduling and promises, yes — as the arithmetic layer. Traffic and life remain outside it; pad accordingly."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. The duration you enter should be your realistic one; live traffic is a navigation layer, not clock arithmetic."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "It is why your duration is what it is. This calculator consumes the duration; the driving tools produce it."
+  ],
+  [
+   "Should stops be inside the duration?",
+   "Either include them in the duration you enter, or add them after — but only once. Double-counted stops make liars of us all."
+  ],
+  [
+   "What about time zones?",
+   "The addition is zone-naive: it works in the clock you think in. For cross-zone trips, do the addition in one zone, then convert the answer."
+  ],
+  [
+   "The trip crosses midnight twice.",
+   "The date rolls as many times as the duration demands — multi-day arrivals land on their true date."
+  ],
+  [
+   "Can I work backwards from an arrival?",
+   "Subtract the duration from the deadline: latest departure. The same arithmetic, run in reverse by you."
+  ],
+  [
+   "Daylight saving changes mid-trip?",
+   "Clocks are local and the calculator is zone-naive — adjust the result by the hour the destination gained or lost."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Durations from distance and speed are the "
+  },
+  {
+   "t": "ETA Calculator",
+   "l": "/tools/eta-calculator"
+  },
+  {
+   "t": "; distances are the "
+  },
+  {
+   "t": "Driving Distance Calculator",
+   "l": "/tools/driving-distance-calculator"
+  },
+  {
+   "t": "; and multi-day timing belongs to the "
+  },
+  {
+   "t": "Driving Days Calculator",
+   "l": "/tools/driving-days-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-route-planner",
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator",
+  "drive-time-map"
+ ]
+}

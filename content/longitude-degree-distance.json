@@ -1,0 +1,198 @@
+{
+ "slug": "longitude-degree-distance",
+ "primary_keyword": "Degrees Longitude to Kilometers Calculator",
+ "secondary_keywords": [
+  "degrees longitude to km",
+  "longitude degrees distance",
+  "1 degree longitude km",
+  "longitude to kilometers calculator",
+  "longitude distance calculator"
+ ],
+ "title": "Degrees Longitude to Kilometers Calculator",
+ "description": "Convert degrees of longitude to kilometres at your latitude with the Degrees Longitude to Kilometers Calculator — cosine honesty included. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, one degree of longitude is 111.319 km at the equator but only 55.8 km at 60° — and in New York it is 84.4 km, the number that decides whether a 'degree away' is a day trip or a commute.",
+ "quick_answer": "The Degrees Longitude to Kilometers Calculator converts a difference in longitude into the east-west ground distance it represents at a given latitude, applying the cosine shrinkage that makes longitude the treacherous axis. Enter the degrees and the latitude and read the true distance in kilometres or miles.",
+ "steps_intro": "Longitude degrees are elastic. Measure them at your latitude:",
+ "use_cases": [
+  {
+   "title": "East-west extent estimates",
+   "body": [
+    {
+     "t": "A dataset spans 2° of longitude — at its latitude, that is a real number of kilometres, computed here rather than borrowed from the equator."
+    }
+   ]
+  },
+  {
+   "title": "Time-zone and solar intuition",
+   "body": [
+    {
+     "t": "15° of longitude is an hour of solar time; in kilometres it is 1,670 km at the equator and half that at 60° — the same hour, shrinking."
+    }
+   ]
+  },
+  {
+   "title": "Correcting flat-map thinking",
+   "body": [
+    {
+     "t": "Screens stretch east-west distances at high latitudes. The converter supplies the ground truth the map's pixels deny — pair with "
+    },
+    {
+     "t": "Degrees Latitude to Kilometers",
+     "l": "/tools/latitude-degree-distance"
+    },
+    {
+     "t": " for the full picture."
+    }
+   ]
+  },
+  {
+   "title": "Navigation legs",
+   "body": [
+    {
+     "t": "Departure and longitude-run calculations from the sailing tradition — the east-west component of a course, priced."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The shrinking degree",
+   "body": [
+    {
+     "t": "1° of longitude: 111.319 km (equator) → 84.442 (New York) → 78.847 (45°) → 55.800 (60°) → 0 at the pole, where all meridians marry. No other everyday unit dies at its destination like this."
+    }
+   ]
+  },
+  {
+   "label": "Example · A time zone's width",
+   "body": [
+    {
+     "t": "The idealised 15° zone spans 1,265 km of ground at New York's latitude (15 × 84.44) — wider than most countries, which is why zone borders bend around politics instead."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "One degree of longitude (WGS84)",
+  "intro": "Computed — the cosine's handwriting, tabulated.",
+  "columns": [
+   "Latitude",
+   "1° longitude in km",
+   "In miles"
+  ],
+  "rows": [
+   [
+    "0°",
+    "111.319",
+    "69.17"
+   ],
+   [
+    "30°",
+    "96.486",
+    "59.95"
+   ],
+   [
+    "40.758° (New York)",
+    "84.442",
+    "52.47"
+   ],
+   [
+    "45°",
+    "78.847",
+    "48.99"
+   ],
+   [
+    "60°",
+    "55.800",
+    "34.67"
+   ],
+   [
+    "80°",
+    "19.394",
+    "12.05"
+   ]
+  ],
+  "note": "The quick rule — equatorial length × cos(latitude) — matches the ellipsoid within a fraction of a percent; the calculator uses the ellipsoid itself."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "East-west ground distance for a longitude difference at a stated latitude, using WGS84's prime-vertical radius — the ellipsoid's own answer, not just the cosine rule."
+  ],
+  [
+   "Do I need an account?",
+   "No — degrees and latitude in, distance out."
+  ],
+  [
+   "Can I use the result for professional work?",
+   "The geometry is ellipsoid-true — planning, reporting and checking stand on it. Survey practice governs legal measurement, as always."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 — the frame GPS produces and web maps consume."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — resolution is not accuracy; the precision tools on this site price each decimal place in metres."
+  ],
+  [
+   "Can I copy the result into GIS software?",
+   "Distances are numbers for any system; coordinate pairs paste as themselves."
+  ],
+  [
+   "Why must latitude be given?",
+   "Because the answer does not exist without it — a degree of longitude is a different distance at every latitude. Any source quoting one fixed number is quoting the equator and hoping."
+  ],
+  [
+   "At the pole?",
+   "Zero — longitude itself dissolves there, and the calculator's honest limit is the geography's."
+  ],
+  [
+   "Spans crossing the date line?",
+   "Take the smaller arc (a span from 179° to −179° is 2°, not 358°) — the calculator expects the true difference; the Span tools unwrap sets automatically."
+  ],
+  [
+   "Solar time relation?",
+   "Earth turns 15° per hour; at your latitude the converter prices that hour in kilometres — astronomy with a ground address."
+  ],
+  [
+   "Feet?",
+   "Kilometres and miles carry the page; the numbers convert onward trivially."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "North-south: "
+  },
+  {
+   "t": "Degrees Latitude to Kilometers Calculator",
+   "l": "/tools/latitude-degree-distance"
+  },
+  {
+   "t": "; difference form: the "
+  },
+  {
+   "t": "Longitude Degree Distance Calculator",
+   "l": "/tools/longitude-degree-distance-calculator"
+  },
+  {
+   "t": "; sets: the "
+  },
+  {
+   "t": "Coordinate Span Calculator",
+   "l": "/tools/coordinate-span-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "arcminutes-to-decimal-degrees-converter",
+  "arcseconds-to-ground-distance-calculator",
+  "bng-converter",
+  "bounding-box-calculator",
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator"
+ ]
+}

@@ -1,0 +1,175 @@
+{
+ "slug": "area-code-finder",
+ "primary_keyword": "Area Code Finder",
+ "secondary_keywords": [
+  "phone area code",
+  "what area code",
+  "NANP area code"
+ ],
+ "title": "Area Code Finder: US Codes by State",
+ "description": "Find which area codes serve a US state with the Area Code Finder — NANP codes, overlays and the context behind them. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a number beginning 212 is Manhattan's famous original code — today sharing the island with overlay codes the Finder lists beside it.",
+ "quick_answer": "The Area Code Finder lists the area codes that serve a US state, with the location context around them. Choose the state or search the context and read its codes — including the overlays that mean a single city can answer to several codes at once.",
+ "steps_intro": "Area codes are geography wearing numbers. Read the state's set:",
+ "use_cases": [
+  {
+   "title": "Verifying a number's origin",
+   "body": [
+    {
+     "t": "A caller's code hints at their state — with the portability caveat below. The Finder supplies the hint; judgement supplies the rest."
+    }
+   ]
+  },
+  {
+   "title": "Business number planning",
+   "body": [
+    {
+     "t": "A local presence starts with the right code. See the state's full set, overlays included, before choosing."
+    }
+   ]
+  },
+  {
+   "title": "Data cleaning",
+   "body": [
+    {
+     "t": "Phone columns with impossible state-code pairings expose themselves against this list — one of data hygiene's cheapest checks."
+    }
+   ]
+  },
+  {
+   "title": "Curiosity and trivia with sources",
+   "body": [
+    {
+     "t": "Why does one state have one code and California dozens? Population, history and overlays — the Finder's context answers while it lists."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The famous originals",
+   "body": [
+    {
+     "t": "212 (Manhattan), 213 (Los Angeles) and 312 (Chicago) date from the original 1947 NANP assignments — small codes for the biggest cities, because rotary dials made low digits faster. Their states' modern lists run much longer."
+    }
+   ]
+  },
+  {
+   "label": "Example · The overlay effect",
+   "body": [
+    {
+     "t": "A growing metro exhausts its code and gains an overlay: two codes, one geography, ten-digit dialling for everyone. The Finder lists both because both are true."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading a state's code list",
+  "intro": "What the list's shape tells you before any single code is looked up.",
+  "columns": [
+   "List shape",
+   "Usually means",
+   "Watch out for"
+  ],
+  "rows": [
+   [
+    "One code statewide",
+    "A smaller-population state",
+    "Number portability still blurs origin"
+   ],
+   [
+    "Several codes, no overlay note",
+    "Codes split by region",
+    "Region boundaries are historical"
+   ],
+   [
+    "Codes marked as overlays",
+    "Growth forced a second code on one area",
+    "Ten-digit dialling locally"
+   ],
+   [
+    "Many codes (large states)",
+    "Population and history",
+    "Codes alone cannot name a city"
+   ]
+  ],
+  "note": "Area codes are NANP (North American Numbering Plan) geography — the US, Canada and parts of the Caribbean share the +1 system the Finder works within."
+ },
+ "faq": [
+  [
+   "Outside the US?",
+   "The NANP covers Canada and some Caribbean nations under +1; this Finder's state framing is US-first. Other countries use entirely different dialling geographies."
+  ],
+  [
+   "One code, one city?",
+   "No — codes serve regions, and overlays stack several on one city. A code narrows a number to an area, never (by itself) to a street."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — you choose the state; nothing about your own location is involved."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Numbering geography and map geography are maintained by different bodies on different clocks; both are right in their own frame."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No — and this tool never asks for it."
+  ],
+  [
+   "Does a code prove where a caller lives?",
+   "No — mobile numbers move with their owners. A code says where the number was born, which is a hint, not an address."
+  ],
+  [
+   "Why do new codes look random?",
+   "The elegant low-digit codes went first (1947). New assignments draw from what remains — history you can hear in the digits."
+  ],
+  [
+   "Why does my state list begin with low numbers?",
+   "Early assignments favoured low digits for big cities (rotary dials). The list's archaeology is visible in its first entries."
+  ],
+  [
+   "Are toll-free codes in the list?",
+   "800-family codes are geography-free by design, so they are not a state's codes. The Finder lists geographic NANP codes."
+  ],
+  [
+   "A code on the list serves another state too.",
+   "A few historical codes straddle borders. The Finder reports the state's relationship honestly rather than forcing exclusivity."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Place context continues in "
+  },
+  {
+   "t": "Address to County Lookup",
+   "l": "/tools/address-to-county-lookup"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Address to State Lookup",
+   "l": "/tools/address-to-state-lookup"
+  },
+  {
+   "t": "; address checks are the "
+  },
+  {
+   "t": "Address Validator",
+   "l": "/tools/address-validator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location"
+ ]
+}

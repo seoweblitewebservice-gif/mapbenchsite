@@ -1,0 +1,215 @@
+{
+ "slug": "halfway-between-two-places",
+ "primary_keyword": "Halfway Between Two Places",
+ "secondary_keywords": [
+  "halfway point",
+  "midpoint between cities",
+  "halfway between two places online"
+ ],
+ "title": "Halfway Between Two Places: Find the Midpoint",
+ "description": "Find the exact geographic midpoint with the Halfway Between Two Places calculator — half-distance in miles and km for both sides. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, the halfway point between New York and Los Angeles sits at 39.5103, −97.1601 in central Kansas — approx. 1,223 miles (1,968 km) from each city, and approx. 52 miles northeast of Salina.",
+ "quick_answer": "The Halfway Between Two Places calculator finds the true geographic midpoint between any two locations, measured along the surface of the Earth rather than on a flat map. Enter two places and it shows the midpoint on a map, its coordinates, and the equal half-distance in miles and kilometres.",
+ "steps_intro": "Fair meetings and honest overnight stops both start with the same question — where is the middle, really? Three steps:",
+ "use_cases": [
+  {
+   "title": "Meeting a friend or client fairly",
+   "body": [
+    {
+     "t": "Two people driving toward each other should split distance, not postcodes. Find the midpoint, then look at which town sits near it — the geographic answer starts the conversation, the map finishes it."
+    }
+   ]
+  },
+  {
+   "title": "Splitting a long drive",
+   "body": [
+    {
+     "t": "On a two-day road trip the halfway point is where the overnight stop belongs. Check it against the "
+    },
+    {
+     "t": "Drive Time Map",
+     "l": "/tools/drive-time-map"
+    },
+    {
+     "t": " when one side's roads are slower than the other's, because equal distance is not always equal time."
+    }
+   ]
+  },
+  {
+   "title": "Relocation and custody logistics",
+   "body": [
+    {
+     "t": "When two households exchange children, equipment or documents, a defensible midpoint ends arguments about whose trip is longer. The coordinates give both sides the same number to plan from."
+    }
+   ]
+  },
+  {
+   "title": "Comparing two bases",
+   "body": [
+    {
+     "t": "Field teams working from two depots use the midpoint line as a first sketch of who covers what. For the many-point version of the question, the "
+    },
+    {
+     "t": "Geographic Center Finder",
+     "l": "/tools/geographic-center-finder"
+    },
+    {
+     "t": " balances several places at once."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · United States",
+   "body": [
+    {
+     "t": "New York to Los Angeles is approx. 2,445.6 miles (3,935.8 km) in a straight line, so the halfway point lies 1,222.8 miles (1,967.9 km) from each — at 39.5103, −97.1601 in central Kansas, approx. 52 miles (84 km) northeast of Salina. Nobody's mental map puts the middle of that trip in Kansas, which is exactly why the calculation is worth doing."
+    }
+   ]
+  },
+  {
+   "label": "Example · Europe",
+   "body": [
+    {
+     "t": "London to Paris totals approx. 213.5 miles (343.5 km); the midpoint, 106.7 miles (171.8 km) from each, falls in the English Channel at 50.1885, 1.1467 — approx. 29.4 km (18.3 mi) off Dieppe on the French coast. A wet midpoint is a normal result: the tool reports the true point, and the nearest town is your practical meeting place."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Popular halfway pairs",
+  "intro": "Straight-line totals and half-distances for pairs people ask about most, computed with the haversine formula (mean Earth radius 6,371.0088 km) from city-centre coordinates — approx. figures, each reproducible in the tool.",
+  "columns": [
+   "Pair",
+   "Total (mi)",
+   "Total (km)",
+   "Halfway (mi)",
+   "Halfway (km)"
+  ],
+  "rows": [
+   [
+    "New York ↔ Los Angeles",
+    "2,445.6",
+    "3,935.8",
+    "1,222.8",
+    "1,967.9"
+   ],
+   [
+    "New York ↔ Chicago",
+    "711.0",
+    "1,144.3",
+    "355.5",
+    "572.1"
+   ],
+   [
+    "Dallas ↔ Miami",
+    "1,110.2",
+    "1,786.6",
+    "555.1",
+    "893.3"
+   ],
+   [
+    "Houston ↔ Seattle",
+    "1,889.3",
+    "3,040.5",
+    "944.6",
+    "1,520.3"
+   ],
+   [
+    "Chicago ↔ Dallas",
+    "804.6",
+    "1,295.0",
+    "402.3",
+    "647.5"
+   ],
+   [
+    "London ↔ Paris",
+    "213.5",
+    "343.5",
+    "106.7",
+    "171.8"
+   ],
+   [
+    "London ↔ Berlin",
+    "578.8",
+    "931.6",
+    "289.4",
+    "465.8"
+   ],
+   [
+    "Paris ↔ Rome",
+    "686.8",
+    "1,105.3",
+    "343.4",
+    "552.7"
+   ]
+  ],
+  "note": "Half-distance is exactly half the great-circle total — the midpoint divides the surface path, not the road journey. Road halves can differ when one side has slower roads."
+ },
+ "faq": [
+  [
+   "Is the halfway point the same as averaging the two latitudes and longitudes?",
+   "No — and the difference matters. Averaging coordinates treats the Earth as flat graph paper; over long distances, especially east–west ones, the averaged point can sit far from the true surface midpoint. This calculator finds the midpoint along the great-circle path on the sphere."
+  ],
+  [
+   "What if the midpoint falls in the sea or somewhere unreachable?",
+   "That is a normal, honest result — the London–Paris midpoint is in the English Channel. Use the coordinates as the reference point, then choose the nearest practical town; the tool shows the surrounding map precisely so you can do that sensibly."
+  ],
+  [
+   "Does halfway mean both people drive the same time?",
+   "Not necessarily. Halfway here is equal distance. Equal time depends on each side's roads, speeds and traffic, so for a timed meeting compare both journeys with the Driving Distance Calculator or a Drive Time Map as well."
+  ],
+  [
+   "Can I find the middle of three or more places?",
+   "This calculator is built for two places. For several, the Geographic Center Finder balances many points at once and is the right tool for team meetups and facility placement."
+  ],
+  [
+   "How accurate is the midpoint?",
+   "It is the exact midpoint of the great-circle path on the mean sphere — the same model the distances use. For everyday planning that is far more precision than the decision needs; the practical limit is choosing where near the point to actually meet."
+  ],
+  [
+   "Can I use coordinates instead of town names?",
+   "Yes. Enter either place by searching, clicking the map, or supplying coordinates, which is the reliable route for rural points, trailheads and places with common names."
+  ],
+  [
+   "Why does the midpoint of an east–west trip bend toward the pole?",
+   "Because the shortest surface path between two points at the same latitude is not the latitude line — it is a great circle, which bulges toward the nearer pole. The midpoint of that path inherits the bend."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The midpoint starts from a distance, so for the full figure between the same two places use "
+  },
+  {
+   "t": "Distance Between Two Places",
+   "l": "/tools/distance-between-two-places"
+  },
+  {
+   "t": ". To balance three or more origins, the "
+  },
+  {
+   "t": "Geographic Center Finder",
+   "l": "/tools/geographic-center-finder"
+  },
+  {
+   "t": " generalises this page's idea, and once a meeting town is chosen, the "
+  },
+  {
+   "t": "Meeting Time Planner",
+   "l": "/tools/meeting-time-planner"
+  },
+  {
+   "t": " helps the two sides agree when to leave."
+  }
+ ],
+ "more_tools": [
+  "closest-facility-finder",
+  "compass-bearing-visualizer",
+  "competitor-distance-map",
+  "coordinate-distance-table-generator",
+  "crow-flies-distance",
+  "distance-between-cities"
+ ]
+}

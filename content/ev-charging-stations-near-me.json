@@ -1,0 +1,192 @@
+{
+ "slug": "ev-charging-stations-near-me",
+ "primary_keyword": "EV Charging Stations Near Me",
+ "secondary_keywords": [
+  "ev charging near me",
+  "charging stations map",
+  "electric car charging finder",
+  "ev charger locations"
+ ],
+ "title": "EV Charging Stations Near Me: Map and List",
+ "description": "Find EV charging stations near any place with EV Charging Stations Near Me — mapped from open data, nearest first. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a market town's map shows the supermarket charger a visiting driver would never have guessed at — the finder's whole value is the ones you did not know.",
+ "quick_answer": "EV Charging Stations Near Me maps the charging stations OpenStreetMap records around a place you search or your location, ranked nearest first. Search, press find, and browse the stations on the map and list — the layer between 'the car needs charge' and 'there is a plug in that town'.",
+ "steps_intro": "Charge exists where mappers have recorded it. See your area's record:",
+ "use_cases": [
+  {
+   "title": "Trip charging reconnaissance",
+   "body": [
+    {
+     "t": "Before the journey, know the towns with charge on your route — the "
+    },
+    {
+     "t": "EV Range Radius",
+     "l": "/tools/ev-range-radius"
+    },
+    {
+     "t": " shows how far the car reaches; this shows what is there when it arrives."
+    }
+   ]
+  },
+  {
+   "title": "New-area orientation",
+   "body": [
+    {
+     "t": "Moving house with an EV: the neighbourhood's charging map is a moving-in fact as real as the schools."
+    }
+   ]
+  },
+  {
+   "title": "Backup planning",
+   "body": [
+    {
+     "t": "The nearest charger is a plan; the second nearest is a strategy. The ranked list gives both."
+    }
+   ]
+  },
+  {
+   "title": "Checking the map's coverage",
+   "body": [
+    {
+     "t": "A charger you know is missing tells you the local data's vintage — and OpenStreetMap accepts the correction from anyone."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Ranked by distance",
+   "body": [
+    {
+     "t": "Nearest first sounds obvious until a river intervenes: the closest plug as the crow flies can be a bridge away by road. The list ranks by distance; your route sense refines it."
+    }
+   ]
+  },
+  {
+   "label": "Example · The recorded detail",
+   "body": [
+    {
+     "t": "Where mappers recorded them, stations carry the practical details. Where they did not, the station still appears — presence first, particulars where the data has them."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading the station list",
+  "intro": "What the finder can and cannot promise — the honesty table for open charging data.",
+  "columns": [
+   "Question",
+   "This finder",
+   "Reality check"
+  ],
+  "rows": [
+   [
+    "Stations that exist in OSM",
+    "Shown, nearest first",
+    "The working set"
+   ],
+   [
+    "Brand-new chargers",
+    "Appear once mapped",
+    "Data lags construction"
+   ],
+   [
+    "Connector types and prices",
+    "Where recorded",
+    "Varies by mapper and operator"
+   ],
+   [
+    "Live availability",
+    "Not shown",
+    "The operator's app owns that"
+   ],
+   [
+    "Your location stored?",
+    "No",
+    "Used for the search only"
+   ]
+  ],
+  "note": "OpenStreetMap charging data is community-built: strong in much of Europe and North America's cities, thinner in rural areas — improving with every mapper who adds a plug."
+ },
+ "faq": [
+  [
+   "Does it show connector types and prices?",
+   "Where the map data records them, the detail travels with the station; prices and live status belong to operators and change faster than maps. Treat this as the where, and the operator as the how much."
+  ],
+  [
+   "How current is the data?",
+   "As current as the last mapper's edit in that area — days in active cities, longer in quiet ones. A station you find missing can be added to OpenStreetMap by anyone, including you."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — search a place name instead. Location is one input option, never a requirement."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Place data varies by source and date; charging operators' own maps draw from their networks rather than the open record."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No — it is used for the search and not kept."
+  ],
+  [
+   "The nearest station is across a river or border.",
+   "Distance ranking is geographic. Your route may prefer the second entry; the list gives you the order to judge from."
+  ],
+  [
+   "Tesla-only stations included?",
+   "Stations are listed as the data records them, including network restrictions where tagged. The car's compatibility is a filter you apply with the record in hand."
+  ],
+  [
+   "Can I plan a full route's charging here?",
+   "This finds stations near a point; chain points along your route for the whole journey — the range ring from EV Range Radius frames each hop."
+  ],
+  [
+   "A charger exists but is not listed.",
+   "It is unmapped or was mapped after the data snapshot. OpenStreetMap edits flow in — and local knowledge like yours is precisely how the map learns."
+  ],
+  [
+   "Fast chargers specifically?",
+   "Where the data tags power and connector detail, the station record shows it. Dedicated network apps filter harder; this map's job is the unbiased where."
+  ],
+  [
+   "Free charging points?",
+   "Pricing lives with operators and changes often — the station's own listing or app is the source. The map's neutrality is why it shows all networks alike."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Reach: the "
+  },
+  {
+   "t": "EV Range Radius",
+   "l": "/tools/ev-range-radius"
+  },
+  {
+   "t": "; fuel's fossil cousin: "
+  },
+  {
+   "t": "Petrol Stations Near Me",
+   "l": "/tools/petrol-stations-near-me"
+  },
+  {
+   "t": "; your point: "
+  },
+  {
+   "t": "Find My Location",
+   "l": "/tools/find-my-location"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location"
+ ]
+}

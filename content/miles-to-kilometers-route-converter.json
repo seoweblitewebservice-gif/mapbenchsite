@@ -1,0 +1,201 @@
+{
+ "slug": "miles-to-kilometers-route-converter",
+ "primary_keyword": "Miles to Kilometers Route Converter",
+ "secondary_keywords": [
+  "miles to kilometers route converter online",
+  "free miles to kilometers route converter",
+  "miles to kilometers route converter calculator",
+  "miles to kilometers route converter converter",
+  "miles to kilometers route converter formula"
+ ],
+ "title": "Miles to Kilometers Route Converter",
+ "description": "Convert route distances from miles to kilometres with the Miles to Kilometers Route Converter — the exact 1.609344 factor. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, the 300-mile day an American driver calls comfortable is 482.8 km — the figure a European itinerary needs to see to respect it.",
+ "quick_answer": "The Miles to Kilometers Route Converter turns route distances in miles into kilometres using the mile's exact definition: one mile is 1.609344 kilometres. Enter a distance from a US itinerary, a rental agreement or an odometer and read the kilometres — ready for European maps, cars and conversations.",
+ "steps_intro": "The other direction across the same exact factor:",
+ "use_cases": [
+  {
+   "title": "US trips in metric company",
+   "body": [
+    {
+     "t": "Sharing an American itinerary with European friends or a European car: convert the legs and everyone plans from the same numbers."
+    }
+   ]
+  },
+  {
+   "title": "Rental and insurance documents",
+   "body": [
+    {
+     "t": "Mileage allowances written in miles meet a km-reporting car abroad. One conversion keeps the paperwork honest."
+    }
+   ]
+  },
+  {
+   "title": "Imported trip computers",
+   "body": [
+    {
+     "t": "A US-spec car in Europe reports miles while the signs say kilometres. The converter is the dashboard's translator — the "
+    },
+    {
+     "t": "Kilometers to Miles Route Converter",
+     "l": "/tools/kilometers-to-miles-route-converter"
+    },
+    {
+     "t": " serves the reverse visit."
+    }
+   ]
+  },
+  {
+   "title": "Training and race distances",
+   "body": [
+    {
+     "t": "Marathon maths crosses systems constantly: 26.2 miles is 42.16 km — the conversion every runner eventually checks here."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The comfortable day",
+   "body": [
+    {
+     "t": "300 mi × 1.609344 = 482.8 km. Named in kilometres, the easy American day reveals itself as a serious European one."
+    }
+   ]
+  },
+  {
+   "label": "Example · The round trip",
+   "body": [
+    {
+     "t": "1,000 miles = 1,609.34 km. A 'thousand-mile trip' is a sixteen-hundred-kilometre trip, and both descriptions should budget the same fuel."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Miles to kilometres for route legs",
+  "intro": "Exact-factor conversions (1 mi = 1.609344 km) for journey-sized distances.",
+  "columns": [
+   "Miles",
+   "Kilometres",
+   "Miles",
+   "Kilometres"
+  ],
+  "rows": [
+   [
+    "25",
+    "40.23",
+    "400",
+    "643.74"
+   ],
+   [
+    "50",
+    "80.47",
+    "500",
+    "804.67"
+   ],
+   [
+    "100",
+    "160.93",
+    "750",
+    "1,207.01"
+   ],
+   [
+    "150",
+    "241.40",
+    "1,000",
+    "1,609.34"
+   ],
+   [
+    "200",
+    "321.87",
+    "1,500",
+    "2,414.02"
+   ],
+   [
+    "300",
+    "482.80",
+    "2,789",
+    "4,488.47"
+   ]
+  ],
+  "note": "The last row is the cross-country drive from the Driving Days Calculator — 2,789 miles is 4,488 km of itinerary, however you slice the days."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Kilometres from miles at the exact factor 1.609344 — route distances primarily, any length in truth."
+  ],
+  [
+   "Is the calculation done locally?",
+   "Yes — instantly in your browser, no account, nothing uploaded."
+  ],
+  [
+   "How accurate is the result?",
+   "Exact: the international mile is defined as exactly 1,609.344 metres. No rounding lives in the factor."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Conversion is units, not routing."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Both units measure the same road once converted. Convert the road figure you actually drove."
+  ],
+  [
+   "A quick mental shortcut?",
+   "Miles × 1.6 is within 0.6% — fine for conversation, and this page exists for when 0.6% matters."
+  ],
+  [
+   "The reverse conversion?",
+   "Kilometres × 0.621371 — the Kilometers to Miles Route Converter is built for it."
+  ],
+  [
+   "How long is a marathon in each unit?",
+   "26.2 miles is 42.16 km — officially 42.195 km. The tiny difference is why races measure courses, not conversions."
+  ],
+  [
+   "Speedometer shows mph, signs show km/h.",
+   "Multiply your mph by 1.609344 for the sign's unit — or convert the limit back: 100 km/h is 62.1 mph. Either direction, this page's factor."
+  ],
+  [
+   "US survey miles — different?",
+   "Historically distinct by two parts per million and retired from US use in 2023. For road journeys the international mile on this page is the mile."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The reverse is the "
+  },
+  {
+   "t": "Kilometers to Miles Route Converter",
+   "l": "/tools/kilometers-to-miles-route-converter"
+  },
+  {
+   "t": "; days are counted by the "
+  },
+  {
+   "t": "Driving Days Calculator",
+   "l": "/tools/driving-days-calculator"
+  },
+  {
+   "t": "; and nautical company keeps the "
+  },
+  {
+   "t": "Kilometers to Nautical Miles Converter",
+   "l": "/tools/kilometers-to-nautical-miles-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-route-planner",
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator",
+  "drive-time-map"
+ ]
+}

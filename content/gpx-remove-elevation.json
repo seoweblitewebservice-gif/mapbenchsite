@@ -1,0 +1,30 @@
+{
+ "slug": "gpx-remove-elevation",
+ "primary_keyword": "GPX Elevation Remover",
+ "secondary_keywords": [
+  "remove gpx elevation",
+  "strip elevation gpx",
+  "delete gpx altitude",
+  "gpx remove ele",
+  "remove altitude gps track"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "boundary-kml-downloader",
+  "cluster-map-from-points",
+  "country-boundary-downloader",
+  "csv-column-counter",
+  "csv-coordinate-bounding-box",
+  "csv-coordinate-centroid-calculator"
+ ]
+}

@@ -1,0 +1,207 @@
+{
+ "slug": "fuel-cost-split-calculator",
+ "primary_keyword": "Fuel Cost Split Calculator",
+ "secondary_keywords": [
+  "fuel cost split calculator online",
+  "free fuel cost split calculator",
+  "fuel cost split calculator calculator",
+  "fuel cost split calculator tool",
+  "how to calculate fuel cost split calculator"
+ ],
+ "title": "Fuel Cost Split Calculator: Share a Trip Fairly",
+ "description": "Split a trip's fuel cost evenly across passengers with the Fuel Cost Split Calculator — total in, fair shares out. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a $109.29 fuel bill split four ways is $27.32 each — a number nobody at the fuel stop has to negotiate.",
+ "quick_answer": "The Fuel Cost Split Calculator divides a journey's total fuel cost among the people sharing the ride and returns each person's share. Enter the trip's fuel total — from the Fuel Cost Calculator or a handful of receipts — and the passenger count, and read the split to the cent.",
+ "steps_intro": "Friendships survive fuel stops when the split is arithmetic, not vibes:",
+ "use_cases": [
+  {
+   "title": "Road trips with friends",
+   "body": [
+    {
+     "t": "The classic use: total the fuel, divide by heads, done. The "
+    },
+    {
+     "t": "Fuel Cost Calculator",
+     "l": "/tools/fuel-cost-calculator"
+    },
+    {
+     "t": " produces the total from the route if receipts went missing."
+    }
+   ]
+  },
+  {
+   "title": "Carpool fairness",
+   "body": [
+    {
+     "t": "A term of shared commuting has a fuel total; this divides it. Rotating drivers complicate it pleasantly — the split of the money stays simple."
+    }
+   ]
+  },
+  {
+   "title": "Family logistics",
+   "body": [
+    {
+     "t": "Adult children, shared airport runs, the holiday house drive: a computed share ends the 'you owe me roughly' ledger."
+    }
+   ]
+  },
+  {
+   "title": "Club and team travel",
+   "body": [
+    {
+     "t": "Away fixtures in two cars: each car's fuel split among its passengers. Fair, documented, forgotten by Monday."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Four friends",
+   "body": [
+    {
+     "t": "$109.29 ÷ 4 = $27.32 each (with a cent of rounding going to whoever drove — the traditional settlement)."
+    }
+   ]
+  },
+  {
+   "label": "Example · Three in the car",
+   "body": [
+    {
+     "t": "$86.40 ÷ 3 = $28.80 each exactly. Even splits are not always this tidy; the calculator keeps the cents honest when they are not."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Common totals, split",
+  "intro": "Even splits of typical trip fuel totals — the calculator handles the untidy remainders by the cent.",
+  "columns": [
+   "Fuel total",
+   "2 people",
+   "3 people",
+   "4 people",
+   "5 people"
+  ],
+  "rows": [
+   [
+    "$60.00",
+    "$30.00",
+    "$20.00",
+    "$15.00",
+    "$12.00"
+   ],
+   [
+    "$86.40",
+    "$43.20",
+    "$28.80",
+    "$21.60",
+    "$17.28"
+   ],
+   [
+    "$109.29",
+    "$54.65",
+    "$36.43",
+    "$27.32",
+    "$21.86"
+   ],
+   [
+    "$150.00",
+    "$75.00",
+    "$50.00",
+    "$37.50",
+    "$30.00"
+   ],
+   [
+    "$240.00",
+    "$120.00",
+    "$80.00",
+    "$60.00",
+    "$48.00"
+   ]
+  ],
+  "note": "Shares are rounded to cents; the tiny remainders are conventionally the driver's discount, which is also a fair way to thank the wheel-holder."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "An even split: total fuel cost ÷ number of people, to the cent, with the rounding visible rather than hidden."
+  ],
+  [
+   "Do I need an account?",
+   "No. Total and headcount in, shares out."
+  ],
+  [
+   "Can I rely on this for professional work?",
+   "For informal cost-sharing and club travel, yes. Formal expense policies have their own rules; this is the arithmetic friend groups and carpools actually use."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No — the split divides a total that already happened or is estimated; traffic is inside the total, not the division."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "It is why the fuel total is what it is. The split itself only needs the total."
+  ],
+  [
+   "Should the driver pay a share?",
+   "Custom varies: many groups exempt the driver for providing the car and the driving. The calculator gives the even split; your group's custom adjusts it."
+  ],
+  [
+   "What if passengers ride only part-way?",
+   "Weight the split by legs ridden — split each leg among its riders and add each person's legs. Fairness scales; arithmetic keeps up."
+  ],
+  [
+   "Someone joined for one leg only.",
+   "Split per leg: each leg's fuel divided among its riders, summed per person. The principle — divide what each shared — scales to any manifest."
+  ],
+  [
+   "We also split tolls — same tool?",
+   "Add tolls to the total before splitting if the group agrees they are shared costs; divide fuel-only if that was the deal. The deal comes first, the division second."
+  ],
+  [
+   "Rounding left a cent over.",
+   "It always might. Convention gives it to the driver — see the table note on this page."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The total comes from the "
+  },
+  {
+   "t": "Fuel Cost Calculator",
+   "l": "/tools/fuel-cost-calculator"
+  },
+  {
+   "t": "; quantities are in "
+  },
+  {
+   "t": "Gallons Needed for Distance",
+   "l": "/tools/gallons-needed-for-distance"
+  },
+  {
+   "t": "; and the whole trip's unit cost is the "
+  },
+  {
+   "t": "Cost Per Mile Calculator",
+   "l": "/tools/cost-per-mile-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator",
+  "drive-time-map",
+  "driving-days-calculator"
+ ],
+ "related": [
+  "fuel-cost-calculator",
+  "gallons-needed-for-distance",
+  "cost-per-mile-calculator",
+  "fuel-needed-for-trip"
+ ]
+}

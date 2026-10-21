@@ -1,0 +1,207 @@
+{
+ "slug": "customer-radius-area-calculator",
+ "primary_keyword": "Customer Radius Area Calculator",
+ "secondary_keywords": [
+  "customer radius area calculator online",
+  "free customer radius area calculator",
+  "customer radius area calculator calculator",
+  "customer radius area calculator tool",
+  "how to use customer radius area calculator"
+ ],
+ "title": "Customer Radius Area Calculator",
+ "description": "Size the market inside a customer radius with the Customer Radius Area Calculator — the area your radius really covers, in mi², km² and acres. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 5-mile customer radius covers approx. 78.5 square miles (50,265 acres) of territory — a number that routinely surprises businesses who think in diameters.",
+ "quick_answer": "The Customer Radius Area Calculator converts a customer radius around your business into the area that radius actually covers, in square miles, square kilometres and acres. Enter the radius you advertise or deliver to, and read the territory size your marketing, staffing and stock decisions are really about.",
+ "steps_intro": "Businesses quote radii; territories are areas. Translate before you plan:",
+ "use_cases": [
+  {
+   "title": "Marketing budget sanity",
+   "body": [
+    {
+     "t": "Leaflets, ads and sponsorships are bought against an area, not a radius. A 5-mile radius is 78.5 square miles of audience — cost it as such, then check who lives there with "
+    },
+    {
+     "t": "Population Within a Radius",
+     "l": "/tools/population-within-radius"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Comparing two locations",
+   "body": [
+    {
+     "t": "Two candidate shops with different sensible radii trade in different area currencies. Converting both to area makes the comparison honest before footfall enters it."
+    }
+   ]
+  },
+  {
+   "title": "Franchise territory sizing",
+   "body": [
+    {
+     "t": "Territories sold 'as a 10-mile radius' are 314 square miles of obligation. This calculator is the small print, computed."
+    }
+   ]
+  },
+  {
+   "title": "Staffing and stock planning",
+   "body": [
+    {
+     "t": "Coverage promises scale with area. The square law in this table is why doubling a delivery radius breaks a rota that 'only' doubled."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 3-mile shop",
+   "body": [
+    {
+     "t": "Radius 3 mi: area = π × 9 ≈ 28.27 mi² (18,096 acres). A neighbourhood business quoting 'three miles around' is claiming a small town's worth of ground."
+    }
+   ]
+  },
+  {
+   "label": "Example · The doubling trap",
+   "body": [
+    {
+     "t": "From 5 to 10 miles the radius doubles but the area quadruples — 78.5 to 314.2 mi². Every cost that scales with territory (leaflets, reps, fuel) follows the second number, not the first."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Customer radius to covered area",
+  "intro": "A = πr² for the radii businesses quote most. Keep this table near any conversation that starts with 'just extend the radius a bit'.",
+  "columns": [
+   "Radius",
+   "Area (mi²)",
+   "Area (km²)",
+   "Area (acres)"
+  ],
+  "rows": [
+   [
+    "1 mi",
+    "3.14",
+    "8.14",
+    "2,011"
+   ],
+   [
+    "2 mi",
+    "12.57",
+    "32.55",
+    "8,042"
+   ],
+   [
+    "3 mi",
+    "28.27",
+    "73.22",
+    "18,096"
+   ],
+   [
+    "5 mi",
+    "78.54",
+    "203.42",
+    "50,265"
+   ],
+   [
+    "10 mi",
+    "314.16",
+    "813.68",
+    "201,062"
+   ],
+   [
+    "15 mi",
+    "706.86",
+    "1,830.78",
+    "452,389"
+   ],
+   [
+    "20 mi",
+    "1,256.64",
+    "3,254.74",
+    "804,248"
+   ]
+  ],
+  "note": "Area is geometric coverage: rivers, borders and road quality decide how much of it is truly servable — a drive-time area is the road-honest version."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The area inside a customer radius — the disc your radius defines — in square miles, square kilometres and acres, from A = πr²."
+  ],
+  [
+   "Is it free to use?",
+   "Yes, with no account. The result is instant and the arithmetic is shown on this page for checking."
+  ],
+  [
+   "How accurate is the result?",
+   "Exact for the circle you describe. What it cannot know is how much of that disc is your real market — population, roads and competitors refine it."
+  ],
+  [
+   "Radius or diameter — which do I enter?",
+   "Radius: from your location to the edge of the territory. If your policy is written as 'within 10 miles', that is the radius; entering the diameter's 20 would quadruple the area."
+  ],
+  [
+   "Why acres for a customer area?",
+   "Because land-based comparisons (rents, territory prices per acre) sometimes need it — and because 50,265 acres communicates scale in a way 78.5 mi² sometimes does not."
+  ],
+  [
+   "Can I use this for service-area planning?",
+   "As the geometric first pass, yes. Follow it with population and drive-time checks before promising coverage to anyone."
+  ],
+  [
+   "Does the Earth's curvature change the area?",
+   "Negligibly at business radii. The Map Radius Tool computes geodesically for large circles; at 20 miles the flat and spherical answers agree to planning precision."
+  ],
+  [
+   "My customers are not evenly spread — is the area useless?",
+   "No: it is the ceiling and the comparison unit. Weight it with the Population Within a Radius count and the two numbers together describe the market honestly."
+  ],
+  [
+   "Do two overlapping stores double-count area?",
+   "Their discs overlap in a lens; the union is less than the sum. The Equal Circle Overlap Calculator sizes the shared part."
+  ],
+  [
+   "What radius do most local businesses use?",
+   "It varies by trade and density — the table's 1–5 mile rows are where most local decisions live, which is why their areas surprise people most."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Draw the same radius on the ground in the "
+  },
+  {
+   "t": "Map Radius Tool",
+   "l": "/tools/map-radius"
+  },
+  {
+   "t": ", count who lives inside it with "
+  },
+  {
+   "t": "Population Within a Radius",
+   "l": "/tools/population-within-radius"
+  },
+  {
+   "t": ", and test its road shape in the "
+  },
+  {
+   "t": "Drive Time Map",
+   "l": "/tools/drive-time-map"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "circle-area-from-radius",
+  "circle-circumference-from-radius",
+  "cities-within-drawn-area-finder",
+  "crop-row-length-calculator",
+  "delivery-radius-area-calculator",
+  "delivery-radius-checker"
+ ]
+}

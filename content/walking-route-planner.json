@@ -1,0 +1,184 @@
+{
+ "slug": "walking-route-planner",
+ "primary_keyword": "Walking Route Planner",
+ "secondary_keywords": [
+  "walk route planner",
+  "walking distance calculator",
+  "walking directions calculator",
+  "pedestrian route planner",
+  "walking map route"
+ ],
+ "title": "Walking Route Planner: Pedestrian Routes and GPX",
+ "description": "Plan a pedestrian route between two places with the Walking Route Planner — distance, time estimate and GPX export. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a cross-town walk routed on footpaths usually measures a little longer than the same line by car — and unlike the car's version, every yard of it is legal to walk.",
+ "quick_answer": "The Walking Route Planner finds a route between places on the pedestrian network — streets and paths people on foot can use — and reports its distance with a walking-time estimate. Set start and destination, review the line, and export GPX if the walk should live on a device.",
+ "steps_intro": "Walkers need their own network. Plan on it, not on the car's:",
+ "use_cases": [
+  {
+   "title": "Everyday walking journeys",
+   "body": [
+    {
+     "t": "Home to station, hotel to meeting: the walkable route with an honest distance replaces both guessing and driving defaults. Postcode-shaped planning is the "
+    },
+    {
+     "t": "UK Postcode Walking Route Planner",
+     "l": "/tools/uk-postcode-walking-route-planner"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Exercise routes with known doses",
+   "body": [
+    {
+     "t": "A 45-minute walk is a prescription with a distance inside it. Build the route that delivers it from your door."
+    }
+   ]
+  },
+  {
+   "title": "City exploration",
+   "body": [
+    {
+     "t": "Visitors on foot see the city properly. A planned pedestrian route turns wandering into a tour with a known end."
+    }
+   ]
+  },
+  {
+   "title": "Accessibility scoping",
+   "body": [
+    {
+     "t": "The planner routes on the pedestrian network; step-free certainty needs local knowledge the data only partly holds — the route is the starting point for that check, stated honestly."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The comparison built in",
+   "body": [
+    {
+     "t": "The planner shows the pedestrian route against the straight line — the gap between them is the neighbourhood's walkability, measured on your own journey."
+    }
+   ]
+  },
+  {
+   "label": "Example · Export and go",
+   "body": [
+    {
+     "t": "GPX export moves the planned walk to a phone or watch — the desk plan becomes pavement guidance without re-typing a thing."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Pedestrian route versus the alternatives",
+  "intro": "What each way of measuring the same walk reports — this page is the pedestrian column.",
+  "columns": [
+   "Measure",
+   "Distance basis",
+   "Good for"
+  ],
+  "rows": [
+   [
+    "Straight line",
+    "Geometry",
+    "Nothing a walker does"
+   ],
+   [
+    "Driving route",
+    "Road network for cars",
+    "The taxi version"
+   ],
+   [
+    "Pedestrian route (this tool)",
+    "Paths and streets for feet",
+    "The walk itself"
+   ],
+   [
+    "Your tracked walk",
+    "GPS of the day",
+    "The truth, afterwards"
+   ]
+  ],
+  "note": "Pedestrian data comes from the open map — rich in cities, thinner in deep countryside, and honest about neither being perfect."
+ },
+ "faq": [
+  [
+   "Is the route accessibility-aware?",
+   "It routes on the pedestrian network the data describes. Step-free guarantees need surface and step data that is recorded unevenly — treat the route as a plan to check, not a promise of access."
+  ],
+  [
+   "Does it use live closures?",
+   "No. Footpath closures and works are local and fleeting; the route reflects the mapped network, and your eyes handle the day's diversions."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Walkers route around traffic by existing; the estimate is time on feet, not time in queues."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Paths wind and detour around what feet cannot cross. The planner's figure is the walkable distance — the honest one."
+  ],
+  [
+   "Can route results change over time?",
+   "Yes — new paths, new bridges, corrected data. Re-plan a standing walk each season."
+  ],
+  [
+   "Can I export the route?",
+   "Yes, GPX — for phones, watches and the other planners that import it."
+  ],
+  [
+   "Running the same route?",
+   "The Running Route Planner is the same network tuned for runs, with its own export habits."
+  ],
+  [
+   "Can it route through a park after dark?",
+   "Paths are data; opening hours are policy. The plan shows the way that exists; gates decide whether it is open."
+  ],
+  [
+   "The route uses a road with no pavement.",
+   "Pedestrian data sometimes includes such links where no alternative is mapped. Judge the segment as you would on foot — the plan is advice, not armour."
+  ],
+  [
+   "Multiple stops on foot?",
+   "Plan leg by leg; each becomes its own route, and the day chains them as surely as the multi-stop drivers do."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Runs are the "
+  },
+  {
+   "t": "Running Route Planner",
+   "l": "/tools/running-route-planner"
+  },
+  {
+   "t": "; postcodes the "
+  },
+  {
+   "t": "UK Postcode Walking Route Planner",
+   "l": "/tools/uk-postcode-walking-route-planner"
+  },
+  {
+   "t": "; and times at any speed the "
+  },
+  {
+   "t": "Walking Time Calculator",
+   "l": "/tools/walking-time-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner"
+ ]
+}

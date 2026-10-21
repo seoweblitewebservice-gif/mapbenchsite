@@ -1,0 +1,29 @@
+{
+ "slug": "boundary-kml-downloader",
+ "primary_keyword": "Boundary KML Downloader",
+ "secondary_keywords": [
+  "boundary kml download",
+  "download place boundary",
+  "city boundary kml",
+  "boundary geojson download"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "cluster-map-from-points",
+  "csv-column-counter",
+  "csv-coordinate-bounding-box",
+  "csv-coordinate-centroid-calculator",
+  "csv-coordinate-deduplicator",
+  "csv-coordinate-validator"
+ ]
+}

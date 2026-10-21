@@ -1,0 +1,28 @@
+{
+ "slug": "store-locator-radius",
+ "primary_keyword": "Store Locator Radius Map",
+ "secondary_keywords": [
+  "store radius",
+  "catchment radius",
+  "store locator map"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "acreage-map-calculator",
+  "acres-to-hectares-converter",
+  "acres-to-square-feet-converter",
+  "buffer-zone-map",
+  "center-of-polygon",
+  "circle-area-from-radius"
+ ]
+}

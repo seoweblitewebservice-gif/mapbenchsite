@@ -1,0 +1,197 @@
+{
+ "slug": "distance-between-two-places",
+ "primary_keyword": "Distance Between Two Places",
+ "secondary_keywords": [
+  "how far",
+  "distance between two places online",
+  "free distance between two places"
+ ],
+ "title": "Distance Between Two Places: Straight-Line Miles",
+ "description": "Measure the straight-line distance between any two places on Earth with Distance Between Two Places — miles, km and initial bearing. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, Times Square to Grand Central in New York measures approx. 0.9 km (0.6 miles) — the same formula that returns 3,935.8 km for New York to Los Angeles.",
+ "quick_answer": "Distance Between Two Places is the straight-line measure: set any two points on Earth — by search, by clicking the map, or by typing coordinates — and read their great-circle distance in miles and kilometres with the initial bearing. It is the baseline measurement other tools build on.",
+ "steps_intro": "If it has a location, this tool can measure from it. Two steps:",
+ "use_cases": [
+  {
+   "title": "Everyday 'how far' questions",
+   "body": [
+    {
+     "t": "House to school, office to airport, campsite to trailhead: the questions that start arguments at kitchen tables end with one measured number and a bearing."
+    }
+   ]
+  },
+  {
+   "title": "Property research",
+   "body": [
+    {
+     "t": "Distances from a listing to the things that matter — coast, station, family — measured from the actual points, not the postcode's reputation. For postal-code pairs, the "
+    },
+    {
+     "t": "Distance Between ZIP Codes",
+     "l": "/tools/distance-between-zip-codes"
+    },
+    {
+     "t": " tool is the shortcut."
+    }
+   ]
+  },
+  {
+   "title": "Planning buffers and boundaries",
+   "body": [
+    {
+     "t": "A measured separation is the input to radius decisions: once two places are measured, the "
+    },
+    {
+     "t": "Map Radius Tool",
+     "l": "/tools/map-radius"
+    },
+    {
+     "t": " draws what falls inside the same distance from either."
+    }
+   ]
+  },
+  {
+   "title": "Fact-checking other tools",
+   "body": [
+    {
+     "t": "When two apps disagree about a separation, this page is the independent referee: one formula, shown working, no account and no agenda."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Two Manhattan landmarks",
+   "body": [
+    {
+     "t": "Times Square (40.7580, −73.9855) to Grand Central Terminal (40.7527, −73.9772): approx. 0.9 km (0.6 mi), initial bearing 130°. The formula does not change with scale — only the map's zoom does."
+    }
+   ]
+  },
+  {
+   "label": "Example · The long version",
+   "body": [
+    {
+     "t": "The same two clicks at continental scale: New York to Los Angeles returns approx. 3,935.8 km (2,445.6 mi) with the route drawn as the arc it really is. Short and long measurements share one method, which is why both can be trusted the same way."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reference separations",
+  "intro": "A scale ladder measured with this tool's method (haversine, R = 6,371.0088 km) — approx. figures from published coordinates.",
+  "columns": [
+   "Pair",
+   "Miles",
+   "Kilometres"
+  ],
+  "rows": [
+   [
+    "Times Square ↔ Grand Central, New York",
+    "0.6",
+    "0.9"
+   ],
+   [
+    "Boston ↔ New York",
+    "190.2",
+    "306.1"
+   ],
+   [
+    "Chicago ↔ Dallas",
+    "804.6",
+    "1,295.0"
+   ],
+   [
+    "New York ↔ Chicago",
+    "711.0",
+    "1,144.3"
+   ],
+   [
+    "New York ↔ Los Angeles",
+    "2,445.6",
+    "3,935.8"
+   ],
+   [
+    "London ↔ Paris",
+    "213.5",
+    "343.5"
+   ],
+   [
+    "London ↔ Berlin",
+    "578.8",
+    "931.6"
+   ],
+   [
+    "Paris ↔ Rome",
+    "686.8",
+    "1,105.3"
+   ]
+  ],
+  "note": "Notice the ladder: the method is identical from 0.9 km to 3,936 km — only the curvature's visibility changes."
+ },
+ "faq": [
+  [
+   "What is the most accurate way to set a point?",
+   "Coordinates, when you have them: a searched place resolves to its published centre, which for a large town can sit a mile from the street you mean. Clicking the exact spot or pasting coordinates removes that slack."
+  ],
+  [
+   "Why does it differ from my car's odometer?",
+   "Your car follows roads; this measures the surface of the Earth. The road figure is always longer, and the ratio between them describes the terrain and network between the points."
+  ],
+  [
+   "Can I measure across the Pacific or the poles?",
+   "Yes. The formula is global and handles the antimeridian and high latitudes; the map drawing wraps accordingly. Try your point to its antipode for the longest answer the planet allows."
+  ],
+  [
+   "Does it give the bearing as well?",
+   "Yes — the initial great-circle bearing from the first place to the second, the heading you would start on. The Bearing Calculator explores it in both directions."
+  ],
+  [
+   "What about elevation — is the distance over the ground?",
+   "It is the surface distance on the mean sphere, without terrain relief. Over any real landscape the walked distance is longer; for planning separations the spherical figure is the standard."
+  ],
+  [
+   "Can I measure more than two places?",
+   "For chains and tables, use the Distance Matrix Calculator (every pair at once) or the Multi-Stop Route Planner (a journey in order)."
+  ],
+  [
+   "Is there a limit on how close the points can be?",
+   "No practical one — the same calculation returns metres for neighbouring buildings and thousands of kilometres for continents."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Specialised versions of this measurement live nearby: "
+  },
+  {
+   "t": "Distance Between Cities",
+   "l": "/tools/distance-between-cities"
+  },
+  {
+   "t": " adds bearing and midpoint for named cities, "
+  },
+  {
+   "t": "As the Crow Flies Distance",
+   "l": "/tools/crow-flies-distance"
+  },
+  {
+   "t": " is the same idea under its everyday name, and "
+  },
+  {
+   "t": "Halfway Between Two Places",
+   "l": "/tools/halfway-between-two-places"
+  },
+  {
+   "t": " continues from any pair to its midpoint."
+  }
+ ],
+ "more_tools": [
+  "compass-bearing-visualizer",
+  "competitor-distance-map",
+  "coordinate-distance-table-generator",
+  "distance-between-cities",
+  "distance-between-zip-codes",
+  "distance-matrix-calculator"
+ ]
+}

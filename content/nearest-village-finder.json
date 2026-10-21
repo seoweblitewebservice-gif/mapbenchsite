@@ -1,0 +1,179 @@
+{
+ "slug": "nearest-village-finder",
+ "primary_keyword": "Nearest Village Finder",
+ "secondary_keywords": [
+  "nearest village",
+  "village finder",
+  "closest village to me",
+  "rural place finder"
+ ],
+ "title": "Nearest Village Finder: Closest Village",
+ "description": "Find the nearest village to any point with the Nearest Village Finder — name, distance and compass direction from open map records. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a point deep in farmland resolves to a village two miles northeast that the driver had never heard of — rural geography's everyday magic, and deliveries' everyday need.",
+ "quick_answer": "The Nearest Village Finder scans OpenStreetMap's village records around a point and reports the nearest village with its distance and compass direction. Search a place or use your location, press find, and read the answer — built for rural addresses and deliveries where 'near X' needs a name.",
+ "steps_intro": "Out where the towns run out, the village is the address. Find yours:",
+ "use_cases": [
+  {
+   "title": "Rural deliveries and directions",
+   "body": [
+    {
+     "t": "“Nearest village?” is the question rural directions actually run on. The finder answers with distance and direction — the "
+    },
+    {
+     "t": "Bearing Calculator",
+     "l": "/tools/bearing-calculator"
+    },
+    {
+     "t": " refines the bearing."
+    }
+   ]
+  },
+  {
+   "title": "Property hunting in the country",
+   "body": [
+    {
+     "t": "A listing's 'rural setting' becomes a measured village distance — the shop, the pub, the school run's real anchor."
+    }
+   ]
+  },
+  {
+   "title": "Breakdown and pickup orientation",
+   "body": [
+    {
+     "t": "Tell the recovery service the nearest village and direction and you have given them a map reference a human can use."
+    }
+   ]
+  },
+  {
+   "title": "Walking and cycling base-finding",
+   "body": [
+    {
+     "t": "Villages mean water, food and buses. Route planning through village country starts with knowing where they are."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Direction included",
+   "body": [
+    {
+     "t": "Name plus distance plus compass direction is a complete rural reference: 'two miles northeast' orients a human; coordinates orient a machine. The finder gives the human version."
+    }
+   ]
+  },
+  {
+   "label": "Example · What is a village?",
+   "body": [
+    {
+     "t": "The map's settlement classification decides — village between hamlet and town in the record's terms. Local pride may grade settlements differently; the data's word is the one reported."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The settlement ladder",
+  "intro": "Where 'village' sits in the map record's vocabulary — the finder's target, in context.",
+  "columns": [
+   "Class",
+   "Character",
+   "Finder relevance"
+  ],
+  "rows": [
+   [
+    "Hamlet",
+    "A cluster of houses, no services implied",
+    "Below the target"
+   ],
+   [
+    "Village",
+    "A community with a name and usually a heart — church, hall, shop in some order",
+    "This finder's target"
+   ],
+   [
+    "Town",
+    "Larger, market functions",
+    "Above the target"
+   ],
+   [
+    "City",
+    "The big league",
+    "A different finder entirely"
+   ]
+  ],
+  "note": "Classifications are mapper-recorded and culture-shaped: a Scandinavian 'village' and an English one differ in scale. The finder reports the record's class honestly."
+ },
+ "faq": [
+  [
+   "How is 'nearest' measured?",
+   "Straight-line distance from your point across OpenStreetMap's village records, reported with the compass direction to it. Roads may wind further; the crow's measure is the ranking's honest basis."
+  ],
+  [
+   "Does it work outside the US and Europe?",
+   "Wherever OpenStreetMap carries settlement records — most of the inhabited world, at varying depth. Sparse-data regions return sparser answers, labelled by their scarcity."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — search a place name or enter a point instead."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Village names and classifications vary by source and language; the record's version is shown as recorded."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "It returned a hamlet, not a village.",
+   "In sparse records the nearest settlement of village class can be far; where the finder widens the net, it reports what it actually found, class included."
+  ],
+  [
+   "The village has two names.",
+   "Bilingual regions record both; the finder shows the record's name forms. Both are right — maps carry communities' names, not verdicts."
+  ],
+  [
+   "Can I find the nearest town instead?",
+   "The settlement tools and 'what place' finders cover the ladder's other rungs — see the related pages for the town-shaped tools."
+  ],
+  [
+   "Seasonal villages?",
+   "Resort settlements exist in the record year-round; whether the shop is open in February is a question for the village itself."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "What place am I in: "
+  },
+  {
+   "t": "What City Am I In",
+   "l": "/tools/what-city-am-i-in"
+  },
+  {
+   "t": "; bearings: the "
+  },
+  {
+   "t": "Bearing Calculator",
+   "l": "/tools/bearing-calculator"
+  },
+  {
+   "t": "; your point: "
+  },
+  {
+   "t": "Find My Location",
+   "l": "/tools/find-my-location"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location"
+ ]
+}

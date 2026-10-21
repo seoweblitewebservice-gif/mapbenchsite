@@ -1,0 +1,187 @@
+{
+ "slug": "eta-calculator",
+ "primary_keyword": "ETA Calculator",
+ "secondary_keywords": [
+  "arrival time",
+  "travel eta",
+  "eta calculator online"
+ ],
+ "title": "ETA Calculator: Arrival Time from Distance",
+ "description": "Turn distance and speed into a duration and arrival time with the ETA Calculator — the simple, transparent trip estimate. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 340 miles at a 55 mph average is 6 hours 11 minutes — leave at 08:15 and the honest arrival is about 14:26, breaks not included.",
+ "quick_answer": "The ETA Calculator converts a trip's distance and your expected average speed into a duration and an estimated arrival time. Set the origin and destination, or enter the distance directly, and read the simple estimate — transparent arithmetic you can adjust with stops and judgement, not a black box.",
+ "steps_intro": "Arrival is departure plus distance-over-speed. See the working, then adjust it like an adult:",
+ "use_cases": [
+  {
+   "title": "The 'when will you arrive?' answer",
+   "body": [
+    {
+     "t": "Families and hosts deserve a computed answer, not optimism. This estimate, plus your stated stops, is the answer that survives the journey."
+    }
+   ]
+  },
+  {
+   "title": "Meeting and delivery windows",
+   "body": [
+    {
+     "t": "A window built from distance and a realistic average is a promise with a mechanism. The "
+    },
+    {
+     "t": "Driving Distance Calculator",
+     "l": "/tools/driving-distance-calculator"
+    },
+    {
+     "t": " supplies the distance."
+    }
+   ]
+  },
+  {
+   "title": "Multi-leg days",
+   "body": [
+    {
+     "t": "Chain the legs: each ETA is the next leg's departure. The day assembles itself honestly, leg by leg."
+    }
+   ]
+  },
+  {
+   "title": "Checking a satnav's optimism",
+   "body": [
+    {
+     "t": "When the device's ETA assumes averages your roads will not give, this simple division with your average is the referee."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The family drive",
+   "body": [
+    {
+     "t": "340 mi at 55 mph average = 6 h 11 min. Depart 08:15 → 14:26 rolling. Add a 30-minute lunch and the truthful text home is “about three.”"
+    }
+   ]
+  },
+  {
+   "label": "Example · The average is the argument",
+   "body": [
+    {
+     "t": "The same 340 miles at 45 mph (towns, towing, weather) = 7 h 33 min — arrival 15:48. Choosing the average is the whole skill; the calculator just refuses to hide it."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Distance at average speeds",
+  "intro": "Duration for common distances at steady averages — the inputs are averages over the whole journey, stops excluded.",
+  "columns": [
+   "Distance",
+   "At 40 mph",
+   "At 55 mph",
+   "At 65 mph",
+   "At 100 km/h"
+  ],
+  "rows": [
+   [
+    "100 mi",
+    "2 h 30 m",
+    "1 h 49 m",
+    "1 h 32 m",
+    "1 h 37 m"
+   ],
+   [
+    "250 mi",
+    "6 h 15 m",
+    "4 h 33 m",
+    "3 h 51 m",
+    "4 h 01 m"
+   ],
+   [
+    "340 mi",
+    "8 h 30 m",
+    "6 h 11 m",
+    "5 h 14 m",
+    "5 h 28 m"
+   ],
+   [
+    "600 mi",
+    "15 h 00 m",
+    "10 h 55 m",
+    "9 h 14 m",
+    "9 h 39 m"
+   ],
+   [
+    "1,000 mi",
+    "25 h 00 m",
+    "18 h 11 m",
+    "15 h 23 m",
+    "16 h 06 m"
+   ]
+  ],
+  "note": "Averages over a whole journey are lower than cruising speeds — towns, fuel and humanity all take their cut. Use your own completed journeys to calibrate."
+ },
+ "faq": [
+  [
+   "Does it include live traffic?",
+   "No. This is distance ÷ your average speed — an estimate whose honesty comes from the average you choose. Live traffic is a navigation app's layer, not this calculation's."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Roads wind. Use the road distance from the Driving Distance Calculator or your ETA inherits the crow's optimism."
+  ],
+  [
+   "Can route results change over time?",
+   "Your average changes with season, load and route. The arithmetic is fixed; recalibrate the input per journey type."
+  ],
+  [
+   "Should stops be added?",
+   "Yes, on top of the rolling duration. The worked example adds lunch explicitly — make your stops explicit too."
+  ],
+  [
+   "What average speed should I use?",
+   "The one your similar completed journeys actually averaged — typically well below the speed limit once towns and stops bite. First time on a route, plan slower."
+  ],
+  [
+   "Can it handle kilometres?",
+   "Yes — km ÷ km/h gives hours identically. The table includes a 100 km/h column for the metric habit."
+  ],
+  [
+   "ETA or duration — which does it give?",
+   "Both: the duration from distance and speed, and the arrival clock time when you give a departure."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Distances come from the "
+  },
+  {
+   "t": "Driving Distance Calculator",
+   "l": "/tools/driving-distance-calculator"
+  },
+  {
+   "t": "; multi-day arrivals belong to the "
+  },
+  {
+   "t": "Driving Days Calculator",
+   "l": "/tools/driving-days-calculator"
+  },
+  {
+   "t": "; and road-shaped reach is the "
+  },
+  {
+   "t": "Isochrone Map",
+   "l": "/tools/isochrone-map"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner"
+ ]
+}

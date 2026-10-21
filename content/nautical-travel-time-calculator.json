@@ -1,0 +1,30 @@
+{
+ "slug": "nautical-travel-time-calculator",
+ "primary_keyword": "Nautical Travel Time Calculator",
+ "secondary_keywords": [
+  "knots travel time calculator",
+  "boat trip time calculator",
+  "nautical miles time calculator",
+  "ship speed time distance",
+  "marine travel time"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "compass-bearing-visualizer",
+  "competitor-distance-map",
+  "coordinate-distance-table-generator",
+  "crow-flies-distance",
+  "distance-between-cities",
+  "distance-between-zip-codes"
+ ]
+}

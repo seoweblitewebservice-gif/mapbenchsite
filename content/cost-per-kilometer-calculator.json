@@ -1,0 +1,201 @@
+{
+ "slug": "cost-per-kilometer-calculator",
+ "primary_keyword": "Cost Per Kilometer Calculator",
+ "secondary_keywords": [
+  "cost per kilometre calculator",
+  "price per km calculator",
+  "driving cost per km",
+  "trip cost per km",
+  "travel cost kilometer"
+ ],
+ "title": "Cost Per Kilometer Calculator",
+ "description": "Turn any journey's total cost into a per-kilometre figure with the Cost Per Kilometer Calculator — for comparing trips and vehicles. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a €96 trip over 412 km works out to €0.23 per kilometre — the figure that finally makes the train ticket comparable.",
+ "quick_answer": "The Cost Per Kilometer Calculator divides a journey's total cost by its distance in kilometres and returns the per-kilometre figure that makes trips comparable. Enter what the journey cost and how far it went, and read the unit price of your travel in whatever currency you spent.",
+ "steps_intro": "Totals flatter and deceive; unit costs compare. Two inputs:",
+ "use_cases": [
+  {
+   "title": "Comparing travel options",
+   "body": [
+    {
+     "t": "Car versus train versus rental becomes one number each. The "
+    },
+    {
+     "t": "Cost Per Mile Calculator",
+     "l": "/tools/cost-per-mile-calculator"
+    },
+    {
+     "t": " is the same idea in imperial."
+    }
+   ]
+  },
+  {
+   "title": "Vehicle running-cost tracking",
+   "body": [
+    {
+     "t": "Fuel plus tolls plus parking over a month of kilometres is your car's honest cost per km — the figure that decides whether it earns its keep."
+    }
+   ]
+  },
+  {
+   "title": "Courier and delivery pricing checks",
+   "body": [
+    {
+     "t": "If you charge by the kilometre, your cost per kilometre is the floor below which every job loses money. See also the "
+    },
+    {
+     "t": "Delivery Cost per KM Calculator",
+     "l": "/tools/delivery-cost-per-km-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Trip budgeting",
+   "body": [
+    {
+     "t": "Last trip's cost per km × next trip's kilometres is a budget with evidence behind it."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The weekend trip",
+   "body": [
+    {
+     "t": "€96.00 over 412 km = €0.233/km. The total sounded modest; the unit figure is the one to beat next time."
+    }
+   ]
+  },
+  {
+   "label": "Example · The long haul",
+   "body": [
+    {
+     "t": "€1,380 over 9,200 km of touring = €0.15/km — long steady journeys dilute fixed costs, which the per-km figure shows and the total hides."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Cost per kilometre, worked",
+  "intro": "Totals divided by distances — the arithmetic tabulated so the pattern (fixed costs diluting with distance) is visible.",
+  "columns": [
+   "Total cost",
+   "Distance",
+   "Cost per km"
+  ],
+  "rows": [
+   [
+    "€48.00",
+    "150 km",
+    "€0.32"
+   ],
+   [
+    "€96.00",
+    "412 km",
+    "€0.23"
+   ],
+   [
+    "€120.00",
+    "600 km",
+    "€0.20"
+   ],
+   [
+    "€210.00",
+    "1,050 km",
+    "€0.20"
+   ],
+   [
+    "€640.00",
+    "3,200 km",
+    "€0.20"
+   ],
+   [
+    "€1,380.00",
+    "9,200 km",
+    "€0.15"
+   ]
+  ],
+  "note": "Include the same cost categories in every comparison or the comparison is theatre: fuel only, or fuel + tolls + parking — but consistently."
+ },
+ "faq": [
+  [
+   "What costs can I include?",
+   "Whatever the journey truly cost you: fuel, tolls, parking, wear allowances, a hire charge. Consistency across comparisons matters more than any particular list."
+  ],
+  [
+   "Does it include currency conversion?",
+   "No — the calculator divides in the currency you enter. Convert the total first if the trip crossed currencies."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Cost per kilometre is accounting, not routing; traffic affects time, and only affects cost through the categories you enter."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Because roads are not straight lines. Use the road distance — it is what the journey actually cost you to cover."
+  ],
+  [
+   "Can route results change over time?",
+   "Road distances barely change; costs do. Recalculate per trip rather than trusting last year's figure."
+  ],
+  [
+   "Cost per km or per mile?",
+   "Whichever your odometer and audience use. The two pages are twins; 1 mile = 1.609344 km converts between their answers."
+  ],
+  [
+   "Is a lower figure always better?",
+   "It is cheaper, not better: comfort, time and reliability are also purchased in a journey's total. The unit cost informs the choice; it does not make it."
+  ],
+  [
+   "Return trip — double the distance, same figure?",
+   "Yes if costs scale with distance; fixed additions (a day's parking) dilute over the doubled distance and the per-km figure falls. Both effects are real; the calculator shows them."
+  ],
+  [
+   "My car reports mpg — wrong page?",
+   "Convert your totals once (miles × 1.609344 = km) or use the Cost Per Mile Calculator, which speaks mpg-era units natively."
+  ],
+  [
+   "Is cost per km used for reimbursement?",
+   "Many employers and tax systems publish per-km allowances; this tool computes your actual figure to compare against them, not the allowance itself."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Its twin is the "
+  },
+  {
+   "t": "Cost Per Mile Calculator",
+   "l": "/tools/cost-per-mile-calculator"
+  },
+  {
+   "t": "; totals from distance and fuel come from the "
+  },
+  {
+   "t": "Fuel Cost Calculator",
+   "l": "/tools/fuel-cost-calculator"
+  },
+  {
+   "t": "; and delivery-specific unit costs live in the "
+  },
+  {
+   "t": "Delivery Cost per KM Calculator",
+   "l": "/tools/delivery-cost-per-km-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner",
+  "cycling-speed-calculator",
+  "cycling-time-calculator"
+ ]
+}

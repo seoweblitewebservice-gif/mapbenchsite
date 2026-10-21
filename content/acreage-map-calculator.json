@@ -1,0 +1,201 @@
+{
+ "slug": "acreage-map-calculator",
+ "primary_keyword": "Acreage Map Calculator",
+ "secondary_keywords": [
+  "acreage calculator",
+  "acres on map",
+  "field acreage",
+  "hectares calculator"
+ ],
+ "title": "Acreage Map Calculator: Measure Land on the Map",
+ "description": "Measure farm and land acreage from a drawn outline with the Acreage Map Calculator — acres and hectares side by side, free and without a survey.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a square field 1,320 ft on each side — the classic US quarter-quarter section — measures exactly 40.0 acres (16.19 hectares) when you outline it here.",
+ "quick_answer": "The Acreage Map Calculator measures area from an outline you draw on the map. Trace the field, lot or parcel boundary, close the shape, and it returns the area in acres and hectares side by side — the planning figure farmers, buyers and agents need before paying for a survey.",
+ "steps_intro": "If you can trace it on the satellite view, you can measure it:",
+ "use_cases": [
+  {
+   "title": "Farm field planning",
+   "body": [
+    {
+     "t": "Seed, spray and rent are all priced per acre. A drawn outline gives the field's working acreage — headlands and odd corners included — instead of the deed's optimistic round number."
+    }
+   ]
+  },
+  {
+   "title": "Land purchase checks",
+   "body": [
+    {
+     "t": "A listing says 12 acres; the outline says what the fences actually enclose. Measure before you negotiate, then let a survey settle the legal figure if the gap matters."
+    }
+   ]
+  },
+  {
+   "title": "Lease and rent fairness",
+   "body": [
+    {
+     "t": "Tenants paying per acre deserve a measurement both sides can repeat. The same outline, re-run, gives the same number — which is the whole argument for measuring this way."
+    }
+   ]
+  },
+  {
+   "title": "Comparing parcels",
+   "body": [
+    {
+     "t": "Two irregular lots defy headline numbers. Outlined areas compare like with like, and the export feeds the "
+    },
+    {
+     "t": "Fence Length Calculator",
+     "l": "/tools/fence-length-calculator"
+    },
+    {
+     "t": " when the perimeter is the next question."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 40-acre square",
+   "body": [
+    {
+     "t": "A 1,320 × 1,320 ft square is 1,742,400 sq ft = exactly 40.0 acres (16.1874 ha). If your drawn outline of a '40-acre' field returns 37.8, the missing 2.2 acres are the creek bend and the lane — real land, honestly excluded."
+    }
+   ]
+  },
+  {
+   "label": "Example · The 10-acre block",
+   "body": [
+    {
+     "t": "660 × 660 ft outlines to exactly 10.0 acres (4.0469 ha). Small blocks are where deed acreage drifts most, because old surveys rounded generously."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Acreage reference shapes",
+  "intro": "Regular shapes with their exact areas — the benchmarks your drawn outlines are judged against. Areas from the stated dimensions, labelled exact where the shape is exact.",
+  "columns": [
+   "Shape",
+   "Dimensions",
+   "Acres",
+   "Hectares"
+  ],
+  "rows": [
+   [
+    "Square",
+    "660 × 660 ft",
+    "10.00",
+    "4.0469"
+   ],
+   [
+    "Square",
+    "1,320 × 1,320 ft",
+    "40.00",
+    "16.1874"
+   ],
+   [
+    "Rectangle",
+    "1,320 × 660 ft",
+    "20.00",
+    "8.0937"
+   ],
+   [
+    "Classic acre",
+    "660 × 66 ft (furlong × chain)",
+    "1.00",
+    "0.4047"
+   ],
+   [
+    "Square mile (section)",
+    "5,280 × 5,280 ft",
+    "640.00",
+    "258.9988"
+   ],
+   [
+    "Circle",
+    "radius 100 ft",
+    "0.72",
+    "0.2919"
+   ],
+   [
+    "Football field incl. end zones",
+    "360 × 160 ft",
+    "1.32",
+    "0.5348"
+   ]
+  ],
+  "note": "Drawn areas are geodesic (measured on the Earth's surface model), so a field's figure does not depend on where on Earth it sits."
+ },
+ "faq": [
+  [
+   "Is this the same as the lot size on a deed?",
+   "Close in spirit, different in authority. The deed's figure may come from an old survey, a rounded estimate, or the parcel's legal description. This tool measures the outline you draw — a planning figure that often explains, but does not replace, the legal one."
+  ],
+  [
+   "Is a map measurement a legal survey?",
+   "No. Nothing drawn on a satellite image settles a boundary in law. Use this for planning, pricing and negotiation; use a licensed surveyor for deeds, disputes and fences on the legal line."
+  ],
+  [
+   "How accurately should I draw the outline?",
+   "Zoom in and place corners on the actual fence or field edge. On a 40-acre field, a corner placed 10 ft off moves the answer by a small fraction of an acre — visible, but rarely decision-changing."
+  ],
+  [
+   "Why acres and hectares together?",
+   "US land trades in acres; most of the world (and much equipment) works in hectares. Showing both, from one outline, ends unit arguments at the source."
+  ],
+  [
+   "Can I measure several fields?",
+   "Draw each outline in turn and note the figures, or export the result for your records. The repeatable outline is the point — the same field re-measured gives the same answer."
+  ],
+  [
+   "Does it handle a field with a pond or building in it?",
+   "Draw the outer boundary for gross acreage; outline the pond separately and subtract for net workable acres. The honest pair of numbers beats one blended guess."
+  ],
+  [
+   "What about a very irregular boundary?",
+   "Add more points along curves and bends. The polygon follows your clicks, so the figure improves with the care you take on the corners that matter."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Convert the result in the "
+  },
+  {
+   "t": "Acres to Hectares Converter",
+   "l": "/tools/acres-to-hectares-converter"
+  },
+  {
+   "t": " or "
+  },
+  {
+   "t": "Acres to Square Feet Converter",
+   "l": "/tools/acres-to-square-feet-converter"
+  },
+  {
+   "t": ", price the boundary in the "
+  },
+  {
+   "t": "Fence Length Calculator",
+   "l": "/tools/fence-length-calculator"
+  },
+  {
+   "t": ", and find the parcel's middle with "
+  },
+  {
+   "t": "Center of Polygon Finder",
+   "l": "/tools/center-of-polygon"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "acres-to-hectares-converter",
+  "acres-to-square-feet-converter",
+  "buffer-zone-map",
+  "center-of-polygon",
+  "circle-area-from-radius",
+  "circle-circumference-from-radius"
+ ]
+}

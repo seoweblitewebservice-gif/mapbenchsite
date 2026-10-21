@@ -1,0 +1,180 @@
+{
+ "slug": "nearest-hospital-uk-postcode",
+ "primary_keyword": "Nearest Hospital to a UK Postcode",
+ "secondary_keywords": [
+  "nearest hospital uk postcode",
+  "hospital by postcode",
+  "closest hospital to postcode",
+  "a&e near postcode",
+  "a&amp"
+ ],
+ "title": "Nearest Hospital to a UK Postcode",
+ "description": "Find the Nearest Hospital to a UK Postcode with the dedicated finder — postcodes.io locates the centre, hospitals ranked by distance. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a postcode in a market town resolves to its centre and ranks the district general hospital against the smaller community units — the shape of rural NHS geography in one list.",
+ "quick_answer": "The Nearest Hospital to a UK Postcode finder takes a UK postcode, locates its centre with postcodes.io, and maps the hospitals OpenStreetMap records around it, nearest first. Type the postcode, press find, and read the ranked hospitals. In an emergency, call 999 first — this is for planning.",
+ "steps_intro": "Built for Britain's address system, from the postcode outward:",
+ "use_cases": [
+  {
+   "title": "House moves, honestly assessed",
+   "body": [
+    {
+     "t": "The hospital distance from a candidate postcode is a real moving criterion — this makes it a number before the offer, not a discovery after."
+    }
+   ]
+  },
+  {
+   "title": "Care and family planning",
+   "body": [
+    {
+     "t": "Relatives' postcodes ranked against hospitals: the logistics of ageing, visiting and emergencies, made visible."
+    }
+   ]
+  },
+  {
+   "title": "Work placements and postings",
+   "body": [
+    {
+     "t": "A new job in a new postcode area — the hospital answer joins the "
+    },
+    {
+     "t": "Schools Near Me Map",
+     "l": "/tools/schools-near-me-map"
+    },
+    {
+     "t": " and station checks in the settling-in file."
+    }
+   ]
+  },
+  {
+   "title": "Holiday lets and breaks",
+   "body": [
+    {
+     "t": "Remote cottage, elderly travellers: know the hospital geography of the postcode before the week begins."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The postcode centre",
+   "body": [
+    {
+     "t": "Distances are measured from the postcode's centre as postcodes.io locates it. A rural postcode can span a mile or more, so a boundary property's true distance differs a little — the ranking usually survives."
+    }
+   ]
+  },
+  {
+   "label": "Example · Community versus general",
+   "body": [
+    {
+     "t": "The nearest entry may be a small community hospital without A&E. The list gives the field; NHS sources mark which entries take emergencies — check before relying on the nearest line."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "How the finder works",
+  "intro": "Two open data sources, one ranked answer.",
+  "columns": [
+   "Step",
+   "Source",
+   "Note"
+  ],
+  "rows": [
+   [
+    "Postcode → centre",
+    "postcodes.io",
+    "The postcode's official centroid"
+   ],
+   [
+    "Hospitals around it",
+    "OpenStreetMap",
+    "Ranked nearest first"
+   ],
+   [
+    "Distances",
+    "Computed straight-line",
+    "Road journeys will be longer"
+   ],
+   [
+    "Emergency advice",
+    "Call 999",
+    "Always first, finder second"
+   ]
+  ],
+  "note": "postcodes.io resolves UK postcodes from open data. Terminated postcodes (old developments) may not resolve — a nearby current postcode stands in."
+ },
+ "faq": [
+  [
+   "Is the postcode location exact?",
+   "It is the postcode's centre from postcodes.io — exact as a centroid. Your property sits somewhere within the postcode's area around it, so distances are near-exact for compact urban postcodes and approximate for sprawling rural ones."
+  ],
+  [
+   "What should I do in an emergency?",
+   "Call 999. This finder supports planning, not emergencies."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — the postcode is the only input; no device location is involved at all."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Hospital names follow NHS trusts and change with reorganisations; official NHS directories carry the current names first."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No — and this page never asks for it."
+  ],
+  [
+   "Does the nearest have A&E?",
+   "Not necessarily — community hospitals rank by distance like everyone. NHS.uk marks A&E departments; confirm there for emergency planning."
+  ],
+  [
+   "My postcode is not found.",
+   "New or terminated postcodes can miss the open dataset. Try the nearest current postcode — the hospital ranking barely notices a street's difference."
+  ],
+  [
+   "Scotland, Wales, Northern Ireland?",
+   "UK-wide: postcodes.io covers the UK and OpenStreetMap records hospitals across all four nations."
+  ],
+  [
+   "Minor injuries units?",
+   "Where the map records them as hospitals or clinics they may appear; NHS sources remain the authority on unit types and hours."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Anywhere version: the "
+  },
+  {
+   "t": "Nearest Hospital Finder",
+   "l": "/tools/nearest-hospital-finder"
+  },
+  {
+   "t": "; UK distances: the "
+  },
+  {
+   "t": "UK Postcode Distance Calculator",
+   "l": "/tools/uk-postcode-distance-calculator"
+  },
+  {
+   "t": "; stations: the "
+  },
+  {
+   "t": "Nearest Tube / Subway Station Finder",
+   "l": "/tools/nearest-tube-station-finder"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location"
+ ]
+}

@@ -1,0 +1,203 @@
+{
+ "slug": "delivery-radius-area-calculator",
+ "primary_keyword": "Delivery Radius Area Calculator",
+ "secondary_keywords": [
+  "delivery radius area calculator online",
+  "free delivery radius area calculator",
+  "delivery radius area calculator calculator",
+  "delivery radius area calculator tool",
+  "how to use delivery radius area calculator"
+ ],
+ "title": "Delivery Radius Area Calculator",
+ "description": "Convert a delivery radius into the area it commits you to with the Delivery Radius Area Calculator — mi², km² and the square-law warning. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, extending a delivery radius from 3 to 5 miles does not add a ring of work — it grows the committed area from approx. 28.3 to 78.5 square miles, nearly tripling it.",
+ "quick_answer": "The Delivery Radius Area Calculator turns a delivery radius into the area that radius commits your kitchen, shop or depot to serve. Enter the radius and read the covered area in square miles and kilometres — the number behind driver hours, packaging stock and every 'we now deliver to' announcement.",
+ "steps_intro": "Delivery promises are made in miles and paid for in area. Convert before announcing:",
+ "use_cases": [
+  {
+   "title": "Setting a delivery zone",
+   "body": [
+    {
+     "t": "The zone decision is an area decision wearing a radius costume. Compute the area first; then check the ring's roads with the "
+    },
+    {
+     "t": "Delivery Radius Checker",
+     "l": "/tools/delivery-radius-checker"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Driver capacity planning",
+   "body": [
+    {
+     "t": "Orders per evening scale with the served area's households, not with the radius number. Area is the input the rota should be built from."
+    }
+   ]
+  },
+  {
+   "title": "Comparing platforms' zones",
+   "body": [
+    {
+     "t": "Delivery platforms draw zones in radii and polygons interchangeably. Converting each to area exposes which 'similar' zone is quietly twice the commitment."
+    }
+   ]
+  },
+  {
+   "title": "Expansion announcements",
+   "body": [
+    {
+     "t": "“Now delivering within 7 miles” is a marketing line with an operations bill attached: 153.9 mi². This calculator attaches the bill before the line is published."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The modest extension",
+   "body": [
+    {
+     "t": "3 mi → 28.27 mi²; 4 mi → 50.27 mi². One extra mile of radius added 22 square miles of obligation — the arithmetic that sinks 'just one more mile' decisions."
+    }
+   ]
+  },
+  {
+   "label": "Example · The 7-mile zone",
+   "body": [
+    {
+     "t": "Radius 7 mi: area ≈ 153.94 mi² (98,520 acres). A zone that size is a logistics operation, not a favour — plan it like one."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Delivery radius to committed area",
+  "intro": "A = πr² across the radii food and retail delivery actually uses — with the growth between steps shown so the square law cannot hide.",
+  "columns": [
+   "Radius",
+   "Area (mi²)",
+   "Area (km²)",
+   "Growth vs previous"
+  ],
+  "rows": [
+   [
+    "1 mi",
+    "3.14",
+    "8.14",
+    "—"
+   ],
+   [
+    "2 mi",
+    "12.57",
+    "32.55",
+    "×4.0"
+   ],
+   [
+    "3 mi",
+    "28.27",
+    "73.22",
+    "×2.25"
+   ],
+   [
+    "4 mi",
+    "50.27",
+    "130.19",
+    "×1.78"
+   ],
+   [
+    "5 mi",
+    "78.54",
+    "203.42",
+    "×1.56"
+   ],
+   [
+    "7 mi",
+    "153.94",
+    "398.71",
+    "×1.96 (from 5)"
+   ],
+   [
+    "10 mi",
+    "314.16",
+    "813.68",
+    "×2.04 (from 7)"
+   ]
+  ],
+  "note": "Area is the ceiling of the commitment; households and road access decide the real load. Pair this figure with a population count before staffing to it."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The area enclosed by a delivery radius — the disc you are promising to serve — from A = πr², in square miles and square kilometres."
+  ],
+  [
+   "Is it free to use?",
+   "Yes — instant, no account, and the formula is printed on this page so the figure can be defended in a meeting."
+  ],
+  [
+   "How accurate is the result?",
+   "The geometry is exact; the business meaning needs your local knowledge. An area figure is the ceiling of a commitment, not a forecast of orders."
+  ],
+  [
+   "Why does one extra mile matter so much?",
+   "Area grows with the square of the radius. The ring between 4 and 5 miles (28.3 mi²) is larger than the entire 3-mile disc (28.27 mi²) — outer rings are where delivery economics go to die."
+  ],
+  [
+   "Radius or travel time — which should define a zone?",
+   "Time, ideally: customers experience minutes, not miles. Use this area for capacity, and the Drive Time Map for the zone's real shape."
+  ],
+  [
+   "Can I use the result for professional work?",
+   "For planning and internal decisions, yes. Published delivery promises should also survive a road check of the zone's awkward corners."
+  ],
+  [
+   "Does it handle kilometre radii?",
+   "Yes — enter the radius in kilometres and read km² directly; a 5 km radius is 78.54 km², the same digits as 5 miles in mi², which is the square law's party trick."
+  ],
+  [
+   "Should the zone shrink at busy times?",
+   "Some operators do exactly that, because the commitment is area × demand density. This calculator prices the geometry of the smaller ring before the policy changes."
+  ],
+  [
+   "Why do platforms draw zones as polygons?",
+   "To cut the unprofitable corners off the circle. The area difference between their polygon and your radius's disc is the business you are declining or accepting."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "See the zone on the ground in the "
+  },
+  {
+   "t": "Delivery Radius Checker",
+   "l": "/tools/delivery-radius-checker"
+  },
+  {
+   "t": ", size the customer version in the "
+  },
+  {
+   "t": "Customer Radius Area Calculator",
+   "l": "/tools/customer-radius-area-calculator"
+  },
+  {
+   "t": ", and draw any radius precisely in the "
+  },
+  {
+   "t": "Map Radius Tool",
+   "l": "/tools/map-radius"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "center-of-polygon",
+  "circle-area-from-radius",
+  "circle-circumference-from-radius",
+  "cities-within-drawn-area-finder",
+  "crop-row-length-calculator",
+  "customer-radius-area-calculator"
+ ]
+}

@@ -1,0 +1,199 @@
+{
+ "slug": "distance-between-zip-codes",
+ "primary_keyword": "Distance Between ZIP Codes",
+ "secondary_keywords": [
+  "how far between zip codes",
+  "zip code distance calculator",
+  "distance between zip codes online"
+ ],
+ "title": "Distance Between ZIP Codes: Miles & Midpoint",
+ "description": "Enter two US ZIP codes in Distance Between ZIP Codes for the straight-line distance, bearing and midpoint between their centroids. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, ZIP 10001 (New York) to 90210 (Beverly Hills) measures approx. 2,453 miles (3,948 km) between centroids — while 10001 to 60601 (Chicago) is a shorter 710 miles.",
+ "quick_answer": "Distance Between ZIP Codes measures the straight-line distance between any two US ZIP codes, using the published centroid of each code. Enter two 5-digit ZIPs and read the distance in miles and kilometres with the initial bearing and the midpoint, both centroids pinned on the map for a visual check.",
+ "steps_intro": "ZIPs are areas, not points — this tool is honest about the convention it uses. Three steps:",
+ "use_cases": [
+  {
+   "title": "Shipping and delivery estimates",
+   "body": [
+    {
+     "t": "Zone-based pricing starts with centroid distance. It will not price a parcel, but it sorts a rate table's zones into a defensible order before exact addresses exist."
+    }
+   ]
+  },
+  {
+   "title": "Territory and coverage checks",
+   "body": [
+    {
+     "t": "Is a customer's ZIP inside your patch? Measure it against the branch ZIP. For every customer at once, the "
+    },
+    {
+     "t": "ZIP Codes Within a Radius",
+     "l": "/tools/zip-codes-within-radius"
+    },
+    {
+     "t": " tool lists them instead."
+    }
+   ]
+  },
+  {
+   "title": "Relocation comparisons",
+   "body": [
+    {
+     "t": "A new home's ZIP against the office ZIP, the school ZIP and the family ZIP — three honest numbers that survive every change of route and traffic."
+    }
+   ]
+  },
+  {
+   "title": "Data validation",
+   "body": [
+    {
+     "t": "In a spreadsheet of addresses, a ZIP-to-ZIP distance that disagrees wildly with the rest of the row exposes the transposed digits before they cost a mailing."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Coast to coast",
+   "body": [
+    {
+     "t": "10001 (New York) ↔ 90210 (Beverly Hills): approx. 3,948.2 km (2,453.3 mi), initial bearing 274°. The two most famous ZIPs in America are a continent apart — the bearing, just north of west, is the detail people get wrong."
+    }
+   ]
+  },
+  {
+   "label": "Example · A regional pair",
+   "body": [
+    {
+     "t": "02108 (Boston) ↔ 10001 (New York): approx. 302.5 km (187.9 mi). At this range the centroid convention is tight — both codes are compact urban ZIPs, so the answer is close to a city-centre measurement."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Popular ZIP pairs",
+  "intro": "Centroid-to-centroid distances computed on the site model from published ZIP centroids — approx. figures; rural ZIPs cover wide areas, so treat their results as area-to-area.",
+  "columns": [
+   "Pair",
+   "Miles",
+   "Kilometres",
+   "Initial bearing"
+  ],
+  "rows": [
+   [
+    "10001 (New York) ↔ 90210 (Beverly Hills)",
+    "2,453.3",
+    "3,948.2",
+    "274°"
+   ],
+   [
+    "10001 ↔ 60601 (Chicago)",
+    "710.4",
+    "1,143.3",
+    "281°"
+   ],
+   [
+    "02108 (Boston) ↔ 10001 (New York)",
+    "187.9",
+    "302.5",
+    "235°"
+   ],
+   [
+    "20001 (Washington DC) ↔ 10001",
+    "204.5",
+    "329.2",
+    "51°"
+   ],
+   [
+    "94103 (San Francisco) ↔ 90210",
+    "338.9",
+    "545.4",
+    "137°"
+   ],
+   [
+    "30303 (Atlanta) ↔ 33101 (Miami)",
+    "605.8",
+    "974.9",
+    "154°"
+   ],
+   [
+    "60601 (Chicago) ↔ 30303 (Atlanta)",
+    "588.8",
+    "947.6",
+    "162°"
+   ],
+   [
+    "10001 ↔ 94103 (San Francisco)",
+    "2,565.2",
+    "4,128.3",
+    "282°"
+   ]
+  ],
+  "note": "Bearings are initial great-circle headings from the first ZIP's centroid. Centroids are representative points published for each ZIP, not geometric centres of the boundary."
+ },
+ "faq": [
+  [
+   "What exactly is a ZIP centroid?",
+   "The representative point published for that ZIP code — roughly its populated centre. Distances are measured between centroids, which is why the tool calls its results area-to-area rather than door-to-door."
+  ],
+  [
+   "Why is my ZIP not found?",
+   "ZIPs are added, split and retired by USPS over time, and a few are non-geographic (PO-box or single-organisation codes). Try the neighbouring residential ZIP; the dataset covers standard geographic codes."
+  ],
+  [
+   "What is the 'M' pin on the map?",
+   "The midpoint of the two centroids — the same halfway calculation as the dedicated midpoint tools, drawn so you can see where 'halfway between the ZIPs' actually falls."
+  ],
+  [
+   "Can I use ZIP+4?",
+   "Enter the 5-digit base ZIP. The +4 extension refines delivery within the same area and does not change an area-to-area distance."
+  ],
+  [
+   "How accurate is it for rural ZIPs?",
+   "Rural ZIPs can span many miles, so a centroid distance can differ from any specific address pair inside them by that much. For exact addresses, measure the two points in Distance Between Two Places."
+  ],
+  [
+   "Does it work for Canadian postal codes or UK postcodes?",
+   "No — this tool is US ZIPs only. The UK equivalent is the UK Postcode Distance Calculator, built on postcodes.io data."
+  ],
+  [
+   "Is this road distance?",
+   "No — straight-line between centroids, the consistent screening measure. Road figures for the winning pair belong in the Driving Distance Calculator."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The UK cousin is the "
+  },
+  {
+   "t": "UK Postcode Distance Calculator",
+   "l": "/tools/uk-postcode-distance-calculator"
+  },
+  {
+   "t": "; list every ZIP inside a range with "
+  },
+  {
+   "t": "ZIP Codes Within a Radius",
+   "l": "/tools/zip-codes-within-radius"
+  },
+  {
+   "t": "; and measure exact addresses instead of centroids in "
+  },
+  {
+   "t": "Distance Between Two Places",
+   "l": "/tools/distance-between-two-places"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "airport-distance-calculator",
+  "airport-midpoint-by-coordinates",
+  "airport-route-finder",
+  "bearing-calculator",
+  "closest-facility-finder",
+  "compass-bearing-visualizer"
+ ]
+}

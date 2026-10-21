@@ -1,0 +1,186 @@
+{
+ "slug": "bng-converter",
+ "primary_keyword": "British National Grid Helper",
+ "secondary_keywords": [
+  "bng",
+  "british national grid",
+  "osgb"
+ ],
+ "title": "British National Grid Helper: BNG Conversions",
+ "description": "Work between GPS coordinates and British National Grid references with the British National Grid Helper — grid letters and figures explained. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, London sits in the TQ 100-kilometre square — two letters that narrow a GPS point to one square of Britain before a single digit is read.",
+ "quick_answer": "The British National Grid Helper supports UK coordinate workflows between GPS latitude/longitude and National Grid style values. Grid references combine two letters naming a 100-kilometre square with digits that refine the point inside it — four figures to a kilometre, six to 100 metres, ten to a metre.",
+ "steps_intro": "Britain's own grid, letters first:",
+ "use_cases": [
+  {
+   "title": "Walking and Landranger maps",
+   "body": [
+    {
+     "t": "Ordnance Survey maps speak grid references. Convert a GPS point to its reference before quoting it to a walking group — the group will navigate by it."
+    }
+   ]
+  },
+  {
+   "title": "UK forms and planning portals",
+   "body": [
+    {
+     "t": "British officialdom asks for grid references. The helper bridges between the GPS world and the form's expectation."
+    }
+   ]
+  },
+  {
+   "title": "Archaeology and recording schemes",
+   "body": [
+    {
+     "t": "Finds and sites are logged by grid reference in UK practice — the museum-grade habit starts with a correct conversion."
+    }
+   ]
+  },
+  {
+   "title": "Understanding the letters",
+   "body": [
+    {
+     "t": "The two-letter square system (SV in the far southwest up to TA, TQ for London, and the rest) becomes obvious once you convert a few home points."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The precision ladder",
+   "body": [
+    {
+     "t": "A 4-figure reference names a 1 km square; 6 figures, 100 m; 8 figures, 10 m; 10 figures, 1 m. Each added pair of digits divides the square by ten in each direction — the ladder every UK walker climbs unconsciously."
+    }
+   ]
+  },
+  {
+   "label": "Example · Datum honesty",
+   "body": [
+    {
+     "t": "The National Grid rides on OSGB36, not WGS84. The same ground point carries different coordinates in the two — differing by up to roughly a hundred metres across Britain — which is why 'full OSGB36?' is this page's first FAQ."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Grid reference anatomy",
+  "intro": "How a British grid reference is built — the structure the helper works with.",
+  "columns": [
+   "Part",
+   "Meaning",
+   "Example shape"
+  ],
+  "rows": [
+   [
+    "Two letters",
+    "The 100 km square",
+    "TQ for the London square"
+   ],
+   [
+    "First digits",
+    "Easting within the square",
+    "Metres east from the square's origin"
+   ],
+   [
+    "Second digits",
+    "Northing within the square",
+    "Metres north"
+   ],
+   [
+    "Figure count",
+    "Precision: 4→1 km, 6→100 m, 8→10 m, 10→1 m",
+    "Even counts only"
+   ]
+  ],
+  "note": "The grid's false origin sits off the Cornish coast so every British easting and northing stays positive. Ireland keeps its own grid — the Irish Grid Helper is its page."
+ },
+ "faq": [
+  [
+   "Is it full OSGB36?",
+   "The helper supports National Grid style workflows; rigorous OSGB36 transformation (the OSTN-class shift) is Ordnance Survey's own product. For walking, forms and general work the helper's level is the working standard — survey law wants the official transformation."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "This family's default is WGS84; the British grid is OSGB36 — the page exists because Britain is the exception, and the difference is stated rather than hidden."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "In grid terms: more figures mean a smaller square, not a truer point. A 10-figure reference from a 5-metre GPS fix is precision theatre."
+  ],
+  [
+   "Can I copy the result into GIS software?",
+   "Yes — grid references and coordinates both paste into GIS; set the layer's CRS to OSGB36 (EPSG:27700) for grid values so the software honours the datum."
+  ],
+  [
+   "Why two letters and not one?",
+   "The letters encode two nested squares (500 km, then 100 km) in a scheme designed before computers — compact, pronounceable, and unambiguous across Britain."
+  ],
+  [
+   "Northern Ireland?",
+   "It uses the Irish Grid (and modern ITM) — a separate system with its own helper page on this site."
+  ],
+  [
+   "The letters skip I — why?",
+   "To avoid confusion with the digit 1. A small kindness from the grid's designers that every recorder of references appreciates."
+  ],
+  [
+   "Can I convert a reference back to GPS?",
+   "The workflow runs both ways — reference to coordinates for the GPS, coordinates to reference for the map and the form."
+  ],
+  [
+   "Offshore points?",
+   "The grid extends over coastal waters in its projection, but references are a land habit; at sea, latitude/longitude rules."
+  ],
+  [
+   "Historic references?",
+   "Old references may ride older county series or the pre-grid systems; the modern National Grid dates from the 1936 retriangulation onward."
+  ],
+  [
+   "What precision should I quote?",
+   "Match the source: a phone fix earns 6 or 8 figures. Quoting 10 from a 5-metre fix misleads the reader about the point's certainty."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Ireland: the "
+  },
+  {
+   "t": "Irish Grid Helper",
+   "l": "/tools/irish-grid-helper"
+  },
+  {
+   "t": "; global grids: the "
+  },
+  {
+   "t": "MGRS Converter",
+   "l": "/tools/mgrs-converter"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "GARS Converter",
+   "l": "/tools/gars-converter"
+  },
+  {
+   "t": "; formats: the "
+  },
+  {
+   "t": "Coordinate Converter",
+   "l": "/tools/coordinate-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "coordinate-bounding-box-generator",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator",
+  "coordinate-offset-calculator",
+  "coordinate-parser"
+ ]
+}

@@ -1,0 +1,183 @@
+{
+ "slug": "timezone-converter",
+ "primary_keyword": "Timezone Converter",
+ "secondary_keywords": [
+  "time difference",
+  "timezone converter online",
+  "free timezone converter"
+ ],
+ "title": "Timezone Converter: Convert a Time Between Zones",
+ "description": "Convert a local time from one place to another with the Timezone Converter — daylight saving handled, date shifts shown. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 9:00 a.m. Monday in New York is 2:00 p.m. Monday in London but 1:00 a.m. Tuesday in Sydney — one conversion, two kinds of surprise, both shown plainly.",
+ "quick_answer": "The Timezone Converter converts a local time from one location or zone to another, applying each side's daylight-saving rules for that date. Choose the two places, enter the time, and read the converted result — including the date shift, because half the world's conversions quietly change the day.",
+ "steps_intro": "The conversion everyone gets wrong once. Get it right here:",
+ "use_cases": [
+  {
+   "title": "Invitations that land kindly",
+   "body": [
+    {
+     "t": "Convert your proposed hour before sending — the recipient's clock, not yours, decides whether the invite is polite. The "
+    },
+    {
+     "t": "Meeting Time Planner",
+     "l": "/tools/meeting-time-planner"
+    },
+    {
+     "t": " handles the group version."
+    }
+   ]
+  },
+  {
+   "title": "Travel connections",
+   "body": [
+    {
+     "t": "Departure 11:00, arrival 13:00, flight time seven hours: the converter reconciles what the itinerary's local times hide."
+    }
+   ]
+  },
+  {
+   "title": "Broadcasts and drops",
+   "body": [
+    {
+     "t": "Streaming releases and product launches convert once here rather than wrongly in a hundred inboxes."
+    }
+   ]
+  },
+  {
+   "title": "Deadline truth",
+   "body": [
+    {
+     "t": "“Midnight Pacific” is a specific instant. Convert it to your clock before the calendar writes its own version."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The date-line flip",
+   "body": [
+    {
+     "t": "A Friday 5 p.m. deadline in Los Angeles is Saturday 10 a.m. in Sydney. The converter shows the day change in the result because hiding it is how deadlines get missed."
+    }
+   ]
+  },
+  {
+   "label": "Example · DST-aware, not offset-naive",
+   "body": [
+    {
+     "t": "Converting with fixed offsets breaks twice a year. This converter applies the rules for the actual date on both sides — the difference is the whole product."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "One time, four renderings",
+  "intro": "9:00 a.m. Monday in New York, converted (winter rules) — the kind of table the converter builds for your pair and date.",
+  "columns": [
+   "Place",
+   "Converted time",
+   "Day"
+  ],
+  "rows": [
+   [
+    "New York (source)",
+    "9:00 a.m.",
+    "Monday"
+   ],
+   [
+    "Los Angeles",
+    "6:00 a.m.",
+    "Monday"
+   ],
+   [
+    "London",
+    "2:00 p.m.",
+    "Monday"
+   ],
+   [
+    "Mumbai",
+    "7:30 p.m.",
+    "Monday"
+   ],
+   [
+    "Sydney",
+    "1:00 a.m.",
+    "Tuesday"
+   ]
+  ],
+  "note": "Summer rules change some renderings by an hour. The converter's date-specific computation is the authority; this table is the shape of the answer."
+ },
+ "faq": [
+  [
+   "Is DST handled?",
+   "Yes — each side's rules are applied for the date of the time being converted, which is precisely where fixed-offset converters fail."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — places and zones are chosen by you."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Zone names follow the IANA database; other tools may label zones by city or abbreviation differently while computing the same instant."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No — it is never requested here."
+  ],
+  [
+   "It changed the date — bug?",
+   "Feature of the planet. Crossings toward the date line legitimately land on the next or previous day, and the result shows it."
+  ],
+  [
+   "Ambiguous times on fall-back night?",
+   "The repeated hour (1:00–2:00 a.m. occurs twice) is genuinely ambiguous; professional systems state which occurrence they mean. Avoid scheduling inside it."
+  ],
+  [
+   "Nonexistent times on spring-forward?",
+   "2:30 a.m. that night never occurs. The converter resolves by rule; humans should simply not book it."
+  ],
+  [
+   "Abbreviations like IST?",
+   "Ambiguous worldwide (India, Ireland, Israel). This converter works in places and IANA zones to dodge the trap."
+  ],
+  [
+   "Group meetings?",
+   "Two places is a conversion; several is planning — the Meeting Time Planner and Working Hours Overlap tools own that shape."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Groups: the "
+  },
+  {
+   "t": "Meeting Time Planner",
+   "l": "/tools/meeting-time-planner"
+  },
+  {
+   "t": "; gaps: "
+  },
+  {
+   "t": "Time Difference Between Time Zones",
+   "l": "/tools/time-difference-between-timezones"
+  },
+  {
+   "t": "; live clocks: the "
+  },
+  {
+   "t": "World Clock Map",
+   "l": "/tools/world-clock-map"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder"
+ ]
+}

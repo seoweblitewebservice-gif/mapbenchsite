@@ -1,0 +1,188 @@
+{
+ "slug": "coordinate-offset-calculator",
+ "primary_keyword": "Coordinate Offset Calculator",
+ "secondary_keywords": [
+  "lat long offset calculator",
+  "gps coordinate offset",
+  "latitude offset calculator",
+  "longitude offset calculator",
+  "move coordinate by km"
+ ],
+ "title": "Coordinate Offset Calculator: Move a Point by km",
+ "description": "Convert kilometre offsets into coordinate changes with the Coordinate Offset Calculator — quick local moves, latitude-aware. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, moving 1 km east from Times Square adds about 0.0118 degrees of longitude, while 1 km north adds 0.0090 of latitude — the offset asymmetry every local calculation must respect.",
+ "quick_answer": "The Coordinate Offset Calculator converts simple kilometre offsets — so far north, so far east — into the coordinate change they produce at your latitude. Enter the point and offsets and read the new coordinates — quick local arithmetic for moving a point on paper first.",
+ "steps_intro": "Offsets are local arithmetic — with latitude holding the exchange rate:",
+ "use_cases": [
+  {
+   "title": "Field layout on paper",
+   "body": [
+    {
+     "t": "“The second plot starts 300 m east of the first” becomes coordinates the GPS can navigate to — quick planning before the "
+    },
+    {
+     "t": "Destination Point Calculator",
+     "l": "/tools/coordinate-destination-calculator"
+    },
+    {
+     "t": "'s exact version."
+    }
+   ]
+  },
+  {
+   "title": "Privacy jitter, honestly sized",
+   "body": [
+    {
+     "t": "Deliberately offsetting a published point by a stated distance — the calculator sizes the jitter in real metres, not decimal superstition."
+    }
+   ]
+  },
+  {
+   "title": "Grid generation seeds",
+   "body": [
+    {
+     "t": "Regular local grids grow from repeated offsets. The calculator starts the pattern; the radius-points generator makes rings."
+    }
+   ]
+  },
+  {
+   "title": "Sanity-checking a moved point",
+   "body": [
+    {
+     "t": "A dataset claims points shifted 500 m east. Verify a few: the offset arithmetic either reproduces them or exposes the claim."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · One kilometre, two deltas",
+   "body": [
+    {
+     "t": "At Times Square: 1 km north = +0.00901° latitude (1 ÷ 111.05 km); 1 km east = +0.01184° longitude (1 ÷ 84.44 km). Same kilometre, different degree price — the calculator never lets you forget which axis you are buying."
+    }
+   ]
+  },
+  {
+   "label": "Example · The equatorial discount",
+   "body": [
+    {
+     "t": "At the equator a kilometre east costs 0.00898°; at 60° it costs 0.01792° — double. Latitude is the exchange rate, and it moves."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Degree prices by latitude",
+  "intro": "Kilometres per degree (WGS84) — the table the offset arithmetic spends.",
+  "columns": [
+   "Latitude",
+   "1° latitude",
+   "1° longitude"
+  ],
+  "rows": [
+   [
+    "0°",
+    "110.574 km",
+    "111.319 km"
+   ],
+   [
+    "40.758° (New York)",
+    "111.049 km",
+    "84.442 km"
+   ],
+   [
+    "45°",
+    "111.132 km",
+    "78.847 km"
+   ],
+   [
+    "60°",
+    "111.412 km",
+    "55.800 km"
+   ]
+  ],
+  "note": "Local-offset arithmetic assumes a small neighbourhood. Beyond a few tens of kilometres, great-circle projection (the Destination Point Calculator) is the honest method."
+ },
+ "faq": [
+  [
+   "Is the longitude change constant everywhere?",
+   "No — it shrinks with the cosine of latitude, from 111.319 km per degree at the equator toward zero at the poles. The calculator applies your latitude's rate, which is the entire point."
+  ],
+  [
+   "Is it survey accurate?",
+   "It is planning accurate: local flat-earth arithmetic on WGS84 rates. Legal and engineering positions come from survey procedure and exact projection, not offset shortcuts."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "Offsets computed to 6 decimals from a hand-measured 300 m are theatre. Match the output's dignity to the input's."
+  ],
+  [
+   "Can I copy the result into GIS software?",
+   "Yes — the shifted pair is an ordinary coordinate for any tool."
+  ],
+  [
+   "Negative offsets?",
+   "South and west are negative north/east — signs are the mechanism, stated once and applied consistently."
+  ],
+  [
+   "Miles and feet?",
+   "Imperial offsets are accepted, per this site's convention — the degree prices are computed from the same table."
+  ],
+  [
+   "Diagonal moves?",
+   "Apply north and east components — the calculator's two-axis form is the diagonal, decomposed. The Destination calculator does bearing-plus-distance in one step."
+  ],
+  [
+   "Big offsets (hundreds of km)?",
+   "The flat assumption frays. Switch to great-circle projection for anything beyond a local neighbourhood."
+  ],
+  [
+   "Offset from a boundary?",
+   "Administrative containment can change within metres of a line — verify jurisdiction with the boundary tools, not by offset alone."
+  ],
+  [
+   "Antimeridian crossings?",
+   "Longitude wraps past ±180 — the calculator normalises the result back into range."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Exact projection: the "
+  },
+  {
+   "t": "Destination Point From Bearing Calculator",
+   "l": "/tools/coordinate-destination-calculator"
+  },
+  {
+   "t": "; boxes: the "
+  },
+  {
+   "t": "Bounding Box Calculator",
+   "l": "/tools/bounding-box-calculator"
+  },
+  {
+   "t": "; rings: the "
+  },
+  {
+   "t": "Coordinate Radius Points Generator",
+   "l": "/tools/coordinate-radius-points-generator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "arcminutes-to-decimal-degrees-converter",
+  "arcseconds-to-ground-distance-calculator",
+  "bng-converter",
+  "bounding-box-calculator",
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator"
+ ]
+}

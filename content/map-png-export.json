@@ -1,0 +1,28 @@
+{
+ "slug": "map-png-export",
+ "primary_keyword": "Map PNG Export",
+ "secondary_keywords": [
+  "map export",
+  "map png",
+  "save map image"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "custom-labeled-map",
+  "embed-map-link-helper",
+  "google-maps-embed-code-generator",
+  "historical-map-context",
+  "live-spatial-data-connector",
+  "map-data-collection-form-builder"
+ ]
+}

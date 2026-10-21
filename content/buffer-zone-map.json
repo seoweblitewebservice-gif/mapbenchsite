@@ -1,0 +1,195 @@
+{
+ "slug": "buffer-zone-map",
+ "primary_keyword": "Buffer Zone Map",
+ "secondary_keywords": [
+  "buffer zone",
+  "setback radius",
+  "distance buffer"
+ ],
+ "title": "Buffer Zone Map: Setback and Exclusion Zones",
+ "description": "Create a circular buffer at any distance with the Buffer Zone Map — planning setbacks, exclusion zones and reach rings on a live map. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 35 ft setback buffer around a 50 ft-radius pond creates a protected ring of approx. 14,844 sq ft (0.34 acres) where the two circles' areas differ.",
+ "quick_answer": "The Buffer Zone Map draws a circular buffer at a chosen distance around a point. Set the centre, pick the buffer distance, and inspect the ring — the working picture behind planning setbacks, exclusion zones around sensitive sites, and reach questions a bare radius does not frame.",
+ "steps_intro": "A buffer is a radius with a reason attached. Give it yours:",
+ "use_cases": [
+  {
+   "title": "Planning setbacks",
+   "body": [
+    {
+     "t": "Setbacks from water, roads and boundaries are buffer questions. Draw the ring at the regulated distance and see which corner of the parcel it touches — then measure the parcel itself in the "
+    },
+    {
+     "t": "Acreage Map Calculator",
+     "l": "/tools/acreage-map-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Environmental exclusion zones",
+   "body": [
+    {
+     "t": "Spray drift, noise and habitat protection all draw buffers. The map turns a number in a guidance document into the area it actually governs."
+    }
+   ]
+  },
+  {
+   "title": "Safety and works zones",
+   "body": [
+    {
+     "t": "Crane swings, blasting radii and site compounds are planned as buffers around a point. A drawn ring briefs a crew faster than a paragraph."
+    }
+   ]
+  },
+  {
+   "title": "Reach and notification rings",
+   "body": [
+    {
+     "t": "Who must be notified, consulted or evacuated within X of a site? The buffer ring is the list's boundary — addresses inside it are the answer."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The pond setback",
+   "body": [
+    {
+     "t": "Pond radius approx. 50 ft; a 35 ft setback ring around it spans radii 50–85 ft, an area of π × (85² − 50²) ≈ 14,844 sq ft (0.34 acres). That ring — not the pond — is the land the setback actually removes from use."
+    }
+   ]
+  },
+  {
+   "label": "Example · A notification ring",
+   "body": [
+    {
+     "t": "A 500 m buffer around a proposed site covers π × 500² ≈ 78.5 hectares of neighbourhood. The area figure is why notification duties are written in distances, not in 'nearby'."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Buffer areas grow fast",
+  "intro": "Area inside a circular buffer of radius r — the square law again: doubling the distance quadruples the governed area.",
+  "columns": [
+   "Buffer distance",
+   "Area (sq ft)",
+   "Area (acres)",
+   "Area (hectares)"
+  ],
+  "rows": [
+   [
+    "50 ft",
+    "7,854",
+    "0.18",
+    "0.073"
+   ],
+   [
+    "100 ft",
+    "31,416",
+    "0.72",
+    "0.292"
+   ],
+   [
+    "250 ft",
+    "196,350",
+    "4.51",
+    "1.824"
+   ],
+   [
+    "500 ft",
+    "785,398",
+    "18.03",
+    "7.297"
+   ],
+   [
+    "100 m",
+    "31,416 m²",
+    "7.76",
+    "3.142"
+   ],
+   [
+    "500 m",
+    "785,398 m²",
+    "194.07",
+    "78.540"
+   ]
+  ],
+  "note": "Areas are the full disc; a setback ring around an existing feature is the disc minus the feature, as the pond example shows."
+ },
+ "faq": [
+  [
+   "Is a buffer the same as a radius circle?",
+   "Geometrically yes — the difference is intent. A radius measures reach; a buffer declares a zone with a rule attached (setback, exclusion, notification). The drawing is shared, the meaning is yours."
+  ],
+  [
+   "Road buffer or straight-line buffer?",
+   "This tool draws the straight-line (geodesic) buffer — the kind regulations are written in. Road-based reach is a different shape; the Drive Time Map draws that one."
+  ],
+  [
+   "Can I use this for service-area planning?",
+   "Yes, as the geographic screen: the ring defines the candidate area. Population, roads and rules then refine it — the tool's job is the honest boundary."
+  ],
+  [
+   "Are map measurements legal survey measurements?",
+   "No. A drawn buffer is a planning picture at map accuracy. A setback with legal consequences is staked by survey, not by satellite image."
+  ],
+  [
+   "What distance units can I use?",
+   "Feet, metres, miles and kilometres — buffers are specified in all four depending on the regulation's country. US examples here use feet; European ones metres."
+  ],
+  [
+   "Can I buffer a line or an area, not just a point?",
+   "This tool buffers a point into a disc. Buffers around roads and parcels are polygon operations — draw the feature's outline in the acreage tools and offset thinking starts there."
+  ],
+  [
+   "Why does the area grow so fast?",
+   "Area scales with the square of distance. The table on this page is the antidote to the intuition that doubling a setback 'only' doubles its effect."
+  ],
+  [
+   "How is a buffer around a point different from one around a road?",
+   "A point buffer is a disc. A road buffer is a capsule — the road's line thickened by the distance, with round caps — which needs line geometry this point tool does not draw."
+  ],
+  [
+   "Can two buffers overlap?",
+   "Yes, and where setbacks from two features overlap, the union of the rings is the governed land. The Equal Circle Overlap Calculator sizes the shared lens of two equal discs."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The general circle instrument is the "
+  },
+  {
+   "t": "Map Radius Tool",
+   "l": "/tools/map-radius"
+  },
+  {
+   "t": "; measure the land a buffer governs with the "
+  },
+  {
+   "t": "Acreage Map Calculator",
+   "l": "/tools/acreage-map-calculator"
+  },
+  {
+   "t": "; and check who falls inside a service ring with the "
+  },
+  {
+   "t": "Delivery Radius Checker",
+   "l": "/tools/delivery-radius-checker"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "acreage-map-calculator",
+  "acres-to-hectares-converter",
+  "acres-to-square-feet-converter",
+  "center-of-polygon",
+  "circle-area-from-radius",
+  "circle-circumference-from-radius"
+ ]
+}

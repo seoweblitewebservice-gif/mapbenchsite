@@ -1,0 +1,189 @@
+{
+ "slug": "map-tile-center-calculator",
+ "primary_keyword": "Map Tile Center Calculator",
+ "secondary_keywords": [
+  "map tile center calculator online",
+  "free map tile center calculator",
+  "map tile center calculator calculator",
+  "map tile center calculator tool",
+  "how to calculate map tile center calculator"
+ ],
+ "title": "Map Tile Center Calculator: Middle of a Tile",
+ "description": "Compute the centre coordinate of a map tile with the Map Tile Center Calculator — the lat/lon a z/x/y tile is centred on. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, the centre of Times Square's z15 tile is not Times Square — it is the middle of a 926-metre square containing it, offset by wherever the point fell inside its tile.",
+ "quick_answer": "The Map Tile Center Calculator computes the latitude/longitude at the centre of a z/x/y map tile. Enter the tile and read its middle point — for centring maps on tiles, labelling tile footprints, and understanding why a map centred 'on the tile' is not centred on your place.",
+ "steps_intro": "The tile's middle — not your point, and that is the lesson:",
+ "use_cases": [
+  {
+   "title": "Centring views on tiles",
+   "body": [
+    {
+     "t": "Static map images composed per tile centre on tile centres — the API call wants this coordinate, from the tile numbers the "
+    },
+    {
+     "t": "Tile Calculator",
+     "l": "/tools/lat-lon-to-map-tile-calculator"
+    },
+    {
+     "t": " produced."
+    }
+   ]
+  },
+  {
+   "title": "Labelling and cataloguing tiles",
+   "body": [
+    {
+     "t": "A tile archive indexed by centre points becomes searchable geography instead of anonymous numbers."
+    }
+   ]
+  },
+  {
+   "title": "Explaining offset mysteries",
+   "body": [
+    {
+     "t": "“Why did the map centre miss the cafe?” — because it centred the tile. The centre calculator quantifies the miss: up to half a tile diagonal."
+    }
+   ]
+  },
+  {
+   "title": "Sampling design",
+   "body": [
+    {
+     "t": "Tile centres form a ready-made systematic sample grid at any zoom — a sampling frame hiding in the map stack."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Centre versus contained point",
+   "body": [
+    {
+     "t": "At z15 a tile spans ~926 m in New York, so its centre can sit up to ~650 m (half-diagonal) from any point inside. At z10 the same miss can reach ~27 km — the zoom chooses the error's scale."
+    }
+   ]
+  },
+  {
+   "label": "Example · Centre is a Mercator middle",
+   "body": [
+    {
+     "t": "The centre is computed in pixel space (the tile's middle pixel converted back) — its latitude is the Mercator middle, not the arithmetic mean of the edge latitudes. The distinction is small per tile and exactly the kind this family refuses to blur."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Centre at a glance",
+  "intro": "How the centre behaves as zoom changes.",
+  "columns": [
+   "Zoom",
+   "Tile width (equator)",
+   "Worst centre-to-point offset"
+  ],
+  "rows": [
+   [
+    "10",
+    "~39.1 km",
+    "~27.7 km"
+   ],
+   [
+    "13",
+    "~4.9 km",
+    "~3.5 km"
+   ],
+   [
+    "15",
+    "~1.22 km",
+    "~0.86 km"
+   ],
+   [
+    "17",
+    "~306 m",
+    "~216 m"
+   ],
+   [
+    "19",
+    "~76 m",
+    "~54 m"
+   ]
+  ],
+  "note": "Offsets are half the tile's diagonal (width × √2 ÷ 2) at the equator; at latitude the ground width shrinks by cos, and so does the miss."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The geographic coordinate of a tile's centre pixel — converting (x + 0.5, y + 0.5) in tile units back through the Mercator inverse."
+  ],
+  [
+   "Which map standard does it use?",
+   "The slippy-map standard (Web Mercator, 256-px tiles) shared by OSM, Google and MapLibre."
+  ],
+  [
+   "Can I use this in production GIS?",
+   "The formulas are the production standard itself — yes for web-mapping work."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 — tile systems are defined over it."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — tiles and pixels quantise; decimals beyond the cell are decoration."
+  ],
+  [
+   "Centre of the bounds instead?",
+   "Averaging edge latitudes is close but not identical (Mercator curvature within the tile). This calculator returns the pixel-space centre, the renderer's truth."
+  ],
+  [
+   "Can I centre a Leaflet/MapLibre map on it?",
+   "Yes — the pair is an ordinary centre coordinate for any map call."
+  ],
+  [
+   "Which tile contains a point?",
+   "The Lat Lon to Map Tile Calculator — centres and containment are sibling questions with different tools."
+  ],
+  [
+   "Centres as labels?",
+   "A centre label names the tile's middle ground — honest for cataloguing, misleading if read as a feature location. Label responsibly."
+  ],
+  [
+   "z/x/y of the centre's own tile?",
+   "Itself, by construction — the centre always falls in its own tile, a fixed point of the system worth noticing once."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Its bounds: the "
+  },
+  {
+   "t": "Map Tile Bounds Calculator",
+   "l": "/tools/map-tile-bounds-calculator"
+  },
+  {
+   "t": "; find tiles: the "
+  },
+  {
+   "t": "Latitude Longitude to Map Tile Calculator",
+   "l": "/tools/lat-lon-to-map-tile-calculator"
+  },
+  {
+   "t": "; back-convert: the "
+  },
+  {
+   "t": "Map Tile to Lat Lon Calculator",
+   "l": "/tools/map-tile-to-lat-lon-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator"
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "slug": "csv-row-counter",
+ "primary_keyword": "CSV Row Counter",
+ "secondary_keywords": [
+  "csv row counter online",
+  "free csv row counter",
+  "csv row counter tool",
+  "csv row counter checker",
+  "csv row counter validator"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "boundary-kml-downloader",
+  "cluster-map-from-points",
+  "country-boundary-downloader",
+  "csv-coordinate-bounding-box",
+  "csv-coordinate-centroid-calculator",
+  "csv-coordinate-deduplicator"
+ ]
+}

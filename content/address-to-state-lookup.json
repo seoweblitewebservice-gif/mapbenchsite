@@ -1,0 +1,192 @@
+{
+ "slug": "address-to-state-lookup",
+ "primary_keyword": "Address to State Lookup",
+ "secondary_keywords": [
+  "address to state",
+  "find state by address",
+  "state lookup by address",
+  "state fips by address"
+ ],
+ "title": "Address to State Lookup: Census-Verified State",
+ "description": "Verify an address's state against Census polygons with Address to State Lookup — state FIPS, highlighted boundary and context. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, an address in Kansas City can sit in Missouri or Kansas — the polygon knows which, even when the mailing address is coy about it.",
+ "quick_answer": "Address to State Lookup verifies which US state an address, place or point falls in by testing it against Census Bureau state polygons, and returns the state FIPS code with a highlighted boundary and demographic context. Read a state answer that comes from geography, not from parsing text.",
+ "steps_intro": "Mostly state is obvious — until a border city, a mailing address or a data error makes it a question. Answer it geographically:",
+ "use_cases": [
+  {
+   "title": "Border-city certainty",
+   "body": [
+    {
+     "t": "Kansas City, Texarkana, Bristol, the Quad Cities: mailing labels blur state lines that polygons do not. Verify the side that matters."
+    }
+   ]
+  },
+  {
+   "title": "Compliance and tax nexus",
+   "body": [
+    {
+     "t": "State-level obligations follow the physical state. A verified point-in-polygon answer beats a parsed string in any audit."
+    }
+   ]
+  },
+  {
+   "title": "Data pipelines",
+   "body": [
+    {
+     "t": "State fields cleaned by geography stop the errors that text-parsing imports. The county sibling adds the finer grain: "
+    },
+    {
+     "t": "Address to County Lookup",
+     "l": "/tools/address-to-county-lookup"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Curiosity with rigour",
+   "body": [
+    {
+     "t": "“Which state is this actually in?” — for exclaves, river bends and changed channels, the polygon has opinions worth hearing."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The two-state city",
+   "body": [
+    {
+     "t": "Kansas City exists in both Kansas and Missouri, divided by a state line the river drew. The lookup tests the point — the only honest way to answer for a specific address."
+    }
+   ]
+  },
+  {
+   "label": "Example · The FIPS receipt",
+   "body": [
+    {
+     "t": "Texas is FIPS 48, New York 36, California 06 — the code beside the name is what lets two databases confirm they mean the same state."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "State FIPS anchors",
+  "intro": "A few permanent codes — state FIPS never change with politics, which is rather their purpose.",
+  "columns": [
+   "State",
+   "FIPS",
+   "State",
+   "FIPS"
+  ],
+  "rows": [
+   [
+    "California",
+    "06",
+    "New York",
+    "36"
+   ],
+   [
+    "Texas",
+    "48",
+    "Florida",
+    "12"
+   ],
+   [
+    "Illinois",
+    "17",
+    "Washington",
+    "53"
+   ],
+   [
+    "Ohio",
+    "39",
+    "Colorado",
+    "08"
+   ]
+  ],
+  "note": "The demographic context shown with a lookup is Census ACS material — estimates with a vintage, presented as context rather than live counts."
+ },
+ "faq": [
+  [
+   "Can I search a full street address?",
+   "Yes — address, city, ZIP or coordinates all resolve to a point, and the point is tested against the state polygon."
+  ],
+  [
+   "Does it return the state FIPS code?",
+   "Yes, alongside the highlighted boundary — the two-digit code that databases use to agree about states."
+  ],
+  [
+   "Are demographics current live counts?",
+   "No — they are Census survey estimates (ACS) with a stated vintage. Nobody counts a state's population live; honest tools say so."
+  ],
+  [
+   "Can I click the map instead of searching?",
+   "Yes — clicking drops the point and the same polygon test runs. Useful for fields, parcels and middle-of-nowhere questions."
+  ],
+  [
+   "Does it work outside the United States?",
+   "The polygon framework is US Census geography. Outside the US, the country and continent tools elsewhere on the site take over."
+  ],
+  [
+   "Why not just read the state from the address?",
+   "Because addresses carry mailing cities across state lines and data entry makes typos. The point-in-polygon test is immune to both."
+  ],
+  [
+   "What about territories?",
+   "Census geography covers the territories with their own FIPS codes; the lookup follows the framework it is built on."
+  ],
+  [
+   "A river moved — which state now?",
+   "State boundaries often follow the historical channel, not today's water. The polygon holds the legal line, which is exactly why the test is worth running."
+  ],
+  [
+   "Can a ZIP code span two states?",
+   "ZIPs serve delivery routes and can cross lines the polygons respect. Another reason the point, not the postcode, is tested."
+  ],
+  [
+   "The point is on a military base or reservation.",
+   "The state answer still applies geographically; jurisdiction layers (federal, tribal) sit on top and are separate questions the demographics frame but do not settle."
+  ],
+  [
+   "How current is the boundary?",
+   "Census geography is refreshed on the Bureau's cycle; annexations and rare boundary compacts land there first among public sources."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Finer grain: "
+  },
+  {
+   "t": "Address to County Lookup",
+   "l": "/tools/address-to-county-lookup"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Address to ZIP Code Lookup",
+   "l": "/tools/address-to-zip-code-lookup"
+  },
+  {
+   "t": "; coordinates first: "
+  },
+  {
+   "t": "Address to Coordinates",
+   "l": "/tools/address-to-coordinates"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder"
+ ]
+}

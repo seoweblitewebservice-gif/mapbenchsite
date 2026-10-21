@@ -1,0 +1,196 @@
+{
+ "slug": "latitude-degree-distance",
+ "primary_keyword": "Degrees Latitude to Kilometers Calculator",
+ "secondary_keywords": [
+  "degrees latitude to km",
+  "latitude degrees distance",
+  "1 degree latitude km",
+  "latitude to kilometers calculator",
+  "latitude distance calculator"
+ ],
+ "title": "Degrees Latitude to Kilometers Calculator",
+ "description": "Convert degrees of latitude to kilometres with the Degrees Latitude to Kilometers Calculator — the near-constant 111 km, refined by latitude. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, the 0.1167 degrees of latitude between Times Square and JFK is 12.96 km of north-south ground — latitude's degree is the most dependable ruler on the map.",
+ "quick_answer": "The Degrees Latitude to Kilometers Calculator converts a difference in latitude into the north-south ground distance it represents, using WGS84's degree length at the relevant latitude. Enter the degrees and read kilometres (or miles) — latitude's ruler, accurate to the ellipsoid's gentle variation between equator and pole.",
+ "steps_intro": "The one degree that almost never changes its length:",
+ "use_cases": [
+  {
+   "title": "Quick north-south estimates",
+   "body": [
+    {
+     "t": "Two latitudes differ by 0.5° — that is ~55.5 km, computed properly here instead of guessed. The east-west sibling is "
+    },
+    {
+     "t": "Degrees Longitude to Kilometers",
+     "l": "/tools/longitude-degree-distance"
+    },
+    {
+     "t": ", where the guessing is worse."
+    }
+   ]
+  },
+  {
+   "title": "Checking GPS logs",
+   "body": [
+    {
+     "t": "A track's latitude range converts to its north-south extent — the "
+    },
+    {
+     "t": "Coordinate Span Calculator",
+     "l": "/tools/coordinate-span-calculator"
+    },
+    {
+     "t": " does whole sets; this page is the single-axis instrument."
+    }
+   ]
+  },
+  {
+   "title": "Climate and zone intuition",
+   "body": [
+    {
+     "t": "Tropics span 23.5° each way — in kilometres (about 2,600 km of latitude) the climate bands gain physical size."
+    }
+   ]
+  },
+  {
+   "title": "Aviation and sailing legs",
+   "body": [
+    {
+     "t": "Meridian legs price themselves: degrees of latitude × ~60 gives nautical miles — the arcminute identity in degree dress."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The gentle variation",
+   "body": [
+    {
+     "t": "One degree of latitude: 110.574 km at the equator, 111.049 at New York, 111.412 at 60°, 111.694 at the pole. A 1% swell across the whole planet — the ellipsoid's flattening, barely whispering."
+    }
+   ]
+  },
+  {
+   "label": "Example · Half a degree",
+   "body": [
+    {
+     "t": "0.5° at mid-latitudes ≈ 55.6 km — the scale of a marathon plus a warm-up, or an hour's drive. Degree fractions become journeys with this conversion in hand."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "One degree of latitude (WGS84)",
+  "intro": "Computed from the meridional radius — the calculator's own arithmetic.",
+  "columns": [
+   "Latitude",
+   "1° in km",
+   "1° in miles"
+  ],
+  "rows": [
+   [
+    "0°",
+    "110.574",
+    "68.71"
+   ],
+   [
+    "30°",
+    "110.852",
+    "68.88"
+   ],
+   [
+    "45°",
+    "111.132",
+    "69.05"
+   ],
+   [
+    "60°",
+    "111.412",
+    "69.22"
+   ],
+   [
+    "90°",
+    "111.694",
+    "69.40"
+   ]
+  ],
+  "note": "The schoolbook '111 km per degree' is right within 1% everywhere for latitude — a rare case of the simple rule nearly being the true one. Longitude is another story, told on its own page."
+ },
+ "faq": [
+  [
+   "Is one degree always exactly the same distance?",
+   "Not exactly — it grows about 1% from equator (110.574 km) to pole (111.694 km) because the Earth is an oblate ellipsoid. The calculator applies the latitude's own length; the flat 111 km rule is fine for estimates."
+  ],
+  [
+   "Is it good for surveying?",
+   "The conversion is ellipsoid-true; surveying additionally lives on local datums, heights and field method. For planning, checking and learning, this accuracy is the real thing."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84, the frame web maps and GPS share — tile and pixel systems on this page are defined over it."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — pixels and tiles quantise the world; extra coordinate decimals beyond the cell size are decoration."
+  ],
+  [
+   "Can I copy the result into GIS software?",
+   "Distances are numbers, welcome everywhere; the coordinates they came from paste as themselves."
+  ],
+  [
+   "Miles?",
+   "Both units, per this site's convention — 1° of latitude is roughly 69 miles, the number American road atlases quietly assume."
+  ],
+  [
+   "South latitude differences?",
+   "Signs take care of themselves — a span from −10° to −25° is 15° of southern latitude, priced like its northern twin."
+  ],
+  [
+   "Tiny fractions?",
+   "0.001° ≈ 111 m; 0.0001° ≈ 11 m — the precision family's ladder restated in degree language."
+  ],
+  [
+   "Difference between two latitudes directly?",
+   "Subtract the latitudes, convert the difference — for spans crossing the equator, the calculator's latitude input wants the mid-latitude of the span."
+  ],
+  [
+   "Why does it grow toward the poles?",
+   "The meridian's radius of curvature increases as the ellipsoid flattens — geometry, visible in the table's gentle slope."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "East-west: "
+  },
+  {
+   "t": "Degrees Longitude to Kilometers Calculator",
+   "l": "/tools/longitude-degree-distance"
+  },
+  {
+   "t": "; sets: the "
+  },
+  {
+   "t": "Coordinate Span Calculator",
+   "l": "/tools/coordinate-span-calculator"
+  },
+  {
+   "t": "; minutes: the "
+  },
+  {
+   "t": "Arcminutes to Decimal Degrees Converter",
+   "l": "/tools/arcminutes-to-decimal-degrees-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "arcminutes-to-decimal-degrees-converter",
+  "arcseconds-to-ground-distance-calculator",
+  "bng-converter",
+  "bounding-box-calculator",
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator"
+ ]
+}
