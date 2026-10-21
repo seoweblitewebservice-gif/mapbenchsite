@@ -98,6 +98,15 @@ const components: Record<string, () => Promise<{ default: ComponentType<{ params
   gmapembed: () => import("./FlagshipTools").then((m) => ({ default: m.GoogleMapsEmbedTool })),
   sharelinks: () => import("./FlagshipTools").then((m) => ({ default: m.ShareLocationLinkTool })),
   disttable: () => import("./FlagshipTools").then((m) => ({ default: m.CoordinateDistanceTableTool })),
+  "list-location": () => import("./ListLocationTools"),
+  "list-nearby": () => import("./ListNearbyTools"),
+  "list-grid": () => import("./ListGridTools"),
+  "list-route": () => import("./ListRouteTools"),
+  "list-radius": () => import("./ListRadiusTools"),
+  "list-file": () => import("./ListFileTools"),
+  "list-earth": () => import("./ListEarthTools"),
+  "list-map": () => import("./ListMapTools"),
+  "list-spatial": () => import("./ListSpatialTools"),
 };
 
 export const toolComponents: Record<string, ComponentType<{ params?: Record<string, unknown> }>> = Object.fromEntries(
