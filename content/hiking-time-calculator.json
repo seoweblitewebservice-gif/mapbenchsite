@@ -1,0 +1,195 @@
+{
+ "slug": "hiking-time-calculator",
+ "primary_keyword": "Hiking Time Calculator",
+ "secondary_keywords": [
+  "hike time calculator",
+  "trail time calculator",
+  "walking trail time",
+  "hiking duration",
+  "hiking distance time"
+ ],
+ "title": "Hiking Time Calculator: Naismith Estimates",
+ "description": "Estimate hiking time from distance and ascent with the Hiking Time Calculator — a simple Naismith-style rule, transparently applied. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 12 miles with 3,000 ft of climbing prices at about 5 hours 30 minutes by the rule — before rests, photos and the pub at the end.",
+ "quick_answer": "The Hiking Time Calculator estimates how long a hike takes from its distance and total ascent, using a Naismith-style rule: a base pace over the ground plus an allowance for height gained. Enter the route's two numbers and read the time your daylight, water and group decisions should hang from.",
+ "steps_intro": "Two numbers describe a walking day better than one ever can:",
+ "use_cases": [
+  {
+   "title": "Daylight budgeting",
+   "body": [
+    {
+     "t": "Start time + Naismith total + margin versus sunset: the oldest safety equation in hill walking, computed in seconds."
+    }
+   ]
+  },
+  {
+   "title": "Route comparison",
+   "body": [
+    {
+     "t": "The longer-but-flatter route versus the shorter climb: both priced in time, the trade becomes a choice instead of a discovery at the steep part."
+    }
+   ]
+  },
+  {
+   "title": "Group planning",
+   "body": [
+    {
+     "t": "Apply the rule with the group's pace, not the leader's. The "
+    },
+    {
+     "t": "Hiking Route Planner with Elevation",
+     "l": "/tools/hiking-route-planner-with-elevation"
+    },
+    {
+     "t": " supplies distance and climb from a real route."
+    }
+   ]
+  },
+  {
+   "title": "Estimating unknown trails",
+   "body": [
+    {
+     "t": "A guidebook's distance and ascent become your time estimate before you commit — the trailhead sign's two numbers are all this needs."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The big day",
+   "body": [
+    {
+     "t": "12 mi at 3 mph = 4 h; 3,000 ft at 30 min/1,000 ft = 1 h 30 min; total ≈ 5 h 30 min. Add an hour of living — food, views, boots off — and the day is 6½ hours, planned."
+    }
+   ]
+  },
+  {
+   "label": "Example · The gentle ramble",
+   "body": [
+    {
+     "t": "5 miles with 400 ft of climb: 1 h 40 min + 12 min ≈ 1 h 52 min. The rule stays proportionate at ramble scale, which is why it has survived a century of use."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Naismith totals for common days",
+  "intro": "Base pace 3 mph plus 30 minutes per 1,000 ft climbed — the same table the route planner's Naismith column uses.",
+  "columns": [
+   "Distance",
+   "With 500 ft climb",
+   "With 1,500 ft climb",
+   "With 3,000 ft climb"
+  ],
+  "rows": [
+   [
+    "5 mi",
+    "1 h 55 m",
+    "2 h 25 m",
+    "3 h 10 m"
+   ],
+   [
+    "8 mi",
+    "2 h 55 m",
+    "3 h 25 m",
+    "4 h 10 m"
+   ],
+   [
+    "10 mi",
+    "3 h 35 m",
+    "4 h 05 m",
+    "4 h 50 m"
+   ],
+   [
+    "12 mi",
+    "4 h 15 m",
+    "4 h 45 m",
+    "5 h 30 m"
+   ],
+   [
+    "15 mi",
+    "5 h 15 m",
+    "5 h 45 m",
+    "6 h 30 m"
+   ]
+  ],
+  "note": "Totals exclude rests. Your measured pace (Hiking Pace Calculator) replaces the 3 mph assumption for a personalised rule."
+ },
+ "faq": [
+  [
+   "Does this replace a specialist tool or professional measurement?",
+   "No. It is a century-old planning rule applied transparently. Mountain judgement — weather, terrain, the party's strength — remains yours and your leader's."
+  ],
+  [
+   "Is my input uploaded?",
+   "No. Distance and ascent are computed with in your browser."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Nothing about a trail is traffic; conditions are the walker's to read on the day."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Trails wind more. Enter the trail distance — from a route plan or a guidebook — not the crow's figure."
+  ],
+  [
+   "Can route results change over time?",
+   "Your fitness changes the input pace, and paths change their lengths. Recalculate per season and per route."
+  ],
+  [
+   "What pace does the rule assume?",
+   "About 3 mph (5 km/h) on the flat, plus the climb allowance. Slower parties should scale the base pace — the calculator's structure accepts the honesty."
+  ],
+  [
+   "Should I add time for descent?",
+   "Steep descents cost real parties real time. The classic rule ignores them; prudent planners add a margin on very steep ground."
+  ],
+  [
+   "How long for a walk with 600 m of climb over 14 km?",
+   "Flat time 14 ÷ 5 = 2 h 48 min; climb 600 m ≈ 30 min per 300 m → 1 h; total ≈ 3 h 48 min, rests excluded."
+  ],
+  [
+   "Does the rule work for running?",
+   "Trail runners move faster than Naismith's walking assumption — scale the base pace to your running pace and keep the climb allowance as a starting guess."
+  ],
+  [
+   "Snow and ice conditions?",
+   "The rule assumes walkable ground. Winter conditions multiply times in ways only experience calibrates; this estimate is the summer truth."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Routes with climb measured are in the "
+  },
+  {
+   "t": "Hiking Route Planner with Elevation",
+   "l": "/tools/hiking-route-planner-with-elevation"
+  },
+  {
+   "t": ", your own speed is measured by the "
+  },
+  {
+   "t": "Hiking Pace Calculator",
+   "l": "/tools/hiking-pace-calculator"
+  },
+  {
+   "t": ", and rides use the "
+  },
+  {
+   "t": "Cycling Time Calculator",
+   "l": "/tools/cycling-time-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-calories-distance",
+  "cycling-route-planner",
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator"
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "slug": "blank-map",
+ "primary_keyword": "Blank Map",
+ "secondary_keywords": [
+  "outline map",
+  "printable map",
+  "blank map online"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "custom-labeled-map",
+  "embed-map-link-helper",
+  "google-maps-embed-code-generator",
+  "historical-map-context",
+  "live-spatial-data-connector",
+  "map-data-collection-form-builder"
+ ]
+}

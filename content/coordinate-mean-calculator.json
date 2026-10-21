@@ -1,0 +1,193 @@
+{
+ "slug": "coordinate-mean-calculator",
+ "primary_keyword": "Coordinate Mean Calculator",
+ "secondary_keywords": [
+  "coordinate mean calculator online",
+  "free coordinate mean calculator",
+  "coordinate mean calculator calculator",
+  "coordinate mean calculator tool",
+  "how to calculate coordinate mean calculator"
+ ],
+ "title": "Coordinate Mean Calculator: Centre of Points",
+ "description": "Average a set of coordinates properly with the Coordinate Mean Calculator — spherical mean that survives the date line. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, the mean of New York, Chicago and Los Angeles falls at 40.413, −93.959 in Missouri — the same spherical centre the postal-centroid tool found for those cities' ZIPs.",
+ "quick_answer": "The Coordinate Mean Calculator averages a set of coordinates into their central point, computed on the sphere rather than by flat latitude/longitude averaging. Paste the points and read the mean — the centre that minimises the group's spread, correct across the date line and honest at any scale.",
+ "steps_intro": "Averaging coordinates is easy to do wrong. Do it on the sphere:",
+ "use_cases": [
+  {
+   "title": "Meeting centres from pins",
+   "body": [
+    {
+     "t": "A group's scattered points get their fair centre — the same method as the "
+    },
+    {
+     "t": "Geographic Meeting Point Finder",
+     "l": "/tools/geographic-meeting-point-finder"
+    },
+    {
+     "t": ", fed by pasted coordinates."
+    }
+   ]
+  },
+  {
+   "title": "Track and survey centroids",
+   "body": [
+    {
+     "t": "The centre of a day's fixes, a plot's corners, a transect's stations — one representative point with defensible maths."
+    }
+   ]
+  },
+  {
+   "title": "Dataset summarising",
+   "body": [
+    {
+     "t": "A cluster's mean is its headline. Spherical averaging keeps the headline true when the cluster straddles a meridian seam."
+    }
+   ]
+  },
+  {
+   "title": "Checking a claimed centre",
+   "body": [
+    {
+     "t": "Someone hands you a 'centre point' — recompute it. The mean either matches or the conversation gets interesting."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Three cities",
+   "body": [
+    {
+     "t": "New York (40.7128, −74.0060), Chicago (41.8781, −87.6298), Los Angeles (34.0522, −118.2437) → mean 40.413, −93.959. Missouri hosts the centre of a coastal triangle — the arithmetic of fairness."
+    }
+   ]
+  },
+  {
+   "label": "Example · The date-line pair",
+   "body": [
+    {
+     "t": "Points at +179° and −179° longitude average to 180° on the sphere. Flat averaging says 0° — the wrong side of the planet. This calculator exists for that sentence."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Spherical versus flat averaging",
+  "intro": "When the difference matters and when it does not.",
+  "columns": [
+   "Case",
+   "Flat average",
+   "Spherical mean"
+  ],
+  "rows": [
+   [
+    "One neighbourhood",
+    "Fine",
+    "Same answer"
+   ],
+   [
+    "One continent",
+    "Drifts noticeably",
+    "Correct"
+   ],
+   [
+    "Across the date line",
+    "Catastrophically wrong",
+    "Correct"
+   ],
+   [
+    "Near the poles",
+    "Misleading",
+    "Correct"
+   ],
+   [
+    "Two points",
+    "Midpoint on the flat sense",
+    "Great-circle midpoint"
+   ]
+  ],
+  "note": "The method converts points to 3D vectors, averages them, and converts back — the same mathematics as the postal code centroid, generalised."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The spherical mean (centre of direction) of a set of coordinate pairs — the point minimising the group's angular spread, computed via 3D vector averaging."
+  ],
+  [
+   "Which map standard does it use?",
+   "WGS84 coordinates on a spherical Earth model — the standard for centre-finding at every scale this tool serves."
+  ],
+  [
+   "Can I use this in production GIS?",
+   "As the centroid method, yes — it matches what GIS spherical centroids compute. Ellipsoid-exact centroids for legal work remain the surveyor's domain."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 throughout."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "The mean's honest precision is bounded by the inputs' spread and accuracy — extra decimals are arithmetic, and the tool's output should be read with the cluster's size in mind."
+  ],
+  [
+   "Weighted points?",
+   "Repeat a point to weight it — duplication is the transparent weighting mechanism, visible in the input itself."
+  ],
+  [
+   "Outliers drag the mean.",
+   "They do — that is a mean being a mean. For a resistant centre, trim the outliers or use the median-style point; the distances table shows each point's pull."
+  ],
+  [
+   "Mean of two points equals the midpoint?",
+   "Yes — the spherical mean of a pair is their great-circle midpoint, the halfway tools' foundation."
+  ],
+  [
+   "Antipodal points?",
+   "Points exactly opposite cancel — the mean is undefined, and the tool says so rather than inventing a centre."
+  ],
+  [
+   "Can I mean elevations too?",
+   "This tool means positions on the sphere. Elevation averages are a separate, simpler statistic."
+  ],
+  [
+   "Input formats?",
+   "Decimal pairs, one per line — dressed formats convert first in the Coordinate Converter."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Group centres: the "
+  },
+  {
+   "t": "Geographic Meeting Point Finder",
+   "l": "/tools/geographic-meeting-point-finder"
+  },
+  {
+   "t": "; ZIP version: the "
+  },
+  {
+   "t": "Postal Code Centroid Calculator",
+   "l": "/tools/postal-code-centroid-calculator"
+  },
+  {
+   "t": "; spread: the "
+  },
+  {
+   "t": "Coordinate Span Calculator",
+   "l": "/tools/coordinate-span-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-offset-calculator"
+ ]
+}

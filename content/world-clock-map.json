@@ -1,0 +1,188 @@
+{
+ "slug": "world-clock-map",
+ "primary_keyword": "World Clock Map",
+ "secondary_keywords": [
+  "world clock",
+  "city time difference",
+  "world clock map online"
+ ],
+ "title": "World Clock Map: City Times Side by Side",
+ "description": "See local clock times for picked cities side by side on the World Clock Map — coordination at a glance, DST applied live. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, one glance at four clocks — New York 9:00, London 14:00, Mumbai 19:30, Sydney already tomorrow — teaches more about a team's geography than a month of scheduling pain.",
+ "quick_answer": "The World Clock Map shows the local times of cities you pick, side by side, for coordination at a glance. Add your cities and compare their clocks as they tick — with daylight-saving rules applied live, because a world clock that ignores changeover weeks is a poster, not a tool.",
+ "steps_intro": "Every team's wall of clocks, without the wall:",
+ "use_cases": [
+  {
+   "title": "Coordination at a glance",
+   "body": [
+    {
+     "t": "Before proposing any time, look at everyone's now — the "
+    },
+    {
+     "t": "Meeting Time Planner",
+     "l": "/tools/meeting-time-planner"
+    },
+    {
+     "t": " turns the glance into a slot."
+    }
+   ]
+  },
+  {
+   "title": "Family across continents",
+   "body": [
+    {
+     "t": "Call when both clocks say a kind hour. Grandparents' morning and grandchildren's evening find each other on this wall."
+    }
+   ]
+  },
+  {
+   "title": "Market and event watching",
+   "body": [
+    {
+     "t": "Opens, closes and kick-offs across exchanges and stadiums — the cities tick in their own business hours."
+    }
+   ]
+  },
+  {
+   "title": "Classroom time zones",
+   "body": [
+    {
+     "t": "Nothing teaches zones like watching Tokyo eat lunch tomorrow while New York finishes yesterday's dinner. Live clocks beat diagrams."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The tomorrow city",
+   "body": [
+    {
+     "t": "Sydney regularly shows tomorrow's date while New York shows today — the date line made mundane, ticking on the same wall."
+    }
+   ]
+  },
+  {
+   "label": "Example · The half-hour honesty",
+   "body": [
+    {
+     "t": "Mumbai's :30 offset ticks visibly against the hour-aligned cities — a small permanent lesson in why the world's clocks are not a grid."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "One instant, the wall's way",
+  "intro": "A winter moment, 14:00 UTC rendered on the classic cities — the map computes yours live.",
+  "columns": [
+   "City",
+   "Local time",
+   "Day"
+  ],
+  "rows": [
+   [
+    "New York",
+    "9:00 a.m.",
+    "Today"
+   ],
+   [
+    "London",
+    "2:00 p.m.",
+    "Today"
+   ],
+   [
+    "Berlin",
+    "3:00 p.m.",
+    "Today"
+   ],
+   [
+    "Mumbai",
+    "7:30 p.m.",
+    "Today"
+   ],
+   [
+    "Tokyo",
+    "11:00 p.m.",
+    "Today"
+   ],
+   [
+    "Sydney",
+    "1:00 a.m.",
+    "Tomorrow"
+   ]
+  ],
+  "note": "DST seasons shift rows by an hour here and there; the live map never uses this table's frozen rules — it computes from the tz database continuously."
+ },
+ "faq": [
+  [
+   "Do the clocks tick live?",
+   "Yes — the displayed times update as time passes, computed from each city's zone rules rather than from a static offset table."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — cities are added by you; your own location joins the wall only if you add it."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "City resolutions come from open geocoding; the zone rules are the IANA database's, matching your devices' sources."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No — it is never requested for the wall."
+  ],
+  [
+   "How many cities?",
+   "A wall's worth — the glance works for a handful to a dozen. Beyond that, the Meeting Time Planner's slot logic serves better than clocks."
+  ],
+  [
+   "Seconds shown?",
+   "Ticking displays follow the page's design; for timestamp-precision work the converter family gives exact instants."
+  ],
+  [
+   "A city is missing from the list.",
+   "Add by the nearest major city in the same zone, or resolve the exact point's zone with the Timezone Map Finder."
+  ],
+  [
+   "Analog or digital?",
+   "The wall's style is the page's; the arithmetic beneath — tz rules, live — is identical either way."
+  ],
+  [
+   "Daylight saving surprises?",
+   "The wall applies rules live, so changeover weekends shift cities in front of you — the honest behaviour static posters cannot offer."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Slots: the "
+  },
+  {
+   "t": "Meeting Time Planner",
+   "l": "/tools/meeting-time-planner"
+  },
+  {
+   "t": "; overlaps: the "
+  },
+  {
+   "t": "Working Hours Overlap Calculator",
+   "l": "/tools/working-hours-overlap-calculator"
+  },
+  {
+   "t": "; your zone: "
+  },
+  {
+   "t": "What Time Zone Am I In",
+   "l": "/tools/what-timezone-am-i-in"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder"
+ ]
+}

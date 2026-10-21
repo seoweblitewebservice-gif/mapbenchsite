@@ -3,11 +3,14 @@ import { notFound } from "next/navigation";
 import { toolBySlug, TOOLS, CATEGORIES } from "@/lib/registry";
 import ToolClient from "@/components/ToolClient";
 import { getEnhancedFaqs } from "@/lib/toolFaqs";
+import { loadPageContent } from "@/lib/pageContent";
 
 interface Props { params: Promise<{ tool: string }> }
 
 export function generateStaticParams() {
-  return TOOLS.map((t) => ({ tool: t.slug }));
+  // "distance-matrix-calculator" is served by its own dedicated route
+  // (src/app/tools/distance-matrix-calculator/page.tsx) — pilot restructure.
+  return TOOLS.filter((t) => t.slug !== "distance-matrix-calculator").map((t) => ({ tool: t.slug }));
 }
 
 const TITLE_OVERRIDES: Record<string, string> = {
@@ -55,8 +58,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const tool = toolBySlug.get(slug);
   if (!tool) return {};
   const url = `/tools/${tool.slug}`;
-  const title = seoTitle(tool.slug, tool.name, tool.keywords);
-  const description = seoDescription(tool);
+  const pc = await loadPageContent(slug);
+  const title = pc?.title ?? seoTitle(tool.slug, tool.name, tool.keywords);
+  const description = pc?.description ?? seoDescription(tool);
   return {
     title,
     description,
@@ -75,7 +79,11 @@ export default async function ToolPage({ params }: Props) {
   const category = CATEGORIES.find((c) => c.id === tool.category);
   const absoluteUrl = `https://www.mapbench.site/tools/${tool.slug}`;
   const author = { "@type": "Person", "@id": "https://www.mapbench.site/author/aryan-khan#person", name: "Aryan Khan", url: "https://www.mapbench.site/author/aryan-khan", sameAs: ["https://www.linkedin.com/in/aryan-khan-b77438438/"] };
-  const faqs = getEnhancedFaqs(tool);
+  const pc = await loadPageContent(slug);
+  const baseFaqs = getEnhancedFaqs(tool);
+  const faqs: [string, string][] = pc?.faq?.length
+    ? [...baseFaqs, ...pc.faq.filter(([q]) => !baseFaqs.some(([bq]) => bq === q))]
+    : baseFaqs;
 
   const jsonLd = [
     {
@@ -132,5 +140,5 @@ export default async function ToolPage({ params }: Props) {
     },
   ];
 
-  return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /><ToolClient slug={tool.slug} /></>;
+  return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /><ToolClient slug={tool.slug} pageContent={pc} faqsOverride={faqs} /></>;
 }

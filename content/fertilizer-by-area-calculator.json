@@ -1,0 +1,191 @@
+{
+ "slug": "fertilizer-by-area-calculator",
+ "primary_keyword": "Fertilizer by Area Calculator",
+ "secondary_keywords": [
+  "fertilizer by area calculator online",
+  "free fertilizer by area calculator",
+  "fertilizer by area calculator calculator",
+  "fertilizer by area calculator tool",
+  "how to use fertilizer by area calculator"
+ ],
+ "title": "Fertilizer by Area Calculator: Grams per m²",
+ "description": "Total up fertilizer from a label rate in grams per square metre with the Fertilizer by Area Calculator — area × rate, in kg. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 500 m² garden at a label rate of 25 g/m² needs exactly 12.5 kg of product — one bag, not the two the guesswork usually buys.",
+ "quick_answer": "The Fertilizer by Area Calculator multiplies a treatment area by a product's label rate in grams per square metre and returns the total product needed, in kilograms and grams. Enter the area and the rate on the bag and it does the multiplication between a label and a purchase.",
+ "steps_intro": "The label gives a rate; the garden has an area. Multiply, then buy:",
+ "use_cases": [
+  {
+   "title": "Lawn feeding",
+   "body": [
+    {
+     "t": "Lawn products are labelled in g/m² because lawns are measured in m². Area from pacing or the "
+    },
+    {
+     "t": "Garden Bed Area Calculator",
+     "l": "/tools/garden-bed-area-calculator"
+    },
+    {
+     "t": ", rate from the bag, total from here."
+    }
+   ]
+  },
+  {
+   "title": "Allotments and beds",
+   "body": [
+    {
+     "t": "Several beds, one rate: total the areas first, then one calculation covers the plot — and one bag size suggests itself."
+    }
+   ]
+  },
+  {
+   "title": "Checking a gardener's quote",
+   "body": [
+    {
+     "t": "A quote's product quantity is an area × rate claim. Recompute it in seconds; discrepancies are usually the area, which can then be measured honestly."
+    }
+   ]
+  },
+  {
+   "title": "Leftover management",
+   "body": [
+    {
+     "t": "Half a bag and a known rate define the area it can treat. Run the division backwards before opening it on the wrong bed."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 500 m² garden",
+   "body": [
+    {
+     "t": "500 m² × 25 g/m² = 12,500 g = 12.5 kg. The tidy answer is why labels use this unit: the arithmetic is designed to be checkable in the shop aisle."
+    }
+   ]
+  },
+  {
+   "label": "Example · A square-foot lawn",
+   "body": [
+    {
+     "t": "1,000 sq ft ≈ 92.9 m²; at 20 g/m² that is ≈ 1.86 kg. Imperial lawns meet metric labels daily — the conversion is this tool's quiet second job."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Rate × area totals",
+  "intro": "Total product (kg) for common areas at common label rates — area × rate ÷ 1,000, tabulated.",
+  "columns": [
+   "Area",
+   "At 15 g/m²",
+   "At 25 g/m²",
+   "At 35 g/m²"
+  ],
+  "rows": [
+   [
+    "100 m²",
+    "1.5 kg",
+    "2.5 kg",
+    "3.5 kg"
+   ],
+   [
+    "250 m²",
+    "3.75 kg",
+    "6.25 kg",
+    "8.75 kg"
+   ],
+   [
+    "500 m²",
+    "7.5 kg",
+    "12.5 kg",
+    "17.5 kg"
+   ],
+   [
+    "1,000 m²",
+    "15 kg",
+    "25 kg",
+    "35 kg"
+   ],
+   [
+    "5,000 m² (0.5 ha)",
+    "75 kg",
+    "125 kg",
+    "175 kg"
+   ]
+  ],
+  "note": "Rates are the label's, not this page's recommendation — products differ, and the bag in your hand is the authority for its own rate."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Total product mass from an area and a per-area rate: area (m²) × rate (g/m²) = grams, presented in kilograms. One multiplication, done carefully."
+  ],
+  [
+   "Is the result exact?",
+   "The arithmetic is exact; the application never is. Spreaders vary, so the total is a purchase and planning figure — the label rate, not this page, governs how much the ground should get."
+  ],
+  [
+   "Do I need an account?",
+   "No. Enter area and rate, read the total."
+  ],
+  [
+   "My rate is in pounds per 1,000 sq ft. Can I use it?",
+   "Convert first: 1 lb per 1,000 sq ft ≈ 4.88 g/m². US lawn labels use the imperial rate; this calculator's unit is the metric label's. The conversion factor is the bridge."
+  ],
+  [
+   "What if my area is in square feet?",
+   "Divide sq ft by 10.7639 for m², or note the worked conversion in the examples — a 1,000 sq ft lawn is about 92.9 m²."
+  ],
+  [
+   "Several beds with different rates?",
+   "Compute each bed separately and add the totals. One blended rate across different products is how beds get the wrong feed."
+  ],
+  [
+   "Why grams per square metre on labels?",
+   "Because it makes the purchase arithmetic trivial at garden scale and scales cleanly to hectares (1 g/m² = 10 kg/ha) for the same product's farm life."
+  ],
+  [
+   "My lawn is an odd shape.",
+   "Split it into rectangles and circles you can measure, total the areas, then run one calculation. Odd shapes are just several honest shapes added together."
+  ],
+  [
+   "Half-rate over twice the area?",
+   "That is a different treatment, not a shortcut for the same one — the label rate is the label rate. This calculator totals quantities; it does not dilute prescriptions."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Nutrient-target planning (pounds per acre from a bag analysis) is the "
+  },
+  {
+   "t": "Fertilizer Amount Calculator",
+   "l": "/tools/fertilizer-amount-calculator"
+  },
+  {
+   "t": "; bed areas come from the "
+  },
+  {
+   "t": "Garden Bed Area Calculator",
+   "l": "/tools/garden-bed-area-calculator"
+  },
+  {
+   "t": "; and field-scale areas from the "
+  },
+  {
+   "t": "Acreage Map Calculator",
+   "l": "/tools/acreage-map-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "center-of-polygon",
+  "circle-area-from-radius",
+  "circle-circumference-from-radius",
+  "cities-within-drawn-area-finder",
+  "crop-row-length-calculator",
+  "customer-radius-area-calculator"
+ ]
+}

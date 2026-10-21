@@ -1,0 +1,173 @@
+{
+ "slug": "offline-coordinate-card",
+ "primary_keyword": "Offline Coordinate Card",
+ "secondary_keywords": [
+  "offline coordinates",
+  "field coordinate card",
+  "print coordinates"
+ ],
+ "title": "Offline Coordinate Card: Field-Ready Summary",
+ "description": "Copy a clean coordinate and address summary for field notes with the Offline Coordinate Card — no account, no sync, works offline. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a surveyor's day ends with a pocket of these cards — point, coordinates, address — that survive dead batteries and absent signal, because paper and plain text do not need a network.",
+ "quick_answer": "The Offline Coordinate Card copies a clean summary of a point — coordinates and address fields — formatted for field notes, with no account or cloud sync. Locate the point, copy the card, and file it with your notes: the card is text, and text works everywhere, including offline.",
+ "steps_intro": "Field notes should be boring, legible and permanent. Make the card:",
+ "use_cases": [
+  {
+   "title": "Survey and site visits",
+   "body": [
+    {
+     "t": "Each visited point becomes a card in the day book — coordinate, address, no app required at the write-up stage."
+    }
+   ]
+  },
+  {
+   "title": "Emergency and access info",
+   "body": [
+    {
+     "t": "A card in the glovebox and one at home: the property's coordinates for services that navigate by numbers, formatted by the "
+    },
+    {
+     "t": "Find My Location",
+     "l": "/tools/find-my-location"
+    },
+    {
+     "t": " once and kept forever."
+    }
+   ]
+  },
+  {
+   "title": "Research fieldwork",
+   "body": [
+    {
+     "t": "Samples, sightings and interviews pinned to cards keep a field notebook honest — the card's plainness is its archival strength."
+    }
+   ]
+  },
+  {
+   "title": "Sharing without platforms",
+   "body": [
+    {
+     "t": "Text pastes into any message, email or document. No link to rot, no login for the recipient."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The glovebox card",
+   "body": [
+    {
+     "t": "A rural property's card — coordinates plus address — rides in the car. When the phone dies on a dark lane, the paper version still directs the recovery truck."
+    }
+   ]
+  },
+  {
+   "label": "Example · Notebook discipline",
+   "body": [
+    {
+     "t": "Cards paste into the field log in order, one per site. Future-you, writing up in winter, thanks present-you for the boring consistency."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the card carries",
+  "intro": "Fields and their field logic.",
+  "columns": [
+   "Field",
+   "Why it is there"
+  ],
+  "rows": [
+   [
+    "Coordinates",
+    "The machine-grade fact — WGS84, unambiguous"
+   ],
+   [
+    "Address fields",
+    "The human-grade fact — readable aloud over a radio"
+   ],
+   [
+    "Point context",
+    "The record's place names"
+   ],
+   [
+    "Plain text only",
+    "Survives every device, decade and dead battery"
+   ]
+  ],
+  "note": "No sync means no account, no server copy, and nothing to leak. What you do with the copied text is your filing system's business."
+ },
+ "faq": [
+  [
+   "Does it sync to the cloud?",
+   "No — deliberately. The card is copied text; your notes app, notebook or glovebox is the storage, under your control entirely."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — build cards for any point you locate on the map; your own location is only used if you ask for it."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "The address fields come from open geocoding data; other sources may record the same point's address differently."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "What format is the card?",
+   "Clean text, laid out for notes — copy and paste anywhere. Print it and it is a paper card, the original offline technology."
+  ],
+  [
+   "Multiple points?",
+   "One card per point, pasted in sequence — a field log emerges from the repetition."
+  ],
+  [
+   "Can I add my own notes to it?",
+   "Once copied, the text is yours — annotate freely. The card is a starting format, not a locked form."
+  ],
+  [
+   "Does it work with no signal?",
+   "The copied card, yes, forever. Making a new card needs the page loaded — open it before the dead zone and it serves the day."
+  ],
+  [
+   "Datum and precision?",
+   "WGS84 coordinates at the precision the located point carries — the same standard as the rest of the site."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Get the point: "
+  },
+  {
+   "t": "Find My Location",
+   "l": "/tools/find-my-location"
+  },
+  {
+   "t": "; read it back: "
+  },
+  {
+   "t": "Coordinates to Address",
+   "l": "/tools/coordinates-to-address"
+  },
+  {
+   "t": "; the water test: "
+  },
+  {
+   "t": "Ocean or Land Checker",
+   "l": "/tools/ocean-or-land-checker"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder"
+ ]
+}

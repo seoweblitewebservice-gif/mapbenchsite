@@ -1,0 +1,28 @@
+{
+ "slug": "elevation-profile",
+ "primary_keyword": "Elevation Profile",
+ "secondary_keywords": [
+  "route elevation chart",
+  "hike elevation profile",
+  "cycling elevation gain"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "air-pressure-by-elevation",
+  "antenna-height-distance-calculator",
+  "antipode-finder",
+  "average-elevation-gain-per-km",
+  "boiling-point-by-elevation-calculator",
+  "central-angle-from-distance-calculator"
+ ]
+}

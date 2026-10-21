@@ -1,0 +1,190 @@
+{
+ "slug": "nearest-hospital-finder",
+ "primary_keyword": "Nearest Hospital Finder",
+ "secondary_keywords": [
+  "nearest hospital",
+  "hospital near me",
+  "closest hospital finder",
+  "emergency hospital map"
+ ],
+ "title": "Nearest Hospital Finder: Closest Hospitals",
+ "description": "Find the nearest hospitals to a place or your location with the Nearest Hospital Finder — mapped from open data, ranked by distance. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, in unfamiliar country the finder answers in seconds which town holds the nearest hospital — the kind of fact worth knowing before it is ever needed.",
+ "quick_answer": "The Nearest Hospital Finder maps the hospitals OpenStreetMap records around a place or your location, ranked by distance. Search or use your location, press find, and see the closest hospitals. In an emergency, call your local emergency number first — this finder is for planning and peace of mind.",
+ "steps_intro": "Learn your nearest hospitals on a calm day, not a bad one:",
+ "use_cases": [
+  {
+   "title": "Moving and settling in",
+   "body": [
+    {
+     "t": "Where the hospital is belongs on the new-town checklist next to schools and stations — run the finder from the candidate address, and from the "
+    },
+    {
+     "t": "Schools Near Me Map",
+     "l": "/tools/schools-near-me-map"
+    },
+    {
+     "t": " for the full picture."
+    }
+   ]
+  },
+  {
+   "title": "Travel preparation",
+   "body": [
+    {
+     "t": "Remote trips deserve a hospital answer in the plan. Note the nearest two towns with hospitals before the route goes quiet."
+    }
+   ]
+  },
+  {
+   "title": "Elder care and family logistics",
+   "body": [
+    {
+     "t": "Distance to a hospital shapes real decisions about where ageing parents live. This makes the distance a number instead of an anxiety."
+    }
+   ]
+  },
+  {
+   "title": "Event and venue planning",
+   "body": [
+    {
+     "t": "Organisers record the nearest hospital in the safety plan. The ranked list is that line of the document, sourced."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Ranked, with distances",
+   "body": [
+    {
+     "t": "The nearest entry is the answer; the second and third are the strategy — a closed road or a full department sends you down the list, so the list exists before you need it."
+    }
+   ]
+  },
+  {
+   "label": "Example · The emergency line, again",
+   "body": [
+    {
+     "t": "If someone is seriously ill or injured now, call the emergency number (911 in the US, 999 in the UK, 112 across Europe) before opening any map. Ambulances navigate professionally; this finder informs people."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the finder shows",
+  "intro": "And the limits that matter for this of all topics.",
+  "columns": [
+   "Question",
+   "Answer"
+  ],
+  "rows": [
+   [
+    "Hospitals shown",
+    "Those OpenStreetMap records near your point, nearest first"
+   ],
+   [
+    "Distances",
+    "Straight-line; road routes will be longer"
+   ],
+   [
+    "A&E / ER status",
+    "Where the data records it — not guaranteed"
+   ],
+   [
+    "Live waiting times",
+    "Not shown — hospitals' own channels own those"
+   ],
+   [
+    "In an emergency",
+    "Call the emergency number first, always"
+   ],
+   [
+    "Your location",
+    "Used for the search if you allow it; not stored"
+   ]
+  ],
+  "note": "Open map data covers hospitals well in populated areas; small clinics and new facilities may be unrecorded. Verify critical plans with the health service's own finder."
+ },
+ "faq": [
+  [
+   "Should I use this in an emergency?",
+   "Call your local emergency number first — 911, 999 or 112. Dispatchers send help and guide you. This finder is for preparation and orientation, and says so at the top of the page."
+  ],
+  [
+   "Why might a hospital be missing?",
+   "It may be unrecorded in OpenStreetMap, newly built, or recorded as a clinic rather than a hospital. Coverage is strong in towns and cities; remote areas are thinner — the pattern of all open data."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — search any place name instead."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Hospital names change with trusts and systems; official directories are the freshest name source."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "Does it show emergency departments?",
+   "Where the map data records emergency facilities, the entries reflect it — but the data is not a live directory of A&E status. The hospital's own listing decides."
+  ],
+  [
+   "Straight-line distance misleads across water or mountains.",
+   "True of every ranking on earth — the list order is the starting point; your route app refines the drive. Knowing the candidates is the step this page owns."
+  ],
+  [
+   "Clinics and urgent care?",
+   "Facilities recorded as clinics may appear depending on the record; the hospital category is the finder's design."
+  ],
+  [
+   "Outside the US and Europe?",
+   "The finder works wherever OpenStreetMap has hospital records — which is most of the populated world, at varying depth."
+  ],
+  [
+   "Children's hospitals?",
+   "Where the record distinguishes them, entries reflect it; paediatric emergencies still start with the emergency number, whose dispatchers route correctly."
+  ],
+  [
+   "Urgent care centres?",
+   "Recorded clinics may appear with their own labelling. For anything time-critical, the hospital with emergency services is the destination — confirm its status on official listings."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "UK postcodes: "
+  },
+  {
+   "t": "Nearest Hospital to a UK Postcode",
+   "l": "/tools/nearest-hospital-uk-postcode"
+  },
+  {
+   "t": "; your point: "
+  },
+  {
+   "t": "Find My Location",
+   "l": "/tools/find-my-location"
+  },
+  {
+   "t": "; other essentials: "
+  },
+  {
+   "t": "Public Restrooms Near Me",
+   "l": "/tools/public-restrooms-near-me"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location"
+ ]
+}

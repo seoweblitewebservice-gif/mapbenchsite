@@ -1,0 +1,195 @@
+{
+ "slug": "grazing-stock-density-calculator",
+ "primary_keyword": "Grazing Stock Density Calculator",
+ "secondary_keywords": [
+  "grazing stock density calculator online",
+  "free grazing stock density calculator",
+  "grazing stock density calculator calculator",
+  "grazing stock density calculator tool",
+  "how to calculate grazing stock density calculator"
+ ],
+ "title": "Grazing Stock Density Calculator",
+ "description": "Work out stocking density with the Grazing Stock Density Calculator — acres per head and head per acre from herd and field size. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 50 cow-calf pairs on 80 acres is a density of 1.6 acres per pair — or 0.625 pairs per acre, the same fact facing the other way.",
+ "quick_answer": "The Grazing Stock Density Calculator divides a grazing area by the animals on it and reports the density both ways: acres per head and head per acre. Enter the pasture size and the herd, flock or mob count and read the density your forage, fencing and rotation decisions start from.",
+ "steps_intro": "Density is the first number of grazing management — before forage, before rotation, before rain:",
+ "use_cases": [
+  {
+   "title": "Paddock rotation planning",
+   "body": [
+    {
+     "t": "Rotations move a known herd through paddocks of known sizes. Density per paddock — this calculation, repeated — is the plan's skeleton."
+    }
+   ]
+  },
+  {
+   "title": "Lease and agistment terms",
+   "body": [
+    {
+     "t": "Grazing lets are written in head per acre or acres per head. Converting the term both ways with one tool ends the negotiation's unit fog."
+    }
+   ]
+  },
+  {
+   "title": "Comparing two farms' pressure",
+   "body": [
+    {
+     "t": "Headline herd sizes mislead across different acreages. Density is the comparable — the number that says which pasture is actually worked harder."
+    }
+   ]
+  },
+  {
+   "title": "Fencing and water planning",
+   "body": [
+    {
+     "t": "Troughs and subdivisions follow density. Size the pasture here, then its boundary in the "
+    },
+    {
+     "t": "Fence Length Calculator",
+     "l": "/tools/fence-length-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Cow-calf pairs",
+   "body": [
+    {
+     "t": "50 pairs on 80 acres: 80 ÷ 50 = 1.6 acres per pair; inversely 0.625 pairs per acre. Neither figure says whether the land can carry it — that is a forage question this density frames but does not answer."
+    }
+   ]
+  },
+  {
+   "label": "Example · A sheep flock",
+   "body": [
+    {
+     "t": "300 ewes on 60 acres: 0.2 acres per ewe, 5 ewes per acre. Sheep numbers look startling next to cattle until the animal size enters — density is per head, and heads differ, which the FAQ covers."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Densities both ways",
+  "intro": "Acres-per-head and head-per-acre are reciprocals — read whichever your lease, adviser or habit uses. Computed pairs:",
+  "columns": [
+   "Acres per head",
+   "Head per acre",
+   "Reading"
+  ],
+  "rows": [
+   [
+    "0.25",
+    "4.00",
+    "Intensive small paddocks"
+   ],
+   [
+    "0.5",
+    "2.00",
+    "Rich pasture, small stock"
+   ],
+   [
+    "1.0",
+    "1.00",
+    "One head per acre"
+   ],
+   [
+    "1.6",
+    "0.625",
+    "The 50-on-80 example"
+   ],
+   [
+    "2.0",
+    "0.50",
+    "Moderate country"
+   ],
+   [
+    "5.0",
+    "0.20",
+    "Dry or hill country"
+   ],
+   [
+    "10.0",
+    "0.10",
+    "Extensive rangeland"
+   ]
+  ],
+  "note": "'Reading' is a scale convention, not a recommendation: sustainable density depends on forage growth, rainfall and animal class — local advice governs."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Stocking density from area and animal count: acres per head (area ÷ head) and head per acre (head ÷ area). Pure division, reported both ways because the industry quotes both."
+  ],
+  [
+   "Do I need an account?",
+   "No. Two inputs, instant density."
+  ],
+  [
+   "Can I use the result for professional work?",
+   "As the density figure in a grazing plan, yes. Whether that density is sustainable is a forage and climate judgement — this calculator deliberately does not make it."
+  ],
+  [
+   "What is an animal unit?",
+   "A standardising idea (often a 1,000 lb cow with calf) that lets mixed herds be summed. This tool counts heads as entered; convert classes to animal units first if your plan works in them."
+  ],
+  [
+   "Does animal size matter?",
+   "To the land, enormously; to this division, not at all. 5 sheep per acre and 5 cattle per acre are the same density here and utterly different grazing pressure — the table's readings keep that in view."
+  ],
+  [
+   "Hectares instead of acres?",
+   "Divide hectares by head the same way: 40 ha with 50 head is 0.8 ha per head. The Hectares to Acres Converter translates existing figures."
+  ],
+  [
+   "Stocking rate or stocking density — same thing?",
+   "Density is animals per area at a moment; rate usually folds in time (per season or year). This tool computes the instantaneous density your rotation plan schedules."
+  ],
+  [
+   "How does density change through a rotation?",
+   "It spikes in the paddock being grazed and rests at zero in the others. The whole-farm figure is the average; paddock figures are the management."
+  ],
+  [
+   "What about shared grazing with mixed stock?",
+   "Convert classes to a common animal unit before counting heads, or compute each class's density against the same acres and read them side by side."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Pasture areas come from the "
+  },
+  {
+   "t": "Acreage Map Calculator",
+   "l": "/tools/acreage-map-calculator"
+  },
+  {
+   "t": ", boundaries from the "
+  },
+  {
+   "t": "Fence Length Calculator",
+   "l": "/tools/fence-length-calculator"
+  },
+  {
+   "t": ", and unit translations from the "
+  },
+  {
+   "t": "Hectares to Acres Converter",
+   "l": "/tools/hectares-to-acres-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "center-of-polygon",
+  "circle-area-from-radius",
+  "circle-circumference-from-radius",
+  "cities-within-drawn-area-finder",
+  "crop-row-length-calculator",
+  "customer-radius-area-calculator"
+ ]
+}

@@ -1,0 +1,202 @@
+{
+ "slug": "fuel-stop-planner",
+ "primary_keyword": "Fuel Stop Planner",
+ "secondary_keywords": [
+  "fuel stop",
+  "gas stop planner",
+  "fuel along route"
+ ],
+ "title": "Fuel Stop Planner: Plan Stops and Cost Together",
+ "description": "Plan fuel stops from route distance and fuel economy with the Fuel Stop Planner — where the tank runs low, and what the trip burns. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a car with a 448-mile tank range on a 1,500-mile trip needs the tank filled about every 448 miles — stops near miles 448, 896 and 1,344, plus a safety margin.",
+ "quick_answer": "The Fuel Stop Planner combines a trip's route distance with your car's fuel economy to show how much fuel the journey needs and where the tank will run low. Enter the distance, consumption and price and read stops and cost together — before the low-fuel light becomes the planner.",
+ "steps_intro": "Range first, stops second, cost third — the order a calm trip is planned in:",
+ "use_cases": [
+  {
+   "title": "Long-haul trip planning",
+   "body": [
+    {
+     "t": "Know where the tank empties and the stops choose their towns. Distance from the "
+    },
+    {
+     "t": "Driving Distance Calculator",
+     "l": "/tools/driving-distance-calculator"
+    },
+    {
+     "t": ", economy from your last fill."
+    }
+   ]
+  },
+  {
+   "title": "Remote and sparse country",
+   "body": [
+    {
+     "t": "In the desert West or the outback, the gap between stations is the risk. A range plan with margin is the difference between a story and a rescue."
+    }
+   ]
+  },
+  {
+   "title": "Towing and loaded trips",
+   "body": [
+    {
+     "t": "Loads cut economy and therefore range. Replan the stops with the towing consumption, not the solo figure, before the trailer is hitched."
+    }
+   ]
+  },
+  {
+   "title": "Rental-car returns",
+   "body": [
+    {
+     "t": "Full-to-full policies make the last stop a decision. Plan backwards from the return: the final fill belongs near the airport, at the quantity this planner sizes."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 1,500-mile trip",
+   "body": [
+    {
+     "t": "14 gal tank × 32 mpg = 448-mile range. Stops fall near miles 448, 896 and 1,344 — three fills en route. Planning at 80% of range (358 miles) moves them earlier and buys margin for detours."
+    }
+   ]
+  },
+  {
+   "label": "Example · The metric run",
+   "body": [
+    {
+     "t": "A 55 L tank at 7.5 L/100 km gives a 733 km range. A 1,900 km tour therefore wants fills around km 733 and 1,466 — two stops, known before departure."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Tank range planner",
+  "intro": "Range = tank size × economy, and the stop count for a long trip at a prudent 80% of range. Your car's figures replace the examples in the planner.",
+  "columns": [
+   "Tank",
+   "Economy",
+   "Full range",
+   "Stops on 1,500 mi (at 80%)"
+  ],
+  "rows": [
+   [
+    "12 gal",
+    "28 mpg",
+    "336 mi",
+    "5"
+   ],
+   [
+    "14 gal",
+    "32 mpg",
+    "448 mi",
+    "4"
+   ],
+   [
+    "16 gal",
+    "30 mpg",
+    "480 mi",
+    "3"
+   ],
+   [
+    "18 gal",
+    "38 mpg",
+    "684 mi",
+    "2"
+   ],
+   [
+    "55 L",
+    "7.5 L/100 km",
+    "733 km",
+    "3 (on 1,900 km)"
+   ],
+   [
+    "70 L",
+    "9.8 L/100 km",
+    "714 km",
+    "3 (on 1,900 km)"
+   ]
+  ],
+  "note": "Planning at 80% of range is the common prudence — the last fifth of a tank is where stations are missing exactly when needed."
+ },
+ "faq": [
+  [
+   "Does it show station locations?",
+   "No — it plans the stop spacing from range, not a station directory. The towns near your planned mile marks are where you look for the station."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Traffic does not change tank range materially; consumption figures should be your real-world ones."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Roads wind. Stops are planned against road miles — the tank empties on those."
+  ],
+  [
+   "Can route results change over time?",
+   "Your economy changes with load and season; replan with the figure for this trip's conditions."
+  ],
+  [
+   "Should I really plan at 80% of range?",
+   "It is the difference between choosing a stop and needing one. In dense country it matters less; in sparse country it is the plan."
+  ],
+  [
+   "What if the car is electric?",
+   "The same structure with kWh and chargers — the EV Range Radius tools elsewhere frame the electric version of the question."
+  ],
+  [
+   "Does it include cost?",
+   "Yes — with a price entered, the fills total into the trip's fuel cost, matching the Fuel Cost Calculator's arithmetic."
+  ],
+  [
+   "The trip has a known cheap station — plan around it?",
+   "Yes: place a stop there deliberately and size the legs either side to your range plan. Cheap fuel is a routing input, not luck."
+  ],
+  [
+   "What if my range estimate is wrong mid-trip?",
+   "The gauge is the final authority. The planner's margins (80% of range) exist precisely so a wrong estimate becomes an earlier stop, not a stranded car."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Quantities come from "
+  },
+  {
+   "t": "Fuel Needed for Trip",
+   "l": "/tools/fuel-needed-for-trip"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Gallons Needed for Distance",
+   "l": "/tools/gallons-needed-for-distance"
+  },
+  {
+   "t": "; costs from the "
+  },
+  {
+   "t": "Fuel Cost Calculator",
+   "l": "/tools/fuel-cost-calculator"
+  },
+  {
+   "t": "; and the distance from the "
+  },
+  {
+   "t": "Driving Distance Calculator",
+   "l": "/tools/driving-distance-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-calories-distance",
+  "cycling-route-planner",
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator"
+ ]
+}

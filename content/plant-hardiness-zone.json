@@ -1,0 +1,29 @@
+{
+ "slug": "plant-hardiness-zone",
+ "primary_keyword": "Plant Hardiness Zone",
+ "secondary_keywords": [
+  "hardiness zone",
+  "USDA zone",
+  "planting zone",
+  "garden zone"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "boiling-point-by-elevation-calculator",
+  "central-angle-from-distance-calculator",
+  "cicada-emergence-map",
+  "contour-line-count-calculator",
+  "earth-arc-length-calculator",
+  "earth-bulge-calculator"
+ ]
+}

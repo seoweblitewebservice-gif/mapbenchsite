@@ -1,0 +1,28 @@
+{
+ "slug": "trail-distance-estimator",
+ "primary_keyword": "Trail Distance Estimator",
+ "secondary_keywords": [
+  "trail distance",
+  "hike distance",
+  "path length map"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "airport-distance-calculator",
+  "airport-midpoint-by-coordinates",
+  "airport-route-finder",
+  "bearing-calculator",
+  "closest-facility-finder",
+  "compass-bearing-visualizer"
+ ]
+}

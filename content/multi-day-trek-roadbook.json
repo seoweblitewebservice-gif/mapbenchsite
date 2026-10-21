@@ -1,0 +1,200 @@
+{
+ "slug": "multi-day-trek-roadbook",
+ "primary_keyword": "Multi-Day Trek Roadbook",
+ "secondary_keywords": [
+  "multi day trek planner",
+  "walking roadbook",
+  "trek itinerary printable",
+  "hike day by day plan"
+ ],
+ "title": "Multi-Day Trek Roadbook: Day-by-Day Plan",
+ "description": "Route a trek and split it into days with the Multi-Day Trek Roadbook — leg table, day-by-day split and the place each day ends. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 46-mile trail split over four days becomes four legs of roughly 11–12 miles with a named place near each day's end — an itinerary you can carry on paper.",
+ "quick_answer": "The Multi-Day Trek Roadbook routes your trek from start through waypoints to the finish, divides total distance across your chosen number of days, and lays out a leg table and a day-by-day split with the place each day ends near — a document built to be printed and carried.",
+ "steps_intro": "A trek is a route plus a calendar. Build both together:",
+ "use_cases": [
+  {
+   "title": "Trail holidays",
+   "body": [
+    {
+     "t": "The week's walking becomes days with endings — each ending a village, a hut or a campsite to aim at. Times per leg follow the "
+    },
+    {
+     "t": "Hiking Route Planner with Elevation",
+     "l": "/tools/hiking-route-planner-with-elevation"
+    },
+    {
+     "t": " logic."
+    }
+   ]
+  },
+  {
+   "title": "Group commitments",
+   "body": [
+    {
+     "t": "Everyone carries the same roadbook: the day's distance, the day's end. Disputes about 'not far now' end at the trailhead."
+    }
+   ]
+  },
+  {
+   "title": "Support and pickup planning",
+   "body": [
+    {
+     "t": "The day-end places are the support driver's itinerary too — where to meet, where to hand over luggage, where the spare socks are."
+    }
+   ]
+  },
+  {
+   "title": "Paper backup",
+   "body": [
+    {
+     "t": "Phones die in mountains; roadbooks do not. The printable document is the trek's analogue insurance."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Four days, one trail",
+   "body": [
+    {
+     "t": "46 miles over 4 days ≈ 11.5 miles a day. The roadbook names the country near each day's end — the difference between an itinerary and a hope."
+    }
+   ]
+  },
+  {
+   "label": "Example · Uneven reality",
+   "body": [
+    {
+     "t": "Real treks are not metronomes: a short day before the big climb is planning, not weakness. Set the days, read the split, and adjust waypoints until the days match the walkers."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Splitting a trek into days",
+  "intro": "Average miles per day for common trek lengths — the roadbook divides your real route, these are the planning intuitions it formalises.",
+  "columns": [
+   "Trek distance",
+   "Over 3 days",
+   "Over 4 days",
+   "Over 5 days",
+   "Over 7 days"
+  ],
+  "rows": [
+   [
+    "30 mi",
+    "10.0/day",
+    "7.5/day",
+    "6.0/day",
+    "4.3/day"
+   ],
+   [
+    "46 mi",
+    "15.3/day",
+    "11.5/day",
+    "9.2/day",
+    "6.6/day"
+   ],
+   [
+    "60 mi",
+    "20.0/day",
+    "15.0/day",
+    "12.0/day",
+    "8.6/day"
+   ],
+   [
+    "96 mi",
+    "32.0/day",
+    "24.0/day",
+    "19.2/day",
+    "13.7/day"
+   ],
+   [
+    "120 mi",
+    "40.0/day",
+    "30.0/day",
+    "24.0/day",
+    "17.1/day"
+   ]
+  ],
+  "note": "Averages flatter: climb concentrates in some days and not others. Read the roadbook's day rows against the elevation, not against the average."
+ },
+ "faq": [
+  [
+   "How are the days divided?",
+   "The routed distance is split across your chosen day count, and the roadbook reports where each day's share ends — the place near that point becomes the day's named ending."
+  ],
+  [
+   "Can I save it offline?",
+   "Yes — the roadbook is built to print or save, and paper works where signal does not. That is rather the point of it."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Trails have weather and daylight instead of traffic; the planner divides distance, and your judgement divides the days further if conditions demand."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Trails wind longest of all. The roadbook divides the routed distance — the ground your boots will actually cover."
+  ],
+  [
+   "Can route results change over time?",
+   "Paths are re-routed and huts close; rebuild the roadbook for each season's trek rather than trusting last year's printout."
+  ],
+  [
+   "Can days be uneven?",
+   "The split starts even and the waypoints are yours to move — a short day is inserted by placing a waypoint where the short day should end."
+  ],
+  [
+   "Does it estimate walking time too?",
+   "The day split is distance-based; per-leg times with climb belong to the Hiking Route Planner with Elevation, whose Naismith estimates pair with this document."
+  ],
+  [
+   "Can I print just one day?",
+   "Print the book and carry the day you need — paper tears politely along the plan's own seams."
+  ],
+  [
+   "What if a day ends nowhere near a village?",
+   "The roadbook names the nearest place; where the trail is empty, that is the warning to carry camping gear, printed in advance."
+  ],
+  [
+   "Days of different lengths for strong and weak legs?",
+   "Move a waypoint: the split re-forms around it. The document serves the walkers, not the other way round."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Times and climb come from the "
+  },
+  {
+   "t": "Hiking Route Planner with Elevation",
+   "l": "/tools/hiking-route-planner-with-elevation"
+  },
+  {
+   "t": "; the driving cousin is the "
+  },
+  {
+   "t": "Route Roadbook Generator",
+   "l": "/tools/route-roadbook-generator"
+  },
+  {
+   "t": "; and stages on wheels belong to the "
+  },
+  {
+   "t": "Road Trip Overnight Stop Planner",
+   "l": "/tools/road-trip-overnight-stop-planner"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner"
+ ]
+}

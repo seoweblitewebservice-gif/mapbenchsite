@@ -1,0 +1,209 @@
+{
+ "slug": "road-trip-rest-stop-calculator",
+ "primary_keyword": "Road Trip Rest Stop Calculator",
+ "secondary_keywords": [
+  "road trip rest stop calculator online",
+  "free road trip rest stop calculator",
+  "road trip rest stop calculator calculator",
+  "road trip rest stop calculator tool",
+  "how to calculate road trip rest stop calculator"
+ ],
+ "title": "Road Trip Rest Stop Calculator",
+ "description": "Estimate how many rest stops a drive needs from its distance and your stop interval with the Road Trip Rest Stop Calculator. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, an 840-mile drive with a stop every 140 miles divides into six legs and five proper stops — the skeleton of a day that does not end in a daze.",
+ "quick_answer": "The Road Trip Rest Stop Calculator divides a drive's distance by the interval at which you like to stop and tells you how many rest stops the journey contains. Enter trip distance and your interval — in miles or hours turned into miles — and plan around real breaks.",
+ "steps_intro": "Breaks are a plan, not a failure of endurance. Count them before the drive:",
+ "use_cases": [
+  {
+   "title": "Fatigue management",
+   "body": [
+    {
+     "t": "Stops scheduled are stops taken. The count turns 'stop when tired' into 'stop at these towns' — the "
+    },
+    {
+     "t": "Road Trip Overnight Stop Planner",
+     "l": "/tools/road-trip-overnight-stop-planner"
+    },
+    {
+     "t": " does the same for nights."
+    }
+   ]
+  },
+  {
+   "title": "Family logistics",
+   "body": [
+    {
+     "t": "Children, dogs and grandparents all carry their own intervals. The smallest interval in the car is the plan's interval."
+    }
+   ]
+  },
+  {
+   "title": "Fuel-stop alignment",
+   "body": [
+    {
+     "t": "Rest legs sized near your tank's comfortable range merge two stops into one. The "
+    },
+    {
+     "t": "Fuel Stop Planner",
+     "l": "/tools/fuel-stop-planner"
+    },
+    {
+     "t": " sizes the fuel side."
+    }
+   ]
+  },
+  {
+   "title": "ETA honesty",
+   "body": [
+    {
+     "t": "Five stops at 20 minutes is 1 h 40 min the arrival estimate must include. Count them here; add them in the "
+    },
+    {
+     "t": "Road Trip Arrival Time Calculator",
+     "l": "/tools/road-trip-arrival-time-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 840-mile day",
+   "body": [
+    {
+     "t": "840 ÷ 140 = 6 legs → 5 stops between start and finish. At 20 minutes each, the day contains 1 h 40 min of stopped time — planned, priced, and taken."
+    }
+   ]
+  },
+  {
+   "label": "Example · The two-hour rule",
+   "body": [
+    {
+     "t": "Many drivers stop every two hours. At a 65 mph cruise that interval is 130 miles; a 650-mile drive then holds 4 stops. Interval in hours or miles — the calculator speaks the distance dialect of the same rule."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Stops by distance and interval",
+  "intro": "Intermediate stops = (distance ÷ interval) − 1, rounded sensibly — the stops between departure and arrival.",
+  "columns": [
+   "Trip",
+   "Every 100 mi",
+   "Every 140 mi",
+   "Every 200 mi"
+  ],
+  "rows": [
+   [
+    "300 mi",
+    "2 stops",
+    "2 stops",
+    "1 stop"
+   ],
+   [
+    "500 mi",
+    "4 stops",
+    "3 stops",
+    "2 stops"
+   ],
+   [
+    "650 mi",
+    "6 stops",
+    "4 stops",
+    "3 stops"
+   ],
+   [
+    "840 mi",
+    "8 stops",
+    "5 stops",
+    "4 stops"
+   ],
+   [
+    "1,200 mi",
+    "11 stops",
+    "8 stops",
+    "5 stops"
+   ]
+  ],
+  "note": "Counts treat the destination as the final stop. Your interval is a preference, not a law — weather, passengers and bladder diplomacy amend it."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The number of intermediate rest stops in a drive: the distance divided into legs by your stop interval, minus the destination itself."
+  ],
+  [
+   "Do I need an account?",
+   "No. Distance and interval in, stops out."
+  ],
+  [
+   "Can I rely on this for professional work?",
+   "As a planning count, yes. Professional driving-hours law (tachograph rules, hours-of-service) is stricter and separate — this is the comfort arithmetic beneath it."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Congestion argues for more stops, not fewer; the count is the calm-weather skeleton."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Stops happen on roads. Count the road distance or the legs arrive later than planned."
+  ],
+  [
+   "How long should each stop be?",
+   "Long enough to walk, drink and reset — most drivers find 15–25 minutes restores rather than merely pauses. The count here is stops; their length is your craft."
+  ],
+  [
+   "My interval is in hours.",
+   "Multiply hours by your cruising speed to get the interval in miles (2 h × 65 mph = 130 mi), then use this page — or keep the plan in hours and count legs by the clock."
+  ],
+  [
+   "Stops for the dog count double?",
+   "They count once each and take longer — lengthen the stop budget, not the count. The calculator counts; the dog negotiates duration."
+  ],
+  [
+   "Scenic stops versus rest stops?",
+   "Both stop the wheels. Count them together for time, separately for sanity — the road does not care why you stopped."
+  ],
+  [
+   "Night driving — same intervals?",
+   "Most drivers shorten intervals after dark. The plan that survives the night is the shorter-legged one."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Nights are planned by the "
+  },
+  {
+   "t": "Road Trip Overnight Stop Planner",
+   "l": "/tools/road-trip-overnight-stop-planner"
+  },
+  {
+   "t": "; fuel stops by the "
+  },
+  {
+   "t": "Fuel Stop Planner",
+   "l": "/tools/fuel-stop-planner"
+  },
+  {
+   "t": "; and arrivals by the "
+  },
+  {
+   "t": "Road Trip Arrival Time Calculator",
+   "l": "/tools/road-trip-arrival-time-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-route-planner",
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator",
+  "drive-time-map"
+ ]
+}

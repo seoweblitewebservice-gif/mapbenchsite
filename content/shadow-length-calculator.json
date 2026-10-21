@@ -1,0 +1,28 @@
+{
+ "slug": "shadow-length-calculator",
+ "primary_keyword": "Shadow Length Calculator",
+ "secondary_keywords": [
+  "shadow length",
+  "sun shadow calculator",
+  "object shadow"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "astronomical-twilight-calculator",
+  "civil-twilight-calculator",
+  "day-length-calculator",
+  "day-night-map",
+  "moon-age-calculator",
+  "moon-illumination-calculator"
+ ]
+}

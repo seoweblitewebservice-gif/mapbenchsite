@@ -1,0 +1,30 @@
+{
+ "slug": "geojson-minified-size-calculator",
+ "primary_keyword": "GeoJSON Minified Size Calculator",
+ "secondary_keywords": [
+  "geojson minified size calculator online",
+  "free geojson minified size calculator",
+  "geojson minified size calculator calculator",
+  "geojson minified size calculator tool",
+  "how to calculate geojson minified size calculator"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "csv-coordinate-bounding-box",
+  "csv-coordinate-centroid-calculator",
+  "csv-coordinate-deduplicator",
+  "csv-coordinate-validator",
+  "csv-latlng-validator",
+  "csv-row-counter"
+ ]
+}

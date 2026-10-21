@@ -1,0 +1,193 @@
+{
+ "slug": "coordinate-format-detector",
+ "primary_keyword": "Coordinate Format Detector",
+ "secondary_keywords": [
+  "gps format detector",
+  "lat long format checker",
+  "coordinate type detector",
+  "detect coordinate format",
+  "decimal degrees detector"
+ ],
+ "title": "Coordinate Format Detector: Name That Format",
+ "description": "Identify a decimal-degree coordinate pair's format before using it with the Coordinate Format Detector — quick, local, unambiguous. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, '40.7580, -73.9855' is instantly recognisable as signed decimal degrees — while '40.7580, 73.9855' with no minus is a hemisphere question the detector helps you ask before a map misplaces you by an ocean.",
+ "quick_answer": "The Coordinate Format Detector identifies a simple decimal-degree coordinate pair before you use it in mapping tools. Paste the pair and read the verdict — format, hemisphere reading and the sanity checks that catch swapped axes and missing signs before they become wrong maps.",
+ "steps_intro": "Thirty seconds of detection saves the afternoon of debugging:",
+ "use_cases": [
+  {
+   "title": "Inherited data triage",
+   "body": [
+    {
+     "t": "A spreadsheet of mystery pairs gets its format named column-wise before any import — then the "
+    },
+    {
+     "t": "Coordinate Parser",
+     "l": "/tools/coordinate-parser"
+    },
+    {
+     "t": " cleans each string."
+    }
+   ]
+  },
+  {
+   "title": "Copy-paste from documents",
+   "body": [
+    {
+     "t": "PDFs and emails mangle coordinates creatively. The detector's verdict tells you what survived the journey."
+    }
+   ]
+  },
+  {
+   "title": "API debugging",
+   "body": [
+    {
+     "t": "The map shows the point in the sea off Africa (0,0's neighbourhood) or mirrored — format and sign problems, detectable here in one paste."
+    }
+   ]
+  },
+  {
+   "title": "Teaching coordinate literacy",
+   "body": [
+    {
+     "t": "Students paste examples and defend the verdict — the fastest route to actually seeing formats instead of fearing them."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The swapped pair",
+   "body": [
+    {
+     "t": "'-73.9855, 40.7580' puts longitude first. A latitude of −73.9855 is legal (southern ocean!) while 40.7580 as longitude is legal too — only the context convicts the swap, and the detector's range-and-context read is built for exactly this."
+    }
+   ]
+  },
+  {
+   "label": "Example · The missing minus",
+   "body": [
+    {
+     "t": "US coordinates pasted without the western minus land in Central Asia. The detector flags hemisphere plausibility for the region you expect — the cheapest bug in geospatial work, caught."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Signatures the detector reads",
+  "intro": "The common dresses and their tells.",
+  "columns": [
+   "Signature",
+   "Likely format",
+   "Tell"
+  ],
+  "rows": [
+   [
+    "Two signed decimals",
+    "Decimal degrees",
+    "Ranges: lat ≤ 90, lon ≤ 180"
+   ],
+   [
+    "° ′ ″ symbols",
+    "DMS",
+    "Convert via DMS to Decimal"
+   ],
+   [
+    "° with decimal minutes",
+    "DDM",
+    "One decimal group after degrees"
+   ],
+   [
+    "Letters N/S/E/W",
+    "Hemisphere form",
+    "Letters replace signs"
+   ],
+   [
+    "Six-plus digit integers",
+    "Possibly UTM or grid",
+    "A different family — grid helpers take over"
+   ]
+  ],
+  "note": "Detection covers the decimal-degree family this page promises. Grid systems (UTM, MGRS, BNG) announce themselves by scale and letters and have their own converters here."
+ },
+ "faq": [
+  [
+   "Which format is detected?",
+   "Decimal-degree pairs and their close dresses — the page names the format and reads the hemispheres, ranges and likely axis order."
+  ],
+  [
+   "What about DMS, UTM and MGRS?",
+   "They announce themselves by symbols and scale (see the signature table). DMS converts on its own page; grid systems have dedicated converters — the detector points you at the right one."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "Detection is datum-blind by nature — formats exist independent of datums. The site's working datum is WGS84."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "The detector reads precision as a clue about the source (survey exports carry more places than typed notes) — a hint, never a verdict."
+  ],
+  [
+   "Can I copy the result into GIS software?",
+   "The verdict tells you how to import; the Coordinate Converter then produces the exact dress your GIS wants."
+  ],
+  [
+   "It says ambiguous.",
+   "Some strings honestly are (two small positive numbers fit several readings). Ambiguity reported beats a confident wrong map — resolve with context: which continent should this be on?"
+  ],
+  [
+   "Lat/lon order worldwide?",
+   "Geographic convention says lat, lon; much software says lon, lat (x, y). The detector's context read is precisely the guard between them."
+  ],
+  [
+   "Degrees with a comma decimal separator?",
+   "European documents write 40,7580 — a parser trap the detector's format read can flag before the comma splits your pair into three numbers."
+  ],
+  [
+   "Batch detection?",
+   "One string at a time here — the triage instrument. Columns of them belong to the parser plus your spreadsheet, spot-checked here."
+  ],
+  [
+   "Why not just try it on a map?",
+   "Because a wrong-format point often still lands somewhere plausible-looking. Detection before mapping is the order that catches the plausible wrongness."
+  ],
+  [
+   "Mobile GPS strings?",
+   "Phones emit signed decimals from their APIs and dressed formats in their compass apps — both are home territory for the detector and converter pair."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Convert it: the "
+  },
+  {
+   "t": "Coordinate Converter",
+   "l": "/tools/coordinate-converter"
+  },
+  {
+   "t": "; clean it: the "
+  },
+  {
+   "t": "Coordinate Parser",
+   "l": "/tools/coordinate-parser"
+  },
+  {
+   "t": "; validate ranges: the "
+  },
+  {
+   "t": "Latitude Longitude Validator",
+   "l": "/tools/latitude-longitude-validator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "arcminutes-to-decimal-degrees-converter",
+  "arcseconds-to-ground-distance-calculator",
+  "bng-converter",
+  "bounding-box-calculator",
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator"
+ ]
+}

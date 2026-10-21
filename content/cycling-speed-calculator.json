@@ -1,0 +1,201 @@
+{
+ "slug": "cycling-speed-calculator",
+ "primary_keyword": "Cycling Speed Calculator",
+ "secondary_keywords": [
+  "bike speed calculator",
+  "average cycling speed",
+  "bicycle speed calculator",
+  "cycling kmh calculator",
+  "bike average speed"
+ ],
+ "title": "Cycling Speed Calculator: Average Speed and Pace",
+ "description": "Convert ride distance and time into average cycling speed with the Cycling Speed Calculator — km/h, mph and pace per mile or kilometre. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 42 km in 1 hour 54 minutes is an average of 22.1 km/h — a pace of about 2 minutes 43 seconds per kilometre.",
+ "quick_answer": "The Cycling Speed Calculator converts a ride's distance and elapsed time into average speed and pace. Enter the distance you rode and the time it took, and read km/h and mph with the per-kilometre and per-mile splits — the numbers logs, group rides and 'was I faster?' are made of.",
+ "steps_intro": "Distance divided by time — with the units cyclists argue in, all shown:",
+ "use_cases": [
+  {
+   "title": "Training log entries",
+   "body": [
+    {
+     "t": "A log needs average speed and pace in consistent units, ride after ride. This calculator is the consistent ruler — pair it with "
+    },
+    {
+     "t": "Cycling Calories by Distance",
+     "l": "/tools/cycling-calories-distance"
+    },
+    {
+     "t": " for the energy column."
+    }
+   ]
+  },
+  {
+   "title": "Group ride planning",
+   "body": [
+    {
+     "t": "A group rides at its advertised average or it splits. Compute last week's actual average and advertise honestly."
+    }
+   ]
+  },
+  {
+   "title": "Computer versus phone checks",
+   "body": [
+    {
+     "t": "Two devices, two averages (one paused at lights, one did not). An independent division from the raw distance and time referees."
+    }
+   ]
+  },
+  {
+   "title": "Goal setting",
+   "body": [
+    {
+     "t": "“100 km under 4 hours” is a speed: 25 km/h average. Translating goals into averages is how they become training."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The club run",
+   "body": [
+    {
+     "t": "42 km in 1:54 → 22.1 km/h average (13.7 mph), pace 2:43/km. A respectable club-run figure, and now a checkable one."
+    }
+   ]
+  },
+  {
+   "label": "Example · The imperial version",
+   "body": [
+    {
+     "t": "25 miles in 1:40 → exactly 15.0 mph, pace 4:00/mile. Round numbers happen; the calculator is how you know they really did."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Pace to speed",
+  "intro": "The same effort in the two dialects cyclists use — speed = 60 ÷ pace, computed.",
+  "columns": [
+   "Pace (per km)",
+   "Speed (km/h)",
+   "Pace (per mile)",
+   "Speed (mph)"
+  ],
+  "rows": [
+   [
+    "2:00",
+    "30.0",
+    "3:13",
+    "18.6"
+   ],
+   [
+    "2:30",
+    "24.0",
+    "4:01",
+    "14.9"
+   ],
+   [
+    "2:43",
+    "22.1",
+    "4:22",
+    "13.7"
+   ],
+   [
+    "3:00",
+    "20.0",
+    "4:50",
+    "12.4"
+   ],
+   [
+    "3:30",
+    "17.1",
+    "5:38",
+    "10.7"
+   ],
+   [
+    "4:00",
+    "15.0",
+    "6:26",
+    "9.3"
+   ]
+  ],
+  "note": "Averages hide stops: a moving average and an elapsed average are different truths, and this tool computes from the time you enter — enter elapsed for honesty, moving for flattery."
+ },
+ "faq": [
+  [
+   "Does this replace a specialist tool or professional measurement?",
+   "No — it is the arithmetic of average speed, exactly. Power, heart rate and GPS traces are richer instruments; this is the check they must agree with."
+  ],
+  [
+   "Is my input uploaded?",
+   "No. Distance and time are computed in your browser and stay there."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Your time already includes the traffic you met; the calculator just divides."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Roads wind. Enter the ridden distance — the one your wheels measured — or the average flatters you."
+  ],
+  [
+   "Can route results change over time?",
+   "Yours will, with fitness. The division does not change; the rider does."
+  ],
+  [
+   "Average speed or pace — which should I track?",
+   "Both describe the same ride; pace suits even-effort rides, speed suits comparing across distances. The table on this page converts between them."
+  ],
+  [
+   "Does it handle stops?",
+   "Only as you tell it: elapsed time includes them, moving time excludes them. Choose deliberately — the difference is the honest story of the ride."
+  ],
+  [
+   "My computer says a different average.",
+   "It may exclude auto-pauses, or include them, differently from the time you typed. Enter the same time definition the computer used before declaring a winner."
+  ],
+  [
+   "Pace per 5 km for time trials?",
+   "Multiply your per-km pace by 5 — or compute speed and divide the event distance by it. The calculator's splits scale linearly."
+  ],
+  [
+   "Downhill rides flatter the average?",
+   "Enormously, and the same arithmetic exposes it: compare like routes with like before celebrating a record."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The forward problem — time from distance and speed — is the "
+  },
+  {
+   "t": "Cycling Time Calculator",
+   "l": "/tools/cycling-time-calculator"
+  },
+  {
+   "t": "; routes come from the "
+  },
+  {
+   "t": "Cycling Route Planner",
+   "l": "/tools/cycling-route-planner"
+  },
+  {
+   "t": "; and the energy version is "
+  },
+  {
+   "t": "Cycling Calories by Distance",
+   "l": "/tools/cycling-calories-distance"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "delivery-cost-per-km-calculator"
+ ]
+}

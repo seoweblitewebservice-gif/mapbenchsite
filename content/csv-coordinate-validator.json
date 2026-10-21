@@ -1,0 +1,30 @@
+{
+ "slug": "csv-coordinate-validator",
+ "primary_keyword": "CSV Coordinate Validator",
+ "secondary_keywords": [
+  "csv coordinate validator online",
+  "free csv coordinate validator",
+  "csv coordinate validator tool",
+  "csv coordinate validator checker",
+  "csv coordinate validator validator"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "boundary-kml-downloader",
+  "cluster-map-from-points",
+  "country-boundary-downloader",
+  "csv-column-counter",
+  "csv-coordinate-bounding-box",
+  "csv-coordinate-centroid-calculator"
+ ]
+}

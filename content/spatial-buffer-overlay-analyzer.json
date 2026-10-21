@@ -1,0 +1,30 @@
+{
+ "slug": "spatial-buffer-overlay-analyzer",
+ "primary_keyword": "Spatial Buffer & Overlay Analyzer",
+ "secondary_keywords": [
+  "buffer zone map",
+  "overlay analysis map",
+  "gis buffer tool",
+  "what is within radius count",
+  "Spatial Buffer &amp"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "acreage-map-calculator",
+  "acres-to-hectares-converter",
+  "acres-to-square-feet-converter",
+  "buffer-zone-map",
+  "center-of-polygon",
+  "circle-area-from-radius"
+ ]
+}

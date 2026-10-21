@@ -1,0 +1,186 @@
+{
+ "slug": "maidenhead-grid-locator",
+ "primary_keyword": "Maidenhead Grid Locator",
+ "secondary_keywords": [
+  "maidenhead",
+  "grid square",
+  "ham radio locator"
+ ],
+ "title": "Maidenhead Grid Locator: Ham Radio Squares",
+ "description": "Convert between coordinates and Maidenhead locator squares with the Maidenhead Grid Locator — the amateur radio grid, field to subsquare. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, Times Square sits in locator FN30as, and London in IO91wm — six characters that ham operators exchange instead of addresses, precise to about 5 × 4 km.",
+ "quick_answer": "The Maidenhead Grid Locator converts between latitude/longitude and Maidenhead locator squares — the hierarchical grid amateur radio uses to exchange locations. Enter a point and read its locator, from the 2-letter field down to the 6-character subsquare, or reverse a locator to the square it names.",
+ "steps_intro": "The grid the world's radio amateurs navigate by:",
+ "use_cases": [
+  {
+   "title": "Ham radio operation",
+   "body": [
+    {
+     "t": "Contests and awards (VUCC, grid chasing) run on locators. Know yours before the pileup asks — and the station you worked gets logged by square, not by town."
+    }
+   ]
+  },
+  {
+   "title": "VHF and microwave planning",
+   "body": [
+    {
+     "t": "On the high bands, contacts are grid-to-grid achievements. The locator frames what 'far' means when the band opens."
+    }
+   ]
+  },
+  {
+   "title": "Decoding callsign lookups",
+   "body": [
+    {
+     "t": "QRZ pages and logs speak locators. The converter translates them into the geography the rest of this site uses."
+    }
+   ]
+  },
+  {
+   "title": "Grid expeditions",
+   "body": [
+    {
+     "t": "Rare squares are destinations ('gridpeditions'). Find which square a summit or island activates before the drive."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Reading FN30as",
+   "body": [
+    {
+     "t": "FN is the field (20° × 10°), 30 the square (2° × 1°), 'as' the subsquare (~5.0 × 4.2 km at that latitude). Each pair refines by ten or twenty-four — the hierarchy in one string."
+    }
+   ]
+  },
+  {
+   "label": "Example · London's IO91wm",
+   "body": [
+    {
+     "t": "The world's most exchanged locator family starts IO91 — the square containing London. Operators who have never visited can place it instantly, which is the system's entire magic."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The locator hierarchy",
+  "intro": "Pairs of characters, each zooming further.",
+  "columns": [
+   "Pair",
+   "Name",
+   "Cell size"
+  ],
+  "rows": [
+   [
+    "1st (letters A–R)",
+    "Field",
+    "20° lon × 10° lat"
+   ],
+   [
+    "2nd (digits)",
+    "Square",
+    "2° × 1°"
+   ],
+   [
+    "3rd (letters a–x)",
+    "Subsquare",
+    "5′ × 2.5′ (~6 × 4 km at mid-latitudes)"
+   ],
+   [
+    "4th (digits)",
+    "Extended square",
+    "30″ × 15″ — contest-grade precision"
+   ]
+  ],
+  "note": "Adopted in Maidenhead, England in 1980 by VHF managers — hence the name. The system covers the globe in 32,400 fields' tidy hierarchy."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The Maidenhead locator for a coordinate pair (to subsquare or extended precision), and the square's location for a locator — the standard IARU system."
+  ],
+  [
+   "Do I need an account?",
+   "No — coordinates or locator in, answer out; no callsign required either."
+  ],
+  [
+   "Can I use the result for professional work?",
+   "For amateur radio, awards and planning it is the standard itself. Professional surveying uses other frames, as everywhere."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 — the frame GPS produces and web maps consume."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — resolution is not accuracy; the precision tools on this site price each decimal place in metres."
+  ],
+  [
+   "Can I copy the result into GIS software?",
+   "Locators paste as labels; the square's corner coordinates convert onward into GIS via the bounding tools."
+  ],
+  [
+   "Case matters?",
+   "Convention: field and subsquare letters as given (fields uppercase, subsquares usually lowercase) — parsers are case-tolerant, humans are traditionalists."
+  ],
+  [
+   "Ocean squares?",
+   "Every point on Earth has a locator, sea included — maritime mobiles exchange them like everyone else."
+  ],
+  [
+   "My square straddles a border.",
+   "Most do — the grid ignores politics completely, which operators consider a feature."
+  ],
+  [
+   "Extended precision beyond 6 characters?",
+   "The 8-character extended square (~700 × 500 m) serves microwave work; the hierarchy continues by the same alternating pattern."
+  ],
+  [
+   "Antipodes?",
+   "Every square has one; DXers plan around the antipode's greyline like sailors around weather."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Other grids: the "
+  },
+  {
+   "t": "Geohash Encoder",
+   "l": "/tools/geohash-encoder"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "MGRS Converter",
+   "l": "/tools/mgrs-converter"
+  },
+  {
+   "t": "; centres: the "
+  },
+  {
+   "t": "Geographic Center Finder",
+   "l": "/tools/geographic-center-finder"
+  },
+  {
+   "t": "; your square: "
+  },
+  {
+   "t": "Find My Location",
+   "l": "/tools/find-my-location"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "arcminutes-to-decimal-degrees-converter",
+  "arcseconds-to-ground-distance-calculator",
+  "bng-converter",
+  "bounding-box-calculator",
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator"
+ ]
+}

@@ -1,0 +1,188 @@
+{
+ "slug": "coordinate-bounding-box-generator",
+ "primary_keyword": "Coordinate Bounding Box Generator",
+ "secondary_keywords": [
+  "coordinate bounding box generator online",
+  "free coordinate bounding box generator",
+  "coordinate bounding box generator calculator",
+  "coordinate bounding box generator tool",
+  "how to calculate coordinate bounding box generator"
+ ],
+ "title": "Coordinate Bounding Box Generator",
+ "description": "Generate a normalised bounding box from corner coordinates with the Coordinate Bounding Box Generator — min/max extent for queries and GIS. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, corners pasted in the wrong order — northeast first, southwest second — come out normalised to the same min/max box, because extents should not care about your paste order.",
+ "quick_answer": "The Coordinate Bounding Box Generator builds a normalised bounding box from corner coordinates — the minimum and maximum latitude and longitude, in the order your query or GIS expects. Enter the corners and read the extent: four clean numbers, order-fixed, ready for APIs, tile requests and dataset clips.",
+ "steps_intro": "Corners in any order; a proper extent out:",
+ "use_cases": [
+  {
+   "title": "Normalising extents from documents",
+   "body": [
+    {
+     "t": "Reports and READMEs state areas loosely ('from X to Y'). The generator turns prose corners into a queryable box — compare the "
+    },
+    {
+     "t": "Bounding Box Calculator",
+     "l": "/tools/bounding-box-calculator"
+    },
+    {
+     "t": " for the centre-plus-radius shape."
+    }
+   ]
+  },
+  {
+   "title": "Tile and feature requests",
+   "body": [
+    {
+     "t": "Servers want (min, min, max, max). Generate it once, correctly, instead of hand-sorting four numbers under time pressure."
+    }
+   ]
+  },
+  {
+   "title": "Dataset clipping",
+   "body": [
+    {
+     "t": "Define the study area by its corners and clip — the generator's output is the clip's exact argument."
+    }
+   ]
+  },
+  {
+   "title": "Sanity-checking someone else's box",
+   "body": [
+    {
+     "t": "A box whose min exceeds its max is a bug wearing a costume. Regenerate and compare; the difference is the diagnosis."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Order independence",
+   "body": [
+    {
+     "t": "Paste the northeast corner then the southwest, or the reverse — the normalised output is identical. Extents are sets, not sequences, and the generator treats them so."
+    }
+   ]
+  },
+  {
+   "label": "Example · The swapped-axis bug",
+   "body": [
+    {
+     "t": "Latitude pasted as longitude produces a box in the wrong ocean (or an invalid one). The generator's range checks catch the impossible cases before your API returns silence."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Output conventions",
+  "intro": "The same four numbers wear different orders in different systems — the generator's clarity about which is which.",
+  "columns": [
+   "Convention",
+   "Order",
+   "Used by"
+  ],
+  "rows": [
+   [
+    "min/max pairs",
+    "min_lon, min_lat, max_lon, max_lat",
+    "Most GIS and GeoJSON (bbox)"
+   ],
+   [
+    "South-first",
+    "min_lat, min_lon, max_lat, max_lon",
+    "Overpass and several APIs"
+   ],
+   [
+    "Named fields",
+    "west, south, east, north",
+    "Human-facing forms"
+   ],
+   [
+    "Centre form",
+    "centre + span",
+    "Some map SDKs — convert, don't guess"
+   ]
+  ],
+  "note": "Axis order is the number-one bbox bug in geospatial work. The generator labels its output so the argument ends here."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The normalised minimum/maximum extent from given corner coordinates — sorted, validated and formatted for direct use."
+  ],
+  [
+   "Do I need an account?",
+   "No — corners in, extent out."
+  ],
+  [
+   "Can I use the result for professional work?",
+   "Yes — extent normalisation is mechanical and exact. Professional care goes into choosing the corners, which remains your geography."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 lat/lon throughout."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "Extents inherit the corners' accuracy. Extra decimals are formatting, not knowledge."
+  ],
+  [
+   "Corners crossing the date line?",
+   "A box spanning ±180° needs two extents in most systems; the generator's handling is stated in its output rather than silently wrapping."
+  ],
+  [
+   "One point only?",
+   "A single point makes a degenerate box (zero area) — for centre-plus-radius, the Bounding Box Calculator is the right shape."
+  ],
+  [
+   "Can I copy the result into GIS software?",
+   "Yes — the extent pastes into clip and filter dialogs; mind the target's axis order, labelled in the table on this page."
+  ],
+  [
+   "Boxes from a set of points?",
+   "Compute min/max over the set — the Coordinate Span Calculator covers the spread of a point set directly."
+  ],
+  [
+   "Why not just eyeball min/max?",
+   "Because humans transpose digits and axes under load. The generator exists so the boring step is never the broken step."
+  ],
+  [
+   "Negative longitudes order?",
+   "West is more negative: min_lon is the westernmost (smallest) value. The normalisation handles hemispheres mechanically."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Centre form: the "
+  },
+  {
+   "t": "Bounding Box Calculator",
+   "l": "/tools/bounding-box-calculator"
+  },
+  {
+   "t": "; spread: the "
+  },
+  {
+   "t": "Coordinate Span Calculator",
+   "l": "/tools/coordinate-span-calculator"
+  },
+  {
+   "t": "; centres: the "
+  },
+  {
+   "t": "Coordinate Mean Calculator",
+   "l": "/tools/coordinate-mean-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator",
+  "coordinate-offset-calculator",
+  "coordinate-parser"
+ ]
+}

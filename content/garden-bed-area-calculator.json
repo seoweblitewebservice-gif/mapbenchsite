@@ -1,0 +1,203 @@
+{
+ "slug": "garden-bed-area-calculator",
+ "primary_keyword": "Garden Bed Area Calculator",
+ "secondary_keywords": [
+  "garden bed area calculator online",
+  "free garden bed area calculator",
+  "garden bed area calculator calculator",
+  "garden bed area calculator tool",
+  "how to use garden bed area calculator"
+ ],
+ "title": "Garden Bed Area Calculator: Beds, Soil and Mulch",
+ "description": "Size a garden bed with the Garden Bed Area Calculator — area in sq ft and m², plus soil and mulch volumes by depth. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a classic 4 × 8 ft raised bed is 32 sq ft — and needs exactly 8 cubic feet of mulch for a 3-inch layer.",
+ "quick_answer": "The Garden Bed Area Calculator works out a bed's area from its length and width and turns depth into the soil or mulch volume. Enter the bed's dimensions and read square feet and square metres, plus cubic feet and yards for that depth — the shopping list, computed.",
+ "steps_intro": "Beds are rectangles with appetites. Measure the rectangle; feed it by volume:",
+ "use_cases": [
+  {
+   "title": "Raised-bed soil orders",
+   "body": [
+    {
+     "t": "Bagged compost is sold by volume; beds consume by volume. This calculator is the translation that stops the third trip to the garden centre."
+    }
+   ]
+  },
+  {
+   "title": "Mulch depth planning",
+   "body": [
+    {
+     "t": "A 3-inch mulch layer is a volume, not a vibe. Compute it per bed, sum the beds, order once — leftover maths lives in the "
+    },
+    {
+     "t": "Fertilizer by Area Calculator",
+     "l": "/tools/fertilizer-by-area-calculator"
+    },
+    {
+     "t": " for feeds."
+    }
+   ]
+  },
+  {
+   "title": "Seed and plant spacing",
+   "body": [
+    {
+     "t": "Plants per bed follow area and spacing. The area figure is the input every spacing chart silently assumes you know."
+    }
+   ]
+  },
+  {
+   "title": "Comparing bed layouts",
+   "body": [
+    {
+     "t": "Two 4 × 8s versus one 8 × 8: same area, different reach and path needs. The area is equal; the gardening is not — the numbers frame the choice."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The standard raised bed",
+   "body": [
+    {
+     "t": "4 × 8 ft = 32 sq ft (2.97 m²). Filled 12 inches deep: 32 cu ft ≈ 1.19 cu yd of soil mix. Mulched 3 inches: 8 cu ft. Two bags or ten is a question this page answers before the shop."
+    }
+   ]
+  },
+  {
+   "label": "Example · A long border",
+   "body": [
+    {
+     "t": "30 × 3 ft = 90 sq ft; a 2-inch mulch layer is 15 cu ft. Borders eat more mulch than their modest width suggests — length is the multiplier."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Common bed sizes",
+  "intro": "Areas and a 3-inch mulch volume for the sizes gardeners actually build — area × depth, computed.",
+  "columns": [
+   "Bed size",
+   "Area (sq ft)",
+   "Area (m²)",
+   "Mulch at 3 in (cu ft)"
+  ],
+  "rows": [
+   [
+    "3 × 6 ft",
+    "18",
+    "1.67",
+    "4.5"
+   ],
+   [
+    "4 × 4 ft",
+    "16",
+    "1.49",
+    "4.0"
+   ],
+   [
+    "4 × 8 ft",
+    "32",
+    "2.97",
+    "8.0"
+   ],
+   [
+    "4 × 10 ft",
+    "40",
+    "3.72",
+    "10.0"
+   ],
+   [
+    "4 × 12 ft",
+    "48",
+    "4.46",
+    "12.0"
+   ],
+   [
+    "5 × 10 ft",
+    "50",
+    "4.65",
+    "12.5"
+   ],
+   [
+    "8 × 8 ft",
+    "64",
+    "5.95",
+    "16.0"
+   ]
+  ],
+  "note": "Volumes assume a level fill at exactly the stated depth; soil settles — a small overage is the experienced order."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "A rectangular bed's area (length × width) in sq ft and m², and the volume of soil or mulch for a depth you choose, in cubic feet and cubic yards."
+  ],
+  [
+   "Is it free to use?",
+   "Yes. Dimensions in, shopping list out."
+  ],
+  [
+   "How accurate is the result?",
+   "Exact for a true rectangle at a level depth. Real beds bow and soil settles; the figure is the honest baseline, and a modest overage is normal practice."
+  ],
+  [
+   "How deep should a raised bed be?",
+   "A gardening decision, not a geometric one — 8–12 inches suits most vegetables' roots. This calculator prices whichever depth you choose; it does not choose for you."
+  ],
+  [
+   "Round or L-shaped beds?",
+   "Circles: πr² via the Circle Area tool. L-shapes: split into two rectangles, add them — the method the Center of Polygon example uses for its L."
+  ],
+  [
+   "How many bags is a cubic yard?",
+   "Bag sizes vary (1, 1.5 and 2 cu ft are common), so divide your cubic feet by the bag in your hand: 32 cu ft is sixteen 2 cu ft bags, or about 1.19 cu yd loose."
+  ],
+  [
+   "Can I work in metres?",
+   "Yes — the area is reported in m² alongside, and a metre-based bed computes identically: 1.2 × 2.4 m = 2.88 m²."
+  ],
+  [
+   "How much compost for a top-up layer?",
+   "Same volume maths at a shallower depth: a 1-inch top-up over a 4 × 8 ft bed is 32 × (1/12) ≈ 2.67 cu ft."
+  ],
+  [
+   "Paths between beds — included?",
+   "No: this area is the bed itself. Measure paths separately if they are being mulched or gravelled too."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Feeds for the same beds are totalled by the "
+  },
+  {
+   "t": "Fertilizer by Area Calculator",
+   "l": "/tools/fertilizer-by-area-calculator"
+  },
+  {
+   "t": "; field-scale areas live in the "
+  },
+  {
+   "t": "Acreage Map Calculator",
+   "l": "/tools/acreage-map-calculator"
+  },
+  {
+   "t": "; and round beds belong to "
+  },
+  {
+   "t": "Circle Area From Radius",
+   "l": "/tools/circle-area-from-radius"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "center-of-polygon",
+  "circle-area-from-radius",
+  "circle-circumference-from-radius",
+  "cities-within-drawn-area-finder",
+  "crop-row-length-calculator",
+  "customer-radius-area-calculator"
+ ]
+}

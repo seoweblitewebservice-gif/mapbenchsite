@@ -1,0 +1,203 @@
+{
+ "slug": "irrigation-coverage-calculator",
+ "primary_keyword": "Irrigation Coverage Calculator",
+ "secondary_keywords": [
+  "irrigation coverage calculator online",
+  "free irrigation coverage calculator",
+  "irrigation coverage calculator calculator",
+  "irrigation coverage calculator tool",
+  "how to calculate irrigation coverage calculator"
+ ],
+ "title": "Irrigation Coverage Calculator: Sprinkler Area",
+ "description": "Work out the area one sprinkler or pivot covers with the Irrigation Coverage Calculator — from throw radius to square feet and acres. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a sprinkler with a 40 ft throw covers approx. 5,027 sq ft — about 0.115 acres — before overlap with its neighbours is designed in.",
+ "quick_answer": "The Irrigation Coverage Calculator turns a sprinkler's throw radius into the area it waters: πr² in square feet, square metres and acres. Enter the radius your head actually achieves and read its coverage — the figure spacing decisions, zone counts and water budgets are all built from.",
+ "steps_intro": "One head, one circle. Systems are just circles arranged honestly:",
+ "use_cases": [
+  {
+   "title": "Sprinkler spacing design",
+   "body": [
+    {
+     "t": "Heads are spaced for head-to-head coverage — each sprinkler's throw reaching the next. This area per head is the unit the layout multiplies."
+    }
+   ]
+  },
+  {
+   "title": "Zone counting",
+   "body": [
+    {
+     "t": "A lawn's area divided by a head's honest coverage (with overlap allowed for) estimates the head count — then pressure and flow, via the "
+    },
+    {
+     "t": "Irrigation Flow Volume Calculator",
+     "l": "/tools/irrigation-flow-volume-calculator"
+    },
+    {
+     "t": ", decide the zones."
+    }
+   ]
+  },
+  {
+   "title": "Centre-pivot planning",
+   "body": [
+    {
+     "t": "A pivot is this calculator at farm scale: its radius is the machine's length, its coverage the field's watered circle — corners handled separately, as always."
+    }
+   ]
+  },
+  {
+   "title": "Water budgeting",
+   "body": [
+    {
+     "t": "Coverage × depth is volume. Knowing each zone's area is the only way a water bill forecast means anything."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The lawn rotor",
+   "body": [
+    {
+     "t": "Throw 40 ft: coverage = π × 40² ≈ 5,026.5 sq ft (0.115 ac). A 10,000 sq ft lawn needs at least two heads' worth of circle — three or four in practice, once corners and overlap have their say."
+    }
+   ]
+  },
+  {
+   "label": "Example · The metric head",
+   "body": [
+    {
+     "t": "Throw 15 m: coverage ≈ 706.9 m². Metric systems design in the same circles; only the units on the nozzle box change."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Throw radius to coverage",
+  "intro": "πR² for common sprinkler throws — the geometric coverage before overlap design, wind and pressure losses.",
+  "columns": [
+   "Throw radius",
+   "Coverage (sq ft)",
+   "Coverage (m²)",
+   "Coverage (acres)"
+  ],
+  "rows": [
+   [
+    "15 ft",
+    "706.9",
+    "65.7",
+    "0.016"
+   ],
+   [
+    "25 ft",
+    "1,963.5",
+    "182.4",
+    "0.045"
+   ],
+   [
+    "40 ft",
+    "5,026.5",
+    "467.0",
+    "0.115"
+   ],
+   [
+    "50 ft",
+    "7,854.0",
+    "729.7",
+    "0.180"
+   ],
+   [
+    "10 m",
+    "—",
+    "314.2",
+    "0.078"
+   ],
+   [
+    "15 m",
+    "—",
+    "706.9",
+    "0.175"
+   ],
+   [
+    "400 m (pivot)",
+    "—",
+    "502,654.8",
+    "124.2 ac / 50.3 ha"
+   ]
+  ],
+  "note": "Achieved throw depends on pressure and nozzle — the manufacturer's chart at your pressure is the radius to enter, not the box's best case."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The circular area a sprinkler covers from its throw radius: πr², reported in sq ft, m² and acres."
+  ],
+  [
+   "Do I need an account?",
+   "No. Radius in, coverage out."
+  ],
+  [
+   "Can I use the result for professional work?",
+   "For layout planning and estimates, yes. Final designs also model pressure variation, wind drift and overlap patterns — this is the geometric layer of that work."
+  ],
+  [
+   "Why do heads need to overlap?",
+   "A sprinkler's application falls off toward its edge, so single-coverage areas are under-watered at the rim. Head-to-head spacing (spacing ≈ radius) overlaps the weak edges into uniformity."
+  ],
+  [
+   "What radius do I enter — rated or achieved?",
+   "Achieved, at your working pressure. Rated throw is measured in still air at full pressure; your system's real number is the honest input."
+  ],
+  [
+   "Does it handle part-circle heads?",
+   "Multiply the full-circle result by the arc fraction (a 180° head covers half). The calculator gives the full circle; the fraction is your setting."
+  ],
+  [
+   "How does this relate to flow volume?",
+   "Coverage area × application depth = volume per session. The Irrigation Flow Volume Calculator approaches the same session from the flow-rate side."
+  ],
+  [
+   "My pressure is low — what happens?",
+   "Throw shrinks, so coverage shrinks with the square of the loss: 10% less radius is about 19% less area. Enter the achieved radius, not the catalogue one."
+  ],
+  [
+   "Square spacing versus triangular?",
+   "Triangular (offset) spacing covers ground more evenly at the same radius. The per-head area here is the input either way; the layout pattern decides uniformity."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Water per session is the "
+  },
+  {
+   "t": "Irrigation Flow Volume Calculator",
+   "l": "/tools/irrigation-flow-volume-calculator"
+  },
+  {
+   "t": "; the pure circle geometry is "
+  },
+  {
+   "t": "Circle Area From Radius",
+   "l": "/tools/circle-area-from-radius"
+  },
+  {
+   "t": "; and pivot fields are measured whole in the "
+  },
+  {
+   "t": "Acreage Map Calculator",
+   "l": "/tools/acreage-map-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "center-of-polygon",
+  "circle-area-from-radius",
+  "circle-circumference-from-radius",
+  "cities-within-drawn-area-finder",
+  "crop-row-length-calculator",
+  "customer-radius-area-calculator"
+ ]
+}

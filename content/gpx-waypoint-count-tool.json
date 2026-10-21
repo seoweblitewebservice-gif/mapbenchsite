@@ -1,0 +1,30 @@
+{
+ "slug": "gpx-waypoint-count-tool",
+ "primary_keyword": "GPX Waypoint Count Tool",
+ "secondary_keywords": [
+  "gpx waypoint count tool online",
+  "free gpx waypoint count tool",
+  "gpx waypoint count tool calculator",
+  "gpx waypoint count tool tool",
+  "how to calculate gpx waypoint count tool"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "csv-coordinate-bounding-box",
+  "csv-coordinate-centroid-calculator",
+  "csv-coordinate-deduplicator",
+  "csv-coordinate-validator",
+  "csv-latlng-validator",
+  "csv-row-counter"
+ ]
+}

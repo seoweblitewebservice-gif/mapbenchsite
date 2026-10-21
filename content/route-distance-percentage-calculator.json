@@ -1,0 +1,206 @@
+{
+ "slug": "route-distance-percentage-calculator",
+ "primary_keyword": "Route Distance Percentage Calculator",
+ "secondary_keywords": [
+  "route distance percentage calculator online",
+  "free route distance percentage calculator",
+  "route distance percentage calculator calculator",
+  "route distance percentage calculator tool",
+  "how to use route distance percentage calculator"
+ ],
+ "title": "Route Distance Percentage Calculator",
+ "description": "Turn distance covered into a progress percentage with the Route Distance Percentage Calculator — how far along, and how much remains. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 465 miles into a 1,240-mile route is 37.5% done with 775 miles remaining — the two numbers every 'are we nearly there?' is really asking for.",
+ "quick_answer": "The Route Distance Percentage Calculator divides the distance you have covered by the route's total distance and returns your progress as a percentage, with the distance remaining beside it. Enter both — from an odometer, a route plan or a trail log — and read how far along you are.",
+ "steps_intro": "Progress is a division. Two numbers tell the whole story of a journey's middle:",
+ "use_cases": [
+  {
+   "title": "Road-trip morale",
+   "body": [
+    {
+     "t": "Percentages answer passengers better than miles do. 37.5% sounds like what it is; 775 remaining sounds like a threat. The "
+    },
+    {
+     "t": "Driving Days Calculator",
+     "l": "/tools/driving-days-calculator"
+    },
+    {
+     "t": " converts the rest into days."
+    }
+   ]
+  },
+  {
+   "title": "Trail and ultra tracking",
+   "body": [
+    {
+     "t": "On long trails, percentage is the unit support crews and runners share. Aid stations are placed at percentages as much as at miles."
+    }
+   ]
+  },
+  {
+   "title": "Delivery-run reporting",
+   "body": [
+    {
+     "t": "A round reported by distance complete is dispatch's cleanest progress signal — legs from the "
+    },
+    {
+     "t": "Multi-Stop Route Planner",
+     "l": "/tools/multi-stop-route-planner"
+    },
+    {
+     "t": " sum to the denominator."
+    }
+   ]
+  },
+  {
+   "title": "Tour and trek logs",
+   "body": [
+    {
+     "t": "The logbook's daily percentage column shows the journey's shape: the day you passed halfway is a day worth marking."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The long drive",
+   "body": [
+    {
+     "t": "465 ÷ 1,240 = 37.5% done; 775 miles remain. Tomorrow's 400 miles will move the needle to 69.8% — progress you can feel, computed."
+    }
+   ]
+  },
+  {
+   "label": "Example · The trail day",
+   "body": [
+    {
+     "t": "A 96-mile trail, 24 miles walked: exactly 25%. The quarter mark at the end of day two is the kind of milestone that organises a group's dinner conversation."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Milestones on a 1,240-mile route",
+  "intro": "The percentages passengers actually ask about, on this page's example route — your route's numbers replace them in the calculator.",
+  "columns": [
+   "Covered",
+   "Progress",
+   "Remaining"
+  ],
+  "rows": [
+   [
+    "124 mi",
+    "10%",
+    "1,116 mi"
+   ],
+   [
+    "310 mi",
+    "25%",
+    "930 mi"
+   ],
+   [
+    "465 mi",
+    "37.5%",
+    "775 mi"
+   ],
+   [
+    "620 mi",
+    "50%",
+    "620 mi"
+   ],
+   [
+    "930 mi",
+    "75%",
+    "310 mi"
+   ],
+   [
+    "1,116 mi",
+    "90%",
+    "124 mi"
+   ]
+  ],
+  "note": "Distance percentage is not time percentage: the slow half of a route takes more than half the day. Both truths are useful; do not confuse them at the wheel."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Progress percentage: distance covered ÷ total route distance × 100, with the remaining distance reported alongside."
+  ],
+  [
+   "Is the result exact?",
+   "The division is exact; the meaning depends on honest inputs — odometer miles against the route's true total."
+  ],
+  [
+   "Do I need an account?",
+   "No. Two distances in, a percentage out."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Progress by distance is gloriously indifferent to traffic — which is its morale advantage over time-based estimates."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Use the route's road total as the denominator, or the percentage reaches 100 somewhere short of the destination."
+  ],
+  [
+   "Can I track by time instead?",
+   "Time percentage lies on uneven routes — the mountain half takes longer. Distance is the stable denominator; that is this tool's whole argument."
+  ],
+  [
+   "What if I have covered more than the total?",
+   "Then the route was longer than planned — update the total to the real one and the percentage becomes honest again. It happens to every honest traveller."
+  ],
+  [
+   "Halfway by distance but not by day?",
+   "Normal on uneven routes — the remaining half may hold the mountains. Percentage is a progress truth, not a time promise."
+  ],
+  [
+   "Can I use it for a swim or a channel row?",
+   "Distance is distance: covered over total, in any medium where you can measure both."
+  ],
+  [
+   "The kids ask every ten minutes.",
+   "Give them the percentage and the remaining miles together — one for hope, one for honesty. It works on adults too."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Totals come from the "
+  },
+  {
+   "t": "Driving Distance Calculator",
+   "l": "/tools/driving-distance-calculator"
+  },
+  {
+   "t": "; legs build in the "
+  },
+  {
+   "t": "Multi-Stop Route Planner",
+   "l": "/tools/multi-stop-route-planner"
+  },
+  {
+   "t": "; and the remaining days are the "
+  },
+  {
+   "t": "Driving Days Calculator",
+   "l": "/tools/driving-days-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator",
+  "drive-time-map"
+ ],
+ "related": [
+  "driving-distance-calculator",
+  "route-elevation-gain-calculator",
+  "multi-stop-route-planner",
+  "driving-days-calculator"
+ ]
+}

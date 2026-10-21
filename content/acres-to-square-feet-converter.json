@@ -1,0 +1,195 @@
+{
+ "slug": "acres-to-square-feet-converter",
+ "primary_keyword": "Acres to Square Feet Converter",
+ "secondary_keywords": [
+  "acres to square feet converter online",
+  "free acres to square feet converter",
+  "acres to square feet converter calculator",
+  "acres to square feet converter tool",
+  "how to use acres to square feet converter"
+ ],
+ "title": "Acres to Square Feet Converter: 43,560 per Acre",
+ "description": "Convert acres to square feet with the Acres to Square Feet Converter — exactly 43,560 sq ft per acre, with lot-size references. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a quarter-acre suburban lot is exactly 10,890 square feet — the figure a listing rounds to 'about 11,000'.",
+ "quick_answer": "The Acres to Square Feet Converter multiplies acres by 43,560 — the number of square feet in an acre — and shows the result. It is the conversion behind lot sizes, building coverage and land listings, where one parcel is described in acres and in square feet by different people.",
+ "steps_intro": "One defined number does all the work; the craft is knowing when each unit is the right one:",
+ "use_cases": [
+  {
+   "title": "Reading property listings",
+   "body": [
+    {
+     "t": "Listings mix units to flatter: 0.46 acres sounds small, 20,038 sq ft sounds grand. Convert and compare like with like before the viewing."
+    }
+   ]
+  },
+  {
+   "title": "Building and coverage rules",
+   "body": [
+    {
+     "t": "Zoning speaks in square feet and percentages of lot area. A parcel known in acres must be converted before a coverage calculation means anything."
+    }
+   ]
+  },
+  {
+   "title": "Landscaping and materials",
+   "body": [
+    {
+     "t": "Seed, sod and mulch are sold by the square foot or the thousand. The acreage of a lawn becomes a purchase quantity through this conversion — then the "
+    },
+    {
+     "t": "Garden Bed Area Calculator",
+     "l": "/tools/garden-bed-area-calculator"
+    },
+    {
+     "t": " handles the beds inside it."
+    }
+   ]
+  },
+  {
+   "title": "Splitting parcels",
+   "body": [
+    {
+     "t": "Dividing a 3-acre parcel into half-acre lots is square-feet arithmetic wearing an acres hat: 130,680 sq ft total, 21,780 each, with the road's share visible only in this unit."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The quarter acre",
+   "body": [
+    {
+     "t": "0.25 × 43,560 = 10,890 sq ft exactly. The classic suburban lot is a quarter of the surveyor's acre — a fact this conversion makes literal."
+    }
+   ]
+  },
+  {
+   "label": "Example · The 40-acre field",
+   "body": [
+    {
+     "t": "40 × 43,560 = 1,742,400 sq ft. Square feet feel absurd at field scale, which is the lesson: units have natural ranges, and acres exist because fields outgrew feet."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Acres to square feet reference",
+  "intro": "Exact multiples of 43,560 for the parcel sizes that recur in listings and land work.",
+  "columns": [
+   "Acres",
+   "Square feet",
+   "Square metres (approx.)"
+  ],
+  "rows": [
+   [
+    "0.25",
+    "10,890",
+    "1,011.7"
+   ],
+   [
+    "0.5",
+    "21,780",
+    "2,023.4"
+   ],
+   [
+    "1",
+    "43,560",
+    "4,046.9"
+   ],
+   [
+    "2.5",
+    "108,900",
+    "10,117.1"
+   ],
+   [
+    "5",
+    "217,800",
+    "20,234.3"
+   ],
+   [
+    "10",
+    "435,600",
+    "40,468.6"
+   ],
+   [
+    "40",
+    "1,742,400",
+    "161,874.3"
+   ]
+  ],
+  "note": "Square feet and acres are both exact in this table (the acre is defined as 43,560 sq ft); the metres column is the approx. translation."
+ },
+ "faq": [
+  [
+   "Why 43,560 — such an odd number?",
+   "History: an acre is one furlong (660 ft) by one chain (66 ft), the medieval ploughing strip. 660 × 66 = 43,560. The odd number is a fossil of oxen, preserved by law."
+  ],
+  [
+   "Is it free to use?",
+   "Yes — no account, no sign-up, and the arithmetic runs in your browser."
+  ],
+  [
+   "How accurate is the result?",
+   "Exact: the acre is defined as 43,560 square feet, so conversions carry no rounding at all. Only your input's precision limits the answer."
+  ],
+  [
+   "How do I convert square feet back to acres?",
+   "Divide by 43,560. A 30,000 sq ft lot is 0.6887 acres — the direction listings less often show, and the one buyers need."
+  ],
+  [
+   "Is an acre the same everywhere?",
+   "The international acre (43,560 sq ft) is the standard. Historical local acres existed (the Scottish and Irish acres were larger); modern US and UK usage is the international figure."
+  ],
+  [
+   "When should I quote square feet instead of acres?",
+   "Below about half an acre, square feet read clearer and compare faster; above a few acres, feet become noise. Listings choose the unit that flatters — converters choose the one that informs."
+  ],
+  [
+   "Can I use this for service-area planning?",
+   "Only as unit translation: a service area measured in the Map Radius Tool can be expressed in either unit through this factor. The area itself comes from the map, not from a conversion."
+  ],
+  [
+   "How many square feet is a football field?",
+   "An American football field including end zones is 57,600 sq ft — which is 57,600 ÷ 43,560 ≈ 1.32 acres. It is the comparison that makes an acre imaginable."
+  ],
+  [
+   "What is half an acre in square feet?",
+   "Exactly 21,780 sq ft — the lot size behind a large share of US suburban listings, and a number worth recognising on sight."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Metric conversion lives in the "
+  },
+  {
+   "t": "Acres to Hectares Converter",
+   "l": "/tools/acres-to-hectares-converter"
+  },
+  {
+   "t": "; the reverse direction in the "
+  },
+  {
+   "t": "Hectares to Acres Converter",
+   "l": "/tools/hectares-to-acres-converter"
+  },
+  {
+   "t": "; and measuring the parcel itself, in the "
+  },
+  {
+   "t": "Acreage Map Calculator",
+   "l": "/tools/acreage-map-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "circle-circumference-from-radius",
+  "cities-within-drawn-area-finder",
+  "crop-row-length-calculator",
+  "customer-radius-area-calculator",
+  "delivery-radius-area-calculator",
+  "delivery-radius-checker"
+ ]
+}

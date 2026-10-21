@@ -1,0 +1,30 @@
+{
+ "slug": "antenna-height-distance-calculator",
+ "primary_keyword": "Antenna Height for Distance Calculator",
+ "secondary_keywords": [
+  "antenna height calculator distance",
+  "radio horizon antenna height",
+  "antenna height for range",
+  "tower height calculator",
+  "radio distance antenna height"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "air-pressure-by-elevation",
+  "antipode-finder",
+  "average-elevation-gain-per-km",
+  "boiling-point-by-elevation-calculator",
+  "central-angle-from-distance-calculator",
+  "cicada-emergence-map"
+ ]
+}

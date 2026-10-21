@@ -1,0 +1,28 @@
+{
+ "slug": "map-tunnel",
+ "primary_keyword": "Map Tunnel",
+ "secondary_keywords": [
+  "antipode map",
+  "where would I come out if I dug through the earth",
+  "map tunnel online"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "air-pressure-by-elevation",
+  "antenna-height-distance-calculator",
+  "average-elevation-gain-per-km",
+  "boiling-point-by-elevation-calculator",
+  "central-angle-from-distance-calculator",
+  "cicada-emergence-map"
+ ]
+}

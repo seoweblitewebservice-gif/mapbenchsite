@@ -1,0 +1,187 @@
+{
+ "slug": "parish-finder-by-coordinates",
+ "primary_keyword": "Parish Finder by Coordinates",
+ "secondary_keywords": [
+  "parish finder",
+  "civil parish finder",
+  "which parish am i in",
+  "parish by postcode area"
+ ],
+ "title": "Parish Finder by Coordinates: Civil Parishes",
+ "description": "Find the civil parish for a point in England and Wales with the Parish Finder by Coordinates — Louisiana and church parishes where recorded. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a Wiltshire point resolves to a civil parish whose council sets a tiny precept and maintains the village green — the smallest tier of English government, named from a single click.",
+ "quick_answer": "The Parish Finder by Coordinates reads a point's OpenStreetMap address record for its parish: the civil parish in England and Wales, Louisiana parishes and church parishes where that is what the record holds. Enter coordinates or click the map and read the parish name with the administrative breakdown.",
+ "steps_intro": "The oldest layer of local government, one point at a time:",
+ "use_cases": [
+  {
+   "title": "Local government business",
+   "body": [
+    {
+     "t": "Parish councils hold the allotments, greens and benches. Knowing the parish routes the question to the right tiny council — the "
+    },
+    {
+     "t": "Municipality Finder",
+     "l": "/tools/find-municipality-by-coordinates"
+    },
+    {
+     "t": " reads the tier above."
+    }
+   ]
+  },
+  {
+   "title": "Genealogy and history",
+   "body": [
+    {
+     "t": "Ancestors were baptised, married and buried by parish. A point's parish is the archive key for centuries of records."
+    }
+   ]
+  },
+  {
+   "title": "Property and planning context",
+   "body": [
+    {
+     "t": "Neighbourhood plans live at parish scale in England. The parish name frames which plan, which consultation, which meeting in the village hall."
+    }
+   ]
+  },
+  {
+   "title": "Louisiana, the other parishes",
+   "body": [
+    {
+     "t": "Louisiana's counties are parishes — the record says so, and the finder reports the record. One word, two histories, both honoured."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Civil versus church",
+   "body": [
+    {
+     "t": "Civil and ecclesiastical parishes diverged in the 19th century and now overlap imperfectly. The finder reports the record's parish; where both exist, the admin record usually means the civil one."
+    }
+   ]
+  },
+  {
+   "label": "Example · The unparished town",
+   "body": [
+    {
+     "t": "Much urban England is unparished — no parish council exists for the point. The finder says so plainly rather than adopting the nearest village's name."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Parish, three ways",
+  "intro": "The word's meanings — the finder reports whichever the point's record holds, and the table keeps them straight.",
+  "columns": [
+   "Kind",
+   "Where",
+   "Is"
+  ],
+  "rows": [
+   [
+    "Civil parish",
+    "England and Wales",
+    "The smallest unit of local government, with a council or meeting"
+   ],
+   [
+    "County-parish",
+    "Louisiana, USA",
+    "The county equivalent — same word, different history"
+   ],
+   [
+    "Church parish",
+    "Worldwide",
+    "A congregation's territory — reported where that is the record's content"
+   ],
+   [
+    "Unparished",
+    "Urban England mostly",
+    "No parish — a fact, not a gap"
+   ]
+  ],
+  "note": "Scotland and Northern Ireland have their own local structures (community councils, and civil parishes historically in Scotland). The finder follows the record's geography rather than exporting England's scheme."
+ },
+ "faq": [
+  [
+   "What if the answer says no parish?",
+   "The point is likely in an unparished area — common in larger towns and cities — or outside parish country. The finder reports the administrative record as it stands."
+  ],
+  [
+   "Is this the church parish?",
+   "Usually the record's parish is the civil one in England and Wales. Church parishes are a parallel geography; where the record holds that instead, it is what you see."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — type or click any point."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Parish boundaries are ancient and occasionally revised; sources differ in vintage, and civil and church maps of the same name can diverge."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "Parish or municipality?",
+   "In England the civil parish is the finer, older layer below district councils — the Municipality Finder reads the broader unit; this page reads the parish specifically."
+  ],
+  [
+   "Genealogy use?",
+   "A strong one — parish registers are organised by parish. Cross-check historic boundaries though: parishes moved less than counties, but they moved."
+  ],
+  [
+   "Louisiana addresses?",
+   "Enter the point; the record returns the parish (the county-equivalent) as Louisiana geography intends."
+  ],
+  [
+   "Welsh community councils?",
+   "Wales' equivalent tier is the community — the record's term is what the finder reports, Welsh geography in Welsh terms."
+  ],
+  [
+   "Parish councils versus parish meetings?",
+   "Smaller parishes may run a meeting rather than an elected council — the record's parish is the same geography either way; the governance detail lives with the county association."
+  ],
+  [
+   "Boundary stones and history?",
+   "Parish boundaries follow ancient lines — some along streams that have since moved. The record's line is the current administrative one; the history is a bonus layer for the curious."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The tier above: "
+  },
+  {
+   "t": "Municipality Finder by Coordinates",
+   "l": "/tools/find-municipality-by-coordinates"
+  },
+  {
+   "t": "; the sibling: "
+  },
+  {
+   "t": "District Finder by Coordinates",
+   "l": "/tools/district-finder-by-coordinates"
+  },
+  {
+   "t": "; your point: "
+  },
+  {
+   "t": "Find My Location",
+   "l": "/tools/find-my-location"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location"
+ ]
+}

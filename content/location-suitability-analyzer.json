@@ -1,0 +1,187 @@
+{
+ "slug": "location-suitability-analyzer",
+ "primary_keyword": "Location Suitability Analyzer",
+ "secondary_keywords": [
+  "location suitability analysis",
+  "site selection tool",
+  "rank places criteria",
+  "best location analyser"
+ ],
+ "title": "Location Suitability Analyzer: Rank Places",
+ "description": "Rank candidate places against weighted criteria with the Location Suitability Analyzer — a transparent score for homes, depots and trips. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, three candidate towns scored against one anchor with your weights produce a ranking you can argue with — every number in it is visible, which is the difference between analysis and vibes.",
+ "quick_answer": "The Location Suitability Analyzer scores and ranks candidate places against an anchor using criteria you weight — closeness to the anchor, lower elevation, nearness to a city and more. List the candidates, set the weights, and read a transparent ranking whose arithmetic you can inspect and rerun with different priorities.",
+ "steps_intro": "Rankings are opinions with arithmetic. Make yours explicit:",
+ "use_cases": [
+  {
+   "title": "Choosing a town to move to",
+   "body": [
+    {
+     "t": "Anchor on work or family, weight what your life actually needs, and let the shortlist emerge from numbers instead of listing-site order. Distance evidence from the "
+    },
+    {
+     "t": "Driving Distance Calculator",
+     "l": "/tools/driving-distance-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Depot and site shortlists",
+   "body": [
+    {
+     "t": "Candidate towns for a small depot, scored the same way every time — the reproducibility is the professionalism."
+    }
+   ]
+  },
+  {
+   "title": "Dark-sky and trip picks",
+   "body": [
+    {
+     "t": "Elevation and city distance are built-in criteria — a stargazing base ranks by exactly what the telescope wants."
+    }
+   ]
+  },
+  {
+   "title": "Settling friendly arguments",
+   "body": [
+    {
+     "t": "Two people, one move, different priorities: run both weight sets and see whose town survives both. Diplomacy by spreadsheet."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Weights are the decision",
+   "body": [
+    {
+     "t": "With closeness weighted highest, the nearest adequate town wins; slide elevation up and a smaller hill town overtakes it. The analyzer's virtue is that the flip is visible and priced in the open."
+    }
+   ]
+  },
+  {
+   "label": "Example · Scores are relative",
+   "body": [
+    {
+     "t": "A candidate's score measures it against this list and these weights — add a fourth town and every score reshuffles honestly. The FAQs are blunt about this, on purpose."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The criteria, plainly",
+  "intro": "What the analyzer can weigh — each computed from open data, none pretending to be a verdict on a life.",
+  "columns": [
+   "Criterion",
+   "Direction",
+   "From"
+  ],
+  "rows": [
+   [
+    "Distance to anchor",
+    "Closer scores higher",
+    "Geography, computed"
+   ],
+   [
+    "Elevation",
+    "Lower (or higher, as set)",
+    "Open elevation data"
+   ],
+   [
+    "Nearness to a city",
+    "Closer scores higher",
+    "The candidate set and map data"
+   ],
+   [
+    "Your weights",
+    "0 to high",
+    "Your priorities, numerically"
+   ]
+  ],
+  "note": "What is not in the table — schools, safety, prices, belonging — is not in the score. The analyzer ranks the measurable; the visit ranks the rest."
+ },
+ "faq": [
+  [
+   "Are the scores absolute?",
+   "No — they are relative to your candidate list, anchor and weights. A score means 'best of these, by these priorities', which is the honest claim for any such tool."
+  ],
+  [
+   "What data feeds it?",
+   "Distances computed from coordinates, elevation from open elevation data, and city proximity from map data — all visible in the criteria table on this page."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — anchors and candidates are typed places; your own location is never required."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Place resolution follows open geocoding data; another source may resolve a small place name to a slightly different point."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "How many candidates?",
+   "A shortlist's worth — the method shines at 3 to 10. A hundred candidates deserve a spreadsheet, and this page teaches the method to copy into one."
+  ],
+  [
+   "Can I weight criteria negatively?",
+   "Weights express importance; direction (closer better, lower better) is set by the criterion's design. Combine both to express real preferences."
+  ],
+  [
+   "Is the ranking a recommendation?",
+   "It is arithmetic wearing your priorities. The visit, the lease terms and the winter test remain yours."
+  ],
+  [
+   "Same town, different anchor?",
+   "Rankings are anchor-relative by construction — a depot ranking and a family ranking of the same towns will differ, correctly."
+  ],
+  [
+   "Can I save a run?",
+   "The ranking is computed live from your inputs; note the weights beside the result in your own records and any run is reproducible exactly."
+  ],
+  [
+   "Ties between candidates?",
+   "Scores can tie — the tie is information (your criteria cannot separate them), and a visit or a new criterion breaks it honestly."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Distances behind it: the "
+  },
+  {
+   "t": "Driving Distance Calculator",
+   "l": "/tools/driving-distance-calculator"
+  },
+  {
+   "t": "; centers: the "
+  },
+  {
+   "t": "Geographic Center Finder",
+   "l": "/tools/geographic-center-finder"
+  },
+  {
+   "t": "; areas: the "
+  },
+  {
+   "t": "Map Radius",
+   "l": "/tools/map-radius"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location"
+ ]
+}

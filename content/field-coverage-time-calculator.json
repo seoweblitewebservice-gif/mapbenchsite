@@ -1,0 +1,191 @@
+{
+ "slug": "field-coverage-time-calculator",
+ "primary_keyword": "Field Coverage Time Calculator",
+ "secondary_keywords": [
+  "field coverage time calculator online",
+  "free field coverage time calculator",
+  "field coverage time calculator calculator",
+  "field coverage time calculator tool",
+  "how to use field coverage time calculator"
+ ],
+ "title": "Field Coverage Time Calculator: Acres per Hour",
+ "description": "Estimate how long fieldwork takes with the Field Coverage Time Calculator — from working width, speed and field size. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 60 ft boom at 5 mph covers approx. 36.4 acres per hour — so a 160-acre field is about 4.4 hours of pure travelling time.",
+ "quick_answer": "The Field Coverage Time Calculator estimates how long a field operation takes from implement width, speed and the field's area. It converts width × speed into acres (or hectares) per hour and divides your field by it — the planning figure behind spray days, drilling windows and contractor quotes.",
+ "steps_intro": "Width times speed is coverage; the field divided by coverage is time. Both halves matter:",
+ "use_cases": [
+  {
+   "title": "Spray-day planning",
+   "body": [
+    {
+     "t": "A weather window is a number of hours. This calculator tells you whether the field fits inside it before the tank is filled — rows and passes from the "
+    },
+    {
+     "t": "Crop Row Length Calculator",
+     "l": "/tools/crop-row-length-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Contractor quotes",
+   "body": [
+    {
+     "t": "Per-hour and per-acre quotes both hide a coverage rate. Compute yours and the quote becomes a conversation about efficiency, not a mystery."
+    }
+   ]
+  },
+  {
+   "title": "Machinery sizing",
+   "body": [
+    {
+     "t": "Choosing between two boom widths is choosing between two coverage rates. Run both against your largest field and the price difference gets a time value."
+    }
+   ]
+  },
+  {
+   "title": "Harvest logistics",
+   "body": [
+    {
+     "t": "Combines, carts and trucks queue around one coverage rate. The estimate frames the whole chain's day."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The sprayer",
+   "body": [
+    {
+     "t": "60 ft boom × 5 mph: coverage = (60 × 5 × 5,280) ÷ 43,560 ≈ 36.36 acres/hour. A 160-acre field: 160 ÷ 36.36 ≈ 4.4 hours of travelling — plus fills, turns and the trip there, which the FAQ is honest about."
+    }
+   ]
+  },
+  {
+   "label": "Example · The metric version",
+   "body": [
+    {
+     "t": "A 24 m boom at 8 km/h covers 24 × 8 ÷ 10 = 19.2 ha/hour; a 50 ha field takes ≈ 2.6 hours of travelling. The metric formula (width × speed ÷ 10) is the same idea in tidier units."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Coverage rates at a glance",
+  "intro": "Theoretical field capacity: width × speed (imperial ÷ 43,560 after converting), before efficiency losses — real work runs at 60–85% of these figures.",
+  "columns": [
+   "Working width",
+   "At 4 mph",
+   "At 5 mph",
+   "At 6 mph"
+  ],
+  "rows": [
+   [
+    "20 ft",
+    "9.7 ac/hr",
+    "12.1 ac/hr",
+    "14.5 ac/hr"
+   ],
+   [
+    "40 ft",
+    "19.4 ac/hr",
+    "24.2 ac/hr",
+    "29.1 ac/hr"
+   ],
+   [
+    "60 ft",
+    "29.1 ac/hr",
+    "36.4 ac/hr",
+    "43.6 ac/hr"
+   ],
+   [
+    "90 ft",
+    "43.6 ac/hr",
+    "54.5 ac/hr",
+    "65.4 ac/hr"
+   ],
+   [
+    "120 ft",
+    "58.2 ac/hr",
+    "72.7 ac/hr",
+    "87.3 ac/hr"
+   ]
+  ],
+  "note": "Theoretical capacity assumes non-stop travelling. Field efficiency (turns, fills, overlaps) is the real-world discount — experienced operators apply their own percentage."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Time for a field operation: theoretical coverage rate from working width and speed, divided into the field's area, in hours."
+  ],
+  [
+   "Is it free to use?",
+   "Yes — instant and account-free, like the rest of the site."
+  ],
+  [
+   "How accurate is the result?",
+   "The travelling-time core is exact arithmetic. Real jobs add turning, filling, overlap and travel between fields — treat the answer as the floor and add your operation's known overheads."
+  ],
+  [
+   "What is field efficiency?",
+   "The share of engine time actually covering ground. Headland turns and refill stops eat the rest; 65–85% is the range textbooks quote for spraying and drilling, and your own records beat any table."
+  ],
+  [
+   "Does implement width mean the boom or the bout width?",
+   "The effective covered width per pass — usually the boom or bout width minus any overlap you drive. Overlap is pure loss in this formula, as it is in the field."
+  ],
+  [
+   "Metric inputs?",
+   "Width in metres × speed in km/h ÷ 10 gives hectares per hour — the formula used in the second example."
+  ],
+  [
+   "Can it price a contractor job?",
+   "It frames the hours; the rate per hour is the market's. Hours × rate is the quote's skeleton, whoever builds it."
+  ],
+  [
+   "Two fields, one day — how do I plan?",
+   "Compute each field's travelling time, add the road move between them and your fill/setup overheads. The day plan is a sum, and this tool supplies its biggest terms."
+  ],
+  [
+   "Does turning at headlands count?",
+   "Not in the travelling figure — that is exactly what field efficiency discounts. Wide headlands and short fields lower efficiency; long lands raise it."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Row totals come from the "
+  },
+  {
+   "t": "Crop Row Length Calculator",
+   "l": "/tools/crop-row-length-calculator"
+  },
+  {
+   "t": ", field areas from the "
+  },
+  {
+   "t": "Acreage Map Calculator",
+   "l": "/tools/acreage-map-calculator"
+  },
+  {
+   "t": ", and water volumes for the same passes from the "
+  },
+  {
+   "t": "Irrigation Flow Volume Calculator",
+   "l": "/tools/irrigation-flow-volume-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "center-of-polygon",
+  "circle-area-from-radius",
+  "circle-circumference-from-radius",
+  "cities-within-drawn-area-finder",
+  "crop-row-length-calculator",
+  "customer-radius-area-calculator"
+ ]
+}

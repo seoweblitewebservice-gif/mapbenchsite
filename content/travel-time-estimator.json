@@ -1,0 +1,176 @@
+{
+ "slug": "travel-time-estimator",
+ "primary_keyword": "Travel Time Estimator",
+ "secondary_keywords": [
+  "travel time",
+  "how long to drive",
+  "drive time calculator",
+  "eta calculator"
+ ],
+ "title": "Travel Time Estimator: Drive Time and Distance",
+ "description": "Estimate typical driving time and road distance between places with the Travel Time Estimator — network estimates for trip planning. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a pair the map shows 190 miles apart returns roughly three and a quarter hours of typical driving — the estimate a plan, not a promise, is built from.",
+ "quick_answer": "The Travel Time Estimator returns the typical driving duration and road distance between an origin and a destination, computed over the road network. Set the two places and read the figures trip plans are sketched from — honest network estimates, openly not live traffic and not a guarantee.",
+ "steps_intro": "The planner's first question, answered with the network's typical truth:",
+ "use_cases": [
+  {
+   "title": "Trip sketching",
+   "body": [
+    {
+     "t": "Every itinerary starts as pairs of places with times between them. This estimator fills the grid — then the "
+    },
+    {
+     "t": "ETA Calculator",
+     "l": "/tools/eta-calculator"
+    },
+    {
+     "t": " turns a chosen time into an arrival."
+    }
+   ]
+  },
+  {
+   "title": "Feasibility checks",
+   "body": [
+    {
+     "t": "“Can we visit both in a day?” is two estimates and an addition. Answer it at the desk."
+    }
+   ]
+  },
+  {
+   "title": "Comparing candidate routes",
+   "body": [
+    {
+     "t": "Typical times make routes comparable in a way live times cannot — today's jam is not the route's character."
+    }
+   ]
+  },
+  {
+   "title": "Ground truth for promises",
+   "body": [
+    {
+     "t": "Before quoting a window to anyone, the typical estimate is the floor the promise must respect."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Typical versus live",
+   "body": [
+    {
+     "t": "The estimator says 3 h 15 min for a pair; the navigation app says 4 h 05 min at 8 a.m. Both are right: one describes the road, the other describes this morning. Planning uses the first; departing uses the second."
+    }
+   ]
+  },
+  {
+   "label": "Example · The worldwide habit",
+   "body": [
+    {
+     "t": "The estimator works wherever the open road data reaches — which is most of the mapped world, with quality that follows the mappers."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Estimator versus live navigation",
+  "intro": "Two kinds of truth about the same pair of places — use each for its own job.",
+  "columns": [
+   "Question",
+   "This estimator",
+   "Live navigation"
+  ],
+  "rows": [
+   [
+    "Basis",
+    "Network's typical speeds",
+    "Current conditions"
+   ],
+   [
+    "Best for",
+    "Planning days ahead",
+    "Departing now"
+   ],
+   [
+    "Changes",
+    "As road data updates",
+    "By the minute"
+   ],
+   [
+    "Distance",
+    "Road distance",
+    "Road distance (same roads)"
+   ],
+   [
+    "Honesty",
+    "A plan, labelled as one",
+    "A snapshot, expiring fast"
+   ]
+  ],
+  "note": "The estimator's distance is the stable half of its answer; treat its duration as typical, and your departure margin as wisdom."
+ },
+ "faq": [
+  [
+   "Does it include live traffic?",
+   "No — by design. It reports typical durations from the road network's speeds, the right basis for planning. Live conditions are a navigation app's layer at departure time."
+  ],
+  [
+   "Worldwide?",
+   "Wherever open road data covers — most of the world, with rural and newly built areas thinner in places. The estimate is only as good as the map beneath it."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "The estimator routes on roads, so its distance is the driven one — longer than the crow's, shorter than your detours."
+  ],
+  [
+   "Can route results change over time?",
+   "Slightly, as the open data improves: new roads shorten some pairs forever. Re-run standing plans each season."
+  ],
+  [
+   "How is this different from the ETA Calculator?",
+   "This page returns the network's typical time for a pair; the ETA Calculator divides your distance by your average speed and adds it to a departure. Sketch here, commit there."
+  ],
+  [
+   "Which end of a range should I plan on?",
+   "The estimate is a single typical figure, not a range — add your own margin for the hour and season you will travel."
+  ],
+  [
+   "Driving only?",
+   "This estimator is the road-driving one; the site's other planners cover walking and cycling networks with the same honesty."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Commit an arrival with the "
+  },
+  {
+   "t": "ETA Calculator",
+   "l": "/tools/eta-calculator"
+  },
+  {
+   "t": "; buffer it with the "
+  },
+  {
+   "t": "Trip Time Buffer Calculator",
+   "l": "/tools/trip-time-buffer-calculator"
+  },
+  {
+   "t": "; and see reach as a shape in the "
+  },
+  {
+   "t": "Isochrone Map",
+   "l": "/tools/isochrone-map"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner"
+ ]
+}

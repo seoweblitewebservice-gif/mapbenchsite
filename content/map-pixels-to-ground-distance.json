@@ -1,0 +1,189 @@
+{
+ "slug": "map-pixels-to-ground-distance",
+ "primary_keyword": "Map Pixels to Ground Distance",
+ "secondary_keywords": [
+  "map pixels to ground distance online",
+  "free map pixels to ground distance",
+  "map pixels to ground distance calculator",
+  "map pixels to ground distance tool",
+  "how to calculate map pixels to ground distance"
+ ],
+ "title": "Map Pixels to Ground Distance Converter",
+ "description": "Convert a pixel measurement on a map into ground distance with Map Pixels to Ground Distance — zoom and latitude aware. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a runway measuring 830 pixels in a zoom-17 screenshot at 45° latitude is 830 × 0.845 ≈ 700 metres of real concrete — measured off a picture, honestly.",
+ "quick_answer": "Map Pixels to Ground Distance converts a pixel count measured on a Web Mercator map into the ground distance it represents at that zoom and latitude. Enter pixels, zoom and latitude and read metres or feet — screenshot measurement with the scale arithmetic done properly.",
+ "steps_intro": "Count the pixels; the converter prices them:",
+ "use_cases": [
+  {
+   "title": "Measuring in screenshots",
+   "body": [
+    {
+     "t": "No scale tool in the image viewer? Count pixels, convert here. The rate comes from the "
+    },
+    {
+     "t": "Map Meters per Pixel Calculator",
+     "l": "/tools/map-meters-per-pixel-calculator"
+    },
+    {
+     "t": "; this page does the multiplication with the latitude applied."
+    }
+   ]
+  },
+  {
+   "title": "Verifying design mock-ups",
+   "body": [
+    {
+     "t": "A map UI mock claims a 500 m catchment — measure its pixels and audit the claim before it ships."
+    }
+   ]
+  },
+  {
+   "title": "Historical map images",
+   "body": [
+    {
+     "t": "Scanned web-map exports keep their zoom's scale in their pixels; the converter revives measurement on dead images."
+    }
+   ]
+  },
+  {
+   "title": "Student exercises",
+   "body": [
+    {
+     "t": "Measure the school field in the class screenshot — the conversion turns a picture into a surveying lesson."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The resized-image trap",
+   "body": [
+    {
+     "t": "If an image was scaled after capture, pixel counts scale with it. A 50%-shrunk screenshot halves every measurement — verify against a known feature (a scale bar, a standard pitch) before trusting counts."
+    }
+   ]
+  },
+  {
+   "label": "Example · Diagonal honesty",
+   "body": [
+    {
+     "t": "Mercator's local isotropy means diagonal pixels price like straight ones at the same point — measure the hypotenuse directly, no axis decomposition needed."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Quick rates for measuring",
+  "intro": "Metres per pixel at common zooms — mid-latitude (45°) column included because most measuring happens there.",
+  "columns": [
+   "Zoom",
+   "Equator",
+   "45° latitude"
+  ],
+  "rows": [
+   [
+    "14",
+    "9.55 m/px",
+    "6.76 m/px"
+   ],
+   [
+    "15",
+    "4.77",
+    "3.38"
+   ],
+   [
+    "16",
+    "2.39",
+    "1.69"
+   ],
+   [
+    "17",
+    "1.19",
+    "0.845"
+   ],
+   [
+    "18",
+    "0.597",
+    "0.422"
+   ]
+  ],
+  "note": "Rates assume the image is at native tile resolution. Resized or retina-doubled images need the count corrected first (the FAQ's retina note)."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Ground distance = pixels × metres-per-pixel at the stated zoom and latitude, under the Web Mercator tile standard."
+  ],
+  [
+   "Which map standard does it use?",
+   "Slippy-map Web Mercator — the standard your screenshots come from."
+  ],
+  [
+   "Can I use this in production GIS?",
+   "For measurement estimates from rendered maps, yes with the resize caveat. Production measurement belongs on vector data or imagery with ground control."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 — the frame GPS produces and web maps consume."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — resolution is not accuracy; the precision tools on this site price each decimal place in metres."
+  ],
+  [
+   "My screenshot is from a retina screen.",
+   "Retina captures double the pixels per map pixel: halve your count (or double the rate) before converting."
+  ],
+  [
+   "The image was emailed and shrunk.",
+   "Then pixel truth died in transit — recover scale from any known-length feature in frame and calibrate manually; the converter prices counts, not miracles."
+  ],
+  [
+   "Feet and yards?",
+   "Outputs include imperial — playing fields come out in yards when you need them to."
+  ],
+  [
+   "Curved features?",
+   "Sum segment pixel counts along the curve, then convert the total — Mercator's local scale treats the path's pixels uniformly at one latitude."
+  ],
+  [
+   "Latitude varies along my feature?",
+   "Use the mid-latitude's rate; long north-south features accumulate small scale drift the geodesic tools avoid entirely."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The rate: the "
+  },
+  {
+   "t": "Map Meters per Pixel Calculator",
+   "l": "/tools/map-meters-per-pixel-calculator"
+  },
+  {
+   "t": "; reverse: "
+  },
+  {
+   "t": "Ground Distance to Map Pixels",
+   "l": "/tools/ground-distance-to-map-pixels"
+  },
+  {
+   "t": "; tiles: the "
+  },
+  {
+   "t": "Map Tile Ground Width Calculator",
+   "l": "/tools/map-tile-ground-width-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator"
+ ]
+}

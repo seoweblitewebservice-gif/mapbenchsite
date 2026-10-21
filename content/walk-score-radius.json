@@ -1,0 +1,28 @@
+{
+ "slug": "walk-score-radius",
+ "primary_keyword": "Walk Reach Radius",
+ "secondary_keywords": [
+  "walk radius",
+  "walkable area",
+  "15 minute walk map"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "acreage-map-calculator",
+  "acres-to-hectares-converter",
+  "acres-to-square-feet-converter",
+  "buffer-zone-map",
+  "center-of-polygon",
+  "circle-area-from-radius"
+ ]
+}

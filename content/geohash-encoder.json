@@ -1,0 +1,196 @@
+{
+ "slug": "geohash-encoder",
+ "primary_keyword": "Geohash Encoder",
+ "secondary_keywords": [
+  "geohash",
+  "geohash decoder",
+  "geohash encoder online"
+ ],
+ "title": "Geohash Encoder: Coordinates as Short Strings",
+ "description": "Encode coordinates as geohash strings with the Geohash Encoder — cell size by length, database-friendly proximity keys. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, Times Square encodes as dr5ru7 at six characters — and every point starting dr5ru shares its ~1.2 × 0.6 km cell, which is exactly how databases fake 'nearby' with a string prefix.",
+ "quick_answer": "The Geohash Encoder encodes coordinates as geohash strings — short base-32 codes that identify map cells, with cell size set by the string's length. Enter the point and read its geohash — the key format databases use for proximity lookups and shareable place references.",
+ "steps_intro": "A coordinate, compressed into a sortable string:",
+ "use_cases": [
+  {
+   "title": "Database proximity keys",
+   "body": [
+    {
+     "t": "Store the hash beside the point; prefix queries fetch the neighbourhood. The encoder lets you mint and inspect keys while designing — the "
+    },
+    {
+     "t": "H3 Hex Index Helper",
+     "l": "/tools/h3-index-helper"
+    },
+    {
+     "t": " is the hexagonal alternative."
+    }
+   ]
+  },
+  {
+   "title": "Debugging location data",
+   "body": [
+    {
+     "t": "A stored hash decodes to its cell here in spirit — mismatched hashes beside known coordinates expose swapped axes in legacy data."
+    }
+   ]
+  },
+  {
+   "title": "Shareable rough locations",
+   "body": [
+    {
+     "t": "A 4–5 character hash shares a neighbourhood without sharing an address — precision as a dial, turned by string length."
+    }
+   ]
+  },
+  {
+   "title": "Cache and tile keys",
+   "body": [
+    {
+     "t": "Cell strings name cached areas tidily. The encoder shows which cell a point's cached data lives under."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The canonical test vector",
+   "body": [
+    {
+     "t": "57.64911, 10.40744 encodes to u4pruydqqvj — the worked example from the geohash literature, reproduced here as a correctness receipt for the algorithm."
+    }
+   ]
+  },
+  {
+   "label": "Example · Prefix means proximity (mostly)",
+   "body": [
+    {
+     "t": "Times Square dr5ru7 and a point across the park in the same cell share the prefix; two points metres apart across a cell border share almost nothing. Prefix search must fetch neighbouring cells too — the classic geohash caveat, stated on its own page."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Length versus cell size",
+  "intro": "Geohash cell dimensions (approximate, at the equator) — length is the precision dial.",
+  "columns": [
+   "Characters",
+   "Cell width × height",
+   "Feels like"
+  ],
+  "rows": [
+   [
+    "4",
+    "39.1 × 19.5 km",
+    "A region"
+   ],
+   [
+    "5",
+    "4.9 × 4.9 km",
+    "A town"
+   ],
+   [
+    "6",
+    "1.2 × 0.61 km",
+    "A neighbourhood"
+   ],
+   [
+    "7",
+    "153 × 153 m",
+    "A block"
+   ],
+   [
+    "8",
+    "38.2 × 19.1 m",
+    "A building"
+   ],
+   [
+    "9",
+    "4.8 × 4.8 m",
+    "A room's ambition"
+   ]
+  ],
+  "note": "Cells are rectangles in degrees, so their ground size shrinks in width toward the poles. The base-32 alphabet omits a, i, l, o to dodge look-alike characters."
+ },
+ "faq": [
+  [
+   "What cell size do I get?",
+   "Chosen by string length — the table on this page maps characters to cell dimensions. Longer is smaller, by a factor of 32 per character (8×4 per step in ground terms, roughly)."
+  ],
+  [
+   "Is it the same as a Plus Code?",
+   "No — different systems (Google's Open Location Code versus the public-domain geohash). Both turn coordinates into strings; their alphabets, cells and ecosystems differ."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 coordinates — geohashes encode the pair as given."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "The hash analogue: more characters mean smaller cells, not truer points. A 12-character hash of a bad fix is a precise lie."
+  ],
+  [
+   "Can I copy the result into GIS software?",
+   "Hashes paste as text attributes; most GIS and databases (PostGIS, MongoDB, Redis) speak geohash natively or by extension."
+  ],
+  [
+   "The border problem?",
+   "Neighbouring points across a cell edge share no prefix. Production proximity search queries the 8 surrounding cells as well — the encoder's cell view makes the fix intuitive."
+  ],
+  [
+   "Decode a hash?",
+   "The cell a hash names can be read back to its bounds — encoders in this family show the cell for any hash you bring."
+  ],
+  [
+   "Who invented it?",
+   "Gustavo Niemeyer, 2008, released into the public domain — one of the internet's quiet load-bearing ideas."
+  ],
+  [
+   "Case sensitivity?",
+   "Geohashes are lowercase by convention (the alphabet excludes ambiguous letters); systems store them lowercase."
+  ],
+  [
+   "Privacy of short hashes?",
+   "A 4-character hash is a region-sized fuzz — the string-length dial is a legitimate privacy control, sized by the table."
+  ],
+  [
+   "Sorting property?",
+   "Lexicographic order approximates spatial order (a Z-order curve) — good enough for prefix scans, which is the entire trick."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Hexagons: the "
+  },
+  {
+   "t": "H3 Hex Index Helper",
+   "l": "/tools/h3-index-helper"
+  },
+  {
+   "t": "; grids: the "
+  },
+  {
+   "t": "MGRS Converter",
+   "l": "/tools/mgrs-converter"
+  },
+  {
+   "t": "; points: the "
+  },
+  {
+   "t": "Coordinate Converter",
+   "l": "/tools/coordinate-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator",
+  "coordinate-offset-calculator"
+ ]
+}

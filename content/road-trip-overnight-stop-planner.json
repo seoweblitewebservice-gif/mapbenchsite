@@ -1,0 +1,194 @@
+{
+ "slug": "road-trip-overnight-stop-planner",
+ "primary_keyword": "Road Trip Overnight Stop Planner",
+ "secondary_keywords": [
+  "overnight stop planner",
+  "road trip stops",
+  "where to stop overnight drive",
+  "split long drive days"
+ ],
+ "title": "Road Trip Overnight Stop Planner",
+ "description": "Split a long drive into days and name the overnight towns with the Road Trip Overnight Stop Planner — cap the miles, keep the trip human. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 1,350-mile drive capped at 450 miles a day becomes three days with two overnight towns named — the trip planned around sleep, not bravado.",
+ "quick_answer": "The Road Trip Overnight Stop Planner routes your drive, caps how far you travel in a day — by miles or by days — and names the town near each overnight stop. Set start, destination and the daily limit, and read where each day ends and how far it runs.",
+ "steps_intro": "Long drives are a chain of human days. Cut the chain at sleeping distance:",
+ "use_cases": [
+  {
+   "title": "Cross-country moves",
+   "body": [
+    {
+     "t": "The relocation drive becomes stages with towns — bookable, shareable, survivable. The "
+    },
+    {
+     "t": "Driving Days Calculator",
+     "l": "/tools/driving-days-calculator"
+    },
+    {
+     "t": " counts the days; this planner places them."
+    }
+   ]
+  },
+  {
+   "title": "Family road trips",
+   "body": [
+    {
+     "t": "Children and grandparents set the real daily cap. Plan the overnights at their distance and the trip stays a holiday."
+    }
+   ]
+  },
+  {
+   "title": "Solo-driver safety",
+   "body": [
+    {
+     "t": "One driver, no relief: the cap is a safety device. Stages named in advance remove the 'one more hour' negotiation at dusk."
+    }
+   ]
+  },
+  {
+   "title": "Hotel budgeting",
+   "body": [
+    {
+     "t": "Named overnight towns can be priced tonight. An unnamed 'somewhere around mile 700' cannot."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 1,350-mile drive",
+   "body": [
+    {
+     "t": "At a 450-mile cap: three days, two overnights, each named where the day's miles run out. The same drive at a 600 cap is two brutal days — the planner shows both, the human chooses."
+    }
+   ]
+  },
+  {
+   "label": "Example · Split by days instead",
+   "body": [
+    {
+     "t": "Four days fixed for the same route reverses the question: the planner divides and names the stops, and the daily miles fall where the calendar puts them."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Daily caps and trip shape",
+  "intro": "Days and overnights for one example 1,350-mile route at different caps — your route and cap replace the illustration in the planner.",
+  "columns": [
+   "Daily cap",
+   "Driving days",
+   "Overnights",
+   "Trip character"
+  ],
+  "rows": [
+   [
+    "300 mi",
+    "5",
+    "4",
+    "Gentle, sightseeing survives"
+   ],
+   [
+    "400 mi",
+    "4",
+    "3",
+    "Comfortable touring"
+   ],
+   [
+    "450 mi",
+    "3",
+    "2",
+    "Purposeful, humane"
+   ],
+   [
+    "600 mi",
+    "3",
+    "2",
+    "Long days, early starts"
+   ],
+   [
+    "900 mi",
+    "2",
+    "1",
+    "The thing this page exists to prevent"
+   ]
+  ],
+  "note": "Days = ceil(distance ÷ cap): a 1,350-mile trip at a 600 cap still needs 3 calendar days of driving, because the last 150 miles are a day too."
+ },
+ "faq": [
+  [
+   "Does it book hotels?",
+   "No — it names the overnight towns, which is the decision booking sites cannot make for you. Book the town it names."
+  ],
+  [
+   "Can I split by number of days instead?",
+   "Yes — fix the days and the planner divides the route across them, naming each night's town."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Stages are distance-shaped; a day of mountain roads deserves a lower cap than a day of interstate, and your judgement sets it."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Stages end at road miles. A town 400 crow-miles away can be 460 by road — the planner works in the honest unit."
+  ],
+  [
+   "Can route results change over time?",
+   "Roads change slowly; towns do not move. Re-run a standing route each year, mostly for the roadworks."
+  ],
+  [
+   "What daily cap is sensible?",
+   "For most drivers 400–500 miles on fast roads, less on slow ones. Your last trip's honest average — from the Road Trip Average Speed Calculator — calibrates it."
+  ],
+  [
+   "Can I add stops of my own?",
+   "Yes — waypoints join the route and the stages re-form around them. A must-see town bends the plan, correctly."
+  ],
+  [
+   "The named town has no rooms that night.",
+   "Take the next town along the route — the planner's spacing still holds; only the pillow moved. Book early in festival country."
+  ],
+  [
+   "Can stages be in two countries?",
+   "Happily — the route crosses borders without noticing, and the towns named are simply where the miles end."
+  ],
+  [
+   "I drive an EV — different stops?",
+   "Your daily cap may be set by charging rather than fatigue. The stages still frame the days; chargers choose among the towns."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Day counts come from the "
+  },
+  {
+   "t": "Driving Days Calculator",
+   "l": "/tools/driving-days-calculator"
+  },
+  {
+   "t": "; rest within the day from the "
+  },
+  {
+   "t": "Road Trip Rest Stop Calculator",
+   "l": "/tools/road-trip-rest-stop-calculator"
+  },
+  {
+   "t": "; and the printed plan from the "
+  },
+  {
+   "t": "Route Roadbook Generator",
+   "l": "/tools/route-roadbook-generator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner"
+ ]
+}

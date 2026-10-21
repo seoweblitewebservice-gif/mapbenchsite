@@ -1,0 +1,189 @@
+{
+ "slug": "lat-lon-to-world-pixel-calculator",
+ "primary_keyword": "Latitude Longitude to World Pixel Calculator",
+ "secondary_keywords": [
+  "latitude longitude to world pixel calculator online",
+  "free latitude longitude to world pixel calculator",
+  "latitude longitude to world pixel calculator calculator",
+  "latitude longitude to world pixel calculator tool",
+  "how to calculate latitude longitude to world pixel calculator"
+ ],
+ "title": "Latitude Longitude to World Pixel Calculator",
+ "description": "Compute a point's world pixel coordinates at any zoom with the Latitude Longitude to World Pixel Calculator — the global pixel grid position. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, at zoom 15 the world is an 8,388,608-pixel square, and Times Square sits at pixel (2,470,317, 3,152,566) — one precise address in the largest image humanity maintains.",
+ "quick_answer": "The Latitude Longitude to World Pixel Calculator computes a point's pixel coordinates in the zoom level's world-pixel grid — the giant image tiles are cut from. Enter point and zoom and read its global pixel x and y — the position every tile and viewport derives from.",
+ "steps_intro": "Zoom levels are worlds made of pixels. Locate your point in one:",
+ "use_cases": [
+  {
+   "title": "Rendering and canvas work",
+   "body": [
+    {
+     "t": "Custom map renderers position features in world-pixel space. Compute reference points here to verify a renderer's math — tile cuts come from the "
+    },
+    {
+     "t": "Tile Calculator",
+     "l": "/tools/lat-lon-to-map-tile-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Viewport calculations",
+   "body": [
+    {
+     "t": "A viewport is a window into the world-pixel grid: centre pixel ± half the screen size. This calculator supplies the centre honestly."
+    }
+   ]
+  },
+  {
+   "title": "Debugging offsets",
+   "body": [
+    {
+     "t": "A marker off by exactly one tile (256 px) or by the y-flip reveals itself when the expected world pixel is known to the integer."
+    }
+   ]
+  },
+  {
+   "title": "Teaching the pyramid",
+   "body": [
+    {
+     "t": "Zoom 0 is one 256-px world; each level quadruples the pixels. Students who compute one point by hand stop fearing the pyramid."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Zoom 15's world",
+   "body": [
+    {
+     "t": "World size 8,388,608 px. Times Square at (2,470,317, 3,152,566): divide by 256 and the tile (9649, 12314) falls out with remainders as the in-tile pixel offset — the whole system in one division."
+    }
+   ]
+  },
+  {
+   "label": "Example · Zoom 0 sanity",
+   "body": [
+    {
+     "t": "At zoom 0 the world is a single tile: Times Square's pixel is about (76, 96) of 256 — x from its longitude fraction (0.294 × 256 ≈ 75), y from the Mercator fraction. Small numbers, same formulas."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "World sizes by zoom",
+  "intro": "The pixel world's growth — each zoom doubles each side.",
+  "columns": [
+   "Zoom",
+   "World size (px per side)",
+   "Pixels total"
+  ],
+  "rows": [
+   [
+    "0",
+    "256",
+    "65,536"
+   ],
+   [
+    "10",
+    "262,144",
+    "~68.7 billion"
+   ],
+   [
+    "15",
+    "8,388,608",
+    "~70.4 trillion"
+   ],
+   [
+    "19",
+    "134,217,728",
+    "~18 quadrillion"
+   ],
+   [
+    "20",
+    "268,435,456",
+    "Numbers stop meaning anything"
+   ]
+  ],
+  "note": "Nobody stores the world image — tiles are rendered or cached on demand. The world-pixel grid is a coordinate fiction of great practical power."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The point's global pixel coordinates at a zoom: x from longitude across the world width, y from latitude through the Mercator fraction of the world height."
+  ],
+  [
+   "Which map standard does it use?",
+   "The slippy-map Web Mercator standard — 256-pixel tiles, zoom pyramids, EPSG:3857 geometry in pixel dress."
+  ],
+  [
+   "Can I use this in production GIS?",
+   "It is the production formula map libraries use internally — yes for rendering work; measurement belongs to geodesic tools."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84, the frame web maps and GPS share — tile and pixel systems on this page are defined over it."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — pixels and tiles quantise the world; extra coordinate decimals beyond the cell size are decoration."
+  ],
+  [
+   "Pixel origin?",
+   "Top-left: x east from the date line's left edge, y south from the northern cap — screen convention, hence y's southward growth."
+  ],
+  [
+   "Fractional pixels?",
+   "Points land between pixels; the calculator reports the fractional truth and renderers round at draw time."
+  ],
+  [
+   "Relation to tiles?",
+   "Tile = world pixel ÷ 256 (integer part); in-tile offset = the remainder — two sibling calculators split exactly this division."
+  ],
+  [
+   "Very high zooms?",
+   "Zooms into the mid-20s exist in some stacks; the arithmetic is identical, the tiles are mostly imagination and parking lots."
+  ],
+  [
+   "Latitude cap?",
+   "±85.0511°, inherited from Mercator — beyond it, no pixel exists."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Tiles from pixels: the "
+  },
+  {
+   "t": "Latitude Longitude to Map Tile Calculator",
+   "l": "/tools/lat-lon-to-map-tile-calculator"
+  },
+  {
+   "t": "; offsets: the "
+  },
+  {
+   "t": "Map Tile Pixel Offset Calculator",
+   "l": "/tools/map-tile-pixel-offset-calculator"
+  },
+  {
+   "t": "; scale: the "
+  },
+  {
+   "t": "Map Meters per Pixel Calculator",
+   "l": "/tools/map-meters-per-pixel-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator"
+ ]
+}

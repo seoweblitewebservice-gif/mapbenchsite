@@ -1,0 +1,196 @@
+{
+ "slug": "h3-index-helper",
+ "primary_keyword": "H3 Hex Index Helper",
+ "secondary_keywords": [
+  "h3",
+  "h3 index",
+  "hexagon spatial index"
+ ],
+ "title": "H3 Hex Index Helper: Hexagonal Spatial Index",
+ "description": "Use coordinates as the basis for H3 hexagonal indexing workflows with the H3 Hex Index Helper — resolutions and cell sizes explained. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, H3 resolution 9 cells average about 0.105 km² — city-block scale — while resolution 7's 5.16 km² cells swallow neighbourhoods whole; choosing the resolution is choosing the analysis.",
+ "quick_answer": "The H3 Hex Index Helper uses coordinates as the basis for hexagonal spatial index workflows — Uber's H3 system of nested hexagon cells addressed by a single index. Enter a point and work with its cell — the modern alternative to square grids, with every neighbour at one distance.",
+ "steps_intro": "Hexagons: the grid where every neighbour is equally near:",
+ "use_cases": [
+  {
+   "title": "Ride, delivery and demand analytics",
+   "body": [
+    {
+     "t": "H3's home turf: bin trips and demand into equal-friendliness cells. Compare with the square-string approach of the "
+    },
+    {
+     "t": "Geohash Encoder",
+     "l": "/tools/geohash-encoder"
+    },
+    {
+     "t": " before choosing."
+    }
+   ]
+  },
+  {
+   "title": "Choosing a resolution",
+   "body": [
+    {
+     "t": "The table on this page maps resolutions 0–15 to average cell areas — the choice that decides whether your analysis sees blocks or boroughs."
+    }
+   ]
+  },
+  {
+   "title": "Neighbourhood operations",
+   "body": [
+    {
+     "t": "Rings around a cell (k-ring) are uniform in hexagons — surge zones and catchments drawn in cell steps behave the same in every direction."
+    }
+   ]
+  },
+  {
+   "title": "Privacy-aware aggregation",
+   "body": [
+    {
+     "t": "Publish counts per cell instead of points: pick a resolution whose cells hold enough people to be safe, using the area table as the guide."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Why hexagons beat squares",
+   "body": [
+    {
+     "t": "A square cell has two neighbour distances (edge and corner); a hexagon has one. Movement, spread and diffusion models stop lying about diagonals the day they switch to hexagons."
+    }
+   ]
+  },
+  {
+   "label": "Example · The twelve pentagons",
+   "body": [
+    {
+     "t": "A hexagon grid cannot tile a sphere perfectly — H3 inherits exactly 12 pentagon cells from its icosahedron base, one famously in the Atlantic. Every H3 user meets them eventually; the helper's framing prepares you."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "H3 resolutions, average cell areas",
+  "intro": "From Uber's published H3 table (averages — cells vary slightly across the globe).",
+  "columns": [
+   "Resolution",
+   "Avg cell area",
+   "Feels like"
+  ],
+  "rows": [
+   [
+    "0",
+    "~4,357 km²",
+    "A small country"
+   ],
+   [
+    "5",
+    "~253 km²",
+    "A metro area"
+   ],
+   [
+    "7",
+    "~5.16 km²",
+    "A district"
+   ],
+   [
+    "9",
+    "~0.105 km²",
+    "A city block"
+   ],
+   [
+    "11",
+    "~0.00215 km²",
+    "A building plot"
+   ],
+   [
+    "15",
+    "~0.0000009 km²",
+    "A desk — the joke resolution"
+   ]
+  ],
+  "note": "Edge lengths scale with area: res 9's average edge is ~174 m, res 7's ~1.22 km. Cells are indexed by a 64-bit integer usually written in hexadecimal — hence 'hex' twice over."
+ },
+ "faq": [
+  [
+   "Is this the Uber H3 library?",
+   "It is a helper for H3-based workflows — the concepts, resolutions and indexing approach of Uber's open-source H3. Production pipelines should use the official H3 libraries for their language; this page is the understanding and spot-checking layer."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84, the frame web maps and GPS share — tile and pixel systems on this page are defined over it."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — pixels and tiles quantise the world; extra coordinate decimals beyond the cell size are decoration."
+  ],
+  [
+   "Can I copy the result into GIS software?",
+   "H3 indexes paste as identifiers; QGIS and most geo stacks have H3 plugins or libraries to render cells from indexes."
+  ],
+  [
+   "H3 versus geohash?",
+   "Hexagons versus rectangles: uniform neighbours versus prefix simplicity. Geohash wins on string tricks, H3 wins on spatial statistics — many stacks use both."
+  ],
+  [
+   "H3 versus S2?",
+   "Google's S2 (squares on a cube-sphere) is the other modern system. The choice is ecosystem: H3's analytics community versus S2's geometry rigour."
+  ],
+  [
+   "Are cells exactly equal-area?",
+   "Nearly — areas vary a few percent across the globe, far tighter than latitude-longitude grids. 'Average' in the table is honest wording."
+  ],
+  [
+   "What is a k-ring?",
+   "All cells within k steps of a centre cell — the hexagon's clean neighbourhood, with (3k(k+1)+1) cells: 7 at k=1, 19 at k=2."
+  ],
+  [
+   "Pentagons break things?",
+   "Pentagon cells have 5 neighbours instead of 6; libraries handle them, algorithms should be told. Twelve exist, always — sphere geometry's tax."
+  ],
+  [
+   "Point to cell is many-to-one?",
+   "Deliberately — indexing trades the point for its cell, the foundation of aggregation and privacy uses."
+  ],
+  [
+   "Hierarchies?",
+   "Each cell has a parent at the next coarser resolution (roughly 7 children per parent) — the tree that rollups are built on."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Rectangles: the "
+  },
+  {
+   "t": "Geohash Encoder",
+   "l": "/tools/geohash-encoder"
+  },
+  {
+   "t": "; area grids: the "
+  },
+  {
+   "t": "GARS Converter",
+   "l": "/tools/gars-converter"
+  },
+  {
+   "t": "; military points: the "
+  },
+  {
+   "t": "MGRS Converter",
+   "l": "/tools/mgrs-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator"
+ ]
+}

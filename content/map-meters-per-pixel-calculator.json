@@ -1,0 +1,194 @@
+{
+ "slug": "map-meters-per-pixel-calculator",
+ "primary_keyword": "Map Meters Per Pixel Calculator",
+ "secondary_keywords": [
+  "map meters per pixel calculator online",
+  "free map meters per pixel calculator",
+  "map meters per pixel calculator calculator",
+  "map meters per pixel calculator tool",
+  "how to calculate map meters per pixel calculator"
+ ],
+ "title": "Map Meters per Pixel Calculator: Scale by Zoom",
+ "description": "Compute ground metres per screen pixel for any zoom and latitude with the Map Meters per Pixel Calculator — the web map scale number. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, zoom 15 in New York is 3.619 metres per pixel — the number that tells you a screenshot's building, measured at 28 pixels, is about 100 metres long.",
+ "quick_answer": "The Map Meters per Pixel Calculator computes the ground size of one screen pixel on a Web Mercator map at a zoom and latitude. Enter zoom and latitude and read the scale — the number behind screenshot measurement and every honest use of a web map as a measuring tool.",
+ "steps_intro": "One pixel, priced in metres, anywhere on Earth:",
+ "use_cases": [
+  {
+   "title": "Screenshot measurement",
+   "body": [
+    {
+     "t": "Measure features in map images: pixels × m/px = ground size. The "
+    },
+    {
+     "t": "Map Pixels to Ground Distance",
+     "l": "/tools/map-pixels-to-ground-distance"
+    },
+    {
+     "t": " tool multiplies it out for you."
+    }
+   ]
+  },
+  {
+   "title": "Choosing zooms for figures",
+   "body": [
+    {
+     "t": "A figure that must resolve 10 m features needs m/px well under 10 — z17 at mid-latitudes (1.19 m/px at the equator, finer poleward). Choose before you render."
+    }
+   ]
+  },
+  {
+   "title": "Scale bar verification",
+   "body": [
+    {
+     "t": "Check a map's scale bar against the computed m/px — disagreement means the image was resized, a fact worth knowing before measuring anything on it."
+    }
+   ]
+  },
+  {
+   "title": "Teaching map scale",
+   "body": [
+    {
+     "t": "Digital maps killed the printed scale ratio; m/px is its successor concept, and this calculator makes it tangible."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The equator ladder",
+   "body": [
+    {
+     "t": "Zoom 0: 156,543 m/px (the whole world in 256 px). Each zoom halves it: z10 152.9, z15 4.77, z19 0.298. Nineteen halvings from planet to pavement."
+    }
+   ]
+  },
+  {
+   "label": "Example · Latitude's gift",
+   "body": [
+    {
+     "t": "At 60° the same zooms are worth half the metres (cos 60° = 0.5): z15 gives 2.39 m/px. Northern maps are secretly higher-resolution — Mercator's compensation for its area lies."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Metres per pixel (equator)",
+  "intro": "The standard scale — multiply by cos(latitude) for elsewhere… precisely, the value at latitude = equator value × cos(lat).",
+  "columns": [
+   "Zoom",
+   "m/px (equator)",
+   "m/px at 45°"
+  ],
+  "rows": [
+   [
+    "0",
+    "156,543.03",
+    "110,693"
+   ],
+   [
+    "10",
+    "152.87",
+    "108.10"
+   ],
+   [
+    "14",
+    "9.55",
+    "6.76"
+   ],
+   [
+    "16",
+    "2.39",
+    "1.69"
+   ],
+   [
+    "18",
+    "0.597",
+    "0.422"
+   ],
+   [
+    "20",
+    "0.149",
+    "0.105"
+   ]
+  ],
+  "note": "Based on the tile standard's equatorial circumference (2π × 6,378,137 m) over 256 × 2^zoom pixels. Screen DPI does not enter — map pixels, not device pixels."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Ground metres per map pixel = 156,543.03392 × cos(latitude) ÷ 2^zoom — the Web Mercator scale formula, evaluated for your zoom and latitude."
+  ],
+  [
+   "Which map standard does it use?",
+   "The slippy-map standard (256-px tiles, EPSG:3857 geometry) — the scale your actual maps render at."
+  ],
+  [
+   "Can I use this in production GIS?",
+   "For display scale, yes — it is the renderer's own arithmetic. Metric analysis belongs to geodesic measurement, not pixel scale."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 — the frame GPS produces and web maps consume."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — resolution is not accuracy; the precision tools on this site price each decimal place in metres."
+  ],
+  [
+   "Device pixels versus map pixels?",
+   "Retina screens pack 2 device px per map px; measurement uses map pixels — screenshots from retina displays are double-sized, and the m/px here still applies to the map's own pixel grid, so halve screenshot counts from retina captures."
+  ],
+  [
+   "North-south scale differs?",
+   "Locally in Mercator the scale is isotropic (same both directions at a point) — one number serves the point."
+  ],
+  [
+   "Printed maps?",
+   "Print scale is set by DPI and page geometry — compute from the scale bar, not from zoom logic."
+  ],
+  [
+   "Why 156,543?",
+   "Earth's equatorial circumference in the projection (40,075,016 m) divided by 256 pixels at zoom 0. The constant is geography, not convention."
+  ],
+  [
+   "fractional zooms?",
+   "Scroll zooms are fractional in modern libraries — the formula accepts them; tiles are chosen from the nearest integer level beneath."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Use the rate: "
+  },
+  {
+   "t": "Map Pixels to Ground Distance",
+   "l": "/tools/map-pixels-to-ground-distance"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Ground Distance to Map Pixels",
+   "l": "/tools/ground-distance-to-map-pixels"
+  },
+  {
+   "t": "; tile sizes: the "
+  },
+  {
+   "t": "Map Tile Ground Width Calculator",
+   "l": "/tools/map-tile-ground-width-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator"
+ ]
+}

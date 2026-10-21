@@ -1,0 +1,189 @@
+{
+ "slug": "longitude-degree-distance-calculator",
+ "primary_keyword": "Longitude Degree Distance Calculator",
+ "secondary_keywords": [
+  "longitude degree distance calculator online",
+  "free longitude degree distance calculator",
+  "longitude degree distance calculator calculator",
+  "longitude degree distance calculator tool",
+  "how to calculate longitude degree distance calculator"
+ ],
+ "title": "Longitude Degree Distance Calculator",
+ "description": "Convert a longitude-degree difference into east-west distance with the Longitude Degree Distance Calculator — at the span's own latitude. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, the 0.2074 degrees of longitude between Times Square and JFK is 17.5 km of east-west ground at their latitude — and would be 23.1 km at the equator, which is why the latitude input exists.",
+ "quick_answer": "The Longitude Degree Distance Calculator converts a longitude-degree difference into east-west distance at the latitude where the span actually lies. Enter the difference and the latitude and read kilometres or miles — the dedicated instrument for longitude spans, built around the cosine truth the general pages summarise.",
+ "steps_intro": "Longitude spans, priced where they lie:",
+ "use_cases": [
+  {
+   "title": "Study-area widths",
+   "body": [
+    {
+     "t": "A region defined by longitudes gets its true width at its own latitude — the number the methods section should carry."
+    }
+   ]
+  },
+  {
+   "title": "Route east-west components",
+   "body": [
+    {
+     "t": "How much of the journey was pure easting, separated from the northing the "
+    },
+    {
+     "t": "Latitude Degree Distance Calculator",
+     "l": "/tools/latitude-degree-distance-calculator"
+    },
+    {
+     "t": " prices."
+    }
+   ]
+  },
+  {
+   "title": "Verifying claimed extents",
+   "body": [
+    {
+     "t": "A vendor's 'covers 500 km east-west' from a 5° span at 55°: 5 × 63.9 = 319 km. The calculator is the audit."
+    }
+   ]
+  },
+  {
+   "title": "Grid and cell sizing",
+   "body": [
+    {
+     "t": "Degree-gridded data (climate cells, 1° tiles) has latitude-dependent ground size — this conversion is the cell-size table's engine."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Same span, two planets",
+   "body": [
+    {
+     "t": "2° of longitude: 222.6 km at the equator, 111.6 km at 60° — a factor of two from latitude alone. Any tool ignoring the input is selling the equator's answer to everyone."
+    }
+   ]
+  },
+  {
+   "label": "Example · The date-line span",
+   "body": [
+    {
+     "t": "From 179.5°E to 179.5°W is 1° of span — the short way across the seam. Differences should be taken the short way; the calculator assumes the true (smaller) difference you give it."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Longitude degree lengths (WGS84)",
+  "intro": "The family's shared table — computed at each latitude.",
+  "columns": [
+   "At latitude",
+   "1° longitude",
+   "0.1°"
+  ],
+  "rows": [
+   [
+    "0°",
+    "111.319 km",
+    "11.13 km"
+   ],
+   [
+    "30°",
+    "96.486 km",
+    "9.65 km"
+   ],
+   [
+    "45°",
+    "78.847 km",
+    "7.88 km"
+   ],
+   [
+    "60°",
+    "55.800 km",
+    "5.58 km"
+   ],
+   [
+    "75°",
+    "28.902 km",
+    "2.89 km"
+   ]
+  ],
+  "note": "Mid-latitude of the span is the right rate for long spans — degree length changes along the way, and the middle is the honest compromise."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "East-west ground distance for a longitude-degree difference at a stated latitude, from WGS84 ellipsoid geometry."
+  ],
+  [
+   "Do I need an account?",
+   "No — difference and latitude in, distance out."
+  ],
+  [
+   "Can I rely on this for professional work?",
+   "For planning, reporting and verification, yes — ellipsoid-true numbers. Legal measurement remains survey practice."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 — the frame GPS produces and web maps consume."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — resolution is not accuracy; the precision tools on this site price each decimal place in metres."
+  ],
+  [
+   "How does it differ from the Degrees Longitude page?",
+   "Same physics; this page is framed for a difference between two longitudes (a span), that one for degrees generally. Doorways differ, arithmetic agrees."
+  ],
+  [
+   "Very wide spans (90°)?",
+   "A quarter of the planet's girth at that latitude — the mid-latitude rate keeps it honest within a percent."
+  ],
+  [
+   "Southern latitudes?",
+   "Symmetric — −45° prices like +45°. The ellipsoid does not play hemispheric favourites."
+  ],
+  [
+   "Time zones again?",
+   "15° per solar hour at any latitude — but the kilometres per hour of longitude halve by 60°, computed above."
+  ],
+  [
+   "Polar research?",
+   "Near the pole longitude differences become metres — the calculator follows the geometry to its honest zero."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "General lane: "
+  },
+  {
+   "t": "Degrees Longitude to Kilometers Calculator",
+   "l": "/tools/longitude-degree-distance"
+  },
+  {
+   "t": "; north-south: the "
+  },
+  {
+   "t": "Latitude Degree Distance Calculator",
+   "l": "/tools/latitude-degree-distance-calculator"
+  },
+  {
+   "t": "; sets: the "
+  },
+  {
+   "t": "Coordinate Span Calculator",
+   "l": "/tools/coordinate-span-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator",
+  "coordinate-offset-calculator"
+ ]
+}

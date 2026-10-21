@@ -1,0 +1,187 @@
+{
+ "slug": "trek-stage-planner",
+ "primary_keyword": "Trek Stage Planner",
+ "secondary_keywords": [
+  "hiking stages",
+  "split hike into days",
+  "trail day planner"
+ ],
+ "title": "Trek Stage Planner: Split a Trail into Days",
+ "description": "Route a trek and split it into stages with distance and climb per day using the Trek Stage Planner — night ends named near real places. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 58-mile trail over five days becomes five stages of about 11–12 miles, each with its climb counted and its ending named — before the boots are bought.",
+ "quick_answer": "The Trek Stage Planner routes your trail from start to finish, splits it into stages by your number of days or a distance cap per day, and reports each stage's distance and climb with the place it ends near. Build the route, choose the split, review it day by day.",
+ "steps_intro": "Stages are where a trail becomes a calendar. Cut yours deliberately:",
+ "use_cases": [
+  {
+   "title": "Trail holidays and thru-hike legs",
+   "body": [
+    {
+     "t": "The stage table is the trek's contract with itself. The "
+    },
+    {
+     "t": "Multi-Day Trek Roadbook",
+     "l": "/tools/multi-day-trek-roadbook"
+    },
+    {
+     "t": " turns the same plan into the printable document."
+    }
+   ]
+  },
+  {
+   "title": "Climb-aware splitting",
+   "body": [
+    {
+     "t": "Equal miles are not equal days: the stage with the pass in it deserves to be shorter. Climb per stage is printed precisely so you can un-equalise the split."
+    }
+   ]
+  },
+  {
+   "title": "Lodging and resupply",
+   "body": [
+    {
+     "t": "Stage ends near places are where beds and shops are argued for. A stage ending nowhere is a camping decision, surfaced early."
+    }
+   ]
+  },
+  {
+   "title": "Group honesty",
+   "body": [
+    {
+     "t": "The least experienced walker's day is the stage length. Plan stages the whole party can finish smiling."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Five days of trail",
+   "body": [
+    {
+     "t": "58 miles ÷ 5 = 11.6 miles a day on average — but the planner shows the split by the route's actual shape, so a river day and a ridge day read differently, as they should."
+    }
+   ]
+  },
+  {
+   "label": "Example · Cap by distance instead",
+   "body": [
+    {
+     "t": "Set a 15 km daily cap on a 92 km route and the stages count themselves: about six days, each ending where its 15 km ran out."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading a stage row",
+  "intro": "What each stage's numbers decide — the table the planner builds for your route.",
+  "columns": [
+   "Stage figure",
+   "Tells you",
+   "Decide from it"
+  ],
+  "rows": [
+   [
+    "Distance",
+    "The day's miles",
+    "Whether it fits the party"
+   ],
+   [
+    "Climb",
+    "The day's ascent",
+    "Which day is the hard one"
+   ],
+   [
+    "Ends near",
+    "Nearest place to the split",
+    "Beds, food, escape routes"
+   ],
+   [
+    "Cumulative",
+    "Trail progress",
+    "The halfway moment"
+   ],
+   [
+    "Day count",
+    "Total stages",
+    "The calendar and the food weight"
+   ]
+  ],
+  "note": "Stages split the routed distance; real trails place huts and water where they please, and the planner's named endings are where you negotiate with that reality."
+ },
+ "faq": [
+  [
+   "Are the night stops real places with lodging?",
+   "The stage ends name the place nearest the split point. Lodging existing there is a booking question — the planner gives you the 'where' to check, early enough to matter."
+  ],
+  [
+   "How are stages split?",
+   "By your rule: a fixed day count (distance divided evenly) or a maximum per day (stages accumulate until the cap). Climb is reported per stage so you can adjust."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Trails have weather, daylight and river levels instead of traffic — all yours to read on the day."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Trails wind most of all. Stage distances are the routed ones, the ground your boots will meet."
+  ],
+  [
+   "Can route results change over time?",
+   "Paths re-route and bridges wash out; re-plan each season rather than trusting last year's stages."
+  ],
+  [
+   "Can stages be unequal on purpose?",
+   "Yes — move a waypoint to where a short day should end and the split re-forms around it. A rest-short day before the pass is craft, not cheating."
+  ],
+  [
+   "Stage times?",
+   "Each stage's climb feeds Naismith thinking in the Hiking Route Planner with Elevation — distance stages here, timed stages there."
+  ],
+  [
+   "Stages across a border or a park boundary?",
+   "The split is distance-blind to jurisdictions; permits and rules are the planner's human layer on top of the stages."
+  ],
+  [
+   "Can a stage end at a specific hut?",
+   "Place a waypoint at the hut and the split bends to it — must-end points are what waypoints are for."
+  ],
+  [
+   "Rest day mid-trek?",
+   "Insert it as a zero-distance stage in your calendar; the planner's stages remain the walking days around it."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The printable version is the "
+  },
+  {
+   "t": "Multi-Day Trek Roadbook",
+   "l": "/tools/multi-day-trek-roadbook"
+  },
+  {
+   "t": "; times and climb rule the "
+  },
+  {
+   "t": "Hiking Route Planner with Elevation",
+   "l": "/tools/hiking-route-planner-with-elevation"
+  },
+  {
+   "t": "; and stages on roads are the "
+  },
+  {
+   "t": "Road Trip Overnight Stop Planner",
+   "l": "/tools/road-trip-overnight-stop-planner"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner"
+ ]
+}

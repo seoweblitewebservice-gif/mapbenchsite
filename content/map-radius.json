@@ -1,0 +1,222 @@
+{
+ "slug": "map-radius",
+ "primary_keyword": "Map Radius Tool",
+ "secondary_keywords": [
+  "radius map",
+  "draw circle on map",
+  "map radius tool online"
+ ],
+ "title": "Map Radius Tool: Draw a Radius Around a Point",
+ "description": "Draw a true radius around any point with the Map Radius Tool: area and circumference in miles and km, presets, and export. Free, no sign-up.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 25-mile radius around downtown Chicago covers approx. 1,964 square miles (5,085 km²) and reaches Evanston, Oak Park and Gary — but not Naperville, which sits just outside at 28.4 miles.",
+ "quick_answer": "The Map Radius Tool draws a true circle around any place on the map. Set a center and a radius in miles or kilometers and it shows the circle with its area and circumference, drawn geodesically so the size stays honest anywhere on Earth. Free, no account needed.",
+ "steps_intro": "A radius turns the vague phrase “near here” into a boundary you can measure, share and defend. Three steps:",
+ "use_cases": [
+  {
+   "title": "Delivery and service areas",
+   "body": [
+    {
+     "t": "Draw the honest coverage circle around a depot, kitchen or store before you promise a delivery zone. Then test the same area against real roads with the "
+    },
+    {
+     "t": "Drive Time Map",
+     "l": "/tools/drive-time-map"
+    },
+    {
+     "t": " — the circle is the promise, the road network is the truth."
+    }
+   ]
+  },
+  {
+   "title": "Property and school searches",
+   "body": [
+    {
+     "t": "House-hunters think in radii: within two miles of a school, within five of a station. A measured circle turns that wish into a search boundary you can hand to an agent or reuse on the next listing."
+    }
+   ]
+  },
+  {
+   "title": "Local marketing and territories",
+   "body": [
+    {
+     "t": "Leaflet drops, franchise territories and sales patches are all radius decisions. Drawing the circle first shows exactly which neighborhoods are in — and which competitor's patch you are about to overlap."
+    }
+   ]
+  },
+  {
+   "title": "Planning and research buffers",
+   "body": [
+    {
+     "t": "Buffers around a river, a proposed site or a protected area are standard planning inputs. Pair the circle with "
+    },
+    {
+     "t": "Population Within a Radius",
+     "l": "/tools/population-within-radius"
+    },
+    {
+     "t": " when the question becomes how many people the buffer contains."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · United States",
+   "body": [
+    {
+     "t": "A 25-mile (40.2 km) radius centered on downtown Chicago (41.8781, −87.6298) reaches Oak Park at approx. 8.0 miles (12.8 km), Evanston at 11.7 miles (18.8 km) and Gary, Indiana at 24.5 miles (39.4 km) — just inside the line. Naperville, at 28.4 miles (45.7 km), falls outside: a circle is a boundary, not a rough guess."
+    }
+   ]
+  },
+  {
+   "label": "Example · Europe",
+   "body": [
+    {
+     "t": "A 20 km (12.4 mi) radius around central Paris (48.8566, 2.3522) takes in Saint-Denis at approx. 8.9 km (5.5 mi), Orly at 12.7 km (7.9 mi) and Versailles at 17.4 km (10.8 mi) — all three inside the line, which is why a 20 km circle is a useful first sketch of the capital's day-trip field."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Popular radius sizes",
+  "intro": "Circumference and area for the radii people draw most, from A = πr² and C = 2πr, labeled approx. — at these sizes the tool's geodesic figures on the sphere differ from the flat formulas by well under 1%.",
+  "columns": [
+   "Radius",
+   "Circumference (mi)",
+   "Circumference (km)",
+   "Area (mi²)",
+   "Area (km²)"
+  ],
+  "rows": [
+   [
+    "1 mile",
+    "6.3",
+    "10.1",
+    "3.1",
+    "8.1"
+   ],
+   [
+    "2 miles",
+    "12.6",
+    "20.2",
+    "12.6",
+    "32.5"
+   ],
+   [
+    "5 miles",
+    "31.4",
+    "50.6",
+    "78.5",
+    "203.4"
+   ],
+   [
+    "10 miles",
+    "62.8",
+    "101.1",
+    "314.2",
+    "813.7"
+   ],
+   [
+    "25 miles",
+    "157.1",
+    "252.8",
+    "1,963.5",
+    "5,085.4"
+   ],
+   [
+    "50 miles",
+    "314.2",
+    "505.6",
+    "7,854.0",
+    "20,341.7"
+   ],
+   [
+    "75 miles",
+    "471.2",
+    "758.4",
+    "17,671.5",
+    "45,768.9"
+   ],
+   [
+    "100 miles",
+    "628.3",
+    "1,011.2",
+    "31,415.9",
+    "81,366.9"
+   ]
+  ],
+  "note": "Area is geometric coverage, not reachability: a river, a mountain range or a missing bridge can make the far side of a circle a long drive. For road-based reach, use the Drive Time Map."
+ },
+ "faq": [
+  [
+   "Why does my circle look like an oval on the map?",
+   "Because the map is flat and the Earth is not. Web maps stretch east–west distances as you move away from the equator, so a true circle drawn geodesically appears as an oval on screen — most noticeably at high latitudes. The measurements (radius, circumference, area) are computed on the sphere and stay correct even when the picture looks stretched."
+  ],
+  [
+   "Is a radius the same as driving distance?",
+   "No. A radius is straight-line geometry around a center. Driving distance follows the road network and is always longer and irregularly shaped. Use the radius for a fast, defensible boundary, and a drive-time area when the real question is how long the journey takes."
+  ],
+  [
+   "How accurate is the area figure?",
+   "The circle is drawn with geodesic mathematics on the WGS84 sphere, so the area is a true surface area rather than a flat-map estimate. It is suitable for planning, marketing and research; legal boundaries and land disputes still need a licensed survey."
+  ],
+  [
+   "What is the difference between radius and diameter?",
+   "The radius is the distance from the center to the edge — the number you enter here. The diameter is twice that, edge to edge through the center. A “10-mile radius” covers a circle 20 miles across, which is four times the area of a 5-mile radius, not two times."
+  ],
+  [
+   "Why is the area so much bigger than I expected?",
+   "Area grows with the square of the radius. Doubling the radius from 5 to 10 miles multiplies the area by four (approx. 78.5 to 314.2 square miles). This is the most common surprise in radius planning, and the table on this page shows the growth across the common sizes."
+  ],
+  [
+   "Can I work in kilometres instead of miles?",
+   "Yes. The tool works in both units, and every figure on this page is given in miles and kilometres. For European examples the kilometre figure is listed first; for US examples, miles come first."
+  ],
+  [
+   "Can I share the circle I drew?",
+   "Yes — the result is encoded in the page address, so the link reopens the same center and radius for anyone you send it to. That makes a radius decision easy to put in an email, a listing or a planning document."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "A circle answers “how far as the crow flies” — when the question becomes “how far by road”, continue to the "
+  },
+  {
+   "t": "Drive Time Map",
+   "l": "/tools/drive-time-map"
+  },
+  {
+   "t": ", which draws reach on the real network. To count what falls inside your circle, use "
+  },
+  {
+   "t": "Population Within a Radius",
+   "l": "/tools/population-within-radius"
+  },
+  {
+   "t": " for people, "
+  },
+  {
+   "t": "Cities Within a Radius",
+   "l": "/tools/cities-within-radius"
+  },
+  {
+   "t": " for settlements, or "
+  },
+  {
+   "t": "ZIP Codes Within a Radius",
+   "l": "/tools/zip-codes-within-radius"
+  },
+  {
+   "t": " for a postal list you can mail to."
+  }
+ ],
+ "more_tools": [
+  "acreage-map-calculator",
+  "acres-to-hectares-converter",
+  "acres-to-square-feet-converter",
+  "buffer-zone-map",
+  "center-of-polygon",
+  "circle-area-from-radius"
+ ]
+}

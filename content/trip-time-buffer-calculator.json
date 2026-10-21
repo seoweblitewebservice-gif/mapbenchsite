@@ -1,0 +1,201 @@
+{
+ "slug": "trip-time-buffer-calculator",
+ "primary_keyword": "Trip Time Buffer Calculator",
+ "secondary_keywords": [
+  "trip time buffer calculator online",
+  "free trip time buffer calculator",
+  "trip time buffer calculator calculator",
+  "trip time buffer calculator tool",
+  "how to calculate trip time buffer calculator"
+ ],
+ "title": "Trip Time Buffer Calculator: Pad Any Estimate",
+ "description": "Add a percentage buffer to a travel-time estimate with the Trip Time Buffer Calculator — padded totals and leave-by times. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 3-hour estimate with a 25% buffer becomes 3 hours 45 minutes — and a 10:00 arrival stops depending on the road's good mood.",
+ "quick_answer": "The Trip Time Buffer Calculator adds a percentage allowance to a base travel-time estimate and returns the padded total. Enter the estimate from your routing tool and the buffer your experience demands, and read the honest planning figure — the one leave-by times and promises should be built from.",
+ "steps_intro": "Every estimate deserves a margin. Size yours instead of guessing it:",
+ "use_cases": [
+  {
+   "title": "Leave-by times",
+   "body": [
+    {
+     "t": "Arrival deadline minus padded duration is the departure that survives reality. The "
+    },
+    {
+     "t": "Road Trip Arrival Time Calculator",
+     "l": "/tools/road-trip-arrival-time-calculator"
+    },
+    {
+     "t": " does the clock half."
+    }
+   ]
+  },
+  {
+   "title": "Airport and ferry discipline",
+   "body": [
+    {
+     "t": "Some arrivals punish lateness with a missed day. Their buffers are not pessimism; they are the price of the plane."
+    }
+   ]
+  },
+  {
+   "title": "Delivery windows",
+   "body": [
+    {
+     "t": "Promise the padded figure, deliver at the unpadded one, and be early more often than explained."
+    }
+   ]
+  },
+  {
+   "title": "Calibrating your own optimism",
+   "body": [
+    {
+     "t": "Track estimate versus actual for a month: the ratio is your personal buffer, measured. Most people meet their number with horror and then relief."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The quarter again",
+   "body": [
+    {
+     "t": "3 h × 1.25 = 3 h 45 min. Arrive-by 10:00 → leave 06:15, not 07:00. The 45 minutes is where the traffic jam, the petrol stop and the forgotten passport live."
+    }
+   ]
+  },
+  {
+   "label": "Example · The modest fifth",
+   "body": [
+    {
+     "t": "2 h 30 min × 1.20 = 3 h 00 min exactly. A 20% buffer on a familiar route is often the difference between a plan and a hope."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Buffers on common estimates",
+  "intro": "Estimate × (1 + buffer) — pick the column your journey's stakes deserve.",
+  "columns": [
+   "Base estimate",
+   "+10%",
+   "+20%",
+   "+25%",
+   "+50%"
+  ],
+  "rows": [
+   [
+    "1 h 00 m",
+    "1 h 06 m",
+    "1 h 12 m",
+    "1 h 15 m",
+    "1 h 30 m"
+   ],
+   [
+    "2 h 30 m",
+    "2 h 45 m",
+    "3 h 00 m",
+    "3 h 08 m",
+    "3 h 45 m"
+   ],
+   [
+    "3 h 00 m",
+    "3 h 18 m",
+    "3 h 36 m",
+    "3 h 45 m",
+    "4 h 30 m"
+   ],
+   [
+    "5 h 20 m",
+    "5 h 52 m",
+    "6 h 24 m",
+    "6 h 40 m",
+    "8 h 00 m"
+   ],
+   [
+    "8 h 00 m",
+    "8 h 48 m",
+    "9 h 36 m",
+    "10 h 00 m",
+    "12 h 00 m"
+   ]
+  ],
+  "note": "Buffers scale with the estimate — a percentage, not a flat 'add half an hour', because long journeys collect proportionally more life."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "A padded travel time: base estimate × (1 + buffer percentage), with the buffer minutes shown as their own figure."
+  ],
+  [
+   "Do I need an account?",
+   "No. Estimate and percentage in, padded time out."
+  ],
+  [
+   "Can I rely on this for professional work?",
+   "Buffers are how professionals quote — dispatch and logistics run on padded figures. This calculator makes the padding explicit and consistent."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No — the buffer is precisely your allowance for the traffic and life the estimate cannot see."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "It inflates the base estimate, which the buffer then scales. Pad the road-based figure, always."
+  ],
+  [
+   "What buffer should I use?",
+   "Familiar route, slack deadline: 10–15%. Unfamiliar or high-stakes: 25–50%. Your own estimate-versus-actual history outranks these defaults."
+  ],
+  [
+   "Is a buffer just pessimism?",
+   "It is insurance priced in minutes. The unpadded estimate is the journey where nothing unexpected happens — a journey type rarely sighted."
+  ],
+  [
+   "Buffer or earlier alarm — same thing?",
+   "The buffer is a property of the plan; the alarm obeys it. Compute the buffer, then set the alarm from the padded figure."
+  ],
+  [
+   "My estimates are always short by half an hour flat.",
+   "Then a flat allowance may fit your life better — but check whether the shortfall grows on long trips; percentages win when it does."
+  ],
+  [
+   "Do professionals really add 25%?",
+   "Many add more on unfamiliar ground. The visible buffer's virtue is that it can be argued with — the invisible one cannot."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Base estimates come from the "
+  },
+  {
+   "t": "Travel Time Estimator",
+   "l": "/tools/travel-time-estimator"
+  },
+  {
+   "t": "; arrivals from the "
+  },
+  {
+   "t": "Road Trip Arrival Time Calculator",
+   "l": "/tools/road-trip-arrival-time-calculator"
+  },
+  {
+   "t": "; and the simple division from the "
+  },
+  {
+   "t": "ETA Calculator",
+   "l": "/tools/eta-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-route-planner",
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator",
+  "drive-time-map"
+ ]
+}

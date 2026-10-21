@@ -1,0 +1,175 @@
+{
+ "slug": "competitor-distance-map",
+ "primary_keyword": "Competitor Distance Map",
+ "secondary_keywords": [
+  "competitor distance",
+  "store spacing",
+  "rival location distance"
+ ],
+ "title": "Competitor Distance Map: Store Spacing Measured",
+ "description": "Plot your location against competitors and read the straight-line separation with the Competitor Distance Map — spacing for market decisions. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, two Midtown Manhattan locations — Times Square and Grand Central — sit approx. 0.9 km (0.6 miles) apart: in dense retail, that gap can be a whole market; in a suburb it would be nothing.",
+ "quick_answer": "The Competitor Distance Map plots your business location against competitor locations and measures the straight-line separation and bearing between them. It answers the spacing questions behind site decisions — how close is the nearest rival, and where is the gap — with geography instead of impressions.",
+ "steps_intro": "Site decisions fail on vibes. Measure the spacing first:",
+ "use_cases": [
+  {
+   "title": "New site screening",
+   "body": [
+    {
+     "t": "A candidate unit measured against every existing rival shows whether it fills a genuine gap or starts a price war on the same block. Shortlist here, then walk the top candidates with the "
+    },
+    {
+     "t": "Closest Facility Finder",
+     "l": "/tools/closest-facility-finder"
+    },
+    {
+     "t": " run from your customers' side."
+    }
+   ]
+  },
+  {
+   "title": "Franchise territory defence",
+   "body": [
+    {
+     "t": "When a franchisee claims a new rival store breaches an agreed spacing, this map produces the number the agreement is actually about — straight-line separation between the two doors."
+    }
+   ]
+  },
+  {
+   "title": "Competitor opening response",
+   "body": [
+    {
+     "t": "A rival opening nearby is a distance fact before it is a panic: measure it. Half a mile in a city centre and five miles in a rural market are different events wearing the same headline."
+    }
+   ]
+  },
+  {
+   "title": "Portfolio reviews",
+   "body": [
+    {
+     "t": "Chains auditing their own estate use pairwise spacing to spot the two stores quietly splitting one catchment — the map shows the overlap a spreadsheet of addresses hides."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Dense urban spacing",
+   "body": [
+    {
+     "t": "Times Square (40.7580, −73.9855) to Grand Central (40.7527, −73.9772): approx. 0.9 km (0.6 mi), bearing 130°. Two locations can be this close and serve different flows entirely — the number frames the question; footfall answers it."
+    }
+   ]
+  },
+  {
+   "label": "Example · A suburban gap",
+   "body": [
+    {
+     "t": "From downtown Chicago, the same-brand question looks different: Oak Park is approx. 8.0 miles (12.8 km) out and Evanston 11.7 miles (18.8 km). At suburban scale, gaps of this size are separate markets — the map keeps the two scales from being judged by one rule."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading separation distances",
+  "intro": "There is no universal 'too close' — but separation bands mean different things in different retail geographies. These are reading conventions for the numbers this tool returns, not rules.",
+  "columns": [
+   "Separation",
+   "Dense city centre",
+   "Suburban market"
+  ],
+  "rows": [
+   [
+    "Under 0.5 mi (0.8 km)",
+    "Same immediate catchment",
+    "Effectively the same site"
+   ],
+   [
+    "0.5–2 mi (0.8–3.2 km)",
+    "Distinct pitches, shared footfall",
+    "Same local market"
+   ],
+   [
+    "2–5 mi (3.2–8 km)",
+    "Different districts",
+    "Overlapping catchments"
+   ],
+   [
+    "5–15 mi (8–24 km)",
+    "Separate markets",
+    "Mostly separate markets"
+   ],
+   [
+    "Over 15 mi (24 km)",
+    "Separate markets",
+    "Separate markets"
+   ]
+  ],
+  "note": "Straight-line separation ignores road access and barriers; two stores 1 mile apart across a river with one bridge can be further apart in practice than two stores 3 miles apart on one road."
+ },
+ "faq": [
+  [
+   "Straight-line or driving distance — which matters for spacing?",
+   "Agreements and territory rules are almost always written on straight-line separation, which is what this map measures. Customer behaviour follows roads, so use driving tools for the demand side of the same decision."
+  ],
+  [
+   "Can I plot more than one competitor?",
+   "Yes — add each rival location and read its separation from yours. The pattern of gaps matters more than any single pair."
+  ],
+  [
+   "Does it show who is winning?",
+   "No. It measures geography only: no sales, footfall or review data. Distance frames the competition; it does not score it."
+  ],
+  [
+   "What if the competitor is inside a mall or upstairs?",
+   "Use the building's coordinates; at market scale the vertical and indoor detail is below the precision the spacing question needs."
+  ],
+  [
+   "Can I measure my own two stores?",
+   "Yes — the geometry is identical, and chains use it for cannibalisation reviews exactly as franchise teams use it for territory checks."
+  ],
+  [
+   "Which point of a large store counts?",
+   "Use a consistent convention — main entrance or site centroid — and keep it across all locations, or the comparisons drift by more than the decision tolerates."
+  ],
+  [
+   "Is my location data uploaded?",
+   "Locations are plotted in your browser session; nothing about your estate is published by measuring it."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Run the question from the customer's side with the "
+  },
+  {
+   "t": "Closest Facility Finder",
+   "l": "/tools/closest-facility-finder"
+  },
+  {
+   "t": ", draw the catchments themselves in the "
+  },
+  {
+   "t": "Map Radius Tool",
+   "l": "/tools/map-radius"
+  },
+  {
+   "t": ", and test road reality with the "
+  },
+  {
+   "t": "Drive Time Map",
+   "l": "/tools/drive-time-map"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "closest-facility-finder",
+  "compass-bearing-visualizer",
+  "coordinate-distance-table-generator",
+  "crow-flies-distance",
+  "distance-between-cities",
+  "distance-between-zip-codes"
+ ]
+}

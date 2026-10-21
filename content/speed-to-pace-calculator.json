@@ -1,0 +1,208 @@
+{
+ "slug": "speed-to-pace-calculator",
+ "primary_keyword": "Speed to Pace Calculator",
+ "secondary_keywords": [
+  "speed to pace calculator online",
+  "free speed to pace calculator",
+  "speed to pace calculator calculator",
+  "speed to pace calculator tool",
+  "how to use speed to pace calculator"
+ ],
+ "title": "Speed to Pace Calculator: km/h to min/km",
+ "description": "Convert speed into pace with the Speed to Pace Calculator — km/h and mph into min/km and min/mile for runners and walkers. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a treadmill's 10 km/h is a 6:00/km pace — the number your training plan has been quoting at you all along.",
+ "quick_answer": "The Speed to Pace Calculator inverts a speed — kilometres or miles per hour — into the pace runners think in: minutes per kilometre and per mile. Enter the speed from a treadmill, GPS or cycling friend and read the pace: 60 divided by the speed, in both dialects.",
+ "steps_intro": "Speed and pace are reciprocals: pace = 60 ÷ speed. Translate once, think in your own unit:",
+ "use_cases": [
+  {
+   "title": "Treadmill workouts",
+   "body": [
+    {
+     "t": "The belt is set in km/h; the plan is written in min/km. Convert the session before you start — the "
+    },
+    {
+     "t": "Pace to Speed Calculator",
+     "l": "/tools/pace-to-speed-calculator"
+    },
+    {
+     "t": " covers the return trip."
+    }
+   ]
+  },
+  {
+   "title": "GPS and watch dialects",
+   "body": [
+    {
+     "t": "Devices let you choose, but exports and friends do not always agree. One conversion makes every file speak pace."
+    }
+   ]
+  },
+  {
+   "title": "Cycling friends' speeds",
+   "body": [
+    {
+     "t": "A cyclist's 30 km/h is a 2:00/km pace — an impossible run, which is exactly the context the conversion provides."
+    }
+   ]
+  },
+  {
+   "title": "Walking guidebooks",
+   "body": [
+    {
+     "t": "Guide speeds in km/h become the min/km your legs plan by — measured paces live in the "
+    },
+    {
+     "t": "Hiking Pace Calculator",
+     "l": "/tools/hiking-pace-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The treadmill ten",
+   "body": [
+    {
+     "t": "60 ÷ 10 = 6:00/km (9:39/mile). The world's commonest treadmill setting is the world's commonest tempo pace, revealed."
+    }
+   ]
+  },
+  {
+   "label": "Example · The brisk walk",
+   "body": [
+    {
+     "t": "5.5 km/h → 60 ÷ 5.5 = 10.9 min = 10:55/km. A walking speed becomes a pace a hiker can hold against a route plan."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Speed to pace, the working table",
+  "intro": "60 ÷ speed, computed — find the machine's number, read your dialect.",
+  "columns": [
+   "Speed (km/h)",
+   "Pace (per km)",
+   "Speed (mph)",
+   "Pace (per mile)"
+  ],
+  "rows": [
+   [
+    "6.0",
+    "10:00",
+    "4.0",
+    "15:00"
+   ],
+   [
+    "7.5",
+    "8:00",
+    "5.0",
+    "12:00"
+   ],
+   [
+    "9.0",
+    "6:40",
+    "6.0",
+    "10:00"
+   ],
+   [
+    "10.0",
+    "6:00",
+    "7.5",
+    "8:00"
+   ],
+   [
+    "12.0",
+    "5:00",
+    "9.3",
+    "6:27"
+   ],
+   [
+    "14.0",
+    "4:17",
+    "12.0",
+    "5:00"
+   ]
+  ],
+  "note": "Consistency check: 12.0 km/h and 5:00/km are the same motion in both tables on this page's sibling tools — the reciprocals agree because they must."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Pace from speed: 60 ÷ the speed, returned as min/km and min/mile from a km/h or mph input."
+  ],
+  [
+   "Is the result exact?",
+   "The inversion is exact on the speed entered; seconds are rounded in display, openly."
+  ],
+  [
+   "Do I need an account?",
+   "No. Speed in, pace out."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. This translates the speed of your own motion, which traffic may have set — but the translation is unit work, not routing."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Your speed was measured over the path travelled; the pace derived from it inherits that honesty."
+  ],
+  [
+   "Which speed unit should I enter?",
+   "Whichever your device speaks. Both outputs appear either way — that bilingualism is the tool."
+  ],
+  [
+   "The reverse — pace to speed?",
+   "The Pace to Speed Calculator inverts this one, as the pair's names promise."
+  ],
+  [
+   "What pace is a 20 km/h cycle?",
+   "3:00/km — a pace no runner holds, which is precisely the comparison cyclists and runners enjoy making."
+  ],
+  [
+   "Skiing, rowing, swimming speeds?",
+   "Any motion with a speed converts — rowers live at pace per 500 m, a dialect this page's arithmetic extends by halving."
+  ],
+  [
+   "Why does my watch disagree by a second?",
+   "Rounding in display, on one side or the other. The division is exact; the second hand is theatre."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The reverse is the "
+  },
+  {
+   "t": "Pace to Speed Calculator",
+   "l": "/tools/pace-to-speed-calculator"
+  },
+  {
+   "t": "; pace units convert in the "
+  },
+  {
+   "t": "Minutes per KM to Minutes per Mile Converter",
+   "l": "/tools/minutes-per-km-to-minutes-per-mile"
+  },
+  {
+   "t": "; and real paces are measured by the "
+  },
+  {
+   "t": "Hiking Pace Calculator",
+   "l": "/tools/hiking-pace-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-calories-distance",
+  "cycling-route-planner",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator",
+  "drive-time-map"
+ ]
+}

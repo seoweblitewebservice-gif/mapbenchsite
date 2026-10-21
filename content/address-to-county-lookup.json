@@ -1,0 +1,193 @@
+{
+ "slug": "address-to-county-lookup",
+ "primary_keyword": "Address to County Lookup",
+ "secondary_keywords": [
+  "address to county",
+  "find county by address",
+  "county lookup",
+  "county fips lookup",
+  "what county is this address in"
+ ],
+ "title": "Address to County Lookup: FIPS and Context",
+ "description": "Verify an address's county with a Census point-in-polygon lookup using Address to County Lookup — FIPS code, boundary and context. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, an address on Chicago's South Side resolves to Cook County, FIPS 17031 — a code, not just a name, so databases can agree about it.",
+ "quick_answer": "Address to County Lookup verifies which US county an address, place or point falls in by testing it against Census Bureau county polygons — not by trusting the address's own text. Search the address and read the county name, its FIPS code, the highlighted boundary and Census demographic context.",
+ "steps_intro": "Addresses lie about counties more often than you would think. Test the point, not the label:",
+ "use_cases": [
+  {
+   "title": "Forms and filings that need the county",
+   "body": [
+    {
+     "t": "Tax, legal, licensing and grant forms ask for county and punish guesses. The polygon's answer is the defensible one."
+    }
+   ]
+  },
+  {
+   "title": "Data cleaning",
+   "body": [
+    {
+     "t": "A customer file's county column filled by postal city is wrong at every county line. Verify the important records — bulk thinking continues in the "
+    },
+    {
+     "t": "Batch Geocoder",
+     "l": "/tools/batch-geocoder"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Service and tax jurisdictions",
+   "body": [
+    {
+     "t": "County-level rules differ across a street. Knowing which side of the line an address sits on is a business fact, delivered here with its FIPS."
+    }
+   ]
+  },
+  {
+   "title": "Research context",
+   "body": [
+    {
+     "t": "The demographic summary that rides along (population, income, home values) makes the county a place with a profile, not just a polygon."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The postal-city trap",
+   "body": [
+    {
+     "t": "Many addresses carry a mailing city in the neighbouring county. The address text says one county; the point-in-polygon test says the true one — and the FIPS settles arguments."
+    }
+   ]
+  },
+  {
+   "label": "Example · The known anchor",
+   "body": [
+    {
+     "t": "The White House sits in the District of Columbia — a county-equivalent with FIPS 11001. Independent cities and DC test the tool exactly because they break the usual rules."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "County facts in FIPS",
+  "intro": "Example anchors — the FIPS code is the county's permanent ID even when names repeat across states (there are dozens of Washington Counties).",
+  "columns": [
+   "Place",
+   "County",
+   "FIPS"
+  ],
+  "rows": [
+   [
+    "Chicago, IL",
+    "Cook County",
+    "17031"
+   ],
+   [
+    "Houston, TX",
+    "Harris County",
+    "48201"
+   ],
+   [
+    "Los Angeles, CA",
+    "Los Angeles County",
+    "06037"
+   ],
+   [
+    "Manhattan, NY",
+    "New York County",
+    "36061"
+   ],
+   [
+    "Washington, DC",
+    "District of Columbia",
+    "11001"
+   ]
+  ],
+  "note": "FIPS format: two state digits + three county digits. The demographics shown with results are Census ACS context, labelled with their vintage in the tool."
+ },
+ "faq": [
+  [
+   "Is this just reading the county name from the address?",
+   "No — that is exactly what it refuses to do. It geocodes the point and tests which Census county polygon contains it, which is why it catches postal-city mismatches."
+  ],
+  [
+   "Where do the demographic figures come from?",
+   "US Census Bureau data (ACS estimates and land-area figures), shown as context with their source. They describe the county, not the household at the address."
+  ],
+  [
+   "Can I search by ZIP code?",
+   "Yes — a ZIP or place resolves to a point, and the point is tested. Deep accuracy still wants the full street address."
+  ],
+  [
+   "Is the boundary suitable for a legal survey?",
+   "No. Census boundaries are statistical and administrative references, not surveyed legal lines. Property questions need a licensed surveyor."
+  ],
+  [
+   "Why can ACS figures differ from a local source?",
+   "Vintage and method: ACS figures are survey estimates over a period; local counts may be newer or counted differently. Both can be honest and disagree."
+  ],
+  [
+   "What about independent cities?",
+   "US county-equivalents include independent cities, parishes (Louisiana) and boroughs (Alaska) — the lookup returns the equivalent unit, as the White House example shows."
+  ],
+  [
+   "County or county-equivalent for Puerto Rico?",
+   "Municipios are the equivalents there; the Census framework the tool uses treats them as such."
+  ],
+  [
+   "The address sits exactly on a county line.",
+   "Lines have width in the real world: buildings straddle, parcels split. The point tested is the address's resolved point — for a straddling property, a surveyor, not a lookup, is the authority."
+  ],
+  [
+   "Can I look up by coordinates alone?",
+   "Yes — a point is a point. GPS coordinates or a map click test against the same polygons."
+  ],
+  [
+   "Why does the mailing city disagree with the result?",
+   "Postal cities are delivery conveniences that ignore county lines cheerfully. The polygon is the geography; the postmark is the mail's fiction."
+  ],
+  [
+   "Are county populations live counts?",
+   "No — Census estimates with a vintage, refreshed on the Census Bureau's cycle. The page labels the source rather than dressing estimates as a census of today."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The state version is "
+  },
+  {
+   "t": "Address to State Lookup",
+   "l": "/tools/address-to-state-lookup"
+  },
+  {
+   "t": "; the ZIP version is "
+  },
+  {
+   "t": "Address to ZIP Code Lookup",
+   "l": "/tools/address-to-zip-code-lookup"
+  },
+  {
+   "t": "; and the boundary alone is the "
+  },
+  {
+   "t": "County Boundary Viewer",
+   "l": "/tools/county-boundary-viewer"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder"
+ ]
+}

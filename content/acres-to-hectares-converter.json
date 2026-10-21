@@ -1,0 +1,187 @@
+{
+ "slug": "acres-to-hectares-converter",
+ "primary_keyword": "Acres to Hectares Converter",
+ "secondary_keywords": [
+  "acres to hectares converter online",
+  "free acres to hectares converter",
+  "acres to hectares converter calculator",
+  "acres to hectares converter converter",
+  "acres to hectares converter formula"
+ ],
+ "title": "Acres to Hectares Converter: Exact Factor",
+ "description": "Convert acres to hectares with the Acres to Hectares Converter — the exact 0.404686 factor, with a reference table for farm and land sizes. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 40-acre field is 16.1874 hectares — and the 640-acre section is 258.9988 hectares, just under 2.59 square kilometres.",
+ "quick_answer": "The Acres to Hectares Converter turns acres into hectares using the exact definition: one acre is 0.4046856422 hectares. Enter acreage and read the converted result instantly — the translation between the US land unit and the metric unit the rest of the world farms, buys and reports in.",
+ "steps_intro": "One multiplication, done with the exact factor instead of a rounded one:",
+ "use_cases": [
+  {
+   "title": "International land listings",
+   "body": [
+    {
+     "t": "A US parcel advertised to European buyers needs its hectares. Convert once, quote both, and nobody's spreadsheet invents a third number."
+    }
+   ]
+  },
+  {
+   "title": "Equipment and input rates",
+   "body": [
+    {
+     "t": "European machinery and many product labels rate per hectare; US fields are measured in acres. This conversion is the bridge every rate calculation crosses — get it exact, then the "
+    },
+    {
+     "t": "Fertilizer Amount Calculator",
+     "l": "/tools/fertilizer-amount-calculator"
+    },
+    {
+     "t": " can run."
+    }
+   ]
+  },
+  {
+   "title": "Research and reporting",
+   "body": [
+    {
+     "t": "Studies mixing US and European land data fail quietly on unit drift. One canonical factor, applied consistently, is the entire fix."
+    }
+   ]
+  },
+  {
+   "title": "Travel and relocation reading",
+   "body": [
+    {
+     "t": "A French gîte on 2 hectares, a Texas ranch of 500 acres — conversions make foreign land listings legible at a glance."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The family field",
+   "body": [
+    {
+     "t": "40 acres × 0.4046856422 = 16.1874 hectares. The figure matters because a rounded 0.4 factor would report 16.0 ha — a fifth of a hectare quietly missing from any rate or rent computed from it."
+    }
+   ]
+  },
+  {
+   "label": "Example · The full section",
+   "body": [
+    {
+     "t": "640 acres (one square mile) = 258.9988 hectares. Surveyors laid out the US in sections; converting one teaches the size of the grid the whole Midwest is drawn on."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Acres to hectares reference",
+  "intro": "Conversions at the exact factor (1 acre = 0.4046856422 ha) for the sizes land people actually trade in.",
+  "columns": [
+   "Acres",
+   "Hectares",
+   "Square kilometres"
+  ],
+  "rows": [
+   [
+    "1",
+    "0.4047",
+    "0.0040"
+   ],
+   [
+    "2.5",
+    "1.0117",
+    "0.0101"
+   ],
+   [
+    "5",
+    "2.0234",
+    "0.0202"
+   ],
+   [
+    "10",
+    "4.0469",
+    "0.0405"
+   ],
+   [
+    "40",
+    "16.1874",
+    "0.1619"
+   ],
+   [
+    "100",
+    "40.4686",
+    "0.4047"
+   ],
+   [
+    "640",
+    "258.9988",
+    "2.5900"
+   ]
+  ],
+  "note": "Hectares are labelled to four decimals because rate calculations multiply them again; rounding early compounds."
+ },
+ "faq": [
+  [
+   "What is the exact conversion factor?",
+   "1 acre = 0.4046856422 hectares, from the definitions: an acre is 43,560 square feet and a hectare is 10,000 square metres. The tool multiplies by the full factor, not a rounded 0.4."
+  ],
+  [
+   "Is the calculation done locally?",
+   "Yes — the conversion runs in your browser as you type. Nothing is uploaded, and no account exists to upload to."
+  ],
+  [
+   "How accurate is the result?",
+   "Exact to the factor. The practical limit is your input: an acreage estimated from a deed carries its own rounding into any conversion of it."
+  ],
+  [
+   "How do I convert back?",
+   "Divide hectares by 0.4046856422, or multiply by 2.4710538 — or use the Hectares to Acres Converter, which is organised for that direction."
+  ],
+  [
+   "Why do some sites say 1 acre = 0.4 hectares?",
+   "Rounding for headlines. It is fine for conversation and wrong for money: across 100 acres the shortcut misplaces about half a hectare."
+  ],
+  [
+   "Is a hectare bigger than an acre?",
+   "Yes — about 2.47 times bigger. A hectare is 10,000 m² (a 100 m square); an acre is about 4,047 m²."
+  ],
+  [
+   "Where do these units come from?",
+   "The acre is the medieval English ploughing unit (a furlong by a chain) standardised in imperial measure; the hectare is metric — 100 ares, designed so land could share the metre's decimal system."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The reverse conversion is the "
+  },
+  {
+   "t": "Hectares to Acres Converter",
+   "l": "/tools/hectares-to-acres-converter"
+  },
+  {
+   "t": "; square feet are covered by the "
+  },
+  {
+   "t": "Acres to Square Feet Converter",
+   "l": "/tools/acres-to-square-feet-converter"
+  },
+  {
+   "t": "; and hectares to square kilometres by the "
+  },
+  {
+   "t": "Hectares to Square Kilometres Converter",
+   "l": "/tools/hectares-to-square-km-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "circle-area-from-radius",
+  "circle-circumference-from-radius",
+  "cities-within-drawn-area-finder",
+  "crop-row-length-calculator",
+  "customer-radius-area-calculator",
+  "delivery-radius-area-calculator"
+ ]
+}

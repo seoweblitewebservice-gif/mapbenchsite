@@ -1,0 +1,188 @@
+{
+ "slug": "what-state-am-i-in",
+ "primary_keyword": "What State Am I In?",
+ "secondary_keywords": [
+  "what state am i in",
+  "find my state",
+  "state by location",
+  "state lookup",
+  "state fips lookup"
+ ],
+ "title": "What State Am I In? Census State Lookup",
+ "description": "Answer 'What State Am I In?' against the Census state polygon — state FIPS, highlighted boundary and ACS population and income context. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a point in Kansas City is a coin flip between Kansas and Missouri until the Census polygon settles it — the river city straddles the line its name hides.",
+ "quick_answer": "What State Am I In? checks a point against the U.S. Census Bureau state polygon and returns the state name, its FIPS code and a highlighted boundary, joined with recent ACS population, income, housing, age, education and poverty estimates. Search, GPS, coordinates or click — verified, not guessed.",
+ "steps_intro": "The state, verified against the official polygon:",
+ "use_cases": [
+  {
+   "title": "Border ambiguity, ended",
+   "body": [
+    {
+     "t": "Twin cities and river towns make state identity a real question — the polygon answers per point, and the county check at "
+    },
+    {
+     "t": "What County Am I In",
+     "l": "/tools/what-county-am-i-in"
+    },
+    {
+     "t": " refines it."
+    }
+   ]
+  },
+  {
+   "title": "State-context reading",
+   "body": [
+    {
+     "t": "The ACS context (population, income, housing, age, education, poverty) gives the state's statistical portrait from the same official source family."
+    }
+   ]
+  },
+  {
+   "title": "Data validation",
+   "body": [
+    {
+     "t": "A records file's state column audited against point geometry — mismatches mean bad geocodes upstream, and this is the cheap way to find them."
+    }
+   ]
+  },
+  {
+   "title": "Forms and filings",
+   "body": [
+    {
+     "t": "The state of a site, property or incident — with FIPS attached for the systems that want the code."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The two Kansas Cities",
+   "body": [
+    {
+     "t": "Kansas City, Missouri is the larger and older; Kansas City, Kansas faces it across the river and the state line. Points resolve individually — the polygon does not care about the shared name."
+    }
+   ]
+  },
+  {
+   "label": "Example · FIPS tidiness",
+   "body": [
+    {
+     "t": "California is state FIPS 06, Texas 48, New York 36 — the two-digit prefix of every county code in the state, which is why the county tools build on this one."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading the result",
+  "intro": "Each field's provenance — the theme of this page is 'official source, stated'.",
+  "columns": [
+   "Output",
+   "From",
+   "Note"
+  ],
+  "rows": [
+   [
+    "State name",
+    "Census state polygon check",
+    "Verified containment, not nearest-city logic"
+   ],
+   [
+    "State FIPS",
+    "Census coding",
+    "Prefix of all its county codes"
+   ],
+   [
+    "Boundary highlight",
+    "Census geometry",
+    "See your point's context"
+   ],
+   [
+    "ACS estimates",
+    "American Community Survey, recent vintage",
+    "Estimates with margins — context, not census counts"
+   ]
+  ],
+  "note": "The decennial census counts; the ACS estimates between counts. This page shows ACS figures as the estimates they are, vintage attached."
+ },
+ "faq": [
+  [
+   "How does MapBench identify the state?",
+   "By testing the point against the U.S. Census Bureau's state polygon — official geometry, point-in-polygon. Search, GPS, coordinates and clicks all resolve to that one check."
+  ],
+  [
+   "What is a state FIPS code?",
+   "The two-digit Census code for the state (California 06, Texas 48, New York 36) — the prefix of every county FIPS in the state and a standard join key."
+  ],
+  [
+   "Where do the population and income figures come from?",
+   "The Census Bureau's American Community Survey — recent estimates for population, income, housing, age, education and poverty, shown with their survey nature intact."
+  ],
+  [
+   "Can I use GPS or coordinates?",
+   "Yes — GPS, address search, pasted coordinates or a map click all work; the verification is identical once the point is set."
+  ],
+  [
+   "Is this a legal boundary tool?",
+   "It applies the official public geometry and is a strong reference. Legal determinations rest with authorities and licensed surveys."
+  ],
+  [
+   "District of Columbia and territories?",
+   "DC resolves as the district it is (FIPS 11). Territories follow their own geographies beyond the state framework."
+  ],
+  [
+   "A point on a state-line river?",
+   "Polygons follow the legal line (often mid-channel or a bank, per the states' compacts) — the Census geometry decides, and split cases are exactly its job."
+  ],
+  [
+   "Why show estimates rather than the census count?",
+   "Because between censuses the ACS is the current official picture. Counts age; estimates update — labelled as estimates."
+  ],
+  [
+   "State historical boundaries?",
+   "States have moved rarely but really (West Virginia's birth the famous case). Current geometry is this page's scope."
+  ],
+  [
+   "Puerto Rico and territories?",
+   "They resolve through their own Census geographies where covered — the state framework's edges are handled as the data holds them, labelled plainly."
+  ],
+  [
+   "My GPS drift says the next state.",
+   "Consumer GPS near a border can straddle it. Average your position outdoors for a few seconds; the polygon verdict follows the settled point."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Refine it: "
+  },
+  {
+   "t": "What County Am I In",
+   "l": "/tools/what-county-am-i-in"
+  },
+  {
+   "t": "; address route: "
+  },
+  {
+   "t": "Address to State Lookup",
+   "l": "/tools/address-to-state-lookup"
+  },
+  {
+   "t": "; ZIP: "
+  },
+  {
+   "t": "What ZIP Code Am I In",
+   "l": "/tools/what-zip-code-am-i-in"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder"
+ ]
+}

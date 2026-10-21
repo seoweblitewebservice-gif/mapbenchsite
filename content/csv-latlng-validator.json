@@ -1,0 +1,28 @@
+{
+ "slug": "csv-latlng-validator",
+ "primary_keyword": "CSV Lat/Lng Validator",
+ "secondary_keywords": [
+  "csv validator",
+  "lat lng csv",
+  "coordinate csv check"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "csv-coordinate-bounding-box",
+  "csv-coordinate-centroid-calculator",
+  "csv-coordinate-deduplicator",
+  "csv-coordinate-validator",
+  "csv-row-counter",
+  "csv-to-geojson-converter"
+ ]
+}

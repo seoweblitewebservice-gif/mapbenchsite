@@ -1,0 +1,199 @@
+{
+ "slug": "schools-near-me-map",
+ "primary_keyword": "Schools Near Me Map",
+ "secondary_keywords": [
+  "schools near me",
+  "school finder map",
+  "find schools nearby",
+  "schools in my area"
+ ],
+ "title": "Schools Near Me Map: Schools Around Any Place",
+ "description": "Map the schools near any place with the Schools Near Me Map — schools recorded in open data, each with its straight-line distance. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a street under consideration for a family move shows three recorded schools within a mile — the start of a school-run conversation that official district sources then finish.",
+ "quick_answer": "The Schools Near Me Map shows the schools OpenStreetMap records around a place you search or your own location, each with its straight-line distance from your point. Search, press find, and browse the ranked list and pins — the geography of the school day, before district assignments enter.",
+ "steps_intro": "See the schools around a place — then do the district homework properly:",
+ "use_cases": [
+  {
+   "title": "Family move scoping",
+   "body": [
+    {
+     "t": "Schools nearby is a geography question; schools assigned is a district question. This page answers the first, and "
+    },
+    {
+     "t": "School District Context",
+     "l": "/tools/school-district-context"
+    },
+    {
+     "t": " walks you to the second."
+    }
+   ]
+  },
+  {
+   "title": "Rental and commute planning",
+   "body": [
+    {
+     "t": "A home between two schools and a station is a logistics shape. The map makes the shape visible before the lease."
+    }
+   ]
+  },
+  {
+   "title": "New-area orientation",
+   "body": [
+    {
+     "t": "Schools are landmarks and traffic rhythms — knowing them explains the town's mornings."
+    }
+   ]
+  },
+  {
+   "title": "Checking an area's family fit",
+   "body": [
+    {
+     "t": "Playgrounds, libraries and schools cluster in family country. The library sibling is "
+    },
+    {
+     "t": "Libraries Near Me Map",
+     "l": "/tools/libraries-near-me-map"
+    },
+    {
+     "t": "."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Straight-line, honestly labelled",
+   "body": [
+    {
+     "t": "Each school carries its straight-line distance. The school run itself follows roads and crossings — the walking planner turns the crow's number into the pavement's."
+    }
+   ]
+  },
+  {
+   "label": "Example · All recorded schools",
+   "body": [
+    {
+     "t": "Public, private, primary, secondary — the record classes them together as schools. Type and level live in the names and the schools' own pages; assignment lives with districts."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading the schools list",
+  "intro": "What the pins promise — and what they leave to official sources.",
+  "columns": [
+   "Question",
+   "Here",
+   "Officially from"
+  ],
+  "rows": [
+   [
+    "Schools near a point",
+    "Listed with distances",
+    "—"
+   ],
+   [
+    "Types and levels",
+    "From names and records",
+    "The schools themselves"
+   ],
+   [
+    "Catchment or assignment",
+    "Not shown",
+    "The school district"
+   ],
+   [
+    "Admissions",
+    "Not covered",
+    "The school and district"
+   ],
+   [
+    "Your location stored?",
+    "No",
+    "—"
+   ]
+  ],
+  "note": "School coverage in open data is strong in towns and cities. A missing pin can mean an unrecorded school — new schools especially — so cross-check an important move with the district's list."
+ },
+ "faq": [
+  [
+   "Where does the school data come from?",
+   "OpenStreetMap's community records — schools mapped by locals, updated continuously. Depth is excellent in populated areas and thinner where mapping is sparse."
+  ],
+  [
+   "Is the distance the school run distance?",
+   "No — it is the straight-line distance, labelled as such. The run follows roads; the Walking Route Planner computes that version for a chosen school."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — search any place; location is an optional input."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Schools rename, merge and move; the record carries the name at mapping time, and districts publish the current truth."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "Which school will my child attend?",
+   "That is the district's assignment, not this map's list — School District Context exists to walk you to the official answer."
+  ],
+  [
+   "Private schools included?",
+   "Where recorded as schools, yes — the record does not filter by sector."
+  ],
+  [
+   "Nurseries and colleges?",
+   "Recorded educational sites can appear depending on tagging; the list's design centre is schools proper."
+  ],
+  [
+   "A school is missing or closed.",
+   "Map data ages at the edges. The district's own list is definitive, and the open map accepts your correction for the next family."
+  ],
+  [
+   "School ratings or Ofsted grades?",
+   "Not here — inspection and performance data live with the official bodies (Ofsted, state report cards). This map's honest layer is location."
+  ],
+  [
+   "Faith and specialist schools?",
+   "Names usually carry the character; the schools' own pages confirm. The record's job is that they appear at all."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Assignments: "
+  },
+  {
+   "t": "School District Context",
+   "l": "/tools/school-district-context"
+  },
+  {
+   "t": "; libraries: "
+  },
+  {
+   "t": "Libraries Near Me Map",
+   "l": "/tools/libraries-near-me-map"
+  },
+  {
+   "t": "; the run itself: the "
+  },
+  {
+   "t": "Walking Route Planner",
+   "l": "/tools/walking-route-planner"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location"
+ ]
+}

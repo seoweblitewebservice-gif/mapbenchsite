@@ -1,0 +1,201 @@
+{
+ "slug": "courier-distance-charge-calculator",
+ "primary_keyword": "Courier Distance Charge Calculator",
+ "secondary_keywords": [
+  "courier distance charge calculator online",
+  "free courier distance charge calculator",
+  "courier distance charge calculator calculator",
+  "courier distance charge calculator tool",
+  "how to use courier distance charge calculator"
+ ],
+ "title": "Courier Distance Charge Calculator",
+ "description": "Build a courier charge from a base fee plus a per-mile rate with the Courier Distance Charge Calculator — quotes you can defend line by line. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a $6 base fee plus $1.85 per mile over a 12.4-mile job prices the delivery at $28.94 — a quote with its working showing.",
+ "quick_answer": "The Courier Distance Charge Calculator builds a delivery price from the two parts courier pricing is made of: a base fee for showing up, plus a per-mile (or per-kilometre) rate for the distance. Enter your tariff and the job's distance and read the charge — quotable, explainable and consistent.",
+ "steps_intro": "A quote you can decompose is a quote you can defend. Three parts:",
+ "use_cases": [
+  {
+   "title": "Quoting one-off jobs",
+   "body": [
+    {
+     "t": "The customer sees a price; you see base + rate × distance. Both are satisfied, and the distance comes from the "
+    },
+    {
+     "t": "Driving Distance Calculator",
+     "l": "/tools/driving-distance-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Setting a tariff",
+   "body": [
+    {
+     "t": "Work backwards from your "
+    },
+    {
+     "t": "Cost Per Mile Calculator",
+     "l": "/tools/cost-per-mile-calculator"
+    },
+    {
+     "t": " figure: the rate must clear it with margin, and the base must cover the fixed cost of every pickup."
+    }
+   ]
+  },
+  {
+   "title": "Comparing platform payouts",
+   "body": [
+    {
+     "t": "A platform's offered fee decomposes the same way — run its distance through your tariff and the gap is the negotiation, quantified."
+    }
+   ]
+  },
+  {
+   "title": "Consistent repeat pricing",
+   "body": [
+    {
+     "t": "The same job priced identically in March and October is professionalism. A formula, not a mood, is how that happens."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The standard job",
+   "body": [
+    {
+     "t": "Base $6.00 + $1.85 × 12.4 mi = $6.00 + $22.94 = $28.94. The customer who asks 'why' gets the decomposition, not a shrug."
+    }
+   ]
+  },
+  {
+   "label": "Example · The short hop",
+   "body": [
+    {
+     "t": "Base $6.00 + $1.85 × 2.1 mi = $9.89. The base fee is what makes short jobs worth starting the van for — its entire economic purpose, visible in one line."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Charges at a $6 base + $1.85/mile tariff",
+  "intro": "Worked examples of one example tariff — substitute your own base and rate in the calculator. Distances are road miles.",
+  "columns": [
+   "Job distance",
+   "Distance part",
+   "Total charge"
+  ],
+  "rows": [
+   [
+    "2.1 mi",
+    "$3.89",
+    "$9.89"
+   ],
+   [
+    "5.0 mi",
+    "$9.25",
+    "$15.25"
+   ],
+   [
+    "12.4 mi",
+    "$22.94",
+    "$28.94"
+   ],
+   [
+    "25.0 mi",
+    "$46.25",
+    "$52.25"
+   ],
+   [
+    "48.6 mi",
+    "$89.91",
+    "$95.91"
+   ],
+   [
+    "100.0 mi",
+    "$185.00",
+    "$191.00"
+   ]
+  ],
+  "note": "Waiting time, tolls, stairs and urgency are separate tariff items in real courier pricing — add them explicitly rather than inflating the rate."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "A courier charge: base fee + (rate × distance), with the decomposition shown so the quote can be explained and repeated."
+  ],
+  [
+   "Is it free to use?",
+   "Yes — for quoting your own work or checking others' prices against your tariff."
+  ],
+  [
+   "How accurate is the result?",
+   "Exact for the tariff and distance entered. The commercial accuracy — whether your rate covers your costs — is set by your cost-per-mile figure."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Pricing follows distance; traffic is a time cost your tariff may handle through a waiting or peak item, not through this distance charge."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Roads wind. Quote on the road distance — it is the distance your wheels turn and your fuel burns."
+  ],
+  [
+   "Should the return journey be charged?",
+   "If the van returns empty, many tariffs charge a loaded-mile rate that silently covers it, or price the round trip. Decide which, state it, and apply it consistently."
+  ],
+  [
+   "Per mile or per kilometre?",
+   "Your market's unit. The formula is identical; the Delivery Fee by Distance Calculator frames the same pricing for food and parcel delivery."
+  ],
+  [
+   "Do I charge for the deadhead return?",
+   "Either openly (round-trip pricing) or silently (a one-way rate that covers it) — but decide, publish and be consistent. Customers forgive either; they do not forgive surprise."
+  ],
+  [
+   "What about multi-drop rounds?",
+   "Price the round's total road miles through the tariff once, or per drop with the base shared. Both are defensible; mixing them per customer is not."
+  ],
+  [
+   "Is a minimum charge normal?",
+   "Yes — it is the base fee wearing another name, and it exists because short jobs still cost a pickup."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Your cost floor is the "
+  },
+  {
+   "t": "Cost Per Mile Calculator",
+   "l": "/tools/cost-per-mile-calculator"
+  },
+  {
+   "t": "; the food-delivery framing is the "
+  },
+  {
+   "t": "Delivery Fee by Distance Calculator",
+   "l": "/tools/delivery-fee-by-distance-calculator"
+  },
+  {
+   "t": "; and the distance itself comes from the "
+  },
+  {
+   "t": "Driving Distance Calculator",
+   "l": "/tools/driving-distance-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-fee-by-distance-calculator",
+  "drive-time-map",
+  "driving-days-calculator",
+  "driving-distance-calculator"
+ ]
+}

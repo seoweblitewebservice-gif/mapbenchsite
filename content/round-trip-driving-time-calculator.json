@@ -1,0 +1,207 @@
+{
+ "slug": "round-trip-driving-time-calculator",
+ "primary_keyword": "Round Trip Driving Time Calculator",
+ "secondary_keywords": [
+  "round trip driving time calculator online",
+  "free round trip driving time calculator",
+  "round trip driving time calculator calculator",
+  "round trip driving time calculator tool",
+  "how to calculate round trip driving time calculator"
+ ],
+ "title": "Round Trip Driving Time Calculator",
+ "description": "Estimate a round trip's total driving time from one-way distance and average speed with the Round Trip Driving Time Calculator. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 212-mile one-way drive at a 58 mph average takes 3 hours 39 minutes — so the round trip is 7 hours 18 minutes of driving, a full working day at the wheel.",
+ "quick_answer": "The Round Trip Driving Time Calculator doubles a one-way distance, divides by your average speed, and returns the total driving time for going there and coming back. Enter the one-way miles and your realistic average and read the round-trip hours — the number weekend plans consistently forget to double.",
+ "steps_intro": "The return journey is not free. Price it before the weekend does:",
+ "use_cases": [
+  {
+   "title": "Airport runs and pickups",
+   "body": [
+    {
+     "t": "There-and-back is the real commitment behind 'I'll collect you'. Compute it before volunteering — arrivals timed by the "
+    },
+    {
+     "t": "Road Trip Arrival Time Calculator",
+     "l": "/tools/road-trip-arrival-time-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Day-trip feasibility",
+   "body": [
+    {
+     "t": "A destination 3 h 39 min away is a 7 h 18 min driving day with zero sightseeing. The round number decides whether the day trip is a trip or a commute with a view."
+    }
+   ]
+  },
+  {
+   "title": "Viewing and errand returns",
+   "body": [
+    {
+     "t": "House viewings, depot runs, the borrowed-trailer return: all round trips wearing one-way disguises."
+    }
+   ]
+  },
+  {
+   "title": "Fuel and cost pairing",
+   "body": [
+    {
+     "t": "The doubled distance feeds the "
+    },
+    {
+     "t": "Round Trip Fuel Calculator",
+     "l": "/tools/round-trip-fuel-calculator"
+    },
+    {
+     "t": " and the cost tools — time and money double together."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The classic visit",
+   "body": [
+    {
+     "t": "212 mi each way at 58 mph average: 3 h 39 min per leg, 7 h 18 min round. Leave at 8, home by half three at the earliest — with the visit itself still to fit between."
+    }
+   ]
+  },
+  {
+   "label": "Example · The short hop that is not",
+   "body": [
+    {
+     "t": "45 miles at a 40 mph average is 1 h 08 min each way — 2 h 15 min round. 'Just popping over' is a quarter of a working day, computed."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "One-way to round-trip time",
+  "intro": "Round time = 2 × one-way distance ÷ average speed — the doubling, tabulated so it cannot be forgotten.",
+  "columns": [
+   "One-way",
+   "At 40 mph avg",
+   "At 55 mph avg",
+   "At 65 mph avg"
+  ],
+  "rows": [
+   [
+    "45 mi",
+    "2 h 15 m",
+    "1 h 38 m",
+    "1 h 23 m"
+   ],
+   [
+    "120 mi",
+    "6 h 00 m",
+    "4 h 22 m",
+    "3 h 42 m"
+   ],
+   [
+    "212 mi",
+    "10 h 36 m",
+    "7 h 42 m",
+    "6 h 31 m"
+   ],
+   [
+    "212 mi at 58 mph",
+    "—",
+    "7 h 18 m",
+    "—"
+   ],
+   [
+    "400 mi",
+    "20 h 00 m",
+    "14 h 33 m",
+    "12 h 18 m"
+   ]
+  ],
+  "note": "The 212-mile row appears twice on purpose: at the generic 55 mph and at the example's 58. Averages are personal — use yours from the Road Trip Average Speed Calculator."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Round-trip driving time: twice the one-way distance divided by your average speed — the full there-and-back commitment."
+  ],
+  [
+   "Do I need an account?",
+   "No. Distance and average in, time out."
+  ],
+  [
+   "Can I rely on this for professional work?",
+   "For planning and quoting, yes — it is the honest arithmetic of return journeys. Contractual ETAs deserve your traffic margin on top."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Your average should be the realistic one for the hours you will travel; the return at rush hour is a slower animal than the outbound at dawn."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Enter the road one-way distance. Doubling the crow's figure builds the whole plan on a fiction."
+  ],
+  [
+   "Is the return really the same time?",
+   "Rarely identical — different hour, different traffic, sometimes a different road. This calculator prices the symmetric case; asymmetric days deserve two ETA calculations, one per leg."
+  ],
+  [
+   "Stops included?",
+   "No — driving time only. Add the visit, the fuel and the food deliberately; they are usually the point of the trip."
+  ],
+  [
+   "The visit itself is the long part.",
+   "Then this total is your travel overhead — the number that decides whether the visit is worth its day."
+  ],
+  [
+   "Two drivers sharing?",
+   "The wheel time is unchanged; the human cost halves. The calculator prices the car's day, the rota prices the people's."
+  ],
+  [
+   "Ferry or toll queue in the middle?",
+   "Add it as a stop on top of the driving total — queues are time, just not driving time."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Fuel for the same doubling is the "
+  },
+  {
+   "t": "Round Trip Fuel Calculator",
+   "l": "/tools/round-trip-fuel-calculator"
+  },
+  {
+   "t": "; one-way times are the "
+  },
+  {
+   "t": "ETA Calculator",
+   "l": "/tools/eta-calculator"
+  },
+  {
+   "t": "; and your true average is measured by the "
+  },
+  {
+   "t": "Road Trip Average Speed Calculator",
+   "l": "/tools/road-trip-average-speed-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator",
+  "drive-time-map"
+ ],
+ "related": [
+  "driving-distance-calculator",
+  "eta-calculator",
+  "round-trip-fuel-calculator",
+  "driving-days-calculator"
+ ]
+}

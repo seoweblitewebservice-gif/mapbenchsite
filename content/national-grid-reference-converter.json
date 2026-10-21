@@ -1,0 +1,28 @@
+{
+ "slug": "national-grid-reference-converter",
+ "primary_keyword": "National Grid Reference Converter",
+ "secondary_keywords": [
+  "grid reference to lat long",
+  "os grid converter",
+  "ngr converter"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "arcminutes-to-decimal-degrees-converter",
+  "arcseconds-to-ground-distance-calculator",
+  "bounding-box-calculator",
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-destination-calculator"
+ ]
+}

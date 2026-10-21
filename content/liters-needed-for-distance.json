@@ -1,0 +1,202 @@
+{
+ "slug": "liters-needed-for-distance",
+ "primary_keyword": "Liters Needed for Distance Calculator",
+ "secondary_keywords": [
+  "liters needed for distance",
+  "litres fuel calculator",
+  "fuel liters by distance",
+  "l per 100km calculator",
+  "distance to fuel liters"
+ ],
+ "title": "Liters Needed for Distance Calculator",
+ "description": "Convert a driving distance and L/100 km consumption into litres required with the Liters Needed for Distance Calculator. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 966 km — a 600-mile trip in metric dress — at 7.0 L/100 km needs about 67.6 litres: one big tank or two ordinary ones.",
+ "quick_answer": "The Liters Needed for Distance Calculator multiplies a trip's distance in kilometres by your car's consumption in litres per 100 km and returns the litres the journey requires. Enter both figures and read the quantity — the European-format twin of the gallons calculation, for tank planning anywhere pumps sell litres.",
+ "steps_intro": "Distance × rate ÷ 100. The formula every European driver half-knows, done exactly:",
+ "use_cases": [
+  {
+   "title": "Continental touring",
+   "body": [
+    {
+     "t": "The itinerary is in kilometres and the car drinks in L/100 km. This is the native calculation — no imperial detour — feeding the "
+    },
+    {
+     "t": "Fuel Stop Planner",
+     "l": "/tools/fuel-stop-planner"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Fuel budgeting in euros",
+   "body": [
+    {
+     "t": "Litres × the local price is the budget. Quantity first, from here; the "
+    },
+    {
+     "t": "Fuel Cost Calculator",
+     "l": "/tools/fuel-cost-calculator"
+    },
+    {
+     "t": " does money in both systems."
+    }
+   ]
+  },
+  {
+   "title": "Tank sufficiency",
+   "body": [
+    {
+     "t": "Litres needed versus litres of tank: the whole remote-road question in one comparison."
+    }
+   ]
+  },
+  {
+   "title": "Fleet reporting",
+   "body": [
+    {
+     "t": "European fleets report consumption in L/100 km and distance in km. This is their arithmetic, standardised."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 600-mile trip, converted",
+   "body": [
+    {
+     "t": "600 mi = 965.6 km; at 7.0 L/100 km → 67.6 L. The same journey the gallons page prices at 20.0 US gal (75.7 L at 30 mpg) — different car figures, consistent method."
+    }
+   ]
+  },
+  {
+   "label": "Example · The city week",
+   "body": [
+    {
+     "t": "420 km of urban driving at 9.4 L/100 km = 39.5 L. Urban consumption is where honest figures matter most, because the brochure number never survives a city."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Litres by distance and consumption",
+  "intro": "Distance × L/100 km ÷ 100 — the table your tank size should be compared against.",
+  "columns": [
+   "Distance",
+   "At 5.5 L/100 km",
+   "At 7.0 L/100 km",
+   "At 9.4 L/100 km"
+  ],
+  "rows": [
+   [
+    "250 km",
+    "13.8 L",
+    "17.5 L",
+    "23.5 L"
+   ],
+   [
+    "500 km",
+    "27.5 L",
+    "35.0 L",
+    "47.0 L"
+   ],
+   [
+    "966 km",
+    "53.1 L",
+    "67.6 L",
+    "90.8 L"
+   ],
+   [
+    "1,500 km",
+    "82.5 L",
+    "105.0 L",
+    "141.0 L"
+   ],
+   [
+    "3,000 km",
+    "165.0 L",
+    "210.0 L",
+    "282.0 L"
+   ]
+  ],
+  "note": "US readers: 1 US gallon = 3.78541 litres, so the 67.6 L row is about 17.9 US gallons."
+ },
+ "faq": [
+  [
+   "What formula is used?",
+   "Litres = distance (km) × consumption (L/100 km) ÷ 100. The consumption figure is your car's real-world one for honest results."
+  ],
+  [
+   "Does it predict real-world consumption?",
+   "No — it applies the consumption you enter. Real-world prediction is your logbook's job; this is the arithmetic that consumes its figures."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Consumption already reflects your driving conditions when measured honestly."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Roads wind, and litres are burned on road kilometres. Enter the road distance."
+  ],
+  [
+   "Can route results change over time?",
+   "Consumption drifts with season and maintenance — remeasure per tank and the planning stays true."
+  ],
+  [
+   "How is this different from Fuel Needed for Trip?",
+   "Same calculation and unit family: that page frames the whole trip-planning workflow, this one the direct conversion. Their answers agree, as they must."
+  ],
+  [
+   "Imperial instead?",
+   "The Gallons Needed for Distance Calculator takes miles and mpg — 67.6 L is about 17.9 US gal if you are translating a result."
+  ],
+  [
+   "What is my car in L/100 km if it does 40 mpg (US)?",
+   "About 5.9 L/100 km — the relation is 235.215 ÷ mpg(US). Convert once, then this tool runs natively."
+  ],
+  [
+   "Tank is 50 L and the trip needs 67.6 L — fine?",
+   "Fine with one stop: the plan is a fill en route, which the Fuel Stop Planner places by range. The need exceeding the tank is normal touring arithmetic."
+  ],
+  [
+   "Does the calculator round up?",
+   "It reports the computed litres; your margin is added by you. Planning to the decimal is false precision — planning to the next fill is seamanship."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The imperial twin is "
+  },
+  {
+   "t": "Gallons Needed for Distance",
+   "l": "/tools/gallons-needed-for-distance"
+  },
+  {
+   "t": "; the workflow version is "
+  },
+  {
+   "t": "Fuel Needed for Trip",
+   "l": "/tools/fuel-needed-for-trip"
+  },
+  {
+   "t": "; and money is the "
+  },
+  {
+   "t": "Fuel Cost Calculator",
+   "l": "/tools/fuel-cost-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner"
+ ]
+}

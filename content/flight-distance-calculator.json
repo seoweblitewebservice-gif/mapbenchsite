@@ -1,0 +1,192 @@
+{
+ "slug": "flight-distance-calculator",
+ "primary_keyword": "Flight Distance Calculator",
+ "secondary_keywords": [
+  "flight distance",
+  "air distance",
+  "flight time calculator",
+  "how far to fly",
+  "air distance calculator"
+ ],
+ "title": "Flight Distance Calculator: Air Miles & Time",
+ "description": "Measure the shortest surface path between two places with the Flight Distance Calculator — km, miles and a simple cruise-time estimate. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, New York to London measures approx. 5,540 km (3,442 miles) of great-circle distance — the figure underneath every 'about seven hours' answer about that route.",
+ "quick_answer": "The Flight Distance Calculator measures the shortest surface path between two locations — the great-circle distance a flight approximates — and reports it in kilometres and miles with a cruise-time estimate. Search airports, cities or places at both ends and use the result as a planning reference, not a timetable.",
+ "steps_intro": "Air distance first, schedule second — the order airlines plan in too:",
+ "use_cases": [
+  {
+   "title": "Trip research",
+   "body": [
+    {
+     "t": "Comparing two destinations by how far they really are — not by the marketing map — starts here. Pair the distance with the "
+    },
+    {
+     "t": "Flight Time by Distance Calculator",
+     "l": "/tools/flight-time-by-distance"
+    },
+    {
+     "t": " for a fuller time picture."
+    }
+   ]
+  },
+  {
+   "title": "Mileage-program maths",
+   "body": [
+    {
+     "t": "Earning and burning miles both price off distance bands. Knowing the great-circle figure tells you which side of a band boundary a route falls on."
+    }
+   ]
+  },
+  {
+   "title": "Carbon and cost estimates",
+   "body": [
+    {
+     "t": "Emission and fuel estimates scale with distance flown. The great-circle figure is the honest input; add a few percent mentally for real-world routing."
+    }
+   ]
+  },
+  {
+   "title": "Curiosity, settled",
+   "body": [
+    {
+     "t": "How far is it to fly to Tokyo, to Reykjavík, to grandma's city — answered with a number and a drawn route instead of a shrug."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Transatlantic",
+   "body": [
+    {
+     "t": "JFK ↔ Heathrow: approx. 5,540.0 km (3,442.4 mi). At a typical cruise the still-air time is around six and a half hours; real schedules run longer because climb, descent, winds and procedures are not in the distance figure."
+    }
+   ]
+  },
+  {
+   "label": "Example · Transpacific",
+   "body": [
+    {
+     "t": "LAX ↔ Tokyo Narita: approx. 8,753 km (5,439 mi), with the great circle peaking at latitude approx. 47.7° N — far north of both endpoints' ruler-line path, over the North Pacific toward Alaska and the Aleutians."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reference flight distances",
+  "intro": "Great-circle distances between airport pairs from published coordinates, on the site model — the planning baselines behind timetable times.",
+  "columns": [
+   "Pair",
+   "Kilometres",
+   "Miles"
+  ],
+  "rows": [
+   [
+    "JFK ↔ Heathrow",
+    "5,540.0",
+    "3,442.4"
+   ],
+   [
+    "JFK ↔ LAX",
+    "3,974.3",
+    "2,469.5"
+   ],
+   [
+    "LAX ↔ Tokyo Narita",
+    "8,753",
+    "5,439"
+   ],
+   [
+    "San Francisco ↔ O'Hare",
+    "2,964.0",
+    "1,841.8"
+   ],
+   [
+    "Miami ↔ JFK",
+    "1,756.9",
+    "1,091.7"
+   ],
+   [
+    "Heathrow ↔ Frankfurt",
+    "653.5",
+    "406.1"
+   ],
+   [
+    "Heathrow ↔ Paris CDG",
+    "347.0",
+    "215.6"
+   ],
+   [
+    "LAX ↔ San Francisco",
+    "543.7",
+    "337.8"
+   ]
+  ],
+  "note": "Still-air cruise time ≈ distance ÷ 850 km/h as a rough reference only — real block times add taxi, climb, descent and wind effects."
+ },
+ "faq": [
+  [
+   "Is this the exact distance an airline flies?",
+   "No. Airlines fly airways and procedures that add a few percent to the great-circle baseline. This is the geographic distance — the number mileage charts and comparisons are built on."
+  ],
+  [
+   "How is the flight time estimated?",
+   "From the distance at a representative cruise speed, as a rough planning reference. It excludes taxi, climb, descent and winds; schedules are the authority for a specific flight."
+  ],
+  [
+   "Can I use cities instead of airport codes?",
+   "Yes — cities and places work, resolving to their centre coordinates. For runway-reference figures between named airports, the Airport Distance Calculator is the sibling tool."
+  ],
+  [
+   "Why does the route curve toward the pole?",
+   "The great circle is the shortest surface path; on flat maps it bends poleward. The curve in the drawing is the straight line, honestly projected."
+  ],
+  [
+   "Does it work for very short flights?",
+   "Yes — the same geometry returns a few hundred kilometres for regional hops. At short range the cruise-time estimate matters less, since climb and descent dominate real short flights."
+  ],
+  [
+   "Which units does it report?",
+   "Kilometres and miles together. Aviation also uses nautical miles — divide kilometres by 1.852, or use the Kilometers to Nautical Miles Converter."
+  ],
+  [
+   "Can I check whether a non-stop exists for the pair?",
+   "Yes — that is the Airport Route Finder's question, answered from the OpenFlights dataset."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Between named airports, the "
+  },
+  {
+   "t": "Airport Distance Calculator",
+   "l": "/tools/airport-distance-calculator"
+  },
+  {
+   "t": " is the specialist; time from distance alone is the "
+  },
+  {
+   "t": "Flight Time by Distance Calculator",
+   "l": "/tools/flight-time-by-distance"
+  },
+  {
+   "t": "; and the drawn route with its northern peak is the "
+  },
+  {
+   "t": "Great Circle Flight Route Calculator",
+   "l": "/tools/great-circle-flight-route-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "airport-distance-calculator",
+  "airport-midpoint-by-coordinates",
+  "airport-route-finder",
+  "bearing-calculator",
+  "closest-facility-finder",
+  "compass-bearing-visualizer"
+ ]
+}

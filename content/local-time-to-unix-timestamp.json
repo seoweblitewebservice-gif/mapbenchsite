@@ -1,0 +1,193 @@
+{
+ "slug": "local-time-to-unix-timestamp",
+ "primary_keyword": "Local Time to Unix Timestamp",
+ "secondary_keywords": [
+  "local time to unix timestamp online",
+  "free local time to unix timestamp",
+  "local time to unix timestamp calculator",
+  "local time to unix timestamp tool",
+  "how to calculate local time to unix timestamp"
+ ],
+ "title": "Local Time to Unix Timestamp Converter",
+ "description": "Convert a local date and time to a Unix timestamp with the Local Time to Unix Timestamp converter — seconds since the epoch, zone-aware. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 1,700,000,000 — a timestamp the internet celebrated — is November 14, 2023, 22:13:20 UTC; your local reading of that same instant depends entirely on your zone.",
+ "quick_answer": "The Local Time to Unix Timestamp converter turns a date and time in a stated zone into the Unix count of seconds since January 1, 1970, UTC. Enter the local time and read the timestamp, zone honoured — the same wall time in Chicago and Berlin is two different instants.",
+ "steps_intro": "The epoch does not care about your timezone — but your input does:",
+ "use_cases": [
+  {
+   "title": "Log and database work",
+   "body": [
+    {
+     "t": "Systems store timestamps; humans file bugs in local time. The converter is the bridge, with the reverse trip on the "
+    },
+    {
+     "t": "Unix Timestamp to Local Time",
+     "l": "/tools/unix-timestamp-to-local-time"
+    },
+    {
+     "t": " page."
+    }
+   ]
+  },
+  {
+   "title": "API debugging",
+   "body": [
+    {
+     "t": "An expiry that fired early is usually a zone read as UTC. Convert the intended local time properly and compare with the token's number."
+    }
+   ]
+  },
+  {
+   "title": "Scheduling in code",
+   "body": [
+    {
+     "t": "Cron jobs, reminders and embargo lifts all resolve to one instant — derive it from the local intention, not from UTC guessing."
+    }
+   ]
+  },
+  {
+   "title": "Data cleaning",
+   "body": [
+    {
+     "t": "A spreadsheet of local datetimes becomes sortable, joinable timestamps — the epoch's whole gift to data work."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The famous billion",
+   "body": [
+    {
+     "t": "Timestamp 1,000,000,000 fell on September 9, 2001, 01:46:40 UTC — parties were held. 1,700,000,000 landed November 14, 2023, 22:13:20 UTC. The next party, 2,000,000,000, is in 2033."
+    }
+   ]
+  },
+  {
+   "label": "Example · One wall time, two numbers",
+   "body": [
+    {
+     "t": "9:00 a.m. in Chicago (UTC-6, standard) is 15:00 UTC; 9:00 a.m. in Berlin (UTC+1) is 08:00 UTC. Seven hours of timestamps separate two identical-looking clock faces."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Epoch reference points",
+  "intro": "Anchors for sanity-checking conversions — all computed, all UTC.",
+  "columns": [
+   "Timestamp",
+   "UTC instant",
+   "Note"
+  ],
+  "rows": [
+   [
+    "0",
+    "Jan 1, 1970, 00:00:00",
+    "The epoch itself"
+   ],
+   [
+    "1,000,000,000",
+    "Sep 9, 2001, 01:46:40",
+    "The gigasecond party"
+   ],
+   [
+    "1,700,000,000",
+    "Nov 14, 2023, 22:13:20",
+    "A recent milestone"
+   ],
+   [
+    "Negative values",
+    "Before 1970",
+    "Perfectly legal — history has timestamps too"
+   ],
+   [
+    "2,147,483,647",
+    "Jan 19, 2038",
+    "The 32-bit limit — the famous 2038 problem"
+   ]
+  ],
+  "note": "Unix time counts seconds (some systems use milliseconds — a timestamp 1,000× too big is the classic symptom). This converter works in seconds."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The Unix timestamp (seconds since January 1, 1970, 00:00 UTC) for a local date and time in a stated zone."
+  ],
+  [
+   "Do I need an account?",
+   "No — time in, number out."
+  ],
+  [
+   "Can I use the result for professional work?",
+   "Yes — it is the standard conversion your systems perform; the zone is explicit, which is where professional errors usually hide."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — nothing here locates you; the zone is chosen, not detected."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Zone names are the IANA database's; other tools may label the same rules differently while computing the same instant."
+  ],
+  [
+   "Seconds or milliseconds?",
+   "This converter gives seconds. JavaScript timestamps are milliseconds — multiply by 1,000 when feeding those systems, and divide when reading theirs."
+  ],
+  [
+   "What about times before 1970?",
+   "Negative timestamps result, correctly. The arithmetic does not fear history."
+  ],
+  [
+   "Daylight saving gaps?",
+   "A local time inside the spring-forward gap (2:30 a.m. on changeover night) never occurred. Converters resolve it by rule; professionals avoid scheduling inside the gap — the converter's zone honesty exposes exactly such traps."
+  ],
+  [
+   "Leap seconds?",
+   "Unix time ignores them by construction (it pretends they don't exist). Astronomical precision is a different discipline."
+  ],
+  [
+   "Microseconds?",
+   "Some systems stamp microseconds (16 digits). Convert seconds here, then append the precision separately — mixing precisions inline is how off-by-a-million bugs are born."
+  ],
+  [
+   "Time zones by abbreviation?",
+   "Abbreviations collide (IST x3). The converter wants a real zone or place so the instant is unambiguous."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Reverse: "
+  },
+  {
+   "t": "Unix Timestamp to Local Time",
+   "l": "/tools/unix-timestamp-to-local-time"
+  },
+  {
+   "t": "; zones: the "
+  },
+  {
+   "t": "Timezone Converter",
+   "l": "/tools/timezone-converter"
+  },
+  {
+   "t": "; DST traps: the "
+  },
+  {
+   "t": "Daylight Saving Checker",
+   "l": "/tools/daylight-saving-checker"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder"
+ ]
+}

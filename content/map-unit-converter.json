@@ -1,0 +1,194 @@
+{
+ "slug": "map-unit-converter",
+ "primary_keyword": "Map Unit Converter",
+ "secondary_keywords": [
+  "acre to hectare",
+  "km to miles",
+  "area unit converter"
+ ],
+ "title": "Map Unit Converter: Scales, Ratios and Ground",
+ "description": "Convert between map units with the Map Unit Converter — scale ratios, ground distances, inches and centimetres on the map. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, at 1:50,000 one centimetre is 500 metres of ground and one inch is about 0.79 miles — the two sentences every paper-map reader eventually memorises, converted here for any scale.",
+ "quick_answer": "The Map Unit Converter converts between the units maps are measured in — scale ratios (1:50,000), ground distances, and map distances in centimetres or inches. Enter any side of the relation and read the others: the translator between the paper's little world and the Earth's big one.",
+ "steps_intro": "Scale is a promise: 1 unit here means N units out there. Convert the promise:",
+ "use_cases": [
+  {
+   "title": "Paper map measurement",
+   "body": [
+    {
+     "t": "Ruler on the map, distance on the ground — the oldest conversion in cartography, with the "
+    },
+    {
+     "t": "Map Scale Calculator",
+     "l": "/tools/map-scale-calculator"
+    },
+    {
+     "t": " family for company."
+    }
+   ]
+  },
+  {
+   "title": "Model and plan scales",
+   "body": [
+    {
+     "t": "Architectural and model scales (1:500, 1:87) are the same mathematics wearing other uniforms."
+    }
+   ]
+  },
+  {
+   "title": "Comparing map series",
+   "body": [
+    {
+     "t": "1:25,000 versus 1:63,360 (the inch-to-the-mile) — convert both to metres-per-centimetre and the comparison is honest."
+    }
+   ]
+  },
+  {
+   "title": "Screen scale estimates",
+   "body": [
+    {
+     "t": "A screen's 'scale' depends on its pixel size — the zoom-based family ("
+    },
+    {
+     "t": "Meters per Pixel",
+     "l": "/tools/map-meters-per-pixel-calculator"
+    },
+    {
+     "t": ") is the digital sibling; this page owns the ratio world."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The classic scales",
+   "body": [
+    {
+     "t": "1:25,000 → 1 cm = 250 m (the walker's map). 1:50,000 → 500 m. 1:100,000 → 1 km per cm, the roundest fact in mapping. 1:1,000,000 → 10 km per cm, the atlas's gait."
+    }
+   ]
+  },
+  {
+   "label": "Example · The imperial mile map",
+   "body": [
+    {
+     "t": "1:63,360 is one inch to one mile exactly — a scale built from 63,360 inches in a mile. British one-inch maps carried a civilisation's walks at that ratio."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Scale cheat table",
+  "intro": "The common ratios and their ground values.",
+  "columns": [
+   "Scale",
+   "1 cm on map",
+   "1 inch on map"
+  ],
+  "rows": [
+   [
+    "1:10,000",
+    "100 m",
+    "253.6 m"
+   ],
+   [
+    "1:25,000",
+    "250 m",
+    "634 m"
+   ],
+   [
+    "1:50,000",
+    "500 m",
+    "1,268 m ≈ 0.79 mi"
+   ],
+   [
+    "1:100,000",
+    "1,000 m",
+    "2,536 m"
+   ],
+   [
+    "1:250,000",
+    "2,500 m",
+    "6,340 m"
+   ]
+  ],
+  "note": "Representative fraction arithmetic is exact: ground = map × denominator, in the same unit. Photocopies and scans break scales silently — measure the printed scale bar when truth matters."
+ },
+ "faq": [
+  [
+   "What does this tool convert?",
+   "Among scale ratio, map distance (cm/in) and ground distance (m/km/mi) — any one to the others, by the representative-fraction relation."
+  ],
+  [
+   "Do I need an account?",
+   "No — values in, conversions out."
+  ],
+  [
+   "Can I use the result for professional work?",
+   "The arithmetic is exact; professional care goes to the source scale's truth (prints shrink, scans stretch — verify against the scale bar)."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 — tile systems are defined over it."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — tiles and pixels quantise; decimals beyond the cell are decoration."
+  ],
+  [
+   "Verbal scales ('one inch to four miles')?",
+   "Convert to a ratio first (4 miles = 253,440 inches → 1:253,440) — the converter accepts the ratio form, and the verbal form becomes it in one multiplication."
+  ],
+  [
+   "Bar scales?",
+   "A drawn bar survives photocopy scaling — measure the bar, derive the effective ratio, then convert with confidence."
+  ],
+  [
+   "Screen maps have scales?",
+   "Only relative to a physical screen size — which is why digital mapping switched to metres-per-pixel and zoom. Both worlds are served on this site."
+  ],
+  [
+   "Area scales?",
+   "Areas scale by the ratio squared — 1 cm² at 1:50,000 is 0.25 km². Square the linear factor, always."
+  ],
+  [
+   "Odd denominators?",
+   "Any ratio converts — historical sheets use delightful ones (1:10,560, six inches to the mile, among them)."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Digital scale: the "
+  },
+  {
+   "t": "Map Meters per Pixel Calculator",
+   "l": "/tools/map-meters-per-pixel-calculator"
+  },
+  {
+   "t": "; pixels: the "
+  },
+  {
+   "t": "Map Pixels to Ground Distance",
+   "l": "/tools/map-pixels-to-ground-distance"
+  },
+  {
+   "t": "; zoom: the "
+  },
+  {
+   "t": "Map Zoom from Resolution Calculator",
+   "l": "/tools/map-zoom-from-resolution-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator"
+ ]
+}

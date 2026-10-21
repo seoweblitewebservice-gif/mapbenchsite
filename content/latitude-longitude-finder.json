@@ -1,0 +1,195 @@
+{
+ "slug": "latitude-longitude-finder",
+ "primary_keyword": "Latitude and Longitude Finder",
+ "secondary_keywords": [
+  "latitude longitude",
+  "gps coordinates",
+  "latitude and longitude finder online"
+ ],
+ "title": "Latitude and Longitude Finder: Coordinates",
+ "description": "Find the latitude and longitude of any place with the Latitude and Longitude Finder — search or click, read the pair, copy it anywhere. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, searching 'Eiffel Tower' returns 48.8584, 2.2945 — the pair every other tool on this site is waiting to consume.",
+ "quick_answer": "The Latitude and Longitude Finder gives the latitude and longitude of any place you search for or click on the map. Find the place and read its coordinate pair — the starting point for converters, distance tools, datasets and every 'where exactly is it?' question that follows.",
+ "steps_intro": "The pair that starts everything else on this site:",
+ "use_cases": [
+  {
+   "title": "Feeding other tools",
+   "body": [
+    {
+     "t": "Nearly every page here begins with a pair. Find it once, then convert ("
+    },
+    {
+     "t": "Coordinate Converter",
+     "l": "/tools/coordinate-converter"
+    },
+    {
+     "t": "), measure ("
+    },
+    {
+     "t": "Driving Distance Calculator",
+     "l": "/tools/driving-distance-calculator"
+    },
+    {
+     "t": ") or look it up ("
+    },
+    {
+     "t": "Coordinates Lookup Tool",
+     "l": "/tools/coordinates-lookup-tool"
+    },
+    {
+     "t": ")."
+    }
+   ]
+  },
+  {
+   "title": "Forms and listings",
+   "body": [
+    {
+     "t": "Property portals, event pages and datasets ask for coordinates. The finder replaces map-eyeballing with a searched, checkable pair."
+    }
+   ]
+  },
+  {
+   "title": "Photo and trip records",
+   "body": [
+    {
+     "t": "The viewpoint, the trailhead, the bothy: places your camera forgot to tag get their coordinates after the fact."
+    }
+   ]
+  },
+  {
+   "title": "Verifying a claimed location",
+   "body": [
+    {
+     "t": "A listing claims coordinates; the finder independently produces the place's pair, and the comparison is the audit."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Landmarks are easy, addresses are honest",
+   "body": [
+    {
+     "t": "Famous places resolve to their famous point. An address resolves to its parcel or rooftop in good data — the finder reports the record's point, and the address tools refine addresses specifically."
+    }
+   ]
+  },
+  {
+   "label": "Example · Click precision",
+   "body": [
+    {
+     "t": "Clicking gives the pair for the exact clicked ground — finer than any search result's chosen point, and the right way to capture a gate, a pier end, a summit cairn."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What you get",
+  "intro": "The finder's outputs and their natural next steps.",
+  "columns": [
+   "Output",
+   "Then"
+  ],
+  "rows": [
+   [
+    "Latitude and longitude (WGS84 decimals)",
+    "Every other tool on this site"
+   ],
+   [
+    "The place on the map",
+    "Your visual confirmation"
+   ],
+   [
+    "Copy-ready pair",
+    "Forms, datasets, messages"
+   ],
+   [
+    "Search by name or address",
+    "Refined by the dedicated address tools"
+   ]
+  ],
+  "note": "Search resolution depends on the underlying place data: landmarks and addresses in mapped regions resolve finely; remote features resolve to their recorded points."
+ },
+ "faq": [
+  [
+   "What does this tool find?",
+   "The WGS84 latitude/longitude of a searched place or a clicked point — the pair itself, presented copy-ready."
+  ],
+  [
+   "Do I need an account?",
+   "No — search or click, read the pair."
+  ],
+  [
+   "Can I use the result for professional work?",
+   "As coordinates sourced from open place data, yes for the usual run of work — with the standing note that legal positions come from surveys, and address-grade work can use the address tools' refinement."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 — the frame GPS produces and web maps consume."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — resolution is not accuracy; the precision tools on this site price each decimal place in metres."
+  ],
+  [
+   "How precise is the pair?",
+   "To the record's point — landmarks to their mapped position, clicks to the pixel's ground. Display decimals follow the precision family's honesty rules."
+  ],
+  [
+   "It found the wrong place with my name.",
+   "Place names repeat worldwide — add the town, region or country to the search, or click the map directly."
+  ],
+  [
+   "My own location?",
+   "Find My Location is the dedicated page for the device's fix."
+  ],
+  [
+   "Coordinates of a photo?",
+   "EXIF pairs paste into the Coordinates Lookup Tool; this finder works forward from names and clicks."
+  ],
+  [
+   "Ocean features?",
+   "Islands and named sea features resolve where the data names them; open water has clicks, not searches."
+  ],
+  [
+   "Batch of places?",
+   "One at a time here — the Batch Geocoder exists for lists."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Look a pair up: the "
+  },
+  {
+   "t": "Coordinates Lookup Tool",
+   "l": "/tools/coordinates-lookup-tool"
+  },
+  {
+   "t": "; convert it: the "
+  },
+  {
+   "t": "Coordinate Converter",
+   "l": "/tools/coordinate-converter"
+  },
+  {
+   "t": "; yours: "
+  },
+  {
+   "t": "Find My Location",
+   "l": "/tools/find-my-location"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "arcminutes-to-decimal-degrees-converter",
+  "arcseconds-to-ground-distance-calculator",
+  "bng-converter",
+  "bounding-box-calculator",
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator"
+ ]
+}

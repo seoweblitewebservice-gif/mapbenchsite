@@ -1,0 +1,200 @@
+{
+ "slug": "arcseconds-to-ground-distance-calculator",
+ "primary_keyword": "Arcseconds to Ground Distance Calculator",
+ "secondary_keywords": [
+  "arcseconds to ground distance calculator online",
+  "free arcseconds to ground distance calculator",
+  "arcseconds to ground distance calculator calculator",
+  "arcseconds to ground distance calculator converter",
+  "arcseconds to ground distance calculator formula"
+ ],
+ "title": "Arcseconds to Ground Distance Calculator",
+ "description": "Convert arcseconds to real ground distance with the Arcseconds to Ground Distance Calculator — latitude-aware, in metres and feet. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, at New York's latitude one arcsecond of latitude is 30.85 metres of ground, while one arcsecond of longitude covers only 23.46 metres — the same angle, two different distances.",
+ "quick_answer": "The Arcseconds to Ground Distance Calculator converts an angle in arcseconds into the ground distance it spans, accounting for whether it runs north-south or east-west and at what latitude. Enter the arcseconds and read metres or feet — the conversion that turns chart precision into real-world size.",
+ "steps_intro": "An arcsecond is tiny in the sky and surprisingly large on the ground:",
+ "use_cases": [
+  {
+   "title": "Judging coordinate precision",
+   "body": [
+    {
+     "t": "A fix quoted to 0.1″ is a 3-metre claim. This calculator prices angular precision in ground units — pair with the "
+    },
+    {
+     "t": "Decimal Degree Precision Calculator",
+     "l": "/tools/decimal-degree-precision-calculator"
+    },
+    {
+     "t": " for the decimal version."
+    }
+   ]
+  },
+  {
+   "title": "Chart and survey reading",
+   "body": [
+    {
+     "t": "Scales and grid ticks speak in seconds; boots speak in metres. Convert before you pace anything out."
+    }
+   ]
+  },
+  {
+   "title": "Astronomy and pointing",
+   "body": [
+    {
+     "t": "Telescope and antenna pointing errors are angular. Their ground footprint at distance is this calculation wearing a uniform."
+    }
+   ]
+  },
+  {
+   "title": "Error budgets",
+   "body": [
+    {
+     "t": "“Within two arcseconds” in a spec becomes metres of tolerance here — the number a project can actually argue about."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · New York's two arcseconds",
+   "body": [
+    {
+     "t": "At latitude 40.758°: 1″ of latitude = 30.85 m; 1″ of longitude = 23.46 m. The gap is the meridians converging toward the pole — geometry you can stand on."
+    }
+   ]
+  },
+  {
+   "label": "Example · At the equator and at 60°",
+   "body": [
+    {
+     "t": "Longitude arcseconds shrink with latitude: 30.92 m at the equator, 15.50 m at 60°. Latitude arcseconds barely move (30.72 → 30.95 m) because the Earth's polar flattening is gentle."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "One arcsecond on the ground (WGS84)",
+  "intro": "Computed from the ellipsoid — the calculator's own arithmetic, tabulated.",
+  "columns": [
+   "Latitude",
+   "1″ of latitude",
+   "1″ of longitude"
+  ],
+  "rows": [
+   [
+    "0° (equator)",
+    "30.72 m",
+    "30.92 m"
+   ],
+   [
+    "40.758° (New York)",
+    "30.85 m",
+    "23.46 m"
+   ],
+   [
+    "45°",
+    "30.87 m",
+    "21.90 m"
+   ],
+   [
+    "60°",
+    "30.95 m",
+    "15.50 m"
+   ],
+   [
+    "90° (pole)",
+    "31.03 m approx",
+    "0 m — meridians meet"
+   ]
+  ],
+  "note": "Longitude's arcsecond dies at the pole because all meridians converge there. Latitude's grows slightly — the flattened ellipsoid's quiet signature."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The ground length of an angular span given in arcseconds, using WGS84 ellipsoid geometry at your latitude and direction."
+  ],
+  [
+   "Is the calculation done locally?",
+   "Yes — browser-side, instantly, on the values you enter."
+  ],
+  [
+   "How accurate is the result?",
+   "Ellipsoid-accurate for the stated latitude — far beyond the precision of any consumer coordinate you would apply it to."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 throughout this site's coordinate family."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — resolution is not accuracy. One arcsecond is about 31 metres however many decimals dress it."
+  ],
+  [
+   "North-south or east-west — why the difference?",
+   "Meridians converge toward the poles, shrinking east-west spans; north-south spans ride the (nearly constant) meridian radius. Direction is an input, not a detail."
+  ],
+  [
+   "Minutes instead of seconds?",
+   "One arcminute is sixty arcseconds — about 1.85 km north-south (one nautical mile of latitude, by design)."
+  ],
+  [
+   "Feet available?",
+   "Yes — imperial output alongside metric, per this site's US/Europe-first convention."
+  ],
+  [
+   "At the pole?",
+   "Longitude arcseconds collapse to zero; latitude arcseconds remain ~31 m. The calculator handles the honest extremes."
+  ],
+  [
+   "Can I invert it (metres to arcseconds)?",
+   "Divide by the per-second figure for your latitude from the table — or use the latitude/longitude degree-distance tools for the degree-scale version."
+  ],
+  [
+   "Survey-grade?",
+   "The geometry is ellipsoid-true; legal surveying adds local datums and field procedure. Use this for planning and understanding with confidence."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Minutes: the "
+  },
+  {
+   "t": "Arcminutes to Decimal Degrees Converter",
+   "l": "/tools/arcminutes-to-decimal-degrees-converter"
+  },
+  {
+   "t": "; degrees: the "
+  },
+  {
+   "t": "Degrees Latitude to Kilometers Calculator",
+   "l": "/tools/latitude-degree-distance"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Degrees Longitude to Kilometers Calculator",
+   "l": "/tools/longitude-degree-distance"
+  },
+  {
+   "t": "; precision: the "
+  },
+  {
+   "t": "Coordinate Precision Tool",
+   "l": "/tools/coordinate-precision-tool"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator",
+  "coordinate-offset-calculator"
+ ]
+}

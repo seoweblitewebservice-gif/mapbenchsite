@@ -1,0 +1,194 @@
+{
+ "slug": "map-tile-count-by-zoom",
+ "primary_keyword": "Map Tile Count by Zoom",
+ "secondary_keywords": [
+  "map tile count by zoom online",
+  "free map tile count by zoom",
+  "map tile count by zoom calculator",
+  "map tile count by zoom tool",
+  "how to calculate map tile count by zoom"
+ ],
+ "title": "Map Tile Count by Zoom: How Many Tiles?",
+ "description": "Count the tiles in the world or a region at any zoom with the Map Tile Count by Zoom calculator — 4^z growth, storage reality included. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, zoom 15 holds 1,073,741,824 tiles for the whole world — over a billion — which is why nobody stores the planet, and everybody renders it on demand.",
+ "quick_answer": "The Map Tile Count by Zoom calculator tells you how many tiles exist at a zoom level — 4^zoom for the full world grid — and what that implies for regional downloads and storage. Enter the zoom and read the count — the arithmetic governing offline packs and tile-server bills.",
+ "steps_intro": "Tiles multiply by four per zoom. Count before you cache:",
+ "use_cases": [
+  {
+   "title": "Offline pack sizing",
+   "body": [
+    {
+     "t": "A region's tile count across zooms is the download's true size — the corner tiles from the "
+    },
+    {
+     "t": "Tile Calculator",
+     "l": "/tools/lat-lon-to-map-tile-calculator"
+    },
+    {
+     "t": " bound the region; this page prices the pyramid."
+    }
+   ]
+  },
+  {
+   "title": "Tile-server capacity planning",
+   "body": [
+    {
+     "t": "Storage and render budgets start from counts: a world layer at z0–12 is ~22 million tiles; z15 alone is a billion."
+    }
+   ]
+  },
+  {
+   "title": "Killing bad plans early",
+   "body": [
+    {
+     "t": "“Pre-render the country at z19” meets 274 billion world tiles' arithmetic and becomes a sensible z16 plan with on-demand rendering."
+    }
+   ]
+  },
+  {
+   "title": "Teaching exponential growth",
+   "body": [
+    {
+     "t": "No classroom example doubles twice per step like tile pyramids — counts make exponential growth visceral."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The pyramid's bill",
+   "body": [
+    {
+     "t": "Cumulative world tiles through z12 ≈ 22.4 million — storable. Through z15 ≈ 1.43 billion — a data centre's opinion changes. Each single zoom from z13 up exceeds all previous zooms combined, three times over."
+    }
+   ]
+  },
+  {
+   "label": "Example · Regions are merciful",
+   "body": [
+    {
+     "t": "A city needs only its rectangle of the grid — thousands to millions of tiles, not billions. Counts by region (width × height in tiles, summed over zooms) are the practical form of this page's math."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "World tile counts",
+  "intro": "4^z, exactly — the table behind every tile budget.",
+  "columns": [
+   "Zoom",
+   "Tiles (world)",
+   "At ~15 KB avg, storage"
+  ],
+  "rows": [
+   [
+    "0",
+    "1",
+    "—"
+   ],
+   [
+    "5",
+    "1,024",
+    "~15 MB"
+   ],
+   [
+    "10",
+    "1,048,576",
+    "~16 GB"
+   ],
+   [
+    "12",
+    "16,777,216",
+    "~250 GB"
+   ],
+   [
+    "15",
+    "1,073,741,824",
+    "~16 TB"
+   ],
+   [
+    "19",
+    "274,877,906,944",
+    "~4 PB"
+   ]
+  ],
+  "note": "Most world tiles are ocean — real systems store land-biased subsets or render on demand. The counts are the ceiling every strategy negotiates with."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The number of tiles in the full grid at a zoom (2^z × 2^z = 4^z) and, for regions, the rectangle counts per zoom summed across the pyramid."
+  ],
+  [
+   "Which map standard does it use?",
+   "The slippy-map standard (Web Mercator, 256-px tiles) shared by OSM, Google and MapLibre."
+  ],
+  [
+   "Can I use this in production GIS?",
+   "The formulas are the production standard itself — yes for web-mapping work."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 — tile systems are defined over it."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — tiles and pixels quantise; decimals beyond the cell are decoration."
+  ],
+  [
+   "Why does nobody pre-render everything?",
+   "This table. Rendering and storage grow ×4 per zoom while demand concentrates on a sliver of tiles — on-demand rendering with caching wins by orders of magnitude."
+  ],
+  [
+   "Vector tiles change the count?",
+   "The grid is identical; tile sizes differ (often smaller, style-dependent). Counts govern both."
+  ],
+  [
+   "How many tiles for my city?",
+   "Rectangle math: (x_east − x_west + 1) × (y_south − y_north + 1) per zoom — corner tiles from the tile calculator, summed over your zoom range."
+  ],
+  [
+   "Ocean tiles really stored?",
+   "Smart stacks skip or placeholder them (a single ocean tile serves all seas in some systems) — the count is the naive ceiling, engineering is the discount."
+  ],
+  [
+   "Tile size assumption?",
+   "~15 KB is a planning average for raster map tiles; satellite imagery runs far larger, sparse vector tiles far smaller. State your assumption when budgeting."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Corner tiles: the "
+  },
+  {
+   "t": "Latitude Longitude to Map Tile Calculator",
+   "l": "/tools/lat-lon-to-map-tile-calculator"
+  },
+  {
+   "t": "; widths: the "
+  },
+  {
+   "t": "Map Tile Ground Width Calculator",
+   "l": "/tools/map-tile-ground-width-calculator"
+  },
+  {
+   "t": "; scale: the "
+  },
+  {
+   "t": "Map Meters per Pixel Calculator",
+   "l": "/tools/map-meters-per-pixel-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator"
+ ]
+}

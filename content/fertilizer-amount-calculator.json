@@ -1,0 +1,185 @@
+{
+ "slug": "fertilizer-amount-calculator",
+ "primary_keyword": "Fertilizer Amount Calculator",
+ "secondary_keywords": [
+  "fertilizer amount calculator online",
+  "free fertilizer amount calculator",
+  "fertilizer amount calculator calculator",
+  "fertilizer amount calculator tool",
+  "how to calculate fertilizer amount calculator"
+ ],
+ "title": "Fertilizer Amount Calculator: Product per Acre",
+ "description": "Work out how much fertilizer product a nutrient target needs with the Fertilizer Amount Calculator — from the analysis on the bag. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, supplying 50 lb of nitrogen per acre from a 10-10-10 product takes 500 lb of product per acre — 10 tons across a 40-acre field.",
+ "quick_answer": "The Fertilizer Amount Calculator turns a nutrient target into a product quantity: enter the pounds of nitrogen (or another nutrient) you want per acre and the percentage on the product's label, and it returns the pounds of product per acre and for your field. The bag's analysis does the steering.",
+ "steps_intro": "Fertilizer is bought as product and prescribed as nutrient. Convert between them honestly:",
+ "use_cases": [
+  {
+   "title": "Field application planning",
+   "body": [
+    {
+     "t": "Agronomists prescribe nutrients; merchants sell product. This calculator is the conversion the order is written from — field size from the "
+    },
+    {
+     "t": "Acreage Map Calculator",
+     "l": "/tools/acreage-map-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Comparing products",
+   "body": [
+    {
+     "t": "A cheaper bag with half the analysis can cost more per acre. Price per pound of nutrient — via the product rates this tool returns — is the honest comparison."
+    }
+   ]
+  },
+  {
+   "title": "Spreader calibration checks",
+   "body": [
+    {
+     "t": "The spreader must deliver the product rate, not the nutrient rate. Confusing the two is a 10× error with a 10-10-10 — this page exists to prevent it."
+    }
+   ]
+  },
+  {
+   "title": "Garden and lawn use",
+   "body": [
+    {
+     "t": "Small areas scale the same math down: the per-acre product rate prorates to any plot once its area is known."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 10-10-10 field",
+   "body": [
+    {
+     "t": "Target 50 lb N/acre; product is 10% N. Product rate = 50 ÷ 0.10 = 500 lb/acre. Across 40 acres: 20,000 lb = 10 tons. The same product incidentally supplies 50 lb each of P₂O₅ and K₂O per acre — the other two numbers on the bag ride along."
+    }
+   ]
+  },
+  {
+   "label": "Example · A concentrated product",
+   "body": [
+    {
+     "t": "Urea at 46% N: 50 ÷ 0.46 ≈ 108.7 lb/acre for the same nitrogen. Concentration is why product rates cannot be compared bag to bag without this calculation."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Product needed for 50 lb N per acre",
+  "intro": "Product rate = nutrient target ÷ analysis fraction. Common analyses, computed — always confirm against your own product's label.",
+  "columns": [
+   "Product analysis (N%)",
+   "Product per acre",
+   "Product for 40 acres"
+  ],
+  "rows": [
+   [
+    "46% (urea)",
+    "108.7 lb",
+    "2.17 tons"
+   ],
+   [
+    "34% (ammonium nitrate type)",
+    "147.1 lb",
+    "2.94 tons"
+   ],
+   [
+    "21% (ammonium sulfate type)",
+    "238.1 lb",
+    "4.76 tons"
+   ],
+   [
+    "18%",
+    "277.8 lb",
+    "5.56 tons"
+   ],
+   [
+    "10% (10-10-10)",
+    "500.0 lb",
+    "10.00 tons"
+   ]
+  ],
+  "note": "Analyses shown are the standard grades named; your bag's printed analysis is the authority for its rate."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Product quantity from a nutrient target: rate = target nutrient per acre ÷ the product's nutrient percentage, scaled to your field's area."
+  ],
+  [
+   "Do I need an account?",
+   "No. Enter the target and the label analysis, read the product rate."
+  ],
+  [
+   "Can I use the result for professional work?",
+   "As the arithmetic behind an agronomist's prescription, yes. The prescription itself — how much nutrient this field needs — comes from soil tests and professional advice, not from this calculator."
+  ],
+  [
+   "Which nutrient do I calculate for?",
+   "Usually the limiting one your prescription names — often nitrogen for grasses. Blended products supply the others in their label ratio; check the full analysis, not just the first number."
+  ],
+  [
+   "What do the three numbers on a bag mean?",
+   "N–P₂O₅–K₂O percentages by weight: a 10-10-10 is 10% nitrogen, 10% phosphate (as P₂O₅), 10% potash (as K₂O). The rate calculation uses the nutrient you are targeting."
+  ],
+  [
+   "Metric version?",
+   "Same division in kg/ha: target kg N/ha ÷ analysis fraction = product kg/ha. A 50 kg N/ha target from a 10% product is 500 kg/ha of product."
+  ],
+  [
+   "Why not just follow the bag's rate?",
+   "Bag rates are generic starting points. Soil-tested prescriptions override them — this calculator serves the prescription, not the marketing."
+  ],
+  [
+   "My prescription is in kg per hectare.",
+   "Use the same division metrically: product kg/ha = nutrient kg/ha ÷ analysis fraction. 34 kg N/ha from a 46% product is about 73.9 kg/ha of product."
+  ],
+  [
+   "The field is not one size on paper and in the cab.",
+   "Use the measured acreage — drawn in the Acreage Map Calculator — for the total. Rate per acre is unaffected; the order quantity is what the true area changes."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "For rates already given per square metre, the "
+  },
+  {
+   "t": "Fertilizer by Area Calculator",
+   "l": "/tools/fertilizer-by-area-calculator"
+  },
+  {
+   "t": " is the direct tool; field areas come from the "
+  },
+  {
+   "t": "Acreage Map Calculator",
+   "l": "/tools/acreage-map-calculator"
+  },
+  {
+   "t": "; and row-based crops start from the "
+  },
+  {
+   "t": "Crop Row Length Calculator",
+   "l": "/tools/crop-row-length-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "center-of-polygon",
+  "circle-area-from-radius",
+  "circle-circumference-from-radius",
+  "cities-within-drawn-area-finder",
+  "crop-row-length-calculator",
+  "customer-radius-area-calculator"
+ ]
+}

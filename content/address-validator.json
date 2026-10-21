@@ -1,0 +1,187 @@
+{
+ "slug": "address-validator",
+ "primary_keyword": "Address Validator",
+ "secondary_keywords": [
+  "verify address",
+  "address check",
+  "address validator online"
+ ],
+ "title": "Address Validator: How Geocoders Resolve It",
+ "description": "See how open geocoders resolve an address before you trust it, with the Address Validator — matched place, coordinates, confidence. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a mailing list's 'Main St, Springfield' resolves confidently to the wrong Springfield unless a human reads the matched place before the batch goes out.",
+ "quick_answer": "The Address Validator shows how open geocoders resolve an address — the matched place, coordinates and match shape — so you can judge it before it enters a mailing, a CRM or a map. Type it and read what the geocoder thinks you meant, while disagreement is still cheap.",
+ "steps_intro": "Validation here means 'see the resolution before you rely on it'. Paste and inspect:",
+ "use_cases": [
+  {
+   "title": "Pre-mailing checks",
+   "body": [
+    {
+     "t": "A single suspicious address checked now saves a returned envelope later. Whole lists belong in the "
+    },
+    {
+     "t": "Batch Geocoder",
+     "l": "/tools/batch-geocoder"
+    },
+    {
+     "t": " — after sampling a few here."
+    }
+   ]
+  },
+  {
+   "title": "CRM import hygiene",
+   "body": [
+    {
+     "t": "Imports geocode silently and wrongly at scale. Validate the pattern of your data (formats, missing towns) before the import bakes it in."
+    }
+   ]
+  },
+  {
+   "title": "Pin dispute resolution",
+   "body": [
+    {
+     "t": "A customer insists the pin is wrong; the validator shows what the geocoder resolved and why — the start of a factual conversation."
+    }
+   ]
+  },
+  {
+   "title": "Form-design testing",
+   "body": [
+    {
+     "t": "Type your own form's typical inputs and watch how they resolve. The failures design the validation your form needs."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The ambiguous street",
+   "body": [
+    {
+     "t": "“100 Main Street” exists in thousands of towns. The validator returns the match it chose, displayed in full — the choosing is visible, so it is correctable."
+    }
+   ]
+  },
+  {
+   "label": "Example · The near-miss",
+   "body": [
+    {
+     "t": "A transposed postcode digit resolves to a real but wrong town, confidently. Eyeballing the matched place is the only step that catches near-misses — which is this page's entire argument."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What a resolution tells you",
+  "intro": "Reading a geocoder's answer like an auditor — the fields this page surfaces.",
+  "columns": [
+   "Signal",
+   "Good match",
+   "Suspicious match"
+  ],
+  "rows": [
+   [
+    "Matched place",
+    "Your town and state",
+    "A same-named place elsewhere"
+   ],
+   [
+    "Precision",
+    "Rooftop or address point",
+    "Town centroid only"
+   ],
+   [
+    "Components",
+    "Number, street, town all present",
+    "Street missing or substituted"
+   ],
+   [
+    "Coordinates",
+    "On your street",
+    "In a field near the town"
+   ],
+   [
+    "Your verdict",
+    "Ship it",
+    "Fix the input, not the map"
+   ]
+  ],
+  "note": "This is geocoder resolution, not postal certification — USPS CASS-style validation is an official process with its own providers."
+ },
+ "faq": [
+  [
+   "Is this postal certification?",
+   "No. It shows open-geocoder resolution for your judgement. Certified address verification (for bulk-mail discounts and the like) is a regulated service this free tool does not impersonate."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — you type the address being checked; your own location plays no part."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Geocoders and maps draw from different sources and dates. A name that differs across services is a data-vintage story, not necessarily an error."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No — and this tool never asks for it."
+  ],
+  [
+   "What makes a match trustworthy?",
+   "Specificity: a full address resolving to an address-level point in the expected town. Centroid matches in the wrong county are the classic warning."
+  ],
+  [
+   "The geocoder found nothing.",
+   "Rebuild the address: number, street, town, state, postcode, country — in that completeness order. Most failures are missing rungs, not missing places."
+  ],
+  [
+   "Fifty addresses to check?",
+   "The Batch Geocoder takes lists to 50 and returns a table you can audit in a spreadsheet."
+  ],
+  [
+   "The match is a town centroid — usable?",
+   "For a county-level question, maybe; for a delivery, no. Precision grades the uses a match can serve."
+  ],
+  [
+   "Two geocoders disagree about my address.",
+   "Trust the one whose matched place reads like your input, and suspect your input's completeness first. Disagreement is information, delivered free."
+  ],
+  [
+   "Does validation fix the address?",
+   "It shows the resolution; corrections are yours to make in the source data. A validator that silently rewrites would hide the very errors you are hunting."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Bulk: the "
+  },
+  {
+   "t": "Batch Geocoder",
+   "l": "/tools/batch-geocoder"
+  },
+  {
+   "t": "; single conversions: "
+  },
+  {
+   "t": "Address to Coordinates",
+   "l": "/tools/address-to-coordinates"
+  },
+  {
+   "t": "; county truth: "
+  },
+  {
+   "t": "Address to County Lookup",
+   "l": "/tools/address-to-county-lookup"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder",
+  "congressional-district-context",
+  "continent-finder"
+ ]
+}

@@ -1,0 +1,191 @@
+{
+ "slug": "coordinates-to-address",
+ "primary_keyword": "Coordinates to Address",
+ "secondary_keywords": [
+  "coordinates to address online",
+  "free coordinates to address"
+ ],
+ "title": "Coordinates to Address: Reverse Geocode Lookup",
+ "description": "Turn latitude and longitude into a structured address with Coordinates to Address — the reverse of geocoding, done openly. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 38.8977, -77.0365 — the White House's coordinates — reverse-geocode to 1600 Pennsylvania Avenue NW, Washington, DC, in structured parts.",
+ "quick_answer": "Coordinates to Address reverse-geocodes a latitude and longitude pair into a structured address — street, town, region and country as separate fields. Paste the coordinates and read the address, ready for records, reports and any form that thinks in streets rather than degrees.",
+ "steps_intro": "Coordinates are exact and unreadable; addresses are the opposite. Convert to the human format:",
+ "use_cases": [
+  {
+   "title": "Naming GPS evidence",
+   "body": [
+    {
+     "t": "Photos, trackers and field notes carry coordinates. Reports need addresses — this is the translation desk. Lists of pairs belong to the "
+    },
+    {
+     "t": "Batch Geocoder",
+     "l": "/tools/batch-geocoder"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Verifying a pin",
+   "body": [
+    {
+     "t": "A pin dropped in the wrong field reverse-geocodes to a road that is not yours — the cheapest error check in mapping."
+    }
+   ]
+  },
+  {
+   "title": "Forms and records",
+   "body": [
+    {
+     "t": "Systems that captured a location as numbers eventually must tell a human where it was. Structured fields beat a raw pair in every filing cabinet."
+    }
+   ]
+  },
+  {
+   "title": "Fieldwork wrap-up",
+   "body": [
+    {
+     "t": "The day's surveyed points become the day's named places — the report writes itself once the names exist."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The famous pair",
+   "body": [
+    {
+     "t": "38.8977, -77.0365 resolves to the White House's address — a useful sanity anchor: if a reverse geocoder cannot name that lawn, distrust it everywhere."
+    }
+   ]
+  },
+  {
+   "label": "Example · The honest middle of nowhere",
+   "body": [
+    {
+     "t": "A point in open country returns the nearest named road and town, labelled by its own coarseness. A sparse answer is the truth at that precision, not a failure."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the structured address contains",
+  "intro": "The fields a reverse lookup returns — and what each is good for.",
+  "columns": [
+   "Field",
+   "Example shape",
+   "Used for"
+  ],
+  "rows": [
+   [
+    "House number and road",
+    "1600 Pennsylvania Avenue NW",
+    "The record's headline"
+   ],
+   [
+    "Town or city",
+    "Washington",
+    "Filing and sorting"
+   ],
+   [
+    "Region or state",
+    "District of Columbia",
+    "Jurisdiction"
+   ],
+   [
+    "Postcode",
+    "20500",
+    "Mailing context"
+   ],
+   [
+    "Country",
+    "United States",
+    "International records"
+   ],
+   [
+    "Display name",
+    "The full one-line address",
+    "Copy-paste into documents"
+   ]
+  ],
+  "note": "Fields come from open geocoding data; in sparse areas some fields are absent because the map itself is sparse there — absence is reported, never invented."
+ },
+ "faq": [
+  [
+   "Is this the same as a reverse geocoder?",
+   "Yes — 'reverse geocoding' is the technical name for coordinates → address, and this page is exactly that, presented in structured fields."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — you paste the coordinates under study. Your own position is not requested."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Different geocoders hold different data vintages and naming choices — contested names most visibly. The fields show this source's answer."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "What coordinate formats are accepted?",
+   "Decimal degrees (38.8977, -77.0365) is the native tongue. Order is latitude first — swapped pairs are the most common error in the field."
+  ],
+  [
+   "The address came back as just a town.",
+   "Then the point sits where the map knows the town but not the street — common in rural areas. The coarse answer is the honest resolution at that data depth."
+  ],
+  [
+   "Forward instead — address to coordinates?",
+   "The Address to Coordinates tool runs this backwards."
+  ],
+  [
+   "Coordinates from a photo's EXIF?",
+   "Paste them — naming where a photo was taken is this tool's daily bread, provided the photo kept its location data."
+  ],
+  [
+   "The road name looks outdated.",
+   "Maps rename slowly and geocoders lag politely. The structured fields show the source's current word; local signage is newer still."
+  ],
+  [
+   "Can it name a place at sea?",
+   "Coastal points may return the nearest shore address or nothing structured — the honest output for a point with no street."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Forward: "
+  },
+  {
+   "t": "Address to Coordinates",
+   "l": "/tools/address-to-coordinates"
+  },
+  {
+   "t": "; batches: the "
+  },
+  {
+   "t": "Batch Geocoder",
+   "l": "/tools/batch-geocoder"
+  },
+  {
+   "t": "; validation: the "
+  },
+  {
+   "t": "Address Validator",
+   "l": "/tools/address-validator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder",
+  "congressional-district-context",
+  "continent-finder"
+ ]
+}

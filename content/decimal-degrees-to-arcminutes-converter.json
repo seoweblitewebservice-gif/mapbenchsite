@@ -1,0 +1,193 @@
+{
+ "slug": "decimal-degrees-to-arcminutes-converter",
+ "primary_keyword": "Decimal Degrees to Arcminutes Converter",
+ "secondary_keywords": [
+  "decimal degrees to arcminutes converter online",
+  "free decimal degrees to arcminutes converter",
+  "decimal degrees to arcminutes converter calculator",
+  "decimal degrees to arcminutes converter converter",
+  "decimal degrees to arcminutes converter formula"
+ ],
+ "title": "Decimal Degrees to Arcminutes Converter",
+ "description": "Convert decimal degrees to arcminutes with the Decimal Degrees to Arcminutes Converter — multiply by 60, exact and instant. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, Times Square's 40.7580 degrees becomes 2,445.48 arcminutes — the form a nautical chart would rather read, since its miles are built from minutes.",
+ "quick_answer": "The Decimal Degrees to Arcminutes Converter turns decimal degrees into arcminutes by the exact relation 1 degree = 60 arcminutes. Enter the decimal value and read the minutes — the reverse conversion, and chart work's daily bread, where the nautical mile is defined from the arcminute.",
+ "steps_intro": "Multiply by sixty — cleanly, with the reverse check built into the family:",
+ "use_cases": [
+  {
+   "title": "Preparing chart values",
+   "body": [
+    {
+     "t": "Software gives decimals; charts and older instruments want minutes. Convert the batch one value at a time, verified against the "
+    },
+    {
+     "t": "Arcminutes to Decimal Degrees",
+     "l": "/tools/arcminutes-to-decimal-degrees-converter"
+    },
+    {
+     "t": " round trip."
+    }
+   ]
+  },
+  {
+   "title": "Nautical calculations",
+   "body": [
+    {
+     "t": "Latitude differences in arcminutes ARE nautical miles. Converting a leg's latitude change here prices the leg before the chart table does."
+    }
+   ]
+  },
+  {
+   "title": "Degrees-minutes formats",
+   "body": [
+    {
+     "t": "DDM displays want the minutes component separated and multiplied out — this is that step, isolated and checkable."
+    }
+   ]
+  },
+  {
+   "title": "Teaching the subdivision",
+   "body": [
+    {
+     "t": "Sixty-based subdivisions confuse until a few conversions make them muscle. The converter is the practice room."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · A latitude, converted",
+   "body": [
+    {
+     "t": "40.7580° × 60 = 2,445.48′. Separated: 40 whole degrees and 0.7580 × 60 = 45.48′ — the degrees-minutes dress (40°45.48′) GPS units display at sea."
+    }
+   ]
+  },
+  {
+   "label": "Example · The mile inside the minutes",
+   "body": [
+    {
+     "t": "A latitude change of 12.0′ is 12.0 nautical miles of north-south travel — no calculator needed once the equivalence is seen, and this converter is where it gets seen."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Decimal to arcminute anchors",
+  "intro": "Recognise these on sight and most conversions become estimates you can trust.",
+  "columns": [
+   "Decimal degrees",
+   "Arcminutes",
+   "Note"
+  ],
+  "rows": [
+   [
+    "0.016667°",
+    "1′",
+    "One nautical mile of latitude"
+   ],
+   [
+    "0.1°",
+    "6′",
+    "The tidy tenth"
+   ],
+   [
+    "0.25°",
+    "15′",
+    "A quarter degree"
+   ],
+   [
+    "0.5°",
+    "30′",
+    "Half"
+   ],
+   [
+    "1°",
+    "60′",
+    "The definition"
+   ]
+  ],
+  "note": "Exact by definition. Any error in the output was in the input — the conversion itself is a subdivision, not a measurement."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Decimal degrees multiplied by 60 to give arcminutes, with whole-degree separation where the degrees-minutes form is wanted."
+  ],
+  [
+   "Is the calculation done locally?",
+   "Yes — instant, in the browser."
+  ],
+  [
+   "How accurate is the result?",
+   "Definitional — 60′ per degree exactly. The input's accuracy is the output's ceiling."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "Unit conversion is datum-blind; the values it serves on this site are WGS84."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "Minutes to three decimals (0.001′ ≈ 1.9 m of latitude) already out-resolve most sources. Beyond that, costume."
+  ],
+  [
+   "Full coordinates at once?",
+   "The Coordinate Converter dresses whole pairs in degrees-minutes directly; this page is the single-value lane."
+  ],
+  [
+   "Arcminutes of longitude?",
+   "Same ×60 arithmetic — but remember a longitude arcminute's ground size shrinks with latitude, priced by the Arcseconds family tools."
+  ],
+  [
+   "Negative values?",
+   "Signs carry through — western and southern conversions stay honest."
+  ],
+  [
+   "Seconds too?",
+   "Split the minutes' fraction ×60 again for arcseconds, or use the DMS converters for the full dress in one step."
+  ],
+  [
+   "Why 60?",
+   "Babylonian sexagesimal, inherited through astronomy into navigation — the oldest unit system you will use today."
+  ],
+  [
+   "Rounding drift on round trips?",
+   "Convert, convert back: float arithmetic returns your value to display precision. Any visible drift is a display-rounding choice, correctable in the precision tools."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Reverse: "
+  },
+  {
+   "t": "Arcminutes to Decimal Degrees Converter",
+   "l": "/tools/arcminutes-to-decimal-degrees-converter"
+  },
+  {
+   "t": "; full dress: the "
+  },
+  {
+   "t": "Coordinate Converter",
+   "l": "/tools/coordinate-converter"
+  },
+  {
+   "t": "; ground size: the "
+  },
+  {
+   "t": "Arcseconds to Ground Distance Calculator",
+   "l": "/tools/arcseconds-to-ground-distance-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator",
+  "coordinate-offset-calculator",
+  "coordinate-parser"
+ ]
+}

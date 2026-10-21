@@ -1,0 +1,30 @@
+{
+ "slug": "land-cost-per-acre-calculator",
+ "primary_keyword": "Land Cost Per Acre Calculator",
+ "secondary_keywords": [
+  "price per acre calculator",
+  "cost per acre",
+  "acre price calculator",
+  "land price calculator",
+  "property price per acre"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "acres-to-hectares-converter",
+  "acres-to-square-feet-converter",
+  "buffer-zone-map",
+  "center-of-polygon",
+  "circle-area-from-radius",
+  "circle-circumference-from-radius"
+ ]
+}

@@ -1,0 +1,190 @@
+{
+ "slug": "mgrs-converter",
+ "primary_keyword": "MGRS Converter",
+ "secondary_keywords": [
+  "mgrs",
+  "military grid",
+  "grid reference"
+ ],
+ "title": "MGRS Converter: Military Grid Reference System",
+ "description": "Convert between coordinates and MGRS references with the MGRS Converter — grid zones, 100 km squares and digit precision explained. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, Times Square's MGRS reference is 18T WL 85632 12388 at metre precision — a single string that finds a doorway, spoken by soldiers, rescuers and surveyors worldwide.",
+ "quick_answer": "The MGRS Converter converts between latitude/longitude and Military Grid Reference System references — the NATO standard built on UTM and UPS grids. Enter coordinates and read the reference: grid zone, 100 km square letters, and digits setting precision from 10 km to 1 m.",
+ "steps_intro": "The grid the world's militaries and rescue services share:",
+ "use_cases": [
+  {
+   "title": "Emergency and field coordination",
+   "body": [
+    {
+     "t": "MGRS is the lingua franca of joint operations and much field science — convert a GPS pair to a reference that can be spoken, written and plotted identically by everyone."
+    }
+   ]
+  },
+  {
+   "title": "Reading military and NGO documents",
+   "body": [
+    {
+     "t": "Reports cite MGRS. The converter turns their strings back into map points — pair with the "
+    },
+    {
+     "t": "Coordinate Converter",
+     "l": "/tools/coordinate-converter"
+    },
+    {
+     "t": " for onward formats."
+    }
+   ]
+  },
+  {
+   "title": "Land navigation training",
+   "body": [
+    {
+     "t": "The digits' precision ladder (2 digits = 10 km … 10 digits = 1 m) is the curriculum — this page computes references to practise against."
+    }
+   ]
+  },
+  {
+   "title": "Archaeology and surveying support",
+   "body": [
+    {
+     "t": "Field projects in many regions log finds by MGRS; the converter bridges those logs and GIS."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Anatomy of 18T WL 85632 12388",
+   "body": [
+    {
+     "t": "18T: grid zone (UTM zone 18, latitude band T). WL: the 100 km square. 85632 / 12388: easting and northing within the square at metre precision (from UTM E 585,633, N 4,512,388). Drop digit pairs and the reference coarsens gracefully — 18T WL 85 12 is the 1 km version."
+    }
+   ]
+  },
+  {
+   "label": "Example · Precision by digit count",
+   "body": [
+    {
+     "t": "Even digit totals split half/half between easting and northing: 4 digits → 1 km squares, 6 → 100 m, 8 → 10 m, 10 → 1 m. The reference contains its own uncertainty statement, which is why professionals trust the format."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "MGRS structure",
+  "intro": "The reference, layer by layer.",
+  "columns": [
+   "Part",
+   "Meaning",
+   "Example"
+  ],
+  "rows": [
+   [
+    "Grid zone designator",
+    "UTM zone number + latitude band letter (C–X, no I/O)",
+    "18T"
+   ],
+   [
+    "100 km square",
+    "Two letters from the UTM lettering scheme",
+    "WL"
+   ],
+   [
+    "Numerical part",
+    "Easting then northing within the square, truncated (never rounded)",
+    "85632 12388"
+   ],
+   [
+    "Precision",
+    "Digit pairs: 2→10 km, 4→1 km, 6→100 m, 8→10 m, 10→1 m",
+    "Chosen per use"
+   ]
+  ],
+  "note": "Polar regions switch to UPS (letters A/B/Y/Z zones) — the converter handles the standard's both halves. Truncation (not rounding) is specified so a reference always names the square containing the point."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The MGRS reference for coordinates (UTM/UPS-based, with 100 km square letters and digits), and the coordinates for a reference — the NATO grid standard (MIL-STD-60007 family) as published."
+  ],
+  [
+   "Do I need an account?",
+   "No — and no callsign, unit or permission; the system is a public standard."
+  ],
+  [
+   "Can I use the result for professional work?",
+   "MGRS is a working professional standard in defence, emergency and field-science contexts, and this converter implements its published lettering and truncation rules. Operational use follows your organisation's own validated tools, as with any standard."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 — tile systems are defined over it."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — tiles and pixels quantise; decimals beyond the cell are decoration."
+  ],
+  [
+   "Can I copy the result into GIS software?",
+   "As a label directly; as geometry via the converted coordinates — most defence-adjacent GIS speaks MGRS natively."
+  ],
+  [
+   "Letters I and O missing — why?",
+   "Excluded from bands and squares to prevent confusion with 1 and 0 — the same human-factors courtesy as the British grid's missing I."
+  ],
+  [
+   "Truncated, not rounded?",
+   "Always truncated: 85632 could be anything from 85632.0 to 85632.9 — the reference claims the square, not the point, and truncation keeps the claim true."
+  ],
+  [
+   "Datum warnings?",
+   "MGRS rides WGS84 in its modern form; references derived from old local datums can sit hundreds of metres off. Documents should state their datum; converters assume WGS84."
+  ],
+  [
+   "UPS polar zones?",
+   "Above 84°N and below 80°S, UTM yields to UPS with its own lettering — the converter switches systems at the standard's boundary."
+  ],
+  [
+   "Square letters repeat?",
+   "Every ~2,000 km the lettering cycles — the grid zone designator disambiguates, which is why full references always carry it."
+  ],
+  [
+   "GARS instead?",
+   "Area referencing (30′ cells) versus MGRS's point precision — the GARS Converter covers the area system; choose by the conversation you are joining."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Areas: the "
+  },
+  {
+   "t": "GARS Converter",
+   "l": "/tools/gars-converter"
+  },
+  {
+   "t": "; Britain: the "
+  },
+  {
+   "t": "British National Grid Helper",
+   "l": "/tools/bng-converter"
+  },
+  {
+   "t": "; ham squares: the "
+  },
+  {
+   "t": "Maidenhead Grid Locator",
+   "l": "/tools/maidenhead-grid-locator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator"
+ ]
+}

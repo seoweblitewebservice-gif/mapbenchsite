@@ -1,0 +1,190 @@
+{
+ "slug": "coordinate-span-calculator",
+ "primary_keyword": "Coordinate Span Calculator",
+ "secondary_keywords": [
+  "coordinate span calculator online",
+  "free coordinate span calculator",
+  "coordinate span calculator calculator",
+  "coordinate span calculator tool",
+  "how to calculate coordinate span calculator"
+ ],
+ "title": "Coordinate Span Calculator: Spread of Points",
+ "description": "Measure the span of a set of coordinates with the Coordinate Span Calculator — north-south and east-west extents in degrees and distance. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, Times Square to JFK spans 21.77 km corner-to-corner — but its latitude span (0.117°) and longitude span (0.207°) tell the shape of the spread, not just its size.",
+ "quick_answer": "The Coordinate Span Calculator measures how far a set of coordinates spreads — the north-south and east-west extents in degrees and in ground distance, with the diagonal for scale. Paste the points and read the span — the footprint's dimensions, deciding zooms, boxes and sampling density.",
+ "steps_intro": "A point set has a shape. Measure its footprint:",
+ "use_cases": [
+  {
+   "title": "Choosing map zooms and boxes",
+   "body": [
+    {
+     "t": "The span dictates the viewport — and the "
+    },
+    {
+     "t": "Coordinate Bounding Box Generator",
+     "l": "/tools/coordinate-bounding-box-generator"
+    },
+    {
+     "t": " turns the same extremes into the query box."
+    }
+   ]
+  },
+  {
+   "title": "Dataset characterisation",
+   "body": [
+    {
+     "t": "“Our points cover…” becomes numbers: a 40 km span with a 2 km core is a different dataset from an even 40 km spread, and the span plus centre says which."
+    }
+   ]
+  },
+  {
+   "title": "Sampling design review",
+   "body": [
+    {
+     "t": "Stations meant to cover a basin that span only its corner get caught here — before the fieldwork, not after."
+    }
+   ]
+  },
+  {
+   "title": "Outlier detection",
+   "body": [
+    {
+     "t": "One bad point inflates the span absurdly. The span is the tripwire that sends you looking for the swapped coordinate."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Two airports' worth of span",
+   "body": [
+    {
+     "t": "Times Square (40.7580, −73.9855) to JFK (40.6413, −73.7781): latitude span 0.1167° (12.96 km), longitude span 0.2074° (17.51 km at this latitude), diagonal 21.77 km. The set is wider than tall — the span says so before any map loads."
+    }
+   ]
+  },
+  {
+   "label": "Example · Span versus spread",
+   "body": [
+    {
+     "t": "Span measures extremes only: two clusters 100 km apart with nothing between have the same span as an even scatter. Pair the span with the mean ("
+    },
+    {
+     "t": "Coordinate Mean Calculator",
+     "l": "/tools/coordinate-mean-calculator"
+    },
+    {
+     "t": ") for the honest pair of numbers."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading the span",
+  "intro": "Each output and the decision it feeds.",
+  "columns": [
+   "Output",
+   "Feeds"
+  ],
+  "rows": [
+   [
+    "Latitude span (degrees and km)",
+    "North-south extent — viewport height, climate band"
+   ],
+   [
+    "Longitude span (degrees and km)",
+    "East-west extent — note the km depends on latitude"
+   ],
+   [
+    "Diagonal (great-circle)",
+    "The footprint's scale in one number"
+   ],
+   [
+    "Extremes (min/max)",
+    "The bounding box itself, one step away"
+   ]
+  ],
+  "note": "East-west kilometres are computed at the set's mid-latitude — the honest conversion for a footprint, stated in the method."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The extents of a coordinate set: latitude and longitude spans in degrees, their ground distances, and the corner-to-corner diagonal."
+  ],
+  [
+   "Which map standard does it use?",
+   "WGS84 coordinates with spherical distances — the web-mapping standard this family shares."
+  ],
+  [
+   "Can I use this in production GIS?",
+   "As footprint characterisation, yes — it matches GIS extent statistics. Production pipelines compute it natively; this page is the independent check."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "Span inherits the points' accuracy; one wild point dominates it entirely — which the outlier use case turns into a feature."
+  ],
+  [
+   "Date-line sets?",
+   "A set straddling ±180° needs longitude unwrapping; the calculator's handling follows the smallest-covering-arc logic rather than naively spanning 358°."
+  ],
+  [
+   "Span or bounding box?",
+   "The box is the span's rectangle (min/max) — same extremes, different packaging. This page reports dimensions; the generator packages queries."
+  ],
+  [
+   "Two points only?",
+   "Perfectly valid — the span of a pair is their separation decomposed into axes plus the diagonal distance."
+  ],
+  [
+   "Weighted centre versus span centre?",
+   "The box centre is the extremes' middle; the mean is the points' centre. They differ whenever the set is lopsided — report the one your claim uses."
+  ],
+  [
+   "Units?",
+   "Degrees always; ground distance in km and miles, per convention."
+  ],
+  [
+   "Empty middle problem?",
+   "Span cannot see holes. Density questions need the points themselves — span is the footprint's ruler, not its portrait."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Package it: the "
+  },
+  {
+   "t": "Coordinate Bounding Box Generator",
+   "l": "/tools/coordinate-bounding-box-generator"
+  },
+  {
+   "t": "; centre it: the "
+  },
+  {
+   "t": "Coordinate Mean Calculator",
+   "l": "/tools/coordinate-mean-calculator"
+  },
+  {
+   "t": "; centre-plus-radius box: the "
+  },
+  {
+   "t": "Bounding Box Calculator",
+   "l": "/tools/bounding-box-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-offset-calculator",
+  "coordinate-parser"
+ ]
+}

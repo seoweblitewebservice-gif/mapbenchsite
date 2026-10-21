@@ -1,0 +1,194 @@
+{
+ "slug": "trip-cost-per-person-calculator",
+ "primary_keyword": "Trip Cost Per Person Calculator",
+ "secondary_keywords": [
+  "travel cost split calculator",
+  "road trip cost split",
+  "vacation cost per person",
+  "trip budget per person",
+  "travel expense splitter"
+ ],
+ "title": "Trip Cost Per Person Calculator: Split Any Total",
+ "description": "Divide any shared trip total by the group size with the Trip Cost Per Person Calculator — the per-person budget in one division. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a $1,240 trip shared by five people is $248 each — the number group chats are actually asking for when they say 'so what do I owe?'",
+ "quick_answer": "The Trip Cost Per Person Calculator divides a trip's shared total by the number of people travelling and returns the equal per-person amount. Enter the total — fuel, stays, food, the lot, or just one shared pot — and the headcount, and read what each person owes the plan.",
+ "steps_intro": "One division ends a hundred group-chat arguments:",
+ "use_cases": [
+  {
+   "title": "Group trip budgets",
+   "body": [
+    {
+     "t": "Quote the trip per person and people can actually decide. Totals scare; shares persuade. Fuel-only shares live in the "
+    },
+    {
+     "t": "Fuel Cost Split Calculator",
+     "l": "/tools/fuel-cost-split-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "The shared-pot method",
+   "body": [
+    {
+     "t": "One kitty for shared costs, divided at the end by heads. This page is the kitty's closing ceremony."
+    }
+   ]
+  },
+  {
+   "title": "Comparing trip options",
+   "body": [
+    {
+     "t": "Two candidate trips become comparable per person — the unit holidays are actually bought in."
+    }
+   ]
+  },
+  {
+   "title": "Deposits and bookings",
+   "body": [
+    {
+     "t": "The deposit is a total; the ask is per person. Compute the ask before the message goes out."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The five-friend trip",
+   "body": [
+    {
+     "t": "$1,240 ÷ 5 = $248.00 each exactly — a tidy one. The untidy ones ($2,680 ÷ 6 = $446.67) are why the calculator keeps the cents."
+    }
+   ]
+  },
+  {
+   "label": "Example · Fuel only",
+   "body": [
+    {
+     "t": "$312 of fuel among 4 = $78 each. Small numbers, same division — and the same end to the petrol-station negotiation."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Totals per person",
+  "intro": "Equal shares of common trip totals — the table group chats wish they had open.",
+  "columns": [
+   "Trip total",
+   "3 people",
+   "4 people",
+   "5 people",
+   "6 people"
+  ],
+  "rows": [
+   [
+    "$600",
+    "$200.00",
+    "$150.00",
+    "$120.00",
+    "$100.00"
+   ],
+   [
+    "$1,240",
+    "$413.33",
+    "$310.00",
+    "$248.00",
+    "$206.67"
+   ],
+   [
+    "$2,680",
+    "$893.33",
+    "$670.00",
+    "$536.00",
+    "$446.67"
+   ],
+   [
+    "$4,500",
+    "$1,500.00",
+    "$1,125.00",
+    "$900.00",
+    "$750.00"
+   ]
+  ],
+  "note": "Equal shares assume equal participation. Part-way riders and exempt drivers are handled by splitting per leg — the principle generalises, the arithmetic stays this simple."
+ },
+ "faq": [
+  [
+   "Does it handle unequal shares?",
+   "The built-in split is equal. For unequal (part-way riders, one person treating), split the relevant legs separately and add each person's — the even split is the building block."
+  ],
+  [
+   "What costs should I include?",
+   "Whatever the group agreed to share: fuel, stays, shared food, tolls. The deal precedes the division; this page does the dividing."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No — this divides a total, which already contains whatever the road did to you."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "It shaped the total you are dividing. The division itself is gloriously distance-free."
+  ],
+  [
+   "Can route results change over time?",
+   "Totals change as plans do; recompute at booking time and again at the trip's end. The final split uses final numbers."
+  ],
+  [
+   "Rounding left cents over.",
+   "Shares round to cents; the remainder conventionally stays in the kitty for the last coffee. Name the convention once and it never argues again."
+  ],
+  [
+   "Children count as people?",
+   "Your group's call — many count children at half or exempt the hosts' kids. Enter the headcount your deal defines."
+  ],
+  [
+   "Someone pays for everyone — still useful?",
+   "Yes: the per-person figure becomes the thank-you debt each traveller owes the payer, to the cent."
+  ],
+  [
+   "Different currencies mid-trip?",
+   "Convert the total first, then divide. Splitting across exchange rates is how friendships acquire spreadsheets."
+  ],
+  [
+   "The group size changes mid-trip.",
+   "Split by segments: each segment's costs over its own headcount. Fairness is per-leg, like everything else on the road."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Fuel-only shares are the "
+  },
+  {
+   "t": "Fuel Cost Split Calculator",
+   "l": "/tools/fuel-cost-split-calculator"
+  },
+  {
+   "t": "; the trip total itself is built in the "
+  },
+  {
+   "t": "Road Trip Cost Calculator",
+   "l": "/tools/road-trip-cost-calculator"
+  },
+  {
+   "t": "; and company travel belongs to the "
+  },
+  {
+   "t": "Branch Travel Cost Calculator",
+   "l": "/tools/branch-travel-cost-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner"
+ ]
+}

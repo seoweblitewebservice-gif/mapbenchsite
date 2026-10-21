@@ -1,0 +1,181 @@
+{
+ "slug": "closest-facility-finder",
+ "primary_keyword": "Closest Facility Finder",
+ "secondary_keywords": [
+  "closest facility",
+  "nearest location",
+  "nearest store calculator"
+ ],
+ "title": "Closest Facility Finder: Rank by Distance",
+ "description": "Rank candidate facilities from one origin with the Closest Facility Finder — a distance table that names the nearest store, depot or clinic. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, from downtown Chicago the candidates Oak Park (approx. 8.0 miles), Evanston (11.7 miles) and Gary (24.5 miles) rank Oak Park first — the table makes the nearest answer a fact, not a feeling.",
+ "quick_answer": "The Closest Facility Finder compares one origin against several candidate facilities at once and ranks them by straight-line distance. Add your starting point and the candidates — stores, depots, clinics, warehouses — and read a table that names the nearest, instead of measuring each pair by hand and losing track.",
+ "steps_intro": "“Which is closest?” sounds simple until the candidate list reaches double figures. Two steps:",
+ "use_cases": [
+  {
+   "title": "Store and branch assignment",
+   "body": [
+    {
+     "t": "Assign each customer or territory to its genuinely nearest branch. The ranking table is the audit trail behind the assignment when someone asks why an account went to one store and not another."
+    }
+   ]
+  },
+  {
+   "title": "Depot and warehouse choice",
+   "body": [
+    {
+     "t": "Choosing which depot serves a new contract starts with distance from the customer's sites. Rank the candidates here, then validate the winner's road journey with the "
+    },
+    {
+     "t": "Driving Distance Calculator",
+     "l": "/tools/driving-distance-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Public service planning",
+   "body": [
+    {
+     "t": "Clinics, libraries and relief points are sited for the populations they serve. A candidate ranking exposes the neighbourhoods every candidate is far from — the coverage gaps a map of pins alone can hide."
+    }
+   ]
+  },
+  {
+   "title": "Franchise territory checks",
+   "body": [
+    {
+     "t": "A proposed franchise location measured against every existing store shows instantly whether it cannibalises a neighbour or fills a genuine gap."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · United States",
+   "body": [
+    {
+     "t": "Origin: downtown Chicago (41.8781, −87.6298). Candidates: Oak Park approx. 8.0 miles (12.8 km), Evanston 11.7 miles (18.8 km), Gary, Indiana 24.5 miles (39.4 km). The finder ranks them in that order — and just as usefully, shows the gap between first and second is small enough to deserve a road check."
+    }
+   ]
+  },
+  {
+   "label": "Example · Europe",
+   "body": [
+    {
+     "t": "Origin: central Paris (48.8566, 2.3522). Candidates: Saint-Denis approx. 8.9 km (5.5 mi), Orly 12.7 km (7.9 mi), Versailles 17.4 km (10.8 mi). The nearest answer (Saint-Denis) is also the one intuition picks — the tool's value is proving it with numbers a colleague can re-run."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "How to read the ranking",
+  "intro": "The finder returns one row per candidate, sorted nearest first. This sample uses the Chicago origin above with real computed distances.",
+  "columns": [
+   "Rank",
+   "Candidate",
+   "Miles",
+   "Kilometres"
+  ],
+  "rows": [
+   [
+    "1",
+    "Oak Park",
+    "8.0",
+    "12.8"
+   ],
+   [
+    "2",
+    "Evanston",
+    "11.7",
+    "18.8"
+   ],
+   [
+    "3",
+    "Gary, Indiana",
+    "24.5",
+    "39.4"
+   ],
+   [
+    "—",
+    "Naperville (outside a 25 mi screen)",
+    "28.4",
+    "45.7"
+   ],
+   [
+    "—",
+    "Joliet (outside a 25 mi screen)",
+    "33.7",
+    "54.3"
+   ]
+  ],
+  "note": "Straight-line ranking is a screen, not a verdict: where first and second are close, road distance and drive time can swap the order — validate the top candidates before deciding."
+ },
+ "faq": [
+  [
+   "Is the closest by distance also the fastest to reach?",
+   "Not always. Rivers, one-way systems and missing junctions can make the second-nearest the faster journey. Use this ranking to shortlist, then check the top two or three by road."
+  ],
+  [
+   "How many candidates can I compare?",
+   "The tool is built for a practical candidate list — the stores, depots or sites genuinely in contention — measured matrix-style from your one origin. For very large point sets, a GIS workflow is the better instrument."
+  ],
+  [
+   "Can I export the table?",
+   "Yes — the result table can be taken out for planning documents and spreadsheets, so the ranking survives the meeting it was made for."
+  ],
+  [
+   "Does it work with coordinates as well as names?",
+   "Yes. Candidates and the origin can be set by search, by clicking the map, or by coordinates — the reliable route for rural sites and unnamed facilities."
+  ],
+  [
+   "What if two candidates tie?",
+   "Exact ties are rare with real coordinates; the table shows both distances so a tie is visible rather than hidden by rounding. Break it with the road check."
+  ],
+  [
+   "Straight-line or road distance?",
+   "Straight-line (great-circle) — the consistent screening measure. The tool's job is ranking many candidates fairly; road validation of the winner happens in the routing tools."
+  ],
+  [
+   "Can I use it for people, not facilities?",
+   "The geometry does not care what the points are: nearest relative, nearest crew base or nearest meeting town all rank the same way."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "For every pair among a set — not just from one origin — the "
+  },
+  {
+   "t": "Distance Matrix Calculator",
+   "l": "/tools/distance-matrix-calculator"
+  },
+  {
+   "t": " builds the full table; for a single pair measured carefully, use "
+  },
+  {
+   "t": "Distance Between Two Places",
+   "l": "/tools/distance-between-two-places"
+  },
+  {
+   "t": "; and for the store-spacing version of this question, see the "
+  },
+  {
+   "t": "Competitor Distance Map",
+   "l": "/tools/competitor-distance-map"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "compass-bearing-visualizer",
+  "competitor-distance-map",
+  "coordinate-distance-table-generator",
+  "crow-flies-distance",
+  "distance-between-cities",
+  "distance-between-two-places"
+ ]
+}

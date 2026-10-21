@@ -1,0 +1,201 @@
+{
+ "slug": "walking-pace-calculator",
+ "primary_keyword": "Walking Pace Calculator",
+ "secondary_keywords": [
+  "walk pace calculator",
+  "walking speed calculator",
+  "minutes per km walking",
+  "walking pace per mile",
+  "average walking speed"
+ ],
+ "title": "Walking Pace Calculator: Minutes per Mile and km",
+ "description": "Convert a walk's distance and time into pace and speed with the Walking Pace Calculator — min per mile, min per km, mph and km/h. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 5 km in 50 minutes is a 10:00/km pace — 6.0 km/h, the brisk purposeful walk most health advice is secretly describing.",
+ "quick_answer": "The Walking Pace Calculator converts a walk's distance and duration into pace — minutes per mile and per kilometre — and average speed. Enter how far you walked and how long it took and read the figures that turn one walk into the planning basis for every walk after it.",
+ "steps_intro": "Your walking pace is a personal constant worth knowing once, properly:",
+ "use_cases": [
+  {
+   "title": "Planning walks that fit the time",
+   "body": [
+    {
+     "t": "Known pace × planned distance is a duration you can trust — the "
+    },
+    {
+     "t": "Walking Time Calculator",
+     "l": "/tools/walking-time-calculator"
+    },
+    {
+     "t": " runs it forward."
+    }
+   ]
+  },
+  {
+   "title": "Health-pace checks",
+   "body": [
+    {
+     "t": "“Brisk” has a pace. Measure yours and the advice becomes checkable rather than vibes."
+    }
+   ]
+  },
+  {
+   "title": "Dog, pram and group reality",
+   "body": [
+    {
+     "t": "Your solo pace and your with-everyone pace are different numbers. Measure the one the plan will actually use."
+    }
+   ]
+  },
+  {
+   "title": "Baseline before training",
+   "body": [
+    {
+     "t": "Walking programmes improve pace quietly; the first measurement is the baseline every later one brags against."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The brisk five",
+   "body": [
+    {
+     "t": "5 km in 50 min → 10:00/km, 6.0 km/h. In imperial: about 16:06/mile at 3.7 mph. One walk, both dialects, from one division."
+    }
+   ]
+  },
+  {
+   "label": "Example · The classic three",
+   "body": [
+    {
+     "t": "3 mph — the textbook walking speed — is 20:00/mile and 12:26/km. Compare your measured figure with the textbook and learn which walker you are."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Walking pace dialects",
+  "intro": "Pace and speed pairs for walking — the same table logic as the hiking tools, at pavement speeds.",
+  "columns": [
+   "Speed",
+   "Pace per mile",
+   "Pace per km",
+   "Character"
+  ],
+  "rows": [
+   [
+    "2.0 mph (3.2 km/h)",
+    "30:00",
+    "18:45",
+    "A stroll"
+   ],
+   [
+    "2.5 mph (4.0 km/h)",
+    "24:00",
+    "15:00",
+    "Easy walking"
+   ],
+   [
+    "3.0 mph (4.8 km/h)",
+    "20:00",
+    "12:26",
+    "The textbook pace"
+   ],
+   [
+    "3.5 mph (5.6 km/h)",
+    "17:09",
+    "10:39",
+    "Purposeful"
+   ],
+   [
+    "3.7 mph (6.0 km/h)",
+    "16:06",
+    "10:00",
+    "Brisk"
+   ],
+   [
+    "4.0 mph (6.4 km/h)",
+    "15:00",
+    "9:19",
+    "Nearly a jog"
+   ]
+  ],
+  "note": "Paces are elapsed: a walk with a long bench stop averages slower than the moving legs felt. Enter the time that matches your question."
+ },
+ "faq": [
+  [
+   "Does this replace a specialist tool or professional measurement?",
+   "No — it is exact division of distance by time. GPS watches add splits and elevation; this is the arithmetic they must agree with."
+  ],
+  [
+   "Is my input uploaded?",
+   "No. The pace is computed in your browser."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Crossings and crowds are already inside the time you measured."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Enter the distance you actually walked — paths wind, and pace belongs to the real ground."
+  ],
+  [
+   "Can route results change over time?",
+   "Your pace will, with fitness and habit. Remeasure each season and plan with the current walker."
+  ],
+  [
+   "How is this different from the Hiking Pace Calculator?",
+   "Audience: this page is pavement-and-park walking; the hiking one is trails and hills, where Naismith's climb allowance enters. The division is the same citizen."
+  ],
+  [
+   "Moving or elapsed time?",
+   "Elapsed for planning arrivals, moving for judging fitness. The difference is your stops, quantified."
+  ],
+  [
+   "Pace on a treadmill versus outdoors?",
+   "Belts flatter: no wind, no crossings, perfect surface. Outdoor measurements are the planning-grade ones."
+  ],
+  [
+   "How many walks should I average?",
+   "Three typical walks steady the figure. One heroic outlier is a story, not a pace."
+  ],
+  [
+   "Pace worsens late in long walks.",
+   "Fatigue is a pace curve, not a pace. For long days, plan with your hour-three figure, not your hour-one."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Times forward are the "
+  },
+  {
+   "t": "Walking Time Calculator",
+   "l": "/tools/walking-time-calculator"
+  },
+  {
+   "t": "; trails use the "
+  },
+  {
+   "t": "Hiking Pace Calculator",
+   "l": "/tools/hiking-pace-calculator"
+  },
+  {
+   "t": "; and energy is "
+  },
+  {
+   "t": "Walking Calories by Distance",
+   "l": "/tools/walking-calories-distance"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner"
+ ]
+}

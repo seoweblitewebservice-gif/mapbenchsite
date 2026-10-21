@@ -1,0 +1,182 @@
+{
+ "slug": "country-from-coordinates",
+ "primary_keyword": "Country from Coordinates Finder",
+ "secondary_keywords": [
+  "country from coordinates",
+  "what country is this lat long",
+  "coordinates to country",
+  "find country by gps"
+ ],
+ "title": "Country from Coordinates Finder",
+ "description": "Get the country containing a bare coordinate pair with the Country from Coordinates Finder — boundary data, honest about water and borders. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 40.7580, −73.9855 answers 'United States' from boundary data alone — while a point a mile offshore answers with the honest emptiness of open water.",
+ "quick_answer": "The Country from Coordinates Finder gives a quick, unambiguous answer for a bare coordinate pair: the country containing the point, taken from OpenStreetMap's address record. Paste the pair and read the country — including an honest open-water result for ocean points instead of a borrowed nearest nation.",
+ "steps_intro": "Two numbers in, one country out — with the edges handled honestly:",
+ "use_cases": [
+  {
+   "title": "Dataset auditing",
+   "body": [
+    {
+     "t": "A coordinates file claiming a country column gets verified point by point — the "
+    },
+    {
+     "t": "Coordinates Lookup Tool",
+     "l": "/tools/coordinates-lookup-tool"
+    },
+    {
+     "t": " adds the full record around each verdict."
+    }
+   ]
+  },
+  {
+   "title": "Photo and log triage",
+   "body": [
+    {
+     "t": "Which country was this GPS cluster in? The pair answers before the album gets captioned wrong."
+    }
+   ]
+  },
+  {
+   "title": "Border awareness",
+   "body": [
+    {
+     "t": "Near frontiers, the point's country can differ from the trip's headline country — worth knowing before roaming charges explain it."
+    }
+   ]
+  },
+  {
+   "title": "Teaching enclaves",
+   "body": [
+    {
+     "t": "Click Lesotho inside South Africa, or Baarle's patchwork, and watch 'country' stop being a colouring-book word."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The ocean answer",
+   "body": [
+    {
+     "t": "Mid-ocean points return no country — labelled as open water rather than assigned to the nearest coast. A finder willing to say 'none' is one whose 'United States' you can trust."
+    }
+   ]
+  },
+  {
+   "label": "Example · Disputed ground",
+   "body": [
+    {
+     "t": "Where borders are contested, the record follows OpenStreetMap's documented position. The answer is the map data's, offered as such — the disputes belong to diplomacy, and the page's FAQs say so."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What decides the answer",
+  "intro": "Boundary data — and its three honest edge cases.",
+  "columns": [
+   "Situation",
+   "Answer"
+  ],
+  "rows": [
+   [
+    "Point inside a country",
+    "That country, from its boundary record"
+   ],
+   [
+    "Enclave or exclave",
+    "The containing country — geometry over intuition"
+   ],
+   [
+    "Open ocean",
+    "No country — stated plainly"
+   ],
+   [
+    "Disputed territory",
+    "The dataset's documented position, caveat attached"
+   ]
+  ],
+  "note": "Country boundaries in OpenStreetMap are maintained from official sources by the community. Legal questions about sovereignty are not settled by any map — including this one."
+ },
+ "faq": [
+  [
+   "What about points at sea?",
+   "Open-ocean points return an honest empty result ('open water' style), not the nearest country. Near coasts, the record follows the boundary data's shoreline treatment."
+  ],
+  [
+   "Are disputed borders handled?",
+   "They are reported as the dataset holds them — OpenStreetMap documents its approach to disputed boundaries, and this finder reflects that record rather than adjudicating."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 pairs, as GPS and web maps produce them."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "The country verdict is stable across decimals except within metres of a border, where the point's own accuracy becomes the story."
+  ],
+  [
+   "Can I copy the result into GIS software?",
+   "The country name is an attribute — copy it beside the coordinates in your dataset; the pair itself is already GIS-ready."
+  ],
+  [
+   "Territorial waters?",
+   "Boundary datasets centre on land. A point just offshore can read no-country while lying in territorial waters — the dataset's scope, stated rather than hidden."
+  ],
+  [
+   "Embassies and military bases?",
+   "Soil follows the host country in boundary data; legal status is a longer story that no finder settles."
+  ],
+  [
+   "Antarctica?",
+   "No sovereign country — the treaty continent returns the honest absence."
+  ],
+  [
+   "Two answers from two apps?",
+   "Different boundary vintages or dispute positions. Note both sources; for anything official, governments outrank apps."
+  ],
+  [
+   "City and region too?",
+   "The Coordinates Lookup Tool returns the full stack; this page is the country slice, kept deliberately single-purpose."
+  ],
+  [
+   "Island nations?",
+   "Archipelagos resolve island by island from their boundaries — a point between islands at sea can honestly return none."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Full dossier: the "
+  },
+  {
+   "t": "Coordinates Lookup Tool",
+   "l": "/tools/coordinates-lookup-tool"
+  },
+  {
+   "t": "; city: "
+  },
+  {
+   "t": "City from Coordinates Finder",
+   "l": "/tools/city-from-coordinates"
+  },
+  {
+   "t": "; the framed version: "
+  },
+  {
+   "t": "What Country Am I In",
+   "l": "/tools/what-country-am-i-in"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "arcminutes-to-decimal-degrees-converter",
+  "arcseconds-to-ground-distance-calculator",
+  "bng-converter",
+  "bounding-box-calculator",
+  "coordinate-bounding-box-generator",
+  "coordinate-destination-calculator"
+ ]
+}

@@ -1,0 +1,188 @@
+{
+ "slug": "phone-area-code-map",
+ "primary_keyword": "Phone Area Code Map",
+ "secondary_keywords": [
+  "area code map",
+  "phone area code",
+  "nanp map"
+ ],
+ "title": "Phone Area Code Map: NANP Codes by State",
+ "description": "Browse NANP area codes by US state with the Phone Area Code Map — overlays and portability explained for support and marketing checks. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 212 still whispers old Manhattan, but number portability means the phone itself might now live in Florida — the map gives the code's home, not the handset's.",
+ "quick_answer": "The Phone Area Code Map lists NANP area codes by US state for support and marketing checks. Choose a state and read its codes — original splits and modern overlays together — with portability's caveat: a code names where a number was born, not where its owner stands.",
+ "steps_intro": "Area codes are geography with an expiry date. Read them properly:",
+ "use_cases": [
+  {
+   "title": "Support and CRM checks",
+   "body": [
+    {
+     "t": "A number's code suggests its home region for routing and records — a suggestion the portability FAQ keeps honest. State context from "
+    },
+    {
+     "t": "What State Am I In",
+     "l": "/tools/what-state-am-i-in"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Marketing territory sanity",
+   "body": [
+    {
+     "t": "Campaign lists by area code still sketch territories — overlays mean one city, several codes, all listed here together."
+    }
+   ]
+  },
+  {
+   "title": "Fraud sniff-tests",
+   "body": [
+    {
+     "t": "A 'local' caller whose code belongs three states away is a flag, not a verdict — the map supplies the flag."
+    }
+   ]
+  },
+  {
+   "title": "Number nostalgia and research",
+   "body": [
+    {
+     "t": "Old letterheads and ads carry dead codes; the map's state association dates and places them."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The overlay reality",
+   "body": [
+    {
+     "t": "Miami answers to 305 and its overlay 786; Manhattan holds 212 with 646 and 332 stacked on the same streets. The map lists a state's codes together — the only honest way to show modern numbering."
+    }
+   ]
+  },
+  {
+   "label": "Example · Portability's asterisk",
+   "body": [
+    {
+     "t": "Since US wireless portability (2003), people keep numbers across moves and states. A 312 number rings in Austin now. The code is the number's biography, first chapter only."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Famous codes and their ground",
+  "intro": "A sampler of the map's associations — the codes everyone recognises, with their overlays' lesson.",
+  "columns": [
+   "Code",
+   "Home ground",
+   "Note"
+  ],
+  "rows": [
+   [
+    "212",
+    "Manhattan, New York City",
+    "The prestige original; overlaid by 646, 332"
+   ],
+   [
+    "202",
+    "Washington, DC",
+    "The government's code"
+   ],
+   [
+    "312",
+    "Downtown Chicago",
+    "The Loop's original"
+   ],
+   [
+    "415",
+    "San Francisco",
+    "Tech's hometown digits"
+   ],
+   [
+    "213",
+    "Downtown Los Angeles",
+    "Among California's many"
+   ],
+   [
+    "305",
+    "Miami",
+    "Overlaid by 786"
+   ]
+  ],
+  "note": "The NANP covers the US, Canada and parts of the Caribbean under one plan — this map's browsing focus is US states, as the support and marketing use cases are."
+ },
+ "faq": [
+  [
+   "Does number portability break this?",
+   "It qualifies it: an area code reliably names where a number was first assigned, and porting lets owners keep numbers anywhere. Use the map for origin and territory logic, not for a person's current location."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — nothing here locates you; states are chosen, not detected."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Numbering areas split and overlay on administrators' schedules; other sources may list a brand-new overlay earlier or later."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No — and this page never asks for it."
+  ],
+  [
+   "What is an overlay?",
+   "A second code serving the same ground as an original, added when numbers ran low. Overlay areas require ten-digit dialing for local calls."
+  ],
+  [
+   "What about Canadian codes?",
+   "Canada shares the NANP (416 Toronto, 604 Vancouver and their overlays), but this page's browsing is organised by US states."
+  ],
+  [
+   "Can an area code cross state lines?",
+   "A few do, near borders. The map associates codes with the states they serve, plural where the numbering plan says so."
+  ],
+  [
+   "Toll-free codes?",
+   "800, 888, 877 and kin are non-geographic and excluded from a state map by design."
+  ],
+  [
+   "How do I find one address's area code?",
+   "Resolve the address's state and city with the address tools, then read its codes here — remembering overlays make several answers correct."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "State from a point: "
+  },
+  {
+   "t": "What State Am I In",
+   "l": "/tools/what-state-am-i-in"
+  },
+  {
+   "t": "; county context: "
+  },
+  {
+   "t": "Address to County Lookup",
+   "l": "/tools/address-to-county-lookup"
+  },
+  {
+   "t": "; ZIP ground: "
+  },
+  {
+   "t": "What ZIP Code Am I In",
+   "l": "/tools/what-zip-code-am-i-in"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-validator",
+  "air-quality-location",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder",
+  "congressional-district-context"
+ ]
+}

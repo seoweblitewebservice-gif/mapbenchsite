@@ -1,0 +1,189 @@
+{
+ "slug": "daylight-saving-checker",
+ "primary_keyword": "Daylight Saving Checker",
+ "secondary_keywords": [
+  "daylight saving",
+  "dst checker",
+  "is dst in effect"
+ ],
+ "title": "Daylight Saving Checker: Is DST in Effect?",
+ "description": "Check whether daylight saving applies at a place with the Daylight Saving Checker — standard and daylight offsets from timezone rules. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, in 2026 US daylight saving runs from March 8 to November 1, while most of Europe runs March 29 to October 25 — three weeks of the year when the usual offset between them is wrong.",
+ "quick_answer": "The Daylight Saving Checker compares a location's standard and daylight-saving offsets using the timezone rules for that place. Pick a place and a time context and read whether DST applies there and when it starts and ends — 'spring forward' is a local law, not a world event.",
+ "steps_intro": "DST is a rule with a geography. Check the place, not the rumour:",
+ "use_cases": [
+  {
+   "title": "Scheduling across zones",
+   "body": [
+    {
+     "t": "Calls land wrong in the changeover weeks. Check both ends before fixing a recurring time — the "
+    },
+    {
+     "t": "Meeting Time Planner",
+     "l": "/tools/meeting-time-planner"
+    },
+    {
+     "t": " builds the overlap from the same rules."
+    }
+   ]
+  },
+  {
+   "title": "Travel planning",
+   "body": [
+    {
+     "t": "A flight itinerary printed in local times hides the night the clocks move. Know your destination's dates before you set the alarm."
+    }
+   ]
+  },
+  {
+   "title": "Software and logging",
+   "body": [
+    {
+     "t": "Systems that assume fixed offsets break twice a year. The checker's rules are the same tz-database rules your servers should be using."
+    }
+   ]
+  },
+  {
+   "title": "The Arizona question",
+   "body": [
+    {
+     "t": "Some places simply do not observe DST — most of Arizona (the Navajo Nation excepted) and Hawaii among them. The checker answers per place, which is the only honest way."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The three awkward weeks",
+   "body": [
+    {
+     "t": "In 2026 the US starts DST on March 8 and Europe on March 29. For those three weeks New York is 5 hours behind London instead of the usual 6 — the fortnight in which a thousand standing calls quietly shift."
+    }
+   ]
+  },
+  {
+   "label": "Example · The southern mirror",
+   "body": [
+    {
+     "t": "Australia's daylight saving runs through the northern winter (roughly October to April). Sydney's offset difference with London swings by two hours across the year, in the opposite direction to the US swing."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "DST rules in the places people ask about",
+  "intro": "The 2026 dates under current rules — laws change (several legislatures debate abolition), so treat this as this year's map, verified per place in the checker.",
+  "columns": [
+   "Region",
+   "2026 DST starts",
+   "2026 DST ends",
+   "Notes"
+  ],
+  "rows": [
+   [
+    "United States (most)",
+    "March 8",
+    "November 1",
+    "2nd Sunday Mar → 1st Sunday Nov"
+   ],
+   [
+    "European Union and UK",
+    "March 29",
+    "October 25",
+    "Last Sundays of Mar and Oct"
+   ],
+   [
+    "Arizona (most)",
+    "—",
+    "—",
+    "Does not observe (Navajo Nation does)"
+   ],
+   [
+    "Hawaii",
+    "—",
+    "—",
+    "Does not observe"
+   ],
+   [
+    "Australia (NSW, VIC, TAS, SA, ACT)",
+    "October 4, 2026*",
+    "April 5, 2026*",
+    "Southern summer; *starts Oct for the 2026-27 season"
+   ]
+  ],
+  "note": "Dates computed from the standing rules for 2026. Queensland, Western Australia and the Northern Territory do not observe DST — Australia's map is as patchy as America's."
+ },
+ "faq": [
+  [
+   "Does it cover every region?",
+   "It follows the timezone database's rules, which cover the world's zones including their historical quirks. Exclaves and oddities are the database's daily bread."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — pick any place on earth. Your location is only used if you ask another tool for it."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Timezone boundaries are political and revise occasionally; the tz database tracks them, and other sources may lag a change."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "When does DST start in 2026?",
+   "United States: March 8. Europe: March 29. The table on this page holds the main regions' 2026 dates under current rules."
+  ],
+  [
+   "Why do the US and Europe change on different dates?",
+   "Separate laws, separate Sundays. The gap weeks are when transatlantic offsets are an hour off their usual values."
+  ],
+  [
+   "Is DST being abolished?",
+   "Debated in the US and EU for years; as of the current rules, it continues. The checker applies the rules in force, not the debate."
+  ],
+  [
+   "Does every US state observe?",
+   "No — Hawaii and most of Arizona stay on standard time year-round, and US territories do not observe either."
+  ],
+  [
+   "What time do clocks change?",
+   "Typically 2:00 a.m. local in the US and 1:00 a.m. UTC in Europe — the small hours, when few trains and fewer meetings notice."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Exact offsets by point: "
+  },
+  {
+   "t": "DST Checker by Coordinates",
+   "l": "/tools/dst-checker-by-coordinates"
+  },
+  {
+   "t": "; overlaps: the "
+  },
+  {
+   "t": "Meeting Time Planner",
+   "l": "/tools/meeting-time-planner"
+  },
+  {
+   "t": "; zones: the "
+  },
+  {
+   "t": "What Time Zone Am I In",
+   "l": "/tools/what-timezone-am-i-in"
+  },
+  {
+   "t": " finder."
+  }
+ ],
+ "more_tools": [
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder"
+ ]
+}

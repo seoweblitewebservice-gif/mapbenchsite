@@ -1,0 +1,191 @@
+{
+ "slug": "branch-travel-cost-calculator",
+ "primary_keyword": "Branch Travel Cost Calculator",
+ "secondary_keywords": [
+  "branch travel cost calculator online",
+  "free branch travel cost calculator",
+  "branch travel cost calculator calculator",
+  "branch travel cost calculator tool",
+  "how to use branch travel cost calculator"
+ ],
+ "title": "Branch Travel Cost Calculator: Visit Costs",
+ "description": "Cost out travel between branches with the Branch Travel Cost Calculator — mileage, rate and trip totals a manager can approve. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a rep's 214-mile round of branch visits at an example reimbursement rate of $0.67 per mile comes to $143.38 — before parking and tolls join the claim.",
+ "quick_answer": "The Branch Travel Cost Calculator totals what a trip between your company's branches actually costs: distance multiplied by your mileage rate, with trip costs on top. Enter the journey and the rate your policy pays, and read a defensible total for expense claims and visit planning.",
+ "steps_intro": "Branch visits are approved on numbers. Give the approval a number worth signing:",
+ "use_cases": [
+  {
+   "title": "Expense claims without arguments",
+   "body": [
+    {
+     "t": "A claim built from a measured distance and the policy rate needs no negotiation. The distance comes from the "
+    },
+    {
+     "t": "Driving Distance Calculator",
+     "l": "/tools/driving-distance-calculator"
+    },
+    {
+     "t": "; the rate is your policy's."
+    }
+   ]
+  },
+  {
+   "title": "Visit scheduling economics",
+   "body": [
+    {
+     "t": "Which branch order makes the cheapest round? Total each candidate loop's mileage cost and the efficient route stops being a feeling."
+    }
+   ]
+  },
+  {
+   "title": "Territory reviews",
+   "body": [
+    {
+     "t": "A rep whose territory costs twice another's in travel is not necessarily lazier — the calculator separates geography from behaviour in a review."
+    }
+   ]
+  },
+  {
+   "title": "Budget forecasting",
+   "body": [
+    {
+     "t": "Monthly visit plans × cost per visit is next quarter's travel budget. This tool supplies the per-visit figure the forecast multiplies."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · A three-branch day",
+   "body": [
+    {
+     "t": "214 miles of visiting at an example $0.67/mile rate = $143.38 of mileage. Add $18 of parking and tolls and the day costs $161.38 — the kind of total a manager can approve without a follow-up email."
+    }
+   ]
+  },
+  {
+   "label": "Example · The European version",
+   "body": [
+    {
+     "t": "The same arithmetic in kilometres: 168 km at an example €0.30/km = €50.40. Rate systems differ by country; the multiplication does not."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Trip mileage at example rates",
+  "intro": "Mileage cost only (distance × rate) at two illustrative rates — substitute your own policy's rate in the calculator; these are examples, not published tariffs.",
+  "columns": [
+   "Round trip",
+   "At $0.50/mi",
+   "At $0.67/mi",
+   "At €0.30/km equiv."
+  ],
+  "rows": [
+   [
+    "50 mi",
+    "$25.00",
+    "$33.50",
+    "€24.14"
+   ],
+   [
+    "100 mi",
+    "$50.00",
+    "$67.00",
+    "€48.28"
+   ],
+   [
+    "214 mi",
+    "$107.00",
+    "$143.38",
+    "€103.32"
+   ],
+   [
+    "300 mi",
+    "$150.00",
+    "$201.00",
+    "€144.84"
+   ],
+   [
+    "500 mi",
+    "$250.00",
+    "$335.00",
+    "€241.40"
+   ]
+  ],
+  "note": "The euro column converts the same distances at €0.30/km for comparison. Your employer's rate and tax rules are the authority for a real claim."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The cost of branch-to-branch travel: journey distance × your mileage rate, with the trip's other costs added as you enter them — a claim-ready total."
+  ],
+  [
+   "Is it free to use?",
+   "Yes. Enter the trip, read the total, claim it."
+  ],
+  [
+   "How accurate is the result?",
+   "As accurate as its inputs: the measured distance and your policy's current rate. The arithmetic is exact; the rate is your employer's to set."
+  ],
+  [
+   "Is the mileage rate a tax rate?",
+   "Only if your policy uses one. Many employers reimburse at a standard government-published rate and many use their own — enter whichever your policy names."
+  ],
+  [
+   "Can it handle several branches in one trip?",
+   "Total the day's legs into one distance and cost that — a round of visits is one journey for claim purposes."
+  ],
+  [
+   "Does it include live traffic?",
+   "No — cost follows distance and rates, not traffic. Traffic changes the time (see the ETA Calculator), rarely the mileage."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Roads wind, detour and respect geography. Claims must use the road figure — it is the distance actually travelled and reimbursed."
+  ],
+  [
+   "Should mileage be claimed per leg or per day?",
+   "Per day is the usual claim unit — the day's legs summed. The calculator prices the day; your policy decides the paperwork shape."
+  ],
+  [
+   "What about the drive home from the last branch?",
+   "It is part of the journey. Measure the full round, not just the inter-branch legs — the return is travelled and reimbursed like the rest."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Measure the journey in the "
+  },
+  {
+   "t": "Driving Distance Calculator",
+   "l": "/tools/driving-distance-calculator"
+  },
+  {
+   "t": ", unit-price it in the "
+  },
+  {
+   "t": "Cost Per Mile Calculator",
+   "l": "/tools/cost-per-mile-calculator"
+  },
+  {
+   "t": ", and time it in the "
+  },
+  {
+   "t": "ETA Calculator",
+   "l": "/tools/eta-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-fee-by-distance-calculator",
+  "drive-time-map",
+  "driving-days-calculator",
+  "driving-distance-calculator"
+ ]
+}

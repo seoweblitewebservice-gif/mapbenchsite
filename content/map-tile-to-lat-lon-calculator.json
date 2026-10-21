@@ -1,0 +1,179 @@
+{
+ "slug": "map-tile-to-lat-lon-calculator",
+ "primary_keyword": "Map Tile to Latitude Longitude Calculator",
+ "secondary_keywords": [
+  "map tile to latitude longitude calculator online",
+  "free map tile to latitude longitude calculator",
+  "map tile to latitude longitude calculator calculator",
+  "map tile to latitude longitude calculator tool",
+  "how to calculate map tile to latitude longitude calculator"
+ ],
+ "title": "Map Tile to Latitude Longitude Calculator",
+ "description": "Convert a tile's z/x/y back to coordinates with the Map Tile to Latitude Longitude Calculator — corner or centre, exact inverse formulas. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, tile 15/9649/12314 inverts to a northwest corner near 40.7653, −74.0250 and a centre a few hundred metres southeast — the tile's identity in the coordinate language everything else speaks.",
+ "quick_answer": "The Map Tile to Latitude Longitude Calculator inverts a tile address into geographic coordinates — the latitude/longitude of the tile's corner or centre. Enter z, x and y and read the point: the reverse of the tile calculator, for turning tile logs, cache keys and tile-based data back into places.",
+ "steps_intro": "From tile numbers back to the Earth:",
+ "use_cases": [
+  {
+   "title": "Log and cache forensics",
+   "body": [
+    {
+     "t": "Server logs speak z/x/y. Inverting the hot tiles shows which geography your traffic actually reads."
+    }
+   ]
+  },
+  {
+   "title": "Tile-data joins",
+   "body": [
+    {
+     "t": "Aggregates keyed by tile (counts, events) rejoin geography through the tile's representative point — centre by convention, computed here."
+    }
+   ]
+  },
+  {
+   "title": "Round-trip verification",
+   "body": [
+    {
+     "t": "Convert a point to a tile ("
+    },
+    {
+     "t": "Lat Lon to Map Tile",
+     "l": "/tools/lat-lon-to-map-tile-calculator"
+    },
+    {
+     "t": "), invert it back, and confirm the point sits inside the resulting bounds — the pipeline's unit test, done by hand once."
+    }
+   ]
+  },
+  {
+   "title": "Dataset footprints",
+   "body": [
+    {
+     "t": "A tile list becomes a map of coverage when each tile's centre or bounds are geographic again."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Corner versus centre",
+   "body": [
+    {
+     "t": "The northwest corner is the tile's address in lon/lat; the centre is its representative point. They differ by half a tile — at z15 in New York, ~460 m — and choosing the wrong one is a quiet, mappable error."
+    }
+   ]
+  },
+  {
+   "label": "Example · Longitude inverts exactly",
+   "body": [
+    {
+     "t": "Tile x maps to longitude by pure proportion (x ÷ 2^z × 360 − 180); latitude needs the inverse Mercator (atan of sinh) — the asymmetry that makes this page a calculator rather than a ruler."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What you can ask for",
+  "intro": "The inversion's outputs and their uses.",
+  "columns": [
+   "Output",
+   "Use"
+  ],
+  "rows": [
+   [
+    "NW corner lat/lon",
+    "Tile addressing, bounds construction"
+   ],
+   [
+    "Centre lat/lon",
+    "Representative points, labelling"
+   ],
+   [
+    "Full bounds",
+    "The Bounds Calculator's job — one tile, four edges"
+   ],
+   [
+    "Round-trip check",
+    "Point-in-tile verification"
+   ]
+  ],
+  "note": "Inversion is exact (closed-form) — a point converted to a tile and back lands within the same tile, always; the information lost is only the in-tile position, which the offset calculator preserves."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Latitude/longitude from tile numbers via the inverse slippy-map formulas — longitude linearly, latitude through atan(sinh(·)), for the tile's corner or centre."
+  ],
+  [
+   "Which map standard does it use?",
+   "The slippy-map standard (Web Mercator, 256-px tiles) shared by OSM, Google and MapLibre."
+  ],
+  [
+   "Can I use this in production GIS?",
+   "The formulas are the production standard itself — yes for web-mapping work."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 — tile systems are defined over it."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — tiles and pixels quantise; decimals beyond the cell are decoration."
+  ],
+  [
+   "Which corner?",
+   "Northwest by convention (the tile's origin). Centre available as the representative point; full bounds on the sibling page."
+  ],
+  [
+   "TMS y-flip?",
+   "Invert the flip first — y_xyz = 2^z − 1 − y_tms — then convert."
+  ],
+  [
+   "Fractional tiles?",
+   "Tile addresses are integers by definition; fractional zooms in libraries pick the integer level beneath for addressing."
+  ],
+  [
+   "Does it recover my original point?",
+   "Only to tile precision — the point's exact position inside the tile is gone after tiling, which is the system's design, not a defect."
+  ],
+  [
+   "Polar rows?",
+   "The top row inverts to the 85.0511° cap — the grid's edge, faithfully returned."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Forward: the "
+  },
+  {
+   "t": "Latitude Longitude to Map Tile Calculator",
+   "l": "/tools/lat-lon-to-map-tile-calculator"
+  },
+  {
+   "t": "; bounds: the "
+  },
+  {
+   "t": "Map Tile Bounds Calculator",
+   "l": "/tools/map-tile-bounds-calculator"
+  },
+  {
+   "t": "; offsets: the "
+  },
+  {
+   "t": "Map Tile Pixel Offset Calculator",
+   "l": "/tools/map-tile-pixel-offset-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator"
+ ]
+}

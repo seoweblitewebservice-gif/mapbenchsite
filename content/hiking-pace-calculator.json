@@ -1,0 +1,195 @@
+{
+ "slug": "hiking-pace-calculator",
+ "primary_keyword": "Hiking Pace Calculator",
+ "secondary_keywords": [
+  "hiking speed calculator",
+  "trail pace calculator",
+  "hike pace",
+  "walking trail pace",
+  "trekking pace calculator"
+ ],
+ "title": "Hiking Pace Calculator: Minutes per Mile and km",
+ "description": "Convert hike distance and time into pace and average speed with the Hiking Pace Calculator — min per mile and per kilometre. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 8 miles in 3 hours 20 minutes is a 25:00-per-mile pace (2.4 mph) — the relaxed hill-walking speed the maths insists on.",
+ "quick_answer": "The Hiking Pace Calculator converts distance and duration into pace — minutes per mile and per kilometre — and average speed. Enter the distance and the time and read the figures your next route plan should be built from, because planned pace and actual pace are rarely introduced.",
+ "steps_intro": "Your true pace is data, not self-image. Measure it, then plan with it:",
+ "use_cases": [
+  {
+   "title": "Calibrating future plans",
+   "body": [
+    {
+     "t": "Plan tomorrow's route with yesterday's real pace and daylight stops being a gamble. The "
+    },
+    {
+     "t": "Hiking Time Calculator",
+     "l": "/tools/hiking-time-calculator"
+    },
+    {
+     "t": " consumes exactly this figure."
+    }
+   ]
+  },
+  {
+   "title": "Group walk honesty",
+   "body": [
+    {
+     "t": "A group's pace is its slowest member's comfortable pace. Measure it on a short walk before the long one depends on it."
+    }
+   ]
+  },
+  {
+   "title": "Training progression",
+   "body": [
+    {
+     "t": "Same trail, falling minutes-per-mile: the log that proves fitness arrived. Pace is the trail's stopwatch-readable truth."
+    }
+   ]
+  },
+  {
+   "title": "Comparing terrain",
+   "body": [
+    {
+     "t": "Your flat pace versus your hill pace, both measured, is the personal correction factor every guidebook estimate needs."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The measured walk",
+   "body": [
+    {
+     "t": "8 miles in 3 h 20 min: pace = 200 ÷ 8 = 25:00/mile; speed = 8 ÷ 3.333 = 2.4 mph. A walker who assumed 3 mph would plan this trail an hour short — the measurement prevents exactly that."
+    }
+   ]
+  },
+  {
+   "label": "Example · The metric version",
+   "body": [
+    {
+     "t": "12 km in 3 h: 15:00/km, 4.0 km/h. The same walker on the flat — terrain writes the difference, the calculator just reports it."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Pace and speed pairs",
+  "intro": "The two dialects of walking speed, converted — pace = 60 ÷ speed.",
+  "columns": [
+   "Speed (mph)",
+   "Pace (per mile)",
+   "Speed (km/h)",
+   "Pace (per km)"
+  ],
+  "rows": [
+   [
+    "2.0",
+    "30:00",
+    "3.0",
+    "20:00"
+   ],
+   [
+    "2.5",
+    "24:00",
+    "4.0",
+    "15:00"
+   ],
+   [
+    "3.0",
+    "20:00",
+    "5.0",
+    "12:00"
+   ],
+   [
+    "3.5",
+    "17:09",
+    "5.5",
+    "10:55"
+   ],
+   [
+    "4.0",
+    "15:00",
+    "6.0",
+    "10:00"
+   ]
+  ],
+  "note": "Naismith's rule plans at about 3 mph (20:00/mile) on the flat plus climb allowance — compare your measured pace with his assumption before trusting his totals."
+ },
+ "faq": [
+  [
+   "Does this replace a specialist tool or professional measurement?",
+   "No — it divides distance by time, exactly. GPS watches add elevation and splits; this is the transparent core they must agree with."
+  ],
+  [
+   "Is my input uploaded?",
+   "No. Distance and time are computed in your browser."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No — trails have weather and stiles instead of traffic, and both live inside your measured time already."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Trails wind more than roads. Enter the trail distance you actually walked, from the route or your device."
+  ],
+  [
+   "Can route results change over time?",
+   "Your pace will, with fitness and season. Recompute from recent walks; plan with the current walker."
+  ],
+  [
+   "Moving pace or elapsed pace?",
+   "Elapsed includes the viewpoint stops — plan days with elapsed, judge fitness with moving. Enter the time that matches your question."
+  ],
+  [
+   "How does ascent change pace?",
+   "Climbing slows the horizontal pace; Naismith adds time for height separately. The Hiking Route Planner applies the full rule to a real route."
+  ],
+  [
+   "Pace with a heavy pack?",
+   "Slower, and measurably so — which is the point of measuring it. Multi-day plans deserve the loaded figure from a loaded test walk."
+  ],
+  [
+   "Children in the party?",
+   "The party's pace is the children's exploring pace, which includes stops for everything interesting. Measure it on a family walk, not from your solo logs."
+  ],
+  [
+   "Poles and terrain change pace?",
+   "Yes — scrambling, bog and scree all tax pace in ways flat arithmetic notices only through your measured time. Measure on similar ground."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Plan forward with the "
+  },
+  {
+   "t": "Hiking Time Calculator",
+   "l": "/tools/hiking-time-calculator"
+  },
+  {
+   "t": ", route with climb in the "
+  },
+  {
+   "t": "Hiking Route Planner with Elevation",
+   "l": "/tools/hiking-route-planner-with-elevation"
+  },
+  {
+   "t": ", and pace a ride instead in the "
+  },
+  {
+   "t": "Cycling Speed Calculator",
+   "l": "/tools/cycling-speed-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner"
+ ]
+}

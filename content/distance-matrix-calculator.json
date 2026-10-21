@@ -1,0 +1,29 @@
+{
+ "slug": "distance-matrix-calculator",
+ "primary_keyword": "Distance Matrix Calculator",
+ "secondary_keywords": [
+  "distance matrix",
+  "pairwise distance",
+  "distance table",
+  "multiple locations distance"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "airport-distance-calculator",
+  "airport-midpoint-by-coordinates",
+  "airport-route-finder",
+  "bearing-calculator",
+  "closest-facility-finder",
+  "compass-bearing-visualizer"
+ ]
+}

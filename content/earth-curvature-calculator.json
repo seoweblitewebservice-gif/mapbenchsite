@@ -1,0 +1,30 @@
+{
+ "slug": "earth-curvature-calculator",
+ "primary_keyword": "Earth Curvature Calculator",
+ "secondary_keywords": [
+  "curvature drop calculator",
+  "earth drop calculator",
+  "horizon curvature calculator",
+  "curvature over distance",
+  "earth curvature distance"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "air-pressure-by-elevation",
+  "antenna-height-distance-calculator",
+  "antipode-finder",
+  "average-elevation-gain-per-km",
+  "boiling-point-by-elevation-calculator",
+  "central-angle-from-distance-calculator"
+ ]
+}

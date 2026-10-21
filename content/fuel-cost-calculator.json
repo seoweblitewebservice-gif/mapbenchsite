@@ -1,0 +1,202 @@
+{
+ "slug": "fuel-cost-calculator",
+ "primary_keyword": "Fuel Cost Calculator",
+ "secondary_keywords": [
+  "fuel cost",
+  "gas cost calculator",
+  "fuel cost calculator online"
+ ],
+ "title": "Fuel Cost Calculator: Trip Fuel Cost Estimate",
+ "description": "Estimate a trip's fuel cost from distance, consumption and price with the Fuel Cost Calculator — dollars or euros, miles or km. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 850 miles at 28 mpg with fuel at $3.60 a gallon burns 30.4 gallons and costs about $109.29 — the trip's fuel bill, known before the trip.",
+ "quick_answer": "The Fuel Cost Calculator combines a journey's distance with your vehicle's consumption and the fuel price to estimate what the trip's fuel will cost. Enter the three figures — from a route you measured or one you are planning — and read the cost with the fuel quantity behind it.",
+ "steps_intro": "Distance × consumption × price: three honest inputs, one useful output:",
+ "use_cases": [
+  {
+   "title": "Trip budgeting",
+   "body": [
+    {
+     "t": "Fuel is the predictable part of a road trip's cost. Distance from the "
+    },
+    {
+     "t": "Driving Distance Calculator",
+     "l": "/tools/driving-distance-calculator"
+    },
+    {
+     "t": ", your car's real consumption, today's price — budgeted."
+    }
+   ]
+  },
+  {
+   "title": "Splitting a journey's cost",
+   "body": [
+    {
+     "t": "The total this returns is the figure the "
+    },
+    {
+     "t": "Fuel Cost Split Calculator",
+     "l": "/tools/fuel-cost-split-calculator"
+    },
+    {
+     "t": " divides among passengers — compute it once, split it fairly."
+    }
+   ]
+  },
+  {
+   "title": "Vehicle comparisons",
+   "body": [
+    {
+     "t": "Two cars over the same trip: the consumption difference becomes money here, which is the language car choices are finally made in."
+    }
+   ]
+  },
+  {
+   "title": "Route choice",
+   "body": [
+    {
+     "t": "A longer motorway route at steady consumption versus a shorter hilly one — price both and the 'scenic tax' is a number, not an argument."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The US road trip",
+   "body": [
+    {
+     "t": "850 mi ÷ 28 mpg = 30.36 gal; × $3.60 = $109.29. The estimate your passengers can split and your budget can hold."
+    }
+   ]
+  },
+  {
+   "label": "Example · The European tour",
+   "body": [
+    {
+     "t": "412 km at 6.8 L/100 km burns 28.0 L; at €1.78/L that is €49.87. Same structure, metric units — the calculator speaks both."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Fuel cost at common consumptions",
+  "intro": "Cost of 500 miles at an example $3.60/gallon — substitute your price in the calculator; consumption is your car's, honestly measured.",
+  "columns": [
+   "Consumption",
+   "Fuel for 500 mi",
+   "Cost at $3.60/gal"
+  ],
+  "rows": [
+   [
+    "20 mpg",
+    "25.0 gal",
+    "$90.00"
+   ],
+   [
+    "25 mpg",
+    "20.0 gal",
+    "$72.00"
+   ],
+   [
+    "28 mpg",
+    "17.9 gal",
+    "$64.29"
+   ],
+   [
+    "35 mpg",
+    "14.3 gal",
+    "$51.43"
+   ],
+   [
+    "45 mpg",
+    "11.1 gal",
+    "$40.00"
+   ],
+   [
+    "55 mpg",
+    "9.1 gal",
+    "$32.73"
+   ]
+  ],
+  "note": "Consumption dominates: at any plausible fuel price, the efficient car wins the table. Use your real-world mpg, not the brochure's. "
+ },
+ "faq": [
+  [
+   "Is the pump price exact?",
+   "The price you enter is the price it uses — enter today's local price for a planning estimate. The calculator cannot know tomorrow's forecourt, and does not pretend to."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Traffic changes consumption at the margins; the estimate uses your stated consumption figure, which should be your real-world one."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Roads wind. Fuel is burned on road miles — enter the road distance."
+  ],
+  [
+   "Can route results change over time?",
+   "Fuel prices change weekly; recompute with the current price when the trip matters."
+  ],
+  [
+   "MPG or L/100 km?",
+   "Both habits are supported by the tool family: this calculator takes your consumption as you know it; the Liters Needed tool is organised around L/100 km."
+  ],
+  [
+   "What about tolls and parking?",
+   "They are trip costs but not fuel costs. Add them in the Cost Per Mile or Branch Travel calculators, which are built for totals."
+  ],
+  [
+   "Electric vehicles?",
+   "The structure survives (distance × consumption × price per kWh) — the dedicated EV tools elsewhere on the site frame range; this page is fuel by name and design."
+  ],
+  [
+   "Half the trip was motorway, half hills — one figure?",
+   "Use a blended consumption (your car's average over similar mixed driving) or price the two halves as two calculations and add them. The second is fussier and truer."
+  ],
+  [
+   "Should I use the highest price on the route?",
+   "For budgeting, yes — planning at the dearest forecourt's price leaves the trip pleasantly under budget everywhere else."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Split the total with the "
+  },
+  {
+   "t": "Fuel Cost Split Calculator",
+   "l": "/tools/fuel-cost-split-calculator"
+  },
+  {
+   "t": ", quantity-only versions are "
+  },
+  {
+   "t": "Gallons Needed for Distance",
+   "l": "/tools/gallons-needed-for-distance"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Liters Needed for Distance",
+   "l": "/tools/liters-needed-for-distance"
+  },
+  {
+   "t": ", and stops are planned in the "
+  },
+  {
+   "t": "Fuel Stop Planner",
+   "l": "/tools/fuel-stop-planner"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-calories-distance",
+  "cycling-route-planner",
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator"
+ ]
+}

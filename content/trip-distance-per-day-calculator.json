@@ -1,0 +1,201 @@
+{
+ "slug": "trip-distance-per-day-calculator",
+ "primary_keyword": "Trip Distance Per Day Calculator",
+ "secondary_keywords": [
+  "trip distance per day calculator online",
+  "free trip distance per day calculator",
+  "trip distance per day calculator calculator",
+  "trip distance per day calculator tool",
+  "how to calculate trip distance per day calculator"
+ ],
+ "title": "Trip Distance Per Day Calculator",
+ "description": "Split a trip's total distance across its travel days with the Trip Distance Per Day Calculator — the daily target your itinerary needs. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 1,850 miles over six travel days is 308 miles a day — a gentle target that leaves afternoons for the places the trip is supposedly for.",
+ "quick_answer": "The Trip Distance Per Day Calculator divides a journey's total distance by its travel days and returns the distance each day must cover. Enter the route total and your days, and read the daily target — the number telling you whether the itinerary is a holiday or endurance event.",
+ "steps_intro": "Days are the budget; miles are the spending. See the exchange rate:",
+ "use_cases": [
+  {
+   "title": "Itinerary feasibility",
+   "body": [
+    {
+     "t": "If the daily number frightens you, the itinerary is wrong, not the arithmetic. The "
+    },
+    {
+     "t": "Driving Days Calculator",
+     "l": "/tools/driving-days-calculator"
+    },
+    {
+     "t": " runs the same division from the other side."
+    }
+   ]
+  },
+  {
+   "title": "Comparing trip shapes",
+   "body": [
+    {
+     "t": "Six days at 308 versus four at 463: same trip, different species. The daily figure is where the choice becomes visible."
+    }
+   ]
+  },
+  {
+   "title": "Booking overnight towns",
+   "body": [
+    {
+     "t": "The daily target is the radius along the route where tonight's town lives — the "
+    },
+    {
+     "t": "Road Trip Overnight Stop Planner",
+     "l": "/tools/road-trip-overnight-stop-planner"
+    },
+    {
+     "t": " names them."
+    }
+   ]
+  },
+  {
+   "title": "Cycling and walking tours",
+   "body": [
+    {
+     "t": "On legs and wheels the daily distance is the whole training question. 40-mile days and 15-mile days are different sports wearing one name."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The relaxed crossing",
+   "body": [
+    {
+     "t": "1,850 ÷ 6 = 308.3 miles/day. At a 55 mph average that is 5.6 hours of driving — a day with a life in it."
+    }
+   ]
+  },
+  {
+   "label": "Example · The compressed version",
+   "body": [
+    {
+     "t": "The same trip in 4 days = 462.5/day, 8.4 hours at the wheel daily. Feasible, and now knowingly chosen rather than accidentally suffered."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Daily targets for common trips",
+  "intro": "Total ÷ days, tabulated — find your trip's shape and interrogate it.",
+  "columns": [
+   "Trip total",
+   "Over 3 days",
+   "Over 5 days",
+   "Over 7 days",
+   "Over 10 days"
+  ],
+  "rows": [
+   [
+    "900 mi",
+    "300/day",
+    "180/day",
+    "129/day",
+    "90/day"
+   ],
+   [
+    "1,850 mi",
+    "617/day",
+    "370/day",
+    "264/day",
+    "185/day"
+   ],
+   [
+    "2,789 mi",
+    "930/day",
+    "558/day",
+    "398/day",
+    "279/day"
+   ],
+   [
+    "4,200 mi",
+    "1,400/day",
+    "840/day",
+    "600/day",
+    "420/day"
+   ]
+  ],
+  "note": "Absurd cells (930 miles a day) are diagnostic gold: they mark the itineraries to renegotiate before the road does it for you."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Distance per day: a trip's total distance divided by its travel days — the daily target the itinerary must deliver."
+  ],
+  [
+   "Do I need an account?",
+   "No. Total and days in, daily target out."
+  ],
+  [
+   "Can I rely on this for professional work?",
+   "For tour and rota planning, yes — it is the budgeting division behind every sane itinerary. Legal driving limits sit on top of it for professionals."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Traffic changes hours, not the distance target; convert your target with your real average speed to feel the day's length."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Enter the road total — days are spent on road miles."
+  ],
+  [
+   "Should rest days count as travel days?",
+   "No — divide by driving days only, then place rest days in the calendar as themselves. Hidden rest days are how itineraries quietly break."
+  ],
+  [
+   "Uneven days?",
+   "Real trips bunch near sights and spread on transit days. The average here is the budget; the Overnight Stop Planner shapes the actual days."
+  ],
+  [
+   "My days include sightseeing days.",
+   "Then divide by travel days only, and let the sights have their own calendar entries — diluted averages lie about both."
+  ],
+  [
+   "The daily target looks fine but the hours do not.",
+   "Convert with your real average speed: 308 gentle miles at 40 mph is a longer day than 400 at 65. This page budgets miles; the ETA tools budget the day."
+  ],
+  [
+   "Cycling tour — same thinking?",
+   "Identical, at cycling numbers: 40–60 mile days. The division does not care what turns the wheels."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The inverse is the "
+  },
+  {
+   "t": "Driving Days Calculator",
+   "l": "/tools/driving-days-calculator"
+  },
+  {
+   "t": "; towns are named by the "
+  },
+  {
+   "t": "Road Trip Overnight Stop Planner",
+   "l": "/tools/road-trip-overnight-stop-planner"
+  },
+  {
+   "t": "; and daily hours come from the "
+  },
+  {
+   "t": "ETA Calculator",
+   "l": "/tools/eta-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-route-planner",
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator",
+  "drive-time-map"
+ ]
+}

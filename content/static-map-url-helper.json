@@ -1,0 +1,28 @@
+{
+ "slug": "static-map-url-helper",
+ "primary_keyword": "Static Map URL Helper",
+ "secondary_keywords": [
+  "static map url",
+  "static map api",
+  "map image center"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "county-choropleth",
+  "custom-labeled-map",
+  "embed-map-link-helper",
+  "google-maps-embed-code-generator",
+  "historical-map-context",
+  "live-spatial-data-connector"
+ ]
+}

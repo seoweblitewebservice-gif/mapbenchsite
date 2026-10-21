@@ -1,0 +1,27 @@
+{
+ "slug": "population-density-compare",
+ "primary_keyword": "Population Density Compare",
+ "secondary_keywords": [
+  "population density",
+  "city density comparison",
+  "population density compare online"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "nearby-places-finder",
+  "nearest-postcode-from-list",
+  "us-county-demographic-explorer",
+  "zip-codes-by-state-county-city",
+  "zip-codes-within-radius"
+ ]
+}

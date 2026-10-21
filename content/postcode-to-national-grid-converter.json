@@ -1,0 +1,29 @@
+{
+ "slug": "postcode-to-national-grid-converter",
+ "primary_keyword": "Postcode to National Grid Converter",
+ "secondary_keywords": [
+  "postcode to grid reference",
+  "postcode to ngr",
+  "postcode easting northing",
+  "uk postcode os grid"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "arcminutes-to-decimal-degrees-converter",
+  "arcseconds-to-ground-distance-calculator",
+  "bng-converter",
+  "bounding-box-calculator",
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator"
+ ]
+}

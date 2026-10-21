@@ -1,0 +1,182 @@
+{
+ "slug": "geographic-meeting-point-finder",
+ "primary_keyword": "Geographic Meeting Point Finder",
+ "secondary_keywords": [
+  "meeting point finder",
+  "geographic midpoint calculator",
+  "central meeting point",
+  "halfway point multiple locations",
+  "meeting location calculator"
+ ],
+ "title": "Geographic Meeting Point Finder",
+ "description": "Balance several places into one neutral centre with the Geographic Meeting Point Finder — the equal-weight spherical centroid, computed. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, New York, Chicago and Los Angeles balance at 40.413, −93.959 in Missouri — the spherical centre of the three, from which Chicago is the closest of the three cities.",
+ "quick_answer": "The Geographic Meeting Point Finder calculates the equal-weight spherical centroid of several locations — the geographic balance point of the group. Add two or more cities or coordinates and it returns the centre's latitude and longitude, computed in three dimensions on the sphere rather than by averaging map positions.",
+ "steps_intro": "For two people the midpoint settles it; for a group, the centroid is the honest starting point:",
+ "use_cases": [
+  {
+   "title": "Group trips and reunions",
+   "body": [
+    {
+     "t": "Three families in three cities need a neutral fourth place. The centroid does not pick the town — it tells you which region the argument should be about."
+    }
+   ]
+  },
+  {
+   "title": "Team offsites and conferences",
+   "body": [
+    {
+     "t": "A distributed team's fair hub starts as geometry and ends as flight schedules. Start here, then test the candidate hubs in the "
+    },
+    {
+     "t": "Airport Route Finder",
+     "l": "/tools/airport-route-finder"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Facility siting first pass",
+   "body": [
+    {
+     "t": "One warehouse for several demand points: the centroid is the mathematically neutral candidate. Roads and rents then argue with it — productively, because the baseline is honest."
+    }
+   ]
+  },
+  {
+   "title": "Weighted thinking, taught",
+   "body": [
+    {
+     "t": "Equal weights are the transparent default. Seeing where the unweighted centre falls teaches why weighting by population or volume is a decision, not a default."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Three US cities",
+   "body": [
+    {
+     "t": "New York + Chicago + Los Angeles balance at 40.413, −93.959 (Missouri). Distances from the centre: Chicago approx. 344 miles, New York 1,045, Los Angeles 1,401 — the centroid balances direction, not distance, and the spread is part of the answer."
+    }
+   ]
+  },
+  {
+   "label": "Example · A European triangle",
+   "body": [
+    {
+     "t": "London + Paris + Berlin balance at 51.106, 5.089 — in the Low Countries, near the Aachen–Liège corridor. A plausible meeting region nobody in the three capitals would have nominated unaided."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Centroid or midpoint — which do you need?",
+  "intro": "The two ideas are cousins, not twins. This page computes the centroid; the comparison keeps the concepts — and the tools — straight.",
+  "columns": [
+   "Question",
+   "Midpoint (2 places)",
+   "Centroid (2+ places)"
+  ],
+  "rows": [
+   [
+    "How many places?",
+    "Exactly two",
+    "Two or more"
+   ],
+   [
+    "What it minimises",
+    "Inequality between the pair",
+    "Overall directional imbalance"
+   ],
+   [
+    "Equal distances to all?",
+    "Yes, to both",
+    "Not necessarily"
+   ],
+   [
+    "Lies on the pair's route?",
+    "Yes",
+    "Generally not on any single route"
+   ],
+   [
+    "Best for",
+    "Fair one-to-one meetings",
+    "Neutral group centres"
+   ],
+   [
+    "Tool",
+    "Halfway Between Two Places",
+    "This page"
+   ]
+  ],
+  "note": "For exactly two places the centroid and the midpoint coincide — the methods agree where they overlap, which is a good check on both."
+ },
+ "faq": [
+  [
+   "Is the centroid the best city to meet in?",
+   "It is the neutral geographic centre, not a recommendation. The nearest practical town or hub to the centroid is the meeting candidate — flight and road checks make the final call."
+  ],
+  [
+   "Why are the distances from the centroid unequal?",
+   "A centroid balances the directions of the points in 3D; it does not promise equal distances. Groups spread unevenly produce uneven legs, and seeing that spread is useful information, not an error."
+  ],
+  [
+   "Why not average the latitudes and longitudes?",
+   "Averaging map coordinates distorts badly across longitude spans and near the antimeridian. The spherical centroid converts each place to a 3D vector, averages those, and projects back — the method survives every geography."
+  ],
+  [
+   "Can I add more than two places?",
+   "Yes — that is the point of the tool. Each added place pulls the centre toward itself with equal weight."
+  ],
+  [
+   "Can places be weighted?",
+   "This tool uses equal weights by design, so the answer stays transparent. Weighting by headcount or volume is a further, deliberate step for a planning model."
+  ],
+  [
+   "What if the centroid falls in an ocean or desert?",
+   "Common for spread-out groups — treat it as a compass bearing for the search, then choose the nearest workable town, exactly as with wet midpoints."
+  ],
+  [
+   "How does this differ from the equidistance line?",
+   "The line is every point equidistant from two places. The centroid is one balance point for many places. Different questions, both answered on the sphere."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "For exactly two people, the "
+  },
+  {
+   "t": "Halfway Between Two Places",
+   "l": "/tools/halfway-between-two-places"
+  },
+  {
+   "t": " calculator is the sharper tool; the fairness boundary for a pair is the "
+  },
+  {
+   "t": "Equidistance Line Finder",
+   "l": "/tools/equidistance-line-finder"
+  },
+  {
+   "t": "; and the times to reach the centre are planned in the "
+  },
+  {
+   "t": "Meeting Time Planner",
+   "l": "/tools/meeting-time-planner"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "compass-bearing-visualizer",
+  "competitor-distance-map",
+  "coordinate-distance-table-generator",
+  "crow-flies-distance",
+  "distance-between-cities",
+  "distance-between-zip-codes"
+ ]
+}

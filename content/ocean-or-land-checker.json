@@ -1,0 +1,182 @@
+{
+ "slug": "ocean-or-land-checker",
+ "primary_keyword": "Ocean or Land Checker",
+ "secondary_keywords": [
+  "is this ocean",
+  "land or water coordinates",
+  "point in ocean"
+ ],
+ "title": "Ocean or Land Checker: Is This Point Water?",
+ "description": "Check whether coordinates fall on ocean or land with the Ocean or Land Checker — a reverse-geocode read of the point's record. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a point at 0°, 0° — the famous null island of data errors — answers as ocean with no address at all, and half the world's broken geocoding pipelines are discovered by exactly that silence.",
+ "quick_answer": "The Ocean or Land Checker reverse-geocodes a point to tell whether map data treats it as land with an address or as sparse ocean. Paste coordinates or click the map and read the result: a land-style record with place fields, or the empty signature of open water.",
+ "steps_intro": "One question, honestly answered by the record:",
+ "use_cases": [
+  {
+   "title": "Data cleaning and QA",
+   "body": [
+    {
+     "t": "Swapped latitude/longitude pairs land in oceans with suspicious regularity. Run the suspect points through the checker and the errors confess by geography."
+    }
+   ]
+  },
+  {
+   "title": "Photo and log forensics",
+   "body": [
+    {
+     "t": "A geotag claiming land in the mid-Atlantic is a story that needs checking — the record's read settles what the point's data says."
+    }
+   ]
+  },
+  {
+   "title": "Curiosity at sea",
+   "body": [
+    {
+     "t": "Ferry and flight positions: are we over land yet? The clicked point answers. Ship's reality via the "
+    },
+    {
+     "t": "Island / Landmass Context",
+     "l": "/tools/island-finder-context"
+    },
+    {
+     "t": " when land has a name."
+    }
+   ]
+  },
+  {
+   "title": "Teaching coordinates",
+   "body": [
+    {
+     "t": "Students drop pins and read the verdict — the fastest intuition pump for what latitude and longitude mean on a wet planet."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Null island",
+   "body": [
+    {
+     "t": "0,0 — in the Gulf of Guinea — is ocean, address-free, and the accidental home of every dataset row whose coordinates went missing. The checker returns its honest emptiness."
+    }
+   ]
+  },
+  {
+   "label": "Example · Coastal honesty",
+   "body": [
+    {
+     "t": "A point in a harbour can read either way depending on the record's shoreline. The checker reports the data's treatment, flagged in the FAQs as a data question, not a survey."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading the verdict",
+  "intro": "What the reverse-geocode record implies — and its limits.",
+  "columns": [
+   "Record shape",
+   "Likely truth",
+   "Confidence"
+  ],
+  "rows": [
+   [
+    "Full address fields",
+    "Land, mapped country",
+    "High"
+   ],
+   [
+    "Coarse place only (sea or coast names)",
+    "Coastal or near-shore",
+    "Medium"
+   ],
+   [
+    "Nothing at all",
+    "Open ocean — or unmapped land",
+    "Good at sea, weaker in sparse-data regions"
+   ],
+   [
+    "Ocean name returned",
+    "Ocean, named by the data",
+    "High"
+   ]
+  ],
+  "note": "The checker reads map data's treatment of the point. A survey-grade shoreline answer is a different (expensive) product; for data QA and curiosity, this read is the right tool."
+ },
+ "faq": [
+  [
+   "Is it a survey shoreline?",
+   "No — the checker reads the reverse-geocode record: land-style fields versus ocean's sparsity. It is exact about what the data says and honest that data and coastline are cousins, not twins."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — paste or click any coordinates on earth."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Shorelines are drawn at different resolutions by different sources; a point metres from a coast can flip verdicts between maps."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "A point on land returned nothing.",
+   "Sparse-data land (deserts, deep interiors, some islands) can read empty. The map view is the tie-breaker — the checker reports the record, not the terrain."
+  ],
+  [
+   "Lakes and rivers?",
+   "Inland water usually resolves to the surrounding land record or a water name, varying by data. It is not the ocean, and the record generally says so one way or another."
+  ],
+  [
+   "Antarctica?",
+   "Land — with a research-station style record in places, and glorious emptiness elsewhere. The verdict 'land' holds either way."
+  ],
+  [
+   "Why do pipelines send points to 0,0?",
+   "Missing coordinates default to zero in many systems. The checker is the bouncer that catches them at the door."
+  ],
+  [
+   "Tides change the answer?",
+   "The record's shoreline is fixed at its survey state; a tidal flat point keeps the record's verdict at all tides. Boats should consult charts, not this checker."
+  ],
+  [
+   "Coordinates from a photo?",
+   "Paste them — EXIF positions are exactly the forensic use case. Remember some platforms strip EXIF; the original file keeps it."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Landmass names: "
+  },
+  {
+   "t": "Island / Landmass Context",
+   "l": "/tools/island-finder-context"
+  },
+  {
+   "t": "; reverse records: "
+  },
+  {
+   "t": "Coordinates to Address",
+   "l": "/tools/coordinates-to-address"
+  },
+  {
+   "t": "; your point: "
+  },
+  {
+   "t": "Find My Location",
+   "l": "/tools/find-my-location"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder"
+ ]
+}

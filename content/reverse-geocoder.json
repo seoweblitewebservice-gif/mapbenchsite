@@ -1,0 +1,183 @@
+{
+ "slug": "reverse-geocoder",
+ "primary_keyword": "Reverse Geocoder",
+ "secondary_keywords": [
+  "reverse geocoding",
+  "coordinates to address",
+  "reverse geocoder online"
+ ],
+ "title": "Reverse Geocoder: Coordinates to Address Fields",
+ "description": "Turn coordinates into address fields with the Reverse Geocoder — road, city, region, postcode and country for any point. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, clicking a point in the middle of Chicago returns the full stack — road, city, county-grade region, postcode 60601, country — the complete sentence that two bare numbers were abbreviating.",
+ "quick_answer": "The Reverse Geocoder takes coordinates you paste or a point you click and returns its address fields — road, city, region, postcode and country. It is the mirror of geocoding: numbers in, the place's written address out, field by field, ready to copy into whatever asked for it.",
+ "steps_intro": "Coordinates are for machines. This turns them back into addresses:",
+ "use_cases": [
+  {
+   "title": "Photo and log interpretation",
+   "body": [
+    {
+     "t": "Geotags become places: paste the pair, read the fields. The card format for keeping them is the "
+    },
+    {
+     "t": "Offline Coordinate Card",
+     "l": "/tools/offline-coordinate-card"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Data enrichment",
+   "body": [
+    {
+     "t": "A spreadsheet of coordinates gains city and postcode columns one careful paste at a time — with the batch route noted for hundreds."
+    }
+   ]
+  },
+  {
+   "title": "Pin verification",
+   "body": [
+    {
+     "t": "A point claims to be at an address; the reverse read checks whether the record agrees. Disagreements find swapped digits fast."
+    }
+   ]
+  },
+  {
+   "title": "Development and testing",
+   "body": [
+    {
+     "t": "What does a reverse geocoder actually return at this point? This page is the honest specimen before you build on any API."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Field by field",
+   "body": [
+    {
+     "t": "The result is structured — road, city, region, postcode, country as separate fields — because addresses are data, and data should travel in pieces, not paragraphs."
+    }
+   ]
+  },
+  {
+   "label": "Example · The sparse point",
+   "body": [
+    {
+     "t": "A desert or ocean point returns few fields or none. The emptiness is the information, and this page shows it plainly instead of borrowing the nearest town's name."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The fields, explained",
+  "intro": "What a complete reverse answer looks like — and what partial ones mean.",
+  "columns": [
+   "Field",
+   "Source of truth",
+   "When it is missing"
+  ],
+  "rows": [
+   [
+    "Road",
+    "The nearest recorded road",
+    "Off-road points, sparse data"
+   ],
+   [
+    "City or town",
+    "The settlement record",
+    "Rural ambiguity"
+   ],
+   [
+    "Region",
+    "State, county or province per country",
+    "Varies by national structure"
+   ],
+   [
+    "Postcode",
+    "The postal record",
+    "Countries and areas without codes"
+   ],
+   [
+    "Country",
+    "Boundary data",
+    "Rarely missing on land"
+   ]
+  ],
+  "note": "Fields come from OpenStreetMap's address data via public geocoding — depth is superb in mapped cities, thinner where the world is less recorded."
+ },
+ "faq": [
+  [
+   "What service powers it?",
+   "A public reverse geocoder over OpenStreetMap data — the same open stack as this site's other address tools, with results shown field by field."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — paste or click any coordinates; your own position is never the input."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Different geocoders hold different records and vintages; the same point can return a neighbouring road or an older postcode elsewhere."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "Hundreds of coordinates?",
+   "That is batch work — the Batch Geocoder handles lists; this page is the careful single-point instrument."
+  ],
+  [
+   "Is the road the point's address?",
+   "It is the nearest recorded road — a point inside a large property may sit nearer another road than its postal one. Address-grade certainty belongs to postal authorities."
+  ],
+  [
+   "Ocean points?",
+   "Expect emptiness or a sea name — the honest answer for water, as the Ocean or Land Checker formalises."
+  ],
+  [
+   "Precision of the point versus the fields?",
+   "Your input can be metre-precise while fields stay street-level: records describe places, not survey marks."
+  ],
+  [
+   "Can I copy individual fields?",
+   "Yes — fields are presented separately precisely so each can be copied alone."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Batch version: the "
+  },
+  {
+   "t": "Batch Geocoder",
+   "l": "/tools/batch-geocoder"
+  },
+  {
+   "t": "; forward direction: "
+  },
+  {
+   "t": "Address to Coordinates",
+   "l": "/tools/address-to-coordinates"
+  },
+  {
+   "t": "; keep it: the "
+  },
+  {
+   "t": "Offline Coordinate Card",
+   "l": "/tools/offline-coordinate-card"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder"
+ ]
+}

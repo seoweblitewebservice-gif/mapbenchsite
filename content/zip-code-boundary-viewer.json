@@ -1,0 +1,177 @@
+{
+ "slug": "zip-code-boundary-viewer",
+ "primary_keyword": "ZIP Code Boundary Viewer",
+ "secondary_keywords": [
+  "zip boundary",
+  "zip code map",
+  "postal code boundary"
+ ],
+ "title": "ZIP Code Boundary Viewer: Postal Context",
+ "description": "Read which ZIP or postcode applies to a point with the ZIP Code Boundary Viewer — postal fields and nearby postal context. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a point near a ZIP edge shows its own code plus the neighbours across the line — the context that explains a surprising delivery route in one view.",
+ "quick_answer": "The ZIP Code Boundary Viewer finds which ZIP or postcode applies to a point and shows the related nearby postal context. Locate the point and read the postal fields — an honest point-level read that keeps ZIP geography in its delivery-route nature, distinct from the Census's statistical areas.",
+ "steps_intro": "Postal truth at a point, with its edges in view:",
+ "use_cases": [
+  {
+   "title": "Address verification support",
+   "body": [
+    {
+     "t": "Which code the point itself carries, checked against the form's claim — with the ZCTA distinction kept straight via "
+    },
+    {
+     "t": "What ZIP Code Am I In",
+     "l": "/tools/what-zip-code-am-i-in"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Territory edge reviews",
+   "body": [
+    {
+     "t": "Sales and service territories drawn on ZIPs need their edges inspected; the nearby-context read shows what borders what."
+    }
+   ]
+  },
+  {
+   "title": "Delivery diagnostics",
+   "body": [
+    {
+     "t": "A misrouted parcel's origin point gets its postal read here — the first step in the 'why did it go there' investigation."
+    }
+   ]
+  },
+  {
+   "title": "International postcodes",
+   "body": [
+    {
+     "t": "The viewer reads postcode fields where systems exist beyond the US — Britain's districts, Canada's FSAs — in their own terms."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · A point near the edge",
+   "body": [
+    {
+     "t": "Two parcels across a street can carry different codes — routes serve efficiency, not symmetry. The viewer's nearby context shows the line's neighbourhood instead of pretending the point's answer is the whole story."
+    }
+   ]
+  },
+  {
+   "label": "Example · The route reality",
+   "body": [
+    {
+     "t": "Some ZIPs are a single facility or a PO Box wall — points, not polygons. The viewer reports the point's postal fields as the record holds them, routes and all."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "ZIP geography, honestly framed",
+  "intro": "What 'boundary' can and cannot mean for US ZIPs — the framing this viewer keeps.",
+  "columns": [
+   "Claim",
+   "Truth"
+  ],
+  "rows": [
+   [
+    "USPS publishes ZIP polygons",
+    "No official public polygon set exists"
+   ],
+   [
+    "ZCTA polygons exist",
+    "Yes — Census statistical areas, a different thing"
+   ],
+   [
+    "This viewer shows",
+    "The point's postal code fields and nearby postal context"
+   ],
+   [
+    "Use ZIP reads for",
+    "Mailing and delivery logic"
+   ],
+   [
+    "Use ZCTA for",
+    "Demographics and analysis"
+   ]
+  ],
+  "note": "Third-party ZIP boundary maps exist by approximating routes; this page labels its point-level read as what it is rather than drawing pretend precision."
+ },
+ "faq": [
+  [
+   "Is it an exact polygon?",
+   "For US ZIPs there is no official USPS polygon to be exact with — ZIPs are delivery routes. The viewer reports the point's applicable code and nearby context; Census ZCTA boundaries (the statistical polygons) live on the What ZIP Code Am I In page."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — locate any point by search or click."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Commercial ZIP maps approximate route geography differently; two 'ZIP boundary' products can disagree while both approximate the same routes."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "UK postcodes instead?",
+   "The viewer reads postcode fields internationally where the data supports it — UK outward districts and full postcodes in their own structure."
+  ],
+  [
+   "Which code for a brand-new development?",
+   "New addresses can precede postal updates; USPS's own lookup is the freshest source during the gap."
+  ],
+  [
+   "A point with two plausible codes?",
+   "Edges do that — the nearby context shows both candidates and their relation to the point; the address's official USPS record decides mail."
+  ],
+  [
+   "Can I download boundaries?",
+   "Census ZCTA shapefiles are the downloadable official geography (from the Census). Route-based ZIP shapes are commercial approximations."
+  ],
+  [
+   "Territory planning on ZIPs?",
+   "Common and workable with this caveat in the plan: codes change with mail's needs, so territories built on them need periodic re-reads — this viewer is the re-read."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The two-label answer: "
+  },
+  {
+   "t": "What ZIP Code Am I In",
+   "l": "/tools/what-zip-code-am-i-in"
+  },
+  {
+   "t": "; lists to centres: the "
+  },
+  {
+   "t": "Postal Code Centroid Calculator",
+   "l": "/tools/postal-code-centroid-calculator"
+  },
+  {
+   "t": "; addresses: "
+  },
+  {
+   "t": "Address to ZIP Code Lookup",
+   "l": "/tools/address-to-zip-code-lookup"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder"
+ ]
+}

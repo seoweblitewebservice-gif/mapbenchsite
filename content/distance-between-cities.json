@@ -1,0 +1,199 @@
+{
+ "slug": "distance-between-cities",
+ "primary_keyword": "Distance Between Cities",
+ "secondary_keywords": [
+  "how far between cities",
+  "city to city distance",
+  "distance between cities online"
+ ],
+ "title": "Distance Between Cities: Miles & Midpoint",
+ "description": "Measure the straight-line distance between any two cities with Distance Between Cities — miles and km, initial bearing, midpoint and route. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, New York to Boston is approx. 190.2 miles (306.1 km) with an initial bearing of 52.3° — and their halfway point falls at 41.546, −72.551 in Connecticut.",
+ "quick_answer": "Distance Between Cities measures the straight-line separation between any two cities in the world and shows more than the number: the distance in miles and kilometres, the initial bearing, the halfway point, and the curved great-circle route drawn on the map, so you can see why the shortest path bends.",
+ "steps_intro": "Pick two cities; the geometry — including the parts a bare number hides — comes with it:",
+ "use_cases": [
+  {
+   "title": "Trip and relocation planning",
+   "body": [
+    {
+     "t": "Comparing two candidate cities against home starts with honest separations. The midpoint marker answers the follow-up — where would we stop, or meet — without a second tool."
+    }
+   ]
+  },
+  {
+   "title": "Logistics first passes",
+   "body": [
+    {
+     "t": "Before routing software earns its fee, a city-pair distance screens the absurd options out. Validate the surviving pair by road in the "
+    },
+    {
+     "t": "Driving Distance Calculator",
+     "l": "/tools/driving-distance-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Teaching scale",
+   "body": [
+    {
+     "t": "Students grasp continental scale from pairs they know: the curved route to a 'nearby' European capital teaches more geography than a chapter of definitions."
+    }
+   ]
+  },
+  {
+   "title": "Content and research fact-checks",
+   "body": [
+    {
+     "t": "Writers and researchers quoting a city separation need a reproducible figure with its method attached — this page shows its working on the map."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · United States",
+   "body": [
+    {
+     "t": "New York ↔ Boston: approx. 306.1 km (190.2 mi), initial bearing 52.3°, reverse 234.2°, midpoint at 41.546, −72.551. A familiar pair, and still the bearing surprises: you set off northeast, not east."
+    }
+   ]
+  },
+  {
+   "label": "Example · Europe",
+   "body": [
+    {
+     "t": "London ↔ Berlin: approx. 931.6 km (578.8 mi). On the map the great-circle route arcs gently north of the straight ruler line — the same effect, at European scale, that bends transatlantic routes toward Iceland."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Popular city pairs",
+  "intro": "Straight-line distances and initial bearings from published city-centre coordinates on the site model — approx. figures, reproducible in the tool.",
+  "columns": [
+   "Pair",
+   "Miles",
+   "Kilometres",
+   "Initial bearing"
+  ],
+  "rows": [
+   [
+    "New York ↔ Boston",
+    "190.2",
+    "306.1",
+    "52.3°"
+   ],
+   [
+    "New York ↔ Chicago",
+    "711.0",
+    "1,144.3",
+    "281.0°"
+   ],
+   [
+    "Chicago ↔ Dallas",
+    "804.6",
+    "1,295.0",
+    "221.6°"
+   ],
+   [
+    "Houston ↔ Seattle",
+    "1,889.3",
+    "3,040.5",
+    "318.3°"
+   ],
+   [
+    "London ↔ Paris",
+    "213.5",
+    "343.5",
+    "148.1°"
+   ],
+   [
+    "Paris ↔ Berlin",
+    "545.2",
+    "877.5",
+    "58.2°"
+   ],
+   [
+    "London ↔ Berlin",
+    "578.8",
+    "931.6",
+    "77.8°"
+   ],
+   [
+    "Madrid ↔ Barcelona",
+    "313.6",
+    "504.7",
+    "75.8°"
+   ]
+  ],
+  "note": "Bearings are the initial great-circle heading from the first city; the tool reports it for every pair you enter."
+ },
+ "faq": [
+  [
+   "Which point in each city is used?",
+   "The city's published centre coordinate — the same point the search resolves to. For sprawling cities, centre-to-centre is the comparable convention; two suburbs of the same pair of cities can differ by tens of miles."
+  ],
+  [
+   "Why does the tool also show a midpoint?",
+   "Because the next question after 'how far' is usually 'where is halfway'. The midpoint is computed on the same great-circle path, ready for the Halfway Between Two Places calculator to explore."
+  ],
+  [
+   "Are the cities limited to the US and Europe?",
+   "No — the search is worldwide. This page's examples use US and European cities, but the geometry does not stop at their borders."
+  ],
+  [
+   "Can I measure between a city and a non-city place?",
+   "Yes, by setting the other point by search or coordinates — or switch to Distance Between Two Places, which is built for arbitrary points."
+  ],
+  [
+   "Why is my result different from a flight time estimate?",
+   "Flight times include routing, winds and procedures on top of the surface distance this page measures. The distance is the stable ingredient; the time is the variable one."
+  ],
+  [
+   "Does it show driving distance too?",
+   "No — this page is the straight-line instrument. The driving figure lives in the Driving Distance Calculator, and comparing the two is often the insight."
+  ],
+  [
+   "How do I share a pair I measured?",
+   "The measured pair is encoded in the page, so the link you copy reopens the same two cities for whoever receives it."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "For arbitrary points rather than named cities, use "
+  },
+  {
+   "t": "Distance Between Two Places",
+   "l": "/tools/distance-between-two-places"
+  },
+  {
+   "t": "; for the everyday phrase with the same geometry, "
+  },
+  {
+   "t": "As the Crow Flies Distance",
+   "l": "/tools/crow-flies-distance"
+  },
+  {
+   "t": "; and for postal codes instead of cities, "
+  },
+  {
+   "t": "Distance Between ZIP Codes",
+   "l": "/tools/distance-between-zip-codes"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "airport-midpoint-by-coordinates",
+  "airport-route-finder",
+  "bearing-calculator",
+  "closest-facility-finder",
+  "compass-bearing-visualizer",
+  "competitor-distance-map"
+ ]
+}

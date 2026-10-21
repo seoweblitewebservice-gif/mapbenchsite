@@ -1,0 +1,192 @@
+{
+ "slug": "geographic-center-finder",
+ "primary_keyword": "Geographic Center Finder",
+ "secondary_keywords": [
+  "geographic center",
+  "center of the US",
+  "geographic center of Texas",
+  "country centroid"
+ ],
+ "title": "Geographic Center Finder: States and Countries",
+ "description": "Look up the published geographic center of any US state or major country with the Geographic Center Finder — coordinates and nearest place. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, the geographic center of the contiguous United States sits near Lebanon, Kansas — the fact behind a thousand roadside markers, and this page defaults to Kansas for a reason.",
+ "quick_answer": "The Geographic Center Finder looks up the published geographic center of a US state or major country and gives its coordinates in decimal and degrees-minutes-seconds, a map pin, and the nearest named place. Search or pick the state or country — or enter two points and get their midpoint instead.",
+ "steps_intro": "Every state has a middle, and somebody surveyed it. Look yours up:",
+ "use_cases": [
+  {
+   "title": "Road-trip pilgrimages",
+   "body": [
+    {
+     "t": "Center points are destinations with markers and small ceremonies. The nearest named place in the result is where the fuel and the motel are."
+    }
+   ]
+  },
+  {
+   "title": "Geography teaching",
+   "body": [
+    {
+     "t": "“Where is the middle of our state?” starts arguments a map settles — with the definition caveat in the FAQs doing real educational work."
+    }
+   ]
+  },
+  {
+   "title": "Two-point midpoints",
+   "body": [
+    {
+     "t": "The finder's second mode is the plain midpoint of any two points — the seed of the "
+    },
+    {
+     "t": "Halfway Between Two Places",
+     "l": "/tools/halfway-between-two-places"
+    },
+    {
+     "t": " family."
+    }
+   ]
+  },
+  {
+   "title": "Trivia with receipts",
+   "body": [
+    {
+     "t": "Centers were computed by balancing the map's shape — the published figures this page carries are the ones with provenance, not blog arithmetic."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Lebanon, Kansas",
+   "body": [
+    {
+     "t": "The contiguous US center near Lebanon, Kansas is the famous one — a marker, a tiny park, a chapel nearby. The full-US center (with Alaska and Hawaii) sits far northwest, near Belle Fourche, South Dakota."
+    }
+   ]
+  },
+  {
+   "label": "Example · Why Kansas is the default",
+   "body": [
+    {
+     "t": "Open the page and Kansas is preselected — the middle state's middle is the natural front door to the whole idea."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading a center result",
+  "intro": "What the lookup returns and what each part means.",
+  "columns": [
+   "Output",
+   "Meaning",
+   "Note"
+  ],
+  "rows": [
+   [
+    "Coordinates (decimal)",
+    "The published center point",
+    "For maps and GPS"
+   ],
+   [
+    "Coordinates (DMS)",
+    "The same point, classical dress",
+    "For charts and markers"
+   ],
+   [
+    "Map pin",
+    "The point in context",
+    "Often farmland or water"
+   ],
+   [
+    "Nearest named place",
+    "The closest settlement",
+    "Your practical base"
+   ],
+   [
+    "Two-point mode",
+    "Midpoint of your pair",
+    "A different, simpler idea"
+   ]
+  ],
+  "note": "A 'geographic center' depends on the method (balance point of the territory's shape, coastline treatment, islands included or not). Published centers carry their method with them; small differences between sources are method differences, not errors."
+ },
+ "faq": [
+  [
+   "What does 'geographic center' mean?",
+   "The balance point of the territory's area — imagine the state cut from cardboard and balanced on a pin. Coastlines, islands and projection choices nudge the result, which is why published centers are the ones worth quoting."
+  ],
+  [
+   "How accurate are the coordinates?",
+   "They are the published figures for each state or country, given as recorded. The nearest-place context helps you judge what visiting would involve."
+  ],
+  [
+   "Why is Kansas selected by default?",
+   "It holds the contiguous US center — the most asked-about middle in the country. A fitting default."
+  ],
+  [
+   "What is the two-point mode?",
+   "Enter any two points and get their geographic midpoint — unrelated to state centers, and the gateway to this site's halfway tools."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — centers are looked up, not located. Your position plays no part."
+  ],
+  [
+   "The center is in a lake or private land.",
+   "Common — balance points ignore ownership and water. The nearest named place is the visitable version of the pilgrimage."
+  ],
+  [
+   "Center of population instead?",
+   "A different, also published concept (where the average resident balances). This page is geographic area centers; the distinction is the lesson."
+  ],
+  [
+   "Countries beyond the US?",
+   "Major countries are included with their published centers where established. Smaller states' centers follow the same method caveats."
+  ],
+  [
+   "Historical centers?",
+   "Boundaries move, so centers do too — a state's 1900 center is a museum piece. The page carries current published figures."
+  ],
+  [
+   "Center of the Earth jokes aside — oceans?",
+   "Country centers can fall in water for archipelago nations; the published point is still the point, and the nearest named place is your dry-land answer."
+  ],
+  [
+   "Who publishes these centers?",
+   "National survey and mapping authorities (the USGS tradition in the US) and reference publishers. The page carries published figures rather than recomputing its own, stated in the method note."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Midpoints: "
+  },
+  {
+   "t": "Halfway Between Two Places",
+   "l": "/tools/halfway-between-two-places"
+  },
+  {
+   "t": "; meeting points: the "
+  },
+  {
+   "t": "Geographic Meeting Point Finder",
+   "l": "/tools/geographic-meeting-point-finder"
+  },
+  {
+   "t": "; your own point: "
+  },
+  {
+   "t": "Find My Location",
+   "l": "/tools/find-my-location"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location"
+ ]
+}

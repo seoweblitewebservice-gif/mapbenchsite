@@ -1,0 +1,193 @@
+{
+ "slug": "dms-to-decimal",
+ "primary_keyword": "DMS to Decimal",
+ "secondary_keywords": [
+  "convert dms",
+  "dms to decimal online",
+  "free dms to decimal"
+ ],
+ "title": "DMS to Decimal Converter: For GIS and Maps",
+ "description": "Convert degrees-minutes-seconds coordinates to decimal degrees with DMS to Decimal — paste DMS, get GIS-ready decimals. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 40°45′28.8″N, 73°59′07.8″W pastes in from a chart and comes out as 40.7580, −73.9855 — ready for every map and database on earth.",
+ "quick_answer": "DMS to Decimal converts degrees-minutes-seconds coordinates into decimal degrees for GIS and web maps. Paste the DMS pair and read the signed decimals — hemispheres folded into signs, minutes and seconds divided by 60 and 3,600, all the carries handled by the converter instead of your patience.",
+ "steps_intro": "Classical dress in, machine dress out:",
+ "use_cases": [
+  {
+   "title": "Chart-to-GIS transcription",
+   "body": [
+    {
+     "t": "The daily pipeline of everyone digitising anything. Pair with the "
+    },
+    {
+     "t": "Coordinate Parser",
+     "l": "/tools/coordinate-parser"
+    },
+    {
+     "t": " when the chart's text is messier than its numbers."
+    }
+   ]
+  },
+  {
+   "title": "Guidebook and document mining",
+   "body": [
+    {
+     "t": "Peaks, wrecks, springs and sites are published in DMS for a century's worth of print. Decimals make them mappable."
+    }
+   ]
+  },
+  {
+   "title": "Verifying a conversion",
+   "body": [
+    {
+     "t": "Convert, then convert back with "
+    },
+    {
+     "t": "Decimal to DMS",
+     "l": "/tools/decimal-to-dms"
+    },
+    {
+     "t": " — the round trip must return your string, seconds and all."
+    }
+   ]
+  },
+  {
+   "title": "Data entry rescue",
+   "body": [
+    {
+     "t": "A form gave you DMS fields and your source gave decimals — or the reverse. Convert the source once; never retype a digit."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The full division",
+   "body": [
+    {
+     "t": "40°45′28.8″ = 40 + 45/60 + 28.8/3600 = 40 + 0.75 + 0.008 = 40.7580°. The longitude: 73 + 59/60 + 7.8/3600 = 73.9855, signed negative for W. Two divisions and a sign — easy to say, tedious at scale."
+    }
+   ]
+  },
+  {
+   "label": "Example · Sloppy seconds",
+   "body": [
+    {
+     "t": "Seconds written as 60 or more in a source (40°45′60″) signal a rounding artefact upstream. The converter normalises the arithmetic; the value's provenance is your eyebrow's job."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The formula, once and for all",
+  "intro": "Decimal = degrees + minutes/60 + seconds/3600, sign from hemisphere.",
+  "columns": [
+   "Component",
+   "Divisor",
+   "Times Square latitude"
+  ],
+  "rows": [
+   [
+    "Degrees",
+    "× 1",
+    "40"
+   ],
+   [
+    "Minutes",
+    "÷ 60",
+    "45 → 0.75"
+   ],
+   [
+    "Seconds",
+    "÷ 3,600",
+    "28.8 → 0.008"
+   ],
+   [
+    "Hemisphere",
+    "N/E positive, S/W negative",
+    "N → +40.7580"
+   ]
+  ],
+  "note": "Every DMS conversion on earth is this table. Automation exists because humans transpose the 45 and the 28.8 at 1 a.m. — the converter does not have a 1 a.m."
+ },
+ "faq": [
+  [
+   "Can it handle mixed formats?",
+   "DMS pairs in the common dresses (symbols, spaces, letters) parse here; truly mangled strings go through the Coordinate Parser first, which is built for mess."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 assumed — conversion changes dress, not datum. A DMS pair from an old-datum chart converts faithfully and lands offset; that is a datum question, and it is flagged rather than hidden."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "Output decimals are arithmetic: 28.8″ of input earns about 5 decimals of honest output (0.1″ ≈ 3 m). More places are costume."
+  ],
+  [
+   "Can I copy the result into GIS software?",
+   "Yes — signed decimals are GIS's native input, which is the entire purpose of the exercise."
+  ],
+  [
+   "Hemisphere letters or leading signs?",
+   "Both read correctly; letters set the sign, and a minus with a W would double-negate — the parser family flags the contradiction."
+  ],
+  [
+   "Seconds as decimals?",
+   "28.8″ style is native here — fractional seconds are the modern chart norm."
+  ],
+  [
+   "Batch conversion?",
+   "Pairs one at a time; columns belong to GIS imports, spot-checked against this page's arithmetic."
+  ],
+  [
+   "Degrees-minutes (no seconds)?",
+   "That is DDM — the Coordinate Converter dresses pairs that way; the division is minutes/60 alone."
+  ],
+  [
+   "It rejected my string.",
+   "Check order (lat first), ranges (minutes and seconds under 60 in honest data) and symbols — the failure points at the component that broke."
+  ],
+  [
+   "Why does GIS hate DMS?",
+   "Because text formats invite a thousand parsers' disagreements; numbers invite none. Decimals are the interchange; DMS is the literature."
+  ],
+  [
+   "Antarctic and polar pairs?",
+   "Latitude to ±90 converts mechanically; longitude at the pole is a formality the arithmetic indulges."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Reverse: "
+  },
+  {
+   "t": "Decimal to DMS",
+   "l": "/tools/decimal-to-dms"
+  },
+  {
+   "t": "; all formats: the "
+  },
+  {
+   "t": "Coordinate Converter",
+   "l": "/tools/coordinate-converter"
+  },
+  {
+   "t": "; messy strings: the "
+  },
+  {
+   "t": "Coordinate Parser",
+   "l": "/tools/coordinate-parser"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator",
+  "coordinate-offset-calculator"
+ ]
+}

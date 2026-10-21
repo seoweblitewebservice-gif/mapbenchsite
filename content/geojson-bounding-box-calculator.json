@@ -1,0 +1,30 @@
+{
+ "slug": "geojson-bounding-box-calculator",
+ "primary_keyword": "GeoJSON Bounding Box Calculator",
+ "secondary_keywords": [
+  "geojson bounding box",
+  "geojson bbox calculator",
+  "calculate bbox geojson",
+  "geojson bounds",
+  "geojson extent calculator"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "boundary-kml-downloader",
+  "cluster-map-from-points",
+  "country-boundary-downloader",
+  "csv-column-counter",
+  "csv-coordinate-bounding-box",
+  "csv-coordinate-centroid-calculator"
+ ]
+}

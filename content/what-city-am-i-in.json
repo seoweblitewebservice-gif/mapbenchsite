@@ -1,0 +1,185 @@
+{
+ "slug": "what-city-am-i-in",
+ "primary_keyword": "What City Am I In?",
+ "secondary_keywords": [
+  "city",
+  "town",
+  "municipality"
+ ],
+ "title": "What City Am I In? City and Town From a Point",
+ "description": "Identify the city or town for any point — What City Am I In? answers from administrative map data, by GPS or map click. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, standing in an unincorporated suburb, the honest answer may be 'no city — the county governs here', and this page gives that answer instead of borrowing the neighbouring city's name.",
+ "quick_answer": "What City Am I In? identifies the city or town a point falls in from OpenStreetMap's administrative data. Use your location or click the map and read the city field — with the unincorporated truth preserved, because a borrowed name is worse than an honest county.",
+ "steps_intro": "One point, one city field, read honestly:",
+ "use_cases": [
+  {
+   "title": "Arrival orientation",
+   "body": [
+    {
+     "t": "Off the train, off the highway: which municipality are you actually standing in? The suburbs make reputations unreliable — data answers."
+    }
+   ]
+  },
+  {
+   "title": "Forms and records",
+   "body": [
+    {
+     "t": "The city field for a location, read from boundary data rather than the postal city, which follows mail logic instead (see the "
+    },
+    {
+     "t": "What ZIP Code Am I In",
+     "l": "/tools/what-zip-code-am-i-in"
+    },
+    {
+     "t": " distinction)."
+    }
+   ]
+  },
+  {
+   "title": "Jurisdiction first pass",
+   "body": [
+    {
+     "t": "Which city's rules, taxes and services apply starts here; the municipality deep-dive is the "
+    },
+    {
+     "t": "Municipality Finder",
+     "l": "/tools/find-municipality-by-coordinates"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Photo sorting",
+   "body": [
+    {
+     "t": "A geotag's city, batch-answered by clicking through the day's pins — the reverse-geocoder family at its simplest."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The postal city trap",
+   "body": [
+    {
+     "t": "Mailing addresses name the post office's city, which can differ from the governing municipality. This page reads administrative data — the governing answer, which sometimes surprises the envelope."
+    }
+   ]
+  },
+  {
+   "label": "Example · Town versus city",
+   "body": [
+    {
+     "t": "The record's settlement class comes with the name: towns are reported as towns. Status inflation is a human habit the data does not share."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the answer rests on",
+  "intro": "Administrative data versus the other geographies people confuse with it.",
+  "columns": [
+   "Geography",
+   "Decides",
+   "This page?"
+  ],
+  "rows": [
+   [
+    "Municipal boundary",
+    "The governing city or town",
+    "Yes — the source"
+   ],
+   [
+    "Postal city",
+    "Mail delivery naming",
+    "No — can differ"
+   ],
+   [
+    "Media market",
+    "Broadcast reach",
+    "No"
+   ],
+   [
+    "How locals describe it",
+    "Identity and habit",
+    "Charming, unofficial"
+   ]
+  ],
+  "note": "Boundary data in OpenStreetMap is community-maintained and strong for the US and Europe. Annexations and incorporations update as mappers record them."
+ },
+ "faq": [
+  [
+   "What about unincorporated areas?",
+   "The page says so when the point lies outside any municipality — county government is the honest answer there, and the county tools on this site take over."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — click any point instead of using GPS."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Municipal boundaries change with annexations; postal and commercial sources draw their own 'city' notions. Administrative data is this page's standard."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No — a GPS reading is used for the answer, not kept."
+  ],
+  [
+   "City or town — who decides?",
+   "The record's classification and the place's legal status decide; the page reports the data's term for the point."
+  ],
+  [
+   "A point in a huge rural county with no towns?",
+   "The answer may be genuinely 'none nearby in the record' — the nearest-village and settlement tools frame the emptiness usefully."
+  ],
+  [
+   "Boroughs and districts?",
+   "Big cities' internal divisions are a finer layer — the District and Municipality finders read those records."
+  ],
+  [
+   "Does the postal city ever win?",
+   "For mail, always — addresses follow USPS logic. For governance, this page's answer wins. Knowing which question you asked is the skill."
+  ],
+  [
+   "International points?",
+   "Worldwide where boundary data exists — municipality concepts vary, and the record's own structure is reported."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Deeper: the "
+  },
+  {
+   "t": "Municipality Finder by Coordinates",
+   "l": "/tools/find-municipality-by-coordinates"
+  },
+  {
+   "t": "; county: "
+  },
+  {
+   "t": "What County Am I In",
+   "l": "/tools/what-county-am-i-in"
+  },
+  {
+   "t": "; country: "
+  },
+  {
+   "t": "What Country Am I In",
+   "l": "/tools/what-country-am-i-in"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder"
+ ]
+}

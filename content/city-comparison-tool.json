@@ -1,0 +1,28 @@
+{
+ "slug": "city-comparison-tool",
+ "primary_keyword": "City Comparison Tool",
+ "secondary_keywords": [
+  "compare cities",
+  "city comparison",
+  "distance between cities"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "nearest-postcode-from-list",
+  "population-density-compare",
+  "population-within-radius",
+  "us-county-demographic-explorer",
+  "zip-codes-by-state-county-city",
+  "zip-codes-within-radius"
+ ]
+}

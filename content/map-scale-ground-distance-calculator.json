@@ -1,0 +1,182 @@
+{
+ "slug": "map-scale-ground-distance-calculator",
+ "primary_keyword": "Map Scale Ground Distance Calculator",
+ "secondary_keywords": [
+  "map scale ground distance calculator online",
+  "free map scale ground distance calculator",
+  "map scale ground distance calculator calculator",
+  "map scale ground distance calculator converter",
+  "map scale ground distance calculator formula"
+ ],
+ "title": "Map Scale Ground Distance Calculator",
+ "description": "Convert a ground distance back onto the map with the Map Scale Ground Distance Calculator — how many centimetres at 1:25,000 or 1:50,000? Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 10 km ground leg plots as exactly 20.0 cm on a 1:50,000 sheet — but as 40.0 cm on a 1:25,000 sheet, which is why the detailed map needs a bigger table.",
+ "quick_answer": "The Map Scale Ground Distance Calculator runs the conversion backwards: given a ground distance and a map scale, it tells you how long that distance is on paper. Enter kilometres (or miles) and a denominator of 50,000 and read the centimetres — the check behind route cards and plan drawings.",
+ "steps_intro": "Planning a route card or checking a drawing starts from the ground and works back to the paper:",
+ "use_cases": [
+  {
+   "title": "Route cards and walk planning",
+   "body": [
+    {
+     "t": "Writing a route card from a known itinerary: convert each leg's ground length to its map length so the card's '3 cm to the col' matches the sheet in the walker's hand."
+    }
+   ]
+  },
+  {
+   "title": "Checking printed plans",
+   "body": [
+    {
+     "t": "A planning drawing claims a 60 m frontage; at the sheet's scale that must measure a specific number of centimetres. This calculator is the audit — pair it with the "
+    },
+    {
+     "t": "Map Scale Calculator",
+     "l": "/tools/map-scale-calculator"
+    },
+    {
+     "t": " in the other direction."
+    }
+   ]
+  },
+  {
+   "title": "Map production and layout",
+   "body": [
+    {
+     "t": "Fitting a known route onto a printed page is a scale decision: convert the ground extent to paper size at candidate scales and pick the sheet that fits."
+    }
+   ]
+  },
+  {
+   "title": "Education",
+   "body": [
+    {
+     "t": "Running conversions both ways is what makes scale stick. Set classes a ground distance and have them predict the paper length before the calculator confirms it."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · A day walk on two sheets",
+   "body": [
+    {
+     "t": "A 12.5 km leg: at 1:50,000 it is 25.0 cm of paper; at 1:25,000, 50.0 cm — longer than most folded sheets show at once. The arithmetic explains the walker's preference for the smaller scale on long days."
+    }
+   ]
+  },
+  {
+   "label": "Example · A town plan",
+   "body": [
+    {
+     "t": "At 1:10,000, every kilometre is 10.0 cm. A 350 m school frontage must therefore draw as 3.5 cm — a figure a planning officer can verify with a school ruler, which is the point of the convention."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Ground distance on paper",
+  "intro": "Paper lengths for common ground distances at the standard scales — ground ÷ denominator, tabulated. Use it to predict a measurement before you make it.",
+  "columns": [
+   "Ground distance",
+   "At 1:25,000",
+   "At 1:50,000",
+   "At 1:100,000"
+  ],
+  "rows": [
+   [
+    "1 km",
+    "4.0 cm",
+    "2.0 cm",
+    "1.0 cm"
+   ],
+   [
+    "2.5 km",
+    "10.0 cm",
+    "5.0 cm",
+    "2.5 cm"
+   ],
+   [
+    "5 km",
+    "20.0 cm",
+    "10.0 cm",
+    "5.0 cm"
+   ],
+   [
+    "10 km",
+    "40.0 cm",
+    "20.0 cm",
+    "10.0 cm"
+   ],
+   [
+    "25 km",
+    "100.0 cm",
+    "50.0 cm",
+    "25.0 cm"
+   ],
+   [
+    "50 km",
+    "200.0 cm",
+    "100.0 cm",
+    "50.0 cm"
+   ]
+  ],
+  "note": "The 25 km row is the cautionary one: at 1:25,000 a marathon-distance leg needs a metre of paper. Scale choice is page-size choice."
+ },
+ "faq": [
+  [
+   "How is this different from the Map Scale Calculator?",
+   "Direction. That tool turns a paper measurement into ground distance; this one turns a ground distance into its paper length. Route planning uses both, at different moments."
+  ],
+  [
+   "What denominator do I enter for 1:50,000?",
+   "50000 — the number after the colon. The calculator divides your ground distance by it, in consistent units, and reports centimetres."
+  ],
+  [
+   "Can I enter miles?",
+   "Yes — the ratio arithmetic is unit-agnostic as long as the ground unit is converted before dividing. The table on this page is metric; the calculator handles the unit you bring."
+  ],
+  [
+   "Why does my measured drawing not match?",
+   "Resizing is the usual culprit: a photocopy or PDF printed at 'fit to page' quietly changes the scale. Recover the effective denominator from a known feature and use that."
+  ],
+  [
+   "Is this useful for screen maps?",
+   "Less directly — screens zoom continuously, so 'scale' is nominal. The scale bar on a digital map is the honest reference there; this calculator serves print, where scale is fixed."
+  ],
+  [
+   "How precise is the result?",
+   "Exact ratio arithmetic. The practical limit is the ruler and the print, not the division."
+  ],
+  [
+   "What scale should a route card use?",
+   "The scale of the sheet the walker carries — the whole point is that card and map agree. Convert with that denominator, whatever it is."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The forward direction is the "
+  },
+  {
+   "t": "Map Scale Calculator",
+   "l": "/tools/map-scale-calculator"
+  },
+  {
+   "t": "; to measure the ground truth digitally instead of on paper, use "
+  },
+  {
+   "t": "Distance Between Two Places",
+   "l": "/tools/distance-between-two-places"
+  },
+  {
+   "t": "; and for areas rather than lengths, the map area tools take over."
+  }
+ ],
+ "more_tools": [
+  "closest-facility-finder",
+  "compass-bearing-visualizer",
+  "competitor-distance-map",
+  "coordinate-distance-table-generator",
+  "crow-flies-distance",
+  "distance-between-cities"
+ ]
+}

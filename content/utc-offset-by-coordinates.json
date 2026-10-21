@@ -1,0 +1,183 @@
+{
+ "slug": "utc-offset-by-coordinates",
+ "primary_keyword": "UTC Offset by Coordinates",
+ "secondary_keywords": [
+  "utc offset by coordinates online",
+  "free utc offset by coordinates",
+  "utc offset by coordinates calculator",
+  "utc offset by coordinates tool",
+  "how to calculate utc offset by coordinates"
+ ],
+ "title": "UTC Offset by Coordinates: Offset at a Point",
+ "description": "Get the UTC offset for exact coordinates with UTC Offset by Coordinates — standard and daylight offsets from the point's own zone rules. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, two points at the same longitude in Arizona and Utah differ by an hour all summer — longitude suggests an offset, but only the point's zone rules decide it.",
+ "quick_answer": "UTC Offset by Coordinates resolves the zone for an exact coordinate pair and reports its UTC offset — today's, with daylight saving applied, alongside the standard offset. Enter the point and read the number systems need, derived from the point's rules rather than its nearest city's habit.",
+ "steps_intro": "Offsets are rules, not longitudes. Read the point's own:",
+ "use_cases": [
+  {
+   "title": "Data pipeline configuration",
+   "body": [
+    {
+     "t": "Sensor fleets and field devices need per-point offsets. This page is the reference the config file is checked against."
+    }
+   ]
+  },
+  {
+   "title": "Log normalisation",
+   "body": [
+    {
+     "t": "Timestamps from a site reconcile to UTC with the site's offset history — start here, with the "
+    },
+    {
+     "t": "DST Checker by Coordinates",
+     "l": "/tools/dst-checker-by-coordinates"
+    },
+    {
+     "t": " for changeovers."
+    }
+   ]
+  },
+  {
+   "title": "Software test fixtures",
+   "body": [
+    {
+     "t": "Edge points (borders, Arizona, half-hour zones) make the fixtures that break naive offset math — harvest them here."
+    }
+   ]
+  },
+  {
+   "title": "Travel and fieldwork planning",
+   "body": [
+    {
+     "t": "A remote site's offset is a planning fact: solar chargers, call windows and shift rotas all consume it."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Nepal's quarter hour",
+   "body": [
+    {
+     "t": "A point in Nepal resolves to UTC+5:45 — offsets are not obliged to be whole hours, and the page reports minutes faithfully."
+    }
+   ]
+  },
+  {
+   "label": "Example · Same meridian, different offset",
+   "body": [
+    {
+     "t": "China keeps one zone across five geographical hours' width of longitude; Spain keeps Central European time far west of Greenwich. Politics sets offsets — coordinates merely ask."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The offsets of record",
+  "intro": "What the result's numbers mean — and their range on earth.",
+  "columns": [
+   "Quantity",
+   "Meaning"
+  ],
+  "rows": [
+   [
+    "Today's offset",
+    "The point's UTC difference now, DST applied"
+   ],
+   [
+    "Standard offset",
+    "The off-season baseline"
+   ],
+   [
+    "Range on earth",
+    "UTC-12 to UTC+14 — a 26-hour spread of civil clocks"
+   ],
+   [
+    "Finest grain",
+    "Quarter-hour steps exist (+5:45, +12:45)"
+   ]
+  ],
+  "note": "Offsets follow the IANA tz database. A legislature can move a point's offset overnight; the database is where the change registers first."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The UTC offset (and its standard-time baseline) for the time zone an exact coordinate pair falls in, computed from the tz database's rules for the point."
+  ],
+  [
+   "Do I need an account?",
+   "No — coordinates in, offset out."
+  ],
+  [
+   "Can I use the result for professional work?",
+   "Yes for configuration, logging and planning — the same database your systems should use. Safety-critical scheduling deserves your stack's own confirmation as well."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — you supply the coordinates; your device is not consulted."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Zone borders move with legislation; databases vintage differently, so a freshly moved border can disagree across sources briefly."
+  ],
+  [
+   "Offset versus zone name?",
+   "The offset is one number for one date; the zone name (the Timezone Map Finder's answer) is the rulebook for every date. Systems should store the name."
+  ],
+  [
+   "Ocean points?",
+   "Maritime zones give offsets too, in Etc/GMT bands — reported as the database holds them."
+  ],
+  [
+   "Historical offsets?",
+   "Rules have histories; a point's 1950 offset can differ. Date-aware tools on this site expose the idea; archival work belongs to the database's history data."
+  ],
+  [
+   "Why not just longitude ÷ 15?",
+   "Because that computes solar geography, not civil time — Spain and China are the standing disproofs."
+  ],
+  [
+   "Offsets for planning a year ahead?",
+   "Rules project forward until a legislature acts. For far-future scheduling, note the assumption; the database updates as laws land."
+  ],
+  [
+   "Can two zones share an offset?",
+   "Happily and often — which is why systems store zone names, not offsets. Today's equal offsets diverge at the next changeover."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "DST at the point: "
+  },
+  {
+   "t": "DST Checker by Coordinates",
+   "l": "/tools/dst-checker-by-coordinates"
+  },
+  {
+   "t": "; zone names: the "
+  },
+  {
+   "t": "Timezone Map Finder",
+   "l": "/tools/timezone-map-finder"
+  },
+  {
+   "t": "; local time: "
+  },
+  {
+   "t": "Local Time by Coordinates",
+   "l": "/tools/local-time-by-coordinates"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder"
+ ]
+}

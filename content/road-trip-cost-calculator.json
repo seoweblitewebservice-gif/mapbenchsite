@@ -1,0 +1,192 @@
+{
+ "slug": "road-trip-cost-calculator",
+ "primary_keyword": "Road Trip Cost Calculator",
+ "secondary_keywords": [
+  "trip fuel cost",
+  "road trip planner cost",
+  "fuel cost calculator trip"
+ ],
+ "title": "Road Trip Cost Calculator: Fuel and Splits",
+ "description": "Route a road trip on real roads and price its fuel with the Road Trip Cost Calculator — total cost and the split per person. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 640-mile round trip at 30 mpg and $3.60 a gallon burns 21.3 gallons and costs $76.80 — $19.20 each for four friends, computed before anyone argues.",
+ "quick_answer": "The Road Trip Cost Calculator routes your journey on real roads, applies your car's fuel economy and your price, and returns the fuel needed, the total cost and the split per person. Add the start, stops and destination, set the economy and price, and read the cost before the trip.",
+ "steps_intro": "Route first, wallet second — in that order, because the road sets the distance:",
+ "use_cases": [
+  {
+   "title": "Group trip budgeting",
+   "body": [
+    {
+     "t": "The split per person is built in, ending the fuel-stop negotiation before it starts. For fuel-only splits after the fact, the "
+    },
+    {
+     "t": "Fuel Cost Split Calculator",
+     "l": "/tools/fuel-cost-split-calculator"
+    },
+    {
+     "t": " divides any total."
+    }
+   ]
+  },
+  {
+   "title": "Route choice by price",
+   "body": [
+    {
+     "t": "The longer motorway route against the shorter hill road: both routed, both priced. Scenery gets a dollar figure and the choice gets honest."
+    }
+   ]
+  },
+  {
+   "title": "Comparing cars for the trip",
+   "body": [
+    {
+     "t": "Your car versus the rental's economy over the same routed miles — the upgrade's true price, or saving, in one run each."
+    }
+   ]
+  },
+  {
+   "title": "Feasibility checks",
+   "body": [
+    {
+     "t": "“Can we afford to drive there?” is this calculation with a budget next to it. Answer it at the kitchen table, not at the pump."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The four-friend trip",
+   "body": [
+    {
+     "t": "640 routed miles ÷ 30 mpg = 21.3 gal × $3.60 = $76.80, split four ways = $19.20 each. Every input visible, every cent explained."
+    }
+   ]
+  },
+  {
+   "label": "Example · The metric version",
+   "body": [
+    {
+     "t": "The same structure runs in km and L/100 km with euros for the continental version of the same friends."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the calculator prices — and what it does not",
+  "intro": "Fuel is the trip cost it computes exactly. The rest of a road trip's money is real too; the table keeps the boundary honest.",
+  "columns": [
+   "Cost",
+   "In this calculator?",
+   "Where it belongs"
+  ],
+  "rows": [
+   [
+    "Fuel",
+    "Yes — routed distance × economy × price",
+    "Here"
+   ],
+   [
+    "Per-person split",
+    "Yes",
+    "Here (or Fuel Cost Split)"
+   ],
+   [
+    "Tolls",
+    "No",
+    "Add from the route's toll roads"
+   ],
+   [
+    "Food and stays",
+    "No",
+    "Your itinerary budget"
+   ],
+   [
+    "Parking",
+    "No",
+    "Destination research"
+   ],
+   [
+    "Wear and depreciation",
+    "No",
+    "Cost Per Mile Calculator, fully loaded"
+   ]
+  ],
+  "note": "Fuel prices are the ones you enter — the calculator never invents a pump price. Check today's local price for a planning figure."
+ },
+ "faq": [
+  [
+   "Where does the fuel price come from?",
+   "From you. Enter the price you actually pay (or the route's typical price) — the calculator applies it, it never fetches or invents one."
+  ],
+  [
+   "Is the distance the real road distance?",
+   "Yes — the route is built on the road network, so the miles priced are the miles driven."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Traffic barely moves fuel cost at trip scale; your real-world economy figure absorbs it."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Roads wind — and this calculator prices the road figure, which is the one your tank will meet."
+  ],
+  [
+   "Can route results change over time?",
+   "Distances are stable; prices are not. Re-run with the current price when the trip is near."
+  ],
+  [
+   "Can it split unevenly?",
+   "The built-in split is even. Uneven shares (driver exempt, part-way riders) are the Fuel Cost Split Calculator's per-leg craft."
+  ],
+  [
+   "Round trip or one-way?",
+   "Route what you will drive — add the return as the final leg, or run the pair as a round trip, and the price covers it."
+  ],
+  [
+   "Electric road trips?",
+   "The structure survives with kWh and charger prices, but this page is built for fuel by name and inputs — the EV tools elsewhere frame range; the cost arithmetic here assumes a pump."
+  ],
+  [
+   "Why not include tolls automatically?",
+   "Tolls depend on the exact roads and payment methods; the calculator prices what it can compute honestly and leaves tolls to your route check."
+  ],
+  [
+   "Can I run it for one person?",
+   "Yes — the split becomes the total, which is the solo traveller's whole budget line for fuel."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Fuel-only splits live in the "
+  },
+  {
+   "t": "Fuel Cost Split Calculator",
+   "l": "/tools/fuel-cost-split-calculator"
+  },
+  {
+   "t": "; totals per mile in the "
+  },
+  {
+   "t": "Cost Per Mile Calculator",
+   "l": "/tools/cost-per-mile-calculator"
+  },
+  {
+   "t": "; and overnight staging in the "
+  },
+  {
+   "t": "Road Trip Overnight Stop Planner",
+   "l": "/tools/road-trip-overnight-stop-planner"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner"
+ ]
+}

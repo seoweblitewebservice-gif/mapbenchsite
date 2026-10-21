@@ -1,0 +1,190 @@
+{
+ "slug": "crow-flies-distance",
+ "primary_keyword": "As the Crow Flies Distance",
+ "secondary_keywords": [
+  "crow flies",
+  "great circle distance",
+  "as the crow flies distance online"
+ ],
+ "title": "As the Crow Flies Distance: Straight-Line Miles",
+ "description": "Measure the straight-line distance between two places with As the Crow Flies Distance — the shortest surface path in miles and km. Free, no sign-up.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, New York to Los Angeles is approx. 2,446 miles (3,936 km) as the crow flies — while the road journey runs hundreds of miles longer, because roads cannot follow the curve of the Earth.",
+ "quick_answer": "As the Crow Flies Distance measures the shortest path between two places over the surface of the Earth, ignoring roads. Set any two places and read the straight-line distance in miles and kilometres — the honest geographic separation that road distances, flight paths and delivery zones are all measured against.",
+ "steps_intro": "The crow does not care about your road network. Two places, one true separation:",
+ "use_cases": [
+  {
+   "title": "Sanity-checking a road distance",
+   "body": [
+    {
+     "t": "If a route planner claims a journey wildly longer than the crow-flies figure, terrain or a missing crossing explains it; if it claims shorter, something is wrong. Compare against the "
+    },
+    {
+     "t": "Driving Distance Calculator",
+     "l": "/tools/driving-distance-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Property and relocation research",
+   "body": [
+    {
+     "t": "“How far is the coast / the city / the family, really?” is a crow-flies question — the answer that survives every change of route and timetable."
+    }
+   ]
+  },
+  {
+   "title": "Radio range and line-of-sight thinking",
+   "body": [
+    {
+     "t": "Signals travel the short path. Broadcast coverage, drone range and antenna work all start from surface separation, not roads."
+    }
+   ]
+  },
+  {
+   "title": "School and quiz geography",
+   "body": [
+    {
+     "t": "The phrase everyone knows, with a number everyone can check — and a curved line on the map that starts the great-circle conversation."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · United States",
+   "body": [
+    {
+     "t": "Chicago to Dallas: approx. 804.6 miles (1,295.0 km) as the crow flies. The same pair by road is a materially longer day — the gap between the two numbers is the shape of the road network, drawn in one comparison."
+    }
+   ]
+  },
+  {
+   "label": "Example · Europe",
+   "body": [
+    {
+     "t": "Madrid to Barcelona: approx. 505 km (314 miles) in a straight line. Even on a dense European network the surface distance stays the baseline every route is judged against."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Famous separations, as the crow flies",
+  "intro": "Straight-line distances from city-centre coordinates on the site model (haversine, R = 6,371.0088 km), rounded — reproduce any of them in the tool.",
+  "columns": [
+   "Pair",
+   "Miles",
+   "Kilometres"
+  ],
+  "rows": [
+   [
+    "New York ↔ Chicago",
+    "711.0",
+    "1,144.3"
+   ],
+   [
+    "New York ↔ Los Angeles",
+    "2,445.6",
+    "3,935.8"
+   ],
+   [
+    "Chicago ↔ Dallas",
+    "804.6",
+    "1,295.0"
+   ],
+   [
+    "Dallas ↔ Houston",
+    "225.0",
+    "362.1"
+   ],
+   [
+    "London ↔ Paris",
+    "213.5",
+    "343.5"
+   ],
+   [
+    "Paris ↔ Berlin",
+    "545.2",
+    "877.5"
+   ],
+   [
+    "London ↔ Berlin",
+    "578.8",
+    "931.6"
+   ],
+   [
+    "Madrid ↔ Barcelona",
+    "313.6",
+    "504.7"
+   ]
+  ],
+  "note": "Road and rail distances for the same pairs are always longer — the ratio between the two is a quick fingerprint of the network and terrain between them."
+ },
+ "faq": [
+  [
+   "Where does the phrase come from?",
+   "From the old observation that a crow flies directly, ignoring the lanes and hedgerows humans must follow. The measurement it names — the shortest surface path — is the great-circle distance."
+  ],
+  [
+   "Is this the same as the great-circle distance?",
+   "Yes. “As the crow flies” is the everyday name; great-circle is the geometric one. Both mean the shortest path over the sphere, and both are what this tool computes."
+  ],
+  [
+   "Why is the line on the map curved?",
+   "The shortest path on a sphere appears curved on most flat map projections. The curve is not a detour — it is the straight line, drawn on a map that cannot show it straight."
+  ],
+  [
+   "Can anything actually travel this distance?",
+   "Aircraft approximate it (airways permitting), signals follow it, and birds ignore the question. Everything on wheels travels further."
+  ],
+  [
+   "How accurate is it?",
+   "Exact for the spherical model between the two points chosen. The practical limit is which point in each place you pick — city centre versus suburb can differ by several miles on a long measurement."
+  ],
+  [
+   "Does terrain matter?",
+   "No. Mountains, rivers and borders do not bend the surface path; they only bend the journeys humans make over it, which is the contrast the tool is for."
+  ],
+  [
+   "Crow-flies or driving distance for planning?",
+   "Both, in that order: crow-flies for the geography, driving for the logistics. A plan built on only one of them is missing half the picture."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The general-purpose version is "
+  },
+  {
+   "t": "Distance Between Two Places",
+   "l": "/tools/distance-between-two-places"
+  },
+  {
+   "t": "; for named cities with bearing and midpoint included, "
+  },
+  {
+   "t": "Distance Between Cities",
+   "l": "/tools/distance-between-cities"
+  },
+  {
+   "t": "; and for every pair among several places, the "
+  },
+  {
+   "t": "Distance Matrix Calculator",
+   "l": "/tools/distance-matrix-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "compass-bearing-visualizer",
+  "competitor-distance-map",
+  "coordinate-distance-table-generator",
+  "distance-between-cities",
+  "distance-between-zip-codes",
+  "distance-matrix-calculator"
+ ]
+}

@@ -1,0 +1,193 @@
+{
+ "slug": "working-hours-overlap-calculator",
+ "primary_keyword": "Working Hours Overlap Calculator",
+ "secondary_keywords": [
+  "working hours overlap calculator online",
+  "free working hours overlap calculator",
+  "working hours overlap calculator calculator",
+  "working hours overlap calculator tool",
+  "how to calculate working hours overlap calculator"
+ ],
+ "title": "Working Hours Overlap Calculator: Shared Hours",
+ "description": "Compute the shared working hours between time zones with the Working Hours Overlap Calculator — the honest overlap, DST dates included. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, New York 9-to-5 and London 9-to-5 share exactly 3 hours (2–5 p.m. London, 9 a.m.–noon New York) — the whole transatlantic workday, measured rather than vibes.",
+ "quick_answer": "The Working Hours Overlap Calculator computes the hours two locations' working days share, with each side's daylight-saving rules applied for the date. Enter both places and their work hours and read the overlap window in both local times — the number every distributed team's schedule quietly depends on.",
+ "steps_intro": "Overlap is a number, not a feeling. Compute yours:",
+ "use_cases": [
+  {
+   "title": "Team ritual placement",
+   "body": [
+    {
+     "t": "Standups and weeklies belong inside the overlap; the calculator finds where 'inside' is — the "
+    },
+    {
+     "t": "Meeting Time Planner",
+     "l": "/tools/meeting-time-planner"
+    },
+    {
+     "t": " picks the exact slot."
+    }
+   ]
+  },
+  {
+   "title": "Support coverage design",
+   "body": [
+    {
+     "t": "Follow-the-sun rotas are built from overlaps and gaps — this computes both before the rota is promised to customers."
+    }
+   ]
+  },
+  {
+   "title": "Hiring geography",
+   "body": [
+    {
+     "t": "A role needing 4 shared hours daily has a longitude budget. The calculator converts that budget into a map."
+    }
+   ]
+  },
+  {
+   "title": "Client retainer honesty",
+   "body": [
+    {
+     "t": "“We're available your mornings” becomes a computed window in the proposal — courtesy with arithmetic attached."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The transatlantic three",
+   "body": [
+    {
+     "t": "New York 9–5 (EST 14:00–22:00 UTC) against London 9–5 (GMT 9:00–17:00 UTC): overlap 14:00–17:00 UTC — 3 hours, reading 9–12 New York and 14–17 London. Summer keeps it 3 (13:00–16:00 UTC) — a sturdier window than folklore suggests."
+    }
+   ]
+  },
+  {
+   "label": "Example · The zero that matters",
+   "body": [
+    {
+     "t": "New York 9–5 against Mumbai 9–5 (3:30–11:30 UTC) shares nothing. The calculator's zero is the argument for async hand-offs, made in one line."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Classic 9-to-5 overlaps",
+  "intro": "Computed in UTC under standard rules — your pair and date get the full treatment on the page.",
+  "columns": [
+   "Pair (both 9–5 local)",
+   "Overlap",
+   "Window (UTC)"
+  ],
+  "rows": [
+   [
+    "New York – London",
+    "3 hours",
+    "14:00–17:00"
+   ],
+   [
+    "London – Berlin",
+    "7 hours",
+    "09:00–16:00"
+   ],
+   [
+    "New York – Los Angeles",
+    "5 hours",
+    "17:00–22:00"
+   ],
+   [
+    "New York – Mumbai",
+    "0 hours",
+    "—"
+   ],
+   [
+    "London – Sydney",
+    "0 hours",
+    "— (summer's edge cases aside)"
+   ]
+  ],
+  "note": "DST weeks shift windows by an hour at the edges. The calculator's date-awareness is the difference between a plan and a hope."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The intersection of two working days in different time zones — the shared hours, rendered in UTC and in both local times, for a chosen date."
+  ],
+  [
+   "Do I need an account?",
+   "No — places and hours in, overlap out."
+  ],
+  [
+   "Can I use the result for professional work?",
+   "Yes — rota design, hiring plans and client commitments all start from exactly this computation, done with DST rules rather than static offsets."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — the places are chosen; nothing locates you."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Zone resolutions follow the tz database and open geocoding; the overlap arithmetic itself is exact once zones are set."
+  ],
+  [
+   "Non-9-to-5 hours?",
+   "Enter the actual hours — shift work and part-time patterns are first-class inputs, and overlaps follow them faithfully."
+  ],
+  [
+   "Zero overlap — now what?",
+   "The honest zero redirects the design: async hand-offs, rotating meeting pain, or one side flexing hours. The calculator shows how much flex buys how much overlap."
+  ],
+  [
+   "Weekends differ by country.",
+   "Working weeks vary (Friday–Saturday weekends exist). Model the actual days when the calculator's date framing allows, and sanity-check the human calendar too."
+  ],
+  [
+   "Three locations?",
+   "Pairwise overlaps compose: compute A∩B, then intersect with C's window manually — or let the Meeting Time Planner hold the group's clocks at once."
+  ],
+  [
+   "Lunch breaks?",
+   "The calculator intersects stated working spans; carve lunches by splitting the day into two spans and intersecting each — the honest arithmetic of real calendars."
+  ],
+  [
+   "Ramadan and seasonal hours?",
+   "Real teams flex hours seasonally — enter the season's actual spans and the overlap follows. Courtesy, computed."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Pick the slot: the "
+  },
+  {
+   "t": "Meeting Time Planner",
+   "l": "/tools/meeting-time-planner"
+  },
+  {
+   "t": "; gaps: "
+  },
+  {
+   "t": "Time Difference Between Time Zones",
+   "l": "/tools/time-difference-between-timezones"
+  },
+  {
+   "t": "; convert: the "
+  },
+  {
+   "t": "Timezone Converter",
+   "l": "/tools/timezone-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder"
+ ]
+}

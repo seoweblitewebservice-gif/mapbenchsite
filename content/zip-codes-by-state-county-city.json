@@ -1,0 +1,30 @@
+{
+ "slug": "zip-codes-by-state-county-city",
+ "primary_keyword": "ZIP Codes by State, County & City",
+ "secondary_keywords": [
+  "zip codes by city",
+  "zip codes in county",
+  "find all zip codes area",
+  "zip code list by state",
+  "ZIP Codes by State"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "australia-postcodes-by-state-suburb",
+  "census-geography-finder",
+  "cities-within-radius",
+  "city-comparison-tool",
+  "cost-of-living-compare",
+  "nearby-places-finder"
+ ]
+}

@@ -1,0 +1,165 @@
+{
+ "slug": "latitude-longitude-map",
+ "primary_keyword": "Latitude Longitude Map",
+ "secondary_keywords": [
+  "plot coordinates on map",
+  "map coordinates from list",
+  "latitude longitude map online"
+ ],
+ "title": "Latitude Longitude Map: Click Anywhere, Read It",
+ "description": "Click anywhere on the Latitude Longitude Map and read the point's coordinates instantly — the visual way to explore the grid. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, clicking your way across the Atlantic teaches the grid faster than any diagram: longitude unwinding from 0 at Greenwich to −74 off New York, one click at a time.",
+ "quick_answer": "The Latitude Longitude Map shows the coordinate grid over the world and reads out the latitude and longitude of any point you click. It is the visual companion to the numeric tools: click the place, see its pair — the fastest way to build coordinate intuition.",
+ "steps_intro": "The grid, made clickable:",
+ "use_cases": [
+  {
+   "title": "Learning and teaching coordinates",
+   "body": [
+    {
+     "t": "Nothing teaches lat/lon like clicking a hometown, an ocean and a pole in sequence. The "
+    },
+    {
+     "t": "Latitude Longitude Finder",
+     "l": "/tools/latitude-longitude-finder"
+    },
+    {
+     "t": " is the search-driven sibling."
+    }
+   ]
+  },
+  {
+   "title": "Exploratory point capture",
+   "body": [
+    {
+     "t": "Scouting locations visually — a coastline, a border crossing, a lake's far shore — and harvesting their pairs as you go."
+    }
+   ]
+  },
+  {
+   "title": "Sanity-checking data",
+   "body": [
+    {
+     "t": "Plot a suspicious pair by clicking its neighbourhood: does the record's geography match the claim? The map answers at a glance."
+    }
+   ]
+  },
+  {
+   "title": "Trip daydreaming with receipts",
+   "body": [
+    {
+     "t": "Every clicked wonder gets coordinates — the daydream leaves with a list the distance tools can price."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The grid's landmarks",
+   "body": [
+    {
+     "t": "Click the equator (latitude 0), the prime meridian (longitude 0), and their crossing in the Gulf of Guinea — the grid's origin, Null Island's watery address, becomes a place you have visited."
+    }
+   ]
+  },
+  {
+   "label": "Example · Reading the signs",
+   "body": [
+    {
+     "t": "West and south go negative as you click — the sign conventions stop being rules and become geography you have felt."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the map gives you",
+  "intro": "Click-read coordinates and the habits they build.",
+  "columns": [
+   "Action",
+   "You learn"
+  ],
+  "rows": [
+   [
+    "Click a place",
+    "Its lat/lon pair, instantly"
+   ],
+   [
+    "Click across a border",
+    "How coordinates ignore politics"
+   ],
+   [
+    "Click the oceans",
+    "How much of the grid is water"
+   ],
+   [
+    "Zoom and click again",
+    "Precision follows the click, not the zoom's pride"
+   ]
+  ],
+  "note": "Coordinates read from the click point on WGS84 — the same pair the finder and lookup tools trade in."
+ },
+ "faq": [
+  [
+   "What does this tool do?",
+   "It displays the world map with the coordinate grid and reads the latitude/longitude of clicked points — exploration-first coordinate capture."
+  ],
+  [
+   "Do I need an account?",
+   "No — click and read."
+  ],
+  [
+   "Can I use the result for professional work?",
+   "Clicked pairs are honest map-read coordinates (as precise as your click and the zoom) — fine for orientation, scoping and drafts; surveyed work uses surveyed inputs."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 — the frame GPS produces and web maps consume."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "No — resolution is not accuracy; the precision tools on this site price each decimal place in metres."
+  ],
+  [
+   "Search instead of clicking?",
+   "The Latitude Longitude Finder is the search-shaped sibling; this page is for eyes-first exploration."
+  ],
+  [
+   "Can I copy the pair?",
+   "Yes — click-read pairs are copy-ready for every other tool here."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Search version: the "
+  },
+  {
+   "t": "Latitude Longitude Finder",
+   "l": "/tools/latitude-longitude-finder"
+  },
+  {
+   "t": "; the dossier: the "
+  },
+  {
+   "t": "Coordinates Lookup Tool",
+   "l": "/tools/coordinates-lookup-tool"
+  },
+  {
+   "t": "; validate: the "
+  },
+  {
+   "t": "Latitude Longitude Validator",
+   "l": "/tools/latitude-longitude-validator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "arcminutes-to-decimal-degrees-converter",
+  "arcseconds-to-ground-distance-calculator",
+  "bng-converter",
+  "bounding-box-calculator",
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator"
+ ]
+}

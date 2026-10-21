@@ -1,0 +1,30 @@
+{
+ "slug": "kml-coordinate-block-counter",
+ "primary_keyword": "KML Coordinate Block Counter",
+ "secondary_keywords": [
+  "kml coordinate block counter online",
+  "free kml coordinate block counter",
+  "kml coordinate block counter tool",
+  "kml coordinate block counter checker",
+  "kml coordinate block counter validator"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "boundary-kml-downloader",
+  "cluster-map-from-points",
+  "country-boundary-downloader",
+  "csv-column-counter",
+  "csv-coordinate-bounding-box",
+  "csv-coordinate-centroid-calculator"
+ ]
+}

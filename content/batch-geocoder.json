@@ -1,0 +1,186 @@
+{
+ "slug": "batch-geocoder",
+ "primary_keyword": "Batch Geocoder",
+ "secondary_keywords": [
+  "bulk geocode",
+  "geocode csv",
+  "address to lat long bulk",
+  "reverse geocode batch",
+  "spreadsheet geocode"
+ ],
+ "title": "Batch Geocoder: 50 Addresses to Coordinates",
+ "description": "Geocode up to 50 addresses at once, or reverse-geocode coordinate pairs, with the Batch Geocoder — CSV in your spreadsheet's language. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 50-row mailing list becomes a 50-row coordinate table in one run — the list a map can finally read, exported as CSV.",
+ "quick_answer": "The Batch Geocoder turns up to 50 pasted addresses into coordinates, or 50 coordinate pairs into addresses, in one rate-limited run, and downloads the results as CSV. Paste one entry per line, choose the direction, run it, and take the table to your spreadsheet, CRM or map.",
+ "steps_intro": "Lists are where geocoding earns its keep. Fifty lines at a time, in either direction:",
+ "use_cases": [
+  {
+   "title": "CRM and mailing imports",
+   "body": [
+    {
+     "t": "A customer list with a lat/long column becomes mappable, routable, analysable. One list, one run — single addresses belong to "
+    },
+    {
+     "t": "Address to Coordinates",
+     "l": "/tools/address-to-coordinates"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Logistics preparation",
+   "body": [
+    {
+     "t": "Delivery points geocoded in bulk feed the route tools. The "
+    },
+    {
+     "t": "Route Optimizer",
+     "l": "/tools/route-optimizer"
+    },
+    {
+     "t": " is downstream of exactly this table."
+    }
+   ]
+  },
+  {
+   "title": "Research datasets",
+   "body": [
+    {
+     "t": "Survey addresses become points; points become maps; maps become arguments. The CSV is the hand-off format every tool accepts."
+    }
+   ]
+  },
+  {
+   "title": "Reverse clean-ups",
+   "body": [
+    {
+     "t": "A spreadsheet of mystery coordinates from an old GPS export becomes addresses a human can file — the reverse direction's whole purpose."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Why it takes a moment",
+   "body": [
+    {
+     "t": "The batch runs rate-limited on purpose: open geocoding services ask bulk users to be polite, and 50 rows at a courteous pace is the deal this page keeps on your behalf."
+    }
+   ]
+  },
+  {
+   "label": "Example · The failed row",
+   "body": [
+    {
+     "t": "One malformed address in fifty returns no match while the other 49 succeed — the table shows the failure honestly instead of inventing a pin for it."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Forward versus reverse batch",
+  "intro": "The two directions this page runs — pick by what your spreadsheet holds.",
+  "columns": [
+   "Direction",
+   "You paste",
+   "You get",
+   "Typical job"
+  ],
+  "rows": [
+   [
+    "Forward",
+    "Addresses, one per line",
+    "Latitude and longitude per row",
+    "Mapping a customer list"
+   ],
+   [
+    "Reverse",
+    "Lat/long pairs, one per line",
+    "Structured address per row",
+    "Naming old GPS points"
+   ],
+   [
+    "Either",
+    "Up to 50 lines",
+    "A downloadable CSV",
+    "Spreadsheet round-trips"
+   ]
+  ],
+  "note": "Results come from open geocoding data. Accuracy per row follows that address's match quality — spot-check the important rows in the Address Validator."
+ },
+ "faq": [
+  [
+   "How many rows can I run?",
+   "Up to 50 per batch — paste one entry per line. Bigger lists chunk into fifties; the limit keeps the run inside the geocoding service's fair-use pace."
+  ],
+  [
+   "Why is it slow?",
+   "Rate limiting, deliberately: results arrive at the speed open geocoding politely allows. It is minutes for a full batch, and the alternative (hammering the service) helps nobody's next batch."
+  ],
+  [
+   "Is data uploaded to MapBench servers?",
+   "The lookups run against the geocoding service to resolve your lines — that is how geocoding works. MapBench does not keep your list; the CSV you download is your copy."
+  ],
+  [
+   "Good enough for postal certification?",
+   "No — bulk geocoding is not CASS-style postal validation. It places points well; deliverability certification is a separate official process."
+  ],
+  [
+   "Forward vs reverse — which do I need?",
+   "Addresses in hand → forward, for coordinates. Coordinates in hand → reverse, for addresses. The names describe what you paste."
+  ],
+  [
+   "What format should lines be?",
+   "One complete address per line (number, street, town, postcode, country where ambiguous) or one 'lat, lng' pair per line for reverse. Completeness is accuracy."
+  ],
+  [
+   "A row failed — now what?",
+   "Fix that line's address (more detail usually) and run it singly in Address to Coordinates. Batch failures are per-row, never contagious."
+  ],
+  [
+   "My list has duplicates.",
+   "They geocode twice and agree with themselves — harmless but wasteful. Dedupe in the spreadsheet first for a cleaner table."
+  ],
+  [
+   "International addresses in one batch?",
+   "Include the country in each line and the forward direction handles the mixture; ambiguity, not nationality, is what breaks rows."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Singles run in "
+  },
+  {
+   "t": "Address to Coordinates",
+   "l": "/tools/address-to-coordinates"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Coordinates to Address",
+   "l": "/tools/coordinates-to-address"
+  },
+  {
+   "t": "; scepticism lives in the "
+  },
+  {
+   "t": "Address Validator",
+   "l": "/tools/address-validator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "air-quality-location",
+  "area-code-finder",
+  "canadian-postal-code-meeting-point"
+ ]
+}

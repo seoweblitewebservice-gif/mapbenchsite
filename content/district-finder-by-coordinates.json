@@ -1,0 +1,197 @@
+{
+ "slug": "district-finder-by-coordinates",
+ "primary_keyword": "District Finder by Coordinates",
+ "secondary_keywords": [
+  "district finder",
+  "which district am i in",
+  "borough finder",
+  "district by coordinates"
+ ],
+ "title": "District Finder by Coordinates",
+ "description": "Find the district-level entry for any point with the District Finder by Coordinates — from the map's administrative record. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a point in a big city can sit in a school district, a council district and a postal district that share no borders at all — the finder reports the district layer its record holds, named as what it is.",
+ "quick_answer": "The District Finder by Coordinates reports the district-level entry in a point's administrative record from OpenStreetMap's address data, together with the surrounding administrative levels. Enter coordinates or click the map and read the district that the mapped record assigns to that exact point.",
+ "steps_intro": "'District' means five different boundaries on one street. Read the one the record holds:",
+ "use_cases": [
+  {
+   "title": "School and service questions, first pass",
+   "body": [
+    {
+     "t": "District-level answers start here; official confirmation (a school board's own map) finishes them. The county context comes from "
+    },
+    {
+     "t": "Address to County Lookup",
+     "l": "/tools/address-to-county-lookup"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Delivery and territory edges",
+   "body": [
+    {
+     "t": "A point near an edge gets its district read from data, not from the nearest town's assumption."
+    }
+   ]
+  },
+  {
+   "title": "Address homework",
+   "body": [
+    {
+     "t": "The full administrative breakdown around a point — the finder's habit — is the context every district claim should carry."
+    }
+   ]
+  },
+  {
+   "title": "Comparing map sources",
+   "body": [
+    {
+     "t": "Two maps can disagree about districts; seeing this record's exact wording is how the disagreement gets described precisely."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · One point, many districts",
+   "body": [
+    {
+     "t": "Electoral, school, water, postal: a single address lives in a stack of them. This finder reports the district-level entry in the map's address record — the layer it can name honestly."
+    }
+   ]
+  },
+  {
+   "label": "Example · The borough cousin",
+   "body": [
+    {
+     "t": "In London the district-level word is borough; in New York it is borough too, meaning something else. The finder reports the record's own term, geography's local dialect preserved."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Layers a point lives in",
+  "intro": "The administrative stack the finder reads from — district sits among siblings, not above them.",
+  "columns": [
+   "Level",
+   "Example name",
+   "Decides"
+  ],
+  "rows": [
+   [
+    "Country",
+    "United States",
+    "National law"
+   ],
+   [
+    "State or region",
+    "Illinois",
+    "State services"
+   ],
+   [
+    "County",
+    "Cook County",
+    "County administration"
+   ],
+   [
+    "Municipality",
+    "Chicago",
+    "City services"
+   ],
+   [
+    "District (this finder)",
+    "As recorded in the map data",
+    "Varies — the record names it"
+   ],
+   [
+    "Neighbourhood",
+    "As mapped",
+    "Nothing official, everything social"
+   ]
+  ],
+  "note": "District systems differ by country and by purpose. The finder reports the mapped record rather than imposing one country's scheme on another's point."
+ },
+ "faq": [
+  [
+   "Is a district the same everywhere?",
+   "No — the word covers school districts, council districts, postal districts and more, each with its own map. The finder reports the district-level entry in the point's OpenStreetMap address record, named as recorded."
+  ],
+  [
+   "Can I use an address instead?",
+   "Yes — an address resolves to a point first (the Address to Coordinates step), then the same record is read."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — type coordinates or click anywhere. Your own position is never required."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "District boundaries are maintained by many authorities on many cycles; map data reflects one record of them."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "Is this the school district?",
+   "Only if the record's district entry is the school one — which varies. For enrolment decisions, confirm with the school authority's own lookup; this finder is the fast first pass."
+  ],
+  [
+   "What if no district is recorded?",
+   "The finder says so rather than inventing one — some points carry no district-level entry in the data."
+  ],
+  [
+   "How is this different from the county lookup?",
+   "Grain: counties are one specific, Census-defined layer in the US; 'district' here is the map record's district-level entry, worldwide in scope and variable in meaning."
+  ],
+  [
+   "Congressional district?",
+   "That specific district has its own workflow — the Congressional District Context page builds toward the official confirmation."
+  ],
+  [
+   "Can I check a whole list of points?",
+   "One point at a time here; the Batch Geocoder resolves lists of addresses, and each result's point can be district-checked the same way."
+  ],
+  [
+   "What if two maps disagree on the district?",
+   "They hold different vintages or different district layers. Name the layer and the source when you report it — and for official purposes, the authority over that district decides."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Siblings: "
+  },
+  {
+   "t": "Municipality Finder by Coordinates",
+   "l": "/tools/find-municipality-by-coordinates"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Parish Finder by Coordinates",
+   "l": "/tools/parish-finder-by-coordinates"
+  },
+  {
+   "t": "; US context: "
+  },
+  {
+   "t": "Address to County Lookup",
+   "l": "/tools/address-to-county-lookup"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location"
+ ]
+}

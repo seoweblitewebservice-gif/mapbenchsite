@@ -1,0 +1,29 @@
+{
+ "slug": "world-time-zone-map",
+ "primary_keyword": "World Time Zone Map",
+ "secondary_keywords": [
+  "time zones map",
+  "world clock map",
+  "IANA timezone map",
+  "UTC offset map"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "golden-hour-calculator",
+  "moon-age-calculator",
+  "moon-illumination-calculator",
+  "moon-phase-by-date",
+  "moon-phase-calculator",
+  "moon-phase-calendar-map"
+ ]
+}

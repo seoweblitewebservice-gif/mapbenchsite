@@ -1,0 +1,202 @@
+{
+ "slug": "technician-travel-time-calculator",
+ "primary_keyword": "Technician Travel Time Calculator",
+ "secondary_keywords": [
+  "technician travel time calculator online",
+  "free technician travel time calculator",
+  "technician travel time calculator calculator",
+  "technician travel time calculator tool",
+  "how to use technician travel time calculator"
+ ],
+ "title": "Technician Travel Time Calculator",
+ "description": "Total a field technician's travel time between jobs with the Technician Travel Time Calculator — legs, day totals, billable splits. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, four jobs joined by 54 miles of urban legs at a 30 mph working average hide 1.8 hours of travel inside a 'five-hour' working day.",
+ "quick_answer": "The Technician Travel Time Calculator totals the driving time a field technician spends between the depot and the day's jobs. Enter the legs or the day's distances and speeds and read the travel total — the hours schedules, quotes and the travel-versus-wrench argument are all secretly made of.",
+ "steps_intro": "A technician's day is travel plus work. Count the travel half honestly:",
+ "use_cases": [
+  {
+   "title": "Schedule feasibility",
+   "body": [
+    {
+     "t": "Five jobs times their work plus the legs between them versus one shift: the sum that decides whether a sixth job is a promise or a lie. Leg distances from the "
+    },
+    {
+     "t": "Driving Distance Calculator",
+     "l": "/tools/driving-distance-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Travel-time billing policy",
+   "body": [
+    {
+     "t": "Charged or not, travel time has a cost — at an example $70/hour internal rate, 1.8 hours is $126 of a day. Totals like these are how policies get set."
+    }
+   ]
+  },
+  {
+   "title": "Territory design",
+   "body": [
+    {
+     "t": "A tech whose patch generates two travel hours a day has a geography problem, not an effort problem. The totals make the case for redrawing the patch."
+    }
+   ]
+  },
+  {
+   "title": "Quote accuracy",
+   "body": [
+    {
+     "t": "The "
+    },
+    {
+     "t": "Service Call Cost Calculator",
+     "l": "/tools/service-call-cost-calculator"
+    },
+    {
+     "t": " prices the callout; this page totals the day behind it — quotes and rotas finally using the same clock."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The hidden two hours",
+   "body": [
+    {
+     "t": "Legs of 12 + 18 + 9 + 15 miles = 54 miles at a 30 mph urban average = 1.8 hours. The day that 'has five hours of work' is a 6.8-hour day before lunch argues."
+    }
+   ]
+  },
+  {
+   "label": "Example · The rural round",
+   "body": [
+    {
+     "t": "Three jobs, 96 miles of legs at 45 mph = 2 h 08 min of travel for perhaps 2 hours of work. Rural patches are travel businesses with tools in the back."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Travel share of a technician's day",
+  "intro": "Work time fixed at 5 hours; the travel column is what this calculator exists to count. Averages are working assumptions to replace with your fleet's.",
+  "columns": [
+   "Day's legs",
+   "At 25 mph avg",
+   "At 35 mph avg",
+   "At 45 mph avg"
+  ],
+  "rows": [
+   [
+    "30 mi",
+    "1 h 12 m",
+    "0 h 51 m",
+    "0 h 40 m"
+   ],
+   [
+    "54 mi",
+    "2 h 10 m",
+    "1 h 33 m",
+    "1 h 12 m"
+   ],
+   [
+    "80 mi",
+    "3 h 12 m",
+    "2 h 17 m",
+    "1 h 47 m"
+   ],
+   [
+    "96 mi",
+    "3 h 50 m",
+    "2 h 45 m",
+    "2 h 08 m"
+   ],
+   [
+    "140 mi",
+    "5 h 36 m",
+    "4 h 00 m",
+    "3 h 07 m"
+   ]
+  ],
+  "note": "If travel approaches the work time itself, the problem is the territory map — see the use cases. No rota survives a geography it ignores."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Total travel time for a technician's day: the legs' distances divided by realistic average speeds, summed — the non-wrench half of the shift."
+  ],
+  [
+   "Is it free to use?",
+   "Yes — for rota planning, quoting and territory arguments."
+  ],
+  [
+   "How accurate is the result?",
+   "As accurate as the averages entered. Use your fleet's measured averages (the Road Trip Average Speed Calculator's method) and the totals turn trustworthy."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Peak-hour patches deserve peak-hour averages; the calculator consumes the average you choose."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Technicians drive roads between jobs. Leg distances must be road distances or the day is under-planned from the first job."
+  ],
+  [
+   "Should customers be charged travel time?",
+   "A policy question this total makes answerable: you cannot price what you have not counted. The Service Call Cost Calculator is where the charging happens."
+  ],
+  [
+   "Can it plan the job order too?",
+   "Order is the Route Optimizer's craft; this page totals the time of the order you run."
+  ],
+  [
+   "Deadhead miles back to the depot count?",
+   "Yes — the day's travel includes the return leg. Excluding it is how rotas quietly promise the impossible."
+  ],
+  [
+   "Two techs share a van?",
+   "The travel time is the van's; the rota's cost is doubled in people. The calculator counts the clock, the manager multiplies."
+  ],
+  [
+   "Emergency callouts mid-day?",
+   "They rewrite the legs. Re-total the day with the new sequence — the calculator's speed makes re-planning cheap."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Prices live in the "
+  },
+  {
+   "t": "Service Call Cost Calculator",
+   "l": "/tools/service-call-cost-calculator"
+  },
+  {
+   "t": "; orders in the "
+  },
+  {
+   "t": "Route Optimizer",
+   "l": "/tools/route-optimizer"
+  },
+  {
+   "t": "; and legs in the "
+  },
+  {
+   "t": "Driving Distance Calculator",
+   "l": "/tools/driving-distance-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-route-planner",
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator",
+  "drive-time-map"
+ ]
+}

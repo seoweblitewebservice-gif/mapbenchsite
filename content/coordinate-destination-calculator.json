@@ -1,0 +1,188 @@
+{
+ "slug": "coordinate-destination-calculator",
+ "primary_keyword": "Destination Point From Bearing Calculator",
+ "secondary_keywords": [
+  "destination point calculator",
+  "bearing distance destination",
+  "coordinate destination calculator",
+  "lat long from bearing distance",
+  "endpoint coordinate calculator"
+ ],
+ "title": "Destination Point From Bearing Calculator",
+ "description": "Project a destination point from an origin, true bearing and distance with the Destination Point From Bearing Calculator — great-circle exact. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 10 km at bearing 45° from Times Square lands at 40.8216, −73.9015 — northeast into the Bronx, computed on the sphere rather than paced on a flat guess.",
+ "quick_answer": "The Destination Point From Bearing Calculator projects a new latitude and longitude from an origin point, a true bearing and a great-circle distance. Enter the origin, bearing and distance and read the destination coordinates — the dead-reckoning heart of navigation, done with spherical geometry instead of flat-map approximations.",
+ "steps_intro": "From here, that direction, that far — where is that? Compute it:",
+ "use_cases": [
+  {
+   "title": "Dead reckoning and navigation exercises",
+   "body": [
+    {
+     "t": "The classic chart problem, solved exactly. Compare your hand plot against the sphere's answer and learn where flat assumptions leak."
+    }
+   ]
+  },
+  {
+   "title": "Search and survey patterns",
+   "body": [
+    {
+     "t": "Project the next leg's endpoint before walking it — grids and transects are destination calculations repeated."
+    }
+   ]
+  },
+  {
+   "title": "Photography and viewpoint planning",
+   "body": [
+    {
+     "t": "“The summit 3 km at 210° from the car park” becomes coordinates the map can hold. The "
+    },
+    {
+     "t": "Coordinate Offset Calculator",
+     "l": "/tools/coordinate-offset-calculator"
+    },
+    {
+     "t": " does the local flat version; this page does the true one."
+    }
+   ]
+  },
+  {
+   "title": "Games, fiction and worldbuilding",
+   "body": [
+    {
+     "t": "Plausible geography for invented journeys — distances and bearings that survive a reader with a map."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Ten kilometres northeast",
+   "body": [
+    {
+     "t": "From Times Square (40.7580, −73.9855), 10 km at 045° lands at 40.8216, −73.9015. The same distance due east lands at 40.7579, −73.8668 — latitude barely changed, because east-west travel rides the parallel."
+    }
+   ]
+  },
+  {
+   "label": "Example · Bearings are true, not magnetic",
+   "body": [
+    {
+     "t": "The calculator's bearings are true (map north). A compass bearing needs the local magnetic declination applied first — the page's FAQ keeps the distinction where it belongs."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Inputs and their meanings",
+  "intro": "Three inputs, one sphere — the fine print that makes the output trustworthy.",
+  "columns": [
+   "Input",
+   "Meaning",
+   "Note"
+  ],
+  "rows": [
+   [
+    "Origin",
+    "Start latitude/longitude (WGS84)",
+    "The point you stand on"
+   ],
+   [
+    "Bearing",
+    "Initial true bearing, degrees clockwise from north",
+    "Great-circle paths curve — the bearing changes along the way"
+   ],
+   [
+    "Distance",
+    "Great-circle distance",
+    "km or miles"
+   ],
+   [
+    "Output",
+    "Destination lat/lon",
+    "Plus the sphere's geometry, exact to the model"
+   ]
+  ],
+  "note": "On a sphere, the bearing at arrival differs from the bearing at departure (except along meridians and the equator). Long legs make the difference visible — the rhumb-line tools hold a constant bearing instead, at a longer distance."
+ },
+ "faq": [
+  [
+   "Is the bearing magnetic?",
+   "No — true bearing, measured from geographic north. Convert compass bearings with the local declination before entering them; declination varies by place and year."
+  ],
+  [
+   "What Earth model is used?",
+   "Spherical great-circle geometry with the mean Earth radius — the standard navigation model, accurate far beyond consumer positioning. Ellipsoid refinements exist for survey-grade work."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 coordinates in and out."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "The output's decimals are arithmetic; the journey's accuracy rides on the bearing and distance you feed it. A degree of bearing error is ~175 m of cross-track at 10 km."
+  ],
+  [
+   "Can I copy the result into GIS software?",
+   "Yes — the destination is an ordinary coordinate pair for any tool on this site or beyond."
+  ],
+  [
+   "Reverse problem — bearing between two known points?",
+   "That is the Bearing Calculator's job; this page projects forward from one point."
+  ],
+  [
+   "Very long distances?",
+   "The sphere handles antipodal legs as happily as short ones. Set the bearing carefully — near the antipode, small bearing changes swing the destination widely."
+  ],
+  [
+   "Constant-bearing paths?",
+   "Rhumb lines hold one bearing and run longer — the Rhumb Line Bearing and its family cover that geometry."
+  ],
+  [
+   "Feet and yards?",
+   "Distance units include miles and kilometres; survey-chain romantics can convert the result with the Unit Converter family."
+  ],
+  [
+   "Multiple legs?",
+   "Chain them: each destination becomes the next origin. Dead reckoning accumulates exactly this way — errors included, which is the exercise."
+  ],
+  [
+   "Height or terrain?",
+   "Pure surface geometry — the destination is a point on the sphere, terrain-agnostic, as navigation math should be."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Bearings between points: the "
+  },
+  {
+   "t": "Bearing Calculator",
+   "l": "/tools/bearing-calculator"
+  },
+  {
+   "t": "; local offsets: the "
+  },
+  {
+   "t": "Coordinate Offset Calculator",
+   "l": "/tools/coordinate-offset-calculator"
+  },
+  {
+   "t": "; ring points: the "
+  },
+  {
+   "t": "Coordinate Radius Points Generator",
+   "l": "/tools/coordinate-radius-points-generator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "arcminutes-to-decimal-degrees-converter",
+  "arcseconds-to-ground-distance-calculator",
+  "bng-converter",
+  "bounding-box-calculator",
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator"
+ ]
+}

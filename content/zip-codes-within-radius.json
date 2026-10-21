@@ -1,0 +1,29 @@
+{
+ "slug": "zip-codes-within-radius",
+ "primary_keyword": "ZIP Codes Within Radius",
+ "secondary_keywords": [
+  "zip codes near me",
+  "zcta within radius",
+  "postal codes within radius",
+  "zip radius map"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "australia-postcodes-by-state-suburb",
+  "census-geography-finder",
+  "city-comparison-tool",
+  "cost-of-living-compare",
+  "nearby-places-finder",
+  "nearest-postcode-from-list"
+ ]
+}

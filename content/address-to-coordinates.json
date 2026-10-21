@@ -1,0 +1,199 @@
+{
+ "slug": "address-to-coordinates",
+ "primary_keyword": "Address to Coordinates",
+ "secondary_keywords": [
+  "geocode",
+  "address to lat long",
+  "address to coordinates online"
+ ],
+ "title": "Address to Coordinates: Lat and Long Lookup",
+ "description": "Turn any address into WGS84 latitude and longitude with Address to Coordinates — a map pin you can copy anywhere. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 350 Fifth Avenue in New York — the Empire State Building — resolves to about 40.7484, -73.9857, the pair every mapping system on earth can use.",
+ "quick_answer": "Address to Coordinates looks up a full or partial address and returns its WGS84 latitude and longitude with a pin on the map. Type the address, press look up, and copy the coordinates — the universal format that maps, spreadsheets, GPS devices and other tools all speak.",
+ "steps_intro": "Every map system understands coordinates; few understand your handwriting. Convert once:",
+ "use_cases": [
+  {
+   "title": "Feeding other tools",
+   "body": [
+    {
+     "t": "Half this site's tools begin with coordinates. Get them here from the address you actually know — or in bulk from the "
+    },
+    {
+     "t": "Batch Geocoder",
+     "l": "/tools/batch-geocoder"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Spreadsheets and CRMs",
+   "body": [
+    {
+     "t": "A lat/long column turns a customer list into a map. One address at a time here; fifty at a time in the batch tool."
+    }
+   ]
+  },
+  {
+   "title": "GPS and device entry",
+   "body": [
+    {
+     "t": "Devices that want numbers instead of names get the pair, copied exactly — no transcription errors at the sixth decimal."
+    }
+   ]
+  },
+  {
+   "title": "Checking a geocoder's opinion",
+   "body": [
+    {
+     "t": "Two services, two pins, one street: compare and judge. The "
+    },
+    {
+     "t": "Address Validator",
+     "l": "/tools/address-validator"
+    },
+    {
+     "t": " exists for exactly this scepticism."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The famous address",
+   "body": [
+    {
+     "t": "350 Fifth Avenue, New York → approx. 40.7484, -73.9857. Six decimals is roughly a doorstep's precision; four is a building; two is a neighbourhood."
+    }
+   ]
+  },
+  {
+   "label": "Example · The partial address",
+   "body": [
+    {
+     "t": "“Springfield” alone resolves to one of many Springfields — the geocoder picks its best guess and shows the pin so you can catch it being wrong."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Decimal places and what they mean",
+  "intro": "How precision grows with decimals — the same for every coordinate this page returns.",
+  "columns": [
+   "Decimals",
+   "Precision approx.",
+   "Identifies"
+  ],
+  "rows": [
+   [
+    "1",
+    "11 km",
+    "A town"
+   ],
+   [
+    "2",
+    "1.1 km",
+    "A neighbourhood"
+   ],
+   [
+    "3",
+    "110 m",
+    "A street or block"
+   ],
+   [
+    "4",
+    "11 m",
+    "A building"
+   ],
+   [
+    "5",
+    "1.1 m",
+    "A doorway"
+   ],
+   [
+    "6",
+    "0.11 m",
+    "A doorstep"
+   ]
+  ],
+  "note": "Precision is not accuracy: a six-decimal result from a vague address is a precise guess. The pin on the map is where you verify it."
+ },
+ "faq": [
+  [
+   "How accurate is it?",
+   "The geocoder resolves the address against open map data; accuracy follows the address's completeness and the data's local quality. Always eyeball the pin — a rooftop in a mapped city, a village centre in sparse country."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — typing an address shares nothing about where you are. Your own position is only used if you separately ask a tool for it."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Names and boundaries vary by source, language and date — disputed areas most of all. This tool reports the open data's view; other maps may differ honestly."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No. Lookups run against the geocoding service for the address you typed; your browser's location is a separate permission this lookup does not need."
+  ],
+  [
+   "Which coordinate system?",
+   "WGS84 latitude/longitude — the system GPS and web maps use. Other datums exist; this is the universal one."
+  ],
+  [
+   "The address is not found.",
+   "Add detail: house number, town, postcode, country. Ambiguity is the usual cause, and more of the address is the usual cure."
+  ],
+  [
+   "Reverse — coordinates to an address?",
+   "The Coordinates to Address tool runs this lookup backwards."
+  ],
+  [
+   "Coordinates came back with only 2 decimals.",
+   "Shorter pairs are coarser matches — the geocoder is reporting the precision the address earned. Add detail to the address to earn more decimals."
+  ],
+  [
+   "Can I enter the address in another language?",
+   "Geocoders accept many languages and local scripts, with quality varying by region. The returned coordinates are language-free either way."
+  ],
+  [
+   "Is latitude or longitude first?",
+   "Latitude first in the pair this page returns — the mapping convention. Swapped pairs are the field's classic error; the pin reveals it instantly."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The reverse is "
+  },
+  {
+   "t": "Coordinates to Address",
+   "l": "/tools/coordinates-to-address"
+  },
+  {
+   "t": "; fifty at once is the "
+  },
+  {
+   "t": "Batch Geocoder",
+   "l": "/tools/batch-geocoder"
+  },
+  {
+   "t": "; and the sceptic's version is the "
+  },
+  {
+   "t": "Address Validator",
+   "l": "/tools/address-validator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "air-quality-location",
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder",
+  "congressional-district-context"
+ ]
+}

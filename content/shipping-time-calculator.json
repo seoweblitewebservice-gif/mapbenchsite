@@ -1,0 +1,189 @@
+{
+ "slug": "shipping-time-calculator",
+ "primary_keyword": "Shipping Time Calculator",
+ "secondary_keywords": [
+  "shipping time calculator online",
+  "free shipping time calculator",
+  "shipping time calculator calculator",
+  "shipping time calculator tool",
+  "how to use shipping time calculator"
+ ],
+ "title": "Shipping Time Calculator: Transit Estimates",
+ "description": "Estimate a shipment's transit time from route distance and vessel or vehicle speed with the Shipping Time Calculator — honestly framed. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 5,800-nautical-mile sea leg at 16 knots is about 15.1 days of sailing — before the port days at both ends that real shipping adds.",
+ "quick_answer": "The Shipping Time Calculator estimates a shipment's time in transit from the route distance and the carrier's speed, in the units freight uses. Enter the distance and the speed and read the transit time — the moving part of a delivery estimate, separated honestly from the handling days around it.",
+ "steps_intro": "Transit is one part of shipping time. Compute it cleanly, then add the rest with open eyes:",
+ "use_cases": [
+  {
+   "title": "Customer delivery estimates",
+   "body": [
+    {
+     "t": "A window built from computed transit plus stated handling beats a date plucked from optimism. This supplies the computed part."
+    }
+   ]
+  },
+  {
+   "title": "Carrier comparison",
+   "body": [
+    {
+     "t": "Two services' speeds over the same leg become two transit times — comparable at last. Distances from the "
+    },
+    {
+     "t": "Ship Speed Distance Time Calculator",
+     "l": "/tools/ship-speed-distance-time-calculator"
+    },
+    {
+     "t": "'s unit family."
+    }
+   ]
+  },
+  {
+   "title": "Inventory planning",
+   "body": [
+    {
+     "t": "Goods in transit are capital asleep. The transit figure is the lead-time number the reorder point is built from."
+    }
+   ]
+  },
+  {
+   "title": "Sanity-checking quotes",
+   "body": [
+    {
+     "t": "A quoted 4 days for a 15-day sailing is a quote about a different mode or a different planet. The division referees."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The ocean leg",
+   "body": [
+    {
+     "t": "5,800 nm at 16 kn = 362.5 hours ≈ 15.1 days at sea. Port handling, customs and the last mile then add their days — the estimate is the sailing, labelled as such."
+    }
+   ]
+  },
+  {
+   "label": "Example · The road leg",
+   "body": [
+    {
+     "t": "A 900-mile freight leg at a 45 mph working average is 20 hours of motion — two driving days in the real world's clothing. The calculator's number is the motion; the calendar is yours to dress."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Transit times at working speeds",
+  "intro": "Distance ÷ speed for freight-shaped legs — motion only; handling, customs and queues are additions, not rounding.",
+  "columns": [
+   "Leg",
+   "At 12 kn",
+   "At 16 kn",
+   "At 20 kn"
+  ],
+  "rows": [
+   [
+    "1,000 nm",
+    "3.5 days",
+    "2.6 days",
+    "2.1 days"
+   ],
+   [
+    "3,000 nm",
+    "10.4 days",
+    "7.8 days",
+    "6.3 days"
+   ],
+   [
+    "5,800 nm",
+    "20.1 days",
+    "15.1 days",
+    "12.1 days"
+   ],
+   [
+    "10,000 nm",
+    "34.7 days",
+    "26.0 days",
+    "20.8 days"
+   ]
+  ],
+  "note": "Sea legs are in knots and nautical miles; the same division serves road legs in mph. Schedules pad these figures — the padding is the carrier's experience, priced in."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Transit time: route distance ÷ speed, in hours and days — the moving leg of a shipment's journey."
+  ],
+  [
+   "Is it free to use?",
+   "Yes, for estimates and quote-checking alike."
+  ],
+  [
+   "How accurate is the result?",
+   "Exact for the distance and speed entered — and explicitly incomplete as a delivery date: handling, customs, port time and last-mile are separate additions."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Congestion at sea is weather and ports; on road, hours-of-service. Neither lives inside a distance ÷ speed estimate, and this page does not pretend otherwise."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Freight travels networks, not geometry. Enter the route distance the shipment will actually move."
+  ],
+  [
+   "Why is my carrier's quote longer?",
+   "Because it includes everything this estimate excludes — consolidation, handling, customs, schedules that sail twice a week. The gap is explainable, and now measurable."
+  ],
+  [
+   "Air freight?",
+   "The division works with air distances and speeds too, though air schedules are built from flight blocks and cut-off times — treat the result as the flying floor of the estimate."
+  ],
+  [
+   "Why do quotes say 'transit time' so precisely?",
+   "Because it is the part carriers control. The vaguer words around it (handling, customs) are where the honesty of a quote is tested."
+  ],
+  [
+   "Incoterms and responsibility?",
+   "Who bears the transit risk is a contract matter above this calculator's pay grade — it computes time, not liability."
+  ],
+  [
+   "Can it compare air versus sea?",
+   "Run both legs' figures: the division gives each mode's motion time, and the comparison is usually measured in weeks versus days."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The mariner's triangle is the "
+  },
+  {
+   "t": "Ship Speed Distance Time Calculator",
+   "l": "/tools/ship-speed-distance-time-calculator"
+  },
+  {
+   "t": "; units convert in the "
+  },
+  {
+   "t": "Kilometers to Nautical Miles Converter",
+   "l": "/tools/kilometers-to-nautical-miles-converter"
+  },
+  {
+   "t": "; and road arrivals are the "
+  },
+  {
+   "t": "ETA Calculator",
+   "l": "/tools/eta-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-calories-distance",
+  "cycling-route-planner",
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator"
+ ]
+}

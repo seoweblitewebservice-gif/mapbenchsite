@@ -1,0 +1,188 @@
+{
+ "slug": "route-flyover-preview",
+ "primary_keyword": "Route Flyover Preview",
+ "secondary_keywords": [
+  "route flyover",
+  "fly route preview",
+  "route animation map",
+  "drive route visualisation"
+ ],
+ "title": "Route Flyover Preview: Fly Your Route First",
+ "description": "Preview a route from the air with the Route Flyover Preview — the camera tilts to 60 degrees and flies the routed path before you drive it. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, thirty seconds of flyover shows what the leg table cannot: the valley the road threads, the ridge it climbs, and the town it threads between two lakes.",
+ "quick_answer": "The Route Flyover Preview tilts the map to 60 degrees and flies a camera along the routed path, turning with the road, so you feel the journey's shape. Add start, stops and destination, start flyover, and stop it when you have seen enough — or ride it to the finish.",
+ "steps_intro": "Some journeys should be seen before they are driven. Fly this one:",
+ "use_cases": [
+  {
+   "title": "Scenic-route selection",
+   "body": [
+    {
+     "t": "Two routes, similar times: fly both and the prettier valley wins on evidence. The "
+    },
+    {
+     "t": "Route Surface and Road Type Finder",
+     "l": "/tools/route-surface-and-road-type-finder"
+    },
+    {
+     "t": " adds what the roads are made of."
+    }
+   ]
+  },
+  {
+   "title": "Passenger previews",
+   "body": [
+    {
+     "t": "Children and nervous passengers settle when the journey has been 'seen' already. A flyover is a rehearsal the whole car can share."
+    }
+   ]
+  },
+  {
+   "title": "Orientation before navigation",
+   "body": [
+    {
+     "t": "Drivers who have flown a route recognise its landmarks at ground level. The preview is a memory laid down in advance."
+    }
+   ]
+  },
+  {
+   "title": "Sharing a trip",
+   "body": [
+    {
+     "t": "Send the route, fly it together on a call — the itinerary becomes a place people have been, briefly, before they go."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The shape of the day",
+   "body": [
+    {
+     "t": "A leg table says 212 miles and 3 h 39 min. The flyover says: an hour of plain, a pass, then the lake road. Both are the same route; the second is the one the passengers remember being promised."
+    }
+   ]
+  },
+  {
+   "label": "Example · Spotting the awkward bit",
+   "body": [
+    {
+     "t": "The camera turning with the road exposes the junction maze the directions mumble through — noticed here, briefed before the drive, survived calmly during it."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Flyover versus the other previews",
+  "intro": "What each of this site's route views is for — the flyover's column is the felt shape of the journey.",
+  "columns": [
+   "View",
+   "Shows",
+   "Best moment to use"
+  ],
+  "rows": [
+   [
+    "Map route",
+    "The line and the legs",
+    "Planning the stops"
+   ],
+   [
+    "Roadbook",
+    "Legs on paper",
+    "Carrying the plan"
+   ],
+   [
+    "Elevation profile (gain tool)",
+    "Climb totals",
+    "Grading the effort"
+   ],
+   [
+    "Surface finder",
+    "Road types and surfaces",
+    "Choosing tyres and bikes"
+   ],
+   [
+    "Flyover (this tool)",
+    "The journey's shape, flown",
+    "Before you commit, or to share it"
+   ]
+  ],
+  "note": "The flyover renders the live map's view, not a pre-rendered video — it is the map itself, tilted and moving."
+ },
+ "faq": [
+  [
+   "Is this a rendered video?",
+   "No — it is the live map tilted to 60° with the camera animated along the routed path. Nothing is pre-rendered or downloaded as a film."
+  ],
+  [
+   "Can I stop it?",
+   "Any time — stop mid-flight and the map is yours again; or let it run and it levels off at the finish."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. The flyover flies the route's geometry, not this hour's congestion."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "The camera follows the road's own line, windings included — the flyover's length is the journey's real shape."
+  ],
+  [
+   "Can route results change over time?",
+   "The route beneath can change as road data improves; the flight is generated fresh from today's route each time."
+  ],
+  [
+   "Does it show terrain and scenery?",
+   "It shows the map's own rendering tilted — roads, water, towns and the shape of the land as the map draws them. It is a preview of shape, not a photograph."
+  ],
+  [
+   "Can I fly a cycling or walking route?",
+   "Fly the route any of the site's planners builds — the camera is indifferent to the wheels beneath it."
+  ],
+  [
+   "Can I fly just one leg?",
+   "Build the route with fewer stops and the flight shortens to the leg you care about."
+  ],
+  [
+   "Does it need a fast connection?",
+   "It streams the live map as it flies, so a reasonable connection keeps the flight smooth."
+  ],
+  [
+   "Can passengers watch it offline?",
+   "The flyover is live-map based; the roadbook is the offline companion. Fly it at home, print the book for the car."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Legs on paper are the "
+  },
+  {
+   "t": "Route Roadbook Generator",
+   "l": "/tools/route-roadbook-generator"
+  },
+  {
+   "t": "; climb is the "
+  },
+  {
+   "t": "Route Elevation Gain Calculator",
+   "l": "/tools/route-elevation-gain-calculator"
+  },
+  {
+   "t": "; and the ground truth is the "
+  },
+  {
+   "t": "Route Surface and Road Type Finder",
+   "l": "/tools/route-surface-and-road-type-finder"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner"
+ ]
+}

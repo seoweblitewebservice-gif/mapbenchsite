@@ -1,0 +1,193 @@
+{
+ "slug": "dst-checker-by-coordinates",
+ "primary_keyword": "DST Checker by Coordinates",
+ "secondary_keywords": [
+  "dst checker by coordinates online",
+  "free dst checker by coordinates",
+  "dst checker by coordinates calculator",
+  "dst checker by coordinates tool",
+  "how to calculate dst checker by coordinates"
+ ],
+ "title": "DST Checker by Coordinates: Offset at a Point",
+ "description": "Check daylight saving and the UTC offset for exact coordinates with the DST Checker by Coordinates — the point's own rules, not the city's. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, two points in the same state can keep different clocks — Indiana's counties historically split between time zones and rules, and a point-level check is how you know which side you are on.",
+ "quick_answer": "The DST Checker by Coordinates resolves the timezone for an exact pair of coordinates and reports whether daylight saving applies there, with the offsets in force. Enter the point — a field, a border town, a ship's position — and read its clock rules rather than the nearest big city's.",
+ "steps_intro": "Time zones bend at borders. Check the point itself:",
+ "use_cases": [
+  {
+   "title": "Border and exclave work",
+   "body": [
+    {
+     "t": "Farms, sites and depots near zone lines live by the point's rules. City-level answers fail exactly there — hence coordinates. The zone itself is named by "
+    },
+    {
+     "t": "What Time Zone Am I In",
+     "l": "/tools/what-timezone-am-i-in"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Field data timestamps",
+   "body": [
+    {
+     "t": "Sensor and survey timestamps reconcile when the point's offset history is known, changeover weekends included."
+    }
+   ]
+  },
+  {
+   "title": "Software testing",
+   "body": [
+    {
+     "t": "Edge-case coordinates are where timezone bugs breed. Feed them here and compare with your stack's answer."
+    }
+   ]
+  },
+  {
+   "title": "Travel at the margins",
+   "body": [
+    {
+     "t": "A road trip crossing a zone line mid-afternoon changes the evening's arithmetic. Points along the route tell you where."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Same state, two clocks",
+   "body": [
+    {
+     "t": "Indiana spent decades split between Eastern and Central with differing DST habits; today's map is tidier but the lesson stands — the point's record, not the state's reputation, gives the offset."
+    }
+   ]
+  },
+  {
+   "label": "Example · The ocean point",
+   "body": [
+    {
+     "t": "At sea, the checker resolves the zone the coordinates fall in by the tz database's geography — ships keep their own time, but the data point still has an answer."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the check returns",
+  "intro": "The fields a point-level DST answer carries — and what each settles.",
+  "columns": [
+   "Field",
+   "Meaning",
+   "Settles"
+  ],
+  "rows": [
+   [
+    "Time zone (IANA)",
+    "e.g. America/Chicago",
+    "Which rulebook applies"
+   ],
+   [
+    "Standard offset",
+    "UTC offset off-season",
+    "Winter clock"
+   ],
+   [
+    "Daylight offset",
+    "UTC offset in DST",
+    "Summer clock"
+   ],
+   [
+    "DST now?",
+    "Whether the point is in DST for the date checked",
+    "Today's clock"
+   ],
+   [
+    "Next change",
+    "The upcoming transition date",
+    "The changeover plan"
+   ]
+  ],
+  "note": "Offsets follow the IANA tz database — the same source operating systems use. Political changes to zone rules land there first."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The timezone, UTC offsets and DST status for an exact coordinate pair — the point's clock rules from the tz database."
+  ],
+  [
+   "Do I need an account?",
+   "No. Coordinates in, clock rules out."
+  ],
+  [
+   "Can I use the result for professional work?",
+   "For scheduling, logging and fieldwork planning, yes — it reads the same tz database professionals build on. Payroll and legal deadlines deserve your system's own confirmation too."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — the coordinates you type are the query; your device's location is not involved."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Zone boundaries move with politics; the database's vintage decides the answer. A recently changed border can differ between sources by design."
+  ],
+  [
+   "A point in the ocean?",
+   "The tz database assigns ocean zones too (often the nearest land's zone or Etc/GMT bands). The checker reports what the data holds for the point."
+  ],
+  [
+   "Historical dates?",
+   "Zone rules have histories — the database knows many of them. A 1990 timestamp at the same point can carry a different offset, and the check respects the date."
+  ],
+  [
+   "Half-hour zones?",
+   "Several exist (India, parts of Australia, Newfoundland at -3:30 standard) — the checker reports offsets to the minute, as the database states them."
+  ],
+  [
+   "My city and my point disagree.",
+   "Possible near boundaries — trust the point for the point. That disagreement is this page's entire reason to exist."
+  ],
+  [
+   "Does it handle the exact changeover moment?",
+   "Transitions are instants in the database (a specific UTC second). A timestamp inside the repeated or skipped hour is genuinely ambiguous — the checker's date-level answer flags the day as a changeover day."
+  ],
+  [
+   "Ships and aircraft?",
+   "Their clocks follow conventions and flags, not geography. The checker gives the point's zone answer — the reference the convention is measured against."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Place-shaped version: the "
+  },
+  {
+   "t": "Daylight Saving Checker",
+   "l": "/tools/daylight-saving-checker"
+  },
+  {
+   "t": "; offsets alone: "
+  },
+  {
+   "t": "UTC Offset by Coordinates",
+   "l": "/tools/utc-offset-by-coordinates"
+  },
+  {
+   "t": "; meetings: the "
+  },
+  {
+   "t": "Meeting Time Planner",
+   "l": "/tools/meeting-time-planner"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder"
+ ]
+}

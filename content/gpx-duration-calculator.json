@@ -1,0 +1,30 @@
+{
+ "slug": "gpx-duration-calculator",
+ "primary_keyword": "GPX Duration Calculator",
+ "secondary_keywords": [
+  "gpx time calculator",
+  "gpx track duration",
+  "calculate gpx time",
+  "gpx elapsed time",
+  "gpx route duration"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "boundary-kml-downloader",
+  "cluster-map-from-points",
+  "country-boundary-downloader",
+  "csv-column-counter",
+  "csv-coordinate-bounding-box",
+  "csv-coordinate-centroid-calculator"
+ ]
+}

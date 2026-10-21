@@ -1,0 +1,30 @@
+{
+ "slug": "gpx-bounding-box-tool",
+ "primary_keyword": "GPX Bounding Box Tool",
+ "secondary_keywords": [
+  "gpx bounding box tool online",
+  "free gpx bounding box tool",
+  "gpx bounding box tool calculator",
+  "gpx bounding box tool tool",
+  "how to calculate gpx bounding box tool"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "csv-coordinate-bounding-box",
+  "csv-coordinate-centroid-calculator",
+  "csv-coordinate-deduplicator",
+  "csv-coordinate-validator",
+  "csv-latlng-validator",
+  "csv-row-counter"
+ ]
+}

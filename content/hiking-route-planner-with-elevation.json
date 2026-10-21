@@ -1,0 +1,194 @@
+{
+ "slug": "hiking-route-planner-with-elevation",
+ "primary_keyword": "Hiking Route Planner with Elevation",
+ "secondary_keywords": [
+  "hiking route planner elevation",
+  "hike planner naismith",
+  "trail route planner",
+  "walking route with climb"
+ ],
+ "title": "Hiking Route Planner with Elevation",
+ "description": "Plan a hike with distance, total climb and two time estimates — the router's and Naismith's rule — with the Hiking Route Planner with Elevation. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 10-mile route with 2,000 ft of climb prices out at about 4 hours 20 minutes by Naismith's rule — the estimate a century of hill walkers have planned by.",
+ "quick_answer": "The Hiking Route Planner with Elevation builds a route from trailhead, waypoints and finish, then reports distance, total climb from terrain data, and two time estimates side by side: the routing engine's and the classic Naismith rule. Compare them and plan on the one your legs have validated.",
+ "steps_intro": "A hike is distance plus climb plus honesty about both. Plan all three:",
+ "use_cases": [
+  {
+   "title": "Day-hike planning",
+   "body": [
+    {
+     "t": "Distance alone lies about mountain days. Distance + climb + Naismith is the plan experienced walkers actually make — then the "
+    },
+    {
+     "t": "Hiking Pace Calculator",
+     "l": "/tools/hiking-pace-calculator"
+    },
+    {
+     "t": " calibrates it to you afterwards."
+    }
+   ]
+  },
+  {
+   "title": "Group suitability checks",
+   "body": [
+    {
+     "t": "A route's climb total is the figure that decides whether the group finishes together. See it before the car park, not at the steep bit."
+    }
+   ]
+  },
+  {
+   "title": "Multi-day trek legs",
+   "body": [
+    {
+     "t": "Each day's leg gets the same treatment: routed path, climb, two times. The trek becomes a chain of honest days."
+    }
+   ]
+  },
+  {
+   "title": "Winter daylight discipline",
+   "body": [
+    {
+     "t": "Short days punish optimistic estimates. Naismith plus a headtorch margin is the winter rule this planner makes easy to obey."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The Naismith classic",
+   "body": [
+    {
+     "t": "10 miles, 2,000 ft of ascent: flat time at 3 mph = 3 h 20 min; climb allowance = 30 min per 1,000 ft = 1 h; total ≈ 4 h 20 min. The formula is from 1892 and still embarrasses optimistic apps."
+    }
+   ]
+  },
+  {
+   "label": "Example · The metric twin",
+   "body": [
+    {
+     "t": "15 km with 800 m of climb: 15 ÷ 5 km/h = 3 h, plus 800 m at 30 min per 300 m ≈ 1 h 20 min → ≈ 4 h 20 min. Different hills, same honest arithmetic."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Naismith's rule, tabulated",
+  "intro": "Time = distance at 3 mph (5 km/h) + 30 minutes per 1,000 ft (approx. 300 m) of ascent. Descents, rests and weather are yours to add.",
+  "columns": [
+   "Route",
+   "Flat time",
+   "Climb allowance",
+   "Naismith total"
+  ],
+  "rows": [
+   [
+    "6 mi, 1,000 ft climb",
+    "2 h 00 m",
+    "0 h 30 m",
+    "2 h 30 m"
+   ],
+   [
+    "10 mi, 2,000 ft climb",
+    "3 h 20 m",
+    "1 h 00 m",
+    "4 h 20 m"
+   ],
+   [
+    "12 mi, 3,000 ft climb",
+    "4 h 00 m",
+    "1 h 30 m",
+    "5 h 30 m"
+   ],
+   [
+    "15 km, 800 m climb",
+    "3 h 00 m",
+    "1 h 20 m",
+    "4 h 20 m"
+   ],
+   [
+    "20 km, 1,200 m climb",
+    "4 h 00 m",
+    "2 h 00 m",
+    "6 h 00 m"
+   ]
+  ],
+  "note": "Naismith assumed a fit walker on decent ground. Your measured pace from the pace calculator is the correction your plans deserve."
+ },
+ "faq": [
+  [
+   "What is Naismith's rule?",
+   "William Naismith's 1892 rule of thumb: allow one hour for every 3 miles (5 km) forward, plus half an hour for every 1,000 ft (300 m) of ascent. This planner shows its estimate beside the router's so you can judge both."
+  ],
+  [
+   "Which time should I trust?",
+   "The one your own history validates. Walk a known route, compare both estimates with your actual time, and plan with the winner — the tools give you the comparison."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Trails have conditions instead of traffic; neither estimate knows about today's mud, snow or your knee."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "Trails wind further still. The planner routes on the trail network's data, which is the distance your legs will meet."
+  ],
+  [
+   "Can route results change over time?",
+   "Paths are re-routed and terrain data improves; re-plan a route rather than trusting last year's export."
+  ],
+  [
+   "Where does the climb figure come from?",
+   "Terrain (elevation) data sampled along the routed path, summed over its rises. It is a model of the hill, not a survey of it."
+  ],
+  [
+   "Does descent cost time?",
+   "Naismith's original rule ignores gentle descents and modern walkers often add a little for steep ones. The estimates shown keep the classic form so they stay comparable."
+  ],
+  [
+   "Can I add a summit or a pub as a waypoint?",
+   "Yes — any point on the way becomes a waypoint, and the totals re-plan around your priorities, sacred or otherwise."
+  ],
+  [
+   "The router's time is much lower than Naismith's.",
+   "Routers assume steady movement on mapped paths; Naismith prices the climbing. On flat routes they converge; in the hills the gap is the lesson."
+  ],
+  [
+   "What if a path is missing from the data?",
+   "The router cannot use what the open map does not know. Local knowledge and recent guidebooks outrank any planner where they disagree."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Your measured speed lives in the "
+  },
+  {
+   "t": "Hiking Pace Calculator",
+   "l": "/tools/hiking-pace-calculator"
+  },
+  {
+   "t": ", the no-map version of the estimate is the "
+  },
+  {
+   "t": "Hiking Time Calculator",
+   "l": "/tools/hiking-time-calculator"
+  },
+  {
+   "t": ", and rides get the same treatment in the "
+  },
+  {
+   "t": "Cycling Route Planner",
+   "l": "/tools/cycling-route-planner"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner"
+ ]
+}

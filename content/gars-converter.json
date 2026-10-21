@@ -1,0 +1,193 @@
+{
+ "slug": "gars-converter",
+ "primary_keyword": "GARS Converter",
+ "secondary_keywords": [
+  "gars",
+  "global area reference system",
+  "gars grid"
+ ],
+ "title": "GARS Converter: Global Area Reference System",
+ "description": "Convert between coordinates and GARS references with the GARS Converter — the coarse global grid used in aviation and planning contexts. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, GARS divides the world into 30-minute cells — each roughly 55 km tall — addressed by a compact designator, so a search area can be spoken over a radio without a single decimal.",
+ "quick_answer": "The GARS Converter converts between map coordinates and Global Area Reference System references — the coarse global grid of 30-minute cells, subdivided into 15- and 5-minute areas, used in some aviation and planning contexts. Enter coordinates and read the cell designator — an area reference that survives radios and whiteboards.",
+ "steps_intro": "Areas, not points — GARS names the neighbourhood any point lives in:",
+ "use_cases": [
+  {
+   "title": "Search and rescue planning",
+   "body": [
+    {
+     "t": "GARS was designed for area referencing in joint operations — cells let teams divide a search map by spoken designators. This converter bridges those designators and the coordinates your other tools use."
+    }
+   ]
+  },
+  {
+   "title": "Aviation and exercise documents",
+   "body": [
+    {
+     "t": "Planning papers referencing GARS cells become mappable once converted — the cell's corner coordinates feed the "
+    },
+    {
+     "t": "Coordinate Bounding Box Generator",
+     "l": "/tools/coordinate-bounding-box-generator"
+    },
+    {
+     "t": " directly."
+    }
+   ]
+  },
+  {
+   "title": "Area briefings",
+   "body": [
+    {
+     "t": "“The cell containing…” is a complete briefing reference at GARS's grain — coarser than MGRS, deliberately, for area-scale talk."
+    }
+   ]
+  },
+  {
+   "title": "Grid-system literacy",
+   "body": [
+    {
+     "t": "Comparing GARS (area cells) with MGRS (point precision) teaches what grid design is for. The "
+    },
+    {
+     "t": "MGRS Converter",
+     "l": "/tools/mgrs-converter"
+    },
+    {
+     "t": " is the precise sibling."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The cell ladder",
+   "body": [
+    {
+     "t": "30-minute cell → four 15-minute quadrants → nine 5-minute keypad areas per quadrant. Each step divides the spoken area by four or nine — the designator lengthens as the area shrinks, the universal grid bargain."
+    }
+   ]
+  },
+  {
+   "label": "Example · Why coarse is the feature",
+   "body": [
+    {
+     "t": "A 30′ cell at the equator spans about 55 × 55 km. Nobody navigates to a point with GARS — they assign, brief and search areas with it. Judging it by point standards misses its purpose entirely."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "GARS structure",
+  "intro": "The system's skeleton — bands, cells and subdivisions.",
+  "columns": [
+   "Level",
+   "Size",
+   "Designator grows by"
+  ],
+  "rows": [
+   [
+    "Global bands",
+    "Longitudinal bands numbered from the date line; latitudinal bands lettered from the South Pole",
+    "The cell's base name"
+   ],
+   [
+    "Cell",
+    "30′ × 30′",
+    "—"
+   ],
+   [
+    "Quadrant",
+    "15′ × 15′",
+    "One digit (1–4)"
+   ],
+   [
+    "Keypad area",
+    "5′ × 5′",
+    "One digit (1–9, keypad layout)"
+   ]
+  ],
+  "note": "GARS is a US DoD standard (NGA) for area referencing. This converter supports interoperability and learning; operational use follows official publications and tools."
+ },
+ "faq": [
+  [
+   "Is this an official DoD tool?",
+   "No — it is an independent converter implementing the published GARS structure for planning support and interoperability. Official operations use authorised NGA tools and current publications."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84 coordinates, the reference frame GARS itself is defined over."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "GARS references name areas, not points — decimal thinking does not apply. Precision inside a cell belongs to coordinates or MGRS."
+  ],
+  [
+   "Can I copy the result into GIS software?",
+   "Cell corners convert to coordinates and paste as extents; designators travel as labels. GIS layers for GARS exist in defence GIS ecosystems."
+  ],
+  [
+   "GARS versus MGRS?",
+   "Area versus point: GARS tops out at 5′ areas (~9 km); MGRS refines to metres. Different jobs — search management versus position reporting."
+  ],
+  [
+   "Why the keypad layout?",
+   "The 3×3 subdivision mirrors a phone keypad so designators can be spoken and remembered — human factors engineered into a grid."
+  ],
+  [
+   "Polar handling?",
+   "Latitudinal bands cap at the poles in the standard's scheme; the converter follows the published banding rather than inventing polar cells."
+  ],
+  [
+   "Cell containing a coordinate — or all cells in an area?",
+   "Point-to-cell here; tiling an area with cells is a GIS operation the corners from this converter can seed."
+  ],
+  [
+   "Historical references?",
+   "GARS is a modern (2000s) standard — older documents use other area systems (GEOREF among them), each with its own converter logic."
+  ],
+  [
+   "Can a designator be wrong but plausible?",
+   "Yes — neighbouring cells differ by one character. Cross-check by converting back to coordinates and glancing at the map, the grid-user's standing habit."
+  ],
+  [
+   "Radio pronunciation?",
+   "Designators are read character by character in operations — another reason the system favours short, unambiguous strings."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Point precision: the "
+  },
+  {
+   "t": "MGRS Converter",
+   "l": "/tools/mgrs-converter"
+  },
+  {
+   "t": "; British areas: the "
+  },
+  {
+   "t": "British National Grid Helper",
+   "l": "/tools/bng-converter"
+  },
+  {
+   "t": "; cells as boxes: the "
+  },
+  {
+   "t": "Coordinate Bounding Box Generator",
+   "l": "/tools/coordinate-bounding-box-generator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-destination-calculator",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator"
+ ]
+}

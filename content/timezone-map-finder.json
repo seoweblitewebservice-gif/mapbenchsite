@@ -1,0 +1,173 @@
+{
+ "slug": "timezone-map-finder",
+ "primary_keyword": "Timezone Map Finder",
+ "secondary_keywords": [
+  "timezone map",
+  "timezone by location",
+  "what timezone is this"
+ ],
+ "title": "Timezone Map Finder: Zone for Any Point",
+ "description": "Resolve any point on the map to its IANA timezone with the Timezone Map Finder — name and local offset context in one click. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, clicking either side of a state line in the US Midwest can flip the zone name under your cursor — the map makes the invisible border of time visible.",
+ "quick_answer": "The Timezone Map Finder resolves any point to its IANA timezone name and local offset context. Click the map or search a place and read the zone identity — the authoritative-shaped answer (America/Chicago, Europe/Berlin) that software, calendars and conversions all ultimately need.",
+ "steps_intro": "Time zones are borders you cannot see. This map draws them by the click:",
+ "use_cases": [
+  {
+   "title": "Getting the exact zone name",
+   "body": [
+    {
+     "t": "Systems want IANA names, not 'Central-ish'. Click the place, copy the name — the "
+    },
+    {
+     "t": "Timezone Converter",
+     "l": "/tools/timezone-converter"
+    },
+    {
+     "t": " consumes it from there."
+    }
+   ]
+  },
+  {
+   "title": "Border verification",
+   "body": [
+    {
+     "t": "A property near a zone line gets its zone from its point, not its postal town — the classic Indiana and panhandle puzzles, settled per click."
+    }
+   ]
+  },
+  {
+   "title": "Data QA on coordinates",
+   "body": [
+    {
+     "t": "Testing a dataset's zone column against the map's resolution catches the swapped and stale entries."
+    }
+   ]
+  },
+  {
+   "title": "Travel curiosity",
+   "body": [
+    {
+     "t": "Where exactly does the clock change on this drive? Click along the route until the name flips — that is the spot."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The name is the answer",
+   "body": [
+    {
+     "t": "IANA names encode history (America/Indiana/Indianapolis exists because Indiana's rules needed their own file). The finder returns the specific name, not the continental approximation."
+    }
+   ]
+  },
+  {
+   "label": "Example · Ocean clicks",
+   "body": [
+    {
+     "t": "Sea points resolve to ocean zones in the tz geography — often Etc/GMT bands. The finder reports them as such; ships additionally keep their own conventions."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the click returns",
+  "intro": "The identity card of a point's time.",
+  "columns": [
+   "Field",
+   "Meaning"
+  ],
+  "rows": [
+   [
+    "IANA name",
+    "The zone's rulebook identity — what software uses"
+   ],
+   [
+    "Current offset",
+    "UTC difference right now, DST applied"
+   ],
+   [
+    "Local context",
+    "The point's current clock reading"
+   ],
+   [
+    "Border behaviour",
+    "Clicks metres apart can differ — that is the truth, not a glitch"
+   ]
+  ],
+  "note": "Resolution follows the tz database's boundary geography. Political changes to zones land in the database first; this finder inherits its freshness."
+ },
+ "faq": [
+  [
+   "Is DST included?",
+   "Yes — the offset context applies the zone's current rules, and the zone name identifies the rulebook for any other date."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — click or search anywhere; your location is optional and never required."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Zone boundaries are political artefacts; sources update at different speeds after a legislature moves a line."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "My town straddles the line.",
+   "Then two clicks give two zones, and both are right — addresses take their zone from their point."
+  ],
+  [
+   "What is an IANA name?",
+   "The Internet Assigned Numbers Authority timezone database's naming — Continent/City form — the identifiers every operating system and calendar shares."
+  ],
+  [
+   "Uninhabited points?",
+   "Antarctic stations take zones of their supply countries or UTC conventions in the database; the finder reports the record."
+  ],
+  [
+   "Historical zones?",
+   "Names retire as rules merge; current geography is this finder's job. Archives live in the database's history files."
+  ],
+  [
+   "Accuracy of the boundary?",
+   "As good as the tz geography — excellent in settled areas, approximate in a few disputed or remote borderlands, where two countries' clicks can disagree honestly."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Your own zone: "
+  },
+  {
+   "t": "What Time Zone Am I In",
+   "l": "/tools/what-timezone-am-i-in"
+  },
+  {
+   "t": "; the US view: the "
+  },
+  {
+   "t": "US Time Zone Map",
+   "l": "/tools/us-time-zone-map"
+  },
+  {
+   "t": "; offsets: "
+  },
+  {
+   "t": "UTC Offset by Coordinates",
+   "l": "/tools/utc-offset-by-coordinates"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location"
+ ]
+}

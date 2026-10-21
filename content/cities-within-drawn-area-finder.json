@@ -1,0 +1,193 @@
+{
+ "slug": "cities-within-drawn-area-finder",
+ "primary_keyword": "Cities Within a Drawn Area Finder",
+ "secondary_keywords": [
+  "places inside polygon",
+  "cities in drawn area",
+  "towns within shape",
+  "polygon place search"
+ ],
+ "title": "Cities Within a Drawn Area Finder",
+ "description": "List the cities and towns inside any polygon you draw with the Cities Within a Drawn Area Finder — OpenStreetMap places, point-in-polygon. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a polygon drawn around the Isle of Wight returns the island's towns — Newport, Ryde, Cowes — and nothing from the mainland: the boundary you drew is the whole rule.",
+ "quick_answer": "The Cities Within a Drawn Area Finder lists the cities and towns OpenStreetMap records inside a polygon you draw on the map. Click three corners, press the button, and browse places sorted by distance from the shape's centre — the shape-based answer circles cannot give along coasts, valleys and borders.",
+ "steps_intro": "Circles are lazy shapes. When the real boundary is a coastline or a county line, draw it:",
+ "use_cases": [
+  {
+   "title": "Territory and coverage research",
+   "body": [
+    {
+     "t": "A sales territory drawn along real boundaries — a river, a ridge, a motorway — contains a specific set of towns. This finder names them, ready for the "
+    },
+    {
+     "t": "Closest Facility Finder",
+     "l": "/tools/closest-facility-finder"
+    },
+    {
+     "t": " to assign."
+    }
+   ]
+  },
+  {
+   "title": "Relocation shortlists",
+   "body": [
+    {
+     "t": "Draw the commuter shed you actually mean — not a circle that includes the sea — and get the towns inside it as your search list."
+    }
+   ]
+  },
+  {
+   "title": "Event and service planning",
+   "body": [
+    {
+     "t": "Which communities fall inside a proposed zone, a festival footprint or a consultation area? The polygon decides, and the list is the working document."
+    }
+   ]
+  },
+  {
+   "title": "Geography coursework",
+   "body": [
+    {
+     "t": "Regions are arguments. Drawing one and listing its settlements makes the argument concrete — and shows how a boundary change moves towns in and out."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · An island polygon",
+   "body": [
+    {
+     "t": "Trace the Isle of Wight's coast and the finder returns the island's towns, sorted from the shape's centre — Newport near the middle of the list's geography, the mainland nowhere. Islands are the cleanest demonstration that the polygon, not a radius, is doing the work."
+    }
+   ]
+  },
+  {
+   "label": "Example · A cape polygon",
+   "body": [
+    {
+     "t": "Draw around Cape Cod and the list is the Cape's own towns — Barnstable, Falmouth, out to Provincetown — while a circle of similar size centred mid-Cape would also claim mainland towns across the water. Same centre, different rule, different answer."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Shape or circle — which finder?",
+  "intro": "Two ways to ask 'what is inside', with different honest uses. This page is the shape column.",
+  "columns": [
+   "Question",
+   "Circle (radius)",
+   "Drawn polygon (this tool)"
+  ],
+  "rows": [
+   [
+    "Boundary follows coast/roads?",
+    "No",
+    "Yes — you draw it"
+   ],
+   [
+    "Data source",
+    "Place dataset within radius",
+    "OpenStreetMap place nodes"
+   ],
+   [
+    "Sorted by",
+    "Distance from centre",
+    "Distance from shape's centre"
+   ],
+   [
+    "Best for",
+    "Quick reach screens",
+    "Real territories and regions"
+   ],
+   [
+    "Edge cases",
+    "Sea and borders included silently",
+    "Exactly the boundary drawn"
+   ],
+   [
+    "Tool",
+    "Cities Within a Radius",
+    "This page"
+   ]
+  ],
+  "note": "Membership is decided point-in-polygon against the place's recorded point — a town whose point sits just outside your line is out, however much of it spills in."
+ },
+ "faq": [
+  [
+   "How is 'inside' decided?",
+   "Point-in-polygon: each OpenStreetMap place has a recorded point (its centre node), and the finder tests that point against your drawn shape. The boundary is the whole rule."
+  ],
+  [
+   "Which places count?",
+   "Cities and towns as OpenStreetMap records them. Very small settlements may be recorded as villages or hamlets and can fall outside the place classes this finder lists — coverage follows the OSM dataset's richness in that region."
+  ],
+  [
+   "Why did a town I expected not appear?",
+   "Three honest causes: its OSM point sits outside your line, it is recorded under a different place class, or the dataset has it under a variant name. Redraw slightly wider and check the map before concluding."
+  ],
+  [
+   "Can the shape have many corners?",
+   "Yes — trace coasts and borders with as many clicks as the boundary deserves. More corners, closer fit; the centre and sorting update with the shape."
+  ],
+  [
+   "Is a radius the same as driving distance?",
+   "Neither appears here: membership is geometric, not travelled. For road reach from a centre, use the Drive Time Map."
+  ],
+  [
+   "Can I use this for service-area planning?",
+   "Yes — it is one of the honest ways to define a service area: draw the real boundary, list the settlements inside, and plan against names rather than impressions."
+  ],
+  [
+   "Are map measurements legal survey measurements?",
+   "The polygon is drawn at map accuracy for research and planning. Legal boundaries come from deeds and survey, not from a drawn shape."
+  ],
+  [
+   "Can I draw around a whole county or region?",
+   "Yes — bigger shapes are just more corners. Very large polygons return longer lists; the sorting by distance from the centre keeps the heart of the region at the top."
+  ],
+  [
+   "Why is the list sorted from the centre?",
+   "Because region questions are usually centre-out: the towns nearest the shape's middle matter first. The Center of Polygon Finder computes that middle explicitly."
+  ],
+  [
+   "Does it include villages?",
+   "The finder lists the place classes it is built for — cities and towns in the OpenStreetMap data. A settlement recorded only as a village may not appear; the dataset's local richness decides."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The circle-based cousin is "
+  },
+  {
+   "t": "Cities Within a Radius",
+   "l": "/tools/cities-within-radius"
+  },
+  {
+   "t": "; the drawn shape's own middle is found by "
+  },
+  {
+   "t": "Center of Polygon Finder",
+   "l": "/tools/center-of-polygon"
+  },
+  {
+   "t": "; and its area is measured by the "
+  },
+  {
+   "t": "Acreage Map Calculator",
+   "l": "/tools/acreage-map-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "acreage-map-calculator",
+  "acres-to-hectares-converter",
+  "acres-to-square-feet-converter",
+  "buffer-zone-map",
+  "center-of-polygon",
+  "circle-area-from-radius"
+ ]
+}

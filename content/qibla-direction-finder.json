@@ -1,0 +1,29 @@
+{
+ "slug": "qibla-direction-finder",
+ "primary_keyword": "Qibla Direction Finder",
+ "secondary_keywords": [
+  "qibla",
+  "qibla direction",
+  "direction to mecca",
+  "kaaba direction"
+ ],
+ "title": null,
+ "description": null,
+ "updated": "October 2026",
+ "summary_sentence": null,
+ "quick_answer": null,
+ "steps_intro": null,
+ "use_cases": null,
+ "examples": null,
+ "popular_table": null,
+ "faq": [],
+ "related_prose": null,
+ "more_tools": [
+  "airport-distance-calculator",
+  "airport-midpoint-by-coordinates",
+  "airport-route-finder",
+  "closest-facility-finder",
+  "compass-bearing-visualizer",
+  "competitor-distance-map"
+ ]
+}

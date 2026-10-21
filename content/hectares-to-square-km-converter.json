@@ -1,0 +1,199 @@
+{
+ "slug": "hectares-to-square-km-converter",
+ "primary_keyword": "Hectares to Square Kilometres Converter",
+ "secondary_keywords": [
+  "hectares to square kilometres converter online",
+  "free hectares to square kilometres converter",
+  "hectares to square kilometres converter calculator",
+  "hectares to square kilometres converter tool",
+  "how to use hectares to square kilometres converter"
+ ],
+ "title": "Hectares to Square Kilometres Converter",
+ "description": "Convert hectares to square kilometres with the Hectares to Square Kilometres Converter — divide by 100, exactly, with references. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 259-hectare forest is 2.59 km² — which happens to be almost exactly the 640-acre US section wearing metric clothes.",
+ "quick_answer": "The Hectares to Square Kilometres Converter divides hectares by one hundred — because a square kilometre contains one hundred hectares — and shows the result with the land sizes that make it intuitive. Enter hectares and read km²: the step up the metric ladder from farm scale to landscape scale.",
+ "steps_intro": "The cleanest conversion in land measure — but the scale change deserves a guided step:",
+ "use_cases": [
+  {
+   "title": "Landscape and regional reporting",
+   "body": [
+    {
+     "t": "Fires, floods and forests are reported in km² at news scale and hectares at farm scale. This conversion lets one dataset speak both registers."
+    }
+   ]
+  },
+  {
+   "title": "Protected-area and park figures",
+   "body": [
+    {
+     "t": "Reserves publish in both units depending on the country. Converting a 45,000-hectare park (450 km²) makes its size comparable across borders."
+    }
+   ]
+  },
+  {
+   "title": "Watershed and planning work",
+   "body": [
+    {
+     "t": "Catchments are km² objects built from hectare parcels. The ÷100 step is crossed constantly in planning documents — make it exact and boring."
+    }
+   ]
+  },
+  {
+   "title": "Teaching the metric ladder",
+   "body": [
+    {
+     "t": "m² → hectares → km² is a ladder of 10,000 then 100. This page is the top rung, with the "
+    },
+    {
+     "t": "Hectares to Acres Converter",
+     "l": "/tools/hectares-to-acres-converter"
+    },
+    {
+     "t": " as the sideways step."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The section in metric",
+   "body": [
+    {
+     "t": "640 acres = 258.9988 ha = 2.59 km². The US survey grid and the metric ladder describe the same square mile; the two conversions in sequence prove it."
+    }
+   ]
+  },
+  {
+   "label": "Example · A national park unit",
+   "body": [
+    {
+     "t": "10,000 hectares = 100 km² — a square 10 × 10 km. Round hectares become round kilometres only at the hundred marks, which is the ladder's charm."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Hectares to square kilometres",
+  "intro": "Exact ÷100 conversions for the sizes that recur in landscape work.",
+  "columns": [
+   "Hectares",
+   "Square kilometres",
+   "Acres (for reference)"
+  ],
+  "rows": [
+   [
+    "10",
+    "0.10",
+    "24.71"
+   ],
+   [
+    "50",
+    "0.50",
+    "123.55"
+   ],
+   [
+    "100",
+    "1.00",
+    "247.11"
+   ],
+   [
+    "250",
+    "2.50",
+    "617.76"
+   ],
+   [
+    "500",
+    "5.00",
+    "1,235.53"
+   ],
+   [
+    "1,000",
+    "10.00",
+    "2,471.05"
+   ],
+   [
+    "10,000",
+    "100.00",
+    "24,710.54"
+   ]
+  ],
+  "note": "No rounding hides anywhere in the hectares-to-km² column — the units were designed for each other."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Square kilometres from hectares, by the exact relation 100 ha = 1 km². It also frames the result with acres for readers who think in them."
+  ],
+  [
+   "Is it free to use?",
+   "Yes — instant, local and account-free."
+  ],
+  [
+   "How accurate is the result?",
+   "Completely exact: the conversion is a decimal shift between two metric units defined from the same metre."
+  ],
+  [
+   "How do I go back to hectares?",
+   "Multiply km² by 100. A 7.5 km² estate is 750 hectares."
+  ],
+  [
+   "Why does the metric system need both units?",
+   "Scale. Farms read naturally in hectares (tens), landscapes in km² (hundreds and thousands). The units overlap politely at 100 ha = 1 km²."
+  ],
+  [
+   "What about square metres?",
+   "1 ha = 10,000 m² and 1 km² = 1,000,000 m². The ladder runs m² ×10,000 → ha ×100 → km²."
+  ],
+  [
+   "Can I use this for service-area planning?",
+   "Only as unit translation for areas measured elsewhere — a service area's km² from its hectares, for a report that uses the larger unit."
+  ],
+  [
+   "How many hectares is New York's Central Park?",
+   "Central Park is about 341 hectares — 3.41 km². Urban landmarks are handy scale checks for both units."
+  ],
+  [
+   "Is 1 km² exactly 100 hectares?",
+   "Yes, exactly — both are defined from the metre, which is the quiet advantage of the metric ladder."
+  ],
+  [
+   "Why do wildfire reports switch units?",
+   "Scale again: a 40-hectare fire is a farm story; a 40,000-hectare fire (400 km²) is a regional one. Reports pick the unit that keeps the number readable."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Acres are one step sideways in the "
+  },
+  {
+   "t": "Hectares to Acres Converter",
+   "l": "/tools/hectares-to-acres-converter"
+  },
+  {
+   "t": "; the reverse of this page starts from the "
+  },
+  {
+   "t": "Acres to Hectares Converter",
+   "l": "/tools/acres-to-hectares-converter"
+  },
+  {
+   "t": "; and drawn areas in either unit come from the "
+  },
+  {
+   "t": "Acreage Map Calculator",
+   "l": "/tools/acreage-map-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "circle-area-from-radius",
+  "circle-circumference-from-radius",
+  "cities-within-drawn-area-finder",
+  "crop-row-length-calculator",
+  "customer-radius-area-calculator",
+  "delivery-radius-area-calculator"
+ ]
+}

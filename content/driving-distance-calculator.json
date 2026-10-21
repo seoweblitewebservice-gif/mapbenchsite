@@ -1,0 +1,204 @@
+{
+ "slug": "driving-distance-calculator",
+ "primary_keyword": "Driving Distance Calculator",
+ "secondary_keywords": [
+  "driving distance",
+  "road distance",
+  "driving distance calculator online"
+ ],
+ "title": "Driving Distance Calculator: Road Miles and Time",
+ "description": "Calculate driving distance and duration along real roads with the Driving Distance Calculator — open routing data, miles and km. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, two cities 190 miles apart as the crow flies routinely measure 215 or more by road — this calculator is the one that reports the road's answer.",
+ "quick_answer": "The Driving Distance Calculator measures the distance and duration of a journey along roads, using open routing data. Set an origin and a destination and read the road distance in miles and kilometres with the driving time — the figure fuel, cost and day plans should all be built from.",
+ "steps_intro": "The road's answer, not the crow's. Two points:",
+ "use_cases": [
+  {
+   "title": "Trip and fuel planning",
+   "body": [
+    {
+     "t": "Road distance is the input every other trip tool wants: the "
+    },
+    {
+     "t": "Fuel Cost Calculator",
+     "l": "/tools/fuel-cost-calculator"
+    },
+    {
+     "t": ", the "
+    },
+    {
+     "t": "Driving Days Calculator",
+     "l": "/tools/driving-days-calculator"
+    },
+    {
+     "t": " and the "
+    },
+    {
+     "t": "Cost Per Mile Calculator",
+     "l": "/tools/cost-per-mile-calculator"
+    },
+    {
+     "t": " all start here."
+    }
+   ]
+  },
+  {
+   "title": "Mileage claims",
+   "body": [
+    {
+     "t": "The reimbursable distance is the driven one. Measure it here and the claim matches the journey."
+    }
+   ]
+  },
+  {
+   "title": "Comparing route options",
+   "body": [
+    {
+     "t": "Shortest versus fastest is a real trade on many pairs. Read both figures and choose with the trade priced."
+    }
+   ]
+  },
+  {
+   "title": "Delivery and service rounds",
+   "body": [
+    {
+     "t": "A round's total road distance is its cost skeleton — drivers, fuel and time all hang off this number."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Why road wins",
+   "body": [
+    {
+     "t": "New York to Boston is approx. 190.2 miles straight-line. The road journey is materially longer — interstates are direct by road standards, not by geometry's. Every plan built on 190 meets reality at the first fuel stop."
+    }
+   ]
+  },
+  {
+   "label": "Example · The winding premium",
+   "body": [
+    {
+     "t": "Mountain and coastal pairs show the biggest gaps between straight-line and road figures. The ratio between the two — visible by comparing this page with Distance Between Two Places — is a fingerprint of the terrain."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Straight-line versus road thinking",
+  "intro": "Why this page exists: the two distances answer different questions. Reading guide for the figures you will meet.",
+  "columns": [
+   "Question",
+   "Straight-line tool",
+   "This driving tool"
+  ],
+  "rows": [
+   [
+    "Distance basis",
+    "Great circle over the surface",
+    "Road network route"
+   ],
+   [
+    "Typical figure",
+    "Always the smaller",
+    "Longer by the network's shape"
+   ],
+   [
+    "Use it for",
+    "Geography, radio, flight baselines",
+    "Fuel, claims, days, ETAs"
+   ],
+   [
+    "Changes when",
+    "Never — geometry is fixed",
+    "Roads open, close and re-route"
+   ],
+   [
+    "Time included?",
+    "No",
+    "Yes — a duration estimate"
+   ]
+  ],
+  "note": "Durations here are routing estimates without live traffic. The distance is the stable part of the answer; treat the time as a plan, not a promise."
+ },
+ "faq": [
+  [
+   "Does it include live traffic?",
+   "No. The duration is the routing engine's estimate for the road network, without current traffic. Add your own margin for the hour you will actually travel."
+  ],
+  [
+   "Why is road distance longer than straight-line distance?",
+   "Roads follow terrain, property and history; the straight line follows geometry. Bridges, passes and junctions all add their share."
+  ],
+  [
+   "Can route results change over time?",
+   "Slightly, as the open road data improves and roads themselves change. The pair you measured last year deserves a fresh run before this year's trip."
+  ],
+  [
+   "Which routing data does it use?",
+   "Open routing over OpenStreetMap data — the same open network this site's other routing tools use, so results are consistent across them."
+  ],
+  [
+   "Shortest or fastest — which route is measured?",
+   "The router returns its route for the pair; where alternatives matter, compare the figures with the journey's purpose: miles for cost, time for arrival."
+  ],
+  [
+   "Can I use the distance for a mileage claim?",
+   "Yes — it is the driven distance, which is what claims reimburse. Keep the pair and date with the claim."
+  ],
+  [
+   "Why does my car show a different distance?",
+   "Odometers, route choices and data snapshots differ at the margins. A percent or two is normal; a tenth is a different route."
+  ],
+  [
+   "Does it measure for trucks or cars?",
+   "The network routing is car-oriented open data. Truck restrictions (weight, height, hazmat) are a specialist layer this page does not apply."
+  ],
+  [
+   "Can I measure a round trip?",
+   "Route out and back: one-way distance × 2 unless the return differs — measure the return pair separately if the roads force a different way back."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Feed the distance into the "
+  },
+  {
+   "t": "Fuel Cost Calculator",
+   "l": "/tools/fuel-cost-calculator"
+  },
+  {
+   "t": " and the "
+  },
+  {
+   "t": "Driving Days Calculator",
+   "l": "/tools/driving-days-calculator"
+  },
+  {
+   "t": "; turn it into an arrival with the "
+  },
+  {
+   "t": "ETA Calculator",
+   "l": "/tools/eta-calculator"
+  },
+  {
+   "t": "; and contrast it with the straight line in "
+  },
+  {
+   "t": "Distance Between Two Places",
+   "l": "/tools/distance-between-two-places"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "cycling-calories-distance",
+  "cycling-route-planner",
+  "cycling-speed-calculator",
+  "cycling-time-calculator",
+  "delivery-cost-per-km-calculator",
+  "delivery-fee-by-distance-calculator"
+ ]
+}

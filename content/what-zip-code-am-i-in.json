@@ -1,0 +1,193 @@
+{
+ "slug": "what-zip-code-am-i-in",
+ "primary_keyword": "What ZIP Code Am I In?",
+ "secondary_keywords": [
+  "what zip code am i in",
+  "my zip code",
+  "zip code by location",
+  "zip code lookup",
+  "zcta lookup"
+ ],
+ "title": "What ZIP Code Am I In? Address ZIP vs ZCTA",
+ "description": "Answer 'What ZIP Code Am I In?' two honest ways — the address postcode, and separately the Census ZCTA containing the point, with ACS context. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a point can carry a mailing ZIP that differs from its Census ZCTA — and this page shows both, labelled, because mailing truth and statistical truth are two true things.",
+ "quick_answer": "What ZIP Code Am I In? shows the address postcode when available and, separately, the Census ZIP Code Tabulation Area containing the point — with a highlighted ZCTA boundary and recent ACS context. Search an address or use your location and compare the two labels, each doing its own job.",
+ "steps_intro": "Two ZIP-shaped answers, kept separate on purpose:",
+ "use_cases": [
+  {
+   "title": "Mailing versus analysis",
+   "body": [
+    {
+     "t": "Mail needs USPS's ZIP; demographics need Census's ZCTA. This page hands you both, labelled — the "
+    },
+    {
+     "t": "ZIP Code Boundary Viewer",
+     "l": "/tools/zip-code-boundary-viewer"
+    },
+    {
+     "t": " draws the postal side."
+    }
+   ]
+  },
+  {
+   "title": "Address verification",
+   "body": [
+    {
+     "t": "A form's ZIP and the point's ZCTA disagreeing slightly is normal geography, not an error — the page explains your own address to you."
+    }
+   ]
+  },
+  {
+   "title": "Research area definition",
+   "body": [
+    {
+     "t": "ZCTAs are how the Census publishes ZIP-scale statistics. Defining a study area starts with knowing which ZCTA truly contains your points."
+    }
+   ]
+  },
+  {
+   "title": "Delivery sanity",
+   "body": [
+    {
+     "t": "Carriers route by USPS ZIP. When a delivery misroutes, comparing the two labels is the first diagnostic."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Why they differ",
+   "body": [
+    {
+     "t": "USPS ZIPs are delivery routes — lines and points that change for mail efficiency. ZCTAs are Census-built areas approximating ZIP coverage for statistics. Neighbours mostly, twins never."
+    }
+   ]
+  },
+  {
+   "label": "Example · The ACS layer",
+   "body": [
+    {
+     "t": "The ZCTA view joins recent ACS estimates for the area — population-scale context for the exact geography researchers actually use."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "ZIP versus ZCTA, side by side",
+  "intro": "The distinction this page exists to honour.",
+  "columns": [
+   "",
+   "USPS ZIP Code",
+   "Census ZCTA"
+  ],
+  "rows": [
+   [
+    "Owner",
+    "U.S. Postal Service",
+    "U.S. Census Bureau"
+   ],
+   [
+    "Nature",
+    "Delivery routes (can be points or lines)",
+    "Statistical areas with boundaries"
+   ],
+   [
+    "Use it for",
+    "Mailing and delivery",
+    "Demographics and analysis"
+   ],
+   [
+    "Boundary map",
+    "No official public polygon",
+    "Yes — highlighted on this page"
+   ],
+   [
+    "Changes",
+    "Whenever mail needs it to",
+    "On Census geography cycles"
+   ]
+  ],
+  "note": "Most addresses' ZIP and ZCTA match numerically. Where they differ, neither is wrong — they are answers to different questions, and this page refuses to merge them."
+ },
+ "faq": [
+  [
+   "Is a Census ZCTA the same thing as a USPS ZIP Code?",
+   "No — cousins, not twins. ZIPs are USPS delivery routes; ZCTAs are Census statistical areas built to approximate them. This page shows both separately for exactly that reason."
+  ],
+  [
+   "Which value should I use for mailing?",
+   "The USPS ZIP — the address postcode shown. Mail follows the Postal Service's geography, full stop."
+  ],
+  [
+   "Why might the postcode and ZCTA differ?",
+   "Because routes and areas diverge at edges: a ZIP can serve addresses across a ZCTA boundary, and some ZIPs (PO boxes, single facilities) have no ZCTA at all."
+  ],
+  [
+   "Where do the demographic statistics come from?",
+   "The Census Bureau's American Community Survey — recent estimates for the ZCTA, shown as estimates with their vintage."
+  ],
+  [
+   "Can I search or use GPS?",
+   "Both — address search, GPS, coordinates and clicks all resolve to the point whose two labels are then read."
+  ],
+  [
+   "PO Box ZIPs?",
+   "They exist as USPS ZIPs with no territory; the ZCTA side of the page will show the surrounding area's tabulation instead — a perfect specimen of the distinction."
+  ],
+  [
+   "New ZIP codes?",
+   "USPS creates and retires ZIPs continuously; Census ZCTAs update on Census cycles. A fresh ZIP may briefly outrun its ZCTA twin."
+  ],
+  [
+   "ZIP+4?",
+   "The +4 refines delivery segments within USPS data — beyond this page's scope; USPS's own lookup owns that grain."
+  ],
+  [
+   "Is the ZCTA boundary official for anything legal?",
+   "It is official Census geography for statistics. Legal and mailing questions belong to their own authorities (USPS, county, courts)."
+  ],
+  [
+   "ZIP for a highway point?",
+   "No address, maybe no ZIP — ZIPs serve addresses and boxes. The ZCTA side may still answer for the area; the pair shows which kind of nothing you have."
+  ],
+  [
+   "Uniquely-coded facilities?",
+   "Some single-building ZIPs (a famous HQ, a university) have no ZCTA — the page's two labels diverge exactly as designed there."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Boundaries drawn: the "
+  },
+  {
+   "t": "ZIP Code Boundary Viewer",
+   "l": "/tools/zip-code-boundary-viewer"
+  },
+  {
+   "t": "; up the stack: "
+  },
+  {
+   "t": "What County Am I In",
+   "l": "/tools/what-county-am-i-in"
+  },
+  {
+   "t": "; lists: the "
+  },
+  {
+   "t": "Postal Code Centroid Calculator",
+   "l": "/tools/postal-code-centroid-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder"
+ ]
+}

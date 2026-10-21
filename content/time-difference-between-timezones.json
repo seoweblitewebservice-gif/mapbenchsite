@@ -1,0 +1,199 @@
+{
+ "slug": "time-difference-between-timezones",
+ "primary_keyword": "Time Difference Between Time Zones",
+ "secondary_keywords": [
+  "time difference between time zones online",
+  "free time difference between time zones",
+  "time difference between time zones calculator",
+  "time difference between time zones tool",
+  "how to calculate time difference between time zones"
+ ],
+ "title": "Time Difference Between Time Zones, Explained",
+ "description": "Read the time difference between time zones for any pair of places with the Time Difference Between Time Zones page — offsets, DST and all. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, New York and London sit 5 hours apart almost all year — but during the changeover weeks the gap becomes 4 or 6, which is when 'the usual difference' quietly breaks calls.",
+ "quick_answer": "The Time Difference Between Time Zones page computes the clock difference between two places for the date you care about — not the textbook difference, the real one, with each side's daylight-saving state applied. Pick the pair and read how far apart their clocks are, and when it next changes.",
+ "steps_intro": "Differences are dates wearing numbers. Compute yours for the actual day:",
+ "use_cases": [
+  {
+   "title": "Call and message timing",
+   "body": [
+    {
+     "t": "Before scheduling across zones, know today's gap — the "
+    },
+    {
+     "t": "Meeting Time Planner",
+     "l": "/tools/meeting-time-planner"
+    },
+    {
+     "t": " builds the overlap from it."
+    }
+   ]
+  },
+  {
+   "title": "Travel jet-lag arithmetic",
+   "body": [
+    {
+     "t": "The body adjusts roughly an hour a day; the difference tells you how many days of fog to budget after landing."
+    }
+   ]
+  },
+  {
+   "title": "Broadcast and launch timing",
+   "body": [
+    {
+     "t": "A 9 a.m. announcement lands at different local hours per market. The difference table is the media plan's first row."
+    }
+   ]
+  },
+  {
+   "title": "Family geography intuition",
+   "body": [
+    {
+     "t": "“How far ahead is she?” — the grandparent question, answered for today's date rather than a memorised season."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 5-hour rule with exceptions",
+   "body": [
+    {
+     "t": "New York–London: 5 hours in summer (EDT vs BST), 5 in winter (EST vs GMT), but 4 or 6 during the spring and autumn mismatch weeks when one side has changed and the other has not."
+    }
+   ]
+  },
+  {
+   "label": "Example · The same-direction hemispheres",
+   "body": [
+    {
+     "t": "London–Sydney swings between 9 and 11 hours across the year because both sides observe DST in opposite seasons — the difference itself has seasons."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Classic pairs, typical gaps",
+  "intro": "Standard-season differences under current rules — the page computes your pair for your date, changeover weeks included.",
+  "columns": [
+   "Pair",
+   "Winter gap",
+   "Summer gap",
+   "Note"
+  ],
+  "rows": [
+   [
+    "New York – London",
+    "5 hours",
+    "5 hours",
+    "4 or 6 in changeover weeks"
+   ],
+   [
+    "New York – Los Angeles",
+    "3 hours",
+    "3 hours",
+    "The stable domestic classic"
+   ],
+   [
+    "London – Mumbai",
+    "5:30",
+    "4:30",
+    "India keeps no DST"
+   ],
+   [
+    "Chicago – Berlin",
+    "7 hours",
+    "7 hours",
+    "Both change, near-synchronised"
+   ],
+   [
+    "London – Sydney",
+    "11 hours",
+    "9 hours",
+    "Opposite DST seasons swing it"
+   ]
+  ],
+  "note": "Gaps are absolute differences in local clocks. 'Ahead' and 'behind' follow the date line's geography — the converter page renders an actual time when direction matters."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "The difference in local clock time between two zones or places for a given date — with each side's DST state applied for that date."
+  ],
+  [
+   "Do I need an account?",
+   "No — pair in, difference out."
+  ],
+  [
+   "Can I use the result for professional work?",
+   "Yes for scheduling and planning; it applies the tz database's rules, the same foundation calendars use."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — places are chosen, never detected."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Zones resolve through the tz database and open geocoding; other tools may apply older rule vintages and differ during freshly changed rules."
+  ],
+  [
+   "Why isn't the difference constant?",
+   "Daylight saving — regions change on different dates or not at all, so gaps breathe by an hour through the year. Any source quoting one eternal number is quoting a season."
+  ],
+  [
+   "Half-hour differences?",
+   "Real and handled — India, Iran historically, parts of Australia: gaps like 5:30 and 3:30 are normal arithmetic here."
+  ],
+  [
+   "Ahead or behind?",
+   "The converter shows rendered times when direction matters; the difference alone is symmetric, geography is not."
+  ],
+  [
+   "The date line pairs?",
+   "Some pairs differ by more than 12 hours of clock while being 'one day apart'. The computation reports clock difference; the calendar consequence shows in the converter."
+  ],
+  [
+   "Why do some pairs never change?",
+   "When both sides keep identical DST behaviour (or neither observes), the gap is constant — New York–Los Angeles among the stable classics."
+  ],
+  [
+   "Ships and flights use what?",
+   "Aviation and maritime run on UTC internally and local at the edges — the difference this page computes is the local-facing one passengers live by."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Convert a time: the "
+  },
+  {
+   "t": "Timezone Converter",
+   "l": "/tools/timezone-converter"
+  },
+  {
+   "t": "; overlaps: the "
+  },
+  {
+   "t": "Working Hours Overlap Calculator",
+   "l": "/tools/working-hours-overlap-calculator"
+  },
+  {
+   "t": "; rules: the "
+  },
+  {
+   "t": "Daylight Saving Checker",
+   "l": "/tools/daylight-saving-checker"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-validator",
+  "air-quality-location",
+  "area-code-finder",
+  "batch-geocoder",
+  "canadian-postal-code-meeting-point",
+  "cities-in-a-county-finder"
+ ]
+}

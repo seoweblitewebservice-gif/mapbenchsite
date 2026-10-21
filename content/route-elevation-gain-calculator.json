@@ -1,0 +1,188 @@
+{
+ "slug": "route-elevation-gain-calculator",
+ "primary_keyword": "Route Elevation Gain Calculator",
+ "secondary_keywords": [
+  "elevation gain calculator route",
+  "route climb calculator",
+  "total ascent route",
+  "elevation gain map"
+ ],
+ "title": "Route Elevation Gain Calculator: Total Climb",
+ "description": "Measure a route's total elevation gain and loss with the Route Elevation Gain Calculator — sampled along the real path, with walking time. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a rolling 14-mile route whose map distance looks gentle can carry 1,800 ft of total climb — the number the legs discover if the planner does not.",
+ "quick_answer": "The Route Elevation Gain Calculator routes between places, samples terrain at 40 points along the path, and reports total gain and loss, the elevation range, and a walking time. Add start and destination and read the climb — the figure deciding whether a route is a stroll or a day.",
+ "steps_intro": "Distance flatters; climb confesses. Measure the confession:",
+ "use_cases": [
+  {
+   "title": "Walk and hike grading",
+   "body": [
+    {
+     "t": "Gain is the grade. Two 10-mile routes with 300 ft and 2,300 ft of climb are different species — this page names which is which. Times follow the "
+    },
+    {
+     "t": "Hiking Route Planner with Elevation",
+     "l": "/tools/hiking-route-planner-with-elevation"
+    },
+    {
+     "t": " rule."
+    }
+   ]
+  },
+  {
+   "title": "Cycling route honesty",
+   "body": [
+    {
+     "t": "Riders plan in vertical metres per 10 km. The gain total converts a pretty loop into a rated one before the group commits."
+    }
+   ]
+  },
+  {
+   "title": "Running training loads",
+   "body": [
+    {
+     "t": "Hill work is prescribed in climb, not miles. Log the gain beside the distance and the training diary balances."
+    }
+   ]
+  },
+  {
+   "title": "Accessibility and effort checks",
+   "body": [
+    {
+     "t": "Total climb is an effort fact for wheelchairs, prams and tired knees — worth knowing before the route, not during it."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The deceptive valley route",
+   "body": [
+    {
+     "t": "A river-valley path undulates: fifty small rises of 30 ft each sum to 1,500 ft of gain on a route no single hill advertises. Sampling along the path is what catches the sum — endpoints alone never would."
+    }
+   ]
+  },
+  {
+   "label": "Example · Gain is not net height",
+   "body": [
+    {
+     "t": "Start and finish at the same elevation on a loop: net change zero, total gain perhaps 2,000 ft. Legs pay the gain, not the net."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading a gain figure",
+  "intro": "Orientation for the totals this calculator returns — gain per distance is the effort dialect walkers and riders share.",
+  "columns": [
+   "Gain per 10 miles",
+   "Character",
+   "Typical country"
+  ],
+  "rows": [
+   [
+    "Under 250 ft",
+    "Flat",
+    "Plains, fens, canals"
+   ],
+   [
+    "250–750 ft",
+    "Rolling",
+    "Low farmland hills"
+   ],
+   [
+    "750–1,500 ft",
+    "Hilly",
+    "Downs, foothills"
+   ],
+   [
+    "1,500–3,000 ft",
+    "Mountainous walking",
+    "Uplands and passes"
+   ],
+   [
+    "Over 3,000 ft",
+    "A serious day",
+    "High mountains"
+   ]
+  ],
+  "note": "Gain is sampled from terrain data at 40 points along the path, so tiny undulations between samples are smoothed away — the figure is an honest model, not a survey."
+ },
+ "faq": [
+  [
+   "How accurate is the gain?",
+   "It is computed from terrain data sampled at 40 points along the routed path. Longer routes smooth small bumps; the total is a sound planning figure, not a surveyor's audit."
+  ],
+  [
+   "Walking only?",
+   "The time estimate is a walking one (Naismith-flavoured), but the gain and loss describe the terrain for any traveller — cyclists and runners use the same numbers."
+  ],
+  [
+   "Does the route include live traffic?",
+   "No. Mountains are indifferent to traffic."
+  ],
+  [
+   "Why is road distance longer than straight-line?",
+   "The path sampled is the routed one — the climb belongs to the ground you will actually cross."
+  ],
+  [
+   "Can route results change over time?",
+   "Terrain data improves in resolution over the years; a re-run can refine a figure slightly. The hill itself is patient."
+  ],
+  [
+   "Gain and loss are both shown — why?",
+   "Descents cost knees and time too, and on a point-to-point the loss can exceed the gain. Both totals describe the day."
+  ],
+  [
+   "What is elevation range?",
+   "Highest minus lowest point on the route — the vertical span, distinct from the accumulated gain. A high plateau scores range without much gain."
+  ],
+  [
+   "Is descent ever the bigger number?",
+   "On point-to-point routes off a plateau, yes — loss can exceed gain, and your knees will file the report either way."
+  ],
+  [
+   "Does gain include the little dips?",
+   "Sampling at 40 points captures the shape at that resolution; gravel-path ripples below it are smoothed, honestly and by design."
+  ],
+  [
+   "How does gain relate to calories?",
+   "Climbing is work against gravity; more gain, more energy. The cycling calorie model elsewhere prices distance only — add your own hill surcharge."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The planner built around climb is the "
+  },
+  {
+   "t": "Hiking Route Planner with Elevation",
+   "l": "/tools/hiking-route-planner-with-elevation"
+  },
+  {
+   "t": "; surfaces join in the "
+  },
+  {
+   "t": "Route Surface and Road Type Finder",
+   "l": "/tools/route-surface-and-road-type-finder"
+  },
+  {
+   "t": "; and loops with climb are the "
+  },
+  {
+   "t": "Running Route Loop Generator",
+   "l": "/tools/running-route-loop-generator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "branch-travel-cost-calculator",
+  "cost-per-kilometer-calculator",
+  "cost-per-mile-calculator",
+  "courier-distance-charge-calculator",
+  "cycling-calories-distance",
+  "cycling-route-planner"
+ ]
+}

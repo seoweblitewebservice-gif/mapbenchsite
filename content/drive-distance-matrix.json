@@ -1,0 +1,180 @@
+{
+ "slug": "drive-distance-matrix",
+ "primary_keyword": "Drive Distance Matrix Helper",
+ "secondary_keywords": [
+  "drive distance matrix",
+  "road distance matrix",
+  "od matrix"
+ ],
+ "title": "Drive Distance Matrix Helper: Road OD Tables",
+ "description": "Build a pairwise table then validate the legs that matter by road with the Drive Distance Matrix Helper — the practical OD matrix workflow. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a four-hub US table (New York, Chicago, Dallas, Denver) starts life as straight-line kilometres here — then only the two or three legs the decision actually rides on get routed by road.",
+ "quick_answer": "The Drive Distance Matrix Helper supports the working method behind origin–destination tables: build the full pairwise matrix fast from straight-line distances, then validate the important legs with real road routing. It keeps a big OD job honest without routing all hundreds of pairs before you know which ones matter.",
+ "steps_intro": "Route everything and you will wait forever; route nothing and you will guess. The working compromise:",
+ "use_cases": [
+  {
+   "title": "Logistics OD studies",
+   "body": [
+    {
+     "t": "Planners screening depot networks need the shape of the whole table first. The straight-line matrix ranks the options; road validation then prices the finalists — the same two-step the "
+    },
+    {
+     "t": "Closest Facility Finder",
+     "l": "/tools/closest-facility-finder"
+    },
+    {
+     "t": " uses for single origins."
+    }
+   ]
+  },
+  {
+   "title": "Territory design",
+   "body": [
+    {
+     "t": "A rep-to-rep matrix exposes the pair of territories quietly sharing one corridor. Rebalance on the matrix, not on postcodes and optimism."
+    }
+   ]
+  },
+  {
+   "title": "Academic transport coursework",
+   "body": [
+    {
+     "t": "OD matrices are a course staple. Generating the baseline table and then defending which legs deserved routing is exactly the judgement the exercise is testing."
+    }
+   ]
+  },
+  {
+   "title": "Event and tour logistics",
+   "body": [
+    {
+     "t": "Multi-city tours live or die on the longest legs. The matrix finds them in one glance — sort by distance and the problem children identify themselves."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Four US hubs",
+   "body": [
+    {
+     "t": "New York, Chicago, Dallas, Denver: the longest straight-line leg is New York–Denver at approx. 2,619 km, the shortest Dallas–Denver at 1,066 km. A planner routes those two by road first — the extremes bound the whole study."
+    }
+   ]
+  },
+  {
+   "label": "Example · When the ranking flips",
+   "body": [
+    {
+     "t": "Chicago–Dallas (1,295 km) and Chicago–Denver (1,478 km) rank one way on the sphere; mountain roads can narrow that gap by road. That is precisely a 'validate this leg' outcome — the helper exists to catch it."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Starter matrix: four US hubs (km)",
+  "intro": "The straight-line first pass this workflow generates, on the site model — the same table shape the road validation then refines leg by leg.",
+  "columns": [
+   "From \\ To",
+   "New York",
+   "Chicago",
+   "Dallas",
+   "Denver"
+  ],
+  "rows": [
+   [
+    "New York",
+    "0",
+    "1,144",
+    "2,206",
+    "2,619"
+   ],
+   [
+    "Chicago",
+    "1,144",
+    "0",
+    "1,295",
+    "1,478"
+   ],
+   [
+    "Dallas",
+    "2,206",
+    "1,295",
+    "0",
+    "1,066"
+   ],
+   [
+    "Denver",
+    "2,619",
+    "1,478",
+    "1,066",
+    "0"
+   ]
+  ],
+  "note": "Symmetric with a zero diagonal, as any distance matrix must be — if yours is not, a coordinate is wrong. Road legs replace individual cells; the rest of the table stays the screening baseline."
+ },
+ "faq": [
+  [
+   "What is an OD matrix?",
+   "An origin–destination matrix: a table whose rows and columns are the same places, and whose cells hold the distance (or time) between each pair. It is the standard input to routing, territory and network-design work."
+  ],
+  [
+   "Why not route every pair by road?",
+   "Cost and time grow with the square of the list, and most cells never influence a decision. The professional pattern is a straight-line screen first, road truth for the legs that matter."
+  ],
+  [
+   "Which legs deserve road validation?",
+   "The ones a decision rides on: the longest, the closest-ranked alternatives, and any pair separated by terrain, water or a known bottleneck."
+  ],
+  [
+   "Can I export the matrix?",
+   "Yes — the pairwise table can be taken out as data for the spreadsheet or model where the study continues."
+  ],
+  [
+   "Is the straight-line table useless for road planning then?",
+   "No — it is the lower bound every road figure must exceed, and a ranking device. A road result shorter than its straight-line cell is impossible, which makes the table an error check as well."
+  ],
+  [
+   "How large a matrix is practical?",
+   "Tens of places are comfortable. Hundreds belong in GIS or a routing API batch — this helper is the screening and validation bench, not the refinery."
+  ],
+  [
+   "Does it handle one-way systems or truck restrictions?",
+   "No. Road validation here is standard routing; specialist restrictions belong in dedicated fleet tools after the screening stage."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The map-first sibling is the "
+  },
+  {
+   "t": "Distance Matrix Calculator",
+   "l": "/tools/distance-matrix-calculator"
+  },
+  {
+   "t": "; the pasted-coordinates version is the "
+  },
+  {
+   "t": "Coordinate Distance Table Generator",
+   "l": "/tools/coordinate-distance-table-generator"
+  },
+  {
+   "t": "; and single journeys by road belong to the "
+  },
+  {
+   "t": "Driving Distance Calculator",
+   "l": "/tools/driving-distance-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "closest-facility-finder",
+  "compass-bearing-visualizer",
+  "competitor-distance-map",
+  "coordinate-distance-table-generator",
+  "crow-flies-distance",
+  "distance-between-cities"
+ ]
+}

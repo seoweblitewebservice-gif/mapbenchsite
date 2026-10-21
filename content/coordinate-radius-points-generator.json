@@ -1,0 +1,183 @@
+{
+ "slug": "coordinate-radius-points-generator",
+ "primary_keyword": "Coordinate Radius Points Generator",
+ "secondary_keywords": [
+  "coordinate radius points generator online",
+  "free coordinate radius points generator",
+  "coordinate radius points generator calculator",
+  "coordinate radius points generator tool",
+  "how to calculate coordinate radius points generator"
+ ],
+ "title": "Coordinate Radius Points Generator: Ring Points",
+ "description": "Generate points evenly spaced on a circle around a centre with the Coordinate Radius Points Generator — bearings and radius on the sphere. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, 4 points at 10 km around Times Square land due north at 40.8479, −73.9855, east at 40.7579, −73.8668, and their southern and western twins — a survey ring in one generation.",
+ "quick_answer": "The Coordinate Radius Points Generator places points evenly on a circle of your chosen radius around a centre coordinate, computing each by its bearing on the sphere. Enter centre, radius and count and read the ring — for search patterns, sampling designs and coverage checks.",
+ "steps_intro": "Circles of points, placed by bearing and distance:",
+ "use_cases": [
+  {
+   "title": "Search and sampling patterns",
+   "body": [
+    {
+     "t": "Even rings are how systematic coverage starts — search sectors, soil sampling, signal checks. The "
+    },
+    {
+     "t": "Destination Point Calculator",
+     "l": "/tools/coordinate-destination-calculator"
+    },
+    {
+     "t": " is the single-point engine underneath."
+    }
+   ]
+  },
+  {
+   "title": "Coverage and range checks",
+   "body": [
+    {
+     "t": "Ring points sample a service's edge honestly: test each ring point's containment rather than trusting the brochure's circle."
+    }
+   ]
+  },
+  {
+   "title": "Geofence design",
+   "body": [
+    {
+     "t": "Approximating a circular zone with polygon vertices for systems that only speak polygons — more points, truer circle."
+    }
+   ]
+  },
+  {
+   "title": "Teaching bearings",
+   "body": [
+    {
+     "t": "Eight points at 45° steps make compass directions concrete coordinates — the class exercise that finally lands."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The cardinal ring",
+   "body": [
+    {
+     "t": "Centre Times Square, radius 10 km, 4 points: N 40.8479, −73.9855 · E 40.7579, −73.8668 · S 40.6681, −73.9855 · W 40.7579, −74.1042 (computed on the sphere). Note east and west share the centre's latitude almost exactly — parallels again."
+    }
+   ]
+  },
+  {
+   "label": "Example · More points, rounder circle",
+   "body": [
+    {
+     "t": "As a polygon, 8 points read as an octagon, 32 as a convincing circle, 64 as cartography. The generator's counts serve the polygon use directly."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "How ring points are computed",
+  "intro": "Each point is an independent great-circle projection — no flat shortcuts.",
+  "columns": [
+   "Choice",
+   "Effect"
+  ],
+  "rows": [
+   [
+    "Count",
+    "Angular spacing (360 ÷ count) and polygon fidelity"
+   ],
+   [
+    "Radius",
+    "Great-circle distance from centre to every point"
+   ],
+   [
+    "Start bearing",
+    "Rotates the whole ring — align a point to a road or wind"
+   ],
+   [
+    "Centre",
+    "Any WGS84 point; rings near poles behave (bearings still work)"
+   ]
+  ],
+  "note": "Ring points are destinations at evenly spaced bearings — the Destination Point Calculator's arithmetic, fanned out. On the sphere, the ring is a true small circle, not a projected pretence."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Coordinates of points at even bearing intervals on a circle of chosen radius around a centre, each projected on the sphere by the destination formula."
+  ],
+  [
+   "Do I need an account?",
+   "No — centre, radius and count in; ring out."
+  ],
+  [
+   "Can I use the result for professional work?",
+   "For sampling designs, coverage checks and geofence drafts, yes — the geometry is the sphere's own. Legal boundaries remain surveyed instruments' work."
+  ],
+  [
+   "Which datum do these coordinate tools use?",
+   "WGS84."
+  ],
+  [
+   "Do more decimal places always mean better accuracy?",
+   "Ring points inherit the centre's accuracy. Their relative geometry is exact regardless — a perfect circle around an approximate centre."
+  ],
+  [
+   "Can I choose the starting bearing?",
+   "The ring's rotation is yours to set where the tool exposes it — align point one to the feature that matters."
+  ],
+  [
+   "Miles or kilometres?",
+   "Both, per site convention."
+  ],
+  [
+   "Huge radii?",
+   "The sphere handles them — a 5,000 km 'ring' is a small circle around the antipode's neighbourhood, geometrically sound and practically a thought experiment."
+  ],
+  [
+   "Points inside the circle too?",
+   "Concentric rings: generate at fractions of the radius and merge — the sampling-grid pattern built from circles."
+  ],
+  [
+   "Polygon export?",
+   "The points list in order is the polygon — copy it into your GIS or GeoJSON by hand for small counts."
+  ],
+  [
+   "Spacing between neighbours?",
+   "Chord distance follows from the radius and count (2R sin(π/count)) — the coverage question's real number, computable from the same inputs."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The engine: the "
+  },
+  {
+   "t": "Destination Point From Bearing Calculator",
+   "l": "/tools/coordinate-destination-calculator"
+  },
+  {
+   "t": "; the envelope: the "
+  },
+  {
+   "t": "Bounding Box Calculator",
+   "l": "/tools/bounding-box-calculator"
+  },
+  {
+   "t": "; offsets: the "
+  },
+  {
+   "t": "Coordinate Offset Calculator",
+   "l": "/tools/coordinate-offset-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "city-from-coordinates",
+  "coordinate-bounding-box-generator",
+  "coordinate-converter",
+  "coordinate-format-detector",
+  "coordinate-mean-calculator",
+  "coordinate-offset-calculator"
+ ]
+}

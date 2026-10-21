@@ -1,0 +1,199 @@
+{
+ "slug": "delivery-radius-checker",
+ "primary_keyword": "Delivery Radius Checker",
+ "secondary_keywords": [
+  "delivery radius",
+  "delivery area map",
+  "service radius"
+ ],
+ "title": "Delivery Radius Checker: See Your Zone",
+ "description": "Set your hub, set a delivery radius, and see which areas fall inside with the Delivery Radius Checker — before you promise coverage. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, a 5-mile ring around a depot includes the suburb at 4.6 miles and excludes the one at 5.4 — the checker turns 'we probably cover that' into a visible line.",
+ "quick_answer": "The Delivery Radius Checker draws your delivery radius around your hub on a live map so you can see which areas fall inside the service zone. Locate the depot, set the distance, and review the coverage against the neighbourhoods and postcodes you serve — before a customer tests it.",
+ "steps_intro": "A zone nobody has seen is a promise nobody has checked. Draw it:",
+ "use_cases": [
+  {
+   "title": "Answering 'do you deliver to…?'",
+   "body": [
+    {
+     "t": "The boundary question, answered by a picture instead of a postcode debate. If the address is inside the ring, the promise is honest; the "
+    },
+    {
+     "t": "Distance Between ZIP Codes",
+     "l": "/tools/distance-between-zip-codes"
+    },
+    {
+     "t": " tool settles the exact figure."
+    }
+   ]
+  },
+  {
+   "title": "Setting the radius in the first place",
+   "body": [
+    {
+     "t": "Watch the ring grow over the real map — the river suburb it suddenly includes, the industrial estate it just misses — and choose the number with your eyes open."
+    }
+   ]
+  },
+  {
+   "title": "Training drivers and staff",
+   "body": [
+    {
+     "t": "A drawn zone briefs a new driver in seconds and ends the 'I thought we covered that street' conversation before it starts."
+    }
+   ]
+  },
+  {
+   "title": "Auditing platform zones",
+   "body": [
+    {
+     "t": "Marketplace platforms impose their own radii. Overlay yours here and see where theirs over-promises your kitchen."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The edge case",
+   "body": [
+    {
+     "t": "Two suburbs, one either side of a 5-mile line at 4.6 and 5.4 miles out. The checker includes one and excludes the other — and the honest business then decides whether the line or the road should rule, with the map open."
+    }
+   ]
+  },
+  {
+   "label": "Example · The river problem",
+   "body": [
+    {
+     "t": "A ring drawn across a river claims the far bank at 2 miles straight-line — a 6-mile drive. The checker shows the geometry; the drive-time check (linked below) shows the journey. Use both before publishing the zone."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What a delivery radius commits",
+  "intro": "The area inside common delivery radii (A = πr²) — the operational weight behind the simple line this checker draws.",
+  "columns": [
+   "Radius",
+   "Area inside (mi²)",
+   "Area inside (km²)",
+   "Typical operation"
+  ],
+  "rows": [
+   [
+    "1 mi",
+    "3.14",
+    "8.14",
+    "Bike and walking couriers"
+   ],
+   [
+    "2 mi",
+    "12.57",
+    "32.55",
+    "Dense urban food delivery"
+   ],
+   [
+    "3 mi",
+    "28.27",
+    "73.22",
+    "Urban and inner-suburban"
+   ],
+   [
+    "5 mi",
+    "78.54",
+    "203.42",
+    "Suburban standard"
+   ],
+   [
+    "8 mi",
+    "201.06",
+    "520.76",
+    "Wide suburban / small town"
+   ],
+   [
+    "10 mi",
+    "314.16",
+    "813.68",
+    "Rural hub with drivers"
+   ]
+  ],
+  "note": "'Typical operation' is a reading convention, not a rule — your roads, menu and margins set the real limit. Area math from the Delivery Radius Area Calculator."
+ },
+ "faq": [
+  [
+   "Drive time or radius — which should I publish?",
+   "Radius is simpler to explain; drive time is honester to experience. Many businesses draw the radius here for the promise, then sanity-check its far corners by road and trim exceptions manually."
+  ],
+  [
+   "Is a radius the same as driving distance?",
+   "No — the ring is straight-line geometry. A 5-mile ring contains places 8 road-miles away. The checker shows the promise; routing tools price the journey."
+  ],
+  [
+   "Can I use this for service-area planning?",
+   "Yes — it is the visual first pass of service planning. Follow it with population counts and road checks before the zone becomes a public promise."
+  ],
+  [
+   "Are map measurements legal survey measurements?",
+   "No, and they do not need to be: a delivery zone is a business policy drawn at map accuracy, not a legal boundary."
+  ],
+  [
+   "What if my zone should follow roads or a river?",
+   "Then a circle is the wrong shape — draw the real boundary as a polygon with the drawn-area tools and list the towns inside it."
+  ],
+  [
+   "Can I check a customer's address precisely?",
+   "Set the hub, set the radius, and read the map at the address — inside or outside is visible. For a numeric answer, measure hub-to-address directly."
+  ],
+  [
+   "Miles or kilometres?",
+   "Both are supported; US operations usually publish miles, European ones kilometres. The ring does not care which the policy is written in."
+  ],
+  [
+   "Can I check more than one depot?",
+   "Draw each depot's ring in turn and compare where they overlap — the overlap is double-covered ground your rota can exploit or your zones should partition."
+  ],
+  [
+   "The ring includes an area we would never serve. Now what?",
+   "That is the checker doing its job: either trim the radius, carve a polygon zone instead, or publish the exception. All three beat discovering it via a complaint."
+  ],
+  [
+   "Does it work for collection rounds as well?",
+   "Yes — any 'within X of base' promise draws the same ring: collections, callouts, service engineer patches."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Price the same zone's area in the "
+  },
+  {
+   "t": "Delivery Radius Area Calculator",
+   "l": "/tools/delivery-radius-area-calculator"
+  },
+  {
+   "t": ", draw it precisely in the "
+  },
+  {
+   "t": "Map Radius Tool",
+   "l": "/tools/map-radius"
+  },
+  {
+   "t": ", and replace the circle with road truth in the "
+  },
+  {
+   "t": "Drive Time Map",
+   "l": "/tools/drive-time-map"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "acreage-map-calculator",
+  "acres-to-hectares-converter",
+  "acres-to-square-feet-converter",
+  "buffer-zone-map",
+  "center-of-polygon",
+  "circle-area-from-radius"
+ ]
+}

@@ -1,0 +1,186 @@
+{
+ "slug": "postal-code-centroid-calculator",
+ "primary_keyword": "Postal Code Centroid Calculator",
+ "secondary_keywords": [
+  "postal code centroid",
+  "zip code center of gravity",
+  "meeting point zip codes",
+  "centre of postcodes"
+ ],
+ "title": "Postal Code Centroid Calculator: Center of Codes",
+ "description": "Find the centre of gravity of a list of ZIP or postal codes with the Postal Code Centroid Calculator — spherical centroid plus each code's distance. Free.",
+ "updated": "October 2026",
+ "summary_sentence": "For example, the centroid of ZIPs 10001 (New York), 60601 (Chicago) and 90210 (Beverly Hills) falls near 39.0, −94.8 in Missouri — the spherical centre of the three, computed by this page's method.",
+ "quick_answer": "The Postal Code Centroid Calculator finds the centre of gravity of a pasted list of ZIP or postal codes: the point on the sphere that minimises the average straight-line distance to all of them. Paste the codes, press find, and read the centre, its nearest place, and each code's distance.",
+ "steps_intro": "Meeting points for mailing lists, delivery territories and teams:",
+ "use_cases": [
+  {
+   "title": "Fair meeting points for a list",
+   "body": [
+    {
+     "t": "A team's ZIPs in, a centre out — the same spherical method as the "
+    },
+    {
+     "t": "Geographic Meeting Point Finder",
+     "l": "/tools/geographic-meeting-point-finder"
+    },
+    {
+     "t": ", fed by postcodes instead of pins."
+    }
+   ]
+  },
+  {
+   "title": "Territory and depot logic",
+   "body": [
+    {
+     "t": "A delivery list's centre of gravity is the depot candidate's starting point — distances per code come included for the feasibility argument."
+    }
+   ]
+  },
+  {
+   "title": "Event site shortlisting",
+   "body": [
+    {
+     "t": "Attendees' codes give the centre; venues near it minimise the group's average travel — fairness, computed."
+    }
+   ]
+  },
+  {
+   "title": "Data sanity checks",
+   "body": [
+    {
+     "t": "A list claiming to be 'Denver area' whose centroid lands in Kansas has a data problem. The centre is an audit with one number."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Three coasts, one centre",
+   "body": [
+    {
+     "t": "10001, 60601 and 90210 yield a centre near 39.0, −94.8 in Missouri — no attendee's home, everybody's compromise, and the arithmetic that the Geographic Center Finder celebrates at national scale."
+    }
+   ]
+  },
+  {
+   "label": "Example · Why not average the latitudes?",
+   "body": [
+    {
+     "t": "Flat averaging of lat/lon distorts near the poles and the date line. This calculator averages directions on the sphere (the 3D vector method), then converts back — the difference is small for one county, real for one continent."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The method, in one table",
+  "intro": "How the centre is computed — and what can tilt it.",
+  "columns": [
+   "Step",
+   "What happens"
+  ],
+  "rows": [
+   [
+    "Resolve codes",
+    "Each code resolves to its centroid point"
+   ],
+   [
+    "Convert",
+    "Points become 3D unit vectors on the sphere"
+   ],
+   [
+    "Average",
+    "Vectors are averaged and normalised — the spherical centre"
+   ],
+   [
+    "Report",
+    "Centre, nearest place, and each code's distance to it"
+   ],
+   [
+    "Tilts",
+    "A far-flung code pulls the centre honestly — outliers are data, not errors"
+   ]
+  ],
+  "note": "Postal centroids are themselves approximations of areas. The centre is exact for the points used, approximate for the territories they represent."
+ },
+ "faq": [
+  [
+   "How is the centre computed?",
+   "By the spherical (3D vector) average of the codes' centroid points — the point minimising average straight-line distance on the sphere — not by flat latitude/longitude averaging."
+  ],
+  [
+   "Which countries work?",
+   "ZIP and postal systems the resolver covers — US ZIPs are the home case; many other countries' postal codes resolve too, with coverage following the underlying open data."
+  ],
+  [
+   "Can I use the tool without sharing my precise location?",
+   "Yes — the codes are the only input."
+  ],
+  [
+   "Why might a boundary or place name look different elsewhere?",
+   "Postal centroid datasets differ by source and vintage; another resolver's point for the same code can sit a little apart, nudging the centre."
+  ],
+  [
+   "Does MapBench store my browser location?",
+   "No."
+  ],
+  [
+   "One code dominates my list — can I weight?",
+   "The centroid treats codes equally; repeat a code to weight it, or trim the list. The distances table shows each code's pull honestly."
+  ],
+  [
+   "The centre is in a lake or nowhere.",
+   "Centres are geometry, not venues. Treat the nearest place in the result as the practical meeting town."
+  ],
+  [
+   "Duplicate codes?",
+   "Fine — duplicates act as votes, which is sometimes exactly what attendance weighting should do."
+  ],
+  [
+   "Codes that fail to resolve?",
+   "They are reported rather than silently dropped, so your list's coverage is visible — check formats and country assumptions first."
+  ],
+  [
+   "Can I exclude outliers?",
+   "Trim the list and rerun — the centre's shift between runs is itself the outlier's measured pull. Deliberate, visible, honest."
+  ],
+  [
+   "Thousands of codes?",
+   "Paste in reasonable batches; the method scales, but a territory-scale job belongs in a GIS with this page's method as the sanity check."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Pin-shaped sibling: the "
+  },
+  {
+   "t": "Geographic Meeting Point Finder",
+   "l": "/tools/geographic-meeting-point-finder"
+  },
+  {
+   "t": "; single codes: "
+  },
+  {
+   "t": "What ZIP Code Am I In",
+   "l": "/tools/what-zip-code-am-i-in"
+  },
+  {
+   "t": "; centers: the "
+  },
+  {
+   "t": "Geographic Center Finder",
+   "l": "/tools/geographic-center-finder"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "address-to-coordinates",
+  "address-to-county-lookup",
+  "address-to-state-lookup",
+  "address-to-zip-code-lookup",
+  "address-validator",
+  "air-quality-location"
+ ]
+}
