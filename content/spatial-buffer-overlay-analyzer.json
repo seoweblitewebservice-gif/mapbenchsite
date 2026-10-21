@@ -8,17 +8,164 @@
   "what is within radius count",
   "Spatial Buffer &amp"
  ],
- "title": null,
- "description": null,
+ "title": "Spatial Buffer & Overlay Analyzer",
+ "description": "Run buffer and overlay analysis with the Spatial Buffer & Overlay Analyzer — what's within X miles, and what exactly is in there. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a 3-mile buffer around a proposed depot covers 28.3 square miles — and the overlay count of towns, schools and hospitals inside it is the site study's first exhibit.",
+ "quick_answer": "The Spatial Buffer & Overlay Analyzer performs the two GIS operations every site study starts with: buffer — everything within a set distance of a centre — and overlay — counting what falls inside. Set a centre and radius and read the counts of what the buffer contains.",
+ "steps_intro": "Buffer draws the circle; overlay counts its contents:",
+ "use_cases": [
+  {
+   "title": "Site selection studies",
+   "body": [
+    {
+     "t": "Candidate sites compared by what their buffers contain — population proxies, facilities, competitors' absence. The "
+    },
+    {
+     "t": "Service Coverage Gap Viewer",
+     "l": "/tools/service-coverage-gap"
+    },
+    {
+     "t": " checks the network view afterwards."
+    }
+   ]
+  },
+  {
+   "title": "Planning and impact statements",
+   "body": [
+    {
+     "t": "'Within 2 miles of the proposed site lie 3 schools and a hospital' is a buffer-overlay sentence — this tool produces it with the arithmetic shown."
+    }
+   ]
+  },
+  {
+   "title": "Environmental screening",
+   "body": [
+    {
+     "t": "Protected sites, water features and settlements within a works radius — the screening every assessment opens with."
+    }
+   ]
+  },
+  {
+   "title": "Teaching GIS thinking",
+   "body": [
+    {
+     "t": "Buffer and overlay are the two verbs of spatial analysis. This page lets students perform both before they meet the software that industrialises them."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Buffer growth is quadratic",
+   "body": [
+    {
+     "t": "Doubling the radius from 2 to 4 miles quadruples the buffered ground (12.6 → 50.3 sq mi) — and roughly quadruples everything counted in it. Radius choices are never casual."
+    }
+   ]
+  },
+  {
+   "label": "Example · Edge cases count honestly",
+   "body": [
+    {
+     "t": "A facility just outside the line is outside — overlay counts containment, not closeness. The professional habit is to report a second, wider buffer alongside, so edge sensitivity is visible rather than hidden."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Buffer sizes and their ground",
+  "intro": "The area each radius commands — the denominator of every count.",
+  "columns": [
+   "Buffer radius",
+   "Area",
+   "Typical study"
+  ],
+  "rows": [
+   [
+    "1 mi",
+    "3.14 sq mi",
+    "Neighbourhood impact"
+   ],
+   [
+    "2 mi",
+    "12.57 sq mi",
+    "Local screening"
+   ],
+   [
+    "3 mi",
+    "28.27 sq mi",
+    "Site catchments"
+   ],
+   [
+    "5 mi",
+    "78.54 sq mi",
+    "District studies"
+   ],
+   [
+    "10 mi",
+    "314.16 sq mi",
+    "Regional context"
+   ]
+  ],
+  "note": "Counts come from open map data (towns, schools, hospitals as recorded) — deep in mapped regions, thinner where mapping is sparse; the page reports the data's answer, not the world's census."
+ },
+ "faq": [
+  [
+   "What data gets counted?",
+   "Settlements and facilities in the open map record within the buffer — towns, schools, hospitals among them, as this page's tool describes. Record completeness varies by region."
+  ],
+  [
+   "Buffer around a point or a shape?",
+   "This analyzer buffers a centre point; buffers around lines and polygons are full-GIS operations built on the same principle."
+  ],
+  [
+   "Counts or lists?",
+   "The analysis reports counts for the study; the underlying places are the map's own records, explorable on the linked tools."
+  ],
+  [
+   "Overlapping buffers double-count?",
+   "Run separately, each buffer counts its own contents — a place between two sites appears in both studies, correctly for site comparison."
+  ],
+  [
+   "Drive-time buffers?",
+   "A refinement: equal-time shapes bend with roads. The circular buffer is the screening standard because it is reproducible by anyone, anywhere."
+  ],
+  [
+   "How big a radius is sane?",
+   "The study question decides: walking catchments in hundreds of metres, facility screening in miles. Absurd radii produce true but useless counts."
+  ],
+  [
+   "Can I analyse several centres?",
+   "Run each centre and compare tables — systematic comparison is the method; the tool keeps each run clean."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Coverage networks: the "
+  },
+  {
+   "t": "Service Coverage Gap Viewer",
+   "l": "/tools/service-coverage-gap"
+  },
+  {
+   "t": "; buffers drawn: the "
+  },
+  {
+   "t": "Buffer Zone Map",
+   "l": "/tools/buffer-zone-map"
+  },
+  {
+   "t": "; catchments: the "
+  },
+  {
+   "t": "Store Catchment Area Calculator",
+   "l": "/tools/store-catchment-area-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "acreage-map-calculator",
   "acres-to-hectares-converter",

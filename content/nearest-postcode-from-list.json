@@ -7,17 +7,154 @@
   "rank postcodes by distance",
   "postcode list distance"
  ],
- "title": null,
- "description": null,
+ "title": "Nearest Postcode From Your List Finder",
+ "description": "Find the nearest postcode from your own list to any point with the Nearest Postcode From Your List Finder — your candidates, ranked. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a depot choosing among its own candidate ZIPs — 02108, 20001, 60601, 90210 — for a Manhattan customer finds 02108 (Boston) nearest at 187.9 miles, because the list, not the world, is the candidate pool.",
+ "quick_answer": "The Nearest Postcode From Your List Finder takes a point and your own list of postcodes or ZIP codes and returns the nearest one on that list, with its distance. Paste the list, set the point, and read the winner — for routing work to your closest depot or clinic.",
+ "steps_intro": "Your candidates, the point's verdict:",
+ "use_cases": [
+  {
+   "title": "Depot and warehouse assignment",
+   "body": [
+    {
+     "t": "Every order gets the nearest stocking depot from your network's list — the assignment rule a spreadsheet VLOOKUP approximates and this tool computes properly, by distance on the sphere."
+    }
+   ]
+  },
+  {
+   "title": "Territory coverage checks",
+   "body": [
+    {
+     "t": "A customer's postcode not on any rep's list is an orphan. Run territory lists against demand points and the orphans list themselves. The territories themselves map well with the "
+    },
+    {
+     "t": "Voronoi Map Generator",
+     "l": "/tools/voronoi-map-generator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Clinic and service routing",
+   "body": [
+    {
+     "t": "Referrals go to the nearest of your facilities — the list is your facilities, the point is the patient, the answer is defensible because the geometry is shown."
+    }
+   ]
+  },
+  {
+   "title": "Franchise protection checks",
+   "body": [
+    {
+     "t": "A proposed site must sit a minimum distance from existing territories' postcodes — check the candidate against the protected list before the lawyers do."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Why 'from your list' matters",
+   "body": [
+    {
+     "t": "The world's nearest postcode to a point is a trivia answer. The nearest of YOUR postcodes is an operational one — the constraint is the entire tool. Boston's 02108 wins for Manhattan among the example's four candidates even though hundreds of nearer ZIPs exist off-list."
+    }
+   ]
+  },
+  {
+   "label": "Example · Centroid distances",
+   "body": [
+    {
+     "t": "Distances run point-to-centroid: each postcode stands at its area's centre. For big rural codes the centroid can sit miles from the address that matters — the method is stated so edge cases get human review, not blind trust."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "How the matching works",
+  "intro": "The honest machinery behind the winner.",
+  "columns": [
+   "Step",
+   "What happens"
+  ],
+  "rows": [
+   [
+    "Geocode the list",
+    "Each postcode resolves to its centroid coordinates"
+   ],
+   [
+    "Measure every candidate",
+    "Great-circle distance from your point to each centroid"
+   ],
+   [
+    "Rank and report",
+    "Nearest first, distances shown"
+   ],
+   [
+    "Ties and near-ties",
+    "Both shown — a 0.1-mile 'winner' is a coin flip, not a verdict"
+   ]
+  ],
+  "note": "Your list is processed for the match (the base FAQs cover where it goes — nowhere it should not). Postcode systems supported are those the tool's data covers; UK postcodes and US ZIPs are the home pair."
+ },
+ "faq": [
+  [
+   "US ZIPs or UK postcodes — both?",
+   "Both families are the tool's home ground, matched within whichever list you paste. Mixed lists rank together once each code resolves to its centroid."
+  ],
+  [
+   "What if a code on my list cannot be found?",
+   "It is reported as unmatched, not silently dropped — a list with a typo should shrink visibly, and the report keeps your count honest."
+  ],
+  [
+   "Nearest by road instead?",
+   "This finder ranks by straight-line (centroid) distance — the fast, explainable rule. Road-nearest is the routing family's different answer; for close calls, check the winner by road."
+  ],
+  [
+   "How many codes can the list hold?",
+   "Working lists of hundreds rank instantly; thousands remain practical in the browser. The tool is built for operational lists, not the national postcode file."
+  ],
+  [
+   "Multiple points at once?",
+   "One point per query here — the assignment question is per-customer by nature. Batch assignment belongs to a spreadsheet or GIS wearing this same distance rule."
+  ],
+  [
+   "Exact ties?",
+   "Equidistant candidates are both reported with their shared distance. Assignment policy (alphabetical? capacity?) is yours to apply on top of the honest tie."
+  ],
+  [
+   "Why not just use the single nearest postcode tool?",
+   "Because your network is the constraint. The generic nearest ignores your depots; this finder's list is the business logic, and the geometry serves it."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "All ZIPs in range: "
+  },
+  {
+   "t": "ZIP Codes Within Radius",
+   "l": "/tools/zip-codes-within-radius"
+  },
+  {
+   "t": "; territories: the "
+  },
+  {
+   "t": "Voronoi Map Generator",
+   "l": "/tools/voronoi-map-generator"
+  },
+  {
+   "t": "; lists by area: "
+  },
+  {
+   "t": "ZIP Codes by State, County & City",
+   "l": "/tools/zip-codes-by-state-county-city"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "australia-postcodes-by-state-suburb",
   "census-geography-finder",

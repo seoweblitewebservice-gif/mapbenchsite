@@ -8,17 +8,154 @@
   "geojson feature total checker tool",
   "how to calculate geojson feature total checker"
  ],
- "title": null,
- "description": null,
+ "title": "GeoJSON Feature Total Checker: As Promised?",
+ "description": "Check a GeoJSON file's feature total against what was promised with the GeoJSON Feature Total Checker — deliveries verified in seconds. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a supplier’s manifest promises 1,250 features and the delivered file totals 1,247 — three missing features found in seconds, before integration swallowed the discrepancy.",
+ "quick_answer": "The GeoJSON Feature Total Checker counts the features in a FeatureCollection or single-Feature input so you can check the total against what a delivery, an export job or a manifest claims. Paste the GeoJSON and compare — the acceptance test turning ‘looks about right’ into a number.",
+ "steps_intro": "Trust, but count:",
+ "use_cases": [
+  {
+   "title": "Delivery acceptance",
+   "body": [
+    {
+     "t": "Contracts and manifests promise feature counts. This check is the receiving dock’s scale — weigh every delivery before it enters your systems. The plain count itself lives at the "
+    },
+    {
+     "t": "GeoJSON Feature Counter",
+     "l": "/tools/geojson-feature-counter"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Export job verification",
+   "body": [
+    {
+     "t": "An ETL job logs ‘wrote 48,201 features’. Paste the output and verify the file agrees with the log — jobs lie most politely in their summaries."
+    }
+   ]
+  },
+  {
+   "title": "Truncation detection",
+   "body": [
+    {
+     "t": "Downloads cut mid-stream and APIs paginate silently. A total short of the source’s count is the truncation alarm."
+    }
+   ]
+  },
+  {
+   "title": "Round-trip testing",
+   "body": [
+    {
+     "t": "Convert out and back, then compare totals: format round-trips that quietly drop a feature fail this check, as they should."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The three missing features",
+   "body": [
+    {
+     "t": "1,250 promised, 1,247 delivered: the likeliest stories are null-geometry features filtered by an exporter, a pagination cap at a round number minus a hiccup, or a boundary clip. The check cannot say which — it guarantees the conversation starts from a fact."
+    }
+   ]
+  },
+  {
+   "label": "Example · More than promised",
+   "body": [
+    {
+     "t": "Totals can exceed the manifest too — a join that fanned out rows duplicates features wholesale. Over-delivery is also a discrepancy, and in spatial data usually the worse one."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "When totals disagree",
+  "intro": "The usual causes, ranked by how often they confess.",
+  "columns": [
+   "Symptom",
+   "Likely cause"
+  ],
+  "rows": [
+   [
+    "Short by a few",
+    "Filtered nulls or invalid geometries dropped on export"
+   ],
+   [
+    "Short by a round number",
+    "Pagination or a LIMIT clause somewhere upstream"
+   ],
+   [
+    "Over the promise",
+    "Join fan-out duplicating features"
+   ],
+   [
+    "Zero",
+    "Wrong file, empty export, or a geometry-only document"
+   ]
+  ],
+  "note": "The checker counts what is in the file — Features in a FeatureCollection, one for a lone Feature. What the file should contain is the manifest’s claim; the gap between them is the finding."
+ },
+ "faq": [
+  [
+   "What does it count, exactly?",
+   "Features — the members of a FeatureCollection’s features array, or a single Feature as one. The count is structural and total, ready to stand next to any claimed figure."
+  ],
+  [
+   "How is it different from the Feature Counter?",
+   "Same census, different job: the counter reports a number; this checker is framed for reconciliation — the number against a promise, with the discrepancy patterns interpreted."
+  ],
+  [
+   "Single Feature input?",
+   "Totals 1 — a valid delivery shape for single-object exchanges, checked as honestly as a million-feature collection."
+  ],
+  [
+   "What if the file is bare geometry?",
+   "Zero features — which against any positive promise is itself the discrepancy report: the exporter shipped geometry without its feature wrappers."
+  ],
+  [
+   "Can it find WHICH features are missing?",
+   "Counts prove existence of a gap, not identity. Diffing ids between manifest and file is the follow-up — feature id properties make it mechanical."
+  ],
+  [
+   "Duplicates counted?",
+   "Yes — every array member counts, duplicates included. A total can match while duplication and omission cancel out; id-level checks catch that darker case."
+  ],
+  [
+   "Does it validate the geometry?",
+   "No — a feature with broken coordinates still counts as a feature. Validation is a separate gate; the total is a census, not a health certificate."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The count itself: the "
+  },
+  {
+   "t": "GeoJSON Feature Counter",
+   "l": "/tools/geojson-feature-counter"
+  },
+  {
+   "t": "; what the features hold: the "
+  },
+  {
+   "t": "GeoJSON Property Key Finder",
+   "l": "/tools/geojson-property-key-finder"
+  },
+  {
+   "t": "; their weight: the "
+  },
+  {
+   "t": "GeoJSON Coordinate Counter",
+   "l": "/tools/geojson-coordinate-counter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

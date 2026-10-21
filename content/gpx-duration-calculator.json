@@ -8,17 +8,150 @@
   "gpx elapsed time",
   "gpx route duration"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Duration Calculator: Elapsed Track Time",
+ "description": "Compute a GPX track's recorded duration from its earliest and latest timestamps with the GPX Duration Calculator. Free, in your browser.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a track stamped from 07:00:00Z to 11:24:36Z lasted 4 hours, 24 minutes and 36 seconds of elapsed time — pauses, photos and all.",
+ "quick_answer": "The GPX Duration Calculator reads the earliest and latest timestamps in a GPX file and reports the elapsed time between them — the recording's full span on the clock. Load the file locally and read the duration — the denominator behind averages and 'how long were we out there?'",
+ "steps_intro": "First stamp minus last stamp — with all the honesty that implies:",
+ "use_cases": [
+  {
+   "title": "Settling the outing's length",
+   "body": [
+    {
+     "t": "Memory says three hours; the file says 4:24:36. Duration from the stamps ends the debate — then the "
+    },
+    {
+     "t": "GPX Average Speed Calculator",
+     "l": "/tools/gpx-average-speed-calculator"
+    },
+    {
+     "t": " prices the pace of it."
+    }
+   ]
+  },
+  {
+   "title": "Battery and recording audits",
+   "body": [
+    {
+     "t": "A device that died mid-hike shows a duration shorter than the day. Comparing span against the plan finds where the record stops."
+    }
+   ]
+  },
+  {
+   "title": "Training-log hygiene",
+   "body": [
+    {
+     "t": "Files spanning midnight or merged days produce nonsense averages downstream. Checking durations first is the cheap gate."
+    }
+   ]
+  },
+  {
+   "title": "Event verification",
+   "body": [
+    {
+     "t": "Race and challenge recordings prove participation partly by their span — the elapsed window is the first fact an organiser reads."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The subtraction, shown",
+   "body": [
+    {
+     "t": "Latest 11:24:36Z minus earliest 07:00:00Z = 15,876 seconds = 4:24:36. Every duration figure is endpoint arithmetic; the calculator's care goes into finding the true earliest and latest stamps wherever they hide in the file."
+    }
+   ]
+  },
+  {
+   "label": "Example · The forgotten-stop file",
+   "body": [
+    {
+     "t": "A watch left running in the car park can stretch a 2-hour ride into a 9-hour 'duration'. The number is correct about the file and wrong about the ride — the distinction this page's framing keeps in view."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Duration versus its neighbours",
+  "intro": "Three time quantities a GPX file supports — do not let them impersonate each other.",
+  "columns": [
+   "Quantity",
+   "Meaning"
+  ],
+  "rows": [
+   [
+    "Elapsed duration (this tool)",
+    "Latest stamp minus earliest stamp — wall clock, pauses included"
+   ],
+   [
+    "Moving time",
+    "Time above a speed threshold — device-defined, file-interpreted"
+   ],
+   [
+    "Timestamp span",
+    "The same endpoint window, reported as start/end instants (the Timestamp Span Calculator's framing)"
+   ],
+   [
+    "Recorded span with gaps",
+    "Sum of segment spans when the recorder slept between segments"
+   ]
+  ],
+  "note": "GPX timestamps are UTC (the Z suffix) per the format's convention — durations are timezone-proof precisely because both endpoints live in the same frame."
+ },
+ "faq": [
+  [
+   "What if some trackpoints lack timestamps?",
+   "Points without <time> are ignored for the span; the duration is computed from the stamps that exist. A file with fewer than two stamps has no duration to give."
+  ],
+  [
+   "Segments recorded hours apart?",
+   "The elapsed span includes the gap — that is what elapsed means. Per-segment spans are visible in the file's structure; splitting the file is the fix for separate outings."
+  ],
+  [
+   "Timezones and daylight saving?",
+   "GPX stamps are UTC, so DST never enters the subtraction. Your local display of the start time may shift; the duration cannot."
+  ],
+  [
+   "Can a duration be negative?",
+   "Only in a corrupt file (stamps out of order). The calculator takes earliest-to-latest regardless of document order, so a shuffled file still yields its true span — disorder is reported, not obeyed."
+  ],
+  [
+   "Precision — seconds or better?",
+   "Stamps commonly carry whole seconds; some devices write fractional seconds, and the span honours them."
+  ],
+  [
+   "Route files (rtept) with times?",
+   "Planned routes rarely carry real stamps; where they do, the same endpoint arithmetic applies, labelled as the plan's window rather than a recording's."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The window itself: the "
+  },
+  {
+   "t": "GPX Timestamp Span Calculator",
+   "l": "/tools/gpx-timestamp-span-calculator"
+  },
+  {
+   "t": "; fix the clock: the "
+  },
+  {
+   "t": "GPX Shift Time Tool",
+   "l": "/tools/gpx-shift-time-tool"
+  },
+  {
+   "t": "; averages: the "
+  },
+  {
+   "t": "GPX Average Speed Calculator",
+   "l": "/tools/gpx-average-speed-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

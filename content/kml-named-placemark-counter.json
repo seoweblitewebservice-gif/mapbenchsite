@@ -8,17 +8,164 @@
   "kml named placemark counter checker",
   "kml named placemark counter validator"
  ],
- "title": null,
- "description": null,
+ "title": "KML Named Placemark Counter: Label Coverage",
+ "description": "Count KML Placemarks that carry their own name with the KML Named Placemark Counter — audit label coverage before you share a file. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a file with 120 Placemarks of which 96 carry a direct <name> has 80% label coverage — and the 24 anonymous ones are exactly what this audit finds before your client does.",
+ "quick_answer": "The KML Named Placemark Counter counts the Placemarks in a KML file that carry their own direct <name> element, and compares them with the total — an audit of label coverage. Drop the file and read how many features will actually be labelled when the file is opened, computed locally.",
+ "steps_intro": "Unnamed placemarks render as mysteries. Audit the labels first:",
+ "use_cases": [
+  {
+   "title": "Pre-delivery QA for clients",
+   "body": [
+    {
+     "t": "A map full of 'Unnamed Placemark' labels looks unfinished because it is. Run the audit, fix the source data, redeliver — the "
+    },
+    {
+     "t": "KML Placemark Counter",
+     "l": "/tools/kml-placemark-counter"
+    },
+    {
+     "t": " gives the total this page's named count divides."
+    }
+   ]
+  },
+  {
+   "title": "Checking a GIS export",
+   "body": [
+    {
+     "t": "Some exporters write names into <description> or ExtendedData instead of <name>. The counter's direct-name rule exposes the mismatch before Google Earth does."
+    }
+   ]
+  },
+  {
+   "title": "Dataset documentation",
+   "body": [
+    {
+     "t": "'214 features, 96% named' is a data-quality line worth printing in the delivery note — small numbers that prove care."
+    }
+   ]
+  },
+  {
+   "title": "Inherited file triage",
+   "body": [
+    {
+     "t": "A legacy KML's label coverage predicts how much manual naming work the file needs — estimate the job before accepting it."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Direct name versus inherited name",
+   "body": [
+    {
+     "t": "A Placemark inside a named Folder is still unnamed if it lacks its own <name> — Earth shows the folder's organisation, not a label for the point. This counter follows the strict rule: the Placemark's own direct child or it does not count."
+    }
+   ]
+  },
+  {
+   "label": "Example · The ExtendedData trap",
+   "body": [
+    {
+     "t": "A GIS export stores the label in <ExtendedData><Data name='Label'>. Rich in the source system, invisible as a name in KML viewers. Coverage here: 0% named — correctly, painfully, usefully."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Where a Placemark's label can live",
+  "intro": "Only one of these is the <name> this counter credits.",
+  "columns": [
+   "Location",
+   "Counts as named?",
+   "Why"
+  ],
+  "rows": [
+   [
+    "Direct <name> child of the Placemark",
+    "Yes",
+    "The KML label mechanism itself"
+   ],
+   [
+    "Parent Folder's <name>",
+    "No",
+    "Labels the container, not the feature"
+   ],
+   [
+    "<description> text",
+    "No",
+    "Shows in the balloon, not as the label"
+   ],
+   [
+    "ExtendedData fields",
+    "No",
+    "Data about the feature, in another vocabulary"
+   ],
+   [
+    "Style / icon naming",
+    "No",
+    "Appearance, not identity"
+   ]
+  ],
+  "note": "The strict rule is deliberate: it mirrors what a person opening the file will actually see as labels."
+ },
+ "faq": [
+  [
+   "What counts as a name, exactly?",
+   "A <name> element that is a direct child of the <Placemark>. Names inherited from folders, stored in descriptions or held in ExtendedData do not count — the audit measures labels as viewers render them."
+  ],
+  [
+   "Empty name elements?",
+   "A <name></name> with no text names nothing. It is an element, not a label — treated as unnamed by any honest reading, this one included."
+  ],
+  [
+   "Placemarks inside MultiGeometry parents?",
+   "Placemark is the feature unit; its geometry type does not affect naming. Every Placemark is audited for its own name."
+  ],
+  [
+   "What is a good coverage target?",
+   "For delivered map files: 100% for features a reader must identify, and a stated reason for any exception. The audit makes the gap list; the target is your professional call."
+  ],
+  [
+   "Names with only whitespace or '---'?",
+   "Technically text, practically anonymous. The counter counts characters honestly; your QA eye should not."
+  ],
+  [
+   "Document-level <name> on the KML itself?",
+   "That names the file, not its features — excluded, correctly."
+  ],
+  [
+   "Why not credit description-first-text as a label?",
+   "Because viewers do not render it as one. An audit that flatters the file helps nobody when the client opens it."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "All features: the "
+  },
+  {
+   "t": "KML Placemark Counter",
+   "l": "/tools/kml-placemark-counter"
+  },
+  {
+   "t": "; geometry census: the "
+  },
+  {
+   "t": "KML Coordinate Block Counter",
+   "l": "/tools/kml-coordinate-block-counter"
+  },
+  {
+   "t": "; see labels: the "
+  },
+  {
+   "t": "KML Viewer",
+   "l": "/tools/kml-viewer"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

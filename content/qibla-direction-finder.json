@@ -7,17 +7,169 @@
   "direction to mecca",
   "kaaba direction"
  ],
- "title": null,
- "description": null,
+ "title": "Qibla Direction Finder: Bearing to the Kaaba",
+ "description": "Find the qibla bearing from any location with the Qibla Direction Finder — the great-circle direction to the Kaaba, in degrees from true north. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, from New York the qibla bearing is 58.5° — northeast, not southeast — because the shortest path to Mecca crosses the Atlantic toward the sunrise side of the compass rose's north.",
+ "quick_answer": "The Qibla Direction Finder computes the initial great-circle bearing from your location to the Kaaba in Mecca (21.4225° N, 39.8262° E) — the direction faced in prayer. Enter or detect your location and read the bearing from true north, ready to apply with a compass or phone.",
+ "steps_intro": "One point on Earth, one direction from everywhere:",
+ "use_cases": [
+  {
+   "title": "Daily prayer anywhere",
+   "body": [
+    {
+     "t": "Home, hotel, airport, campsite — the bearing depends only on where you stand. In New York it is 58.5°; in London 119.0°; the finder computes yours rather than your guessing from a wall chart."
+    }
+   ]
+  },
+  {
+   "title": "Setting a prayer space",
+   "body": [
+    {
+     "t": "A musalla or home prayer corner gets its qibla line once, accurately — mark it from the computed bearing instead of inheriting a previous occupant's guess."
+    }
+   ]
+  },
+  {
+   "title": "Mosque and mihrab orientation checks",
+   "body": [
+    {
+     "t": "Historical mihrabs sometimes follow older conventions (cardinal directions, or the Kaaba's own wall axes). The computed great-circle bearing is the modern reference to compare them against."
+    }
+   ]
+  },
+  {
+   "title": "Understanding the map surprise",
+   "body": [
+    {
+     "t": "From North America the qibla points northeast — over the Atlantic, not across the Pacific. The "
+    },
+    {
+     "t": "Initial Great Circle Bearing Calculator",
+     "l": "/tools/initial-great-circle-bearing-calculator"
+    },
+    {
+     "t": " shows the same geometry for any destination."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Why America faces northeast",
+   "body": [
+    {
+     "t": "On a flat map Mecca looks southeast of New York. On the sphere, the shortest path arcs north-east — initial bearing 58.5° — crossing the Atlantic. Flat-map intuition fails here precisely because the Earth is round, and this finder exists to replace the intuition."
+    }
+   ]
+  },
+  {
+   "label": "Example · Europe's bearings",
+   "body": [
+    {
+     "t": "London 119.0° (southeast, as intuition expects), Paris 119.2°, Berlin 136.7°. Europe is close enough to Mecca that flat and spherical intuitions nearly agree — distance 2,566 to 2,979 miles rather than New York's 6,404."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Qibla bearings from major cities",
+  "intro": "Computed initial great-circle bearings to the Kaaba (21.4225, 39.8262).",
+  "columns": [
+   "City",
+   "Qibla bearing",
+   "Distance"
+  ],
+  "rows": [
+   [
+    "New York",
+    "58.5°",
+    "6,404 mi"
+   ],
+   [
+    "Chicago",
+    "48.7°",
+    "6,926 mi"
+   ],
+   [
+    "Los Angeles",
+    "23.9°",
+    "8,341 mi"
+   ],
+   [
+    "London",
+    "119.0°",
+    "2,979 mi"
+   ],
+   [
+    "Paris",
+    "119.2°",
+    "2,794 mi"
+   ],
+   [
+    "Berlin",
+    "136.7°",
+    "2,566 mi"
+   ]
+  ],
+  "note": "Bearings are from true north. A magnetic compass needs the local declination applied — the finder's compass FAQ below is the one to read before stepping outside."
+ },
+ "faq": [
+  [
+   "Why do some mosques face a different direction?",
+   "Communities have used several conventions across history — great-circle computation, rhumb lines, and cardinal approximations among them. This finder reports the great-circle (shortest-path) bearing, the method most contemporary authorities and apps use; local practice remains a matter for your community."
+  ],
+  [
+   "True north or magnetic north?",
+   "The bearing is from true north. Magnetic declination varies by place and year (roughly 13° west in New York, near 0–1° east in London at present), so a physical compass reading must be corrected by the local value from a current declination chart."
+  ],
+  [
+   "How accurate is the bearing?",
+   "The spherical computation is precise to well under a degree for any location — far finer than a phone compass or hand compass can be held. Instrument error, not geometry, is the practical limit."
+  ],
+  [
+   "Inside Mecca itself?",
+   "Within the city, direction is toward the Kaaba itself rather than a computed bearing; inside the Grand Mosque, you face it directly. The finder is for everywhere else on Earth."
+  ],
+  [
+   "What about the opposite direction?",
+   "The antipode of the Kaaba lies in the South Pacific near French Polynesia; from there every direction is qibla. Everywhere else, one great-circle direction is the answer this page computes."
+  ],
+  [
+   "Does the bearing change as I travel?",
+   "Continuously — it is a function of your position alone. A long flight crosses many qibla bearings, which in-flight entertainment maps quietly recompute."
+  ],
+  [
+   "Phone compass or this page?",
+   "Use this page for the number and the phone to apply it — and hold the phone away from metal and magnets, calibrating with the figure-eight motion, since phone magnetometers are easily fooled indoors."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Any destination: the "
+  },
+  {
+   "t": "Initial Great Circle Bearing Calculator",
+   "l": "/tools/initial-great-circle-bearing-calculator"
+  },
+  {
+   "t": "; constant-heading alternative: the "
+  },
+  {
+   "t": "Rhumb Line Bearing Calculator",
+   "l": "/tools/rhumb-line-bearing-calculator"
+  },
+  {
+   "t": "; bearings generally: the "
+  },
+  {
+   "t": "Bearing Calculator",
+   "l": "/tools/bearing-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "airport-distance-calculator",
   "airport-midpoint-by-coordinates",

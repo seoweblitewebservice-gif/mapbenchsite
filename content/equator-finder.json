@@ -6,17 +6,170 @@
   "0 latitude",
   "equator finder online"
  ],
- "title": null,
- "description": null,
+ "title": "Equator Finder: Where the Line Runs",
+ "description": "Use the Equator Finder to see where 0° latitude crosses land, which countries it touches and how far your place sits from it. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, the equator crosses Ecuador, Brazil, Indonesia, Uganda and Kenya — and passes just 20 km south of Quito, the capital named after the line itself.",
+ "quick_answer": "The Equator Finder highlights Earth's 0-degree latitude line on the map and shows how far any place sits from it. Search or click to compare your location with the midline that divides the northern and southern hemispheres and anchors every latitude on the planet.",
+ "steps_intro": "One line, 40,075 km around the planet — here is how to read it:",
+ "use_cases": [
+  {
+   "title": "Geography lessons that land",
+   "body": [
+    {
+     "t": "Students trace the line across South America, Africa and Indonesia and finally see why 'equatorial' countries share climates. The "
+    },
+    {
+     "t": "Tropics Finder",
+     "l": "/tools/tropics-finder"
+    },
+    {
+     "t": " adds the two lines that bound the zone."
+    }
+   ]
+  },
+  {
+   "title": "Travel bragging rights, verified",
+   "body": [
+    {
+     "t": "Crossing-the-line ceremonies and equator monuments — at Mitad del Mundo near Quito or in Macapá, Brazil — are checked against the real 0° here, not just the gift shop's claim."
+    }
+   ]
+  },
+  {
+   "title": "Understanding seasons and daylight",
+   "body": [
+    {
+     "t": "Near the line, days stay near 12 hours all year. Finding how close a destination sits explains its light before you pack. Measure the gap precisely with the "
+    },
+    {
+     "t": "Distance to Equator",
+     "l": "/tools/distance-to-equator"
+    },
+    {
+     "t": " tool."
+    }
+   ]
+  },
+  {
+   "title": "Map and dataset checks",
+   "body": [
+    {
+     "t": "A point plotted in the wrong hemisphere is the classic coordinate error. Checking it against the equator line catches a flipped latitude sign instantly."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The monument that missed",
+   "body": [
+    {
+     "t": "Ecuador's famous Mitad del Mundo monument was built about 240 metres south of the true equator as modern GPS measures it — a beloved landmark and a perfect lesson in how surveying improved."
+    }
+   ]
+  },
+  {
+   "label": "Example · A capital on the line",
+   "body": [
+    {
+     "t": "Quito sits at about 0.18°S — roughly 20 km of meridian arc from 0°. No other capital of a country named for the equator comes closer to living on it."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Where the equator crosses land",
+  "intro": "The line is mostly ocean — about three quarters of its 40,075 km — but it threads 13 countries on land or through their islands.",
+  "columns": [
+   "Region",
+   "Countries crossed",
+   "Notable land point"
+  ],
+  "rows": [
+   [
+    "South America",
+    "Ecuador, Colombia, Brazil",
+    "Macapá sits on both the equator and the Amazon delta"
+   ],
+   [
+    "Africa",
+    "Gabon, Congo, DR Congo, Uganda, Kenya, Somalia",
+    "Lake Victoria is bisected by the line"
+   ],
+   [
+    "Asia / Oceania",
+    "Indonesia, Kiribati",
+    "Pontianak calls itself the Equator City"
+   ],
+   [
+    "Open ocean",
+    "Pacific, Atlantic, Indian",
+    "Most of the line crosses water, not land"
+   ]
+  ],
+  "note": "Country count follows the usual published tally of 13, counting island nations the line passes through. The line itself never moves — it is defined by Earth's rotation axis, not by treaty."
+ },
+ "faq": [
+  [
+   "Which countries does the equator pass through?",
+   "Thirteen by the usual count: Ecuador, Colombia and Brazil in South America; Gabon, the Republic of Congo, DR Congo, Uganda, Kenya and Somalia in Africa; and Indonesia and Kiribati among the island nations, plus São Tomé and Príncipe's islet of Rolas."
+  ],
+  [
+   "Is the equator a real line on the ground?",
+   "No paint, no fence — it is a coordinate, the great circle everywhere 0° latitude. Monuments mark it, and a few are a few hundred metres off because older surveys were less precise than GPS."
+  ],
+  [
+   "How long is the equator?",
+   "About 40,075 km (24,901 miles) — Earth's equatorial circumference on WGS84, slightly longer than the polar circumference of about 40,008 km because the planet bulges at the middle."
+  ],
+  [
+   "Why is it hot near the equator?",
+   "Sunlight arrives nearly vertically there year-round, concentrating energy per square metre. Distance from the line — not the line itself — is what drives the climate gradient."
+  ],
+  [
+   "Do days last 12 hours on the equator?",
+   "Nearly: daylight stays within a few minutes of 12 hours all year at 0°, because the Sun's path is almost perpendicular to the horizon in every season."
+  ],
+  [
+   "Can the Sun be directly overhead?",
+   "Yes, twice a year at the equinoxes (around March 20 and September 22–23), when the Sun's declination is 0°. Between the tropics it happens on other dates too."
+  ],
+  [
+   "Does water drain differently on each side?",
+   "No — that is a fairground myth. The Coriolis effect is real but far too weak at sink scale; demonstrations near equator monuments are showmanship, not physics."
+  ],
+  [
+   "What is the bulge at the equator about?",
+   "Rotation flings mass outward: the equatorial radius is about 6,378 km versus 6,357 km at the poles. That 21 km difference is why the equator is the longest latitude line."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Measure your gap to the line with "
+  },
+  {
+   "t": "Distance to Equator",
+   "l": "/tools/distance-to-equator"
+  },
+  {
+   "t": ", bound the tropical zone with the "
+  },
+  {
+   "t": "Tropics Finder",
+   "l": "/tools/tropics-finder"
+  },
+  {
+   "t": ", and pin down your quarter of the planet with the "
+  },
+  {
+   "t": "Hemisphere Finder",
+   "l": "/tools/hemisphere-finder"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "distance-from-equator-calculator",
   "distance-from-prime-meridian-calculator",

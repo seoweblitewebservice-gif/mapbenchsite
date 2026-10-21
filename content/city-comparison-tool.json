@@ -6,17 +6,163 @@
   "city comparison",
   "distance between cities"
  ],
- "title": null,
- "description": null,
+ "title": "City Comparison Tool: Two Cities, Side by Side",
+ "description": "Compare two cities side by side with the City Comparison Tool — population, density, area and distance on one honest table. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, New York City holds 8,804,190 people (2020 Census) against Los Angeles' 3,898,747 — 2.26 times as many people on about two-thirds of LA's land.",
+ "quick_answer": "The City Comparison Tool puts two cities side by side — population, land area, density and the distance between them — using consistent definitions for both. Name the pair and read the table — same census, same boundaries, same year, so nothing compares a city to a metro by accident.",
+ "steps_intro": "Comparisons are only honest when both sides share definitions. This one insists:",
+ "use_cases": [
+  {
+   "title": "Relocation decisions",
+   "body": [
+    {
+     "t": "The final two candidates, sized honestly before feelings vote. Costs follow in the "
+    },
+    {
+     "t": "Cost of Living Compare",
+     "l": "/tools/cost-of-living-compare"
+    },
+    {
+     "t": "; the city proper is the unit both tools keep."
+    }
+   ]
+  },
+  {
+   "title": "Journalism and schoolwork",
+   "body": [
+    {
+     "t": "“Bigger than” claims with the year and boundary attached — the two facts that make a comparison quotable without embarrassment."
+    }
+   ]
+  },
+  {
+   "title": "Business expansion",
+   "body": [
+    {
+     "t": "Market size judged on like-for-like city populations, not one city's proper against another's metro — the classic expansion-deck error."
+    }
+   ]
+  },
+  {
+   "title": "Winning arguments",
+   "body": [
+    {
+     "t": "Density settles what impressions cannot: New York's 29,302 people per square mile against LA's 8,304 (2020 Census) is a fact; 'more crowded' was always a number in disguise."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · New York versus Los Angeles",
+   "body": [
+    {
+     "t": "Population 8,804,190 vs 3,898,747 (2020 Census). Land 300.5 vs 469.5 sq mi (Census Gazetteer). Density 29,302 vs 8,304 per sq mi. Centres 2,451 miles apart. One table, one vintage, no metro-area sleight of hand."
+    }
+   ]
+  },
+  {
+   "label": "Example · City versus metro, the trap",
+   "body": [
+    {
+     "t": "Jacksonville's city proper beats Miami's on population — because Jacksonville's city limits swallow a county while Miami's metro sprawls past its small city boundary. The comparison tool keeps both sides on the same definition and labels it, which is the only defence."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What gets compared",
+  "intro": "Every row uses the same definition on both sides.",
+  "columns": [
+   "Measure",
+   "Definition used",
+   "Why it matters"
+  ],
+  "rows": [
+   [
+    "Population",
+    "City proper, latest census with the year stated",
+    "Headline size"
+   ],
+   [
+    "Land area",
+    "Census Gazetteer land (not water)",
+    "The denominator of density"
+   ],
+   [
+    "Density",
+    "Population ÷ land area",
+    "How the city feels on the ground"
+   ],
+   [
+    "Distance apart",
+    "Centre-to-centre, great-circle",
+    "The relocation reality check"
+   ]
+  ],
+  "note": "Figures are the decennial census's city-proper values unless a row says otherwise. Estimates between censuses exist, but a comparison is only as honest as its shared vintage."
+ },
+ "faq": [
+  [
+   "City proper or metro area?",
+   "City proper by default, labelled on the table — metros answer a different question (labour markets) and mixing the two in one comparison is how misleading rankings are born."
+  ],
+  [
+   "Where do the populations come from?",
+   "The national census of each city (2020 for the US examples on this page), with the year travelling with the number. Cross-country pairs compare each side's own census, years noted."
+  ],
+  [
+   "Can I compare cities in different countries?",
+   "Yes — with the caution that census years and city-boundary philosophies differ (a French commune is not a US municipality). The table labels definitions so the reader can judge."
+  ],
+  [
+   "Why does density use land area?",
+   "Water is not lived on. Density over total area (harbours included) flatters coastal cities; land-only is the honest denominator, used consistently here."
+  ],
+  [
+   "Smaller towns too?",
+   "Any two places in the gazetteer compare — the measures shrink gracefully to towns, where one census's vintage matters even more."
+  ],
+  [
+   "A third city?",
+   "Run pairwise tables — three-way tables invite cherry-picked rows, and the discipline of this tool is its defence against them."
+  ],
+  [
+   "Historical populations?",
+   "Census history is fascinating and available in census archives; this tool's table is the current-vintage comparison, kept single-dated on purpose."
+  ],
+  [
+   "What about cost and climate?",
+   "Costs have their own comparator on this site; climate belongs to weather records. This table is size, density and distance — the skeleton the other comparisons hang on."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Costs next: the "
+  },
+  {
+   "t": "Cost of Living Compare",
+   "l": "/tools/cost-of-living-compare"
+  },
+  {
+   "t": "; density deep-dive: the "
+  },
+  {
+   "t": "Population Density Compare",
+   "l": "/tools/population-density-compare"
+  },
+  {
+   "t": "; candidates: "
+  },
+  {
+   "t": "Cities Within Radius",
+   "l": "/tools/cities-within-radius"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "nearest-postcode-from-list",
   "population-density-compare",

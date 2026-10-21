@@ -6,16 +6,166 @@
   "ip geolocation",
   "ip address lookup online"
  ],
- "title": null,
- "description": null,
+ "title": "IP Address Lookup: Where an Address Sits",
+ "description": "Look up an IP address's approximate location, ISP and network with the IP Address Lookup — city-level, honestly scoped. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
- "more_tools": []
+ "summary_sentence": "For example, a lookup can usually name the country and often the city region an address routes through — but the street address it can never give you is the one thing it is most often asked for.",
+ "quick_answer": "The IP Address Lookup reports what an IP address can honestly reveal: its approximate geographic area (country, usually region or city), the network or ISP it belongs to, and its technical registration details. Enter the address and read the record — network geography, not a person's location.",
+ "steps_intro": "An IP address is a network fact. Read it as one:",
+ "use_cases": [
+  {
+   "title": "Security log reading",
+   "body": [
+    {
+     "t": "Sign-ins and firewall hits from an unexpected country are the lookup's daily bread — context for a decision, not the decision itself (the "
+    },
+    {
+     "t": "What Is My Public IP",
+     "l": "/tools/what-is-my-public-ip"
+    },
+    {
+     "t": " page shows the reader their own address for comparison)."
+    }
+   ]
+  },
+  {
+   "title": "Fraud and abuse triage",
+   "body": [
+    {
+     "t": "An order whose IP geography contradicts its billing country earns a second look — one signal among several, weighted like one."
+    }
+   ]
+  },
+  {
+   "title": "Network debugging",
+   "body": [
+    {
+     "t": "Traffic arriving from the wrong continent usually means a VPN, a proxy or a cloud region choice — the lookup names the exit, and the configuration explains it."
+    }
+   ]
+  },
+  {
+   "title": "Curiosity, bounded",
+   "body": [
+    {
+     "t": "Yes, you can look up the address in that email header. What you learn is its network's geography — the sender's street remains, correctly, none of this tool's business."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · What 'location' means here",
+   "body": [
+    {
+     "t": "IP geolocation databases map address blocks to the places ISPs route them from. A result naming a city means 'this block is administered/routed around there' — for many users that is their city; for mobile and satellite users it may be a hub hundreds of miles away."
+    }
+   ]
+  },
+  {
+   "label": "Example · The VPN signature",
+   "body": [
+    {
+     "t": "Your office is in Ohio; the lookup says Amsterdam. That is not an error — it is the VPN exit doing exactly what it was bought to do, and the lookup reading the network honestly."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What an IP lookup can and cannot say",
+  "intro": "The capability table that should hang over every such tool.",
+  "columns": [
+   "Question",
+   "Answer the data supports"
+  ],
+  "rows": [
+   [
+    "Which country?",
+    "Reliably, in the great majority of cases"
+   ],
+   [
+    "Which region or city?",
+    "Approximately — the routing/admin centre, often right, sometimes a hub away"
+   ],
+   [
+    "Which ISP or organisation?",
+    "Yes — address blocks are registered to networks"
+   ],
+   [
+    "Whose device, which street?",
+    "No — never from the address alone"
+   ],
+   [
+    "Is a VPN or proxy in play?",
+    "Often detectable (hosting ranges, known exits) — suspicion, not proof"
+   ]
+  ],
+  "note": "Geolocation databases are built from ISP registrations, routing data and commercial feedback, and are refreshed continuously. Two databases can disagree by a city; both can be honestly derived and approximately wrong."
+ },
+ "faq": [
+  [
+   "How accurate is city-level geolocation?",
+   "Varies by network: fixed broadband in well-mapped countries is often right at city level; mobile carrier addresses resolve to gateway cities that can be far from the handset. Treat city results as the network's centre of gravity, not the device's position."
+  ],
+  [
+   "IPv4 versus IPv6 results?",
+   "Both look up; IPv6 databases are younger and sometimes coarser geographically. The address family is reported with the result so the confidence reads correctly."
+  ],
+  [
+   "Can I locate an email sender this way?",
+   "You can locate the sending server's network from the header's originating address — usually their provider's infrastructure, which for webmail is a data centre, not a person."
+  ],
+  [
+   "Is looking up an IP legal?",
+   "Looking up publicly registered network information is a routine, lawful network operation (the same data WHOIS publishes). Using it to harass or stalk is neither this tool's purpose nor a capability its data actually grants."
+  ],
+  [
+   "Why does the same IP show two cities in two tools?",
+   "Different databases, different refresh dates, different ISP submissions. Disagreement between providers is the data's normal state; the country almost always agrees even when the city does not."
+  ],
+  [
+   "What is a private or reserved address?",
+   "Ranges like 192.168.x.x and 10.x.x.x exist only inside local networks — they have no public geography to look up, and the lookup says so instead of inventing one."
+  ],
+  [
+   "Does the tool store queried addresses?",
+   "Queries are processed to answer them. Prudent practice stands regardless: an IP you would not post publicly is one to query thoughtfully anywhere."
+  ],
+  [
+   "Tor and proxies?",
+   "A Tor exit or open proxy resolves to the exit machine's network — the design working as intended. The lookup reports the exit's geography and flags the pattern where the data supports it."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Your own address: "
+  },
+  {
+   "t": "What Is My Public IP",
+   "l": "/tools/what-is-my-public-ip"
+  },
+  {
+   "t": "; the point on the ground instead: the "
+  },
+  {
+   "t": "Coordinates Lookup Tool",
+   "l": "/tools/coordinates-lookup-tool"
+  },
+  {
+   "t": "; your device fix: "
+  },
+  {
+   "t": "Find My Location",
+   "l": "/tools/find-my-location"
+  },
+  {
+   "t": "."
+  }
+ ],
+ "more_tools": [
+  "what-is-my-public-ip",
+  "what-city-am-i-in",
+  "timezone-map-finder",
+  "latitude-longitude-finder"
+ ]
 }

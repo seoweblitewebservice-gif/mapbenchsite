@@ -7,17 +7,169 @@
   "relief calculator",
   "elevation range map"
  ],
- "title": null,
- "description": null,
+ "title": "Terrain Elevation Grid Map: Slopes Cell by Cell",
+ "description": "Map slopes cell by cell from a 9×9 elevation sample with the Terrain Elevation Grid Map — see where the ground tilts, and how hard. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, around a point on a Colorado foothill the grid can read gentle 4% cells on the bench and 38% cells in the gully two cells over — the slope pattern a single centre elevation could never tell you.",
+ "quick_answer": "The Terrain Elevation Grid Map samples elevations on a 9×9 grid around your point and turns them into a cell-by-cell slope map, each cell coloured by its steepest gradient in percent. Set the centre and area size and read the pattern — benches, gullies and scarps made visible.",
+ "steps_intro": "Eighty-one samples, one honest picture of the tilt:",
+ "use_cases": [
+  {
+   "title": "Site and access scouting",
+   "body": [
+    {
+     "t": "Before visiting a parcel, see whether the flat-looking field hides a steep bank. Cell slopes flag where machines, wheelchairs and foundations will struggle. For one slope's exact forms, use the "
+    },
+    {
+     "t": "Slope & Gradient Calculator",
+     "l": "/tools/slope-gradient-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Trail and route sense-checking",
+   "body": [
+    {
+     "t": "A proposed line crossing a wall of red cells is a scramble, whatever the map's contour spacing suggested at a glance."
+    }
+   ]
+  },
+  {
+   "title": "Drainage intuition",
+   "body": [
+    {
+     "t": "Steep cells collect and shed water; flat cells hold it. The grid is the quickest way to guess where a site wets and dries — context for the "
+    },
+    {
+     "t": "Watershed Finder",
+     "l": "/tools/watershed-finder"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Teaching terrain reading",
+   "body": [
+    {
+     "t": "Students predict the slope pattern from contours, then reveal the grid. The mismatches are the lesson."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Why cell size matters",
+   "body": [
+    {
+     "t": "The same hillside sampled with a small area gives small cells and sharp detail; a large area averages slopes down. A 30% gully wall inside a gentle cell reads as that cell's maximum gradient — pattern first, precision by zooming in."
+    }
+   ]
+  },
+  {
+   "label": "Example · Reading a scarp",
+   "body": [
+    {
+     "t": "A straight line of steep cells crossing otherwise calm ground is a scarp, terrace edge or road cut — linear features announce themselves in grids long before they are named."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Slope bands and what they mean on foot",
+  "intro": "The per-cell maximum gradient, translated into ground truth.",
+  "columns": [
+   "Cell slope",
+   "Ground truth"
+  ],
+  "rows": [
+   [
+    "0–2%",
+    "Effectively flat — water ponds"
+   ],
+   [
+    "2–8%",
+    "Easy walking and driving"
+   ],
+   [
+    "8–15%",
+    "Noticeable hill; vehicles fine, legs aware"
+   ],
+   [
+    "15–30%",
+    "Steep — scrambling territory on foot"
+   ],
+   [
+    "30–60%",
+    "Very steep — hands come out"
+   ],
+   [
+    "60%+",
+    "Cliff-like ground (31° and up)"
+   ]
+  ],
+  "note": "Slopes come from sampled elevations (Open-Meteo elevation data over the grid), so a feature narrower than a cell can be softened or missed. It is a scouting lens, not a survey."
+ },
+ "faq": [
+  [
+   "How fine is the detail?",
+   "Detail follows the area you choose: the 9×9 grid divides your selected area, so small areas give metre-scale cells and large areas give broad-brush cells. The elevation source itself resolves features down to roughly 90 m in its underlying model."
+  ],
+  [
+   "Why the maximum gradient per cell?",
+   "Water, wheels and feet all care about the steepest direction, not the average. Each cell reports its steepest downhill gradient so hazards are not averaged away."
+  ],
+  [
+   "Can I get one exact slope instead?",
+   "Yes — pick the two elevations yourself and use the Slope & Gradient Calculator for a single precise figure. This map is for pattern; that tool is for a number."
+  ],
+  [
+   "What elevation data does it use?",
+   "Open-Meteo's elevation sampling, built on global terrain models (Copernicus-class data). The atlas sibling samples a 7×7 grid of raw elevations from the same source family."
+  ],
+  [
+   "Does vegetation or buildings affect it?",
+   "Terrain models aim for bare earth, but processing varies; dense forest canopy and dense urban areas can bias sampled heights in the source data."
+  ],
+  [
+   "Ocean or lake cells?",
+   "Water surfaces read at their surface elevation with near-zero slope — flat blue honesty at the grid's edge."
+  ],
+  [
+   "Can I export the grid?",
+   "The grid is computed in your browser for viewing. For GIS work, the same public elevation sources can be loaded directly into QGIS or similar tools."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Raw elevations: the "
+  },
+  {
+   "t": "World Elevation Atlas",
+   "l": "/tools/world-elevation-atlas"
+  },
+  {
+   "t": "; one slope: the "
+  },
+  {
+   "t": "Slope & Gradient Calculator",
+   "l": "/tools/slope-gradient-calculator"
+  },
+  {
+   "t": "; drainage: the "
+  },
+  {
+   "t": "Watershed Finder",
+   "l": "/tools/watershed-finder"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "air-pressure-by-elevation",
   "antenna-height-distance-calculator",

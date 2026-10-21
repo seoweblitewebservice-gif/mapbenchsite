@@ -6,17 +6,173 @@
   "mountain height",
   "summit elevation"
  ],
- "title": null,
- "description": null,
+ "title": "Peak Elevation Lookup: Summit Heights",
+ "description": "Look up the elevation of peaks and ridgelines with the Peak Elevation Lookup — terrain data for summits worldwide, in feet and metres. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, clicking Everest returns the neighbourhood of 8,849 m — the terrain model's grid slightly softens knife-edge summits, while the surveyed figure stands at 8,848.86 m.",
+ "quick_answer": "The Peak Elevation Lookup reads the elevation of mountain peaks and ridgelines from global terrain data: click a summit and get its height in feet and metres. Use it to check the peak across the valley, settle which of two summits is higher, and put numbers on the skyline.",
+ "steps_intro": "Click the summit; read its height:",
+ "use_cases": [
+  {
+   "title": "Naming the skyline",
+   "body": [
+    {
+     "t": "Every viewpoint has an unidentified peak. Click it here, then argue about whether it is worth climbing — the route's full shape belongs to the "
+    },
+    {
+     "t": "Elevation Profile",
+     "l": "/tools/elevation-profile"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Expedition and trek research",
+   "body": [
+    {
+     "t": "Passes and subsidiary peaks rarely make the brochures; their heights from terrain data shape acclimatisation plans before the guidebooks come out."
+    }
+   ]
+  },
+  {
+   "title": "Which summit is higher?",
+   "body": [
+    {
+     "t": "Neighbouring tops are misjudged by eye constantly — foreshortening flatters the nearer one. The clicks end the argument with numbers."
+    }
+   ]
+  },
+  {
+   "title": "Photography captions",
+   "body": [
+    {
+     "t": "A named, correctly-heighted summit captions a landscape photo like a professional. Pair with the "
+    },
+    {
+     "t": "Elevation Finder",
+     "l": "/tools/elevation-finder"
+    },
+    {
+     "t": " for the valleys between."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The model versus the survey",
+   "body": [
+    {
+     "t": "Global terrain grids sample every ~30 m and average cells; a sharp summit's cell includes its shoulders, so model readings on pointy peaks run slightly low. Everest's cell will not read the full 8,848.86 m — the survey's theodolite-and-GNSS figure is the record; the model is the scout."
+    }
+   ]
+  },
+  {
+   "label": "Example · Prominence beats height locally",
+   "body": [
+    {
+     "t": "A 1,345 m Ben Nevis dominates its skyline more than a 3,000 m shoulder of a giant does — height is absolute, presence is relative. The lookup gives the absolute number; the eye reports the rest."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Famous summits (published survey heights)",
+  "intro": "The reference shelf — compare your click against these.",
+  "columns": [
+   "Peak",
+   "Height"
+  ],
+  "rows": [
+   [
+    "Everest (Asia)",
+    "8,848.86 m / 29,032 ft"
+   ],
+   [
+    "K2 (Asia)",
+    "8,611 m / 28,251 ft"
+   ],
+   [
+    "Kilimanjaro (Africa)",
+    "5,895 m / 19,341 ft"
+   ],
+   [
+    "Denali (North America)",
+    "6,190 m / 20,310 ft"
+   ],
+   [
+    "Mont Blanc (Europe)",
+    "4,808 m / 15,774 ft"
+   ],
+   [
+    "Ben Nevis (Britain)",
+    "1,345 m / 4,413 ft"
+   ]
+  ],
+  "note": "Mont Blanc's figure breathes by a couple of metres with its summit snow cap between surveys. Rock summits hold still; snow summits negotiate."
+ },
+ "faq": [
+  [
+   "Why does the summit read lower than the book value?",
+   "Grid averaging: the model's cell containing the summit also contains descending ground. The sharper the peak, the larger the shave — a known, bounded effect of ~30 m data."
+  ],
+  [
+   "Ridges and cols too?",
+   "Yes — any clicked point reads the terrain height there, so the col between two peaks (the number that defines prominence) is one click away."
+  ],
+  [
+   "Underwater peaks?",
+   "The terrain model's ocean is sea level; seamounts need bathymetry this dataset does not carry. Land peaks only, honestly stated."
+  ],
+  [
+   "Volcanoes that changed height?",
+   "Eruptions rewrite summits (St Helens lost 400 m in 1980). The model reflects its survey era; recently remodelled volcanoes may disagree with it — news beats data there."
+  ],
+  [
+   "Feet and metres?",
+   "Both shown together, converted exactly (1 ft = 0.3048 m)."
+  ],
+  [
+   "Highest peak per continent?",
+   "The Seven Summits shelf: Everest, Aconcagua (6,961 m), Denali, Kilimanjaro, Elbrus (5,642 m), Vinson (4,892 m), and Puncak Jaya or Kosciuszko depending on the list's continent convention."
+  ],
+  [
+   "Can I trust it for a first ascent claim?",
+   "No — first-ascent and record claims live on surveyed GNSS measurements. This page is for research, captions and curiosity, and says so."
+  ],
+  [
+   "Named peak database?",
+   "The lookup reads terrain at your click rather than a gazetteer — an unnamed summit still gets its height, which gazetteers cannot offer."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Any point: the "
+  },
+  {
+   "t": "Elevation Finder",
+   "l": "/tools/elevation-finder"
+  },
+  {
+   "t": "; routes across them: the "
+  },
+  {
+   "t": "Elevation Profile",
+   "l": "/tools/elevation-profile"
+  },
+  {
+   "t": "; the climb's steepness: the "
+  },
+  {
+   "t": "Relief Ratio Calculator",
+   "l": "/tools/relief-ratio-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boiling-point-by-elevation-calculator",
   "central-angle-from-distance-calculator",

@@ -6,17 +6,158 @@
   "geojson viewer online",
   "free geojson viewer"
  ],
- "title": null,
- "description": null,
+ "title": "GeoJSON Viewer: Paste, Plot, Inspect",
+ "description": "Plot GeoJSON points, lines and polygons on a local map with the GeoJSON Viewer — paste or drop, no upload, instant visual check. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a delivery-radius polygon pasted from an API response appears on the map in under a second — and the neighbourhood it accidentally covers is immediately, visibly obvious.",
+ "quick_answer": "The GeoJSON Viewer plots pasted or dropped GeoJSON — points, lines and polygons — on a map in your browser, locally. Paste the text or drop the file and see your data's geography at once: the fastest possible answer to 'where does this file actually think things are?'",
+ "steps_intro": "The ten-second test every GeoJSON file deserves:",
+ "use_cases": [
+  {
+   "title": "Sanity-checking exports",
+   "body": [
+    {
+     "t": "Your pipeline emits GeoJSON; the viewer is the smoke test. Wrong-hemisphere exports confess instantly. Structural doubts go to the "
+    },
+    {
+     "t": "GeoJSON Validator",
+     "l": "/tools/geojson-validator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Reviewing someone else's data",
+   "body": [
+    {
+     "t": "A contractor's boundary file, an open-data download, a colleague's attachment — see it before you agree it is what it claims to be."
+    }
+   ]
+  },
+  {
+   "title": "Debugging empty layers",
+   "body": [
+    {
+     "t": "If it plots here, your file is fine and your app has the bug. If it plots in the ocean off West Africa, the file's coordinates are swapped or defaulted — the classic 0,0 neighbourhood."
+    }
+   ]
+  },
+  {
+   "title": "Quick presentations",
+   "body": [
+    {
+     "t": "Sometimes the deliverable is one screenshot of the data on a map. The viewer produces it without a GIS project ever existing."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The swapped-coordinate confession",
+   "body": [
+    {
+     "t": "Data authored lat,lon instead of lon,lat plots mirrored into the wrong ocean — New York data surfaces off Somalia's latitude with longitude's sign games. One look diagnoses what an hour of code review might miss."
+    }
+   ]
+  },
+  {
+   "label": "Example · What renders, what doesn't",
+   "body": [
+    {
+     "t": "All seven RFC 7946 geometry types render — Points through GeometryCollections. A Feature with null geometry renders nothing, correctly: there is nothing to draw, and the properties still exist for the table tools."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading what you see",
+  "intro": "The plot is a diagnostic instrument — common sights and their meanings.",
+  "columns": [
+   "You see",
+   "It usually means"
+  ],
+  "rows": [
+   [
+    "Your shapes, right place",
+    "Healthy file — proceed"
+   ],
+   [
+    "Shapes in the ocean, mirrored",
+    "Latitude/longitude swapped in coordinates"
+   ],
+   [
+    "Everything at one point near 0,0",
+    "Coordinates missing or defaulted"
+   ],
+   [
+    "Nothing at all",
+    "Invalid JSON, empty collection, or null geometries"
+   ],
+   [
+    "Shapes at the wrong scale/place",
+    "Source was not WGS84 lon/lat — a projected file in disguise"
+   ]
+  ],
+  "note": "The viewer assumes RFC 7946: WGS84 longitude/latitude. Files in projected coordinates (metres) plot as garbage near the origin — recognisably, which is itself the diagnosis."
+ },
+ "faq": [
+  [
+   "Which geometry types render?",
+   "All of them: Point, MultiPoint, LineString, MultiLineString, Polygon, MultiPolygon and GeometryCollection, as Features or bare geometries."
+  ],
+  [
+   "Can I view properties too?",
+   "The viewer's job is geography; properties become columns in the CSV converter. Clicking features in richer GIS tools inspects attributes — here, the map is the message."
+  ],
+  [
+   "Does it handle huge files?",
+   "Browser memory and rendering patience are the limits — tens of thousands of features are fine; million-vertex boundaries belong in a GIS or a simplifier first."
+  ],
+  [
+   "Styling — colours and weights?",
+   "The viewer draws a clear default style so the data reads immediately. Publication styling is a GIS or web-map-library task; this page answers 'where is it?'"
+  ],
+  [
+   "My file plots upside-down-ish / mirrored.",
+   "Swapped coordinate order (see the table). Fix the source order to [longitude, latitude] and re-plot — do not mirror the data to match the bug."
+  ],
+  [
+   "TopoJSON or KML?",
+   "Not GeoJSON — convert first. This site's file family covers KML workflows on their own pages."
+  ],
+  [
+   "Can I measure on the plot?",
+   "Viewing is the scope here; the site's distance and area tools measure coordinates properly once the file checks out."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Validate it: the "
+  },
+  {
+   "t": "GeoJSON Validator",
+   "l": "/tools/geojson-validator"
+  },
+  {
+   "t": "; slim it: the "
+  },
+  {
+   "t": "GeoJSON Simplify Helper",
+   "l": "/tools/geojson-simplify-helper"
+  },
+  {
+   "t": "; flatten it: the "
+  },
+  {
+   "t": "GeoJSON to CSV Converter",
+   "l": "/tools/geojson-to-csv-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

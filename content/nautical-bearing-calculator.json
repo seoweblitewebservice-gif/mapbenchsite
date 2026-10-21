@@ -8,17 +8,159 @@
   "nautical bearing calculator tool",
   "how to use nautical bearing calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Nautical Bearing Calculator: Course and Miles",
+ "description": "Compute the initial bearing and nautical distance between two points with the Nautical Bearing Calculator — course and miles for the chart. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, New York to Boston opens at an initial bearing of 052° and runs 165.3 nautical miles — a coastal hop — while New York to London opens at 051° yet runs 2,991 nautical miles of Atlantic.",
+ "quick_answer": "The Nautical Bearing Calculator computes the initial great-circle bearing and the distance in nautical miles between two coordinate points. Enter the pair and read the departure course and the sea miles to run — a passage plan's first two numbers.",
+ "steps_intro": "Course and distance, the mariner's first two numbers:",
+ "use_cases": [
+  {
+   "title": "Passage planning",
+   "body": [
+    {
+     "t": "Leg by leg, harbour to harbour: initial bearing plus sea miles per leg is the skeleton a full plan hangs courses, ETAs and fuel on. Times come from the "
+    },
+    {
+     "t": "Nautical Miles Between Coordinates",
+     "l": "/tools/nautical-miles-between-coordinates"
+    },
+    {
+     "t": " distance at your vessel's knots."
+    }
+   ]
+  },
+  {
+   "title": "Chartwork study",
+   "body": [
+    {
+     "t": "Navigation students check hand-plotted courses against the computed truth — the bearing should match to the degree, and where it does not, the plot learns something."
+    }
+   ]
+  },
+  {
+   "title": "Kayaks, sailing and small craft",
+   "body": [
+    {
+     "t": "Open-water crossings of bays and sounds are bearing problems with consequences. A computed course plus a compass beats a guess plus optimism."
+    }
+   ]
+  },
+  {
+   "title": "Aviation cross-checks",
+   "body": [
+    {
+     "t": "The same great-circle maths serves VFR planning — initial course and nautical distance are aviation's native pair too."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Two departures, one bearing",
+   "body": [
+    {
+     "t": "From New York, Boston and London both open near 051–052° — the great circle's indifference to your ambitions. Distance separates them: 165.3 nm up the coast, 2,991.4 nm across the ocean (JFK–LHR). Same first course, different voyages entirely."
+    }
+   ]
+  },
+  {
+   "label": "Example · Initial is not constant",
+   "body": [
+    {
+     "t": "A great-circle course changes as you sail it: the New York–London initial bearing of 051° at departure becomes a different arrival bearing, because the shortest path curves across the chart's rhumb lines. Steering one fixed compass course draws the longer rhumb line instead — the distinction this calculator is precise about."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The outputs, read properly",
+  "intro": "Bearing and distance, with their fine print attached.",
+  "columns": [
+   "Output",
+   "Meaning",
+   "Fine print"
+  ],
+  "rows": [
+   [
+    "Initial bearing",
+    "True course at departure, degrees clockwise from north",
+    "Changes along a great-circle track"
+   ],
+   [
+    "Nautical distance",
+    "Great-circle length, 1 nm = 1.852 km exactly",
+    "Sea miles, not statute (×1.1508)"
+   ],
+   [
+    "Return bearing",
+    "The reciprocal leg's own initial bearing (London→New York opens 288°)",
+    "Not simply ±180° on a sphere"
+   ],
+   [
+    "Course steered",
+    "Your helm's number after declination and deviation",
+    "The calculator gives true; the compass corrections are yours"
+   ]
+  ],
+  "note": "Bearings are true, from geographic north. Magnetic compasses need the local declination applied — the Magnetic Declination Calculator on this site supplies it for the same waters."
+ },
+ "faq": [
+  [
+   "Initial bearing or constant bearing?",
+   "Initial great-circle bearing — the shortest path's departure course, which then evolves. Constant-bearing rhumb lines are the alternative geometry, with their own tools in the bearing family; mixing the two mid-passage is how landfalls get missed."
+  ],
+  [
+   "Why is the return bearing not exactly opposite?",
+   "On a sphere, the great circle's direction at London toward New York (288°) is not the departure bearing plus 180 (231°) — convergence of the meridians twists it. Both numbers are computed fresh for each direction."
+  ],
+  [
+   "Magnetic or true?",
+   "True. Apply your chart's compass rose (declination/variation) and your vessel's deviation to get the course you actually steer — the calculator stays in the true frame all chartwork starts from."
+  ],
+  [
+   "How accurate is the distance?",
+   "Great-circle on a spherical Earth — within a fraction of a percent of the ellipsoidal truth, far inside any passage plan's weather margin. The coordinates' quality is the real limit."
+  ],
+  [
+   "Tides, currents, traffic schemes?",
+   "Not in a bearing: this is geometry between two points. Real tracks respect separation schemes, hazards and weather — the plan layers those over the computed skeleton."
+  ],
+  [
+   "Can I chain legs?",
+   "Yes — each waypoint pair is a leg with its own opening bearing and miles. The plan is the chain; this calculator forges the links."
+  ],
+  [
+   "Statute miles for lake sailors?",
+   "The distance also reads in kilometres and statute miles — but the nautical mile's kinship with latitude (one minute of arc) is why the sea keeps it, and why this page leads with it."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Distance only: "
+  },
+  {
+   "t": "Nautical Miles Between Coordinates",
+   "l": "/tools/nautical-miles-between-coordinates"
+  },
+  {
+   "t": "; land bearings: the "
+  },
+  {
+   "t": "Bearing Calculator",
+   "l": "/tools/bearing-calculator"
+  },
+  {
+   "t": "; grids at sea: the "
+  },
+  {
+   "t": "MGRS Converter",
+   "l": "/tools/mgrs-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "compass-bearing-visualizer",
   "competitor-distance-map",

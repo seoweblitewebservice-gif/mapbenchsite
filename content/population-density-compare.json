@@ -6,17 +6,168 @@
   "city density comparison",
   "population density compare online"
  ],
- "title": null,
- "description": null,
+ "title": "Population Density Compare: Crowded, Measured",
+ "description": "Compare population density between places with Population Density Compare — same census, same land-area rule, honest numbers. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, Manhattan packs about 74,244 people per square mile (2020 Census) while Wyoming averages 5.94 — a ratio near 12,500 to 1 between America's densest county and its emptiest state.",
+ "quick_answer": "Population Density Compare sets places' population densities side by side — people per square mile or kilometre — computed from the same census and the same land-area rule for both. Name the pair and read the comparison: density is where 'crowded' stops being an adjective and becomes a number.",
+ "steps_intro": "Density is population with the area kept honest. Compare it properly:",
+ "use_cases": [
+  {
+   "title": "Relocation expectations",
+   "body": [
+    {
+     "t": "Density predicts the texture of daily life — queues, parking, quiet — better than raw population. Compare the finalists of the "
+    },
+    {
+     "t": "City Comparison Tool",
+     "l": "/tools/city-comparison-tool"
+    },
+    {
+     "t": " on this axis before visiting."
+    }
+   ]
+  },
+  {
+   "title": "Journalism and teaching",
+   "body": [
+    {
+     "t": "“Densest place in America” is a density claim with a denominator problem. This comparison keeps land area consistent so the claim survives the comments section."
+    }
+   ]
+  },
+  {
+   "title": "Market and service planning",
+   "body": [
+    {
+     "t": "Delivery economics, clinic catchments and retail formats all bend on density. Two candidate territories compare here before a model is built."
+    }
+   ]
+  },
+  {
+   "title": "Debunking map impressions",
+   "body": [
+    {
+     "t": "A state that looks empty can hold a denser city than a 'crowded' rival's — Wyoming's 5.94 per square mile against any city's thousands is the calibration example."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Manhattan versus Wyoming",
+   "body": [
+    {
+     "t": "New York County (Manhattan): 1,694,251 people on 22.82 sq mi of land = 74,244 per sq mi (28,666 per km²). Wyoming: 576,851 on 97,093 sq mi = 5.94. Both 2020 Census — the 12,500× gap is real, and it is mostly a story about denominators."
+    }
+   ]
+  },
+  {
+   "label": "Example · Same city, two densities",
+   "body": [
+    {
+     "t": "New York City as a whole runs 29,302 per sq mi — Manhattan alone runs 74,244. City-versus-borough comparisons change the answer by 2.5× without any number being wrong: boundaries are the argument, density is the arithmetic."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Density anchors (2020 Census)",
+  "intro": "Reference points for the scale, all computed as population ÷ land area.",
+  "columns": [
+   "Place",
+   "People per sq mi",
+   "People per km²"
+  ],
+  "rows": [
+   [
+    "New York County (Manhattan)",
+    "74,244",
+    "28,666"
+   ],
+   [
+    "New York City (all boroughs)",
+    "29,302",
+    "11,314"
+   ],
+   [
+    "Los Angeles (city)",
+    "8,304",
+    "3,206"
+   ],
+   [
+    "United States (average)",
+    "~94",
+    "~36"
+   ],
+   [
+    "Wyoming",
+    "5.94",
+    "2.29"
+   ]
+  ],
+  "note": "US average computed from the 2020 apportionment population over Census land area — state and national figures use total land including vast unpopulated areas, which is precisely the denominator effect the examples describe."
+ },
+ "faq": [
+  [
+   "Which census year is used?",
+   "Both sides of a comparison share the stated census (2020 for the US anchors on this page) — mixing vintages manufactures gaps that are really just growth, and the tool refuses the trick."
+  ],
+  [
+   "Land area or total area?",
+   "Land only — harbours and lakes are not lived on. Total-area densities flatter waterfront cities; the land rule is the honest denominator and it is applied to both sides."
+  ],
+  [
+   "City, county or state — which unit?",
+   "Density belongs to whatever boundary you choose, and the answer changes with it (see the Manhattan example). Comparisons must match unit kinds — city with city, county with county — and the table labels each side's unit."
+  ],
+  [
+   "Why is the US average so low?",
+   "Most American land is not urban. The average is a real number that describes almost nowhere — density is a local fact, and national means are context, not comparison material."
+  ],
+  [
+   "People per square kilometre?",
+   "Both units are reported; the conversion is exact (1 sq mi = 2.59 km²), and European readers get their native scale without re-deriving it."
+  ],
+  [
+   "Daytime versus resident density?",
+   "Censuses count residents where they sleep. Manhattan's daytime density swells far beyond 74,244 with commuters — a different, legitimate statistic that must be named when used."
+  ],
+  [
+   "Can density be 'too high' objectively?",
+   "No threshold exists in the number itself — outcomes depend on housing, transit and services built for the density. The comparison informs; it does not grade."
+  ],
+  [
+   "Smallest places?",
+   "Tiny denominators make wild densities (a village of 200 on 0.01 sq mi 'beats' Manhattan). Comparisons below a few thousand residents are arithmetic novelties, flagged as such."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The pair in full: the "
+  },
+  {
+   "t": "City Comparison Tool",
+   "l": "/tools/city-comparison-tool"
+  },
+  {
+   "t": "; people in a circle: the "
+  },
+  {
+   "t": "Population Within Radius",
+   "l": "/tools/population-within-radius"
+  },
+  {
+   "t": "; county data: the "
+  },
+  {
+   "t": "U.S. County Demographic Explorer",
+   "l": "/tools/us-county-demographic-explorer"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "nearby-places-finder",
   "nearest-postcode-from-list",

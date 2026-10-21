@@ -6,17 +6,166 @@
   "map coloring tool",
   "paint countries map"
  ],
- "title": null,
- "description": null,
+ "title": "Color a Map: Paint Countries Your Way",
+ "description": "Color a Map lets you paint countries in your own colours with a click, track what you have coloured, and export the result or the list. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a student planning a gap year paints the 12 countries on the route in green, the maybes in yellow and the noes in red — then exports the list as a CSV packing checklist.",
+ "quick_answer": "Color a Map turns a world outline into a click-to-paint canvas: choose a colour, click countries to fill them, and watch your coloured list grow. Export the picture for a slide or the country list as CSV when you are done — no account, everything in your browser.",
+ "steps_intro": "Pick a colour, click a country, repeat — here is the working method:",
+ "use_cases": [
+  {
+   "title": "Travel tracking and bucket lists",
+   "body": [
+    {
+     "t": "Been there, booked, dreaming: three colours turn a world map into a travel diary. Print the result as a poster via a "
+    },
+    {
+     "t": "Blank Map",
+     "l": "/tools/blank-map"
+    },
+    {
+     "t": " outline if the wall matters more than the screen."
+    }
+   ]
+  },
+  {
+   "title": "Teaching alliances, blocs and regions",
+   "body": [
+    {
+     "t": "Colour the EU one shade, the eurozone another — overlap problems become visible instantly, which is the lesson. Teachers pair this with a blank worksheet for the test version."
+    }
+   ]
+  },
+  {
+   "title": "Sales territories and coverage maps",
+   "body": [
+    {
+     "t": "Paint the countries your team covers, prospects you are chasing and markets you are ignoring. Crude, fast and honest — exactly what a planning meeting needs."
+    }
+   ]
+  },
+  {
+   "title": "Data sketches before the real chart",
+   "body": [
+    {
+     "t": "A hand-coloured choropleth is the draft a real data map grows from. When the numbers deserve precision, graduate to the "
+    },
+    {
+     "t": "US County Choropleth Map",
+     "l": "/tools/county-choropleth"
+    },
+    {
+     "t": " for US data."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The visited-countries poster",
+   "body": [
+    {
+     "t": "Twenty-three countries in teal. The export shows the classic traveller's pattern at a glance — one continent dense, another empty — and the empty part becomes next year's argument."
+    }
+   ]
+  },
+  {
+   "label": "Example · Election explainer",
+   "body": [
+    {
+     "t": "A teacher colours the states a candidate visited in campaign red and the rest grey. No data file, no software lesson — the point lands in one class period."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Colour schemes that read well",
+  "intro": "Four or five well-chosen colours beat twelve random ones. These patterns cover most jobs.",
+  "columns": [
+   "Scheme",
+   "Use it for",
+   "Example"
+  ],
+  "rows": [
+   [
+    "Two colours",
+    "Yes/no, visited/not, member/not",
+    "Teal = visited, light grey = not yet"
+   ],
+   [
+    "Three-step scale",
+    "Low / medium / high anything",
+    "Pale yellow → orange → deep red"
+   ],
+   [
+    "Category set",
+    "Blocs, alliances, languages",
+    "One distinct hue per group, grey for none"
+   ],
+   [
+    "Route colours",
+    "Trips and journeys",
+    "Green = going, yellow = maybe, red = not this time"
+   ]
+  ],
+  "note": "Keep uncoloured countries a light neutral rather than white-on-white, and remember colour-blind readers: avoid red-versus-green as your only distinction where the map carries real information."
+ },
+ "faq": [
+  [
+   "Can I colour US states or counties instead of countries?",
+   "This canvas is the world of countries. For American geography, start from a Blank Map of US states for hand colouring, or the US County Choropleth when you have real per-county numbers."
+  ],
+  [
+   "How many colours do I get?",
+   "A working palette sized for map sense — enough for categories and scales without turning the map into confetti. If you need a specific brand colour precisely, a drawing program is the better tool."
+  ],
+  [
+   "Can I uncolour a country?",
+   "Yes — click it again with the clear/eraser choice (or cycle back to uncoloured) and the list updates. Mistakes cost one click, which is the point of doing this digitally."
+  ],
+  [
+   "Does it count my countries for me?",
+   "The coloured list tracks as you paint, including a count per colour — handy for the 'how many have I visited?' question that starts most sessions."
+  ],
+  [
+   "What format is the image export?",
+   "A PNG of your coloured map, sized for slides and documents. The list export is CSV: country, colour — ready for a spreadsheet."
+  ],
+  [
+   "Why do small island nations look like dots?",
+   "At world scale they are dots. Zoom toward the Pacific or Caribbean before clicking, or accept the list entry without a visible fill at poster zoom."
+  ],
+  [
+   "Can two people colour the same map?",
+   "Not simultaneously — there is no shared live canvas and no account system. Export your version and send the file; collaboration here is deliberately file-based."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Start from a clean outline with "
+  },
+  {
+   "t": "Blank Map",
+   "l": "/tools/blank-map"
+  },
+  {
+   "t": ", add names to regions with the "
+  },
+  {
+   "t": "Custom Labeled Pin Map",
+   "l": "/tools/custom-labeled-map"
+  },
+  {
+   "t": ", or export the finished picture through "
+  },
+  {
+   "t": "Map PNG Export",
+   "l": "/tools/map-png-export"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "advanced-map-embed-generator",
   "country-size-comparison",

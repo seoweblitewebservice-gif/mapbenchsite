@@ -8,17 +8,154 @@
   "solar noon calculator tool",
   "how to calculate solar noon calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Solar Noon Calculator: When the Sun Peaks",
+ "description": "Find true solar noon for any place and date with the Solar Noon Calculator — equation of time and time-zone offset explained. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, solar noon in New York on June 21 falls at about 12:57 p.m. EDT — nearly an hour after clock noon, because the city sits 14 degrees west of its daylight time meridian.",
+ "quick_answer": "The Solar Noon Calculator finds the clock time when the Sun crosses your meridian — its highest point of the day. Enter place and date and read solar noon — rarely 12:00, since longitude and the equation of time shift it.",
+ "steps_intro": "Clock noon is a convention. Solar noon is an event:",
+ "use_cases": [
+  {
+   "title": "Sundial setting and checking",
+   "body": [
+    {
+     "t": "A sundial reads true at solar noon by definition — this is the moment to compare it against the clock and learn your longitude's offset."
+    }
+   ]
+  },
+  {
+   "title": "Solar panel peak output",
+   "body": [
+    {
+     "t": "Panels peak near solar noon, not 12:00 — installers and the "
+    },
+    {
+     "t": "Solar Roof Potential Calculator",
+     "l": "/tools/solar-roof-potential-calculator"
+    },
+    {
+     "t": " both plan around the real peak."
+    }
+   ]
+  },
+  {
+   "title": "Photography midday light",
+   "body": [
+    {
+     "t": "The day's shortest shadows and harshest light centre on solar noon; schedule around the computed time, not the round number."
+    }
+   ]
+  },
+  {
+   "title": "Navigation and surveying heritage",
+   "body": [
+    {
+     "t": "The noon sight — measuring the Sun's altitude at local apparent noon — fixed latitude for centuries of sailors. This is its clock."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · New York's drifting noon",
+   "body": [
+    {
+     "t": "Computed solar noon: June 21 ≈ 12:57 EDT; December 21 ≈ 11:53 EST. Longitude inside the zone sets the base (~56 minutes past the hour on daylight time), the equation of time wobbles it ±15 minutes through the year."
+    }
+   ]
+  },
+  {
+   "label": "Example · London on the meridian",
+   "body": [
+    {
+     "t": "London sits almost on its time meridian, so solar noon hugs 12:00 GMT (13:01 BST in June) — the exception that proves how unusual an on-meridian city is."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Why solar noon is not 12:00",
+  "intro": "The three pushes on the clock.",
+  "columns": [
+   "Factor",
+   "Effect"
+  ],
+  "rows": [
+   [
+    "Longitude within the zone",
+    "4 minutes per degree from the zone's central meridian — the big one"
+   ],
+   [
+    "Daylight saving time",
+    "Adds a full hour in summer for most of the US and Europe"
+   ],
+   [
+    "Equation of time",
+    "± about 15 minutes across the year (orbit eccentricity + axial tilt)"
+   ],
+   [
+    "Zone politics",
+    "Some zones stretch absurdly — western Spain keeps Berlin's time"
+   ]
+  ],
+  "note": "Solar noon here is apparent solar time's noon — the Sun's actual meridian crossing, computed with the standard solar algorithm."
+ },
+ "faq": [
+  [
+   "What is solar noon, exactly?",
+   "The instant the Sun crosses your local meridian — due south (northern mid-latitudes) or due north (southern) — reaching its highest altitude of the day."
+  ],
+  [
+   "Why is it not at 12:00?",
+   "Clocks run on zone meridians and mean time; the Sun runs on your longitude and apparent time. The gap is longitude offset plus the equation of time, sometimes shifted an hour by daylight saving."
+  ],
+  [
+   "What is the equation of time?",
+   "The difference between apparent solar time (sundials) and mean time (clocks), swinging about −14 to +16 minutes across the year — it is why sundials need a correction table."
+  ],
+  [
+   "Is the Sun due south at solar noon?",
+   "In northern mid-latitudes yes — a free compass check. In the tropics it can pass north or overhead depending on the date."
+  ],
+  [
+   "How accurate is the computed time?",
+   "Within about a minute for most places and dates with the standard algorithm — ample for shadows, panels and sundials."
+  ],
+  [
+   "Does solar noon split daylight in half?",
+   "Yes by construction: sunrise-to-noon and noon-to-sunset are equal spans of solar time (clock spans match closely too)."
+  ],
+  [
+   "Can solar noon be before 11:30 or after 12:30 clock time?",
+   "Easily — far inside wide zones (or with daylight saving) it strays over an hour from 12:00. Western China's single zone pushes it past 15:00 in places."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The day's frame: the "
+  },
+  {
+   "t": "Sunrise and Sunset Calculator",
+   "l": "/tools/sunrise-sunset-calculator"
+  },
+  {
+   "t": "; the height at noon: the "
+  },
+  {
+   "t": "Sun Altitude Calculator",
+   "l": "/tools/sun-altitude-calculator"
+  },
+  {
+   "t": "; zone math: the "
+  },
+  {
+   "t": "Time Zone Converter",
+   "l": "/tools/time-zone-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "golden-hour-calculator",
   "moon-age-calculator",

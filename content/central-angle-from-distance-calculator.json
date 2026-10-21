@@ -8,17 +8,167 @@
   "central angle from distance calculator tool",
   "how to calculate central angle from distance calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Central Angle From Distance Calculator",
+ "description": "Convert a surface distance into Earth's central angle with the Central Angle From Distance Calculator — degrees, radians and circumference share. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, New York to London's 5,540 km of surface distance subtends 49.82° at Earth's centre — about 13.84% of the whole circumference, the angle a 'digging' line between them would make.",
+ "quick_answer": "The Central Angle From Distance Calculator converts a great-circle surface distance into the angle it subtends at Earth's centre, in degrees and radians. Enter the distance and read the angle — the quantity behind satellite visibility, seismic wave paths and every through-Earth chord.",
+ "steps_intro": "Surface miles become centre angles by one division:",
+ "use_cases": [
+  {
+   "title": "Seismology and Earth structure",
+   "body": [
+    {
+     "t": "Earthquake waves are reported by epicentral angle (Δ) — degrees from source to station. Distances convert to Δ here; 90° is a quarter-planet away, wherever you stand."
+    }
+   ]
+  },
+  {
+   "title": "Satellite and radio geometry",
+   "body": [
+    {
+     "t": "Coverage cones and visibility windows start from the central angle between a ground station and the sub-satellite point."
+    }
+   ]
+  },
+  {
+   "title": "Chord and tunnel problems",
+   "body": [
+    {
+     "t": "The angle feeds the "
+    },
+    {
+     "t": "Earth Chord Length Calculator",
+     "l": "/tools/earth-chord-length-calculator"
+    },
+    {
+     "t": " — arc in hand, the straight-line shortcut through the planet follows."
+    }
+   ]
+  },
+  {
+   "title": "Teaching radians honestly",
+   "body": [
+    {
+     "t": "The central angle in radians is just distance ÷ radius — the one place the radian is not a convention but a measurement."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The radian ladder",
+   "body": [
+    {
+     "t": "1 km → 0.0090°. 100 km → 0.8993°. 1,000 km → 8.9932°. Each is distance ÷ 6,371.0088 km, in radians wearing degrees — the calculator's entire formula, because Earth's radius is the exchange rate."
+    }
+   ]
+  },
+  {
+   "label": "Example · A quarter of the way around",
+   "body": [
+    {
+     "t": "A central angle of 90° is 10,007 km of surface — pole-to-equator distance (the original definition of the metre chased exactly this arc: 10,000 km by revolutionary design, 10,007 by the real planet)."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Landmark central angles",
+  "intro": "Distances as the planet's centre sees them.",
+  "columns": [
+   "Central angle",
+   "Surface distance",
+   "Meaning"
+  ],
+  "rows": [
+   [
+    "1°",
+    "111.19 km",
+    "The degree-scale of everyday maps"
+   ],
+   [
+    "10°",
+    "1,111.9 km",
+    "A short-haul flight"
+   ],
+   [
+    "49.82°",
+    "5,540 km",
+    "New York–London"
+   ],
+   [
+    "90°",
+    "10,007 km",
+    "Quarter circumference"
+   ],
+   [
+    "180°",
+    "20,015 km",
+    "Antipode — the maximum"
+   ]
+  ],
+  "note": "Computed on the mean-radius sphere (R = 6,371.0088 km) this site uses for great-circle work. On the ellipsoid, tiny latitude-dependent refinements exist — below the precision of the distances people bring here."
+ },
+ "faq": [
+  [
+   "What formula does it use?",
+   "θ = distance ÷ Earth radius, giving radians; × 57.29578 gives degrees. With R = 6,371.0088 km. The arc-length relation run in reverse — no hidden steps."
+  ],
+  [
+   "Can I go the other way (angle to distance)?",
+   "Yes — the Earth Arc Length Calculator is the forward direction; together they are the same one-line relation wearing two doors."
+  ],
+  [
+   "Great-circle distance required?",
+   "The input must be surface (arc) distance — a straight-line chord or a road distance will produce a formally computed but meaningless angle. Feed it great-circle numbers."
+  ],
+  [
+   "Why do seismologists love degrees?",
+   "Because Δ in degrees is location-independent: a station 60° from a quake sees the same wave phases whether the quake was in Chile or Indonesia. Angle is the portable unit of a round planet."
+  ],
+  [
+   "Circumference share also shown?",
+   "Yes — distance ÷ 40,030 km (mean circumference) as a percentage; New York–London's 13.84% is the kind of figure that makes distances graspable."
+  ],
+  [
+   "Antipode angle?",
+   "180°, always — the antipode is defined by it. The Antipode Finder works the same fact from coordinates."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Forward direction: the "
+  },
+  {
+   "t": "Earth Arc Length Calculator",
+   "l": "/tools/earth-arc-length-calculator"
+  },
+  {
+   "t": "; the chord: the "
+  },
+  {
+   "t": "Earth Chord Length Calculator",
+   "l": "/tools/earth-chord-length-calculator"
+  },
+  {
+   "t": "; the endpoint: the "
+  },
+  {
+   "t": "Antipode Finder",
+   "l": "/tools/antipode-finder"
+  },
+  {
+   "t": "; the bulge: the "
+  },
+  {
+   "t": "Earth Bulge Calculator",
+   "l": "/tools/earth-bulge-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boiling-point-by-elevation-calculator",
   "cicada-emergence-map",

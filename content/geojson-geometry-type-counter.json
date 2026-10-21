@@ -8,17 +8,173 @@
   "geojson geometry type counter tool",
   "how to calculate geojson geometry type counter"
  ],
- "title": null,
- "description": null,
+ "title": "GeoJSON Geometry Type Counter: The Mix",
+ "description": "Count Points, LineStrings, Polygons and other geometry types in a FeatureCollection with the GeoJSON Geometry Type Counter. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a four-feature sample reports Point 2, LineString 1, Polygon 1 — the mix that tells you the file is a site plan, not a boundary set, before you draw a single thing.",
+ "quick_answer": "The GeoJSON Geometry Type Counter counts how many features of each geometry type a GeoJSON object holds — Points, LineStrings, Polygons and their Multi- forms. Paste the file and read the breakdown: the composition report that tells renderers, importers and reviewers what kind of geography they are actually dealing with.",
+ "steps_intro": "Not just how many features — what kind:",
+ "use_cases": [
+  {
+   "title": "Import planning",
+   "body": [
+    {
+     "t": "GIS layers are typed: points to the point layer, polygons to the polygon layer. The type census is the routing table for a mixed file’s import. The total it must reconcile with is the "
+    },
+    {
+     "t": "GeoJSON Feature Counter",
+     "l": "/tools/geojson-feature-counter"
+    },
+    {
+     "t": "’s."
+    }
+   ]
+  },
+  {
+   "title": "Renderer expectations",
+   "body": [
+    {
+     "t": "A style written for polygons meeting a file of points fails quietly. Count types before wiring styles, and the silence never happens."
+    }
+   ]
+  },
+  {
+   "title": "Data contract checks",
+   "body": [
+    {
+     "t": "‘Delivery will contain building polygons only’ is verifiable: any Point in the census is a breach with a number on it."
+    }
+   ]
+  },
+  {
+   "title": "Conversion scoping",
+   "body": [
+    {
+     "t": "CSV exports points honestly; lines and polygons need other paths. The mix tells you which parts of a file a "
+    },
+    {
+     "t": "CSV to GeoJSON",
+     "l": "/tools/csv-to-geojson-converter"
+    },
+    {
+     "t": " round-trip can even attempt."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The telling zero",
+   "body": [
+    {
+     "t": "A ‘parcels’ file reporting Polygon 0, Point 412 is not a parcels file — it is parcel centroids wearing a parcels filename. Zeros in the census are findings, not absences."
+    }
+   ]
+  },
+  {
+   "label": "Example · Multi- forms are their own types",
+   "body": [
+    {
+     "t": "MultiPolygon is counted as MultiPolygon, not as several Polygons — the type is the geometry’s declared shape, and conflating them corrupts layer planning."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The seven geometry types",
+  "intro": "GeoJSON’s complete cast (RFC 7946).",
+  "columns": [
+   "Type",
+   "Holds"
+  ],
+  "rows": [
+   [
+    "Point",
+    "One position"
+   ],
+   [
+    "MultiPoint",
+    "Several positions, one feature"
+   ],
+   [
+    "LineString",
+    "A path of positions"
+   ],
+   [
+    "MultiLineString",
+    "Several paths"
+   ],
+   [
+    "Polygon",
+    "Rings: outer plus holes"
+   ],
+   [
+    "MultiPolygon",
+    "Several polygons"
+   ],
+   [
+    "GeometryCollection",
+    "A bag of other geometries"
+   ]
+  ],
+  "note": "Null geometry is counted as its own honest category when it appears — a feature can exist with geometry: null, and a census that hides them lies by omission."
+ },
+ "faq": [
+  [
+   "How are GeometryCollections counted?",
+   "As GeometryCollection features at the top level — with their member geometries being separate citizens. Tools differ on nested counting; this census counts features by their geometry’s declared type, collections included as themselves."
+  ],
+  [
+   "Null geometries?",
+   "Reported as null/none rather than silently skipped — a delivery heavy with nulls is a story the census should tell."
+  ],
+  [
+   "Does it count vertices too?",
+   "Types, not vertices — the Coordinate Counter holds that census. Together they describe a file’s cast and its crowd."
+  ],
+  [
+   "Feature with mixed intent?",
+   "A feature has exactly one geometry (or null) — the mix lives across features, which is what makes the per-type census well-defined."
+  ],
+  [
+   "2D versus 3D positions?",
+   "Altitude does not change type: a Point with three numbers is a Point. The census reads the type field, not the position length."
+  ],
+  [
+   "Right-hand rule or validity checked?",
+   "No — counting types is not validating geometry. A self-intersecting Polygon still counts as a Polygon; validity is another gate."
+  ],
+  [
+   "Can it split a file by type?",
+   "Counting advises the split; GIS performs it. Knowing the mix sizes each output layer before you build it."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The total: the "
+  },
+  {
+   "t": "GeoJSON Feature Counter",
+   "l": "/tools/geojson-feature-counter"
+  },
+  {
+   "t": "; vertices per type: the "
+  },
+  {
+   "t": "GeoJSON Coordinate Counter",
+   "l": "/tools/geojson-coordinate-counter"
+  },
+  {
+   "t": "; keys: the "
+  },
+  {
+   "t": "GeoJSON Property Key Finder",
+   "l": "/tools/geojson-property-key-finder"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

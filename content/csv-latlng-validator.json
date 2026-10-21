@@ -6,17 +6,165 @@
   "lat lng csv",
   "coordinate csv check"
  ],
- "title": null,
- "description": null,
+ "title": "CSV Lat/Lng Validator: Plot-Ready Columns",
+ "description": "Validate spreadsheet lat/lng columns before plotting or geocoding with the CSV Lat/Lng Validator — quick pair checks for map-bound files. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a 200-row event file with three rows whose latitude and longitude traded places gets flagged before the plot scatters those events across the southern ocean.",
+ "quick_answer": "The CSV Lat/Lng Validator validates spreadsheet coordinate columns before you plot them or spend geocoding effort. Paste the CSV and check each lat/lng pair for presence, numeric form and sane ranges — the fast pre-flight that keeps spreadsheet geography honest on its way to a map.",
+ "steps_intro": "The two columns everything depends on, checked:",
+ "use_cases": [
+  {
+   "title": "Before plotting points",
+   "body": [
+    {
+     "t": "Every pin map starts as two columns. Validate them and the plot is about geography; skip it and the plot is about debugging. Plotting lives at "
+    },
+    {
+     "t": "CSV to Map",
+     "l": "/tools/csv-to-map"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Before geocoding spend",
+   "body": [
+    {
+     "t": "Rows whose pairs already validate need no geocoder. The validator sorts the file into ‘already located’ and ‘needs work’ before a single API credit burns."
+    }
+   ]
+  },
+  {
+   "title": "Shared-spreadsheet hygiene",
+   "body": [
+    {
+     "t": "Files many hands edit accumulate creative coordinate formats. A validation pass after each workshop keeps the master sheet plot-ready."
+    }
+   ]
+  },
+  {
+   "title": "Student and citizen data",
+   "body": [
+    {
+     "t": "Class projects and community surveys enter coordinates by hand — enthusiasm high, formatting wild. Validation is the kind gatekeeper."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The swapped pair that passes ranges",
+   "body": [
+    {
+     "t": "Chicago written as lat −87.63, lon 41.88 is range-legal and geographically absurd (Antarctic waters). Pair validators catch form; the plot — or the "
+    },
+    {
+     "t": "CSV Coordinate Bounding Box",
+     "l": "/tools/csv-coordinate-bounding-box"
+    },
+    {
+     "t": " — catches swaps. Know which gate you are standing at."
+    }
+   ]
+  },
+  {
+   "label": "Example · The degrees-minutes intruder",
+   "body": [
+    {
+     "t": "‘41.52.30’ typed from a GPS display is not a decimal and not valid input — it is degrees-minutes-seconds in disguise. Convert the column’s dress first (the coordinate converters), then validate."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Lat/lng column failure gallery",
+  "intro": "The usual suspects, in order of frequency.",
+  "columns": [
+   "Symptom",
+   "Usual cause"
+  ],
+  "rows": [
+   [
+    "Blank pairs",
+    "Rows never located — the geocoding queue"
+   ],
+   [
+    "Text in numeric cells",
+    "Notes, units or ‘TBD’ parked in coordinate columns"
+   ],
+   [
+    "|latitude| over 90",
+    "Longitude filed first — the swap"
+   ],
+   [
+    "Values in the thousands",
+    "Projected or pixel coordinates in a degree column"
+   ],
+   [
+    "Six decimals everywhere, wrong by miles",
+    "Valid form, wrong source — a provenance problem, not a format one"
+   ]
+  ],
+  "note": "This validator judges pairs as they will be plotted: latitude first-class, longitude first-class, both numeric and in range. What it cannot judge is whether the pair is the right place — that is source-checking."
+ },
+ "faq": [
+  [
+   "How is this different from the CSV Coordinate Validator?",
+   "Same family, different doorway: that page audits whole-file structure (columns, content classes); this one is the quick pair-focused pre-flight before plotting or geocoding. Files usually meet this one first."
+  ],
+  [
+   "Which column order?",
+   "Latitude and longitude columns are identified by their headers — order in the file does not matter, naming does. Rename exotic headers in your pasted copy."
+  ],
+  [
+   "Plus codes or DMS in the columns?",
+   "Not decimal pairs — the validator will fail them as non-numeric, correctly. Convert those formats to decimals with the site’s converters first."
+  ],
+  [
+   "What range is ‘sane’?",
+   "Latitude −90…90, longitude −180…180, both present and numeric. Beyond ranges, sanity is context (a Kansas file plotting in Kazakhstan is valid and wrong)."
+  ],
+  [
+   "Does it plot the points?",
+   "Validation is the gate, plotting is the destination — CSV to Map draws the survivors. Keeping the gates separate is what makes each trustworthy."
+  ],
+  [
+   "Rows with addresses but no pairs?",
+   "They fail as unlocated — and they are exactly the geocoding queue. The validator’s failure list doubles as the work list."
+  ],
+  [
+   "Scientific notation?",
+   "Rare in spreadsheets, parseable where valid — 4.07e1 is 40.7. If your export writes coordinates that way, the export settings deserve the fix."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Full audit: the "
+  },
+  {
+   "t": "CSV Coordinate Validator",
+   "l": "/tools/csv-coordinate-validator"
+  },
+  {
+   "t": "; plot the survivors: "
+  },
+  {
+   "t": "CSV to Map",
+   "l": "/tools/csv-to-map"
+  },
+  {
+   "t": "; convert: the "
+  },
+  {
+   "t": "CSV to GeoJSON Converter",
+   "l": "/tools/csv-to-geojson-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

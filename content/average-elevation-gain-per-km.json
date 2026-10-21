@@ -8,17 +8,162 @@
   "average elevation gain per kilometer tool",
   "how to calculate average elevation gain per kilometer"
  ],
- "title": null,
- "description": null,
+ "title": "Average Elevation Gain Per Kilometer",
+ "description": "Turn a route's total climbing and distance into average gain per kilometre with Average Elevation Gain Per Kilometer — plus the grade it implies. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, 850 metres of climbing over 42 km is 20.2 metres per kilometre (a 2.02% average grade) — rolling country — while a mountain trail at 1,240 m over 18.5 km hits 67.0 per kilometre and feels entirely different.",
+ "quick_answer": "Average Elevation Gain Per Kilometer divides a route's total elevation gain by its distance, giving the climbing density in metres per kilometre plus the equivalent average grade. Enter gain and distance from any ride, run or hike file and read the single number that predicts how the route will feel.",
+ "steps_intro": "Total climbing hides in totals. Density exposes it:",
+ "use_cases": [
+  {
+   "title": "Comparing routes fairly",
+   "body": [
+    {
+     "t": "A 60 km ride with 900 m of gain (15.0/km) is gentler than a 30 km ride with 750 m (25.0/km). Raw gain lies; gain per km compares — compute gain from the file with the "
+    },
+    {
+     "t": "GPX Elevation Gain Calculator",
+     "l": "/tools/gpx-elevation-gain-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Race and event grading",
+   "body": [
+    {
+     "t": "Organisers quote gain; riders plan by density. The number translates a course profile into expected suffering per hour."
+    }
+   ]
+  },
+  {
+   "title": "Training load planning",
+   "body": [
+    {
+     "t": "Weekly climbing density is a steadier load metric than weekly gain when ride lengths vary — track it and overtraining peeks out earlier."
+    }
+   ]
+  },
+  {
+   "title": "Hiking time estimates",
+   "body": [
+    {
+     "t": "Naismith-style estimates price climbing per distance; gain per km is the input that decides whether the 'three-hour walk' is five."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Same gain, different rides",
+   "body": [
+    {
+     "t": "900 m over 100 km = 9.0 m/km (a big flat day). 900 m over 25 km = 36.0 m/km (a climbing day). The gain is identical; the legs will file separate reports."
+    }
+   ]
+  },
+  {
+   "label": "Example · Grade is the same fact in percent",
+   "body": [
+    {
+     "t": "Gain ÷ distance × 100: 20.2 m/km = 2.02%, 67.0 m/km = 6.70%. Average grade flattens the descents bookkeeping into one slope — useful, and precisely why it must be called average."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading the density (rules of thumb)",
+  "intro": "Bands riders and hikers actually use — guidance, not physics.",
+  "columns": [
+   "Gain per km",
+   "Feels like",
+   "Average grade"
+  ],
+  "rows": [
+   [
+    "Under 10 m/km",
+    "Flat to gently rolling",
+    "Under 1%"
+   ],
+   [
+    "10–25 m/km",
+    "Rolling",
+    "1.0–2.5%"
+   ],
+   [
+    "25–50 m/km",
+    "Hilly",
+    "2.5–5.0%"
+   ],
+   [
+    "Over 50 m/km",
+    "Mountainous",
+    "Over 5%"
+   ]
+  ],
+  "note": "Averages hide distribution: 40 m/km earned in one wall differs from 40 m/km in rollers. The elevation profile shows the distribution; this number is the headline."
+ },
+ "faq": [
+  [
+   "What exactly is divided by what?",
+   "Total accumulated elevation gain (sum of all climbs in the route) divided by total route distance. Descents do not subtract — gain is climbing only, which is what legs pay for."
+  ],
+  [
+   "Where do I get the gain figure?",
+   "From your activity file: the GPX Elevation Gain Calculator computes it, and most platforms report their own version — see the threshold caveat in the comparison notes on this site."
+  ],
+  [
+   "Why do platforms disagree on gain?",
+   "Gain depends on the smoothing threshold: count every 1 m wiggle and gain inflates; threshold at 3–5 m and it shrinks. Same ride, honest different totals — compare densities only within one method."
+  ],
+  [
+   "Net elevation change instead?",
+   "Start-to-finish difference is a different (much smaller) number — a loop's net is zero while its gain may be 900 m. This calculator uses accumulated gain, the effort number."
+  ],
+  [
+   "Miles and feet?",
+   "Feet per mile is offered alongside metres per kilometre (20.2 m/km ≈ 106 ft/mile) — same density, local dress."
+  ],
+  [
+   "Does downhill skill count?",
+   "The metric prices climbing only. Technical descents cost time the number cannot see — one reason mountain-bike densities and road densities are not comparable across sports."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Get the gain: the "
+  },
+  {
+   "t": "GPX Elevation Gain Calculator",
+   "l": "/tools/gpx-elevation-gain-calculator"
+  },
+  {
+   "t": "; see the shape: the "
+  },
+  {
+   "t": "Elevation Profile",
+   "l": "/tools/elevation-profile"
+  },
+  {
+   "t": "; grades directly: the "
+  },
+  {
+   "t": "Slope Grade Calculator",
+   "l": "/tools/slope-grade-calculator"
+  },
+  {
+   "t": "; loss side: the "
+  },
+  {
+   "t": "GPX Elevation Loss Calculator",
+   "l": "/tools/gpx-elevation-loss-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "cicada-emergence-map",
   "climate-zone-finder",

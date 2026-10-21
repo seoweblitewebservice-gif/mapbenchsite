@@ -8,17 +8,161 @@
   "sun azimuth calculator tool",
   "how to calculate sun azimuth calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Sun Azimuth Calculator: Where in the Sky?",
+ "description": "Find the Sun's azimuth — its compass direction in the sky — for any place and time with the Sun Azimuth Calculator. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, on June 21 the Sun rises over New York at azimuth 58.3° — well north of east — and sets at 301.7°, which is why summer evenings light north-facing windows.",
+ "quick_answer": "The Sun Azimuth Calculator reports the Sun's compass direction in your sky — its azimuth in degrees from north — for any place, date and time. Enter the details and read the Sun's bearing — the direction shadows point away from.",
+ "steps_intro": "Azimuth is the Sun's compass bearing — 0° north, 90° east, 180° south:",
+ "use_cases": [
+  {
+   "title": "Panel and window orientation",
+   "body": [
+    {
+     "t": "A 'south-facing' roof in the northern hemisphere chases the noon azimuth of 180°; the calculator shows how the Sun's bearing sweeps either side of it by season. Full position: the "
+    },
+    {
+     "t": "Solar Position Calculator",
+     "l": "/tools/solar-position-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Sunrise and sunset alignment",
+   "body": [
+    {
+     "t": "Street grids, stone rows and photo spots align to specific azimuths on specific dates — this is the lookup. The dawn-only sibling is the "
+    },
+    {
+     "t": "Sunrise Direction Compass",
+     "l": "/tools/sunrise-direction-compass"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Shadow direction",
+   "body": [
+    {
+     "t": "Shadows point at azimuth + 180°. Garden shade, building shade and the photographer's backdrop all follow from this one addition."
+    }
+   ]
+  },
+  {
+   "title": "Navigation checks",
+   "body": [
+    {
+     "t": "The Sun as a rough compass: morning azimuth near east, evening near west, with the season's swing printed here instead of guessed."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · New York's sunrise swing",
+   "body": [
+    {
+     "t": "Computed sunrise azimuth: 58.3° on June 21, 90.6° at the March equinox, 121.6° on December 21 — a 63° sweep along the horizon across the year. 'The Sun rises in the east' is the equinox-only truth."
+    }
+   ]
+  },
+  {
+   "label": "Example · London's wider swing",
+   "body": [
+    {
+     "t": "Higher latitude, wider swing: London's June sunrise azimuth computes to 50.3° — nearly northeast — and its sunset to 309.7°."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Azimuth landmarks",
+  "intro": "The Sun's bearing at the day's hinge moments.",
+  "columns": [
+   "Moment",
+   "Azimuth behaviour"
+  ],
+  "rows": [
+   [
+    "Sunrise",
+    "East side; north of east in summer, south in winter (northern hemisphere)"
+   ],
+   [
+    "Solar noon",
+    "180° (due south) in northern mid-latitudes; 0°/360° in southern"
+   ],
+   [
+    "Sunset",
+    "360° minus the sunrise azimuth — symmetric about noon"
+   ],
+   [
+    "Night",
+    "Azimuth keeps sweeping below the horizon — the math never sleeps"
+   ]
+  ],
+  "note": "Azimuths here are true (from geographic north). A magnetic compass reads off by the local declination — the True North vs Magnetic page handles that gap."
+ },
+ "faq": [
+  [
+   "What is azimuth, in plain words?",
+   "The compass direction of the Sun, measured clockwise from north: 90° is an eastern Sun, 180° southern, 270° western."
+  ],
+  [
+   "Measured from north or south?",
+   "From north on this site — the modern standard. Some older solar texts use south; mixing them flips your answer by 180°."
+  ],
+  [
+   "Why isn't sunrise at 90°?",
+   "The Sun's declination leans the rise point north or south of east except at the equinoxes. Latitude widens the lean."
+  ],
+  [
+   "Can azimuth pass 180 before noon?",
+   "In the tropics the noon Sun can stand north (azimuth near 0°) on some dates — the formula handles it; intuition from temperate zones does not."
+  ],
+  [
+   "Magnetic compass conversion?",
+   "Add or subtract local magnetic declination (the True North vs Magnetic tool covers it) — in parts of the US the gap exceeds 15°."
+  ],
+  [
+   "How accurate is the azimuth?",
+   "A small fraction of a degree from the standard solar algorithm — tighter than any compass you will hold."
+  ],
+  [
+   "Azimuth at the poles?",
+   "At the pole every direction is south (or north) and azimuth becomes the Sun's hour angle in disguise — the calculator still reports the formal value."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Dawn bearing: the "
+  },
+  {
+   "t": "Sunrise Direction Compass",
+   "l": "/tools/sunrise-direction-compass"
+  },
+  {
+   "t": "; both angles: the "
+  },
+  {
+   "t": "Solar Position Calculator",
+   "l": "/tools/solar-position-calculator"
+  },
+  {
+   "t": "; height: the "
+  },
+  {
+   "t": "Sun Altitude Calculator",
+   "l": "/tools/sun-altitude-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "moon-age-calculator",
   "moon-illumination-calculator",

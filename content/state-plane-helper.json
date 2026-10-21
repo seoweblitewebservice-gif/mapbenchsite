@@ -6,17 +6,158 @@
   "spc",
   "us state plane coordinates"
  ],
- "title": null,
- "description": null,
+ "title": "US State Plane Helper: Zones and Workflow",
+ "description": "Start State Plane work from GPS coordinates with the US State Plane Helper — zones, NAD83 and survey feet, workflow first. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a Denver GPS point belongs to Colorado Central (zone 0502) — and knowing the zone, the datum and the unit before touching a converter is ninety percent of State Plane competence.",
+ "quick_answer": "The US State Plane Helper starts you from GPS latitude/longitude toward State Plane work: the zone system, the NAD83 datum and the feet-versus-metres reality of American surveying. Use it to identify your zone and prepare coordinates properly before a full State Plane conversion in survey software.",
+ "steps_intro": "State Plane is a workflow before it is a formula:",
+ "use_cases": [
+  {
+   "title": "Survey and GIS intake",
+   "body": [
+    {
+     "t": "A deliverable arrives 'in State Plane' with no zone named. The helper's zone-first workflow identifies what you are holding — the "
+    },
+    {
+     "t": "UTM Converter",
+     "l": "/tools/utm-converter"
+    },
+    {
+     "t": " covers the neighbouring federal system."
+    }
+   ]
+  },
+  {
+   "title": "Understanding a plat or survey",
+   "body": [
+    {
+     "t": "Bearings and distances on American surveys ride State Plane grids. Knowing the zone and its unit decodes the document's numbers."
+    }
+   ]
+  },
+  {
+   "title": "Preparing coordinates for conversion",
+   "body": [
+    {
+     "t": "Full SPC conversion belongs in validated survey/GIS tools; this helper gets the zone, datum and input hygiene right so the conversion cannot silently fail."
+    }
+   ]
+  },
+  {
+   "title": "Learning why 120+ zones exist",
+   "body": [
+    {
+     "t": "Each zone is a small projection tuned so distortion stays under one part in ten thousand — the design bargain this page explains before any number moves."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The unit trap",
+   "body": [
+    {
+     "t": "Many states publish in US survey feet, some in international feet, some in metres. The two 'feet' differ by two parts per million — invisible across a garden, a metre across a state. Naming the unit is the helper's first commandment."
+    }
+   ]
+  },
+  {
+   "label": "Example · Zone shapes follow states",
+   "body": [
+    {
+     "t": "States wider than tall get Lambert zones stacked north–south (California has six); tall states get Transverse Mercator columns (Illinois has three). The map of zones is the states' shapes, projected."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "State Plane essentials",
+  "intro": "The facts the workflow stands on.",
+  "columns": [
+   "Fact",
+   "Detail"
+  ],
+  "rows": [
+   [
+    "Datum",
+    "NAD83 (modern realisations) — WGS84 GPS points sit within about a metre, not identical"
+   ],
+   [
+    "Zones",
+    "Over 120 across the 50 states, each tuned to keep scale distortion ≤ 1:10,000"
+   ],
+   [
+    "Projections",
+    "Lambert conformal conic (wide states) and Transverse Mercator (tall states); Alaska and Hawaii have their own arrangements"
+   ],
+   [
+    "Units",
+    "US survey feet, international feet or metres — by state law and era. Always ask"
+   ],
+   [
+    "Identifiers",
+    "Zones carry FIPS codes (Colorado Central is FIPS zone 0502) and EPSG codes per datum and unit"
+   ]
+  ],
+  "note": "This helper is the orientation layer — zone identification and preparation. Deliverable-grade conversion uses NGS tools (NCAT) or validated GIS with the exact realisation and unit declared."
+ },
+ "faq": [
+  [
+   "NAD83 or NAD27?",
+   "Old surveys ride NAD27, whose coordinates can sit hundreds of metres from NAD83's for the same ground. The document's era decides; conversions between them are datum shifts, not arithmetic."
+  ],
+  [
+   "Grid north versus true north?",
+   "State Plane bearings are grid bearings; convergence (the angle between grid and true north) grows toward zone edges. Surveys state their basis of bearings — read it before comparing to a compass."
+  ],
+  [
+   "Ground versus grid distance?",
+   "Grid distances are projection distances; ground distances at elevation shrink or stretch by the combined factor. At Denver's altitude the difference is roughly 1 part in 4,000 — surveyors live by it, walkers may ignore it."
+  ],
+  [
+   "Which realisation of NAD83?",
+   "Original 1986, HARN, NSRS2007, 2011 — each nudged coordinates by centimetres to decimetres. Metadata is the only way to know; the helper teaches you to ask."
+  ],
+  [
+   "Can I convert fully here?",
+   "This helper identifies zones and prepares inputs; full conversion belongs in NGS NCAT or your GIS, where the realisation and unit are explicit settings — the professional route, stated plainly."
+  ],
+  [
+   "Hawaii and Alaska?",
+   "Hawaii has its own zones (on an older datum heritage — care advised) and Alaska spans ten zones including an oblique Mercator for the panhandle. The helper's zone logic introduces them."
+  ],
+  [
+   "Why not just use UTM?",
+   "UTM is one-size federal; State Plane is tailored — distortion budgets an order tighter, units matched to local law, and a century of records written in it. American land work speaks SPC."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The federal sibling: the "
+  },
+  {
+   "t": "UTM Converter",
+   "l": "/tools/utm-converter"
+  },
+  {
+   "t": "; military cousin: the "
+  },
+  {
+   "t": "MGRS Converter",
+   "l": "/tools/mgrs-converter"
+  },
+  {
+   "t": "; inputs: the "
+  },
+  {
+   "t": "Coordinate Converter",
+   "l": "/tools/coordinate-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "city-from-coordinates",
   "coordinate-bounding-box-generator",

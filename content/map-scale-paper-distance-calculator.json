@@ -8,17 +8,164 @@
   "map scale paper distance calculator converter",
   "map scale paper distance calculator formula"
  ],
- "title": null,
- "description": null,
+ "title": "Map Scale Paper Distance Calculator",
+ "description": "Work out how long a real distance appears on a printed map with the Map Scale Paper Distance Calculator — ground to paper, any scale. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, at 1:50,000 a 10 km hike draws as exactly 20.0 cm of line — long enough to measure with a school ruler, short enough to fit the sheet.",
+ "quick_answer": "The Map Scale Paper Distance Calculator works out how long a real-world distance appears on a map at a chosen scale — ground distance divided by the scale denominator, in your units. Enter the ground distance and scale and read the paper length in centimetres or inches.",
+ "steps_intro": "Ground truth, shrunk to fit the page — by exactly the scale's ratio:",
+ "use_cases": [
+  {
+   "title": "Drawing maps and plans",
+   "body": [
+    {
+     "t": "Sketching a site, a route or a garden at a true scale starts here: the real lengths converted before the pencil moves. The reverse direction — paper to ground — is the sibling "
+    },
+    {
+     "t": "Map Unit Converter",
+     "l": "/tools/map-unit-converter"
+    },
+    {
+     "t": "'s daily work."
+    }
+   ]
+  },
+  {
+   "title": "Checking a printed sheet",
+   "body": [
+    {
+     "t": "A route you know is 10 km should measure 20.0 cm on a true 1:50,000 sheet. If it does not, the print was rescaled — this calculator is the lie detector."
+    }
+   ]
+  },
+  {
+   "title": "Teaching scale",
+   "body": [
+    {
+     "t": "Students predict, then measure: the prediction step is this calculation, and the measuring step is where photocopier shrinkage becomes a detective story."
+    }
+   ]
+  },
+  {
+   "title": "Model and miniature work",
+   "body": [
+    {
+     "t": "A 1:87 model railway or a 1:500 site model obeys the same division. Real building in, model length out."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Three working scales",
+   "body": [
+    {
+     "t": "1 km of ground: at 1:24,000 it prints 4.2 cm; at 1:50,000, 2.0 cm; at 1:100,000, exactly 1.0 cm. The last is why 1:100,000 sheets feel made for metric rulers — one centimetre per kilometre by construction."
+    }
+   ]
+  },
+  {
+   "label": "Example · The inch on a USGS quad",
+   "body": [
+    {
+     "t": "At 1:24,000 one inch of paper is 609.6 m of ground (24,000 × 2.54 cm). American 7.5-minute quads built generations of fieldwork on that awkward, exact number."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Ground to paper, common scales",
+  "intro": "One kilometre of ground, printed at the standard scales.",
+  "columns": [
+   "Scale",
+   "1 km prints as",
+   "1 cm on paper means"
+  ],
+  "rows": [
+   [
+    "1:10,000",
+    "10.0 cm",
+    "100 m"
+   ],
+   [
+    "1:24,000",
+    "4.2 cm",
+    "240 m"
+   ],
+   [
+    "1:25,000",
+    "4.0 cm",
+    "250 m"
+   ],
+   [
+    "1:50,000",
+    "2.0 cm",
+    "500 m"
+   ],
+   [
+    "1:100,000",
+    "1.0 cm",
+    "1,000 m"
+   ]
+  ],
+  "note": "Arithmetic is the representative fraction itself: paper = ground ÷ denominator, same units. Screens break scales (zoom is free); paper keeps them — which is this calculator's whole jurisdiction."
+ },
+ "faq": [
+  [
+   "Which units can I enter?",
+   "Ground in kilometres, miles, metres or feet; paper out in centimetres or inches — the calculator carries the conversions so the ratio stays the only idea you must hold."
+  ],
+  [
+   "My map has no stated scale.",
+   "Recover it from a known feature with the Map Scale Ratio from Distances tool — measure the feature on paper and its true length, and the ratio falls out."
+  ],
+  [
+   "Why did my printout measure wrong?",
+   "Printers and PDFs rescale silently ('fit to page'). Print at 100% or 'actual size', then verify with a known distance — the check in the use cases above exists because this happens constantly."
+  ],
+  [
+   "Bar scales survive resizing — should I trust them?",
+   "Yes: a drawn bar shrinks with the map, staying true when the printed 1:n no longer is. On a rescaled sheet, measure against the bar, not the ratio."
+  ],
+  [
+   "Screens and phone maps?",
+   "A screen's scale depends on its physical pixel size, so 'paper distance' belongs to fixed media. For screens, metres-per-pixel is the honest scale language."
+  ],
+  [
+   "Area on paper?",
+   "Areas shrink by the denominator squared: at 1:50,000, one square centimetre is 0.25 km². Linear intuition fails areas by exactly that square — compute, do not scale the feeling."
+  ],
+  [
+   "Half-scale and odd prints?",
+   "A map printed at 50% carries half its stated scale (1:50,000 becomes effectively 1:100,000). Recover the true ratio from a known distance whenever a sheet's provenance is murky."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Recover a scale: the "
+  },
+  {
+   "t": "Map Scale Ratio from Distances",
+   "l": "/tools/map-scale-ratio-from-distances"
+  },
+  {
+   "t": "; paper to ground: the "
+  },
+  {
+   "t": "Map Unit Converter",
+   "l": "/tools/map-unit-converter"
+  },
+  {
+   "t": "; screen scale: the "
+  },
+  {
+   "t": "Map Meters per Pixel Calculator",
+   "l": "/tools/map-meters-per-pixel-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "closest-facility-finder",
   "compass-bearing-visualizer",

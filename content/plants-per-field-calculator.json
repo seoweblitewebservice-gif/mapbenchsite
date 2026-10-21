@@ -8,17 +8,171 @@
   "plants per field calculator tool",
   "how to use plants per field calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Plants Per Field Calculator: Stand Counts",
+ "description": "Calculate how many plants a field holds from row and in-row spacing with the Plants Per Field Calculator — plant population per acre and per field. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, corn on 30-inch rows at 6.9-inch in-row spacing plants 30,303 seeds per acre — so a 10-acre field is a 303,030-plant order before germination takes its cut.",
+ "quick_answer": "The Plants Per Field Calculator turns row spacing and in-row spacing into plant population — plants per acre and for the whole field. Enter the two spacings and the field size and read the population: the number seed orders, transplant trays and yield models are all built from.",
+ "steps_intro": "Population is geometry: field area ÷ the rectangle each plant owns:",
+ "use_cases": [
+  {
+   "title": "Seed ordering",
+   "body": [
+    {
+     "t": "Seed is sold by count or weight derived from count. Population first, then germination percentage inflates the order — the "
+    },
+    {
+     "t": "Seed Quantity Per Acre Calculator",
+     "l": "/tools/seed-quantity-per-acre-calculator"
+    },
+    {
+     "t": " carries that second step."
+    }
+   ]
+  },
+  {
+   "title": "Transplant and plug planning",
+   "body": [
+    {
+     "t": "Vegetable growers raise transplants to a number. Field population says how many trays the greenhouse owes the field, weeks before planting day."
+    }
+   ]
+  },
+  {
+   "title": "Yield model inputs",
+   "body": [
+    {
+     "t": "Yield forecasts multiply per-plant yield by population. A wrong population poisons the model politely and completely — this page is the audit."
+    }
+   ]
+  },
+  {
+   "title": "Spacing redesigns",
+   "body": [
+    {
+     "t": "Widening rows for a new cultivator trades population for access: the calculator prices the trade before the equipment is ordered. Row counts themselves come from the "
+    },
+    {
+     "t": "Rows Per Field Calculator",
+     "l": "/tools/rows-per-field-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Corn's classic stand",
+   "body": [
+    {
+     "t": "30-in rows × 6.9-in in-row: each plant owns 2.5 ft × 0.575 ft = 1.4375 sq ft; 43,560 ÷ 1.4375 = 30,303 plants per acre — squarely in the modern corn-belt range, which is why this pairing is the textbook one."
+    }
+   ]
+  },
+  {
+   "label": "Example · Wider rows, fewer plants",
+   "body": [
+    {
+     "t": "30 × 12 in spacing gives 17,424 per acre; 12 × 12 in (lettuce-style) gives 43,560 — the plant-per-acre number equals the square feet per acre when each plant owns exactly one square foot."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Populations for standard spacings",
+  "intro": "43,560 ÷ (row ft × in-row ft), computed.",
+  "columns": [
+   "Row spacing",
+   "In-row spacing",
+   "Plants per acre"
+  ],
+  "rows": [
+   [
+    "30 in",
+    "6.9 in",
+    "30,303"
+   ],
+   [
+    "30 in",
+    "12 in",
+    "17,424"
+   ],
+   [
+    "36 in",
+    "12 in",
+    "14,520"
+   ],
+   [
+    "12 in",
+    "12 in",
+    "43,560"
+   ],
+   [
+    "24 in",
+    "18 in",
+    "14,520"
+   ]
+  ],
+  "note": "Headlands, tramlines and sprayer tracks remove a few percent of real fields — population on paper is the ceiling; stand counts after emergence tell the truth."
+ },
+ "faq": [
+  [
+   "Does the calculator handle rectangular plantings only?",
+   "The spacing model is a rectangular grid — the standard for row crops. Offset (triangular) planting packs about 15% more plants into the same spacings; orchards on triangular layouts should scale accordingly."
+  ],
+  [
+   "Plants per acre versus seeds per acre?",
+   "Population is the target stand. Seed rate adds germination and field losses on top — order more seeds than the population you want, by your seed lot's tested germination."
+  ],
+  [
+   "What about the field's headlands?",
+   "Turning headlands and tracks are unplanted. Subtract their share (often 3–8%) or enter the net planted acres — the calculator assumes every entered acre is planted."
+  ],
+  [
+   "Twin-row and skip-row patterns?",
+   "Average the pattern into an effective row spacing (a twin-row pair on 30-in centres behaves like its centre spacing with two rows' in-row counts) — or compute per-band and scale. The simple grid covers most commercial patterns."
+  ],
+  [
+   "Metric spacings?",
+   "Centimetres and metres convert inside; European maize at 75 cm × 17 cm lands near 78,000 plants per hectare — the same geometry in the other dialect."
+  ],
+  [
+   "Trees and orchards?",
+   "Identical math at larger scale: 20 × 20 ft trees are 109 per acre. The per-plant rectangle does not care whether the plant is corn or walnut."
+  ],
+  [
+   "How do I verify in the field?",
+   "Count plants in 1/1000th of an acre (17.4 ft of 30-in row) at several spots and average ×1,000 — the field audit this page's paper number invites."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Along one row: the "
+  },
+  {
+   "t": "Plants Per Row Calculator",
+   "l": "/tools/plants-per-row-calculator"
+  },
+  {
+   "t": "; seed totals: the "
+  },
+  {
+   "t": "Seed Quantity Per Acre Calculator",
+   "l": "/tools/seed-quantity-per-acre-calculator"
+  },
+  {
+   "t": "; rows: the "
+  },
+  {
+   "t": "Rows Per Field Calculator",
+   "l": "/tools/rows-per-field-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-area-from-radius",

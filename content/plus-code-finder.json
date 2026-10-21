@@ -6,17 +6,165 @@
   "open location code",
   "OLC"
  ],
- "title": null,
- "description": null,
+ "title": "Plus Code Finder: Addresses Without Streets",
+ "description": "Find the Plus Code for any coordinates with the Plus Code Finder — Google's open location codes, full and short forms explained. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, Times Square's full Plus Code is 87G8Q257+6Q — an address for the crossroads computed from its coordinates alone, no street database consulted.",
+ "quick_answer": "The Plus Code Finder gives the Plus Code (Open Location Code) for any latitude and longitude, and converts codes back to the coordinates they name. Enter a point and read its code — the open address system Google built for places with no street address.",
+ "steps_intro": "An address computed from geography itself, not from a street database:",
+ "use_cases": [
+  {
+   "title": "Addressing the unaddressed",
+   "body": [
+    {
+     "t": "Rural homes, informal settlements, new developments: Plus Codes give them a shareable address today. The "
+    },
+    {
+     "t": "Latitude and Longitude Finder",
+     "l": "/tools/latitude-longitude-finder"
+    },
+    {
+     "t": " supplies the coordinates to encode."
+    }
+   ]
+  },
+  {
+   "title": "Delivery and pickup points",
+   "body": [
+    {
+     "t": "A gate, a dock, a trailhead kiosk — spots street addresses describe badly get a code that lands on the exact square."
+    }
+   ]
+  },
+  {
+   "title": "Emergency location sharing",
+   "body": [
+    {
+     "t": "A code read over the phone puts responders on a ~14-metre square. It pairs with the "
+    },
+    {
+     "t": "QR Location Helper",
+     "l": "/tools/qr-location-helper"
+    },
+    {
+     "t": " for printed signs at trailheads and venues."
+    }
+   ]
+  },
+  {
+   "title": "Checking a code from the wild",
+   "body": [
+    {
+     "t": "Found a code on a sign or listing? Decode it here and see the square it names before trusting it."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The algorithm, verified",
+   "body": [
+    {
+     "t": "Google's own headquarters encodes to 849VCWC8+R9 — the published reference example this encoder's arithmetic reproduces exactly. Times Square is 87G8Q257+6Q; the Eiffel Tower, 8FW4V75V+9Q."
+    }
+   ]
+  },
+  {
+   "label": "Example · Short codes need a town",
+   "body": [
+    {
+     "t": "Near a known place, the code shortens: Q257+6Q works with 'New York' because the first characters are implied by locality. Short codes are local dialect; full codes are the universal language."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Plus Code anatomy",
+  "intro": "What the string's parts do.",
+  "columns": [
+   "Part",
+   "Meaning"
+  ],
+  "rows": [
+   [
+    "First 4 characters",
+    "An area about 14 × 14 km"
+   ],
+   [
+    "First 6",
+    "About 1.1 km × 1.1 km — neighbourhood scale"
+   ],
+   [
+    "8 characters (before the +)",
+    "About 275 × 275 m"
+   ],
+   [
+    "10 characters",
+    "A cell about 14 × 14 m — the standard address precision"
+   ],
+   [
+    "11th character",
+    "Refines to roughly 3.5 × 2.8 m — a doorway strip"
+   ]
+  ],
+  "note": "The alphabet omits vowels and look-alikes (20 safe characters), so codes cannot spell words or be misread at a glance. The system is open and offline-computable — no server decides your address."
+ },
+ "faq": [
+  [
+   "Who runs Plus Codes?",
+   "Nobody centrally — the Open Location Code is an open standard (created at Google Zurich, now community-stewarded). Any app can compute codes offline, including this one."
+  ],
+  [
+   "Full code or short code?",
+   "Full codes work worldwide with no context. Short codes drop the area prefix and need a reference locality ('Q257+6Q, New York') — the finder produces full codes you can shorten safely."
+  ],
+  [
+   "How big is a 10-character cell?",
+   "About 14 metres square at the equator, narrowing in longitude toward the poles — precisely, 0.000125 degrees per side at the final pair's resolution."
+  ],
+  [
+   "Can I navigate to a code?",
+   "Google Maps and many other apps accept Plus Codes in search. The code pasted there lands on the cell this finder shows."
+  ],
+  [
+   "Codes for places with no name?",
+   "That is the point of the system — oceans aside, every square metre of land can carry a code whether or not anyone named it."
+  ],
+  [
+   "Do codes expire or change?",
+   "No — a code is pure arithmetic on coordinates. It names the same cell forever."
+  ],
+  [
+   "Precision beyond 11 characters?",
+   "Possible (each extra grid character refines further), but 11 already beats consumer GPS accuracy; more characters are ceremony."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Coordinates first: the "
+  },
+  {
+   "t": "Latitude and Longitude Finder",
+   "l": "/tools/latitude-longitude-finder"
+  },
+  {
+   "t": "; words instead: the "
+  },
+  {
+   "t": "What3Words-Style Location Helper",
+   "l": "/tools/what3words-converter"
+  },
+  {
+   "t": "; share it: the "
+  },
+  {
+   "t": "QR Location Helper",
+   "l": "/tools/qr-location-helper"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "city-from-coordinates",
   "coordinate-bounding-box-generator",

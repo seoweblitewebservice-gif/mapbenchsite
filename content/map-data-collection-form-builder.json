@@ -7,17 +7,166 @@
   "gps form collector",
   "survey form map export"
  ],
- "title": null,
- "description": null,
+ "title": "Map Data Collection Form Builder: Field Forms",
+ "description": "Build a field form with the Map Data Collection Form Builder — text, number and choice fields, GPS attached automatically, CSV or GeoJSON out. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a tree-survey crew builds a form in five minutes — species, condition, photo note — and every submission lands on the map with its GPS position already attached.",
+ "quick_answer": "The Map Data Collection Form Builder lets you design a simple data-collection form — text, number and choice fields — and collect submissions with GPS positions attached automatically. Everything runs in your browser with no account and no server, and exports cleanly as CSV or GeoJSON.",
+ "steps_intro": "Design the form, walk the field, export the data — all without a platform:",
+ "use_cases": [
+  {
+   "title": "Citizen-science and survey walks",
+   "body": [
+    {
+     "t": "Tree inventories, litter audits, bird boxes, potholes — any walk-and-record project gets a proper form instead of a notes app. See the results live with the "
+    },
+    {
+     "t": "Live Spatial Data Connector",
+     "l": "/tools/live-spatial-data-connector"
+    },
+    {
+     "t": " pattern once exported."
+    }
+   ]
+  },
+  {
+   "title": "Inspections and site checks",
+   "body": [
+    {
+     "t": "Playgrounds, signage, hydrants: a choice field for condition and a number for the asset tag turns a clipboard round into a dataset."
+    }
+   ]
+  },
+  {
+   "title": "Teaching data design",
+   "body": [
+    {
+     "t": "Students learn the real lesson — fields chosen in the office decide what can be analysed later. Building the form here makes that concrete in one lesson."
+    }
+   ]
+  },
+  {
+   "title": "One-person fieldwork",
+   "body": [
+    {
+     "t": "No team platform budget, no IT ticket. One browser, one form, one export — the researcher's pocket kit. Plot the take in "
+    },
+    {
+     "t": "Pin Map Maker",
+     "l": "/tools/pin-map-maker"
+    },
+    {
+     "t": " for a first look."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The pothole round",
+   "body": [
+    {
+     "t": "A residents' group builds: street (text), severity (choice 1–3), length in metres (number). Forty submissions later the CSV sorts by severity and the council gets a map instead of a complaint thread."
+    }
+   ]
+  },
+  {
+   "label": "Example · GPS honesty",
+   "body": [
+    {
+     "t": "A submission under a railway bridge carries a position — and a wide accuracy circle. The builder keeps the GPS reading the phone reported; checking accuracy before you move on is field craft the form cannot do for you."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Field types and when to use them",
+  "intro": "Three field types cover nearly every walk-and-record job — choose for analysability.",
+  "columns": [
+   "Field type",
+   "Best for",
+   "Design tip"
+  ],
+  "rows": [
+   [
+    "Text",
+    "Names, notes, anything unpredictable",
+    "Keep it last — free text is where tidiness goes to die"
+   ],
+   [
+    "Number",
+    "Counts, measurements, sizes",
+    "Say the unit in the label: 'Length (m)'"
+   ],
+   [
+    "Choice",
+    "Condition, species group, yes/no",
+    "Fewer, clearer options beat a perfect taxonomy"
+   ],
+   [
+    "GPS position (automatic)",
+    "Where the submission happened",
+    "Wait for a good fix before submitting"
+   ]
+  ],
+  "note": "Submissions persist in your browser's local storage on that device — they are not uploaded anywhere. That is the privacy bargain: nothing leaves the phone until you export the CSV or GeoJSON yourself."
+ },
+ "faq": [
+  [
+   "What happens if the browser closes mid-survey?",
+   "Saved submissions persist in the browser's local storage, so reopening the page restores your collection. Unsaved half-filled entries are not promised — submit as you go, which is good field practice anyway."
+  ],
+  [
+   "Can I edit the form after collecting some data?",
+   "You can adjust the form, but changing fields mid-project makes earlier and later submissions disagree in shape. Professional habit: pilot the form for ten records, fix it, then freeze it for the real collection."
+  ],
+  [
+   "How accurate is the automatic GPS?",
+   "As accurate as the device reports — typically a few metres outdoors for a modern phone, worse under trees, bridges and indoors. The reading comes from the device's own location services, not from this page."
+  ],
+  [
+   "CSV or GeoJSON — which export?",
+   "CSV for spreadsheets and statistics; GeoJSON when the points must stay geographic — reopening in a GIS, a viewer, or a choropleth pipeline. Export both if unsure; they cost nothing."
+  ],
+  [
+   "Can submissions include photos?",
+   "This builder keeps to form fields and position — no photo upload. Note a photo filename or description in a text field if your workflow pairs camera shots with records."
+  ],
+  [
+   "Is there a submission limit?",
+   "No account quota exists; the practical limit is the browser's local storage on the device. For a long campaign, export regularly — exports are also your backup."
+  ],
+  [
+   "Can I predefine the area to survey?",
+   "Sketch the study area first with the Map Drawer or Pin Map Maker to brief collectors; the form itself happily records wherever the collector stands."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "View the exported points with the "
+  },
+  {
+   "t": "GeoJSON Viewer",
+   "l": "/tools/geojson-viewer"
+  },
+  {
+   "t": ", sketch the study area in the "
+  },
+  {
+   "t": "Map Drawer",
+   "l": "/tools/map-drawer"
+  },
+  {
+   "t": ", and export finished maps through "
+  },
+  {
+   "t": "Map PNG Export",
+   "l": "/tools/map-png-export"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "advanced-map-embed-generator",
   "blank-map",

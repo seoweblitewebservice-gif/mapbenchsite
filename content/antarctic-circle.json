@@ -6,17 +6,172 @@
   "antarctica research stations",
   "antarctic circle online"
  ],
- "title": null,
- "description": null,
+ "title": "Antarctic Circle: The Southern Line of Night",
+ "description": "Explore the Antarctic Circle — the latitude of the southern polar night and midnight sun, its research stations and drifting position. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, the Antarctic Circle sits at 66.5633°S and runs about 15,900 km around the continent's coast — almost entirely over ocean and ice that no road will ever cross.",
+ "quick_answer": "The Antarctic Circle is the line at 66.5633 degrees south latitude where the Sun can stay up for 24 hours at the December solstice — and vanish for 24 hours at the June one. This page maps the circle and explains polar day and night down south.",
+ "steps_intro": "The mirror of the Arctic Circle, around a continent instead of an ocean:",
+ "use_cases": [
+  {
+   "title": "Geography teaching",
+   "body": [
+    {
+     "t": "The five great circles make sense as a set: tropics where the Sun can stand overhead, polar circles where it can refuse to set. Its northern twin is the "
+    },
+    {
+     "t": "Arctic Circle",
+     "l": "/tools/arctic-circle"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Expedition and cruise context",
+   "body": [
+    {
+     "t": "Antarctic cruises advertise 'crossing the circle' — this page shows where the line falls against the Peninsula's geography. Distances: the "
+    },
+    {
+     "t": "Distance From Antarctic Circle Calculator",
+     "l": "/tools/distance-from-antarctic-circle"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Research-station literacy",
+   "body": [
+    {
+     "t": "Stations are described by their circle position for a reason: it decides their winter darkness budget."
+    }
+   ]
+  },
+  {
+   "title": "Polar day and night questions",
+   "body": [
+    {
+     "t": "How long the Sun stays away is a latitude function — the "
+    },
+    {
+     "t": "Polar Day / Night Checker",
+     "l": "/tools/polar-day-night-checker"
+    },
+    {
+     "t": " computes it for any point."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The emptiest circle",
+   "body": [
+    {
+     "t": "Unlike its northern twin (eight countries, many towns), the Antarctic Circle crosses no country and almost no land communities — its ~15,900 km run is ocean, ice shelf and the Antarctic Peninsula's tip."
+    }
+   ]
+  },
+  {
+   "label": "Example · A moving line",
+   "body": [
+    {
+     "t": "The circle creeps as Earth's tilt changes — roughly 15 metres a year, currently drifting southward in latitude terms as the tilt decreases and the polar-night zone shrinks slightly."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The Antarctic Circle in numbers",
+  "intro": "Computed and standard figures for the line.",
+  "columns": [
+   "Fact",
+   "Value"
+  ],
+  "rows": [
+   [
+    "Latitude",
+    "66.5633°S (= 90° − axial tilt 23.4367°)"
+   ],
+   [
+    "Length of the circle",
+    "~15,900 km (sphere computation)"
+   ],
+   [
+    "Land crossed",
+    "Antarctic Peninsula tip and scattered coast — no towns"
+   ],
+   [
+    "Coldest record nearby",
+    "−89.2 °C at Vostok Station (1983), deep inside the circle"
+   ],
+   [
+    "Sun at December solstice",
+    "24 hours above the horizon on the circle"
+   ]
+  ],
+  "note": "Distances use the mean-Earth sphere this site computes with; the circle's latitude itself comes from the current axial tilt and inches over time."
+ },
+ "faq": [
+  [
+   "How long is the midnight sun inside the circle?",
+   "From one day at the circle itself to six months at the South Pole — growing with latitude exactly as the Arctic's does, in the opposite season."
+  ],
+  [
+   "Can tourists cross it?",
+   "Yes — Antarctic Peninsula cruises cross it in the southern summer, weather and ice permitting; there is no marker in the water, only the GPS moment."
+  ],
+  [
+   "Why is Antarctica colder than the Arctic?",
+   "It is a high, ice-covered continent (the pole sits ~2,800 m up on ice) versus the Arctic's sea-level ocean — altitude and land ice win the cold contest."
+  ],
+  [
+   "Who governs inside the circle?",
+   "The Antarctic Treaty system (1961) administers the continent for science; territorial claims are held in abeyance rather than settled."
+  ],
+  [
+   "Do penguins live inside it?",
+   "Several species breed on the Peninsula and coasts around the circle — Adélies and gentoos among them; emperors breed further south on sea ice."
+  ],
+  [
+   "Is the circle visible from space as a line?",
+   "No more than any latitude — it is geometry, not geography. What satellites see is the day/night terminator respecting it at the solstices."
+  ],
+  [
+   "What is the 'convergence' nearby?",
+   "The Antarctic Convergence is a biological ocean boundary where cold southern water sinks — a wavy natural front, unrelated to the geometric circle but often confused with it."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Northern twin: the "
+  },
+  {
+   "t": "Arctic Circle",
+   "l": "/tools/arctic-circle"
+  },
+  {
+   "t": "; distances: the "
+  },
+  {
+   "t": "Distance From Antarctic Circle Calculator",
+   "l": "/tools/distance-from-antarctic-circle"
+  },
+  {
+   "t": "; extremes test: the "
+  },
+  {
+   "t": "Polar Day / Night Checker",
+   "l": "/tools/polar-day-night-checker"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "arctic-circle",
   "distance-from-arctic-circle",

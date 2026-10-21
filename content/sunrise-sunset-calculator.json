@@ -6,17 +6,165 @@
   "sunset",
   "solar noon"
  ],
- "title": null,
- "description": null,
+ "title": "Sunrise and Sunset Calculator: Times by Place",
+ "description": "Get sunrise, sunset and day length for any place and date with the Sunrise and Sunset Calculator — solar noon and twilight context included. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, New York's longest day (June 21) runs about 05:24 to 20:30 — 15.1 hours of daylight — while December 21 squeezes it to 07:16–16:31, just 9.25 hours.",
+ "quick_answer": "The Sunrise and Sunset Calculator gives the sunrise and sunset times and the day length between them, for any coordinates and date. Enter the place and day and read the Sun's schedule: first light's anchor, the evening's deadline, and how the two slide against each other through the seasons.",
+ "steps_intro": "The day's bookends, computed for your exact spot:",
+ "use_cases": [
+  {
+   "title": "Outdoor planning of every kind",
+   "body": [
+    {
+     "t": "Hikes, rides, shoots and sails all end at sunset. The walking-specific version is the "
+    },
+    {
+     "t": "Time to Sunset Walk Planner",
+     "l": "/tools/time-to-sunset-walk"
+    },
+    {
+     "t": "; the light before and after lives in the twilight calculators."
+    }
+   ]
+  },
+  {
+   "title": "Gardeners and farmers",
+   "body": [
+    {
+     "t": "Day length (photoperiod) drives planting decisions as much as frost dates — read your latitude's curve here."
+    }
+   ]
+  },
+  {
+   "title": "Home light and energy",
+   "body": [
+    {
+     "t": "When the lamps come on is a sunset question; the year's swing (New York: 9.25 to 15.1 hours) is your lighting bill's hidden variable."
+    }
+   ]
+  },
+  {
+   "title": "Religious and cultural observance",
+   "body": [
+    {
+     "t": "Fasting days, Sabbath candles and festival timings key off sunset — the calculator supplies the local figure."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Two New York days",
+   "body": [
+    {
+     "t": "Computed: June 21 sunrise 05:24, sunset 20:30 (15.1 h). December 21 sunrise 07:16, sunset 16:31 (9.25 h). The winter day is barely three-fifths of the summer one."
+    }
+   ]
+  },
+  {
+   "label": "Example · London's deeper swing",
+   "body": [
+    {
+     "t": "June 21: 04:42–21:21 (16.6 h). December 21: 08:03–15:53 (7.8 h). Higher latitude buys glorious June evenings with December afternoons that end at tea time."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the times assume",
+  "intro": "The standard definitions behind the numbers.",
+  "columns": [
+   "Term",
+   "Definition"
+  ],
+  "rows": [
+   [
+    "Sunrise/sunset",
+    "The Sun's upper edge at the horizon, with standard refraction — the almanac definition"
+   ],
+   [
+    "Day length",
+    "Sunset minus sunrise, to the minute"
+   ],
+   [
+    "Solar noon",
+    "Midway between them (clock-shifted by longitude and the equation of time)"
+   ],
+   [
+    "Horizon",
+    "Level and unobstructed — sea-horizon geometry"
+   ]
+  ],
+  "note": "Mountains, buildings and even your elevation move observed times by minutes. The calculator is the astronomical schedule; terrain edits it locally."
+ },
+ "faq": [
+  [
+   "Does it account for a blocked horizon?",
+   "No — times assume a level, open horizon. A ridge to your east delays your seen sunrise (and the note is printed because valleys live by it). Elevation and obstruction tools refine special cases."
+  ],
+  [
+   "How accurate are the times?",
+   "Within about a minute for most inhabited latitudes with the standard solar algorithm — weather and horizon decide what you witness."
+  ],
+  [
+   "Why do sunrise and sunset not shift symmetrically?",
+   "The equation of time slides both, so the earliest sunrise and latest sunset fall on different dates (mid-June's bookends straddle the solstice asymmetrically)."
+  ],
+  [
+   "Daylight saving handled?",
+   "Times are reported for the place's clock rules where the tool applies them — and the Sun itself ignores DST entirely, as the base questions on this page note."
+  ],
+  [
+   "What about twilight?",
+   "Civil, nautical and astronomical twilight each have their own calculator here — sunset is not darkness, and the gap matters."
+  ],
+  [
+   "Polar places with no sunrise?",
+   "Inside the circles the Sun can skip rising or setting for weeks — the Polar Day / Night Checker gives the verdict this page cannot print."
+  ],
+  [
+   "Can I get a whole month?",
+   "Date by date — or read the shape from the solstice/equinox anchors: the change is fastest at the equinoxes (about 2–3 minutes a day at mid-latitudes)."
+  ],
+  [
+   "Southern hemisphere?",
+   "Fully — seasons and swings mirror; December is their long-day month."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Twilights: the "
+  },
+  {
+   "t": "Civil Twilight Calculator",
+   "l": "/tools/civil-twilight-calculator"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Nautical Twilight Calculator",
+   "l": "/tools/nautical-twilight-calculator"
+  },
+  {
+   "t": "; midday: the "
+  },
+  {
+   "t": "Solar Noon Calculator",
+   "l": "/tools/solar-noon-calculator"
+  },
+  {
+   "t": "; walk version: the "
+  },
+  {
+   "t": "Time to Sunset Walk Planner",
+   "l": "/tools/time-to-sunset-walk"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "astronomical-twilight-calculator",
   "civil-twilight-calculator",

@@ -8,17 +8,169 @@
   "elevation meters to feet converter converter",
   "elevation meters to feet converter formula"
  ],
- "title": null,
- "description": null,
+ "title": "Elevation Meters to Feet Converter",
+ "description": "Convert elevations from metres to feet exactly with the Elevation Meters to Feet Converter — the world's summits in the unit US maps use. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, Kilimanjaro's 5,895 metres is 19,341 feet — and the Dead Sea's shore at −430.5 metres is −1,412 feet, the deepest dry land on the planet.",
+ "quick_answer": "The Elevation Meters to Feet Converter converts elevation values from metres to feet using the exact relation 1 foot = 0.3048 metres. Enter the metres and read the feet — for European maps, scientific papers and every metric height a US reader wants in home units.",
+ "steps_intro": "Divide by 0.3048 — metres into the feet American maps speak:",
+ "use_cases": [
+  {
+   "title": "Reading European and scientific sources",
+   "body": [
+    {
+     "t": "Alpine guides, geology papers and world atlases publish metres. Convert the hut, the col and the summit before the numbers go into a US trip plan — reverse lane: "
+    },
+    {
+     "t": "Elevation Feet to Meters Converter",
+     "l": "/tools/elevation-feet-to-meters-converter"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Comparing world summits",
+   "body": [
+    {
+     "t": "K2's 8,611 m becomes 28,251 ft — the number that lets a US reader feel how it stacks against Denali's 20,310 ft without mental arithmetic."
+    }
+   ]
+  },
+  {
+   "title": "Altimeter and GPS cross-checks",
+   "body": [
+    {
+     "t": "A European device reports metres while the US chart says feet; convert the fix and the two sources can finally argue in one language."
+    }
+   ]
+  },
+  {
+   "title": "School and scout work",
+   "body": [
+    {
+     "t": "Geography homework survives on converted heights — exact factor, shown working, no 'approximately 3.28' fudging."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Everest in feet",
+   "body": [
+    {
+     "t": "The official 2020 survey height, 8,848.86 m, converts to 29,032 ft — the figure US sources round to. Two nations' paperwork, one mountain, and this factor between them."
+    }
+   ]
+  },
+  {
+   "label": "Example · Mont Blanc",
+   "body": [
+    {
+     "t": "4,808 m → 15,774 ft. The Alpine summit's snow cap makes its surveyed height breathe by a metre or two between surveys — the conversion stays exact while the mountain fidgets."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Famous elevations, metres to feet",
+  "intro": "Converted exactly (÷ 0.3048).",
+  "columns": [
+   "Place",
+   "Metres",
+   "Feet"
+  ],
+  "rows": [
+   [
+    "Mount Everest",
+    "8,848.86 m",
+    "29,032 ft"
+   ],
+   [
+    "K2",
+    "8,611 m",
+    "28,251 ft"
+   ],
+   [
+    "Kilimanjaro",
+    "5,895 m",
+    "19,341 ft"
+   ],
+   [
+    "Mont Blanc",
+    "4,808 m",
+    "15,774 ft"
+   ],
+   [
+    "Matterhorn",
+    "4,478 m",
+    "14,692 ft"
+   ],
+   [
+    "Dead Sea shore",
+    "−430.5 m",
+    "−1,412 ft"
+   ]
+  ],
+  "note": "Summit heights are the current published survey values; glaciers and snow caps revise a few of them by small amounts over the years."
+ },
+ "faq": [
+  [
+   "Is 3.28084 the right multiplier?",
+   "It is 1 ÷ 0.3048 carried out — multiplying by 3.28084 and dividing by 0.3048 are the same exact operation to display precision."
+  ],
+  [
+   "Why do US and metric heights for Everest differ by a foot sometimes?",
+   "Survey vintage, not conversion: 29,028 ft (older US figure) and 29,032 ft (2020 survey) are different measurements of a mountain that is also slowly rising. The factor is innocent."
+  ],
+  [
+   "Negative metres?",
+   "Converted with sign — −430.5 m at the Dead Sea is −1,412 ft. The lowest land on Earth needs no special case."
+  ],
+  [
+   "Rounding guidance?",
+   "Whole metres earn whole feet; a metre input does not justify decimal feet. Keep the output's dignity matched to the input's."
+  ],
+  [
+   "Survey foot again?",
+   "The retired US survey foot changed an Everest conversion by about 2 cm (under an inch of feet). For elevations, even geodesists mostly argue about the mountain instead."
+  ],
+  [
+   "Pressure altitude and flight levels?",
+   "Those are pressure-derived quantities that happen to be stated in feet — converting their numbers is fine arithmetically; the Pressure Altitude Calculator explains what they mean."
+  ],
+  [
+   "Bulk conversion?",
+   "Single values here; a spreadsheet divides a whole column by 0.3048 — verify one row here before trusting the sheet."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Reverse: "
+  },
+  {
+   "t": "Elevation Feet to Meters Converter",
+   "l": "/tools/elevation-feet-to-meters-converter"
+  },
+  {
+   "t": "; find a height: the "
+  },
+  {
+   "t": "Elevation Finder",
+   "l": "/tools/elevation-finder"
+  },
+  {
+   "t": "; peaks: the "
+  },
+  {
+   "t": "Peak Elevation Lookup",
+   "l": "/tools/peak-elevation-profile"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boiling-point-by-elevation-calculator",
   "central-angle-from-distance-calculator",

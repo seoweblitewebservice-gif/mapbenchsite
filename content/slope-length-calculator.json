@@ -8,17 +8,177 @@
   "slope length calculator tool",
   "how to calculate slope length calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Slope Length Calculator: True Surface Distance",
+ "description": "Calculate the true slope length from horizontal run and vertical rise with the Slope Length Calculator — the hypotenuse your map hides. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a one-mile horizontal run climbing 500 feet has a true slope length of 5,303.6 feet — only 23.6 feet longer than the map distance, because gentle slopes barely stretch.",
+ "quick_answer": "The Slope Length Calculator computes the true distance along a slope from its horizontal run and vertical rise, using Pythagoras: length = √(run² + rise²). Enter the run and rise and read the surface distance — the figure that paving, roofing, fencing and tired legs actually have to cover.",
+ "steps_intro": "The map shows the shadow of the distance. The slope itself is longer:",
+ "use_cases": [
+  {
+   "title": "Roofing and surfacing quantities",
+   "body": [
+    {
+     "t": "Materials cover the slope, not its floor plan. A roof's true area starts from slope lengths like these — then the "
+    },
+    {
+     "t": "Slope & Gradient Calculator",
+     "l": "/tools/slope-gradient-calculator"
+    },
+    {
+     "t": " gives the pitch the supplier quotes."
+    }
+   ]
+  },
+  {
+   "title": "Trail and road true distances",
+   "body": [
+    {
+     "t": "Odometers and legs travel the hypotenuse. On mountain switchbacks the difference between map distance and travelled distance is small per mile but real across a day."
+    }
+   ]
+  },
+  {
+   "title": "Fence and pipe runs on grades",
+   "body": [
+    {
+     "t": "Anything laid along the ground — fence wire, pipe, cable, irrigation line — needs the slope length, with extra for sag and joints the geometry cannot know about."
+    }
+   ]
+  },
+  {
+   "title": "Ski and survey checks",
+   "body": [
+    {
+     "t": "Piste lengths are quoted along the snow. Convert a run's map footprint and vertical drop into the number the lift company prints."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · When the difference matters",
+   "body": [
+    {
+     "t": "At a 10% grade the slope length exceeds the run by only 0.5%. At 50% grade the excess is 11.8%, and at 100% (45°) it is 41.4% — the hypotenuse tax stays invisible until slopes get serious, then arrives all at once."
+    }
+   ]
+  },
+  {
+   "label": "Example · A driveway pour",
+   "body": [
+    {
+     "t": "A drive with 40 feet of run and 3 feet of rise needs √(40² + 3²) = 40.11 feet of surface — the extra tenth of a foot will not change the concrete order, but the same maths on a 200-foot hillside lane changes it by whole yards."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "How much longer than the map?",
+  "intro": "Slope length per 100 units of horizontal run, computed from √(run² + rise²).",
+  "columns": [
+   "Grade",
+   "Rise per 100 run",
+   "Slope length",
+   "Extra over map"
+  ],
+  "rows": [
+   [
+    "5%",
+    "5",
+    "100.12",
+    "+0.1%"
+   ],
+   [
+    "10%",
+    "10",
+    "100.50",
+    "+0.5%"
+   ],
+   [
+    "20%",
+    "20",
+    "101.98",
+    "+2.0%"
+   ],
+   [
+    "50%",
+    "50",
+    "111.80",
+    "+11.8%"
+   ],
+   [
+    "100%",
+    "100",
+    "141.42",
+    "+41.4%"
+   ]
+  ],
+  "note": "Below about a 10% grade, map distance and slope distance differ by less than most measuring errors. Above 20%, order materials by the slope."
+ },
+ "faq": [
+  [
+   "Why is slope length always longer than the run?",
+   "It is the hypotenuse of the right triangle the slope forms with the horizontal and vertical. A hypotenuse is always the longest side — equal to the run only when the rise is zero."
+  ],
+  [
+   "Do GPS tracks measure slope length?",
+   "Good track logs sum 3D segment distances and approximate it; many apps report the flatter 2D length. The difference between two apps' totals for one hike is usually this choice, not an error."
+  ],
+  [
+   "Can I get the angle from the same inputs?",
+   "Yes — angle = atan2(rise, run). The Slope & Gradient Calculator returns angle, percent and ratio together from the same two numbers."
+  ],
+  [
+   "What if I only know the angle and the run?",
+   "Slope length = run ÷ cos(angle). A 100 m run at 20° gives 106.4 m of slope — the same triangle, entered from another side."
+  ],
+  [
+   "Does this work for a whole winding trail?",
+   "Segment by segment, then sum. One rise-and-run pair describes one straight slope; a trail is a chain of them, which is what elevation profiles are for."
+  ],
+  [
+   "How much extra material should I order?",
+   "Geometry gives the exact surface length; ordering adds a practical allowance for cuts, overlaps and waste on top. The calculator supplies the honest base number, not the allowance."
+  ],
+  [
+   "Is the vertical rise the elevation difference?",
+   "Yes — end elevation minus start elevation for a straight slope. The Elevation Finder supplies either endpoint's height when you only know the places."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Steepness forms: the "
+  },
+  {
+   "t": "Slope & Gradient Calculator",
+   "l": "/tools/slope-gradient-calculator"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Slope Grade Calculator",
+   "l": "/tools/slope-grade-calculator"
+  },
+  {
+   "t": "; the profile view: the "
+  },
+  {
+   "t": "Elevation Profile",
+   "l": "/tools/elevation-profile"
+  },
+  {
+   "t": "; climb rates: the "
+  },
+  {
+   "t": "Vertical Speed Calculator",
+   "l": "/tools/vertical-speed-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boiling-point-by-elevation-calculator",
   "central-angle-from-distance-calculator",

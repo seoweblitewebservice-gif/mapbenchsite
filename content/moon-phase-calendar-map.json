@@ -7,17 +7,161 @@
   "lunar calendar map",
   "moon illumination calendar"
  ],
- "title": null,
- "description": null,
+ "title": "Moon Phase Calendar Map: A Month of Moons",
+ "description": "See a full month of moon phases and illumination day by day with the Moon Phase Calendar Map — plan dark nights and full-moon evenings ahead. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, October 2026's grid runs from a waning start through the new moon near the 10th to a full moon on the 26th (model dates) — the whole month's night-light budget on one page.",
+ "quick_answer": "The Moon Phase Calendar Map lays out a full month of moon phases day by day — each date's phase name and lit percentage on one calendar grid. Pick a month and read the pattern: where the dark weekends fall and when the full moon lands.",
+ "steps_intro": "A month of nights, visible at once:",
+ "use_cases": [
+  {
+   "title": "Planning dark-sky weekends",
+   "body": [
+    {
+     "t": "Star parties and meteor nights want the new-moon weekends. The grid finds them months ahead — then the "
+    },
+    {
+     "t": "Moon Illumination Calculator",
+     "l": "/tools/moon-illumination-calculator"
+    },
+    {
+     "t": " prices the in-between nights."
+    }
+   ]
+  },
+  {
+   "title": "Full-moon events and photography",
+   "body": [
+    {
+     "t": "Moonrise-over-the-city shots, full-moon hikes and night markets all need the full date early. The grid is how organisers stop being surprised by their own event."
+    }
+   ]
+  },
+  {
+   "title": "Religious and cultural calendars",
+   "body": [
+    {
+     "t": "Lunar months begin at the crescent; Ramadan, Passover and lunar new years all anchor to this cycle. The calendar shows the astronomy underneath the observance — visibility of a first crescent depends on age and place, and the grid gives the age."
+    }
+   ]
+  },
+  {
+   "title": "Classroom lunar months",
+   "body": [
+    {
+     "t": "A printed month of Moons on the classroom wall teaches the cycle better than any diagram — students watch the lit side grow, flip and shrink across real dates they lived through."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Reading October 2026",
+   "body": [
+    {
+     "t": "The model month opens with a waning gibbous (the full was late September), thins to new around the 10th, waxes through first quarter near the 18th, and fills to full on the 26th — the grid shows why mid-month weekends are the dark ones."
+    }
+   ]
+  },
+  {
+   "label": "Example · The five-weekend gift",
+   "body": [
+    {
+     "t": "Some months fit two new moons or two full ones into their weekends; the second full in a calendar month is the famous blue moon. Only the grid view reveals which months are generous."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "How to read the grid",
+  "intro": "Each cell carries the same three facts — the month is the pattern they make.",
+  "columns": [
+   "Cell item",
+   "Meaning"
+  ],
+  "rows": [
+   [
+    "Phase icon and name",
+    "The cycle chapter for that date (evaluated at noon UTC)"
+   ],
+   [
+    "Lit percent",
+    "The disc's lit fraction — your night-brightness budget"
+   ],
+   [
+    "Quarter and full markers",
+    "The month's milestones — roughly one of each per month"
+   ],
+   [
+    "Dark runs",
+    "Stretches under ~25% lit around new moon — the observing gold"
+   ]
+  ],
+  "note": "Phases are evaluated at noon UTC per date in the underlying model, so a milestone instant falling near midnight can label either adjacent date depending on your timezone — the astronomy is shared, the calendar is local."
+ },
+ "faq": [
+  [
+   "Why can the full-moon date differ from my wall calendar?",
+   "Calendars print the full instant's date in a chosen timezone from a precise ephemeris; this grid uses the mean cycle at noon UTC. A few hours of model difference near midnight flips the labelled date — the Moon itself is unbothered."
+  ],
+  [
+   "Some months have no full moon — really?",
+   "February can: with 28 days and a 29.53-day cycle, a February roughly once in two decades holds no full moon (last in 2018). The grid shows the two fulls crowding into January and March instead."
+  ],
+  [
+   "Does the grid work for past centuries?",
+   "It computes, with slowly growing model drift — fine for pattern and teaching, softer for sworn historical claims. Treat very old months as reconstructions."
+  ],
+  [
+   "Can I see illumination for a whole season?",
+   "Chain the months — the pattern repeats every 19 years almost exactly (the Metonic cycle), which is why Easter tables and this calendar are cousins."
+  ],
+  [
+   "Why noon UTC for each date?",
+   "A single evaluation instant keeps dates comparable worldwide. Evenings near a phase boundary belong to the neighbouring cell in some timezones — the model says so rather than hiding it."
+  ],
+  [
+   "Southern hemisphere view?",
+   "The phases and percents are global; the icons' lit side mirrors below the equator. The calendar's numbers travel; its pictures wear a northern accent."
+  ],
+  [
+   "How do I find the darkest weekend quickly?",
+   "Scan for the new-moon cell and take the Friday-to-Sunday around it — then check the Moon Position Map for whether even the crescent is up late."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "One date deep: the "
+  },
+  {
+   "t": "Moon Phase Calculator",
+   "l": "/tools/moon-phase-calculator"
+  },
+  {
+   "t": "; percents: the "
+  },
+  {
+   "t": "Moon Illumination Calculator",
+   "l": "/tools/moon-illumination-calculator"
+  },
+  {
+   "t": "; exact fulls: the "
+  },
+  {
+   "t": "Next Full Moon Calculator",
+   "l": "/tools/next-full-moon-calculator"
+  },
+  {
+   "t": "; live position: the "
+  },
+  {
+   "t": "Moon Position Map",
+   "l": "/tools/moon-position-map"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "astronomical-twilight-calculator",
   "civil-twilight-calculator",

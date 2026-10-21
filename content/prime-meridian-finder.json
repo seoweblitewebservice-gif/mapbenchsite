@@ -6,17 +6,185 @@
   "greenwich",
   "0 longitude"
  ],
- "title": null,
- "description": null,
+ "title": "Prime Meridian Finder: Where 0° Longitude Runs",
+ "description": "Use the Prime Meridian Finder to trace 0° longitude through Greenwich, France, Spain and Ghana — and measure how far your place sits from it. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, the meridian crosses eight countries on its way pole to pole — and Paris, the historic rival claimant, sits just 173 km of parallel arc east of it.",
+ "quick_answer": "The Prime Meridian Finder highlights the 0-degree longitude line through Greenwich and shows which places it passes and how far yours sits from it. Search the map to explore the reference line that eastern and western hemispheres — and every clock on Earth — are measured from.",
+ "steps_intro": "One line through Greenwich became the world's zero — here is where it actually runs:",
+ "use_cases": [
+  {
+   "title": "Visiting the line, honestly",
+   "body": [
+    {
+     "t": "Tourists straddle the brass strip at Greenwich — but GPS reads about 102 metres east of it, because the modern reference meridian (IERS) differs from Airy's 1851 line. The finder shows the 0° your phone believes in."
+    }
+   ]
+  },
+  {
+   "title": "Teaching time from geography",
+   "body": [
+    {
+     "t": "Every time zone is an offset from this line. Tracing it through France, Spain and Algeria makes UTC tangible. Follow with the "
+    },
+    {
+     "t": "Longitude Time Zone Estimator",
+     "l": "/tools/longitude-time-zone-estimator"
+    },
+    {
+     "t": " to price longitude in hours."
+    }
+   ]
+  },
+  {
+   "title": "Hemisphere questions",
+   "body": [
+    {
+     "t": "East or west of the line decides half your hemisphere address. The "
+    },
+    {
+     "t": "Hemisphere Finder",
+     "l": "/tools/hemisphere-finder"
+    },
+    {
+     "t": " resolves the full set for any point."
+    }
+   ]
+  },
+  {
+   "title": "History of a standard",
+   "body": [
+    {
+     "t": "Paris kept its own meridian until 1911 for time and longer on maps. Seeing how close the two lines run — Paris is 2.35° east — explains a century of cartographic rivalry."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 102-metre surprise",
+   "body": [
+    {
+     "t": "Stand on the Greenwich courtyard line and a GPS receiver shows longitude about 0.0015° — roughly 102 m — because satellite geodesy redefined zero slightly east of Airy's transit circle. The monument marks history; the satellites mark the standard."
+    }
+   ]
+  },
+  {
+   "label": "Example · Accra nearly touches it",
+   "body": [
+    {
+     "t": "Ghana's capital Accra sits at 0.187°W — about 21 km of parallel arc from the meridian. Tema, Ghana's main port just east of the city, sits almost exactly on the meridian itself — about as close to 0° as a working harbour gets."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The prime meridian's journey, north to south",
+  "intro": "Eight countries on land between the poles — the rest is ocean, ice and atmosphere.",
+  "columns": [
+   "Country",
+   "Where it crosses",
+   "Quirk"
+  ],
+  "rows": [
+   [
+    "United Kingdom",
+    "Greenwich, London",
+    "The Airy transit circle of 1851"
+   ],
+   [
+    "France",
+    "Normandy to the Pyrenees",
+    "France used the Paris meridian until 1911"
+   ],
+   [
+    "Spain",
+    "Castellón coast near Peñíscola",
+    "Mainland Spain straddles the line but keeps CET (UTC+1)"
+   ],
+   [
+    "Algeria",
+    "Near Mostaganem, into the Sahara",
+    "Its longest land stretch"
+   ],
+   [
+    "Mali, Burkina Faso & Togo",
+    "Across the Sahel to the Gulf of Guinea",
+    "The line clips Togo's western edge on its way south"
+   ],
+   [
+    "Ghana",
+    "Through Tema, just east of Accra",
+    "Closest major port to 0°, 0° by a wide margin"
+   ],
+   [
+    "Antarctica",
+    "To the South Pole",
+    "All longitudes converge here — the line ends in an argument"
+   ]
+  ],
+  "note": "Measured along a parallel, distance from the meridian depends on latitude: at New York's latitude, each degree of longitude is about 84.4 km, so the city sits roughly 6,247 km west of Greenwich's line."
+ },
+ "faq": [
+  [
+   "Why was Greenwich chosen?",
+   "At the 1884 International Meridian Conference in Washington, delegates voted for Greenwich — Britain's charts and the Royal Navy's reach, plus the fact that most shipping already used Greenwich-based maps, carried the day. It was a vote, not a discovery."
+  ],
+  [
+   "Is the prime meridian a physical line?",
+   "Only as monuments and markers. The working definition is geodetic: the IERS Reference Meridian, maintained from satellite and Earth-rotation measurements, sits about 102 m east of the Greenwich brass strip."
+  ],
+  [
+   "Which countries does it cross?",
+   "Eight sovereign states: the United Kingdom, France, Spain, Algeria, Mali, Burkina Faso, Togo and Ghana. South of Ghana it is ocean all the way to Antarctica, where it reaches the pole."
+  ],
+  [
+   "How far is the meridian from the equator crossing?",
+   "The two lines cross at 0°, 0° in the Gulf of Guinea, about 550 km south of Ghana's coast — open ocean, sometimes called Null Island by map-makers for the data errors that pile up there."
+  ],
+  [
+   "Did other prime meridians exist?",
+   "Many — Paris, Ferro (El Hierro), Cadiz, and dozens of national zeros. Old maps must be read against their own meridian; a longitude from an 1800 chart may be offset by degrees from Greenwich."
+  ],
+  [
+   "Does the meridian move?",
+   "The IERS meridian is adjusted by centimetres as measurements improve; tectonic drift also carries Greenwich itself about 25 mm a year eastward on the Eurasian plate. Zero is a maintained convention."
+  ],
+  [
+   "What is 180° from it?",
+   "The antimeridian through the Pacific — the rough path of the International Date Line, which bends around nations instead of following the geometry."
+  ],
+  [
+   "Can I stand in both hemispheres at Greenwich?",
+   "Yes — east and west of the courtyard line is a two-step journey. With GPS zero 102 m away, purists can straddle the geodetic line on the park path nearby instead."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Price any longitude in time with the "
+  },
+  {
+   "t": "Longitude Time Zone Estimator",
+   "l": "/tools/longitude-time-zone-estimator"
+  },
+  {
+   "t": ", find the line's perpendicular partner with the "
+  },
+  {
+   "t": "Equator Finder",
+   "l": "/tools/equator-finder"
+  },
+  {
+   "t": ", and settle your hemisphere address with the "
+  },
+  {
+   "t": "Hemisphere Finder",
+   "l": "/tools/hemisphere-finder"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "distance-from-equator-calculator",
   "distance-from-prime-meridian-calculator",

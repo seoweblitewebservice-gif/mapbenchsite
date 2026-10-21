@@ -8,17 +8,171 @@
   "lot depth from area and width tool",
   "how to use lot depth from area and width"
  ],
- "title": null,
- "description": null,
+ "title": "Lot Depth From Area and Width",
+ "description": "Find a rectangular lot's depth from its area and width with Lot Depth From Area and Width — area ÷ width, with acre and square-foot inputs. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a quarter-acre lot (10,890 sq ft) with a 66-foot frontage runs 165 feet deep — the classic American building lot, recovered from two numbers on the listing.",
+ "quick_answer": "Lot Depth From Area and Width finds the missing side of a rectangular lot: depth equals area divided by width. Enter the area and its width and read the depth — the dimension listings omit and fence plans cannot proceed without.",
+ "steps_intro": "A rectangle has four numbers; any two of area, width and depth give the third:",
+ "use_cases": [
+  {
+   "title": "Reading listings critically",
+   "body": [
+    {
+     "t": "The listing boasts 66 feet of frontage and a quarter acre but hides the depth: 165 feet, computed. The sibling page recovers width — "
+    },
+    {
+     "t": "Lot Width From Area and Depth",
+     "l": "/tools/lot-width-from-area-depth"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Fence planning",
+   "body": [
+    {
+     "t": "Depth times two plus the width is most of the fence. The "
+    },
+    {
+     "t": "Fence Length Calculator",
+     "l": "/tools/fence-length-calculator"
+    },
+    {
+     "t": " finishes the job once the sides are known."
+    }
+   ]
+  },
+  {
+   "title": "Setback and buildable-depth checks",
+   "body": [
+    {
+     "t": "Front and rear setbacks subtract from depth; knowing the true depth is step one of knowing what house fits — before the architect's meter starts running."
+    }
+   ]
+  },
+  {
+   "title": "Verifying a survey's arithmetic",
+   "body": [
+    {
+     "t": "Stated area, width and depth should multiply out. When they don't, someone rounded — or erred — and this page finds which number is the stranger."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The classic lot",
+   "body": [
+    {
+     "t": "66 ft wide × 165 ft deep = 10,890 sq ft = exactly 0.25 acre. The 66-foot frontage (four rods, one chain — surveying's old units) still echoes through American subdivision plats."
+    }
+   ]
+  },
+  {
+   "label": "Example · Acres straight in",
+   "body": [
+    {
+     "t": "Half an acre is 21,780 sq ft; at 110 ft of width the depth is 198 ft. Entering acres directly spares the manual 43,560 multiplication the calculator does for you."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Depths for common lots",
+  "intro": "Area ÷ width for the sizes listings repeat.",
+  "columns": [
+   "Area",
+   "Width",
+   "Depth"
+  ],
+  "rows": [
+   [
+    "10,890 sq ft (¼ acre)",
+    "66 ft",
+    "165 ft"
+   ],
+   [
+    "10,890 sq ft",
+    "50 ft",
+    "217.8 ft"
+   ],
+   [
+    "21,780 sq ft (½ acre)",
+    "110 ft",
+    "198 ft"
+   ],
+   [
+    "43,560 sq ft (1 acre)",
+    "100 ft",
+    "435.6 ft"
+   ],
+   [
+    "43,560 sq ft",
+    "208.7 ft",
+    "208.7 ft — the square acre"
+   ]
+  ],
+  "note": "Rectangles only: a pie-shaped or flag lot with the same area and frontage has no single depth — measure those on the map instead."
+ },
+ "faq": [
+  [
+   "What if my lot is not rectangular?",
+   "Then 'depth' is an average, not a side. For irregular parcels, measure the actual shape in the Map Area Calculator and treat this page's answer as a planning approximation only."
+  ],
+  [
+   "Frontage or rear width — which width?",
+   "The side you have. For a true rectangle both are equal; for a tapered lot, entering the average width gives the average depth, labelled as such in honest notes."
+  ],
+  [
+   "Can I enter acres directly?",
+   "Yes — acres, square feet and square metres are all accepted; the conversion to a single unit happens inside."
+  ],
+  [
+   "The answer has repeating decimals.",
+   "217.8 ft is exact enough for fences and forms; surveys carry depths to hundredths. Round for the lumber order, never for the legal description."
+  ],
+  [
+   "Depth for a corner lot?",
+   "Corner lots wear two frontages — 'width' and 'depth' swap depending on the addressing street. Compute both ways if the plat is ambiguous; zoning usually names the front."
+  ],
+  [
+   "How deep is too deep?",
+   "Beyond about 3:1 depth-to-width, lots feel like bowling lanes and price accordingly — the ratio your computed depth reveals is itself market information."
+  ],
+  [
+   "Does slope change the depth?",
+   "Deed dimensions are horizontal (plan) distances. A steep lot's surface is longer than its plan depth — walkers notice, documents don't."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The mirror: "
+  },
+  {
+   "t": "Lot Width From Area and Depth",
+   "l": "/tools/lot-width-from-area-depth"
+  },
+  {
+   "t": "; both sides known: the "
+  },
+  {
+   "t": "Lot Size Calculator",
+   "l": "/tools/lot-size-calculator"
+  },
+  {
+   "t": "; irregular shapes: the "
+  },
+  {
+   "t": "Map Area Calculator",
+   "l": "/tools/map-area-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-area-from-radius",

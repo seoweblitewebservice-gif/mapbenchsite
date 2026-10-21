@@ -8,17 +8,164 @@
   "square miles to square kilometers converter converter",
   "square miles to square kilometers converter formula"
  ],
- "title": null,
- "description": null,
+ "title": "Square Miles to Square Kilometers Converter",
+ "description": "Convert square miles to square kilometres with the Square Miles to Square Kilometers Converter — multiply by 2.58999, exact. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, the city of Los Angeles covers 469 square miles — 1,214.7 km² in the unit the rest of the world reads, one multiplication away.",
+ "quick_answer": "The Square Miles to Square Kilometers Converter turns area in square miles into square kilometres using the exact factor 1 sq mi = 2.58999 km². Enter the square miles and read the square kilometres — for US statistics, park sizes and land areas crossing into metric documents.",
+ "steps_intro": "The Atlantic crossing for areas, in one multiplication:",
+ "use_cases": [
+  {
+   "title": "Localising US data",
+   "body": [
+    {
+     "t": "American sources speak square miles natively. Reports for European readers convert here — the reverse lane, "
+    },
+    {
+     "t": "Square Kilometers to Square Miles",
+     "l": "/tools/square-kilometers-to-square-miles-converter"
+    },
+    {
+     "t": ", serves the westbound trip."
+    }
+   ]
+  },
+  {
+   "title": "Science and environment writing",
+   "body": [
+    {
+     "t": "Journals publish in km²; field data arrives in sq mi. The conversion sits in every methods section nobody reads and everybody relies on."
+    }
+   ]
+  },
+  {
+   "title": "Travel comprehension",
+   "body": [
+    {
+     "t": "A state park of 100 sq mi is 259 km² — the size lands differently once it speaks your unit."
+    }
+   ]
+  },
+  {
+   "title": "Dataset harmonising",
+   "body": [
+    {
+     "t": "Merging US and international area columns into one unit — convert the column, note the factor, and the merge stops lying by 159%."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The factor's size matters",
+   "body": [
+    {
+     "t": "1 sq mi = 2.59 km², not 1.61 — areas square the linear factor (1.609344² = 2.58999). Using the length factor on areas understates by 38% — the classic conversion error this page exists to prevent."
+    }
+   ]
+  },
+  {
+   "label": "Example · Delaware, both ways",
+   "body": [
+    {
+     "t": "Delaware's land area: 1,949 sq mi × 2.58999 = 5,047.9 km². The smallest-state comparisons now work in either audience's unit."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Conversion table",
+  "intro": "Square miles to square kilometres, exact factor applied.",
+  "columns": [
+   "sq mi",
+   "km²",
+   "Roughly"
+  ],
+  "rows": [
+   [
+    "1",
+    "2.59",
+    "640 acres"
+   ],
+   [
+    "10",
+    "25.90",
+    "A town's area"
+   ],
+   [
+    "100",
+    "258.999",
+    "A small national park"
+   ],
+   [
+    "469",
+    "1,214.7",
+    "Los Angeles"
+   ],
+   [
+    "1,949",
+    "5,047.9",
+    "Delaware"
+   ]
+  ],
+  "note": "The factor is exact: the international mile is defined as 1,609.344 m, and its square is 2.58998811 km². The converter applies it whole; displays round, factors don't."
+ },
+ "faq": [
+  [
+   "What is the exact conversion factor?",
+   "1 sq mi = 2.58998811 km² — the square of the exact mile. Quoted as 2.59 for prose, applied in full by the converter."
+  ],
+  [
+   "Is the calculation done locally?",
+   "Yes — one multiplication, performed in your browser."
+  ],
+  [
+   "Why is the area factor not 1.609?",
+   "Because areas square linear factors: (1.609344)² = 2.58999. Any source converting areas by the length factor is wrong by 38%, visibly."
+  ],
+  [
+   "Acres in the same breath?",
+   "1 sq mi = 640 acres exactly; 1 km² = 247.105 acres. The family converts every pair directly on its own pages."
+  ],
+  [
+   "Hectares?",
+   "1 sq mi = 258.999 hectares — the near-259 is a coincidence worth using as a memory hook, not as the factor."
+  ],
+  [
+   "Land area or total area?",
+   "Sources differ (water in or out); the conversion converts whichever figure you bring, and citing the convention is the writer's job this page cannot do for you."
+  ],
+  [
+   "Rounding for a headline?",
+   "Two or three significant figures (1,215 km² for LA) read honestly; tables deserve the unrounded product."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Reverse: "
+  },
+  {
+   "t": "Square Kilometers to Square Miles Converter",
+   "l": "/tools/square-kilometers-to-square-miles-converter"
+  },
+  {
+   "t": "; drawn areas: the "
+  },
+  {
+   "t": "Square Miles Calculator",
+   "l": "/tools/square-miles-calculator"
+  },
+  {
+   "t": "; hectares: the "
+  },
+  {
+   "t": "Square Meters to Hectares Converter",
+   "l": "/tools/square-meters-to-hectares-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "circle-area-from-radius",
   "circle-circumference-from-radius",

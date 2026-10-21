@@ -8,17 +8,165 @@
   "geojson point count",
   "coordinate pairs geojson"
  ],
- "title": null,
- "description": null,
+ "title": "GeoJSON Coordinate Counter: Vertex Census",
+ "description": "Count every coordinate vertex across a GeoJSON object's points, lines and polygons with the GeoJSON Coordinate Counter. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a four-feature sample file (two points, one line, one square) holds exactly 9 coordinate pairs — 1 + 1 + 2 + 5 — the square costing five because its ring closes.",
+ "quick_answer": "The GeoJSON Coordinate Counter inspects how many coordinate vertices a GeoJSON object contains, across points, lines and polygons alike. Paste the file and read the census: the vertex count that drives file weight, rendering cost and simplification decisions — the dataset’s true size beneath its feature count.",
+ "steps_intro": "Features tell you the cast; vertices tell you the budget:",
+ "use_cases": [
+  {
+   "title": "Performance budgeting",
+   "body": [
+    {
+     "t": "Browsers draw vertices, not features. A 200-feature file with 2 million vertices is the heavy one — the count exposes which file needs simplifying. The "
+    },
+    {
+     "t": "GeoJSON Feature Counter",
+     "l": "/tools/geojson-feature-counter"
+    },
+    {
+     "t": " counts the cast; this page counts the crowd."
+    }
+   ]
+  },
+  {
+   "title": "Simplification targets",
+   "body": [
+    {
+     "t": "‘Reduce vertices by 80%’ is a measurable goal only with a before-count. This page is the before — and the after."
+    }
+   ]
+  },
+  {
+   "title": "Vendor and export QA",
+   "body": [
+    {
+     "t": "An export that silently densified (or decimated) geometry shows up as a vertex-count change long before anyone eyeballs a coastline."
+    }
+   ]
+  },
+  {
+   "title": "Cost and transfer estimates",
+   "body": [
+    {
+     "t": "Vertex count × bytes-per-vertex approximates payload — pair with the "
+    },
+    {
+     "t": "GeoJSON Minified Size Calculator",
+     "l": "/tools/geojson-minified-size-calculator"
+    },
+    {
+     "t": " for the byte truth."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Anatomy of 9",
+   "body": [
+    {
+     "t": "Two Points (1 each), one LineString (2), one closed square ring (5: four corners plus the repeated first point). Total 9. Every GeoJSON census decomposes this way — the counter shows its working by geometry family."
+    }
+   ]
+  },
+  {
+   "label": "Example · The million-vertex coastline",
+   "body": [
+    {
+     "t": "One national outline feature can hold a million vertices while a whole city dataset holds fifty thousand. Feature counts applaud the wrong file; vertex counts tell the rendering truth."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Vertices per geometry",
+  "intro": "How each type contributes to the census.",
+  "columns": [
+   "Geometry",
+   "Vertices"
+  ],
+  "rows": [
+   [
+    "Point",
+    "Exactly 1"
+   ],
+   [
+    "MultiPoint / LineString",
+    "One per position in the array"
+   ],
+   [
+    "Polygon",
+    "The sum over all rings, closing repeats included"
+   ],
+   [
+    "MultiPolygon",
+    "The sum over all polygons and rings"
+   ],
+   [
+    "GeometryCollection",
+    "The sum over its members"
+   ]
+  ],
+  "note": "Closing vertices (the repeated first point of a ring) are counted — they are really in the file, really parsed and really drawn. The counter counts the file as it is, not as it might be idealised."
+ },
+ "faq": [
+  [
+   "Are closing ring vertices counted?",
+   "Yes — the repeated first/last position is a real stored vertex, parsed and rendered like any other. The count describes the file, and the file contains it."
+  ],
+  [
+   "What about duplicate consecutive points?",
+   "Counted — the census is literal. Zero-length segments are a data-quality story the count makes visible when it exceeds expectations."
+  ],
+  [
+   "Altitude values change the count?",
+   "A position is a position whether it carries 2 or 3 elements; the census counts positions, not numbers."
+  ],
+  [
+   "Does it count properties?",
+   "No — properties have their own census (the GeoJSON Property Key Finder). Vertices live in geometry alone."
+  ],
+  [
+   "Empty geometries?",
+   "Zero vertices, honestly reported. A file of empties counts 0 and that zero is the finding."
+  ],
+  [
+   "How does count relate to file size?",
+   "Roughly linearly for geometry-heavy files: each vertex costs its digits plus separators. The minified-size tools turn the estimate into bytes."
+  ],
+  [
+   "Can it break the count down by type?",
+   "The census totals the object; pairing it with the Geometry Type Counter reconstructs most of the picture (features per type × their vertices)."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Features: the "
+  },
+  {
+   "t": "GeoJSON Feature Counter",
+   "l": "/tools/geojson-feature-counter"
+  },
+  {
+   "t": "; types: the "
+  },
+  {
+   "t": "GeoJSON Geometry Type Counter",
+   "l": "/tools/geojson-geometry-type-counter"
+  },
+  {
+   "t": "; bytes: the "
+  },
+  {
+   "t": "GeoJSON Minified Size Calculator",
+   "l": "/tools/geojson-minified-size-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

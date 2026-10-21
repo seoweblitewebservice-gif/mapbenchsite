@@ -6,17 +6,168 @@
   "service gap map",
   "network coverage"
  ],
- "title": null,
- "description": null,
+ "title": "Service Coverage Gap Viewer: Overlaps and Holes",
+ "description": "Place centres and radii to expose overlaps and gaps with the Service Coverage Gap Viewer — see where service covers, doubles and fails. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, two depots 10 miles apart with 10-mile radii overlap by 39.1% of each circle — the viewer turns that statistic into a map you can argue with.",
+ "quick_answer": "The Service Coverage Gap Viewer lets you place multiple centres and radii and see where coverage overlaps or leaves gaps. Add your depots, hubs or towers and read the map: doubly served ground, singly served ground, and the holes nobody is serving at all.",
+ "steps_intro": "One circle always looks fine. Two start telling the truth:",
+ "use_cases": [
+  {
+   "title": "Depot and branch networks",
+   "body": [
+    {
+     "t": "Overlapping delivery circles double-serve the same streets while a gap starves others. The viewer is the network review's first slide — single rings start on the "
+    },
+    {
+     "t": "Service Area Map",
+     "l": "/tools/service-area-map"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Tower and transmitter planning",
+   "body": [
+    {
+     "t": "Signal coverage has the same geometry: overlap for handover, gaps for dead zones. The map speaks both languages."
+    }
+   ]
+  },
+  {
+   "title": "Franchise territory audits",
+   "body": [
+    {
+     "t": "Granted territories that overlap breed disputes; gaps are unclaimed market. Both print clearly here."
+    }
+   ]
+  },
+  {
+   "title": "Emergency coverage reviews",
+   "body": [
+    {
+     "t": "Stations' response rings over a county: the gap is where the next station belongs — an argument this map makes better than a spreadsheet."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · How overlap fades with distance",
+   "body": [
+    {
+     "t": "Two 10-mile circles: centres 5 mi apart overlap 68.5% of each circle; at 10 mi apart, 39.1%; at 14 mi, 18.8%; at 17 mi, 6.8%; at 20 mi they only touch. Spacing decisions live on this curve."
+    }
+   ]
+  },
+  {
+   "label": "Example · The gap between three",
+   "body": [
+    {
+     "t": "Three circles in a triangle can each overlap their neighbours and still leave a curvy triangular hole in the middle — the classic gap this viewer exists to expose."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Overlap of two equal circles",
+  "intro": "Radius 10, overlap as a share of one circle — computed from the lens formula.",
+  "columns": [
+   "Centre distance",
+   "Overlap area",
+   "Share of each circle"
+  ],
+  "rows": [
+   [
+    "5 mi",
+    "215.2 sq mi",
+    "68.5%"
+   ],
+   [
+    "10 mi",
+    "122.8 sq mi",
+    "39.1%"
+   ],
+   [
+    "14 mi",
+    "59.1 sq mi",
+    "18.8%"
+   ],
+   [
+    "17 mi",
+    "21.4 sq mi",
+    "6.8%"
+   ],
+   [
+    "20 mi",
+    "0",
+    "Touching only"
+   ]
+  ],
+  "note": "Overlap is not waste by definition — services want some (handover, choice, resilience). The viewer shows the amount; your operation decides how much is design and how much is accident."
+ },
+ "faq": [
+  [
+   "What counts as a gap?",
+   "Any ground inside your region of interest covered by no circle. The viewer makes gaps visible; whether a gap matters depends on who lives or travels there."
+  ],
+  [
+   "Unequal radii?",
+   "Centres carry their own radii — a flagship's 15-mile ring and a kiosk's 3-mile ring analyse together fine."
+  ],
+  [
+   "How many centres can I place?",
+   "Enough for a real network review; beyond a dozen or so, a GIS earns its licence. This viewer owns the planning conversation's scale."
+  ],
+  [
+   "Overlap percentage of what?",
+   "Shares here are quoted per circle. Union coverage (total ground served at least once) is the companion figure the map shows visually."
+  ],
+  [
+   "Roads change everything, no?",
+   "Real reach follows roads — the drive-time refinement comes after the geometry review, which catches the structural mistakes roads cannot fix."
+  ],
+  [
+   "Where should a new centre go?",
+   "In the largest gap's heart, tested by placing it and re-reading the map — the iterate-here loop is the planning method."
+  ],
+  [
+   "Population-weighted gaps?",
+   "This viewer is geometric. Overlaying population is the Buffer & Overlay Analyzer's counting job next door."
+  ],
+  [
+   "Can I save the layout?",
+   "Centres and radii are the layout — note them and the map rebuilds exactly."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Single areas: the "
+  },
+  {
+   "t": "Service Area Map",
+   "l": "/tools/service-area-map"
+  },
+  {
+   "t": "; counting inside: the "
+  },
+  {
+   "t": "Spatial Buffer & Overlay Analyzer",
+   "l": "/tools/spatial-buffer-overlay-analyzer"
+  },
+  {
+   "t": "; hubs: the "
+  },
+  {
+   "t": "Sales Territory Radius Planner",
+   "l": "/tools/sales-territory-radius"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-area-from-radius",

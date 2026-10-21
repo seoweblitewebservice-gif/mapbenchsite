@@ -7,17 +7,154 @@
   "area insights tool",
   "neighbourhood data dashboard"
  ],
- "title": null,
- "description": null,
+ "title": "Spatial Dashboard Builder: Maps That Summarise",
+ "description": "Assemble a simple spatial dashboard from map layers and summary panels with the Spatial Dashboard Builder — share the picture, honestly sourced. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a city team can pair one map of service locations with counts by district — a dashboard whose every panel traces back to the same open data the map shows.",
+ "quick_answer": "The Spatial Dashboard Builder assembles a simple spatial dashboard — a map view accompanied by the summary panels, counts and breakdowns that make the map legible. Choose your area and layers and read the combined picture: geography plus its headline numbers, built from stated data rather than decoration.",
+ "steps_intro": "A map alone is a picture; a dashboard is a picture with its evidence attached:",
+ "use_cases": [
+  {
+   "title": "Community and council reporting",
+   "body": [
+    {
+     "t": "Facilities, coverage and counts by area in one shareable view — the format public meetings actually absorb. The underlying point patterns can be pre-mapped with the "
+    },
+    {
+     "t": "Nearby Places Finder",
+     "l": "/tools/nearby-places-finder"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Small-team operations",
+   "body": [
+    {
+     "t": "Territories, depots and demand on one screen for the Monday meeting — a dashboard that updates its story when the data does."
+    }
+   ]
+  },
+  {
+   "title": "Journalism and advocacy",
+   "body": [
+    {
+     "t": "The map-plus-numbers page is the modern data story. Panels force the author to state totals the map alone could insinuate."
+    }
+   ]
+  },
+  {
+   "title": "Teaching data literacy",
+   "body": [
+    {
+     "t": "Students who must summarise their own map stop trusting pretty choropleths blindly — building the dashboard is the lesson."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The panel disciplines the map",
+   "body": [
+    {
+     "t": "A heat blob looks alarming until its panel says '14 incidents, city of 900,000'. Dashboards that show counts beside colours are how spatial honesty is enforced in practice."
+    }
+   ]
+  },
+  {
+   "label": "Example · Same data, two stories",
+   "body": [
+    {
+     "t": "Counts per district versus rates per 10,000 residents tell different stories about the same points. A good dashboard states which it shows — and the population tools here supply the denominators."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Dashboard anatomy",
+  "intro": "The parts and what each one owes the reader.",
+  "columns": [
+   "Part",
+   "Owes the reader"
+  ],
+  "rows": [
+   [
+    "The map",
+    "Geography at a stated zoom and extent"
+   ],
+   [
+    "Summary panels",
+    "Totals and breakdowns with their source named"
+   ],
+   [
+    "Filters",
+    "Honest interactivity — what is excluded, stated"
+   ],
+   [
+    "Source line",
+    "Dataset, provider and date — the dashboard's conscience"
+   ]
+  ],
+  "note": "This builder assembles views from open map data; it is a presentation layer, not a statistics authority. The base FAQ's 'official statistics?' question is answered by the source line you ship with it."
+ },
+ "faq": [
+  [
+   "What data can it show?",
+   "Point and area data from the open sources MapBench works with, organised by the areas and categories you choose. The dashboard's ceiling is its data's quality — stated on the panel, always."
+  ],
+  [
+   "Do panels update live?",
+   "They reflect the data at build and refresh time. 'Live' is a claim about a feed, not a layout — where no feed exists, the dashboard shows its data's date."
+  ],
+  [
+   "Can I embed the dashboard elsewhere?",
+   "Sharing follows the creation tools' pattern — links and embeds where supported, with source licences travelling with the output."
+  ],
+  [
+   "Rates or counts — which should I show?",
+   "Rates for comparing areas of different sizes; counts for operational totals. Showing counts alone across unequal areas is the classic dashboard sin this page warns about."
+  ],
+  [
+   "Is coding required?",
+   "No — the builder is form-driven. The trade for that ease is a fixed, honest set of panel types rather than a BI platform's infinity."
+  ],
+  [
+   "Private data?",
+   "Do not put sensitive datasets into shareable public views. Aggregate first (cells and districts exist for this), then build."
+  ],
+  [
+   "Big datasets?",
+   "Dashboards summarise; raw thousands belong in the dataset, with the dashboard as its window. Aggregate until the map reads at a glance."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The patterns beneath: the "
+  },
+  {
+   "t": "Nearby Places Finder",
+   "l": "/tools/nearby-places-finder"
+  },
+  {
+   "t": "; service areas: the "
+  },
+  {
+   "t": "Voronoi Map Generator",
+   "l": "/tools/voronoi-map-generator"
+  },
+  {
+   "t": "; denominators: the "
+  },
+  {
+   "t": "Population Density Compare",
+   "l": "/tools/population-density-compare"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "advanced-map-embed-generator",
   "blank-map",

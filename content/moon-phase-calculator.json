@@ -6,17 +6,177 @@
   "full moon",
   "new moon"
  ],
- "title": null,
- "description": null,
+ "title": "Moon Phase Calculator: Phase and Illumination",
+ "description": "Get the Moon's phase, illumination and upcoming milestones for any date with the Moon Phase Calculator — the complete lunar dashboard. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, for 22 October 2026 the dashboard reads: waxing gibbous, about 86% illuminated, age about 11.1 days, full moon roughly three days ahead — one date, the whole lunar story.",
+ "quick_answer": "The Moon Phase Calculator shows the Moon's phase name, illuminated fraction and upcoming phase milestones for any date you choose. Pick a date and read the whole dashboard at once — tonight's Moon explained, and the next full and new moons in view.",
+ "steps_intro": "One date in — phase, light and the road ahead out:",
+ "use_cases": [
+  {
+   "title": "Tonight, at a glance",
+   "body": [
+    {
+     "t": "The single check before an evening out: what the Moon is, how bright, and whether it will help or hinder. Rise times live in "
+    },
+    {
+     "t": "Moonrise and Moonset",
+     "l": "/tools/moonrise-moonset"
+    },
+    {
+     "t": " when the plan needs hours too."
+    }
+   ]
+  },
+  {
+   "title": "Planning a month of nights",
+   "body": [
+    {
+     "t": "Milestones — next full, next new — pace observing runs, photo projects and night events. The "
+    },
+    {
+     "t": "Moon Phase Calendar Map",
+     "l": "/tools/moon-phase-calendar-map"
+    },
+    {
+     "t": " lays the same data out as a month grid."
+    }
+   ]
+  },
+  {
+   "title": "Teaching the cycle end-to-end",
+   "body": [
+    {
+     "t": "One dashboard carries the whole story: age drives the name, the name matches the picture, the percent prices the light. Students who meet all four together stop memorising and start seeing."
+    }
+   ]
+  },
+  {
+   "title": "Checking a claim about a date",
+   "body": [
+    {
+     "t": "Full moon at the wedding? Crescent for the crossing? The dashboard answers with the numbers exposed, not just the name — close calls show their margins."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Reading a dashboard",
+   "body": [
+    {
+     "t": "Age 11.1 days is 75% of the way from new to full; the illumination formula turns that geometry into about 86% lit; the name for 'past quarter, not yet full, still growing' is waxing gibbous. Three readings, one Moon, zero contradictions."
+    }
+   ]
+  },
+  {
+   "label": "Example · The eclipse-grade dates",
+   "body": [
+    {
+     "t": "Feed it 3 March 2026 and it reports full at ~100% — the night of a total lunar eclipse. Feed it 12 August 2026 and it reports new — a total solar eclipse. When a dashboard's extremes match the eclipse calendar, the middle values earn their keep."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The dashboard's four readings",
+  "intro": "What each number is and the tool that takes it further.",
+  "columns": [
+   "Reading",
+   "Meaning",
+   "Deeper tool"
+  ],
+  "rows": [
+   [
+    "Phase name",
+    "The cycle's chapter (new → full → new)",
+    "Moon Phase by Date"
+   ],
+   [
+    "Age (days)",
+    "Time since the last new moon",
+    "Moon Age Calculator"
+   ],
+   [
+    "Illumination",
+    "Lit fraction of the disc, percent",
+    "Moon Illumination Calculator"
+   ],
+   [
+    "Milestones",
+    "Next quarter, full and new dates",
+    "Next Full Moon Calculator"
+   ]
+  ],
+  "note": "All readings derive from the mean synodic cycle (29.53059 days) — consistent with each other by construction, and within hours of the real sky's events in most cycles."
+ },
+ "faq": [
+  [
+   "How accurate are the milestone dates?",
+   "Mean-model milestones land within several hours of the true instants in typical cycles — good for planning evenings, not for timing eclipse contacts. Almanacs and ephemerides own the last few hours."
+  ],
+  [
+   "Why do the name and the picture sometimes disagree?",
+   "Phase pictures are drawn for band centres; a Moon at a band edge wears its neighbour's face. The dashboard's age number is the tiebreaker — trust it over the icon."
+  ],
+  [
+   "Is the phase the same worldwide?",
+   "Essentially yes at any instant — the whole Earth shares one Moon geometry. The date line means the same Moon can carry two calendar dates at once, which is a calendar fact, not a lunar one."
+  ],
+  [
+   "What does 'gibbous' mean?",
+   "Humped — more than half lit, less than full, from the Latin for a hump. Waxing gibbous grows toward full; waning gibbous shrinks from it. The ugly word is the precise one."
+  ],
+  [
+   "Can it show the Moon for a historical date?",
+   "Yes — the cycle counts backward as happily as forward. Precision fades slowly over centuries, so a medieval date's phase name is a good estimate, not a sworn statement."
+  ],
+  [
+   "Why is the full moon sometimes a day off my calendar?",
+   "Printed calendars mark the date of the full instant in one timezone; the mean model can sit hours away, and your evening may precede the instant. Any of the three can move the label by a day near the boundary."
+  ],
+  [
+   "Does it include moonrise and set?",
+   "This dashboard is phase-first. The Moonrise and Moonset Calculator is the time-first sibling — the pair together cover a night completely."
+  ],
+  [
+   "What about eclipses and supermoons?",
+   "Eclipses need alignment precision beyond a phase model; supermoons need the Moon's distance, which this cycle doesn't track. The calculator names the phase honestly and leaves those events to ephemeris tools — while noting, correctly, that eclipses only ever occur at its two extreme readings."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Pieces of the dashboard: the "
+  },
+  {
+   "t": "Moon Age Calculator",
+   "l": "/tools/moon-age-calculator"
+  },
+  {
+   "t": ", "
+  },
+  {
+   "t": "Moon Illumination Calculator",
+   "l": "/tools/moon-illumination-calculator"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Moon Phase by Date",
+   "l": "/tools/moon-phase-by-date"
+  },
+  {
+   "t": "; times: "
+  },
+  {
+   "t": "Moonrise and Moonset",
+   "l": "/tools/moonrise-moonset"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "golden-hour-calculator",
   "moon-age-calculator",

@@ -7,17 +7,171 @@
   "koppen climate",
   "climate classification"
  ],
- "title": null,
- "description": null,
+ "title": "Climate Zone Finder: Köppen Context for a Place",
+ "description": "Identify a place's climate classification context with the Climate Zone Finder — Köppen groups explained with the thresholds that define them. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, Los Angeles reads Csb — a dry-summer Mediterranean climate — while Miami is Am (tropical monsoon) and Chicago Dfa (hot-summer continental): three letters that compress thirty years of weather into a code.",
+ "quick_answer": "The Climate Zone Finder identifies the climate classification context of a place — its Köppen climate group and what that code means in temperature and rainfall terms. Enter the place and read the zone, so planting, building and travel decisions start from the climate's actual character.",
+ "steps_intro": "Climate is weather's long memory. Read a place's:",
+ "use_cases": [
+  {
+   "title": "Garden and planting decisions",
+   "body": [
+    {
+     "t": "What thrives is climate before soil. The Köppen code frames expectations; the "
+    },
+    {
+     "t": "Plant Hardiness Zone",
+     "l": "/tools/plant-hardiness-zone"
+    },
+    {
+     "t": " adds the winter-minimum detail gardeners actually plant by."
+    }
+   ]
+  },
+  {
+   "title": "Relocation and travel sense-making",
+   "body": [
+    {
+     "t": "'Cfb' tells a mover more than 'mild': oceanic, rain spread through the year, summers rarely hot. Codes compress climate normals into comparable form."
+    }
+   ]
+  },
+  {
+   "title": "Building and energy intuition",
+   "body": [
+    {
+     "t": "Heating-dominated (D), cooling-dominated (A, B) or barely-either (C) — the group letter is the first energy conversation a design has with a site."
+    }
+   ]
+  },
+  {
+   "title": "Teaching classification",
+   "body": [
+    {
+     "t": "Köppen divided the world by the vegetation weather produces — thresholds students can test against any city's climate table, this finder's included."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Reading Csb",
+   "body": [
+    {
+     "t": "C: temperate (coldest month between 0 and 18°C). s: dry summer. b: warm, not hot, summer. Los Angeles in three letters — and a gardener in Cape Town (also Csb) instantly knows the rhythm translates across hemispheres."
+    }
+   ]
+  },
+  {
+   "label": "Example · The desert letter",
+   "body": [
+    {
+     "t": "Phoenix is BWh: B (dry — rainfall below the temperature-dependent threshold), W (true desert), h (hot). Compare Tucson or Las Vegas — same family, same planning consequences for water."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The five Köppen groups",
+  "intro": "First-letter classification by the standard thresholds (30-year climate normals).",
+  "columns": [
+   "Group",
+   "Name",
+   "Defining threshold (simplified)"
+  ],
+  "rows": [
+   [
+    "A",
+    "Tropical",
+    "Coldest month ≥ 18°C — Miami (Am), Singapore (Af)"
+   ],
+   [
+    "B",
+    "Dry (arid/semi-arid)",
+    "Precipitation below the evaporation-driven threshold — Phoenix (BWh)"
+   ],
+   [
+    "C",
+    "Temperate",
+    "Coldest month 0–18°C, warmest > 10°C — London (Cfb), Los Angeles (Csb)"
+   ],
+   [
+    "D",
+    "Continental",
+    "Coldest month ≤ 0°C (some schemes −3°C), warmest > 10°C — Chicago (Dfa)"
+   ],
+   [
+    "E",
+    "Polar",
+    "Warmest month < 10°C — Utqiaġvik, Alaska (ET)"
+   ]
+  ],
+  "note": "Second and third letters refine seasonality and summer heat (f = no dry season, s = dry summer, w = dry winter; a/b/c = hot/warm/cool summer). Borderline cities can sit within a degree or a few millimetres of a boundary — the code is a summary of normals, not a fence."
+ },
+ "faq": [
+  [
+   "Which classification system is used?",
+   "Köppen (in its widely used Köppen–Geiger form): five letter groups defined by temperature and precipitation thresholds over 30-year climate normals. It is the world's standard climate taxonomy."
+  ],
+  [
+   "Normals from which period?",
+   "Classifications rest on standard 30-year normals (recent editions use late-20th/early-21st-century records). A specific dataset's vintage can nudge borderline places across a line — noted here rather than hidden."
+  ],
+  [
+   "My city feels hotter than its code.",
+   "Codes average decades and whole stations; urban heat islands run 1–3°C warmer than the classifying station in many cities. The code describes the region's climate; your street has its own microclimate."
+  ],
+  [
+   "Mountains break the pattern?",
+   "Altitude creates Highland (H) microclimates inside any group — a Cfb valley can hold near-E conditions at its summits. Elevation tools on this site quantify the lapse that drives it."
+  ],
+  [
+   "Rainfall letter for monsoons?",
+   "A-group codes split into Af (rain all year), Am (monsoon — short dry season offset by heavy rains) and Aw (savanna — distinct dry winter). The second letter is where tropical places stop looking identical."
+  ],
+  [
+   "Does the finder give garden zones?",
+   "Köppen is climate science; USDA hardiness zones are the gardener's separate system, with its own finder on this site. Confusing the two is common and consequential for plants."
+  ],
+  [
+   "Oceanic versus continental — visible in the code?",
+   "Yes: Cfb (oceanic, mild winters, cool summers) versus Dfa (continental, harsh winters, hot summers) can share a latitude — London and Chicago sit near 51–42°N with utterly different codes."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Garden zones: the "
+  },
+  {
+   "t": "Plant Hardiness Zone",
+   "l": "/tools/plant-hardiness-zone"
+  },
+  {
+   "t": "; cicada country: the "
+  },
+  {
+   "t": "Cicada Emergence Map",
+   "l": "/tools/cicada-emergence-map"
+  },
+  {
+   "t": "; rainfall map: the "
+  },
+  {
+   "t": "World Rainfall Map",
+   "l": "/tools/world-rainfall-map"
+  },
+  {
+   "t": "; altitude effect: the "
+  },
+  {
+   "t": "Temperature Change by Elevation",
+   "l": "/tools/temperature-change-by-elevation"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boiling-point-by-elevation-calculator",
   "central-angle-from-distance-calculator",

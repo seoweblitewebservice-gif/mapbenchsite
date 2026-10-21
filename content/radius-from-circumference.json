@@ -8,17 +8,171 @@
   "radius from circumference calculator tool",
   "how to calculate radius from circumference calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Radius From Circumference Calculator",
+ "description": "Get the radius from a circumference with the Radius From Circumference Calculator — C divided by 2π, exact and instant. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a standard 400-metre running track loop has a circumference that implies a radius of 63.66 metres — if it were a circle, which the calculator assumes and the straights politely contradict.",
+ "quick_answer": "The Radius From Circumference Calculator works out a circle's radius from its circumference using r = C ÷ 2π. Enter the circumference in any unit and read the radius — reversing the measurement a tape takes around a tree or tank.",
+ "steps_intro": "Circumference is what you can measure. Radius is what the formulas want:",
+ "use_cases": [
+  {
+   "title": "Trees, tanks and round things",
+   "body": [
+    {
+     "t": "A tape wraps the circumference; the radius is what fits through the middle. Forestry does this daily — trunk diameter from a tape is this same division wearing boots."
+    }
+   ]
+  },
+  {
+   "title": "Feeding the area formulas",
+   "body": [
+    {
+     "t": "Circle area needs the radius. Convert here, then the "
+    },
+    {
+     "t": "Circle Area From Radius",
+     "l": "/tools/circle-area-from-radius"
+    },
+    {
+     "t": " finishes the job."
+    }
+   ]
+  },
+  {
+   "title": "Track and course checks",
+   "body": [
+    {
+     "t": "A loop's measured length gives its equivalent-circle radius — a fair first model before the straights and bends get their own say."
+    }
+   ]
+  },
+  {
+   "title": "Service circles drawn backwards",
+   "body": [
+    {
+     "t": "A delivery zone quoted by its boundary length becomes a radius you can draw with the "
+    },
+    {
+     "t": "Map Radius",
+     "l": "/tools/map-radius"
+    },
+    {
+     "t": " tool."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 400 m loop",
+   "body": [
+    {
+     "t": "400 ÷ 2π = 63.66 m radius. A real athletics track is two straights plus two semicircles, so 63.66 m is the equivalent circle — honest as a model, labelled as one."
+    }
+   ]
+  },
+  {
+   "label": "Example · The planet",
+   "body": [
+    {
+     "t": "Earth's equatorial circumference is about 24,901 miles, so r ≈ 3,963 miles. The calculator performs the same division for a garden pond without blinking."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Circumference to radius, at a glance",
+  "intro": "The division by 2π, tabulated for common sizes.",
+  "columns": [
+   "Circumference",
+   "Radius",
+   "Diameter"
+  ],
+  "rows": [
+   [
+    "10",
+    "1.59",
+    "3.18"
+   ],
+   [
+    "25",
+    "3.98",
+    "7.96"
+   ],
+   [
+    "50",
+    "7.96",
+    "15.92"
+   ],
+   [
+    "100",
+    "15.92",
+    "31.83"
+   ],
+   [
+    "200",
+    "31.83",
+    "63.66"
+   ]
+  ],
+  "note": "Units carry through unchanged — feet in, feet out. Radius is always circumference ÷ 6.2832, which is why a quick mental check divides by 'about 6.3'."
+ },
+ "faq": [
+  [
+   "What is the formula?",
+   "r = C ÷ (2π). Circumference and radius are locked by π; this calculator is that lock turned into a tool."
+  ],
+  [
+   "Radius or diameter — which do I get?",
+   "The radius. Double it for the diameter, or let the table on this page show both for common sizes."
+  ],
+  [
+   "My shape is not a perfect circle.",
+   "Then the result is the equivalent circle's radius — a useful model for areas and fits, stated as a model rather than a measurement."
+  ],
+  [
+   "Units — metres, feet, miles?",
+   "Any consistent unit works; the calculator is unit-agnostic because the relation is pure ratio."
+  ],
+  [
+   "Circumference from radius instead?",
+   "The Circle Circumference From Radius calculator runs the forward direction (C = 2πr)."
+  ],
+  [
+   "How precise is π here?",
+   "Full double precision — the division contributes no rounding worth your attention; your tape measure is the error budget."
+  ],
+  [
+   "Can I use it for a pizza?",
+   "Circumference 2πr means the calculator prices your crust-to-centre distance correctly. Toppings remain your responsibility."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Forward: the "
+  },
+  {
+   "t": "Circle Circumference From Radius",
+   "l": "/tools/circle-circumference-from-radius"
+  },
+  {
+   "t": "; area next: "
+  },
+  {
+   "t": "Circle Area From Radius",
+   "l": "/tools/circle-area-from-radius"
+  },
+  {
+   "t": "; draw it: the "
+  },
+  {
+   "t": "Map Radius",
+   "l": "/tools/map-radius"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-area-from-radius",

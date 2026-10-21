@@ -6,17 +6,176 @@
   "compare country sizes",
   "how big is"
  ],
- "title": null,
- "description": null,
+ "title": "Country Size Comparison: True Sizes, Same Scale",
+ "description": "Use Country Size Comparison to see two countries side by side at one true scale — Russia is 24.6 times Texas, and Africa is 14 Greenlands. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, Africa covers about 30.4 million km² and Greenland 2.17 million — Africa is 14 times larger, however equal they look on a classroom Mercator wall map.",
+ "quick_answer": "Country Size Comparison puts any two countries side by side at exactly the same map scale, with their true areas in square kilometres and a plain-language ratio. Pick two and see how big they really are — not how big the Mercator projection pretends they are.",
+ "steps_intro": "Same scale, honest areas — here is how to read the comparison:",
+ "use_cases": [
+  {
+   "title": "Undoing a lifetime of Mercator",
+   "body": [
+    {
+     "t": "Most people met the world on a projection that inflates high latitudes. One comparison — Russia against a familiar US state — recalibrates intuition permanently. The "
+    },
+    {
+     "t": "Blank Map",
+     "l": "/tools/blank-map"
+    },
+    {
+     "t": " outlines show the same honest shapes for printing."
+    }
+   ]
+  },
+  {
+   "title": "Teaching scale and projection",
+   "body": [
+    {
+     "t": "Ask the class which is bigger, Greenland or India, then run it: India wins by about 1.5 times, and the room gasps. That gasp is the lesson plan."
+    }
+   ]
+  },
+  {
+   "title": "Travel and relocation reality checks",
+   "body": [
+    {
+     "t": "Moving from Germany to Texas? Texas alone is about twice Germany. Comparing your home country with a destination sets honest expectations about distances and driving days."
+    }
+   ]
+  },
+  {
+   "title": "News and trivia verification",
+   "body": [
+    {
+     "t": "“Bigger than France” claims in headlines deserve a check. This tool is the two-click fact-check — and the "
+    },
+    {
+     "t": "Map Area Calculator",
+     "l": "/tools/map-area-calculator"
+    },
+    {
+     "t": " measures custom regions when countries are not the unit."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The Greenland illusion",
+   "body": [
+    {
+     "t": "On a Mercator map Greenland rivals Africa. In truth Africa is about 14.0 times Greenland's area — and India (3.29 million km²) alone is about 1.5 times Greenland (2.17 million km²)."
+    }
+   ]
+  },
+  {
+   "label": "Example · Texas versus France",
+   "body": [
+    {
+     "t": "Texas is famously huge — and still only about 1.26 times metropolitan France (695,662 km² against 551,695 km²). Alaska, at 2.47 times Texas, is the comparison that ends arguments."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Areas that surprise people",
+  "intro": "Published total areas (land plus inland water), rounded — the comparisons this tool draws to scale.",
+  "columns": [
+   "Place",
+   "Area (km²)",
+   "Reality check"
+  ],
+  "rows": [
+   [
+    "Russia",
+    "17,098,242",
+    "About 24.6 × Texas"
+   ],
+   [
+    "Canada",
+    "9,984,670",
+    "Slightly larger than the USA (9,833,517 km²)"
+   ],
+   [
+    "Brazil",
+    "8,514,877",
+    "About 1.11 × Australia (7,692,024 km²)"
+   ],
+   [
+    "Africa (continent)",
+    "≈ 30,370,000",
+    "About 14.0 × Greenland"
+   ],
+   [
+    "India",
+    "3,287,263",
+    "About 13.6 × the United Kingdom (242,495 km²)"
+   ],
+   [
+    "Germany",
+    "357,588",
+    "Smaller than California (423,970 km²) — about 0.84 ×"
+   ]
+  ],
+  "note": "Area figures follow the commonly published totals; different sources vary by fractions of a percent depending on how they count inland water and disputed territory. The side-by-side outlines use true spherical geometry, so the visual ratio and the numbers agree."
+ },
+ "faq": [
+  [
+   "Why does Russia look cut off in some views?",
+   "Russia spans about 180 degrees of longitude — any flat world view must cut somewhere, and the Pacific-centred cut splits Russia's far east. The comparison here draws each country whole, centred on itself, so nothing is amputated."
+  ],
+  [
+   "Which projection does the comparison use?",
+   "Each outline is drawn on its own local, equal-treatment basis at a shared ground scale — the point is that a kilometre is a kilometre in both panels. No single flat world projection can promise that, which is why the tool avoids one."
+  ],
+  [
+   "Are overseas territories included?",
+   "Follow the area figures' convention: totals are the commonly published ones for each country. France is the classic case — metropolitan France is 551,695 km², while the Republic including overseas lands is larger; the tool labels which figure it uses."
+  ],
+  [
+   "Can I compare a country with a US state?",
+   "Yes — states are in the list precisely because 'the size of Texas' is the world's favourite unit. Alaska at 1,717,854 km² is about 3.11 times metropolitan France."
+  ],
+  [
+   "Why do sources disagree on country areas?",
+   "Coastline measurement, inland water, tidal flats and disputed borders all move the last percent. For bar-room and classroom purposes the published totals agree far beyond the precision anyone needs."
+  ],
+  [
+   "What is the smallest comparison worth making?",
+   "Any you like — the ratio between Liechtenstein and Monaco is just as honest. Tiny states make the point that area rankings run from Russia's 17.1 million km² down to Vatican City's half a square kilometre."
+  ],
+  [
+   "Can I overlay one country on another instead?",
+   "Side-by-side is this tool's honest format: same scale, no distortion from forcing one shape inside another. For a drawn region's own area, use the Map Area Calculator."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Measure any region you draw with the "
+  },
+  {
+   "t": "Map Area Calculator",
+   "l": "/tools/map-area-calculator"
+  },
+  {
+   "t": ", sketch countries onto an outline with "
+  },
+  {
+   "t": "Blank Map",
+   "l": "/tools/blank-map"
+  },
+  {
+   "t": ", or drop comparison pins with the "
+  },
+  {
+   "t": "Map Radius Tool",
+   "l": "/tools/map-radius"
+  },
+  {
+   "t": " family."
+  }
+ ],
  "more_tools": [
   "advanced-map-embed-generator",
   "color-a-map",

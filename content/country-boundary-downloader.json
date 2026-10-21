@@ -7,17 +7,159 @@
   "download country geojson",
   "country border file"
  ],
- "title": null,
- "description": null,
+ "title": "Country Boundary Downloader: Full Outlines",
+ "description": "Download a country's complete boundary — every polygon part, islands included — with the Country Boundary Downloader, as KML or GeoJSON. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, France arrives as a MultiPolygon: the mainland plus Corsica and its coastal islands in a single file, with the enclosed land area computed from the outline.",
+ "quick_answer": "The Country Boundary Downloader gives you a country's complete boundary as one file — all polygon parts, islands included — in KML or GeoJSON. Pick the country and download the outline with its land area computed from the geometry — raw material for maps that need real borders.",
+ "steps_intro": "One country, one complete file:",
+ "use_cases": [
+  {
+   "title": "Teaching and publishing maps",
+   "body": [
+    {
+     "t": "A true national outline beats a traced approximation in every classroom and report. Style it, label it, print it — the geometry is the real shape."
+    }
+   ]
+  },
+  {
+   "title": "GIS clipping and masking",
+   "body": [
+    {
+     "t": "Clip global datasets to one country, or mask everything outside it. The boundary file is the cookie cutter; your data is the dough."
+    }
+   ]
+  },
+  {
+   "title": "Web map backdrops",
+   "body": [
+    {
+     "t": "Country-highlight maps (pickers, coverage graphics, election explainers) start from the outline — the "
+    },
+    {
+     "t": "Boundary KML Downloader",
+     "l": "/tools/boundary-kml-downloader"
+    },
+    {
+     "t": " covers the cities and counties below this level."
+    }
+   ]
+  },
+  {
+   "title": "Area verification",
+   "body": [
+    {
+     "t": "The computed enclosed area lets you sanity-check published country areas — outline-derived figures and almanac figures should broadly agree, and the differences are instructive."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Archipelago nations",
+   "body": [
+    {
+     "t": "Indonesia and the Philippines download as thousands of island polygons in one MultiPolygon — ‘complete’ means every part, which is why these files are big and why partial ones mislead."
+    }
+   ]
+  },
+  {
+   "label": "Example · Mainland plus islands",
+   "body": [
+    {
+     "t": "France’s file pairs the European mainland polygon with Corsica; Greece adds its island constellation. One feature, many parts — GIS software handles the family as a single country."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the file contains",
+  "intro": "The anatomy of a country download.",
+  "columns": [
+   "Element",
+   "In KML",
+   "In GeoJSON"
+  ],
+  "rows": [
+   [
+    "National outline",
+    "Placemark with MultiGeometry",
+    "Feature with MultiPolygon"
+   ],
+   [
+    "Island parts",
+    "Additional Polygons in the same Placemark",
+    "Additional polygon arrays in the same geometry"
+   ],
+   [
+    "Coordinates",
+    "lon,lat tuples",
+    "[lon, lat] pairs, WGS84"
+   ],
+   [
+    "Computed area",
+    "Shown with the download",
+    "Same figure, from the outline"
+   ]
+  ],
+  "note": "Boundaries reflect OpenStreetMap’s documented positions, including its handling of disputed areas. Almanac land areas may differ slightly — outlines include coastal detail and tidal choices that statistics smooth away."
+ },
+ "faq": [
+  [
+   "Which countries are available?",
+   "Every country present in the open boundary data — effectively the whole world map, from France to Fiji. A place without a recorded administrative outline is the rare exception."
+  ],
+  [
+   "Are overseas territories included?",
+   "The download follows the boundary record for the country as mapped — metropolitan outlines and separately-administered territories are distinct entries in the data. Download the territory itself when you need it."
+  ],
+  [
+   "KML or GeoJSON?",
+   "KML for Google Earth and sharing; GeoJSON for GIS, web maps and code. Same outline in both — choose by destination, not by data."
+  ],
+  [
+   "Why is the file so large?",
+   "Coastlines are fractal in spirit: detailed countries carry hundreds of thousands of outline points. Size is fidelity. Simplify in your GIS if your use allows it."
+  ],
+  [
+   "Can I get just one island or region?",
+   "Use the Boundary KML Downloader for sub-national outlines — provinces, states and islands with their own administrative records live there."
+  ],
+  [
+   "Are enclaves handled?",
+   "Yes — Lesotho inside South Africa, and similar geometries, arrive as their own complete country files; the surrounding country’s outline has the hole where the enclave sits."
+  ],
+  [
+   "Whose borders for disputed areas?",
+   "OpenStreetMap’s documented position, as with all boundary data here. The file is a working geometry, not a diplomatic ruling."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Below country level: the "
+  },
+  {
+   "t": "Boundary KML Downloader",
+   "l": "/tools/boundary-kml-downloader"
+  },
+  {
+   "t": "; measure a file: the "
+  },
+  {
+   "t": "GeoJSON Area Calculator",
+   "l": "/tools/geojson-area-calculator"
+  },
+  {
+   "t": "; inspect structure: the "
+  },
+  {
+   "t": "GeoJSON Geometry Type Counter",
+   "l": "/tools/geojson-geometry-type-counter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "cluster-map-from-points",
   "csv-column-counter",

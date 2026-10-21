@@ -6,17 +6,177 @@
   "location words",
   "3 word address"
  ],
- "title": null,
- "description": null,
+ "title": "What3Words-Style Location Helper: Word Codes",
+ "description": "Work with three-word location addresses using the What3Words-Style Location Helper — how word codes work, honestly scoped. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a three-word address names one specific 3 m × 3 m square of the Earth's surface — a front door, a gate, a tent peg — in words a human can say, hear and remember.",
+ "quick_answer": "The What3Words-Style Location Helper supports workflows around three-word location addresses — the system that divides the world into 3-metre squares, each named by three dictionary words. Use it to understand, check and move between word addresses and the coordinates the rest of your tools speak.",
+ "steps_intro": "Three words instead of fourteen digits — how the idea works:",
+ "use_cases": [
+  {
+   "title": "Receiving a word address",
+   "body": [
+    {
+     "t": "A customer, guest or casualty sends three words. Understanding the system's grain (one 3 m square) tells you what to do next — plot it in the official app, then bring the coordinates to the "
+    },
+    {
+     "t": "Coordinates Lookup Tool",
+     "l": "/tools/coordinates-lookup-tool"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Choosing an addressing system",
+   "body": [
+    {
+     "t": "Word codes versus "
+    },
+    {
+     "t": "Plus Codes",
+     "l": "/tools/plus-code-finder"
+    },
+    {
+     "t": ": proprietary memorability versus open computability. This page lays out the trade so the choice is informed, not fashionable."
+    }
+   ]
+  },
+  {
+   "title": "Event and site logistics",
+   "body": [
+    {
+     "t": "Festivals, film sets and field hospitals publish word addresses for gates and muster points — this helper explains to your team what the string they received actually is."
+    }
+   ]
+  },
+  {
+   "title": "Teaching location literacy",
+   "body": [
+    {
+     "t": "Three addressing philosophies — coordinates, computed codes, word codes — make a complete lesson. This page is the words lecture."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The square is the unit",
+   "body": [
+    {
+     "t": "57 trillion squares of 3 m × 3 m tile the planet (land and sea alike). A word address does not name a building or a person — it names one of those squares, and the building is a separate fact."
+    }
+   ]
+  },
+  {
+   "label": "Example · Similar words, distant squares",
+   "body": [
+    {
+     "t": "The system deliberately places confusable word combinations far apart, so a mishearing lands obviously wrong rather than next door — the design answer to the spoken-address problem, explained here because it shapes how carefully you should still read codes back."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Word codes versus the alternatives",
+  "intro": "Three philosophies of 'where', compared fairly.",
+  "columns": [
+   "Property",
+   "Three-word codes",
+   "Plus Codes",
+   "Coordinates"
+  ],
+  "rows": [
+   [
+    "Form",
+    "Three dictionary words",
+    "Alphanumeric code from coordinates",
+    "Two signed numbers"
+   ],
+   [
+    "Cell",
+    "3 m × 3 m square",
+    "~14 m at 10 characters, refinable",
+    "As precise as the decimals"
+   ],
+   [
+    "System",
+    "Proprietary (what3words)",
+    "Open standard (Open Location Code)",
+    "Universal"
+   ],
+   [
+    "Works offline from scratch?",
+    "Needs the app/data",
+    "Yes — pure arithmetic",
+    "Yes"
+   ],
+   [
+    "Say it over a phone?",
+    "Designed for exactly that",
+    "Possible, character by character",
+    "Painful"
+   ]
+  ],
+  "note": "This helper is independent: official word-address lookup lives in what3words' own app and licensed API. The page's job is literacy and workflow — what the squares are, what they are not, and how to move between systems."
+ },
+ "faq": [
+  [
+   "Can this page look up any three words officially?",
+   "Official conversion between words and coordinates is what3words' own service, delivered through their app and licensed API. This helper explains the system and supports the surrounding workflow; it does not impersonate their API."
+  ],
+  [
+   "How many word combinations exist?",
+   "The English list uses about 40,000 words; three-word combinations from it name the 57 trillion squares. Other languages have their own lists, and addresses do not translate word-for-word between them."
+  ],
+  [
+   "Are the words assigned randomly?",
+   "Deliberately not: memorable, common words go to populated places, confusables are separated by distance, and offensive words are excluded — curation is the system's real product."
+  ],
+  [
+   "Emergency services acceptance?",
+   "Many UK and international emergency services accept word addresses because callers often cannot give anything better. If you send one, read it back slowly — and give coordinates too when you can."
+  ],
+  [
+   "Word address or postcode for a delivery?",
+   "Postcodes find the street; a word square finds the door, gate or dock on it. Couriers increasingly accept both — the square wins where doors outnumber addresses."
+  ],
+  [
+   "Can I invent my own three words for my house?",
+   "No — the assignments are fixed by the system. Your square already has its words; the official app tells you them."
+  ],
+  [
+   "Do word addresses expire?",
+   "The system operator controls the list; addresses are stable by design intent, but the guarantee is a company's, not mathematics' — the honest difference from open codes."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Open codes: the "
+  },
+  {
+   "t": "Plus Code Finder",
+   "l": "/tools/plus-code-finder"
+  },
+  {
+   "t": "; coordinates: the "
+  },
+  {
+   "t": "Coordinate Converter",
+   "l": "/tools/coordinate-converter"
+  },
+  {
+   "t": "; share by QR: the "
+  },
+  {
+   "t": "QR Location Helper",
+   "l": "/tools/qr-location-helper"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "city-from-coordinates",
   "coordinate-bounding-box-generator",

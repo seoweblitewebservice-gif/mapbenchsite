@@ -8,17 +8,154 @@
   "flip gpx track",
   "gpx route reverser"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Reverse Track Tool: Run It Backwards",
+ "description": "Reverse a GPX track's direction with the GPX Reverse Track Tool — start becomes finish, segment by segment, locally. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, yesterday's point-to-point hike from the valley town to the high bothy reverses into tomorrow's file: bothy to town, every bend in mirror order, ready to load before you set off.",
+ "quick_answer": "The GPX Reverse Track Tool flips each track segment in a GPX file so the route runs from its former finish back to its start. Load the file locally and download the reversed copy — the same path re-ordered, for return journeys and reverse riding.",
+ "steps_intro": "The same path, walked the other way:",
+ "use_cases": [
+  {
+   "title": "Return-journey files",
+   "body": [
+    {
+     "t": "Point-to-point routes rarely retrace themselves in your library. Reverse the outbound file and the return leg has its own navigable track."
+    }
+   ]
+  },
+  {
+   "title": "Riding the route the other way",
+   "body": [
+    {
+     "t": "Trail direction changes a ride completely — climbs become descents. Reversing lets you preview the mirrored day, and the "
+    },
+    {
+     "t": "Elevation Gain Calculator",
+     "l": "/tools/gpx-elevation-gain-calculator"
+    },
+    {
+     "t": " on the reversed file re-prices the effort."
+    }
+   ]
+  },
+  {
+   "title": "Fixing a backwards recording",
+   "body": [
+    {
+     "t": "A track stitched or exported in reverse order confuses every downstream tool. Reversing restores the true direction of travel."
+    }
+   ]
+  },
+  {
+   "title": "Race and event variants",
+   "body": [
+    {
+     "t": "Events that alternate direction yearly need both editions of the course file — one reversal apart."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · What actually flips",
+   "body": [
+    {
+     "t": "Within each segment, the point order inverts: last becomes first. Segments themselves stay in place (segment 1 remains segment 1) — the tool mirrors journeys, it does not reshuffle a multi-leg day into nonsense."
+    }
+   ]
+  },
+  {
+   "label": "Example · The elevation mirror",
+   "body": [
+    {
+     "t": "A route that gained 48 m and lost 8 becomes, reversed, a route that gains 8 and loses 48 — the identity gain − loss flips sign with the direction, exactly as the ground would."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reversal semantics",
+  "intro": "Precisely what changes — and the one thing to think about (time).",
+  "columns": [
+   "Aspect",
+   "Behaviour"
+  ],
+  "rows": [
+   [
+    "Point order",
+    "Reversed within each segment"
+   ],
+   [
+    "Coordinates and elevation",
+    "Unchanged values, new order"
+   ],
+   [
+    "Segments",
+    "Kept in their original sequence"
+   ],
+   [
+    "Waypoints and routes' points",
+    "Tracks are the subject; standalone waypoints are untouched"
+   ],
+   [
+    "Distance and shape",
+    "Identical — the path is the same set of segments"
+   ]
+  ],
+  "note": "A reversed track is a plan for travelling the path backwards — treat its numbers as the mirror day's, and re-derive anything time-of-day dependent (shade, tides, shop hours) from the new direction."
+ },
+ "faq": [
+  [
+   "Does reversing change the shape or distance?",
+   "No — the polyline is identical, only its direction of travel flips. Any distance tool reads the same total from either edition."
+  ],
+  [
+   "What happens to elevation profiles?",
+   "They mirror: the profile chart reads right-to-left compared to the original, gains and losses swap roles, and the max elevation stays the same mountain."
+  ],
+  [
+   "Multi-day files with many segments?",
+   "Each segment reverses internally while segment order is preserved — a multi-leg recording stays a coherent set, each leg individually mirrored."
+  ],
+  [
+   "Can I reverse a route (<rte>) too?",
+   "This tool's subject is tracks. Planned routes reverse in route planners; the geometry principle is identical if your editor offers it."
+  ],
+  [
+   "Will my device follow a reversed track?",
+   "Devices follow point order — the reversed file navigates finish-to-start exactly as the original navigated start-to-finish."
+  ],
+  [
+   "Names and descriptions?",
+   "Track names ride along unchanged — rename the copy (…-reversed) so your library does not confuse the two directions at 6 a.m."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Endpoints swapped: "
+  },
+  {
+   "t": "GPX Start and End Coordinates",
+   "l": "/tools/gpx-start-end-coordinates"
+  },
+  {
+   "t": "; re-priced effort: the "
+  },
+  {
+   "t": "GPX Elevation Gain Calculator",
+   "l": "/tools/gpx-elevation-gain-calculator"
+  },
+  {
+   "t": "; combine editions: the "
+  },
+  {
+   "t": "GPX Merger",
+   "l": "/tools/gpx-merger"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

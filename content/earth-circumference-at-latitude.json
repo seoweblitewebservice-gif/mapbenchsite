@@ -8,17 +8,162 @@
   "earth circumference at latitude tool",
   "how to calculate earth circumference at latitude"
  ],
- "title": null,
- "description": null,
+ "title": "Earth Circumference at Latitude: Parallels",
+ "description": "Compute the length of any parallel with Earth Circumference at Latitude — the full circle of a latitude line, and how fast it spins. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, New York's parallel (40.758°N) is a 30,399 km circle — nearly 10,000 km shorter than the equator's — and the ground there still spins eastward at about 789 mph.",
+ "quick_answer": "Earth Circumference at Latitude computes the full length of the circle traced by a line of latitude on the WGS84 ellipsoid. Enter the latitude and read the parallel's circumference in kilometres or miles — the number behind rotation speeds, parallel distances and why east-west degrees shrink toward the poles.",
+ "steps_intro": "Every parallel is a circle. Most are smaller than you think:",
+ "use_cases": [
+  {
+   "title": "Rotation speed questions",
+   "body": [
+    {
+     "t": "Divide the parallel's length by the sidereal day (23.9345 h) and you have the ground's eastward speed: 1,040 mph at the equator, 522 mph at 60°. This page supplies the numerator honestly."
+    }
+   ]
+  },
+  {
+   "title": "Pricing a degree of longitude",
+   "body": [
+    {
+     "t": "Circumference ÷ 360 is the degree's true length at that latitude — the same number the longitude-distance tools use, derived here from the whole circle."
+    }
+   ]
+  },
+  {
+   "title": "Flight and great-circle intuition",
+   "body": [
+    {
+     "t": "East-west routes ride parallels that shrink poleward — one reason northern great-circle routes look 'shorter' on the map: their parallels really are shorter."
+    }
+   ]
+  },
+  {
+   "title": "Teaching the ellipsoid",
+   "body": [
+    {
+     "t": "The parallel's radius is N·cos φ on WGS84, not simply R·cos φ — the table below shows the ellipsoid's small refinement over the school sphere."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · London's parallel",
+   "body": [
+    {
+     "t": "At 51.5072°N the circumference is 24,994.6 km — barely five eighths of the equator's 40,075.0 km. London circles the Earth's axis in a loop smaller than many people guess for the whole planet."
+    }
+   ]
+  },
+  {
+   "label": "Example · Near the pole",
+   "body": [
+    {
+     "t": "At 80° the parallel is just 6,981.7 km, and at the pole itself it collapses to a point: the only 'circumference' on Earth that fits in a snow footprint."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Circumference of parallels (WGS84)",
+  "intro": "Computed as 2π × N(φ) × cos φ — the ellipsoid's own circles.",
+  "columns": [
+   "Latitude",
+   "Circumference",
+   "Ground rotation speed"
+  ],
+  "rows": [
+   [
+    "0° (equator)",
+    "40,075.0 km",
+    "1,040 mph"
+   ],
+   [
+    "25°",
+    "36,342.0 km",
+    "943 mph"
+   ],
+   [
+    "40.758° (New York)",
+    "30,399.2 km",
+    "789 mph"
+   ],
+   [
+    "45°",
+    "28,384.9 km",
+    "737 mph"
+   ],
+   [
+    "60°",
+    "20,088.0 km",
+    "522 mph"
+   ],
+   [
+    "80°",
+    "6,981.7 km",
+    "181 mph"
+   ]
+  ],
+  "note": "Rotation speeds use the sidereal day (23 h 56 m) — the Earth's true spin period against the stars, which is what a parallel actually completes."
+ },
+ "faq": [
+  [
+   "Why is it not just 40,075 × cos(latitude)?",
+   "That is the sphere's answer — close, but the ellipsoid's parallel radius uses the prime-vertical radius N(φ), which is slightly larger than R·cos φ implies. The difference peaks at mid-latitudes at a few hundred metres over the whole circle."
+  ],
+  [
+   "Is the equator's circumference the largest?",
+   "Yes — 40,075.017 km on WGS84, the greatest parallel. (The meridian ellipse is slightly smaller, 40,007.9 km around — the flattening again.)"
+  ],
+  [
+   "What happens at exactly 90°?",
+   "The parallel becomes a point and the circumference zero — the formula's honest limit, and the reason 'east' stops meaning anything at the pole itself."
+  ],
+  [
+   "Southern latitudes?",
+   "Perfectly symmetric on the ellipsoid model: −45° prices exactly like +45°. Practical differences between hemispheres are geography, not geometry."
+  ],
+  [
+   "Can I get the parallel's radius instead?",
+   "Divide by 2π: at the equator that is 6,378.1 km (the semi-major axis); at 45°, about 4,517 km from the axis — the distance that sets the rotation speed."
+  ],
+  [
+   "Why sidereal day for rotation speed?",
+   "The ground returns to the same orientation against the stars in 23 h 56 m 4 s; the extra four minutes to face the Sun again is orbital motion, not spin. Circumference over sidereal day is the physical speed."
+  ],
+  [
+   "Does altitude change my parallel?",
+   "Trivially — a parallel flown at 11 km is about 69 km longer around (2π × 11 km), which is why the number that matters for aircraft is the ground track's, stated here."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Degrees priced: the "
+  },
+  {
+   "t": "Degrees Longitude to Kilometers Calculator",
+   "l": "/tools/longitude-degree-distance"
+  },
+  {
+   "t": "; arcs: the "
+  },
+  {
+   "t": "Earth Arc Length Calculator",
+   "l": "/tools/earth-arc-length-calculator"
+  },
+  {
+   "t": "; chords: the "
+  },
+  {
+   "t": "Earth Chord Length Calculator",
+   "l": "/tools/earth-chord-length-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "central-angle-from-distance-calculator",
   "cicada-emergence-map",

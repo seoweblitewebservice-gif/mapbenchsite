@@ -6,17 +6,166 @@
   "photography sunrise",
   "blue hour"
  ],
- "title": null,
- "description": null,
+ "title": "Golden Hour Calculator: Light for Photographers",
+ "description": "Find morning and evening golden hour windows for any place and date with the Golden Hour Calculator — computed from the Sun's actual path. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, in New York on 21 June 2026 the evening golden hour runs about 19:48 to 20:50 (computed) — a full hour of low gold, because summer suns at that latitude set at a slant.",
+ "quick_answer": "The Golden Hour Calculator finds the morning and evening windows when the Sun sits in the low band photographers love — roughly between 4 degrees below and 6 degrees above the horizon. Enter a place and date and read both windows, computed from solar position, not guessed.",
+ "steps_intro": "The light has a schedule. Here it is for your place and day:",
+ "use_cases": [
+  {
+   "title": "Portrait and wedding shoots",
+   "body": [
+    {
+     "t": "Schedule the couple's session by the window, not the vibe. At high latitudes in summer the window runs long and late — dinner first, portraits at nine."
+    }
+   ]
+  },
+  {
+   "title": "Landscape and city photography",
+   "body": [
+    {
+     "t": "The same slant that warms faces rakes across facades and ridges. Pair the window with the Sun's direction from the "
+    },
+    {
+     "t": "Sun Azimuth Calculator",
+     "l": "/tools/sun-azimuth-calculator"
+    },
+    {
+     "t": " to know which side of the valley glows."
+    }
+   ]
+  },
+  {
+   "title": "Real-estate and listing photos",
+   "body": [
+    {
+     "t": "A house shot in its evening golden window outsells the same house at noon. Agents who shoot by this calculator are not lucky; they are scheduled."
+    }
+   ]
+  },
+  {
+   "title": "Knowing when it will be short",
+   "body": [
+    {
+     "t": "Near the equator the Sun drops nearly vertically and the whole show can be twenty minutes. The calculator's honesty about tropical brevity saves shoots."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · London's long June gold",
+   "body": [
+    {
+     "t": "On 21 June 2026 London's evening golden hour runs about 20:26 to 21:49 (computed) — 83 minutes of it. The same city's December window is a fraction of that, and starts before most people leave work."
+    }
+   ]
+  },
+  {
+   "label": "Example · Morning is not evening backwards",
+   "body": [
+    {
+     "t": "The windows differ in length and feel: morning gold follows the blue of dawn, evening gold dissolves into it. New York's June morning window computes to about 05:04–06:05 — worth the alarm exactly twice a year per location scout."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The photographer's light ladder",
+  "intro": "Solar elevations (the convention this calculator uses) and what each band gives you.",
+  "columns": [
+   "Band",
+   "Sun elevation",
+   "Light character"
+  ],
+  "rows": [
+   [
+    "Golden hour",
+    "−4° to +6°",
+    "Warm, low, directional — the famous one"
+   ],
+   [
+    "Blue hour",
+    "−6° to −4°",
+    "Deep blue ambient, city lights balance"
+   ],
+   [
+    "Civil twilight rest",
+    "−6° to 0° overlaps gold",
+    "Soft afterglow without direct sun"
+   ],
+   [
+    "Harsh noon",
+    "+40° and up (summer mid-latitudes)",
+    "Short shadows, hard contrast"
+   ]
+  ],
+  "note": "Definitions vary by a degree or two between sources; this calculator states its band (−4° to +6°) so its windows are reproducible. Clouds, haze and skyline decide the rest."
+ },
+ "faq": [
+  [
+   "Is golden hour really an hour?",
+   "Rarely exactly. It is about twenty minutes near the equator, near an hour at mid-latitudes, and can stretch past two hours toward the poles in season — where, in midsummer, it can last all 'night'. The name is a souvenir from temperate latitudes."
+  ],
+  [
+   "Golden hour versus blue hour?",
+   "Gold is the Sun just above (or barely below) the horizon throwing warm direct light; blue is the deeper band after it leaves, when the sky itself is the light source. This calculator's window edges touch the blue hour at its −4° boundary."
+  ],
+  [
+   "Which window is better, morning or evening?",
+   "The geometry is symmetric; the air is not. Mornings are often clearer and emptier of people; evenings carry the day's haze and warmth. Most photographers have a favourite and a superstition to defend it."
+  ],
+  [
+   "Does the calculator account for mountains or skyline?",
+   "No — it computes the astronomical window for a level horizon. A western ridge steals the last minutes; a tower shoots its shadow early. Local scouting adjusts the ends."
+  ],
+  [
+   "Why do dates near the solstice change so little?",
+   "The Sun's declination stalls near its extremes, so windows plateau for days around the solstices — and race near the equinoxes. Your favourite light returns almost identically for a solstice week."
+  ],
+  [
+   "Can I plan a sunrise shoot with it?",
+   "Yes — the morning window tells you when gold starts relative to sunrise (about 05:24 in the New York June example). Arrive in the blue before it; the calculator's job is that you know the minute."
+  ],
+  [
+   "What about the southern hemisphere?",
+   "Everything mirrors: December is the long-light solstice, June the short one. The calculator uses your coordinates, so Sydney and Cape Town get their own correct windows."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The day around it: the "
+  },
+  {
+   "t": "Sunrise Sunset Calculator",
+   "l": "/tools/sunrise-sunset-calculator"
+  },
+  {
+   "t": "; twilight grades: the "
+  },
+  {
+   "t": "Civil Twilight Calculator",
+   "l": "/tools/civil-twilight-calculator"
+  },
+  {
+   "t": "; direction: the "
+  },
+  {
+   "t": "Sun Azimuth Calculator",
+   "l": "/tools/sun-azimuth-calculator"
+  },
+  {
+   "t": "; shadows: the "
+  },
+  {
+   "t": "Shadow Length Calculator",
+   "l": "/tools/shadow-length-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "astronomical-twilight-calculator",
   "civil-twilight-calculator",

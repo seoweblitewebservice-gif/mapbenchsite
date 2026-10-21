@@ -7,17 +7,177 @@
   "sun altitude",
   "solar angle"
  ],
- "title": null,
- "description": null,
+ "title": "Solar Position Calculator: Altitude and Azimuth",
+ "description": "Get the Sun's altitude and azimuth for any place, date and time with the Solar Position Calculator — the pair every sun tool runs on. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, at solar noon on June 21 the Sun over New York stands at altitude 72.7° in the south — while at 9 a.m. it is lower and east of south, numbers this calculator reports minute by minute.",
+ "quick_answer": "The Solar Position Calculator gives the Sun's position in your sky — altitude above the horizon and azimuth around it — for any place, date and time. Enter the details and read both angles — the pair behind shadows, panel angles and every sun tool here.",
+ "steps_intro": "Two angles locate the Sun. Everything else is arithmetic:",
+ "use_cases": [
+  {
+   "title": "Solar design and engineering",
+   "body": [
+    {
+     "t": "Panel tilt, tracker programming and shading studies all consume altitude/azimuth series — this is the spot-checker for the software's output, alongside the "
+    },
+    {
+     "t": "Solar Roof Potential Calculator",
+     "l": "/tools/solar-roof-potential-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Photography and real-estate light",
+   "body": [
+    {
+     "t": "When does the Sun clear that ridge into the valley — or into the living room? The position at your hour answers it; the "
+    },
+    {
+     "t": "Shadow Length Calculator",
+     "l": "/tools/shadow-length-calculator"
+    },
+    {
+     "t": " turns it into metres."
+    }
+   ]
+  },
+  {
+   "title": "Architecture and planning",
+   "body": [
+    {
+     "t": "Overshadowing and daylight assessments begin with sun positions at the test hours (often equinox mornings)."
+    }
+   ]
+  },
+  {
+   "title": "Astronomy literacy",
+   "body": [
+    {
+     "t": "Altitude and azimuth are the horizon coordinate system itself — learn it here and every star chart gets easier."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · One day in New York",
+   "body": [
+    {
+     "t": "June 21, computed: sunrise azimuth 58.3° (north of east — summer's swing), noon altitude 72.7° due south, sunset azimuth 301.7°. The Sun's whole itinerary in three numbers."
+    }
+   ]
+  },
+  {
+   "label": "Example · The winter contrast",
+   "body": [
+    {
+     "t": "December 21: sunrise azimuth 121.6° (south of east), noon altitude just 25.9°. Same city, a different Sun — the position calculator quantifies the gloom."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading the two angles",
+  "intro": "Conventions used across this site's sun tools.",
+  "columns": [
+   "Angle",
+   "Range",
+   "Meaning"
+  ],
+  "rows": [
+   [
+    "Altitude",
+    "−90° to +90°",
+    "Height above the horizon; negative means night"
+   ],
+   [
+    "Azimuth",
+    "0° to 360° from north, clockwise",
+    "0=N, 90=E, 180=S, 270=W"
+   ],
+   [
+    "Zenith angle",
+    "90° − altitude",
+    "The solar-engineering form of the same fact"
+   ],
+   [
+    "At solar noon",
+    "Altitude peaks; azimuth = 180° (or 0°)",
+    "The day's hinge"
+   ]
+  ],
+  "note": "Positions are computed with the standard solar algorithm (declination + hour angle), good to a small fraction of a degree — the Sun itself spans about half a degree."
+ },
+ "faq": [
+  [
+   "What does this tool calculate?",
+   "Solar altitude and azimuth for a place, date and time, from the Sun's declination and the local hour angle — the standard astronomical computation."
+  ],
+  [
+   "Can I use it for panel design?",
+   "For planning, layout checks and learning, yes — it matches the algorithms design software uses. Certified yield studies run full weather files on top of the same geometry."
+  ],
+  [
+   "Azimuth measured from north or south?",
+   "From north, clockwise, on this site (the modern convention). Some older solar texts measure from south — check before mixing sources."
+  ],
+  [
+   "Why is sunrise not due east?",
+   "Only at the equinoxes. Declination swings the rise point along the horizon — 58° in New York's June, 122° in its December (computed on this page)."
+  ],
+  [
+   "How accurate are the angles?",
+   "Within roughly a tenth of a degree for the Sun's centre under the standard algorithm — far tighter than any shadow you will measure."
+  ],
+  [
+   "What about refraction?",
+   "Near the horizon the atmosphere lifts the Sun's apparent position by about half a degree — sunrise/sunset tools include it; raw position readouts state the geometric value."
+  ],
+  [
+   "Negative altitude at noon?",
+   "That is polar night announcing itself — see the Polar Day / Night Checker for the full verdict."
+  ],
+  [
+   "Southern hemisphere?",
+   "Fully supported: the noon Sun stands north, azimuths mirror, and the same two angles describe it."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The halves: the "
+  },
+  {
+   "t": "Sun Altitude Calculator",
+   "l": "/tools/sun-altitude-calculator"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Sun Azimuth Calculator",
+   "l": "/tools/sun-azimuth-calculator"
+  },
+  {
+   "t": "; applied: the "
+  },
+  {
+   "t": "Shadow Length Calculator",
+   "l": "/tools/shadow-length-calculator"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Solar Noon Calculator",
+   "l": "/tools/solar-noon-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "moon-age-calculator",
   "moon-illumination-calculator",

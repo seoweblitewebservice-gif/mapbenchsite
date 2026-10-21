@@ -6,17 +6,163 @@
   "map iframe link",
   "map hyperlink"
  ],
- "title": null,
- "description": null,
+ "title": "Embed / Link Map Helper: Links That Land Right",
+ "description": "Use the Embed / Link Map Helper to build stable map links you can paste into Notion, wikis, blogs and docs — links that open on the right place. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, instead of telling the team chat 'it's near the lake', you paste one link that opens the map centred on the exact boat ramp, at the exact zoom you chose.",
+ "quick_answer": "The Embed / Link Map Helper builds stable links to map views — a chosen centre, zoom and coordinates — that you can paste into Notion, wikis, blogs and documents. Set the view once and copy a link that opens the map exactly there, every time, for everyone.",
+ "steps_intro": "A good map link is a promise: click, and you are looking at the right place:",
+ "use_cases": [
+  {
+   "title": "Docs, wikis and Notion pages",
+   "body": [
+    {
+     "t": "Project documentation full of place references becomes navigable when each name hides a link to the exact view. The "
+    },
+    {
+     "t": "Advanced Map Embed Code Generator",
+     "l": "/tools/advanced-map-embed-generator"
+    },
+    {
+     "t": " is the step up when the map must appear inside the page instead."
+    }
+   ]
+  },
+  {
+   "title": "Support and logistics messages",
+   "body": [
+    {
+     "t": "'Use the north gate' ends arguments when the link opens on the north gate. Drivers, couriers and visitors all land on the same pixel."
+    }
+   ]
+  },
+  {
+   "title": "Field guides and handbooks",
+   "body": [
+    {
+     "t": "Print the short link or its QR beside each site description; the reader's phone opens the precise trailhead, not a town-centre guess."
+    }
+   ]
+  },
+  {
+   "title": "Bug reports and data fixes",
+   "body": [
+    {
+     "t": "Reporting a map error with a link to the exact view saves the maintainer ten questions. Coordinates ride along in the link itself."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The boat-ramp link",
+   "body": [
+    {
+     "t": "A fishing club's handbook links 'North Ramp' to a zoom-17 view of the ramp and its parking. New members stop launching from the swimming beach — a real, if unglamorous, triumph."
+    }
+   ]
+  },
+  {
+   "label": "Example · One link, whole team",
+   "body": [
+    {
+     "t": "A survey crew lead pins the week's site in the shared doc. Five phones, one view, zero 'which field?' calls on Monday morning."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Link or embed? Choose honestly",
+  "intro": "Both put a map in front of a reader — the difference is where the map lives.",
+  "columns": [
+   "",
+   "Link (this tool)",
+   "Embed (iframe)"
+  ],
+  "rows": [
+   [
+    "What the reader gets",
+    "A text link that opens the full map",
+    "The map rendered inside your page"
+   ],
+   [
+    "Best for",
+    "Docs, chats, email, print",
+    "Websites and blogs"
+   ],
+   [
+    "Reader effort",
+    "One click away",
+    "Zero — it is just there"
+   ],
+   [
+    "Page weight",
+    "Nothing",
+    "An iframe to load"
+   ]
+  ],
+  "note": "Links built here point at stable map URLs with centre and zoom in the address — no link-shortener account, no expiry, nothing stored on a MapBench server."
+ },
+ "faq": [
+  [
+   "How long do the links last?",
+   "They are ordinary map URLs whose parameters carry the view, so they last as long as the map service keeps its URL scheme — years, not the days a session link would give you."
+  ],
+  [
+   "Can I link to a marker, not just a view?",
+   "Where the target accepts it, the helper can include the point so the opened map shows a pin at your spot. A centred view at high zoom is the fallback that always works."
+  ],
+  [
+   "Do the links work in printed documents?",
+   "As text, awkwardly — pair them with a QR code generated from the same URL, and print readers reach the view with one phone scan."
+  ],
+  [
+   "What if the place has no name?",
+   "Coordinates are the name. The helper builds the link from the point you picked, so unnamed trailheads, gates and bends in rivers link as reliably as famous squares."
+  ],
+  [
+   "Is my link private?",
+   "Anyone who has it can open it — links are capabilities, not secrets. Do not link sensitive locations (a home address, a vulnerable site) into public documents."
+  ],
+  [
+   "Can I shorten the link?",
+   "Any shortener works on it afterwards, but the long form has a virtue: humans can read the coordinates out of it. For team docs, the readable form often wins."
+  ],
+  [
+   "Which map does it open?",
+   "The link targets the map view you configured — the helper's job is constructing the address correctly, including zoom and centre, so the destination opens framed as intended."
+  ],
+  [
+   "My wiki eats the link parameters.",
+   "Some editors strip URL parameters on paste. Paste as a raw link or use the editor's link dialog with the full URL — the parameters are the payload and must survive."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "When the map must sit inside the page, use the "
+  },
+  {
+   "t": "Advanced Map Embed Code Generator",
+   "l": "/tools/advanced-map-embed-generator"
+  },
+  {
+   "t": " or the "
+  },
+  {
+   "t": "Google Maps Embed Code Generator",
+   "l": "/tools/google-maps-embed-code-generator"
+  },
+  {
+   "t": "; for a shareable location link in one step, try the "
+  },
+  {
+   "t": "Share Location Link Generator",
+   "l": "/tools/share-location-link-generator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "county-choropleth",
   "custom-labeled-map",

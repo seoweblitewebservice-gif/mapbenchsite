@@ -8,17 +8,154 @@
   "encoded polyline encoder tool",
   "how to calculate encoded polyline encoder"
  ],
- "title": null,
- "description": null,
+ "title": "Encoded Polyline Encoder: Coordinates to String",
+ "description": "Encode coordinate sequences into Google's polyline format with the Encoded Polyline Encoder — precision-5 strings for APIs and URLs. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, two points — Times Square (40.7580, −73.9855) to JFK (40.6413, −73.7781) — encode to the compact string opwwFjhqbMjxUgog@, ready to ride in a URL or an API call.",
+ "quick_answer": "The Encoded Polyline Encoder compresses a sequence of latitude/longitude points into an encoded polyline string — the compact format routing APIs use to carry routes. Enter the points and read the string: coordinates scaled, delta-encoded and chunked into printable characters, exactly as Google’s published algorithm specifies.",
+ "steps_intro": "Points in, one dense little string out:",
+ "use_cases": [
+  {
+   "title": "Building static-map and API URLs",
+   "body": [
+    {
+     "t": "Static map images and route previews take paths as encoded polylines. Encode here instead of pasting fragile coordinate lists into URLs. Verify any string with the "
+    },
+    {
+     "t": "Encoded Polyline Decoder",
+     "l": "/tools/encoded-polyline-decoder"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Storing routes compactly",
+   "body": [
+    {
+     "t": "A 500-point route as text coordinates is a paragraph; as a polyline, a line. Databases and config files appreciate the diet."
+    }
+   ]
+  },
+  {
+   "title": "Interop with routing stacks",
+   "body": [
+    {
+     "t": "OSRM, GraphHopper and Google-shaped APIs accept polylines as geometry input. Encoding locally makes requests self-contained."
+    }
+   ]
+  },
+  {
+   "title": "Teaching compression",
+   "body": [
+    {
+     "t": "Delta encoding on real routes shows why the format works: consecutive points differ by little, so their differences compress to a character or two."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The canonical check",
+   "body": [
+    {
+     "t": "Encode (38.5, −120.2), (40.7, −120.95), (43.252, −126.453) and the algorithm must return _p~iF~ps|U_ulLnnqC_mqNvxq`@ — Google’s documented example. An encoder that reproduces the canonical string implements the standard; anything else implements a rumour."
+    }
+   ]
+  },
+  {
+   "label": "Example · Why deltas shrink strings",
+   "body": [
+    {
+     "t": "A highway route’s points step ~0.01° at a time — deltas near 1,000 in scaled units, two characters each. The absolute coordinates would cost five or six. The string’s brevity is the road’s smoothness, measured."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The encoding, step by step",
+  "intro": "The published algorithm, faithfully applied.",
+  "columns": [
+   "Step",
+   "Operation"
+  ],
+  "rows": [
+   [
+    "1",
+    "Multiply latitude and longitude by 100,000; round to integers"
+   ],
+   [
+    "2",
+    "Take differences from the previous point (first point from 0,0)"
+   ],
+   [
+    "3",
+    "Left-shift; invert if negative (sign folding)"
+   ],
+   [
+    "4",
+    "Split into 5-bit chunks, add 63, emit as ASCII"
+   ]
+  ],
+  "note": "Output characters fall in ASCII 63 (‘?’) to 126 (‘~’) — URL-hostile characters like the backslash do not occur, but ‘@’, ‘`’ and ‘|’ do, so URL-embedding still wants percent-encoding."
+ },
+ "faq": [
+  [
+   "What precision does it write?",
+   "Five decimal places — the standard. Points are rounded to the format’s grain (~1.1 m); finer source precision is respectfully discarded, which matters for survey tracks."
+  ],
+  [
+   "Order of coordinates?",
+   "Latitude,longitude per point — the format’s own order, opposite to GeoJSON’s. The encoder takes pairs as the tool presents them; swapping produces a mirrored route in the southern ocean."
+  ],
+  [
+   "Can it encode a single point?",
+   "Yes — a one-point polyline is legal and decodes to that point. Lines are the day job, but the format does not insist."
+  ],
+  [
+   "Precision 6 output?",
+   "Some ecosystems (certain Mapbox/OSRM configurations) speak precision 6. This encoder writes the canonical 5; know your consumer before shipping strings across dialects."
+  ],
+  [
+   "How many points fit?",
+   "Thousands encode instantly. URL length limits (~2,000 characters in conservative stacks) cap practical web use — long routes get simplified first, a separate and honest craft."
+  ],
+  [
+   "Does encoding lose quality?",
+   "Only the sub-grain rounding (under ~1.1 m). The delta chain itself is exact — decode your string and diff the points when trust is low."
+  ],
+  [
+   "Elevation?",
+   "Not in the standard format. Altitude-carrying dialects exist (flex polylines); standard consumers would read your altitudes as geography and wander."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Verify strings: the "
+  },
+  {
+   "t": "Encoded Polyline Decoder",
+   "l": "/tools/encoded-polyline-decoder"
+  },
+  {
+   "t": "; simplify first: the "
+  },
+  {
+   "t": "GeoJSON Length Calculator",
+   "l": "/tools/geojson-length-calculator"
+  },
+  {
+   "t": " measures what you are encoding; cells instead: the "
+  },
+  {
+   "t": "Geohash Encoder",
+   "l": "/tools/geohash-encoder"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

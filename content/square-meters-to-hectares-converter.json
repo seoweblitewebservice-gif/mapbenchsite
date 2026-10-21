@@ -8,17 +8,164 @@
   "square meters to hectares converter tool",
   "how to use square meters to hectares converter"
  ],
- "title": null,
- "description": null,
+ "title": "Square Meters to Hectares Converter",
+ "description": "Convert square metres to hectares with the Square Meters to Hectares Converter — divide by 10,000, the cleanest factor in area. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, an American football field of 5,350 m² is 0.535 hectares — just over half the unit European land is actually traded and taxed in.",
+ "quick_answer": "The Square Meters to Hectares Converter turns square metres into hectares by dividing by 10,000 — the hectare being exactly 10,000 m² by definition. Enter the square metres and read hectares: the unit of farms, estates, parks and planning documents across Europe and the metric world.",
+ "steps_intro": "The one area conversion with a round-number soul:",
+ "use_cases": [
+  {
+   "title": "Land documents and listings",
+   "body": [
+    {
+     "t": "European parcels are listed in m² and discussed in hectares. The converter moves between the document and the conversation — acreage readers get their bridge from the "
+    },
+    {
+     "t": "Acres to Hectares Converter",
+     "l": "/tools/acres-to-hectares-converter"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Planning and development",
+   "body": [
+    {
+     "t": "Site areas arrive from CAD in m²; planning thresholds are written in hectares. Convert once, cite confidently."
+    }
+   ]
+  },
+  {
+   "title": "Farm and estate maths",
+   "body": [
+    {
+     "t": "A 40,469 m² field is 4.05 hectares — and, not coincidentally, almost exactly 10 acres, the bridge this page's table makes permanent."
+    }
+   ]
+  },
+  {
+   "title": "Park and campus reporting",
+   "body": [
+    {
+     "t": "Grounds teams measure in m²; annual reports speak hectares. Same ground, two dialects, one division."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The hectare itself",
+   "body": [
+    {
+     "t": "A hectare is a 100 × 100 m square — a football pitch and a half, roughly. Every conversion here is that square being counted in smaller units."
+    }
+   ]
+  },
+  {
+   "label": "Example · The 10-acre bridge",
+   "body": [
+    {
+     "t": "10 acres = 40,468.6 m² = 4.0469 ha — close to 4 hectares but not 4. The 1.2% gap vanishes in conversation and matters in a purchase, which is exactly the gap a converter exists to mind."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Square metres to hectares",
+  "intro": "Exact division by 10,000 — with the acre bridge alongside.",
+  "columns": [
+   "m²",
+   "Hectares",
+   "Acres (for reference)"
+  ],
+  "rows": [
+   [
+    "100",
+    "0.01",
+    "0.025"
+   ],
+   [
+    "1,000",
+    "0.10",
+    "0.247"
+   ],
+   [
+    "5,350",
+    "0.535",
+    "1.322"
+   ],
+   [
+    "10,000",
+    "1.00",
+    "2.471"
+   ],
+   [
+    "100,000",
+    "10.00",
+    "24.711"
+   ]
+  ],
+  "note": "1 hectare = 10,000 m² exactly, and = 2.47105 acres. No empirical fudge lives anywhere in this page's arithmetic."
+ },
+ "faq": [
+  [
+   "Why 10,000?",
+   "The hectare is defined as 100 ares of 100 m² — a 100 m square. Metric area units are powers of ten all the way down, which is the system's quiet luxury."
+  ],
+  [
+   "Hectares to acres?",
+   "Multiply hectares by 2.47105 — or the dedicated Acres to Hectares Converter runs both directions."
+  ],
+  [
+   "Very small areas?",
+   "Below a few hundred m², hectares get decimal-heavy (a 250 m² garden is 0.025 ha) — square metres stay the honest unit until the ground earns the bigger one."
+  ],
+  [
+   "Square kilometres?",
+   "1 km² = 100 ha exactly — shift two decimal places, or chain through this page's table."
+  ],
+  [
+   "Cadastral documents in ares?",
+   "1 are = 100 m² = 0.01 ha; centiares are m² themselves. Old European deeds mix all three; the conversions are all powers of ten."
+  ],
+  [
+   "Precision of the result?",
+   "Exact by definition — the display's decimals are the only rounding, set by your input's dignity."
+  ],
+  [
+   "Football pitches as a unit?",
+   "A FIFA pitch is 105 × 68 m = 7,140 m² = 0.714 ha — the informal unit survives because it is visual; this page converts the formal ones."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Acre bridge: the "
+  },
+  {
+   "t": "Acres to Hectares Converter",
+   "l": "/tools/acres-to-hectares-converter"
+  },
+  {
+   "t": "; imperial areas: the "
+  },
+  {
+   "t": "Square Kilometers to Square Miles Converter",
+   "l": "/tools/square-kilometers-to-square-miles-converter"
+  },
+  {
+   "t": "; lots: the "
+  },
+  {
+   "t": "Rectangular Lot Acreage Calculator",
+   "l": "/tools/rectangular-lot-acreage-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "circle-area-from-radius",
   "circle-circumference-from-radius",

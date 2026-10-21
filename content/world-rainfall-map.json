@@ -7,17 +7,158 @@
   "climate rain data",
   "average rainfall places"
  ],
- "title": null,
- "description": null,
+ "title": "Rainfall Totals Map: Any Dates, Any Point",
+ "description": "Map total rainfall for any dates around any point with the Rainfall Totals Map — ERA5 archive totals for trips, gardens and dry spells. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, published climate averages credit Mawsynram, India with about 11,871 mm (467 inches) of rain a year, while Death Valley manages roughly 60 mm (2.4 inches) — this map lets you pull the actual totals for the dates you care about.",
+ "quick_answer": "The Rainfall Totals Map sums archived daily precipitation around your point for any start and end dates you choose, using the ERA5 weather archive. Pick a point and a period — last month, a holiday week, a drought year — and read what actually fell, not what usually falls.",
+ "steps_intro": "Actual rain for actual dates, from the archive:",
+ "use_cases": [
+  {
+   "title": "Trip and event weather forensics",
+   "body": [
+    {
+     "t": "'It rained the whole festival' — check the archive totals for those exact dates and that exact valley. Memory exaggerates; archives merely approximate."
+    }
+   ]
+  },
+  {
+   "title": "Garden and land decisions",
+   "body": [
+    {
+     "t": "Compare a plot's last-season rainfall with the climate story told about it. The "
+    },
+    {
+     "t": "Snowfall Totals Map (Season Archive)",
+     "l": "/tools/snowfall-map"
+    },
+    {
+     "t": " covers the frozen share of the same sky."
+    }
+   ]
+  },
+  {
+   "title": "Drought and deluge context",
+   "body": [
+    {
+     "t": "A dry spell means little until it is a number against a normal season. Pull both periods onto the same map and the anomaly measures itself."
+    }
+   ]
+  },
+  {
+   "title": "Relocation research",
+   "body": [
+    {
+     "t": "Averages hide timing: a place can take its rain in three violent weeks or thirty gentle ones. Date-ranged totals across several years show the rhythm, not just the sum."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · A tale of two averages",
+   "body": [
+    {
+     "t": "Published averages put Seattle near 952 mm (37.5 in) a year — spread across many grey days — while desert stations a few hundred miles inland record a tenth of that in a handful of storms. Totals alone rank wetness; the date range reveals character."
+    }
+   ]
+  },
+  {
+   "label": "Example · What a cell holds",
+   "body": [
+    {
+     "t": "Each cell sums the archive's daily precipitation over your dates, across a 5×5 grid spanning about 25 miles. A cell is a district's rainfall for your period — not one rain gauge's luck."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading the totals honestly",
+  "intro": "The archive's terms, before you quote its numbers.",
+  "columns": [
+   "Item",
+   "What it is"
+  ],
+  "rows": [
+   [
+    "Source",
+    "ERA5 reanalysis daily precipitation (Open-Meteo archive API)"
+   ],
+   [
+    "Your window",
+    "Any start and end dates — a week, a season, a decade"
+   ],
+   [
+    "Grid",
+    "5×5 cells spanning roughly 25 miles"
+   ],
+   [
+    "Units",
+    "Millimetres and inches of precipitation"
+   ],
+   [
+    "Not this",
+    "A forecast, a single gauge record, or flood prediction"
+   ]
+  ],
+  "note": "Reanalysis precipitation is modelled from observations on a roughly 25–30 km grid — convective downpours in particular can be smoothed. Station records outrank cells at their exact points; cells win everywhere between stations."
+ },
+ "faq": [
+  [
+   "Precipitation or rainfall — same thing here?",
+   "The archive total is all precipitation water equivalent in the daily sum; this map reads it as rainfall totals for the chosen period. Snow's water content rides inside the number where the model's daily sum includes it."
+  ],
+  [
+   "How far back can I query?",
+   "The ERA5 archive reaches back to 1940 in current form. Recent decades rest on far denser observations; mid-century totals carry model-era uncertainty and deserve softer quoting."
+  ],
+  [
+   "Why does the official gauge disagree with my cell?",
+   "A gauge is a point; a cell is an area average over roughly 25–30 km of model grid. A storm that parked over the gauge can triple its reading against the cell — both are honest, about different things."
+  ],
+  [
+   "Can I compare this year with the climate normal?",
+   "Yes — run the same dates for several years and eyeball the spread, or compare with published 30-year normals for the area. The map gives actuals; the normal is the published expectation."
+  ],
+  [
+   "Does it work for monsoon or Mediterranean climates?",
+   "Worldwide — the archive is global. Date-ranged queries are exactly how strongly seasonal climates should be read: wet season and dry season separately, never as one misleading annual blur."
+  ],
+  [
+   "What about snowfall in the total?",
+   "Use the Snowfall Totals Map for the frozen archive view; this map's precipitation includes melted-water equivalents in the source data, which is rain-gauge language, not snow-depth language."
+  ],
+  [
+   "Can I use this for a water-rights or insurance claim?",
+   "No — claims and rights run on official gauge networks and certified records. This is a research and context tool with honest sourcing, which is a different job."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The frozen archive: the "
+  },
+  {
+   "t": "Snowfall Totals Map (Season Archive)",
+   "l": "/tools/snowfall-map"
+  },
+  {
+   "t": "; where it drains: the "
+  },
+  {
+   "t": "Watershed Finder",
+   "l": "/tools/watershed-finder"
+  },
+  {
+   "t": "; heights above it: the "
+  },
+  {
+   "t": "World Elevation Atlas",
+   "l": "/tools/world-elevation-atlas"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "air-pressure-by-elevation",
   "antenna-height-distance-calculator",

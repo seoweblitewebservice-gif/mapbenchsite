@@ -7,17 +7,166 @@
   "WMM 2025",
   "compass declination"
  ],
- "title": null,
- "description": null,
+ "title": "Magnetic Declination Calculator: Compass North",
+ "description": "Find the magnetic declination for any place with the Magnetic Declination Calculator — WMM 2025 based, with true-to-magnetic bearing conversion. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, in New York the compass needle points about 12.7 degrees west of true north in 2025 — hike a 'north' bearing uncorrected there and you drift more than 200 metres off line per kilometre.",
+ "quick_answer": "The Magnetic Declination Calculator gives the angle between true north and magnetic north for any location, calculated from the World Magnetic Model 2025. Search a place or click the map and read the declination — plus how to convert map bearings to compass bearings.",
+ "steps_intro": "Two norths, one correction — get the local angle:",
+ "use_cases": [
+  {
+   "title": "Map and compass navigation",
+   "body": [
+    {
+     "t": "Every bearing taken from a map is true; every bearing walked is magnetic. The declination is the translation — skip it and a 5 km leg in New York ends some 1,100 m from its intended line. Pair with the "
+    },
+    {
+     "t": "Bearing Calculator",
+     "l": "/tools/bearing-calculator"
+    },
+    {
+     "t": " for the bearings themselves."
+    }
+   ]
+  },
+  {
+   "title": "Orienteering and land nav training",
+   "body": [
+    {
+     "t": "Courses are set in one north and walked in the other. This page supplies the local figure instructors write on the board — and explains why it expires."
+    }
+   ]
+  },
+  {
+   "title": "Solar and antenna alignment",
+   "body": [
+    {
+     "t": "Panels and dishes are aimed by compass more often than by survey. Correct the compass with the declination or the 'south-facing' array faces south-west by twelve degrees."
+    }
+   ]
+  },
+  {
+   "title": "Historic map reading",
+   "body": [
+    {
+     "t": "Old surveys were run on the magnetic north of their day — in parts of the US that differs from today's by several degrees. The model's current figure frames how far the old needle has wandered."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Converting a bearing in New York",
+   "body": [
+    {
+     "t": "Declination ≈ 12.7°W (2025). Map bearing 090° (due east, true). Magnetic bearing = true − declination = 090 − (−12.7) = 102.7° — set about 103° on the compass. Walk 090 on the dial instead and you walk a line rotated nearly 13° off the map's."
+    }
+   ]
+  },
+  {
+   "label": "Example · Los Angeles, the other sign",
+   "body": [
+    {
+     "t": "Declination ≈ 11.4°E. The same true 090° becomes magnetic 090 − 11.4 = 78.6°. East declination subtracts, west adds — 'East is least, west is best' as the mnemonic has it (for converting true to magnetic)."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Approximate declination, 2025 (WMM — values drift yearly)",
+  "intro": "Rounded from the World Magnetic Model — check your exact spot on the calculator, and expect roughly a tenth of a degree of yearly change in many regions.",
+  "columns": [
+   "City",
+   "Declination (2025, approx)"
+  ],
+  "rows": [
+   [
+    "New York",
+    "12.7° W"
+   ],
+   [
+    "Chicago",
+    "3.5° W"
+   ],
+   [
+    "Denver",
+    "7.9° E"
+   ],
+   [
+    "Los Angeles",
+    "11.4° E"
+   ],
+   [
+    "Seattle",
+    "15.5° E"
+   ],
+   [
+    "London",
+    "0.9° E"
+   ],
+   [
+    "Sydney",
+    "12.5° E"
+   ]
+  ],
+  "note": "The agonic line (zero declination) currently runs through the US Midwest-to-Southeast and near the UK. London's needle pointed about 24° W in 1800, crossed true north in the mid-2010s, and now sits slightly east — declination is a moving target by design."
+ },
+ "faq": [
+  [
+   "Declination versus deviation?",
+   "Declination is the Earth's doing (true versus magnetic north). Deviation is your compass's local error from nearby metal, vehicles and electronics. This page prices the planet's part; the compass's part is cured by distance from iron, not by models."
+  ],
+  [
+   "Why does my hiking app show a different number?",
+   "Apps vary in model vintage (WMM updates every five years) and rounding. A few tenths of a degree between sources is normal; several degrees means one source is stale — WMM 2025 is the current edition."
+  ],
+  [
+   "Grid north — a third north?",
+   "On maps with a grid (UTM, National Grid), grid north differs slightly from true north away from the grid's central meridian — a small, printed-on-the-map correction (convergence) that careful navigators stack with declination."
+  ],
+  [
+   "Can I use a 10-year-old map's declination note?",
+   "The diagram is a museum piece: US declinations drift roughly 0.05–0.1° per year in many areas, so a decade-old figure can be a degree off — hundreds of metres on a long leg. Use the current model."
+  ],
+  [
+   "Is declination the same at altitude or underground?",
+   "The field direction varies smoothly; at aircraft altitudes the change is small for navigation purposes, but mines and surveys use local measurements where the work demands them."
+  ],
+  [
+   "The south magnetic pole?",
+   "Declination is defined worldwide by the same model — near the magnetic poles it swings wildly and compasses become useless for direction, which polar travellers plan around with grid and gyro methods."
+  ],
+  [
+   "Phone compass calibration?",
+   "Phones fuse magnetometer, gyro and GPS; their 'true north' toggle usually applies this same model internally. Knowing the local figure lets you audit the phone rather than trust it blind."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Bearings to convert: the "
+  },
+  {
+   "t": "Bearing Calculator",
+   "l": "/tools/bearing-calculator"
+  },
+  {
+   "t": "; the far side: the "
+  },
+  {
+   "t": "Map Tunnel",
+   "l": "/tools/map-tunnel"
+  },
+  {
+   "t": "; grids that ignore magnets: the "
+  },
+  {
+   "t": "MGRS Converter",
+   "l": "/tools/mgrs-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "air-pressure-by-elevation",
   "antenna-height-distance-calculator",

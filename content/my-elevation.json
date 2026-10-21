@@ -6,17 +6,169 @@
   "elevation at my location",
   "my elevation online"
  ],
- "title": null,
- "description": null,
+ "title": "My Elevation: What Is My Elevation Right Now?",
+ "description": "Find your current elevation instantly with My Elevation — GPS position plus terrain model, shown in feet and metres with a gauge. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, standing in Denver your elevation reads about 5,280 feet — while the same tap in Death Valley's Badwater Basin reads −282 feet, below the level of the sea itself.",
+ "quick_answer": "My Elevation tells you the elevation where you are standing right now, combining your device's GPS position with terrain-model data. Press the button and read your height above sea level in feet and metres — for trailheads, road trips, flights of curiosity and settling 'how high are we?' arguments.",
+ "steps_intro": "One tap — your height above the sea:",
+ "use_cases": [
+  {
+   "title": "Trailheads and summits",
+   "body": [
+    {
+     "t": "The number for the trip report and the photo caption — cross-check the summit sign against the reading, and profile the whole route later on the "
+    },
+    {
+     "t": "Elevation Profile",
+     "l": "/tools/elevation-profile"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Road trips and mountain passes",
+   "body": [
+    {
+     "t": "Ears popping on the climb is data of a sort; this makes it a number — and explains the car's sudden loss of enthusiasm at 11,000 ft."
+    }
+   ]
+  },
+  {
+   "title": "Altitude awareness",
+   "body": [
+    {
+     "t": "Visitors to Denver, the Alps or the Andes feel thin air before they believe it. A reading grounds the advice about water and pacing — the "
+    },
+    {
+     "t": "Pressure Altitude Calculator",
+     "l": "/tools/pressure-altitude-calculator"
+    },
+    {
+     "t": " explains the air side."
+    }
+   ]
+  },
+  {
+   "title": "Settling bar arguments",
+   "body": [
+    {
+     "t": "Highest pub, highest town, highest campsite — the genre of dispute this page was born to end, terrain data permitting."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · GPS height versus ground height",
+   "body": [
+    {
+     "t": "Your phone's raw GPS altitude is measured from a mathematical model of sea level (the geoid's rougher cousin, the ellipsoid) and can sit tens of metres off the terrain figure. This page reads the terrain model at your GPS position, which is why its number matches maps and summit signs better."
+    }
+   ]
+  },
+  {
+   "label": "Example · Below sea level, live",
+   "body": [
+    {
+     "t": "Stand on the Dead Sea shore and the gauge goes negative — about −430 m (−1,412 ft), the lowest dry ground on Earth. The minus sign is real geography, not an error."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Elevation anchors (published)",
+  "intro": "Readings you can sanity-check yours against.",
+  "columns": [
+   "Place",
+   "Elevation"
+  ],
+  "rows": [
+   [
+    "Dead Sea shore",
+    "−430 m / −1,412 ft"
+   ],
+   [
+    "Badwater Basin, Death Valley",
+    "−86 m / −282 ft"
+   ],
+   [
+    "New Orleans (much of the city)",
+    "Below sea level to 6 m"
+   ],
+   [
+    "Denver, Colorado",
+    "1,609 m / 5,280 ft"
+   ],
+   [
+    "Leadville, Colorado",
+    "3,094 m / 10,152 ft"
+   ],
+   [
+    "La Rinconada, Peru (highest town)",
+    "5,100 m / 16,732 ft"
+   ]
+  ],
+  "note": "Terrain-model readings near a sharp summit or a cliff edge can differ from the surveyed spot height — the model's grid averages ground over about 30 m cells."
+ },
+ "faq": [
+  [
+   "Why does my watch show a different altitude?",
+   "Watches with barometric altimeters measure air pressure and convert it; pressure weather moves their answer by tens of metres over a day. This page's terrain figure is fixed to the ground — boring, and therefore stable."
+  ],
+  [
+   "Indoors or in a city canyon?",
+   "GPS position degrades among tall buildings, and elevation follows position. Step into the open for the reading you quote."
+  ],
+  [
+   "On a plane or a train?",
+   "The terrain model reads the ground below, not your cabin — at cruise you will see the valley's elevation, not 35,000 ft. Barometric apps own the cabin question."
+  ],
+  [
+   "Feet, metres, both?",
+   "Both, always — this site shows imperial and metric together so no reader converts in their head."
+  ],
+  [
+   "Does it drain the battery?",
+   "A single GPS fix for one reading is a sip, not a drain. The page does not track you continuously."
+  ],
+  [
+   "Sea level — which sea level?",
+   "Elevations are orthometric: height above the geoid, the equipotential surface 'mean sea level' is measured from — the same reference as maps and surveys, not the ellipsoid raw GPS uses."
+  ],
+  [
+   "Historic readings — my house in 1950?",
+   "Terrain data is modern; land mostly keeps its height, but reservoirs, mines and suburbs have moved some of it since any given year."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Any point, not just yours: the "
+  },
+  {
+   "t": "Elevation Finder",
+   "l": "/tools/elevation-finder"
+  },
+  {
+   "t": "; routes: the "
+  },
+  {
+   "t": "Elevation Profile",
+   "l": "/tools/elevation-profile"
+  },
+  {
+   "t": "; units: the "
+  },
+  {
+   "t": "Elevation Feet to Meters Converter",
+   "l": "/tools/elevation-feet-to-meters-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boiling-point-by-elevation-calculator",
   "central-angle-from-distance-calculator",

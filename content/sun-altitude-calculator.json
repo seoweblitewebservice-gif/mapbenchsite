@@ -8,17 +8,164 @@
   "sun altitude calculator tool",
   "how to calculate sun altitude calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Sun Altitude Calculator: How High Is the Sun?",
+ "description": "Find the Sun's altitude above the horizon for any place and time with the Sun Altitude Calculator — noon peaks, seasons and shadows. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, the Sun's noon altitude over New York swings from 72.7° on June 21 to just 25.9° on December 21 — the single number that explains winter's weakness.",
+ "quick_answer": "The Sun Altitude Calculator reports how high the Sun stands above your horizon — its altitude in degrees — for any place, date and time. Enter the details and read the angle: the number behind shadow lengths, solar gain, glare and whether the Sun clears the building across the street.",
+ "steps_intro": "Altitude is the Sun's height, measured like an angle on a protractor:",
+ "use_cases": [
+  {
+   "title": "Shadow and shade questions",
+   "body": [
+    {
+     "t": "Altitude is the input the "
+    },
+    {
+     "t": "Shadow Length Calculator",
+     "l": "/tools/shadow-length-calculator"
+    },
+    {
+     "t": " spends: give it your hour's altitude and fences become numbers."
+    }
+   ]
+  },
+  {
+   "title": "Solar gain and overheating",
+   "body": [
+    {
+     "t": "South glass in summer versus winter is an altitude story — high June sun shades easily, low December sun pours in. Design with both numbers."
+    }
+   ]
+  },
+  {
+   "title": "Driving and glare",
+   "body": [
+    {
+     "t": "The blinding commute happens when the Sun's altitude sits in the windscreen band at your driving hour — check the dates it starts and ends."
+    }
+   ]
+  },
+  {
+   "title": "UV and sun safety intuition",
+   "body": [
+    {
+     "t": "Higher Sun, stronger UV (roughly): a noon altitude under ~25° is why northern winters make almost no vitamin D."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The year's two ceilings",
+   "body": [
+    {
+     "t": "Noon altitude, computed: New York 72.7° (June) versus 25.9° (December); London 61.9° versus 15.1°. London's December Sun never climbs higher than a fist-and-a-half above the horizon."
+    }
+   ]
+  },
+  {
+   "label": "Example · The equator's overhead days",
+   "body": [
+    {
+     "t": "At the equator the noon altitude touches 90° — Sun directly overhead — around the equinoxes (89.5° computed for March 20). Shadowless noon is a real place and time."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Noon altitude, computed for reference cities",
+  "intro": "Solar-noon altitude at the solstices — the year's ceiling and floor.",
+  "columns": [
+   "City",
+   "June 21",
+   "December 21"
+  ],
+  "rows": [
+   [
+    "New York",
+    "72.7°",
+    "25.9°"
+   ],
+   [
+    "London",
+    "61.9°",
+    "15.1°"
+   ],
+   [
+    "Chicago",
+    "71.6°",
+    "24.7°"
+   ],
+   [
+    "Miami",
+    "87.7°",
+    "40.8°"
+   ],
+   [
+    "Equator",
+    "66.6°",
+    "66.6°"
+   ]
+  ],
+  "note": "Noon altitude = 90° − |latitude − solar declination|. The equator's solstice dips are the tropics' signature: the noon Sun leans north in June, south in December."
+ },
+ "faq": [
+  [
+   "What does altitude mean here?",
+   "The Sun's angular height above the horizon: 0° at the horizon, 90° directly overhead, negative below the horizon (night)."
+  ],
+  [
+   "How is it calculated?",
+   "From solar declination and the hour angle for your place and time — the standard astronomical formula, the same engine as the Solar Position Calculator."
+  ],
+  [
+   "Why is winter's noon Sun so low?",
+   "Your hemisphere leans away: the noon altitude falls by twice the axial tilt (about 47°) between solstices at mid-latitudes."
+  ],
+  [
+   "Can the Sun be overhead here?",
+   "Only between the tropics, where latitude can equal the Sun's declination — never in the US mainland or Europe."
+  ],
+  [
+   "Altitude versus zenith angle?",
+   "Zenith = 90° − altitude; solar engineers quote zenith, everyone else altitude. Same fact, two doors."
+  ],
+  [
+   "How accurate is it?",
+   "Within a small fraction of a degree for the Sun's centre — the Sun's own face spans half a degree, which sets the meaningful precision."
+  ],
+  [
+   "Does it include refraction?",
+   "Geometric altitude is reported; near the horizon the air lifts the apparent Sun by ~0.5°, which the sunrise tools fold in."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Both angles: the "
+  },
+  {
+   "t": "Solar Position Calculator",
+   "l": "/tools/solar-position-calculator"
+  },
+  {
+   "t": "; spend it: the "
+  },
+  {
+   "t": "Shadow Length Calculator",
+   "l": "/tools/shadow-length-calculator"
+  },
+  {
+   "t": "; direction: the "
+  },
+  {
+   "t": "Sun Azimuth Calculator",
+   "l": "/tools/sun-azimuth-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "golden-hour-calculator",
   "moon-age-calculator",

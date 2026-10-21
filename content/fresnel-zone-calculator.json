@@ -8,17 +8,176 @@
   "rf fresnel zone",
   "wireless fresnel calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Fresnel Zone Calculator: First Zone Radius",
+ "description": "Calculate the first Fresnel zone radius for any link with the Fresnel Zone Calculator — distance and frequency in, clearance radius out. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a 10 km Wi-Fi link at 2.4 GHz needs a first Fresnel radius of 17.67 m at its midpoint — a invisible tube of airspace the signal treats as its own.",
+ "quick_answer": "The Fresnel Zone Calculator computes the radius of the first Fresnel zone — the ellipsoid of space around a radio path that must stay largely clear for the link to behave. Enter the link distance and frequency and read the radius at the midpoint or any point along the path.",
+ "steps_intro": "The signal needs more than a sight line — it needs a tube:",
+ "use_cases": [
+  {
+   "title": "Point-to-point Wi-Fi and WISP links",
+   "body": [
+    {
+     "t": "Rooftop-to-rooftop shots live or die on zone clearance: compute the radius, walk the path profile, then score it with the "
+    },
+    {
+     "t": "Fresnel Clearance Percentage Calculator",
+     "l": "/tools/fresnel-clearance-percentage"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Sizing antenna heights",
+   "body": [
+    {
+     "t": "The radius at the worst obstruction sets how much mast the link needs — arithmetic before aluminium."
+    }
+   ]
+  },
+  {
+   "title": "Choosing a band",
+   "body": [
+    {
+     "t": "Higher frequencies shrink the zone (at 10 km: 28.86 m at 900 MHz, 17.67 m at 2.4 GHz, 12.24 m at 5 GHz). The table is the band-choice argument in one glance."
+    }
+   ]
+  },
+  {
+   "title": "Explaining 'line of sight but slow'",
+   "body": [
+    {
+     "t": "Visual line of sight with a fat obstruction inside the zone is the classic underperforming link. The radius names what the eye cannot see."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The midpoint is the fattest",
+   "body": [
+    {
+     "t": "At 2.5 km into a 10 km, 2.4 GHz link the radius is 15.30 m; at the midpoint, 17.67 m. The zone is an ellipsoid — judging clearance only at the middle is conservative, judging only at the ends is fantasy."
+    }
+   ]
+  },
+  {
+   "label": "Example · A short 5.8 GHz hop",
+   "body": [
+    {
+     "t": "Two kilometres at 5.8 GHz: midpoint radius 5.08 m, so 60% clearance asks for about 3.05 m of free space under the path's line — a single tree's crown can spend it."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "First Fresnel radius at midpoint",
+  "intro": "Computed as ½√(λ·D) at the path's centre — the calculator's own formula.",
+  "columns": [
+   "Link",
+   "Frequency",
+   "Radius",
+   "60% of it"
+  ],
+  "rows": [
+   [
+    "5 km",
+    "2.4 GHz",
+    "12.50 m",
+    "7.50 m"
+   ],
+   [
+    "10 km",
+    "900 MHz",
+    "28.86 m",
+    "17.31 m"
+   ],
+   [
+    "10 km",
+    "2.4 GHz",
+    "17.67 m",
+    "10.60 m"
+   ],
+   [
+    "10 km",
+    "5 GHz",
+    "12.24 m",
+    "7.35 m"
+   ],
+   [
+    "20 km",
+    "2.4 GHz",
+    "24.99 m",
+    "14.99 m"
+   ],
+   [
+    "2 km",
+    "5.8 GHz",
+    "5.08 m",
+    "3.05 m"
+   ]
+  ],
+  "note": "Longer links and lower frequencies both fatten the zone. Add the Earth's bulge over the path to the obstruction heights before scoring clearance — the zone floats on the line, the planet rises to meet it."
+ },
+ "faq": [
+  [
+   "What is the formula?",
+   "r = √(λ·d₁·d₂/(d₁+d₂)) for the first zone at a point d₁ from one end and d₂ from the other, with λ the wavelength. At the midpoint it simplifies to ½√(λ·D)."
+  ],
+  [
+   "Second and third zones?",
+   "They exist (radii grow as √n) but engineering practice guards the first — it carries the dominant share of the energy. Higher zones matter in specialised reflector work, not link planning."
+  ],
+  [
+   "Does the zone care about antenna pattern?",
+   "The geometry does not; the consequences do. Directional antennas concentrate energy along the path, which is why zone clearance predicts their real-world behaviour best."
+  ],
+  [
+   "What about the ground itself?",
+   "A path parallel and close to ground or water can suffer reflection effects even with a 'clear' zone — grazing geometry is its own chapter; the calculator gives the standard planning figure."
+  ],
+  [
+   "Indoor links?",
+   "The same physics at room scale: at 5 GHz across 20 m the radius is about 0.55 m — furniture inside it genuinely matters to throughput, which surprises people once."
+  ],
+  [
+   "Frequency in MHz?",
+   "Enter it as the tool requests — 2,400 MHz and 2.4 GHz are the same signal; unit discipline is the only trap here."
+  ],
+  [
+   "Earth bulge included?",
+   "This page computes the zone radius itself; bulge is added in the path profile step (Earth Bulge Calculator supplies it) because the two corrections belong to different inputs."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Score the clearance: the "
+  },
+  {
+   "t": "Fresnel Clearance Percentage Calculator",
+   "l": "/tools/fresnel-clearance-percentage"
+  },
+  {
+   "t": "; bulge: the "
+  },
+  {
+   "t": "Earth Bulge Calculator",
+   "l": "/tools/earth-bulge-calculator"
+  },
+  {
+   "t": "; horizon: the "
+  },
+  {
+   "t": "Radio Line-of-Sight Calculator",
+   "l": "/tools/radio-line-of-sight-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "air-pressure-by-elevation",
   "antipode-finder",

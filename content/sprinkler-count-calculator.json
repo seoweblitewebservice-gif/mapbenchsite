@@ -8,17 +8,159 @@
   "sprinkler count calculator tool",
   "how to calculate sprinkler count calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Sprinkler Count Calculator: Heads per Lawn",
+ "description": "Estimate how many sprinkler heads a lawn or bed needs with the Sprinkler Count Calculator — from head spacing and area, first-pass layout. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a 5,000 sq ft lawn with heads at 15 ft spacing needs about 23 heads — the first-pass count a quote should be within shouting distance of.",
+ "quick_answer": "The Sprinkler Count Calculator estimates sprinkler heads from an area and the heads' spacing — each head in a layout effectively serves a square of ground set by its spacing. Enter lawn size and spacing and read the count — a first-pass layout number for planning and quote-checking.",
+ "steps_intro": "Spacing makes squares; squares tile the lawn:",
+ "use_cases": [
+  {
+   "title": "Quote checking",
+   "body": [
+    {
+     "t": "An installer quotes 40 heads for a lawn the spacing maths serves with 23 — the conversation that follows is why this calculator exists. Lawn area from the "
+    },
+    {
+     "t": "Rectangular Lot Acreage Calculator",
+     "l": "/tools/rectangular-lot-acreage-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "DIY layout planning",
+   "body": [
+    {
+     "t": "Head-to-head coverage (spacing equal to throw radius) is the design rule; the count sizes the pipe, valve and weekend budget."
+    }
+   ]
+  },
+  {
+   "title": "Spacing choices",
+   "body": [
+    {
+     "t": "12 ft spacing serves 144 sq ft per head; 18 ft serves 324. Wider spacing halves the count and tests the heads' real throw — the table shows the trade."
+    }
+   ]
+  },
+  {
+   "title": "Zone rough-sizing",
+   "body": [
+    {
+     "t": "Heads per zone follow from flow; total heads first (this page), then the zone split has something to divide."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 5,000 sq ft lawn",
+   "body": [
+    {
+     "t": "At 15 ft spacing: 5,000 ÷ 225 = 22.2 → 23 heads. At 12 ft: 35 heads. At 18 ft: 16. The count is the spacing decision wearing a number."
+    }
+   ]
+  },
+  {
+   "label": "Example · Why not area ÷ spray circle?",
+   "body": [
+    {
+     "t": "A 15 ft throw covers a 707 sq ft circle — but circles don't tile; overlapped squares do. Spacing-based counting (225 sq ft per head) already includes the overlap honest layouts need."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Heads by spacing",
+  "intro": "Ground served per head in a square layout — computed, with the count for a 5,000 sq ft lawn.",
+  "columns": [
+   "Head spacing",
+   "Ground per head",
+   "Heads for 5,000 sq ft"
+  ],
+  "rows": [
+   [
+    "12 ft",
+    "144 sq ft",
+    "35"
+   ],
+   [
+    "15 ft",
+    "225 sq ft",
+    "23"
+   ],
+   [
+    "18 ft",
+    "324 sq ft",
+    "16"
+   ],
+   [
+    "20 ft",
+    "400 sq ft",
+    "13"
+   ]
+  ],
+  "note": "First-pass planning arithmetic: real layouts place heads on the actual boundary shape, add part-circle heads at edges, and zone by pressure — a design step beyond any count, which this page never pretends to replace."
+ },
+ "faq": [
+  [
+   "Square or triangular spacing?",
+   "Triangular (offset) layouts serve about 15% more ground per head at the same spacing and water more evenly — the calculator's square grid is the conservative planning default."
+  ],
+  [
+   "What spacing should I use?",
+   "The head manufacturer's rated throw, matched head-to-head (spacing ≈ radius) for even coverage. Windy sites tighten spacing; the spec sheet governs."
+  ],
+  [
+   "Odd-shaped lawns?",
+   "Count by sections: split the shape into rectangles, count each, and expect edge heads to add a little over the pure division."
+  ],
+  [
+   "Beds and shrubs differ?",
+   "Drip and micro-spray serve beds on different spacing logic — this calculator prices lawn-style pop-up and rotor layouts."
+  ],
+  [
+   "Rotors versus sprays?",
+   "Rotors throw farther (25–50 ft) with the same square-grid arithmetic at their spacing. The table's logic scales; the spacings change."
+  ],
+  [
+   "Water pressure limits?",
+   "A zone can only run the heads its flow supports — total count first, then zone by gallons per minute with your pressure figures."
+  ],
+  [
+   "Existing system extension?",
+   "Match the existing heads' spacing for even precipitation, and count the extension area separately — mixing spacings makes stripes."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Lawn area: the "
+  },
+  {
+   "t": "Rectangular Lot Acreage Calculator",
+   "l": "/tools/rectangular-lot-acreage-calculator"
+  },
+  {
+   "t": "; soil for the beds: the "
+  },
+  {
+   "t": "Soil Volume Calculator",
+   "l": "/tools/soil-volume-calculator"
+  },
+  {
+   "t": "; field rows: the "
+  },
+  {
+   "t": "Rows Per Field Calculator",
+   "l": "/tools/rows-per-field-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-area-from-radius",

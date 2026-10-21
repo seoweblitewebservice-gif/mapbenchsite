@@ -7,17 +7,158 @@
   "postal codes within radius",
   "zip radius map"
  ],
- "title": null,
- "description": null,
+ "title": "ZIP Codes Within Radius: The Circle's List",
+ "description": "List every ZIP code whose centroid falls within a radius with ZIP Codes Within Radius — distances shown, ready to copy. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a 1,000-mile circle around Manhattan's 10001 gathers Boston's 02108 (187.9 mi), Washington's 20001 (204.5), Chicago's 60601 (710.4) and Atlanta's 30303 (747.8) — while Miami's 33101, at 1,094 miles, stays outside.",
+ "quick_answer": "ZIP Codes Within Radius lists every ZIP code whose centroid falls inside a circle around a centre ZIP or point, each with its distance. Set centre and radius and read the list — the working set for direct mail and territory design, every candidate measured.",
+ "steps_intro": "The circle, converted into a mailing-grade list:",
+ "use_cases": [
+  {
+   "title": "Direct mail and flyer drops",
+   "body": [
+    {
+     "t": "A radius campaign needs the codes, not a picture of a circle. This list is the drop, ready to hand to the mail house."
+    }
+   ]
+  },
+  {
+   "title": "Territory building",
+   "body": [
+    {
+     "t": "A new territory starts as 'everything within 25 miles of the depot' — the list is that sentence made enumerable, comparable against the "
+    },
+    {
+     "t": "Cities Within Radius",
+     "l": "/tools/cities-within-radius"
+    },
+    {
+     "t": " view of the same ground."
+    }
+   ]
+  },
+  {
+   "title": "Delivery-zone pricing",
+   "body": [
+    {
+     "t": "Zones priced by distance bands need the codes per band: run the radius in rings and the pricing table builds itself."
+    }
+   ]
+  },
+  {
+   "title": "Competitor and coverage audits",
+   "body": [
+    {
+     "t": "Which codes does a rival's 'local' claim actually cover? The circle's list is the checkable version of the claim."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Reading the 1,000-mile list",
+   "body": [
+    {
+     "t": "The summary's four insiders are sorted by distance from 10001's centroid — Chicago (710.4 mi) before Atlanta (747.8) surprises people who think in state shapes instead of straight lines. The list's order is the geometry's, not the atlas's."
+    }
+   ]
+  },
+  {
+   "label": "Example · Centroid in, boundary out",
+   "body": [
+    {
+     "t": "A ZIP whose area touches your circle but whose centroid sits outside does not appear — membership is centroid-based, stated plainly. For boundary-sensitive work, widen the radius by the typical ZIP size and trim by hand."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "How membership is decided",
+  "intro": "The convention, stated once and applied to every code.",
+  "columns": [
+   "Element",
+   "Rule"
+  ],
+  "rows": [
+   [
+    "Centre",
+    "Your ZIP's centroid or your point"
+   ],
+   [
+    "Candidate",
+    "Every ZIP centroid in the data"
+   ],
+   [
+    "Test",
+    "Great-circle distance ≤ your radius"
+   ],
+   [
+    "Reported",
+    "Code, place name and distance, sorted nearest first"
+   ]
+  ],
+  "note": "ZIP 'areas' on maps are Census ZCTAs; centroids are the practical stand-ins every ZIP tool uses. Distances here are centroid-to-centroid — the method's name travels with the list."
+ },
+ "faq": [
+  [
+   "Can I centre on an address instead of a ZIP?",
+   "Yes — an address or point works as the centre; the ZIP list around it is identical in method. ZIP-to-ZIP is simply the common case."
+  ],
+  [
+   "Kilometres or miles?",
+   "Both, per this site's convention — radii and distances report in the unit you choose."
+  ],
+  [
+   "How many ZIPs can a list hold?",
+   "A 100-mile circle around a metro centre can hold well over a thousand codes. The list handles it; your mail house's pricing will have opinions too."
+  ],
+  [
+   "PO Box-only and unique ZIPs?",
+   "Codes with centroids in the data participate; a handful of special-purpose codes lack meaningful centroids and are excluded by the method, not by editorial choice."
+  ],
+  [
+   "Can I exclude some returned ZIPs?",
+   "The list is yours once produced — trim it in your spreadsheet. Deliberate exclusions beat radius-fiddling, because the record of why stays with you."
+  ],
+  [
+   "Is this the same as ZIPs the circle covers?",
+   "No — centroid membership versus area coverage differ at the edges, as the examples state. Boundary-exact coverage belongs to GIS work with ZCTA polygons."
+  ],
+  [
+   "Radius from a competitor's location?",
+   "A fair audit technique: your circle, their centre. The geometry does not care whose point it is, and neither does the list."
+  ],
+  [
+   "Why is a visibly-inside ZIP missing?",
+   "Its centroid fell outside — check the map view: the code's area reaches in while its centre stays out. The stated convention predicts exactly these cases."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The list's owners: "
+  },
+  {
+   "t": "ZIP Codes by State, County & City",
+   "l": "/tools/zip-codes-by-state-county-city"
+  },
+  {
+   "t": "; plotted: the "
+  },
+  {
+   "t": "ZIP Code Map",
+   "l": "/tools/zip-code-map"
+  },
+  {
+   "t": "; people inside: the "
+  },
+  {
+   "t": "Population Within Radius",
+   "l": "/tools/population-within-radius"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "australia-postcodes-by-state-suburb",
   "census-geography-finder",

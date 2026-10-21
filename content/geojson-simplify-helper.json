@@ -6,17 +6,154 @@
   "douglas peucker",
   "reduce geojson"
  ],
- "title": null,
- "description": null,
+ "title": "GeoJSON Simplify Helper: Lighten Heavy Polygons",
+ "description": "Simplify heavy GeoJSON polygons in your browser with the GeoJSON Simplify Helper — see vertex counts, set tolerance, download the lighter file. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a coastline polygon carrying 40,000 vertices can shed most of them at a 0.001-degree tolerance — about 111 metres of allowed wiggle — and stay visibly the same coastline at map zoom.",
+ "quick_answer": "The GeoJSON Simplify Helper loads detailed GeoJSON polygons in your browser, shows how complex they are, and simplifies the geometry so heavy files get lighter. Drop a file, check the vertex counts, choose a tolerance, and download a copy whose shapes survive at map scale while the byte count falls.",
+ "steps_intro": "Complexity first, then a controlled diet:",
+ "use_cases": [
+  {
+   "title": "Web maps that stutter",
+   "body": [
+    {
+     "t": "A boundary file with hundreds of thousands of vertices makes browsers crawl. Simplify here, then check the result in the "
+    },
+    {
+     "t": "GeoJSON Viewer",
+     "l": "/tools/geojson-viewer"
+    },
+    {
+     "t": " before shipping it."
+    }
+   ]
+  },
+  {
+   "title": "Preparing data for upload limits",
+   "body": [
+    {
+     "t": "Dashboards and map platforms cap file sizes. Simplification is the honest way under the cap — deleting features is not."
+    }
+   ]
+  },
+  {
+   "title": "Mobile and offline packages",
+   "body": [
+    {
+     "t": "Every vertex is battery and bandwidth on a phone in the field. A simplified copy is the field edition of the same geography."
+    }
+   ]
+  },
+  {
+   "title": "Diagnosing a heavy file",
+   "body": [
+    {
+     "t": "Sometimes the shock is the diagnosis: one polygon holds 90% of the vertices. The counts this helper shows point at the culprit feature."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Tolerance in real units",
+   "body": [
+    {
+     "t": "A tolerance of 0.001 degrees allows features to move up to about 111 metres; 0.0001 degrees, about 11 metres. Choose by the smallest feature you must keep — a river bend narrower than the tolerance is a bend the simplifier may erase."
+    }
+   ]
+  },
+  {
+   "label": "Example · Vertex counts tell the story",
+   "body": [
+    {
+     "t": "If a 2 MB file drops to a few hundred KB after simplification with the map unchanged at viewing zoom, the vertices were resolution the screen could never show. That gap — file truth versus screen truth — is the helper's whole subject."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What simplification actually does",
+  "intro": "The Douglas–Peucker idea in plain words — the algorithm this helper implements.",
+  "columns": [
+   "Step",
+   "What happens"
+  ],
+  "rows": [
+   [
+    "Draw the chord",
+    "A straight line between a line's endpoints"
+   ],
+   [
+    "Measure the farthest vertex",
+    "Its perpendicular distance from the chord"
+   ],
+   [
+    "Within tolerance?",
+    "Drop every vertex between — the chord represents them"
+   ],
+   [
+    "Beyond tolerance?",
+    "Keep that vertex, split the line, repeat on both halves"
+   ]
+  ],
+  "note": "Simplification removes vertices; it never moves the ones it keeps. Kept points stay exactly on the original geometry — the shape thins, it does not drift."
+ },
+ "faq": [
+  [
+   "Which algorithm does it use?",
+   "Douglas–Peucker (1973), the standard line-simplification method: recursively keep the vertex farthest from each chord until every dropped point lies within the tolerance of the simplified line."
+  ],
+  [
+   "Will polygons stay valid?",
+   "Simplifying polygon rings can occasionally create self-intersections at aggressive tolerances. Validate the output with the GeoJSON Validator and lower the tolerance if a ring misbehaves."
+  ],
+  [
+   "Does it simplify points and properties?",
+   "Points have nothing to thin — the helper's work is lines and polygon rings. Properties ride along untouched on the features that carry them."
+  ],
+  [
+   "What tolerance should I pick?",
+   "Smaller than your smallest must-keep feature, in degrees: 0.0001° ≈ 11 m for detailed work, 0.001° ≈ 111 m for overview maps. Start low; you can always simplify the original harder, never the copy finer."
+  ],
+  [
+   "Why degrees and not metres?",
+   "GeoJSON coordinates are degrees, so the tolerance speaks degrees. The metre equivalents on this page (≈111 m per 0.001° of latitude) help you choose; longitude degrees shrink toward the poles, as everywhere on this site."
+  ],
+  [
+   "Can it create gaps between neighbouring polygons?",
+   "Yes — shared borders simplified independently can diverge by up to the tolerance, opening slivers. For interlocking boundaries (counties, parcels), topology-aware tools (TopoJSON workflows) are the professional answer."
+  ],
+  [
+   "Does simplifying change area and length?",
+   "Yes, slightly — removed wiggles were real length. Report measurements from the original file; publish the simplified one for display."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Check the result: the "
+  },
+  {
+   "t": "GeoJSON Validator",
+   "l": "/tools/geojson-validator"
+  },
+  {
+   "t": "; see it: the "
+  },
+  {
+   "t": "GeoJSON Viewer",
+   "l": "/tools/geojson-viewer"
+  },
+  {
+   "t": "; flatten it: the "
+  },
+  {
+   "t": "GeoJSON to CSV Converter",
+   "l": "/tools/geojson-to-csv-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

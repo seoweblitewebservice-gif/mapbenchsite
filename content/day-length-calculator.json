@@ -6,17 +6,175 @@
   "hours of daylight",
   "day length calculator online"
  ],
- "title": null,
- "description": null,
+ "title": "Day Length Calculator: Hours of Daylight",
+ "description": "Compute hours of daylight for any place and date with the Day Length Calculator — solstice extremes, polar day and night included. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, London gets 16 hours 39 minutes of daylight on 21 June 2026 and just 7 hours 50 minutes on 21 December (computed) — the same city living two different lives half a year apart.",
+ "quick_answer": "The Day Length Calculator computes the hours of daylight between sunrise and sunset for any place and date, including polar cases where the answer is honestly zero or twenty-four. Enter a location and date and read the day's length — for gardens, trips and feeling the seasons in numbers.",
+ "steps_intro": "Sunrise to sunset, counted — with the poles handled honestly:",
+ "use_cases": [
+  {
+   "title": "Garden and growing decisions",
+   "body": [
+    {
+     "t": "Day length drives plant behaviour as much as temperature does. Photoperiod-sensitive crops read this number; so should the gardener choosing what to sow when."
+    }
+   ]
+  },
+  {
+   "title": "Trip planning by light",
+   "body": [
+    {
+     "t": "A December city break in Edinburgh runs on under seven hours of daylight; the same trip in June gets seventeen. Itinerary density should follow the "
+    },
+    {
+     "t": "Sunrise Sunset Calculator",
+     "l": "/tools/sunrise-sunset-calculator"
+    },
+    {
+     "t": "'s clock, not optimism."
+    }
+   ]
+  },
+  {
+   "title": "Solar and energy estimates",
+   "body": [
+    {
+     "t": "Day length caps the day's possible sunshine and frames panel expectations before weather takes its share — the geometric ceiling on every solar estimate."
+    }
+   ]
+  },
+  {
+   "title": "Chasing or fleeing the midnight sun",
+   "body": [
+    {
+     "t": "North of the Arctic Circle the calculator returns 24 hours in season — the fact behind the trip, computed for your exact dates rather than a brochure's 'summer'."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · New York's two solstices",
+   "body": [
+    {
+     "t": "Computed for New York: 15 hours 06 minutes on 21 June 2026 (sunrise 05:24, sunset 20:30) against 9 hours 15 minutes on 21 December (07:16–16:31). Six hours of swing — the whole difference between a summer evening and a winter commute in the dark, twice."
+    }
+   ]
+  },
+  {
+   "label": "Example · The equator's calm",
+   "body": [
+    {
+     "t": "On the equator every day of the year is about 12 hours 7 minutes — not exactly 12, because the sunrise convention counts the Sun's upper limb with refraction. The boring line on the graph is a subtlety wearing a disguise."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Day length at the solstices (computed)",
+  "intro": "Standard solar algorithm, 2026 solstice dates — the year's two extremes by latitude.",
+  "columns": [
+   "Place",
+   "21 June",
+   "21 December"
+  ],
+  "rows": [
+   [
+    "Quito (equator)",
+    "≈12 h 07 m all year",
+    "≈12 h 07 m all year"
+   ],
+   [
+    "New York (40.7°N)",
+    "15 h 06 m",
+    "9 h 15 m"
+   ],
+   [
+    "London (51.5°N)",
+    "16 h 39 m",
+    "7 h 50 m"
+   ],
+   [
+    "Reykjavik (64.1°N)",
+    "≈21 h",
+    "≈4 h 10 m"
+   ],
+   [
+    "Tromsø (69.7°N)",
+    "24 h (midnight sun)",
+    "0 h (polar night)"
+   ]
+  ],
+  "note": "Day length is sunrise-to-sunset on the standard horizon. Twilight adds usable light at both ends — civil twilight alone can add an hour a day at high latitudes in summer."
+ },
+ "faq": [
+  [
+   "What counts as the 'day' here?",
+   "Sunrise to sunset, using the standard convention: the Sun's upper edge at the horizon, with average atmospheric refraction included (−0.83°). It is the almanac definition, not the moment the sky first brightens."
+  ],
+  [
+   "Why is the equinox day not exactly 12 hours?",
+   "The same convention: limb-plus-refraction buys a few extra minutes, and the equinox itself rarely falls on the date at your longitude. Most places see their true 12-hour day a few days off the equinox — the 'equilux'."
+  ],
+  [
+   "How fast does day length change?",
+   "Fastest at the equinoxes — around 2–3 minutes a day at mid-latitudes, more toward the poles — and not at all at the solstices, where the curve flattens. September steals daylight faster than December ever did."
+  ],
+  [
+   "Does elevation lengthen my day?",
+   "Yes, slightly: a higher horizon view sees the Sun earlier and later — roughly a few minutes per 1,000 m in open country. Mountains on the horizon take back with interest what altitude gives."
+  ],
+  [
+   "What about places inside the polar circles?",
+   "In season the answer is the honest extreme: 24 hours (the Sun never sets) or 0 (it never rises). The calculator reports those rather than failing — they are the correct answers for real dates and towns."
+  ],
+  [
+   "Daylight saving — does it change day length?",
+   "No. Clock labels move an hour between morning and evening; the sunrise-to-sunset total is untouched. The base FAQ on this page says it plainly because everyone asks once."
+  ],
+  [
+   "Can I get a whole year for one place?",
+   "Day-by-day queries build the picture; the pattern is a smooth annual wave peaking at your summer solstice. Gardeners and photographers often chart the year around a few anchor dates from this calculator."
+  ],
+  [
+   "Why do sunrise and sunset not balance around noon?",
+   "Solar noon is rarely clock noon — longitude within the time zone and the equation of time shift it. Day length only counts the span; where the span sits in the clock day is the Sunrise Sunset Calculator's story."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The endpoints: the "
+  },
+  {
+   "t": "Sunrise Sunset Calculator",
+   "l": "/tools/sunrise-sunset-calculator"
+  },
+  {
+   "t": "; twilight's bonus: the "
+  },
+  {
+   "t": "Civil Twilight Calculator",
+   "l": "/tools/civil-twilight-calculator"
+  },
+  {
+   "t": "; polar extremes: the "
+  },
+  {
+   "t": "Polar Day Night Checker",
+   "l": "/tools/polar-day-night-checker"
+  },
+  {
+   "t": "; live view: the "
+  },
+  {
+   "t": "Day Night Map",
+   "l": "/tools/day-night-map"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "moon-illumination-calculator",
   "moon-phase-by-date",

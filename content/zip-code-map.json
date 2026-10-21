@@ -6,17 +6,173 @@
   "zip code heatmap",
   "map zip codes"
  ],
- "title": null,
- "description": null,
+ "title": "ZIP Code Map: Plot a List of ZIPs",
+ "description": "Plot a list of ZIP codes on a map with the ZIP Code Map — centroids, clusters and an optional heat layer from your own list. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, eight famous ZIP centroids — 10001, 02108, 20001, 60601, 30303, 33101, 90210, 94103 — plotted together sketch the country's postal skeleton from Manhattan to San Francisco.",
+ "quick_answer": "The ZIP Code Map plots a pasted list of ZIP codes as points on a map, using each code's centroid, with clustering and an optional heat view. Paste your list and see its geography at once: where your customers and deliveries actually concentrate.",
+ "steps_intro": "A column of ZIPs is a map waiting to happen:",
+ "use_cases": [
+  {
+   "title": "Customer and lead geography",
+   "body": [
+    {
+     "t": "The CRM export's ZIP column, plotted, is the cheapest market research in existence. Density questions go deeper with the "
+    },
+    {
+     "t": "Population Within Radius",
+     "l": "/tools/population-within-radius"
+    },
+    {
+     "t": " tool."
+    }
+   ]
+  },
+  {
+   "title": "Sales territory sanity",
+   "body": [
+    {
+     "t": "Territories drawn from a list look tidy in rows and ragged on a map. The plot is the audit — overlaps and orphan regions show themselves."
+    }
+   ]
+  },
+  {
+   "title": "Delivery and service coverage",
+   "body": [
+    {
+     "t": "Plot served ZIPs against your depots (the "
+    },
+    {
+     "t": "Store Locator Map Builder",
+     "l": "/tools/store-locator-map-builder"
+    },
+    {
+     "t": " pattern) and the uncovered clusters argue for the next route."
+    }
+   ]
+  },
+  {
+   "title": "Fundraising and outreach",
+   "body": [
+    {
+     "t": "Donor and member ZIPs reveal the natural geography of your community — chapters and events should follow the dots, not the alphabet."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Centroids, not boundaries",
+   "body": [
+    {
+     "t": "Each ZIP plots at its centroid — the middle of its delivery area, not a boundary outline. Manhattan's 10001 and Beverly Hills' 90210 sit 2,453 miles apart as points; their areas' shapes are the "
+    },
+    {
+     "t": "ZIP Code Boundary Viewer",
+     "l": "/tools/zip-code-boundary-viewer"
+    },
+    {
+     "t": "'s separate subject."
+    }
+   ]
+  },
+  {
+   "label": "Example · The heat view",
+   "body": [
+    {
+     "t": "Where dots pile up, the heat layer glows. It displays the density of your list — not of population, not of income — a distinction the map's readers deserve to hear stated aloud."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading the plot honestly",
+  "intro": "What the dots do and do not say.",
+  "columns": [
+   "Element",
+   "Means",
+   "Caution"
+  ],
+  "rows": [
+   [
+    "One dot",
+    "That ZIP appears in your list",
+    "Its position is the centroid, not a customer's door"
+   ],
+   [
+    "A cluster",
+    "Many listed ZIPs nearby",
+    "Could mirror population itself"
+   ],
+   [
+    "Heat glow",
+    "Density of your list",
+    "Not a demographic claim"
+   ],
+   [
+    "A missing ZIP",
+    "Not found in the centroid data",
+    "New, unique or mistyped codes — see the base FAQs"
+   ]
+  ],
+  "note": "ZIP codes are mail-delivery constructs (and their map areas are Census ZCTAs, approximations) — the standing caveat of every ZIP tool on this site."
+ },
+ "faq": [
+  [
+   "Does it draw ZIP boundaries?",
+   "No — it plots centroid points (and heat). Boundary shapes are approximations owned by the ZIP Code Boundary Viewer; conflating the two is the classic ZIP-map error."
+  ],
+  [
+   "What list formats work?",
+   "One ZIP per line or comma-separated pastes both read naturally. Extra columns (city, counts) are ignored beyond the code itself unless a mode says otherwise."
+  ],
+  [
+   "Duplicates in my list?",
+   "Repeated ZIPs stack at one point — the heat view reads the pile-up as intensity, which is either your intent (weighted demand) or a cleaning task, depending on your data."
+  ],
+  [
+   "Can I colour by a value?",
+   "Where the list carries values, heat intensity is the value's picture. Categorical colouring belongs to choropleth tooling; this map's grammar is points and density."
+  ],
+  [
+   "Rural ZIPs look sparse — broken?",
+   "Rural ZIPs are geographically huge and few per area; sparse dots over farmland are the honest picture, not missing data."
+  ],
+  [
+   "International postcodes?",
+   "This map is US ZIP-shaped. UK and other systems have their own tools in the Location family (postcode distance and boundary tools among them)."
+  ],
+  [
+   "Privacy of my customer list?",
+   "The list is processed for the plot — but a plotted customer map is itself sensitive. Aggregate and share the picture at the zoom your ethics (and your privacy policy) allow."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Boundaries: the "
+  },
+  {
+   "t": "ZIP Code Boundary Viewer",
+   "l": "/tools/zip-code-boundary-viewer"
+  },
+  {
+   "t": "; ZIPs in a circle: "
+  },
+  {
+   "t": "ZIP Codes Within Radius",
+   "l": "/tools/zip-codes-within-radius"
+  },
+  {
+   "t": "; ZIP lists: "
+  },
+  {
+   "t": "ZIP Codes by State, County & City",
+   "l": "/tools/zip-codes-by-state-county-city"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "advanced-map-embed-generator",
   "blank-map",

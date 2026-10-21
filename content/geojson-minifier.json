@@ -8,17 +8,161 @@
   "geojson minify online",
   "reduce geojson size"
  ],
- "title": null,
- "description": null,
+ "title": "GeoJSON Minifier: Same Data, Fewer Bytes",
+ "description": "Minify GeoJSON locally in the browser with the GeoJSON Minifier — whitespace removed, data structure and values untouched. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a 1,521-byte pretty-printed collection minifies to 669 bytes — 56.0% smaller — while every coordinate, property and feature survives byte-for-byte in value.",
+ "quick_answer": "The GeoJSON Minifier minifies GeoJSON locally in your browser, stripping whitespace to shrink the text while keeping the same data structure. Paste the pretty file and download the compact one: identical geography, fewer bytes — the form files should travel in, produced without your data leaving the machine.",
+ "steps_intro": "Pretty is for people. Compact is for wires:",
+ "use_cases": [
+  {
+   "title": "Web delivery",
+   "body": [
+    {
+     "t": "Every kilobyte of GeoJSON is parsed by every visitor’s browser. Minified files load and parse faster — the "
+    },
+    {
+     "t": "GeoJSON Minified Size Calculator",
+     "l": "/tools/geojson-minified-size-calculator"
+    },
+    {
+     "t": " quotes the saving first."
+    }
+   ]
+  },
+  {
+   "title": "API responses and storage",
+   "body": [
+    {
+     "t": "Bandwidth and object storage bill by the byte. Whitespace is the only content you pay for that nobody reads."
+    }
+   ]
+  },
+  {
+   "title": "Embedding in pages and configs",
+   "body": [
+    {
+     "t": "A compact one-liner embeds where a 900-line document cannot — inline map data, test fixtures, config payloads."
+    }
+   ]
+  },
+  {
+   "title": "Before compression",
+   "body": [
+    {
+     "t": "Minify, then gzip: the two stack. Minifying first gives the compressor a head start of pure structure."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Proof by round-trip",
+   "body": [
+    {
+     "t": "Minify, then run the result through the "
+    },
+    {
+     "t": "GeoJSON Formatter",
+     "l": "/tools/geojson-formatter"
+    },
+    {
+     "t": ": the pretty document returns, value for value. Losslessness is not a promise here — it is a test you can run in thirty seconds."
+    }
+   ]
+  },
+  {
+   "label": "Example · What does not shrink",
+   "body": [
+    {
+     "t": "Coordinate digits are data: a million-vertex coastline stays heavy after minifying. When compact is still huge, the cure is fewer vertices or fewer decimals — different tools, honestly signposted in the FAQs."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Minifying contract",
+  "intro": "What the minifier touches, and what it never will.",
+  "columns": [
+   "Removed",
+   "Preserved exactly"
+  ],
+  "rows": [
+   [
+    "Indentation and newlines",
+    "Every coordinate value"
+   ],
+   [
+    "Spaces after colons and commas",
+    "Every property key and value"
+   ],
+   [
+    "Trailing whitespace",
+    "Feature order and structure"
+   ],
+   [
+    "Nothing else",
+    "The validity of the JSON itself"
+   ]
+  ],
+  "note": "Minified GeoJSON is still GeoJSON — RFC 7946 never required beauty. Any parser that accepts the pretty file accepts the minified one; if yours does not, the parser is the bug."
+ },
+ "faq": [
+  [
+   "What is the smallest a GeoJSON file can get?",
+   "As small as its data allows: minifying removes all whitespace, and what remains is coordinate digits and property text. Beyond this floor, only rounding decimals, dropping vertices or switching to a binary format shrinks further — different operations with real trade-offs, signposted in this page's other answers."
+  ],
+  [
+   "Will my app still parse it?",
+   "Yes — minification changes whitespace only, and JSON parsers are blind to whitespace. The minified file is the same document."
+  ],
+  [
+   "How much smaller, typically?",
+   "Pretty files commonly shed 30–60%, all of it air. The size calculator measures your file’s exact figure before you commit."
+  ],
+  [
+   "Can I un-minify?",
+   "The Formatter re-expands minified GeoJSON losslessly — the two tools are a reversible pair, which is the definition of a safe optimisation."
+  ],
+  [
+   "Key order changed?",
+   "Preserved — minifying removes whitespace between tokens; it does not reshuffle the document."
+  ],
+  [
+   "Numbers rewritten?",
+   "Values are identical; their text may normalise (40.0 → 40) through parse-and-print, as with the formatter. The geography does not move."
+  ],
+  [
+   "Should I store minified or pretty?",
+   "Store the one your humans edit (pretty), ship the one machines read (minified) — generated at build time, ideally, so the pair never drifts."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Size first: the "
+  },
+  {
+   "t": "GeoJSON Minified Size Calculator",
+   "l": "/tools/geojson-minified-size-calculator"
+  },
+  {
+   "t": "; re-expand: the "
+  },
+  {
+   "t": "GeoJSON Formatter",
+   "l": "/tools/geojson-formatter"
+  },
+  {
+   "t": "; convert into GeoJSON: the "
+  },
+  {
+   "t": "CSV to GeoJSON Converter",
+   "l": "/tools/csv-to-geojson-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

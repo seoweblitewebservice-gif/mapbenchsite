@@ -6,17 +6,180 @@
   "distance to equator online",
   "free distance to equator"
  ],
- "title": null,
- "description": null,
+ "title": "Distance to Equator: How Far From 0° Are You?",
+ "description": "Measure your north-south Distance to Equator from any latitude — New York sits about 4,509 km away, London 5,709 km. Free and instant.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, New York at 40.71°N is about 4,509 km (2,802 miles) of meridian arc from the equator, while Quito, Ecuador sits just 20 km from it.",
+ "quick_answer": "The Distance to Equator tool measures the north-south distance between your latitude and 0 degrees. Enter a place or a latitude and read the distance in kilometres or miles, worked out along the meridian — the shortest route to the Earth's midline.",
+ "steps_intro": "The shortest path to the equator runs due north or due south along your meridian:",
+ "use_cases": [
+  {
+   "title": "Teaching latitude with real distances",
+   "body": [
+    {
+     "t": "Degrees feel abstract until they become kilometres. Students compare their school's distance with Quito's 20 km and latitude stops being a number on a worksheet. Pair it with the "
+    },
+    {
+     "t": "Equator Finder",
+     "l": "/tools/equator-finder"
+    },
+    {
+     "t": " to see the line itself."
+    }
+   ]
+  },
+  {
+   "title": "Climate and daylight intuition",
+   "body": [
+    {
+     "t": "Distance from the equator tracks day-length variation and seasons better than any label. A traveller moving from London (5,709 km) toward Sydney (3,749 km) is crossing climate logic, not just geography."
+    }
+   ]
+  },
+  {
+   "title": "Trip context and storytelling",
+   "body": [
+    {
+     "t": "“Halfway to the equator” is a real milestone on long drives and flights south. This number gives road stories and travel journals a measured fact instead of a guess."
+    }
+   ]
+  },
+  {
+   "title": "Checking coordinates and data",
+   "body": [
+    {
+     "t": "A latitude that claims a tropical distance for a temperate city exposes swapped or mistyped coordinates early — the distance is a cheap sanity check on any dataset. Round out the picture with the "
+    },
+    {
+     "t": "Hemisphere Finder",
+     "l": "/tools/hemisphere-finder"
+    },
+    {
+     "t": "."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · New York versus Quito",
+   "body": [
+    {
+     "t": "New York (40.71°N) measures about 4,509 km from the equator. Quito (0.18°S) measures about 20 km — close enough that the equator monument outside the city is a short bus ride, not a metaphor."
+    }
+   ]
+  },
+  {
+   "label": "Example · Crossing it on a flight",
+   "body": [
+    {
+     "t": "A flight from London to Johannesburg crosses the equator with roughly 5,709 km of north-south travel behind it at the crossing point — the moment some airlines announce and crews traditionally mark."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "How far are these cities from the equator?",
+  "intro": "Meridian-arc distances computed on WGS84 — latitude converted with the ellipsoid's own degree lengths, not a flat 111 km rule.",
+  "columns": [
+   "Place",
+   "Latitude",
+   "Distance to equator"
+  ],
+  "rows": [
+   [
+    "Quito, Ecuador",
+    "0.18°S",
+    "≈ 20 km (12 mi)"
+   ],
+   [
+    "Sydney, Australia",
+    "33.87°S",
+    "≈ 3,749 km (2,330 mi)"
+   ],
+   [
+    "Denver, USA",
+    "39.74°N",
+    "≈ 4,401 km (2,734 mi)"
+   ],
+   [
+    "New York, USA",
+    "40.71°N",
+    "≈ 4,509 km (2,802 mi)"
+   ],
+   [
+    "London, UK",
+    "51.51°N",
+    "≈ 5,709 km (3,547 mi)"
+   ],
+   [
+    "Reykjavik, Iceland",
+    "64.15°N",
+    "≈ 7,116 km (4,422 mi)"
+   ]
+  ],
+  "note": "Distances are north-south arc along the meridian — the shortest route to 0°. One degree of latitude is about 110.6 km near the equator and 111.7 km near the poles on WGS84, which is why these figures are computed per latitude."
+ },
+ "faq": [
+  [
+   "How is the distance calculated?",
+   "By converting the latitude difference into meridian arc on the WGS84 ellipsoid. A degree of latitude is not a fixed length — it grows slightly toward the poles — so the tool integrates the local degree length rather than multiplying by a single constant."
+  ],
+  [
+   "Is it the distance to the nearest point on the equator?",
+   "Yes. The nearest point on the equator shares your longitude, so the shortest path is along your meridian — due north or due south."
+  ],
+  [
+   "Does my longitude change the answer?",
+   "No. Only latitude matters for this distance. Two places on the same parallel — say New York and Madrid — are the same distance from the equator however far apart they sit east-west."
+  ],
+  [
+   "What is the farthest a place can be from the equator?",
+   "The poles: about 10,002 km of meridian arc, a quarter of Earth's polar circumference of roughly 40,008 km."
+  ],
+  [
+   "Why does the equator matter for climate?",
+   "Solar energy per square metre peaks near the equator and falls with latitude. Distance from 0° is a rough but honest proxy for that gradient — it explains daylight patterns, not local weather."
+  ],
+  [
+   "Can I measure from a point at sea?",
+   "Yes — latitude works anywhere on Earth. A ship at 20°S in the Atlantic is about 2,212 km from the equator whether or not land is near."
+  ],
+  [
+   "How does this differ from distance to the poles?",
+   "They are complementary: distance to the equator plus distance to your nearest pole adds up to the full quadrant arc of about 10,002 km."
+  ],
+  [
+   "Which cities sit almost exactly on the equator?",
+   "Quito (Ecuador), Pontianak (Indonesia) and Macapá (Brazil) are the famous near-zero cases — each within about 25 km of the line."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "See the line itself with the "
+  },
+  {
+   "t": "Equator Finder",
+   "l": "/tools/equator-finder"
+  },
+  {
+   "t": ", work out your quarter of the globe with the "
+  },
+  {
+   "t": "Hemisphere Finder",
+   "l": "/tools/hemisphere-finder"
+  },
+  {
+   "t": ", or measure your distance from the tropics lines with the "
+  },
+  {
+   "t": "Distance from Tropic of Cancer Calculator",
+   "l": "/tools/distance-from-tropic-of-cancer"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "distance-from-equator-calculator",
   "distance-from-prime-meridian-calculator",

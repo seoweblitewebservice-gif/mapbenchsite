@@ -8,17 +8,155 @@
   "polygon centroid from coordinates tool",
   "how to calculate polygon centroid from coordinates"
  ],
- "title": null,
- "description": null,
+ "title": "Polygon Centroid From Coordinates: True Centre",
+ "description": "Compute the true area centroid of a coordinate polygon with Polygon Centroid From Coordinates — the balance point, not the box middle. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, the Midtown Manhattan test polygon (1.742 km² over four corners) balances at 40.7640, −73.9777 — while an L-shaped field's centroid can sit outside the field entirely, in the neighbour's hedge.",
+ "quick_answer": "Polygon Centroid From Coordinates computes the area centroid — the balance point — of a polygon given by latitude/longitude corners, using the area-weighted centroid formula. Paste the corners in boundary order and read the centre point: the spot where the shape would balance, for labels, anchors and representative points.",
+ "steps_intro": "Not the middle of the box — the middle of the shape:",
+ "use_cases": [
+  {
+   "title": "Map labels and pins",
+   "body": [
+    {
+     "t": "A region's label belongs at its visual centre of mass. The centroid beats the bounding-box middle for every non-rectangle on Earth — pair with the "
+    },
+    {
+     "t": "Polygon Area From Coordinates",
+     "l": "/tools/polygon-area-from-coordinates"
+    },
+    {
+     "t": " for the full shape report."
+    }
+   ]
+  },
+  {
+   "title": "Representative points for datasets",
+   "body": [
+    {
+     "t": "Zones reduced to points (for joins, distances, weather lookups) deserve points that represent the area — centroids, not arbitrary corners."
+    }
+   ]
+  },
+  {
+   "title": "Anchor points for services",
+   "body": [
+    {
+     "t": "A delivery zone's depot-planning starts from its centroid — the average journey's natural origin."
+    }
+   ]
+  },
+  {
+   "title": "Checking GIS output",
+   "body": [
+    {
+     "t": "Your GIS reports a centroid; this page recomputes it independently. Agreement is a pipeline you can trust."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Symmetric shapes agree with intuition",
+   "body": [
+    {
+     "t": "The Manhattan test rectangle balances at its exact middle, 40.7640, −73.9777 — the formula bowing to the obvious when the shape is obvious."
+    }
+   ]
+  },
+  {
+   "label": "Example · The L-shape warning",
+   "body": [
+    {
+     "t": "An L-shaped polygon's centroid falls in the crook of the L — sometimes on land the polygon does not contain. It is a balance point, not a promise of membership; label placement sometimes prefers a point-on-surface instead."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Centroid versus the alternatives",
+  "intro": "Three 'centres' that are routinely confused.",
+  "columns": [
+   "Centre",
+   "Definition",
+   "Behaviour"
+  ],
+  "rows": [
+   [
+    "Area centroid",
+    "Balance point of the filled shape (this tool)",
+    "Pulled by area; can exit concave shapes"
+   ],
+   [
+    "Vertex average",
+    "Mean of the corners",
+    "Pulled by corner density — a surveying artefact"
+   ],
+   [
+    "Bounding-box centre",
+    "Middle of min/max lat/lon",
+    "Ignores the shape entirely"
+   ],
+   [
+    "Point on surface",
+    "A point guaranteed inside",
+    "For labels that must sit on the shape"
+   ]
+  ],
+  "note": "The centroid formula weights each edge's contribution by the shoelace cross-sum — the same arithmetic as the area tool, which is why the two pages travel together."
+ },
+ "faq": [
+  [
+   "How is this different from averaging the corners?",
+   "Averaging corners weights places where you happened to add points. The area centroid weights land — dense corner clusters along one fence stop dragging the 'centre' toward themselves."
+  ],
+  [
+   "Can the centroid fall outside the polygon?",
+   "Yes, for concave (C, L, U) shapes — it is a balance point in the mathematical sense. If your use needs an inside point, a point-on-surface method is the right tool."
+  ],
+  [
+   "Does walking direction matter?",
+   "The formula handles either direction; the reported point is the same. Order along the boundary, however, is essential — scrambled corners break both shape and centre."
+  ],
+  [
+   "Is the first point repeated?",
+   "Not needed — the ring closes automatically."
+  ],
+  [
+   "Weighted centroids?",
+   "This tool weights by area alone. Population-weighted centres are a different instrument (the meeting-point family computes people-weighted centres)."
+  ],
+  [
+   "Latitude/longitude or projected?",
+   "The formula runs on a local projection at the polygon's latitude — at district scales the distinction from geodesic truth is beneath notice."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Its area: the "
+  },
+  {
+   "t": "Polygon Area From Coordinates",
+   "l": "/tools/polygon-area-from-coordinates"
+  },
+  {
+   "t": "; its boundary: the "
+  },
+  {
+   "t": "Polygon Perimeter From Coordinates",
+   "l": "/tools/polygon-perimeter-from-coordinates"
+  },
+  {
+   "t": "; point sets: the "
+  },
+  {
+   "t": "Coordinate Mean Calculator",
+   "l": "/tools/coordinate-mean-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "city-from-coordinates",
   "coordinate-bounding-box-generator",

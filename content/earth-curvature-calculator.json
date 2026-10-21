@@ -8,17 +8,174 @@
   "curvature over distance",
   "earth curvature distance"
  ],
- "title": null,
- "description": null,
+ "title": "Earth Curvature Calculator: The Drop, Computed",
+ "description": "Calculate how far the Earth's surface drops over any distance with the Earth Curvature Calculator — spherical geometry, no refraction. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, over 10 miles the surface drops 20.3 metres (about 67 feet) below a level tangent — the famous '8 inches per mile squared' rule, computed exactly.",
+ "quick_answer": "The Earth Curvature Calculator computes how far the Earth's surface falls below a horizontal tangent over a given distance, on a spherical Earth. Enter the distance and read the drop in metres, feet or inches — the geometry behind horizon dip, long sight lines and a century of shoreline demonstrations.",
+ "steps_intro": "Level at your feet is not level at the horizon. Measure the difference:",
+ "use_cases": [
+  {
+   "title": "Judging what should be visible",
+   "body": [
+    {
+     "t": "A lighthouse, a skyline, a wind farm across the water: the drop over the intervening distance is the first term in whether it can show. The "
+    },
+    {
+     "t": "Hidden Height Calculator",
+     "l": "/tools/hidden-height-curvature-calculator"
+    },
+    {
+     "t": " finishes the argument with your eye height added."
+    }
+   ]
+  },
+  {
+   "title": "The shoreline test, done right",
+   "body": [
+    {
+     "t": "Chicago's skyline from the Michigan shore is about 53 miles — at that range the drop is roughly 570 m of geometry that refraction and tower height then negotiate with. Compute the drop first; argue about the rest second."
+    }
+   ]
+  },
+  {
+   "title": "Surveying and levelling intuition",
+   "body": [
+    {
+     "t": "Precise levelling corrects for curvature run by run (about 0.08 m at 1 km) — this page is that correction, generalised to any distance."
+    }
+   ]
+  },
+  {
+   "title": "Photography claims, checked",
+   "body": [
+    {
+     "t": "Long-lens photos across bays invite curvature claims in both directions. The drop over the photo's distance is a five-second calculation that settles the geometry half of the argument."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 8-inch rule, audited",
+   "body": [
+    {
+     "t": "The old rule says drop ≈ 8 inches × (miles)². Exact spherical geometry at 1 mile gives 0.203 m — 8.0 inches. At 10 miles the rule predicts 800 inches (20.3 m) and geometry agrees to the centimetre. A rare folk formula that survives audit."
+    }
+   ]
+  },
+  {
+   "label": "Example · Ten kilometres",
+   "body": [
+    {
+     "t": "At 10 km the drop is 7.85 m — a two-storey building's worth. Anything shorter than that at 10 km, viewed from ground level with no refraction, is below the tangent line's world entirely."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Curvature drop by distance (spherical, no refraction)",
+  "intro": "Computed as R(sec(d/R) − 1) — the calculator's own formula.",
+  "columns": [
+   "Distance",
+   "Drop",
+   "In feet"
+  ],
+  "rows": [
+   [
+    "1 km",
+    "0.08 m",
+    "0.26"
+   ],
+   [
+    "1 mile",
+    "0.20 m",
+    "0.67"
+   ],
+   [
+    "5 km",
+    "1.96 m",
+    "6.4"
+   ],
+   [
+    "10 km",
+    "7.85 m",
+    "25.7"
+   ],
+   [
+    "10 miles",
+    "20.33 m",
+    "66.7"
+   ],
+   [
+    "50 km",
+    "196.21 m",
+    "643.7"
+   ],
+   [
+    "100 km",
+    "784.89 m",
+    "2,574.7"
+   ]
+  ],
+  "note": "Drop grows with the square of distance (the d²⁄2R approximation is within a percent out to ~100 km). Refraction bends light downward and reduces the effective drop — typically by roughly a seventh under standard conditions."
+ },
+ "faq": [
+  [
+   "What is the difference between drop and bulge?",
+   "Drop is measured from a tangent at one point (surveyor's view); bulge is the surface rising toward a chord between two points (link planner's view). Same circle, different ruler — at equal distances, tangent drop is four times the midpoint bulge."
+  ],
+  [
+   "Why do photos sometimes show more than the drop allows?",
+   "Refraction: temperature layers bend light, sometimes strongly (superior mirage conditions can lift distant objects dramatically). The geometric drop is the baseline; the atmosphere argues from there, in both directions."
+  ],
+  [
+   "Does my height change the drop?",
+   "The drop is a property of the surface alone. Your height changes what you can see over it — that is the horizon distance and hidden height calculation, the companion pages to this one."
+  ],
+  [
+   "Is the d²/2R shortcut safe?",
+   "For distances up to a few hundred kilometres, yes — its error stays under 1%. The calculator uses the exact circular form anyway, so the question is academic here."
+  ],
+  [
+   "What about the ellipsoid?",
+   "Local curvature varies slightly with latitude and direction (the Earth's radius of curvature runs about 6,357–6,399 km). At 100 km that shifts the drop by well under a metre — stated for completeness, invisible to most uses."
+  ],
+  [
+   "Can I see the drop?",
+   "Not with the naked eye at short range (0.08 m over 1 km hides below waves and haze) — which is exactly why instruments, not impressions, settled the question centuries ago."
+  ],
+  [
+   "How does this relate to the horizon dip angle?",
+   "The dip is the angular version: at eye level the horizon sits below horizontal by an angle that grows with your height — computed on the Horizon Distance page. Drop is distance's version of the same circle."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "What stays hidden: the "
+  },
+  {
+   "t": "Hidden Height by Earth Curvature Calculator",
+   "l": "/tools/hidden-height-curvature-calculator"
+  },
+  {
+   "t": "; the chord view: the "
+  },
+  {
+   "t": "Earth Bulge Calculator",
+   "l": "/tools/earth-bulge-calculator"
+  },
+  {
+   "t": "; your horizon: "
+  },
+  {
+   "t": "Horizon Distance",
+   "l": "/tools/horizon-distance"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "air-pressure-by-elevation",
   "antenna-height-distance-calculator",

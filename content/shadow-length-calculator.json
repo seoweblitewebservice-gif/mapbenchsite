@@ -6,17 +6,162 @@
   "sun shadow calculator",
   "object shadow"
  ],
- "title": null,
- "description": null,
+ "title": "Shadow Length Calculator: Height and Sun",
+ "description": "Compute shadow length from object height and sun angle with the Shadow Length Calculator — solar-noon extremes and design uses included. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a 10-metre building in New York casts a noon shadow of just 3.11 metres at the June solstice — and 20.62 metres in December, which is why winter sun feels rationed.",
+ "quick_answer": "The Shadow Length Calculator works out how long a shadow an object casts, from its height and the Sun's altitude — length equals height divided by the tangent of the sun angle. Enter the height and read the shadow — the arithmetic behind sundials, gardens and solar siting.",
+ "steps_intro": "One right triangle runs the whole page:",
+ "use_cases": [
+  {
+   "title": "Garden and greenhouse planning",
+   "body": [
+    {
+     "t": "Will the fence shade the beds in December? At London's winter noon a 2 m fence throws 7.4 m of shadow (computed) — plant with the winter number, not June's optimism. The angle comes from the "
+    },
+    {
+     "t": "Sun Altitude Calculator",
+     "l": "/tools/sun-altitude-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Solar panel siting",
+   "body": [
+    {
+     "t": "Row spacing and rooftop obstructions are shadow problems: keep December's long shadow off the next row."
+    }
+   ]
+  },
+  {
+   "title": "Photography and film",
+   "body": [
+    {
+     "t": "Long-shadow golden looks are a sun-altitude choice; compute when your location's shadows reach the ratio you want."
+    }
+   ]
+  },
+  {
+   "title": "Playground and building shade studies",
+   "body": [
+    {
+     "t": "Shade audits for schools and planning applications begin with this triangle, run month by month."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · New York's two noons",
+   "body": [
+    {
+     "t": "10 m object, solar noon: June 21 sun altitude 72.7° → shadow 3.11 m. December 21 altitude 25.9° → shadow 20.62 m. Same building, a 6.6× longer winter shadow."
+    }
+   ]
+  },
+  {
+   "label": "Example · Your own shadow",
+   "body": [
+    {
+     "t": "A 1.8 m person at London's December noon (altitude 15.1°) casts 6.68 m — nearly four body lengths, the longest selfie backdrop of the year."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Shadow ratios by sun altitude",
+  "intro": "Shadow length as a multiple of object height (height ÷ tan altitude).",
+  "columns": [
+   "Sun altitude",
+   "Shadow"
+  ],
+  "rows": [
+   [
+    "10°",
+    "5.67 × height"
+   ],
+   [
+    "20°",
+    "2.75 × height"
+   ],
+   [
+    "30°",
+    "1.73 × height"
+   ],
+   [
+    "45°",
+    "1.00 × height — shadow equals height"
+   ],
+   [
+    "60°",
+    "0.58 × height"
+   ],
+   [
+    "72.7° (NYC June noon)",
+    "0.31 × height"
+   ]
+  ],
+  "note": "Assumes flat ground and a vertical object; slopes stretch or shrink the real shadow — the calculator's flat-ground assumption is stated, not hidden."
+ },
+ "faq": [
+  [
+   "What is the formula?",
+   "Shadow = height ÷ tan(sun altitude). At 45° the shadow equals the height; below that it grows fast, which the ratio table makes visceral."
+  ],
+  [
+   "Where does the sun angle come from?",
+   "From place, date and time via the solar-position math — or type an altitude directly if you measured one. The Sun Altitude Calculator is the dedicated source."
+  ],
+  [
+   "Morning and evening shadows point where?",
+   "Opposite the Sun's azimuth: morning shadows point west-ish, evening east-ish, swinging with the season — direction is the Sun Azimuth Calculator's department."
+  ],
+  [
+   "Can it work backwards (shadow to height)?",
+   "Yes — measure a shadow and the Sun's altitude and the same triangle returns the object's height: the surveyor's oldest trick."
+  ],
+  [
+   "What about sloped ground?",
+   "Slopes change everything: downhill shadows stretch, uphill shrink. The calculator assumes flat ground and says so; treat sloped results as first approximations."
+  ],
+  [
+   "Trees and soft shadows?",
+   "The triangle gives the shadow's core (umbra) length; leafy canopies feather the edge. For siting decisions the core length is the conservative number."
+  ],
+  [
+   "Shadow at sunrise or sunset?",
+   "Infinite in the limit — as altitude approaches zero the shadow leaves the map. Practically, buildings and terrain end it first."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The angle: the "
+  },
+  {
+   "t": "Sun Altitude Calculator",
+   "l": "/tools/sun-altitude-calculator"
+  },
+  {
+   "t": "; the direction: the "
+  },
+  {
+   "t": "Sun Azimuth Calculator",
+   "l": "/tools/sun-azimuth-calculator"
+  },
+  {
+   "t": "; both at once: the "
+  },
+  {
+   "t": "Solar Position Calculator",
+   "l": "/tools/solar-position-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "astronomical-twilight-calculator",
   "civil-twilight-calculator",

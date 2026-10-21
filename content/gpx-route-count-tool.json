@@ -8,17 +8,162 @@
   "gpx route count tool tool",
   "how to calculate gpx route count tool"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Route Count Tool: Count Routes in a File",
+ "description": "Count the route elements in a GPX file with the GPX Route Count Tool — how many planned routes a document actually carries. Free, local.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, an export that claims to hold 'the route' may carry three <rte> elements — the original, last year's variant and an accidental duplicate — and this tool counts all three.",
+ "quick_answer": "The GPX Route Count Tool counts the route (<rte>) elements inside a GPX file. Load the file locally and read how many planned routes the document actually carries — the structural fact that explains duplicate lines on maps, confused imports and libraries that never match their inventories.",
+ "steps_intro": "One element per route — count them before the map draws them on top of each other:",
+ "use_cases": [
+  {
+   "title": "Import diagnosis",
+   "body": [
+    {
+     "t": "A platform shows your route twice. Either the file carries two routes or the platform duplicated it — the count settles which, alongside the "
+    },
+    {
+     "t": "GPX Track Point Counter",
+     "l": "/tools/gpx-point-counter"
+    },
+    {
+     "t": "'s census of the points inside them."
+    }
+   ]
+  },
+  {
+   "title": "Library inventory",
+   "body": [
+    {
+     "t": "A folder of route files becomes a catalogue once each file's route count is known — files with zero routes are recordings in disguise, files with five are bundles."
+    }
+   ]
+  },
+  {
+   "title": "Merge verification",
+   "body": [
+    {
+     "t": "Merged two route files? The union's count should equal the sum of the sources — the "
+    },
+    {
+     "t": "GPX Merger",
+     "l": "/tools/gpx-merger"
+    },
+    {
+     "t": "'s receipt, checked."
+    }
+   ]
+  },
+  {
+   "title": "Bundle unpacking",
+   "body": [
+    {
+     "t": "Event and tour operators ship one GPX with every day's route inside. Counting the routes is step one of unpacking the bundle."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Routes versus tracks",
+   "body": [
+    {
+     "t": "A file with 2 <trk> and 3 <rte> carries two journeys actually travelled and three plans. The counts sound similar and mean opposite things — plans propose, tracks testify — and confusing them corrupts training logs."
+    }
+   ]
+  },
+  {
+   "label": "Example · The empty-route file",
+   "body": [
+    {
+     "t": "A count of zero in a file named 'route.gpx' means the export saved the recording instead — a naming lie the count exposes in one second, before you navigate a plan that does not exist."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What gets counted",
+  "intro": "The document's route layer, distinguished from its neighbours.",
+  "columns": [
+   "Element",
+   "Counted here?",
+   "Meaning"
+  ],
+  "rows": [
+   [
+    "<rte>",
+    "Yes — this is the count",
+    "One planned route"
+   ],
+   [
+    "<rtept> inside routes",
+    "No — points, not routes",
+    "The route's waypoints in sequence"
+   ],
+   [
+    "<trk>",
+    "No — sibling census",
+    "A recorded track"
+   ],
+   [
+    "<wpt>",
+    "No — sibling census",
+    "Standalone saved places"
+   ]
+  ],
+  "note": "A route's identity is its element, not its name — two routes may share a name and still be two routes, which is exactly the duplication this count reveals."
+ },
+ "faq": [
+  [
+   "Does a route with zero points count?",
+   "Yes — an empty <rte> is still an element the file carries (and a smell worth investigating). Structure counts what is there, not what is useful."
+  ],
+  [
+   "Named routes versus unnamed?",
+   "Names are optional in the schema; the count does not care. Unnamed routes are how bundles hide extra days."
+  ],
+  [
+   "Course files from cycling platforms?",
+   "Courses are usually exported as tracks or single routes; a course bundle with several <rte> elements is precisely the case this count clarifies."
+  ],
+  [
+   "Can it list the routes' names too?",
+   "The count is the headline; names ride inside the elements for any XML reader to list. The census mindset is this family's: count first, inspect second."
+  ],
+  [
+   "Why would a planner export duplicates?",
+   "Edits saved as new routes instead of replacing, variants kept 'just in case', exports appended rather than overwritten — ordinary software behaviour, visible only when you count."
+  ],
+  [
+   "Tracks converted to routes?",
+   "A converted track often arrives as one route with thousands of rtept — the count says 1 route while the point counter explains the file's size."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Points inside them: the "
+  },
+  {
+   "t": "GPX Track Point Counter",
+   "l": "/tools/gpx-point-counter"
+  },
+  {
+   "t": "; combine files: the "
+  },
+  {
+   "t": "GPX Merger",
+   "l": "/tools/gpx-merger"
+  },
+  {
+   "t": "; route totals: "
+  },
+  {
+   "t": "GPX Route Stats",
+   "l": "/tools/gpx-route-stats"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

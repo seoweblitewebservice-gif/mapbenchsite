@@ -6,17 +6,169 @@
   "boundary length",
   "fence length"
  ],
- "title": null,
- "description": null,
+ "title": "Perimeter Calculator: Boundary Length on the Map",
+ "description": "Measure the boundary length of a shape drawn on the map with the Perimeter Calculator — geodesic edge sums in feet, miles and kilometres. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a drawn boundary of four long edges can total 10.75 km (6.68 miles) of perimeter — the fencing, edging and walking distance hiding inside one innocent-looking field.",
+ "quick_answer": "The Perimeter Calculator measures the total boundary length of a polygon you draw on the map, summing its edges geodesically. Trace the shape and read the perimeter in feet or miles — the number behind fencing estimates, edging orders and boundary walks.",
+ "steps_intro": "Draw the shape; walk its edge in numbers:",
+ "use_cases": [
+  {
+   "title": "Fencing estimates",
+   "body": [
+    {
+     "t": "Perimeter is fence length: a 100 × 150 ft lot's 500 ft of boundary becomes ten 50-ft rolls before posts are counted. Rectangular plots shortcut through the "
+    },
+    {
+     "t": "Fence Length Calculator",
+     "l": "/tools/fence-length-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Edging, kerbing and borders",
+   "body": [
+    {
+     "t": "Garden edging, sports-field lines, parking-lot kerbs — all are sold by the metre of boundary, and all begin with this sum."
+    }
+   ]
+  },
+  {
+   "title": "Boundary walks and inspections",
+   "body": [
+    {
+     "t": "Rangers, surveyors' assistants and parish boundary-beaters plan the walk from the perimeter: 10.75 km of boundary is a half-day's inspection, not a stroll."
+    }
+   ]
+  },
+  {
+   "title": "The other half of area",
+   "body": [
+    {
+     "t": "Area's sibling measurement: two fields can share an acreage and differ wildly in perimeter — the long thin one costs more to fence, hedge and maintain. The "
+    },
+    {
+     "t": "Map Area Calculator",
+     "l": "/tools/map-area-calculator"
+    },
+    {
+     "t": " gives the pair."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Same family, different shapes",
+   "body": [
+    {
+     "t": "The drawn four-sided parcel from the area examples carries 10.75 km of boundary (6.68 mi) around its 6.08 km². Stretch the same area into a long strip and the perimeter balloons — shape, not size, sets the fence bill."
+    }
+   ]
+  },
+  {
+   "label": "Example · The humble lot",
+   "body": [
+    {
+     "t": "100 × 150 ft: perimeter 500 ft exactly — 2 × (100 + 150). Simple rectangles check the tool's arithmetic at a glance, which is why they headline the examples."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Perimeter reference points",
+  "intro": "Boundary lengths for shapes everyone pictures.",
+  "columns": [
+   "Shape",
+   "Perimeter"
+  ],
+  "rows": [
+   [
+    "100 × 150 ft lot",
+    "500 ft"
+   ],
+   [
+    "Square acre (208.7 ft sides)",
+    "834.8 ft"
+   ],
+   [
+    "Football field (360 × 160 ft)",
+    "1,040 ft"
+   ],
+   [
+    "1-mile-radius circle",
+    "6.28 mi of circumference"
+   ],
+   [
+    "Drawn example parcel",
+    "10.75 km"
+   ]
+  ],
+  "note": "Circles have no edges to sum — their boundary is the circumference, 2πr; the radius tools handle that family. Polygons are this page's trade."
+ },
+ "faq": [
+  [
+   "How is the perimeter computed?",
+   "Each edge is a geodesic (great-circle) segment between consecutive vertices, and the perimeter is their sum — with the closing edge from the last vertex back to the first included."
+  ],
+  [
+   "Does the calculator close the shape automatically?",
+   "Yes — the boundary is a loop by definition. If your shape is an open path (a trail, a coastline stretch), the Trail Distance Estimator measures open lines instead."
+  ],
+  [
+   "Gates and gaps in a fence?",
+   "Subtract them after: a 500 ft boundary with two 4-ft gates needs 492 ft of fencing. The perimeter is the gross figure every net figure starts from."
+  ],
+  [
+   "Curved boundaries?",
+   "Approximate curves with more vertices — each added point tightens the sum toward the true curve, the same convergence habit as trail tracing."
+  ],
+  [
+   "Slope — is the boundary longer on hills?",
+   "Map perimeter is horizontal (plan) length, matching deeds and fence plans drawn on paper. Fencers on steep ground order a margin for the slope's extra run."
+  ],
+  [
+   "Units for a building site?",
+   "Feet for US construction, metres nearly everywhere else — the calculator speaks both so the lumber order and the permit agree."
+  ],
+  [
+   "Perimeter of a circle on the map?",
+   "Draw a many-sided polygon to approximate it, or compute 2πr directly with the radius family — the Circle Circumference tools live one click away in the related list."
+  ],
+  [
+   "Coastlines — is the perimeter infinite?",
+   "Coastlines grow with measurement fineness (the famous paradox), so a coastline 'perimeter' must always quote its vertex spacing. Field and parcel boundaries, being legally straight segments, are mercifully finite."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Its area: the "
+  },
+  {
+   "t": "Map Area Calculator",
+   "l": "/tools/map-area-calculator"
+  },
+  {
+   "t": "; fences: the "
+  },
+  {
+   "t": "Fence Length Calculator",
+   "l": "/tools/fence-length-calculator"
+  },
+  {
+   "t": "; open paths: the "
+  },
+  {
+   "t": "Trail Distance Estimator",
+   "l": "/tools/trail-distance-estimator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-area-from-radius",

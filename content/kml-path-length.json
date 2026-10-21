@@ -6,17 +6,166 @@
   "kmz length",
   "kml path length online"
  ],
- "title": null,
- "description": null,
+ "title": "KML Path Length: Distance of a Drawn Path",
+ "description": "Measure the length of paths drawn in a KML file with the KML Path Length tool — LineString geometry summed locally, point by point. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a four-point riverside path in a KML — segments of 0.739, 0.838 and 0.794 km along the Thames — totals 2.371 km of drawn geometry, computed from the file's own coordinates.",
+ "quick_answer": "The KML Path Length tool reads a KML file locally, extracts its LineString paths and sums the great-circle distance between consecutive coordinates, in kilometres and miles. Drop the file and read how long the drawn paths really are — from the geometry itself, not the file's description of it.",
+ "steps_intro": "The path is in the file. Measure the file:",
+ "use_cases": [
+  {
+   "title": "Verifying a published trail KML",
+   "body": [
+    {
+     "t": "A walking site claims 14 km; the file's LineString sums to 11.8. Believe the geometry — descriptions outlive edits, coordinates do not lie politely. The GPX sibling is the "
+    },
+    {
+     "t": "GPX Track Distance Calculator",
+     "l": "/tools/gpx-track-distance-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Planning from a drawn route",
+   "body": [
+    {
+     "t": "Someone drew the route in Google Earth and sent the KML. Its length prices the day before the day prices you."
+    }
+   ]
+  },
+  {
+   "title": "Utility and boundary work",
+   "body": [
+    {
+     "t": "Cable runs, fence lines and patrol paths stored as KML get budget-grade lengths from their drawn geometry."
+    }
+   ]
+  },
+  {
+   "title": "Comparing route variants",
+   "body": [
+    {
+     "t": "Two KMLs, two variants of a course — lengths side by side settle the 'shorter option' argument with arithmetic."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The Thames sample",
+   "body": [
+    {
+     "t": "Four points from Westminster downstream: hops of 0.739 + 0.838 + 0.794 km = 2.371 km. KML stores coordinates as lon,lat — the tool reads them in KML's own order, which is the bug this example exists to pre-empt in your own scripts."
+    }
+   ]
+  },
+  {
+   "label": "Example · Drawn versus walked",
+   "body": [
+    {
+     "t": "A hand-drawn path cuts every corner its author smoothed with the mouse — drawn lengths run a few percent under walked truth on winding ground, the same chord bias as sparse GPS, in a cheaper suit."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What gets measured",
+  "intro": "The geometry census behind the length.",
+  "columns": [
+   "KML content",
+   "Measured?",
+   "Treatment"
+  ],
+  "rows": [
+   [
+    "LineString",
+    "Yes",
+    "Consecutive tuples summed by haversine"
+   ],
+   [
+    "LinearRing (Polygon edge)",
+    "Perimeter on request of the geometry",
+    "The ring's closed loop summed"
+   ],
+   [
+    "Point",
+    "No length",
+    "Zero extent by definition"
+   ],
+   [
+    "gx:Track",
+    "Not standard KML geometry",
+    "A Google extension — GPX tools own track arithmetic"
+   ]
+  ],
+  "note": "Altitude in the tuples is ignored for length: the measurement is surface distance, like the GPX tools — a 10% grade adds only ~0.5% of true slope distance."
+ },
+ "faq": [
+  [
+   "Are Polygon boundaries measured?",
+   "Ring geometry is measurable and reported as perimeter where the file's structure presents it; open LineStrings are the primary path case. Points contribute nothing, correctly."
+  ],
+  [
+   "KML coordinates are lon,lat — really?",
+   "Really: KML's tuple order is longitude,latitude[,altitude] — the reverse of GPX and of everyday speech. The tool parses KML's convention natively; most hand-rolled scripts that get KML wrong, get this wrong."
+  ],
+  [
+   "Drawn in Google Earth versus recorded by GPS?",
+   "Both are polylines to this tool. Drawn paths carry the corner-smoothing bias; recorded dense tracks carry almost none — the number is the file's, the interpretation is yours."
+  ],
+  [
+   "Closed paths (loops)?",
+   "A LineString whose last tuple returns to its first closes the loop in the sum. An unclosed 'loop' measures open — check the file if the total feels one leg short."
+  ],
+  [
+   "Does it follow roads or paths on the ground?",
+   "No — straight hops between the file's tuples, the geometry as drawn. Snapping to a path network is a routing engine's job."
+  ],
+  [
+   "Very long lines (flight paths)?",
+   "Haversine hops are great-circle segments — a transcontinental LineString sums as the sphere dictates, which is the correct behaviour for a straight-line file."
+  ],
+  [
+   "Empty or single-point LineStrings?",
+   "They sum to zero, reported as such — a degenerate path is a finding, not a failure."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "GPX equivalent: the "
+  },
+  {
+   "t": "GPX Track Distance Calculator",
+   "l": "/tools/gpx-track-distance-calculator"
+  },
+  {
+   "t": "; geometry census: the "
+  },
+  {
+   "t": "KML Coordinate Block Counter",
+   "l": "/tools/kml-coordinate-block-counter"
+  },
+  {
+   "t": "; see the path: the "
+  },
+  {
+   "t": "KML Viewer",
+   "l": "/tools/kml-viewer"
+  },
+  {
+   "t": "; GeoJSON lengths: the "
+  },
+  {
+   "t": "GeoJSON Length Calculator",
+   "l": "/tools/geojson-length-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

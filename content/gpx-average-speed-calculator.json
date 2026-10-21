@@ -8,17 +8,155 @@
   "gpx track speed",
   "calculate gpx speed"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Average Speed Calculator: Track Pace Truth",
+ "description": "Compute average speed from a GPX track's distance and elapsed time with the GPX Average Speed Calculator — elapsed, not moving. Free, local.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a 10-kilometre track recorded over exactly 2,400 seconds of elapsed time averages exactly 15.0 km/h — including every red light and photo stop inside those 40 minutes.",
+ "quick_answer": "The GPX Average Speed Calculator combines a GPX track's total distance with the span between its first and last timestamps to give the overall average speed. Load the file locally and read the elapsed-time average — the only average a timestamp range can truthfully produce.",
+ "steps_intro": "Distance divided by the whole clock — here is what that means and does not:",
+ "use_cases": [
+  {
+   "title": "Comparing rides fairly",
+   "body": [
+    {
+     "t": "Two recordings of the same route: elapsed average exposes who stopped for coffee. Moving averages hide it — know which number you are quoting, and get moving detail from the "
+    },
+    {
+     "t": "GPX Speed / Pace Helper",
+     "l": "/tools/gpx-speed-pace-helper"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Checking a watch's summary",
+   "body": [
+    {
+     "t": "Devices disagree about pause handling. Recompute the elapsed average from the raw file and the argument ends with arithmetic."
+    }
+   ]
+  },
+  {
+   "title": "Logistics and hike planning",
+   "body": [
+    {
+     "t": "Your group's real pace over a trail, stops included, from last weekend's GPX is next weekend's plan — the elapsed average is the planning number."
+    }
+   ]
+  },
+  {
+   "title": "Data cleaning",
+   "body": [
+    {
+     "t": "An absurd average (300 km/h on a hike) flags a corrupt timestamp or a teleporting GPS point before it poisons a training log."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The arithmetic, shown",
+   "body": [
+    {
+     "t": "10.00 km over 2,400 seconds: 2,400 s is 0.6667 hours, and 10 ÷ 0.6667 = 15.0 km/h. Every average-speed figure on Earth is this division wearing different data."
+    }
+   ]
+  },
+  {
+   "label": "Example · A small loop, fully worked",
+   "body": [
+    {
+     "t": "A four-point park loop of 2.06 km recorded over 900 seconds averages 8.25 km/h — a jog with a pause in it somewhere, which is precisely what the elapsed number cannot locate."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Elapsed versus moving average",
+  "intro": "The two averages training platforms quote — and which questions each answers.",
+  "columns": [
+   "",
+   "Elapsed average (this tool)",
+   "Moving average"
+  ],
+  "rows": [
+   [
+    "Denominator",
+    "First to last timestamp",
+    "Time above a motion threshold"
+   ],
+   [
+    "Pauses",
+    "Counted in full",
+    "Excluded by the device's rule"
+   ],
+   [
+    "Answers",
+    "How long did the outing take per kilometre?",
+    "How fast when actually moving?"
+   ],
+   [
+    "Depends on",
+    "Only the file's endpoints",
+    "The platform's pause threshold"
+   ]
+  ],
+  "note": "Neither average is 'the true one' — they answer different questions. Quoting one while meaning the other is how training arguments start."
+ },
+ "faq": [
+  [
+   "How is distance measured between trackpoints?",
+   "Great-circle (haversine) distance between consecutive trackpoints on the WGS84 sphere, summed along the track — the same method the route-stats tools on this site use."
+  ],
+  [
+   "What if the GPX has no timestamps?",
+   "No span, no average — the file must carry <time> elements on its trackpoints. The Timestamp Span Calculator shows exactly what time data a file holds."
+  ],
+  [
+   "Multiple tracks or segments in one file?",
+   "The average spans the file's recorded activity; segments separated by long gaps (an overnight pause) will drag the average hard. Split such files per outing for meaningful numbers."
+  ],
+  [
+   "Does elevation affect the speed?",
+   "No — this is horizontal ground speed over elapsed time. Vertical speed is its own curiosity, answered by the elevation tools from the same file."
+  ],
+  [
+   "Units?",
+   "Kilometres per hour and miles per hour both — cycling and running audiences read different dials, and pace (minutes per unit) lives on the Speed / Pace Helper page."
+  ],
+  [
+   "Why is my average lower than my watch showed?",
+   "Almost always pauses: your watch likely auto-paused, the elapsed clock did not. The difference between the two numbers is your stopped time, priced."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Fastest moment: the "
+  },
+  {
+   "t": "GPX Maximum Speed Calculator",
+   "l": "/tools/gpx-max-speed-calculator"
+  },
+  {
+   "t": "; pace view: the "
+  },
+  {
+   "t": "GPX Speed / Pace Helper",
+   "l": "/tools/gpx-speed-pace-helper"
+  },
+  {
+   "t": "; the clock itself: the "
+  },
+  {
+   "t": "GPX Duration Calculator",
+   "l": "/tools/gpx-duration-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

@@ -8,17 +8,169 @@
   "temperature vs elevation",
   "altitude temperature calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Temperature Change by Elevation Calculator",
+ "description": "Estimate how temperature changes with elevation using the Temperature Change by Elevation Calculator — the standard lapse rate, applied. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, on a standard-lapse day a 30°C (86°F) afternoon at sea level becomes about 19.5°C (67°F) up in Denver at 5,279 feet — the mile-high discount, computed.",
+ "quick_answer": "The Temperature Change by Elevation Calculator estimates the temperature at a different elevation from a starting temperature, using the standard lapse rate of 6.5°C cooler per 1,000 metres climbed. Enter the starting temperature and the elevation change and read the estimate — for summit forecasts, pass crossings and packing decisions.",
+ "steps_intro": "Climb a kilometre, lose about six and a half degrees:",
+ "use_cases": [
+  {
+   "title": "Summit and pass estimates",
+   "body": [
+    {
+     "t": "The trailhead board says 24°C; the summit is 1,800 m higher, so plan for roughly 12°C up top — the arithmetic behind every 'take a layer' decision. The rate itself is dissected in the "
+    },
+    {
+     "t": "Temperature Lapse Rate Calculator",
+     "l": "/tools/temperature-lapse-rate-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Packing for mountain trips",
+   "body": [
+    {
+     "t": "A valley holiday and a high-camp night are two climates on one trip. Estimating both ends stops the classic mistake of dressing for the car park."
+    }
+   ]
+  },
+  {
+   "title": "Road-trip weather across ranges",
+   "body": [
+    {
+     "t": "Crossing a 2,000 m pass between two warm valleys means a midday stop near freezing in shoulder seasons — worth knowing before the convertible top goes down."
+    }
+   ]
+  },
+  {
+   "title": "Checking a forecast's plausibility",
+   "body": [
+    {
+     "t": "A forecast that shows the summit warmer than the standard estimate is not automatically wrong — inversions exist — but it has explaining to do."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Sea level to Pikes Peak",
+   "body": [
+    {
+     "t": "Pikes Peak rises 4,302 m. Standard lapse: 6.5 × 4.302 ≈ 28.0°C colder — a 30°C plains day becomes roughly 2°C at the summit, before wind has its say."
+    }
+   ]
+  },
+  {
+   "label": "Example · The per-thousand-feet rule",
+   "body": [
+    {
+     "t": "In imperial terms the standard rate is about 3.6°F per 1,000 feet. A 5,000-foot climb from an 80°F trailhead estimates to about 62°F — the version of the rule American hikers actually carry."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Standard-lapse estimates",
+  "intro": "Computed at 6.5°C per 1,000 m from a 30°C (86°F) start — the estimator's own arithmetic.",
+  "columns": [
+   "Elevation gain",
+   "Temperature drop",
+   "Estimate from 30°C"
+  ],
+  "rows": [
+   [
+    "500 m (1,640 ft)",
+    "3.3°C (5.9°F)",
+    "26.8°C (80°F)"
+   ],
+   [
+    "1,000 m (3,281 ft)",
+    "6.5°C (11.7°F)",
+    "23.5°C (74°F)"
+   ],
+   [
+    "1,609 m (Denver)",
+    "10.5°C (18.8°F)",
+    "19.5°C (67°F)"
+   ],
+   [
+    "2,000 m (6,562 ft)",
+    "13.0°C (23.4°F)",
+    "17.0°C (63°F)"
+   ],
+   [
+    "3,000 m (9,843 ft)",
+    "19.5°C (35.1°F)",
+    "10.5°C (51°F)"
+   ],
+   [
+    "4,302 m (Pikes Peak)",
+    "28.0°C (50.3°F)",
+    "2.0°C (36°F)"
+   ]
+  ],
+  "note": "The standard lapse rate is an average atmosphere, not a promise. Dry air cools faster (up to about 9.8°C/km), saturated air slower (near 5°C/km), and inversions break the rule entirely."
+ },
+ "faq": [
+  [
+   "Why do mountains feel colder than the estimate?",
+   "Wind, exposure and radiation do what the lapse rate does not model. The estimate is the air's temperature; what you feel adds wind chill and sun, or the lack of it."
+  ],
+  [
+   "Does the estimate work going down?",
+   "Yes — descending air warms at the same standard rate in this model, which is why valleys and basins can be startlingly warm below a cool plateau."
+  ],
+  [
+   "What about temperature inversions?",
+   "On calm clear nights, cold air pools in valleys and temperature can rise with elevation — the reverse of the standard. The calculator models the standard atmosphere and says so; inversion mornings are the known exception."
+  ],
+  [
+   "Should I use this for aviation planning?",
+   "Only as background intuition. Flight planning uses forecast soundings and official meteorological data, not a single standard rate — density and icing decisions are not lapse-rate arithmetic."
+  ],
+  [
+   "How does humidity change the answer?",
+   "Rising saturated air cools more slowly (around 5°C/km) because condensing vapour releases heat. Humid ranges run warmer aloft than the standard suggests; deserts run colder."
+  ],
+  [
+   "Can I start from Fahrenheit?",
+   "Yes — the calculator handles °F inputs, applying the equivalent rate of about 3.6°F per 1,000 feet."
+  ],
+  [
+   "Why 6.5 and not some other number?",
+   "It is the International Standard Atmosphere's tropospheric lapse rate — a defined average chosen for engineering and aviation consistency, refined by this page's sibling tools when you have two real measurements."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The rate itself: the "
+  },
+  {
+   "t": "Temperature Lapse Rate Calculator",
+   "l": "/tools/temperature-lapse-rate-calculator"
+  },
+  {
+   "t": "; pressure side: "
+  },
+  {
+   "t": "Air Pressure by Elevation",
+   "l": "/tools/air-pressure-by-elevation"
+  },
+  {
+   "t": "; boiling point: the "
+  },
+  {
+   "t": "Boiling Point by Elevation Calculator",
+   "l": "/tools/boiling-point-by-elevation-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "antenna-height-distance-calculator",
   "antipode-finder",

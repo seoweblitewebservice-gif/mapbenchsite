@@ -7,17 +7,154 @@
   "city boundary kml",
   "boundary geojson download"
  ],
- "title": null,
- "description": null,
+ "title": "Boundary KML Downloader: Place Outlines as Files",
+ "description": "Download a city, county or region boundary as KML or GeoJSON with the Boundary KML Downloader — preview on the map, area included. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, downloading Austin, Texas gives you the city's full outline as one KML file — about 845.7 km² of enclosed ground (326.5 square miles), ready for Google Earth or any GIS.",
+ "quick_answer": "The Boundary KML Downloader finds the outline of a city, county or region and saves it as a KML or GeoJSON file you can open anywhere. Search the place, check the boundary on the map, and download — with the enclosed area computed from the outline itself, in your browser.",
+ "steps_intro": "A place name in, a boundary file out:",
+ "use_cases": [
+  {
+   "title": "Reports and presentations",
+   "body": [
+    {
+     "t": "A clean jurisdiction outline drops into slides and PDFs without tracing screenshots. Pair with the "
+    },
+    {
+     "t": "Country Boundary Downloader",
+     "l": "/tools/country-boundary-downloader"
+    },
+    {
+     "t": " when the report zooms out to nations."
+    }
+   ]
+  },
+  {
+   "title": "GIS starting geometry",
+   "body": [
+    {
+     "t": "Service areas, sales territories and study extents all start from an administrative outline — download it here, then clip your data against it in QGIS or ArcGIS."
+    }
+   ]
+  },
+  {
+   "title": "Google Earth projects",
+   "body": [
+    {
+     "t": "KML is Earth’s native tongue: the downloaded file opens as a placemark polygon you can style, label and fly to."
+    }
+   ]
+  },
+  {
+   "title": "Checking a boundary claim",
+   "body": [
+    {
+     "t": "A vendor’s coverage map says ‘the whole county’. Download the county and overlay — the outline either agrees or the conversation changes."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · What is inside the file",
+   "body": [
+    {
+     "t": "A KML boundary is a Placemark holding a Polygon whose outerBoundaryIs ring lists longitude,latitude pairs around the place. The GeoJSON flavour carries the same outline as a Polygon or MultiPolygon feature — one geometry, two envelopes."
+    }
+   ]
+  },
+  {
+   "label": "Example · Islands and enclaves",
+   "body": [
+    {
+     "t": "Places with detached parts (islands, exclaves) download as MultiPolygons — every part in one file, so an island county does not arrive amputated."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "KML or GeoJSON — which download?",
+  "intro": "Same outline, different ecosystems.",
+  "columns": [
+   "Format",
+   "Open it with",
+   "Best for"
+  ],
+  "rows": [
+   [
+    "KML",
+    "Google Earth, Google My Maps",
+    "Sharing, presenting, Earth projects"
+   ],
+   [
+    "GeoJSON",
+    "QGIS, web maps, code",
+    "GIS work, web development, data pipelines"
+   ],
+   [
+    "Either",
+    "Both carry WGS84 lon/lat",
+    "Coordinates are longitude first in both files"
+   ]
+  ],
+  "note": "Boundaries come from open map data (OpenStreetMap’s administrative records): excellent for general work, while legal jurisdiction questions belong to official survey sources."
+ },
+ "faq": [
+  [
+   "Which places can I download?",
+   "Cities, counties, regions and other administrative areas present in the open boundary data — from US counties and German Landkreise to French communes. Very small or unmapped jurisdictions may not have a recorded outline."
+  ],
+  [
+   "What file types are offered?",
+   "KML for the Google Earth world and GeoJSON for GIS and web work. Both hold the same WGS84 outline; only the envelope differs."
+  ],
+  [
+   "Can I download several places at once?",
+   "One place per download keeps files clean and named. For a set, download each and merge in your GIS — boundaries combine trivially as features."
+  ],
+  [
+   "Why does the outline look simplified on the map?",
+   "Previews may generalise dense outlines for speed; the downloaded geometry follows the source data’s detail. Zoom in before judging a coastline."
+  ],
+  [
+   "Does it include ZIP code boundaries?",
+   "ZIPs are postal, not administrative — the dedicated ZIP boundary tools on this site cover that family. Administrative places live here."
+  ],
+  [
+   "Can I edit the boundary after downloading?",
+   "Yes — the file is yours. Edit vertices in QGIS or Google Earth; just remember an edited outline is your geometry, not the source’s record."
+  ],
+  [
+   "What about disputed or changing boundaries?",
+   "The file reflects the open data’s current documented position. Annexations and disputes resolve in the data over time, not in this downloader."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Nations: the "
+  },
+  {
+   "t": "Country Boundary Downloader",
+   "l": "/tools/country-boundary-downloader"
+  },
+  {
+   "t": "; your own files measured: the "
+  },
+  {
+   "t": "GeoJSON Area Calculator",
+   "l": "/tools/geojson-area-calculator"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "GeoJSON Bounding Box Calculator",
+   "l": "/tools/geojson-bounding-box-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "cluster-map-from-points",
   "csv-column-counter",

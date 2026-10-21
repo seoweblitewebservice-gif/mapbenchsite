@@ -8,17 +8,154 @@
   "xyz tile to quadkey converter tool",
   "how to calculate xyz tile to quadkey converter"
  ],
- "title": null,
- "description": null,
+ "title": "XYZ Tile to Quadkey Converter: Encode the Tile",
+ "description": "Encode XYZ tile numbers as a Bing quadkey with the XYZ Tile to Quadkey Converter — interleaved bits, leading zeros preserved. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, tile (9649, 12314) at zoom 15 encodes to quadkey 032010110132021 — fifteen digits for fifteen zoom levels, and that leading zero is load-bearing.",
+ "quick_answer": "The XYZ Tile to Quadkey Converter encodes a tile's z, x and y numbers as the single quadkey string Bing-style systems use, interleaving the x and y bits level by level. Enter the tile numbers and read the quadkey — ready for quadkey-keyed datasets and caches, leading zeros intact.",
+ "steps_intro": "Three numbers become one string — carefully:",
+ "use_cases": [
+  {
+   "title": "Publishing to quadkey systems",
+   "body": [
+    {
+     "t": "Your stack speaks XYZ; the partner's dataset is keyed by quadkey. Encode here, verify by decoding back with the "
+    },
+    {
+     "t": "Quadkey to XYZ Tile Converter",
+     "l": "/tools/quadkey-to-xyz-tile-converter"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Cache and URL construction",
+   "body": [
+    {
+     "t": "Bing-style tile endpoints take quadkeys in the path — this page mints them from the tile numbers your library already computed."
+    }
+   ]
+  },
+  {
+   "title": "Dataset exports",
+   "body": [
+    {
+     "t": "Adding a quadkey column to XYZ-keyed rows joins them to the quadkey world — string column, never numeric, as the examples warn."
+    }
+   ]
+  },
+  {
+   "title": "Spot-checking an encoder",
+   "body": [
+    {
+     "t": "Libraries are trusted after their hundredth correct output; the first ninety-nine get checked against reference pages like this one."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The interleaving, shown",
+   "body": [
+    {
+     "t": "At each level, the digit takes one bit from x and one from y: 0 = neither, 1 = x's, 2 = y's, 3 = both. Zoom 15's fifteen digits for Times Square's tile spell 032010110132021 — decode it and (9649, 12314) returns, exactly."
+    }
+   ]
+  },
+  {
+   "label": "Example · The leading zero is data",
+   "body": [
+    {
+     "t": "032010110132021 stored as a number becomes 32010110132021 — a zoom-14 key for a different tile. Every export warning in this family traces back to that one spreadsheet moment."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Encoding rules",
+  "intro": "The whole algorithm, honestly small.",
+  "columns": [
+   "Rule",
+   "Detail"
+  ],
+  "rows": [
+   [
+    "Digits per level",
+    "One base-4 digit per zoom level, from the top of the pyramid down"
+   ],
+   [
+    "Digit value",
+    "x-bit + 2 × y-bit at that level (0–3)"
+   ],
+   [
+    "Length",
+    "Always equals the zoom — pad nothing, drop nothing"
+   ],
+   [
+    "Leading zeros",
+    "Significant: they encode the northwestern ancestry"
+   ],
+   [
+    "Data type",
+    "Text. Forever. (See the example.)"
+   ]
+  ],
+  "note": "The encoding is pure bit arithmetic with no tables and no approximation — a quadkey either round-trips to the same tile or something upstream is broken."
+ },
+ "faq": [
+  [
+   "What if x or y exceed the zoom's grid?",
+   "At zoom z, x and y run 0 … 2^z − 1. Out-of-range inputs are rejected, not wrapped — a tile address outside the grid is a bug report, not a tile."
+  ],
+  [
+   "Does it handle TMS-flipped y?",
+   "Quadkeys are defined on the unflipped XYZ grid. If your stack flips y, un-flip before encoding (y = 2^z − 1 − y_tms) or the key belongs to the mirrored tile."
+  ],
+  [
+   "Zoom 0?",
+   "The empty string — the whole-world tile's quadkey. Legal, useless, and a fine test of downstream string handling."
+  ],
+  [
+   "Maximum zoom?",
+   "Bing's definition reaches 23. This encoder follows the same arithmetic as far as your z honestly goes."
+  ],
+  [
+   "Verify my quadkey?",
+   "Decode it with the Quadkey to XYZ Tile Converter and compare — round-trip equality is the only audit that matters."
+  ],
+  [
+   "Parent and children keys?",
+   "Parent: drop the last digit. Children: append 0, 1, 2, 3. Tile genealogy as string surgery — the property that makes quadkeys beloved in databases."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Decode: the "
+  },
+  {
+   "t": "Quadkey to XYZ Tile Converter",
+   "l": "/tools/quadkey-to-xyz-tile-converter"
+  },
+  {
+   "t": "; the bridge: the "
+  },
+  {
+   "t": "Quadkey / Tile XYZ Helper",
+   "l": "/tools/quadkey-tile-helper"
+  },
+  {
+   "t": "; points to tiles: the "
+  },
+  {
+   "t": "Latitude Longitude to Map Tile Calculator",
+   "l": "/tools/lat-lon-to-map-tile-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "city-from-coordinates",
   "coordinate-bounding-box-generator",

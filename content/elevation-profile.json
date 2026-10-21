@@ -6,17 +6,159 @@
   "hike elevation profile",
   "cycling elevation gain"
  ],
- "title": null,
- "description": null,
+ "title": "Elevation Profile: Route Ascent, Descent, Grade",
+ "description": "Build an elevation profile for any route with Elevation Profile — total ascent and descent, min and max height, steepest grade, chart included. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a 12.4 km ridge walk gaining 640 m of total ascent averages 51.6 m of climb per kilometre — the profile turns that one number into the whole story of where the climbing lives.",
+ "quick_answer": "Elevation Profile charts the height of the ground along any route you click on the map, and totals it: minimum and maximum elevation, total ascent and descent, and the steepest grade. Draw the route and read its shape — the difference between a walk and a climb, made visible.",
+ "steps_intro": "Click the route; read its shape:",
+ "use_cases": [
+  {
+   "title": "Hike planning",
+   "body": [
+    {
+     "t": "Total ascent — not summit height — is what legs feel. Profile the route before the boots commit; point heights come from the "
+    },
+    {
+     "t": "Elevation Finder",
+     "l": "/tools/elevation-finder"
+    },
+    {
+     "t": ", whole-route shape lives here."
+    }
+   ]
+  },
+  {
+   "title": "Cycling route grading",
+   "body": [
+    {
+     "t": "Steepest grade decides gearing and honesty: a ride averaging 5.2% with one 14% wall is two different rides, and the profile names both."
+    }
+   ]
+  },
+  {
+   "title": "Race and event courses",
+   "body": [
+    {
+     "t": "Organisers publish profiles because runners plan pacing by them — where the climb sits (mile 2 or mile 20) changes the race."
+    }
+   ]
+  },
+  {
+   "title": "Road and driveway feasibility",
+   "body": [
+    {
+     "t": "A proposed access road's grade against vehicle and code limits starts as a profile across the terrain, before any surveyor is hired."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Reading a profile properly",
+   "body": [
+    {
+     "t": "Total ascent (640 m) exceeds the start-to-finish height change on any rolling route — every dip re-buys its height. The profile's ascent figure is the honest one; the endpoints' difference is the liar."
+    }
+   ]
+  },
+  {
+   "label": "Example · Grade in plain terms",
+   "body": [
+    {
+     "t": "A sustained 5.2% average (640 m over 12.4 km) is a solid mountain walk; roads for cars rarely sustain over 6–7%, and the steepest pitch on the profile — not the average — is where trailers and knees complain."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the profile reports",
+  "intro": "Each stat and the decision it feeds.",
+  "columns": [
+   "Statistic",
+   "Meaning",
+   "Used for"
+  ],
+  "rows": [
+   [
+    "Min / max elevation",
+    "The route's floor and ceiling",
+    "Layers, water, snow expectations"
+   ],
+   [
+    "Total ascent / descent",
+    "Every metre climbed, dips included",
+    "Effort budgeting — the honest workload"
+   ],
+   [
+    "Steepest grade",
+    "The hardest pitch anywhere on the route",
+    "Gearing, vehicle limits, warnings"
+   ],
+   [
+    "Chart (SVG)",
+    "Height against distance",
+    "Seeing where the work lives"
+   ]
+  ],
+  "note": "Ascent totals depend on the terrain model's sampling: more samples catch more small dips and raise the total. Two tools can honestly report different ascents for one route — method, not error."
+ },
+ "faq": [
+  [
+   "Can I profile a route from a GPX file?",
+   "This page builds routes by clicking; GPX files from watches and apps carry their own recorded elevation, which their native apps profile best. Click the same line here when you want the terrain model's impartial version."
+  ],
+  [
+   "Why does my watch disagree with the profile?",
+   "Barometric watches measure air pressure live (accurate day to day, drifting with weather); the profile samples a stored terrain model. Differences of a few percent in total ascent are normal between the methods."
+  ],
+  [
+   "What is a good grade for a driveway?",
+   "Most vehicles and codes are comfortable under about 10–12% sustained; beyond that, ice and loaded trucks vote no. The profile's steepest-grade figure is the number to hold against local rules."
+  ],
+  [
+   "Does the profile include bridges and tunnels?",
+   "Terrain models mostly follow the ground surface — a route over a gorge bridge will profile the gorge unless the model's data says otherwise. Read cliff-edge artefacts with that in mind."
+  ],
+  [
+   "How long a route can I draw?",
+   "As long as patience allows clicks. Very long routes are better sketched in segments — the totals add, and each segment's shape stays legible."
+  ],
+  [
+   "Vertical exaggeration?",
+   "Charts stretch the vertical axis so relief is visible; the numbers (ascent, grade) are computed from true values, not from the stretched picture."
+  ],
+  [
+   "Metric and imperial?",
+   "Heights and distances show in both conventions — feet and miles for the US reader, metres and kilometres alongside."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Point heights: the "
+  },
+  {
+   "t": "Elevation Finder",
+   "l": "/tools/elevation-finder"
+  },
+  {
+   "t": "; summits: the "
+  },
+  {
+   "t": "Peak Elevation Lookup",
+   "l": "/tools/peak-elevation-profile"
+  },
+  {
+   "t": "; steepness as a ratio: the "
+  },
+  {
+   "t": "Relief Ratio Calculator",
+   "l": "/tools/relief-ratio-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "air-pressure-by-elevation",
   "antenna-height-distance-calculator",

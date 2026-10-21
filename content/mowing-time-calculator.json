@@ -8,17 +8,181 @@
   "mowing time calculator tool",
   "how to use mowing time calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Mowing Time Calculator: How Long Will It Take?",
+ "description": "Estimate mowing time from lawn size, deck width and speed with the Mowing Time Calculator — real-world coverage rates with overlap included. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a one-acre lawn under a 42-inch mower at 3 mph takes about 59 minutes — not the 40 the deck-width brochure implies, because turns and overlap are real.",
+ "quick_answer": "The Mowing Time Calculator estimates how long a lawn takes from its area, the mower's cutting width and a realistic ground speed, adjusted for overlap and turning efficiency. Enter the lawn size and your mower and read the time — the honest version, not the box's theoretical rate.",
+ "steps_intro": "Area ÷ (width × speed × efficiency) — with efficiency doing the honest work:",
+ "use_cases": [
+  {
+   "title": "Weekend planning",
+   "body": [
+    {
+     "t": "Half an acre, a push mower and 75 minutes of daylight left: the calculator says start now or delegate. Lawn size from the "
+    },
+    {
+     "t": "Map Area Calculator",
+     "l": "/tools/map-area-calculator"
+    },
+    {
+     "t": " if the acreage is a family legend."
+    }
+   ]
+  },
+  {
+   "title": "Mower buying decisions",
+   "body": [
+    {
+     "t": "Stepping from a 21-inch push mower (about 2½ hours per acre) to a 52-inch zero-turn (about 27 minutes) is a purchase this page prices in the currency that matters: Saturdays."
+    }
+   ]
+  },
+  {
+   "title": "Lawn-care quoting",
+   "body": [
+    {
+     "t": "Crews quote from time. Area, deck and efficiency give the defensible estimate to build a price on — clients accept arithmetic more readily than adjectives."
+    }
+   ]
+  },
+  {
+   "title": "Comparing properties",
+   "body": [
+    {
+     "t": "The bigger yard's hidden cost is mowing hours per season: at 30 cuts a year, the acre at 59 minutes is 30 hours of summer the smaller lot never asks for."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Three mowers, one acre",
+   "body": [
+    {
+     "t": "21-inch push mower at 2.5 mph and 75% efficiency: about 151 minutes. 42-inch lawn tractor at 3 mph, 80%: about 59 minutes. 52-inch zero-turn at 5 mph, 85%: about 27 minutes. Deck width and speed are both levers; efficiency is the tax collector."
+    }
+   ]
+  },
+  {
+   "label": "Example · Why efficiency is never 100%",
+   "body": [
+    {
+     "t": "Passes overlap a few inches, turns cost seconds, and obstacles tax every lap. Golf-course fairway units with wide decks and no trees approach 85–90%; a fenced yard with a trampoline lives nearer 65–75%."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Coverage rates that survive contact with lawns",
+  "intro": "Computed: width (ft) × speed (mph) × 5,280 × efficiency ÷ 43,560.",
+  "columns": [
+   "Mower",
+   "Deck",
+   "Speed",
+   "Efficiency",
+   "Acres per hour",
+   "Time per acre"
+  ],
+  "rows": [
+   [
+    "Push mower",
+    "21 in",
+    "2.5 mph",
+    "75%",
+    "0.40",
+    "~151 min"
+   ],
+   [
+    "Lawn tractor",
+    "42 in",
+    "3 mph",
+    "80%",
+    "1.02",
+    "~59 min"
+   ],
+   [
+    "Zero-turn",
+    "52 in",
+    "5 mph",
+    "85%",
+    "2.23",
+    "~27 min"
+   ],
+   [
+    "Wide-area walk-behind",
+    "36 in",
+    "3.5 mph",
+    "80%",
+    "1.02",
+    "~59 min"
+   ]
+  ],
+  "note": "Rates assume grass that is being maintained, not rescued. First cuts of the season, wet grass and bagging all slow the real pace — the efficiency slider is where honesty enters."
+ },
+ "faq": [
+  [
+   "What efficiency should I enter?",
+   "Open, rectangular, obstacle-free lawns: 80–85%. Typical suburban yards with beds, trees and fences: 70–80%. Obstacle obstacle-courses with a push mower: 60–70%. When in doubt, 75% is the grizzled default."
+  ],
+  [
+   "Bagging or mulching — does it matter?",
+   "Bagging adds emptying stops (5–10% slower in leaf season and spring flush); mulching and side-discharge run clean. The efficiency input is where the difference belongs."
+  ],
+  [
+   "Hills?",
+   "Slopes cut ground speed and raise caution, especially with tractors. Drop the speed a notch for hilly ground rather than discovering the adjustment mid-slope."
+  ],
+  [
+   "How do I get my lawn's mowable area?",
+   "House, drive, beds and woods do not get mowed. Measure the grass polygons in the Map Area Calculator, or subtract the obvious non-lawn from the lot size."
+  ],
+  [
+   "Striping and double-cutting?",
+   "A show lawn cut twice takes twice as long — run the calculator twice mentally or halve the effective width. Cross-hatching is a labour of love, priced accordingly."
+  ],
+  [
+   "Commercial crew pricing?",
+   "Time per visit × visits per season × your hourly rate is the skeleton; travel, trimming and edging add on. This calculator owns the mowing line of that quote — trimming a big yard can rival it."
+  ],
+  [
+   "Robot mowers?",
+   "They invert the problem: coverage is about battery cycles and weeks, not a single session. The per-acre rates here explain why the robot needs all week — it is a 20-inch deck with infinite patience."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Measure the lawn: the "
+  },
+  {
+   "t": "Map Area Calculator",
+   "l": "/tools/map-area-calculator"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Lot Size Calculator",
+   "l": "/tools/lot-size-calculator"
+  },
+  {
+   "t": "; edges and fences: the "
+  },
+  {
+   "t": "Perimeter Calculator",
+   "l": "/tools/perimeter-calculator"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Fence Length Calculator",
+   "l": "/tools/fence-length-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-area-from-radius",

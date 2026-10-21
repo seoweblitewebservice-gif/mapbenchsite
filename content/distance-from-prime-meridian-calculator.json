@@ -8,17 +8,162 @@
   "distance from prime meridian calculator tool",
   "how to use distance from prime meridian calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Distance From Prime Meridian Calculator",
+ "description": "Measure your distance from the prime meridian with the Distance From Prime Meridian Calculator — New York 6,036 km west of Greenwich's line. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, London itself is only 8.8 km west of the prime meridian at its latitude — while New York is 6,036 km away, roughly a quarter of the way around the world.",
+ "quick_answer": "The Distance From Prime Meridian Calculator measures the surface distance from your point to the prime meridian — the 0 degrees longitude line through Greenwich. Enter a place and read how far east or west of the world's zero line you stand.",
+ "steps_intro": "Every longitude is a distance from this line. Measure yours:",
+ "use_cases": [
+  {
+   "title": "Greenwich trip context",
+   "body": [
+    {
+     "t": "Standing on the line at Greenwich is the photo; this calculator tells everyone else how far their photo would have to travel. The line's finder page: "
+    },
+    {
+     "t": "Prime Meridian Finder",
+     "l": "/tools/prime-meridian-finder"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Time intuition",
+   "body": [
+    {
+     "t": "Distance from the meridian tracks solar-time difference: ~1,670 km at the equator per hour of longitude (15°). The clock version lives in the time-zone tools."
+    }
+   ]
+  },
+  {
+   "title": "Teaching longitude",
+   "body": [
+    {
+     "t": "Longitude stops being an abstract angle when it is 6,036 km of ocean and continent between you and a brass strip in London."
+    }
+   ]
+  },
+  {
+   "title": "Navigation heritage",
+   "body": [
+    {
+     "t": "Chronometers, the 1884 conference, the longitude problem — all of it was about measuring this distance at sea."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · New York's 6,036 km",
+   "body": [
+    {
+     "t": "Computed great-circle distance from New York to the meridian (crossing at New York's latitude): 6,036.2 km. The same figure for Chicago is 6,900.8 km — America's interior is a long way from zero."
+    }
+   ]
+  },
+  {
+   "label": "Example · The line moved (a little)",
+   "body": [
+    {
+     "t": "GPS zero (the IERS Reference Meridian) passes about 102 m east of the famous Airy transit circle at Greenwich — satellites re-surveyed what 1851 brass could not. On this calculator's scale, both are simply 'the line'."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reference distances to the prime meridian",
+  "intro": "Computed to the meridian at each place's own latitude.",
+  "columns": [
+   "Place",
+   "Distance"
+  ],
+  "rows": [
+   [
+    "Greenwich, London",
+    "0 km — the line itself"
+   ],
+   [
+    "Central London",
+    "8.8 km west"
+   ],
+   [
+    "Paris",
+    "172.1 km east"
+   ],
+   [
+    "New York",
+    "6,036.2 km west"
+   ],
+   [
+    "Chicago",
+    "6,900.8 km west"
+   ],
+   [
+    "Date line (180°)",
+    "~20,015 km either way at the equator"
+   ]
+  ],
+  "note": "The shortest route to a meridian is a great circle that meets it at right angles — for most places it runs close to (slightly poleward of) your own parallel."
+ },
+ "faq": [
+  [
+   "Why Greenwich?",
+   "The 1884 International Meridian Conference chose Greenwich — already the reference for most charts and the 0° of the dominant almanac — by vote. Paris kept its own meridian on maps for decades after."
+  ],
+  [
+   "East or west — does it say which?",
+   "Yes: the sign of your longitude is the answer, and the result reports the side. The distance itself is the same either way."
+  ],
+  [
+   "Great-circle or along the parallel/meridian?",
+   "The shortest surface distance to the line — for latitude lines that is the meridian arc; for the prime meridian it is the great-circle route to the nearest point of the meridian."
+  ],
+  [
+   "Does terrain or sea level matter?",
+   "No — distances are surface geometry on the reference sphere; mountains do not shorten the way to a latitude line."
+  ],
+  [
+   "Can the distance be zero?",
+   "Stand on the line and it is: the tropics and circles have real ground you can occupy, and the result honours it."
+  ],
+  [
+   "How accurate is it?",
+   "Sphere-accurate to well under a kilometre for these magnitudes — plenty for education, planning and curiosity; geodesists refine with the ellipsoid."
+  ],
+  [
+   "Southern and western inputs?",
+   "Signs and hemispheres are handled — a southern point measures to southern lines by the same geometry."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The line: the "
+  },
+  {
+   "t": "Prime Meridian Finder",
+   "l": "/tools/prime-meridian-finder"
+  },
+  {
+   "t": "; the equator: the "
+  },
+  {
+   "t": "Distance From Equator Calculator",
+   "l": "/tools/distance-from-equator-calculator"
+  },
+  {
+   "t": "; the circles: the "
+  },
+  {
+   "t": "Distance From Arctic Circle Calculator",
+   "l": "/tools/distance-from-arctic-circle"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "distance-from-tropic-of-capricorn",
   "distance-to-equator",
@@ -26,5 +171,13 @@
   "hemisphere-finder",
   "international-date-line",
   "latitude-band-finder"
+ ],
+ "related": [
+  "distance-from-equator-calculator",
+  "distance-from-arctic-circle",
+  "distance-from-antarctic-circle",
+  "distance-from-tropic-of-cancer",
+  "prime-meridian-finder",
+  "tropics-finder"
  ]
 }

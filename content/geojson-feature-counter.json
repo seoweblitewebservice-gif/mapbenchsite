@@ -8,17 +8,161 @@
   "number of features geojson",
   "geojson feature calculator"
  ],
- "title": null,
- "description": null,
+ "title": "GeoJSON Feature Counter: How Many Features?",
+ "description": "Count the top-level features in a GeoJSON file instantly with the GeoJSON Feature Counter — paste, read the number, done. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a sample file holding two points, a route line and a square counts 4 features — one per top-level Feature object, whatever geometry each one carries.",
+ "quick_answer": "The GeoJSON Feature Counter tells you how many top-level features a GeoJSON object contains. Paste the GeoJSON and read the count instantly: the size of the cast — one per Feature in a FeatureCollection, one for a lone Feature, and zero apology for how simple the question is.",
+ "steps_intro": "The first number anyone asks about a file:",
+ "use_cases": [
+  {
+   "title": "Reconciling deliveries",
+   "body": [
+    {
+     "t": "Ordered 500 features, received a file — count before you pay, integrate or complain. Expected-versus-actual gets its own instrument in the "
+    },
+    {
+     "t": "GeoJSON Feature Total Checker",
+     "l": "/tools/geojson-feature-total-checker"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Merge and split bookkeeping",
+   "body": [
+    {
+     "t": "Two files of 120 and 85 features merge into 205 — the count after the merge proves nothing was dropped on the floor."
+    }
+   ]
+  },
+  {
+   "title": "Sampling and QA planning",
+   "body": [
+    {
+     "t": "‘Inspect 5% of features’ is only a plan when the total is known. The count turns percentages into worklists."
+    }
+   ]
+  },
+  {
+   "title": "Quick file triage",
+   "body": [
+    {
+     "t": "A 3-feature file and a 300,000-feature file demand different tools and different patience. Count first, choose second."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · A lone Feature counts one",
+   "body": [
+    {
+     "t": "A file containing a single Feature object counts 1 — FeatureCollections count their members, bare Features count themselves. The rule is the spec’s shape, not a preference."
+    }
+   ]
+  },
+  {
+   "label": "Example · GeometryCollections ride inside",
+   "body": [
+    {
+     "t": "A Feature whose geometry is a GeometryCollection still counts as one feature — its many geometries are one cast member with a large costume, counted by the "
+    },
+    {
+     "t": "GeoJSON Geometry Type Counter",
+     "l": "/tools/geojson-geometry-type-counter"
+    },
+    {
+     "t": " instead."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What counts as one",
+  "intro": "The rule, by input shape.",
+  "columns": [
+   "Input",
+   "Count"
+  ],
+  "rows": [
+   [
+    "FeatureCollection",
+    "Length of its features array"
+   ],
+   [
+    "Single Feature",
+    "1"
+   ],
+   [
+    "Bare geometry (Point, Polygon…)",
+    "0 features — it is geometry, not a feature"
+   ],
+   [
+    "Empty FeatureCollection",
+    "0"
+   ]
+  ],
+  "note": "Features and vertices are different censuses: one feature can hold a million coordinates. Pair this count with the GeoJSON Coordinate Counter for the file’s full vital signs."
+ },
+ "faq": [
+  [
+   "What exactly is counted?",
+   "Top-level Feature objects. In a FeatureCollection, the members of its features array; a lone Feature counts as itself. Nested structures inside geometries do not inflate the count."
+  ],
+  [
+   "Bare geometry input?",
+   "A raw Point or Polygon contains no Features — the count is 0, correctly. Wrap geometry in a Feature (or let a converter do it) when feature semantics are needed."
+  ],
+  [
+   "Null-geometry features?",
+   "A Feature with geometry: null still counts — it exists, carries properties and is legal GeoJSON. Nulls are cast members without costumes."
+  ],
+  [
+   "Does order matter?",
+   "No — the count is order-blind, like all censuses. Order questions belong to the data, not the count."
+  ],
+  [
+   "Huge collections?",
+   "Counting is a parse and a length — even million-feature files count in moments in the browser, though pasting them is its own adventure."
+  ],
+  [
+   "Can it count per type?",
+   "That is the Geometry Type Counter’s breakdown — features grouped by Point, LineString, Polygon and the rest."
+  ],
+  [
+   "Properties inspected?",
+   "Only the structure is read. Which keys exist is the Property Key Finder’s report."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Verify a promised total: the "
+  },
+  {
+   "t": "GeoJSON Feature Total Checker",
+   "l": "/tools/geojson-feature-total-checker"
+  },
+  {
+   "t": "; vertices: the "
+  },
+  {
+   "t": "GeoJSON Coordinate Counter",
+   "l": "/tools/geojson-coordinate-counter"
+  },
+  {
+   "t": "; types: the "
+  },
+  {
+   "t": "GeoJSON Geometry Type Counter",
+   "l": "/tools/geojson-geometry-type-counter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

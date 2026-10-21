@@ -6,17 +6,163 @@
   "hike distance",
   "path length map"
  ],
- "title": null,
- "description": null,
+ "title": "Trail Distance Estimator: Path Length on the Map",
+ "description": "Estimate a trail's length from its path on the map with the Trail Distance Estimator — waypoint segments summed honestly, switchbacks included. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, four waypoints on a short ridge walk sum to 1.62 km of path while the endpoints sit only 1.34 km apart — the trail is 21% longer than the map's straight line, as trails always are.",
+ "quick_answer": "The Trail Distance Estimator measures the length of a path drawn or entered as waypoints on the map, summing the great-circle distance of every segment. Trace the route and read its true length in kilometres or miles — the number hikers and trail crews actually walk.",
+ "steps_intro": "Trails are not straight lines. Measure the line they actually take:",
+ "use_cases": [
+  {
+   "title": "Hike planning",
+   "body": [
+    {
+     "t": "Trace the route before you walk it and the day gains an honest length — then pair it with elevation context, since a flat 10 miles and a mountainous 10 miles are different days wearing the same number."
+    }
+   ]
+  },
+  {
+   "title": "Race and event courses",
+   "body": [
+    {
+     "t": "Trail races measured by waypoint sums explain why your watch disagrees: GPS sampling cuts corners the estimator keeps, if the waypoints hug the path."
+    }
+   ]
+  },
+  {
+   "title": "Trail maintenance and signage",
+   "body": [
+    {
+     "t": "Segment lengths between junctions are what signposts print. Crews measure them here before the signs are carved — and check totals against the "
+    },
+    {
+     "t": "Driving Distance Calculator",
+     "l": "/tools/driving-distance-calculator"
+    },
+    {
+     "t": " for the road approach."
+    }
+   ]
+  },
+  {
+   "title": "Checking a published trail length",
+   "body": [
+    {
+     "t": "Guidebooks disagree with each other constantly. An independent waypoint sum is the audit that ends the argument at the trailhead."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The switchback tax",
+   "body": [
+    {
+     "t": "Four example waypoints (a ridge path sampled from a GPS log) sum to 1.62 km, segment by segment: 0.25 + 0.68 + 0.68 km. Endpoint-to-endpoint is 1.34 km. The 21% difference is why straight-line tools understate every real trail."
+    }
+   ]
+  },
+  {
+   "label": "Example · Waypoint density decides truth",
+   "body": [
+    {
+     "t": "The same path traced with two points instead of four collapses to its chord and loses a fifth of its length. On curves, add waypoints until adding more stops changing the total — that convergence is the measurement."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Segments of the worked example",
+  "intro": "Each leg is a great-circle segment; the trail is their sum.",
+  "columns": [
+   "Segment",
+   "Length",
+   "Running total"
+  ],
+  "rows": [
+   [
+    "Waypoint 1 → 2",
+    "0.25 km",
+    "0.25 km"
+   ],
+   [
+    "Waypoint 2 → 3",
+    "0.68 km",
+    "0.94 km"
+   ],
+   [
+    "Waypoint 3 → 4",
+    "0.68 km",
+    "1.62 km"
+   ],
+   [
+    "Endpoints straight-line (for contrast)",
+    "1.34 km",
+    "— the underestimate"
+   ]
+  ],
+  "note": "On the ground, GPS tracks sample every few seconds and still cut sharp corners slightly. Denser waypoints approach the true path; the estimator is exact for the path you give it."
+ },
+ "faq": [
+  [
+   "How many waypoints do I need?",
+   "Enough that the polyline hugs the path: every switchback turn and curve deserves one. When doubling the points changes the total by under a percent, you have converged."
+  ],
+  [
+   "Why does my GPS watch show a different distance?",
+   "Sampling rate, signal noise in trees and gorges, and corner-cutting algorithms all move the total. A careful map trace and a watch recording measure the same trail with different instruments — small disagreements are normal, large ones mean a sparse trace."
+  ],
+  [
+   "Does it include climbing?",
+   "The length is horizontal map distance; steep ground adds a little true distance (a 20% grade adds about 2%). Your legs experience the climb as effort, not mileage — plan time with elevation tools alongside."
+  ],
+  [
+   "Out-and-back trails?",
+   "Trace the outward path and double it — or trace the return too if the route differs. The estimator sums what you give it, symmetrically honest."
+  ],
+  [
+   "Can I estimate a road route this way?",
+   "You can trace roads with waypoints, but the dedicated routing tools follow the road network automatically and add travel time. Waypoint tracing shines where no network exists: trails, fields, water, ice."
+  ],
+  [
+   "Miles or kilometres?",
+   "Both, with feet for short paths — trail culture in the US speaks miles, most of the world kilometres, and the estimator translates without opinion."
+  ],
+  [
+   "Closed loops?",
+   "Add the first point again at the end (or use the loop option where offered) so the closing segment counts — park loops and lollipop routes depend on it."
+  ],
+  [
+   "How accurate is the result?",
+   "As accurate as the traced path. The segment arithmetic is geodesic-exact; the fidelity question is entirely in waypoint placement, which the convergence habit in the first FAQ controls."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Road version: the "
+  },
+  {
+   "t": "Driving Distance Calculator",
+   "l": "/tools/driving-distance-calculator"
+  },
+  {
+   "t": "; point to point: the "
+  },
+  {
+   "t": "Distance Between Two Places",
+   "l": "/tools/distance-between-two-places"
+  },
+  {
+   "t": "; boundary walks: the "
+  },
+  {
+   "t": "Perimeter Calculator",
+   "l": "/tools/perimeter-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "airport-distance-calculator",
   "airport-midpoint-by-coordinates",

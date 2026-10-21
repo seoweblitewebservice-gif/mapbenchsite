@@ -6,17 +6,160 @@
   "random point on earth",
   "random location generator online"
  ],
- "title": null,
- "description": null,
+ "title": "Random Location Generator: Anywhere on Earth",
+ "description": "Generate a truly random location anywhere on Earth with the Random Location Generator — equal-area sampling, land-only option, no favourites. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, half of all truly random points fall within 30 degrees of the equator — not by bias, but because half the sphere's surface lies in that band. The ocean takes about seven in ten.",
+ "quick_answer": "The Random Location Generator picks a point uniformly over the Earth's surface — every square kilometre equally likely — and shows it on the map with its coordinates. Press generate and land somewhere honest: usually ocean, sometimes a place you will now spend ten minutes reading about.",
+ "steps_intro": "Uniform on the sphere — which surprises everyone the first time:",
+ "use_cases": [
+  {
+   "title": "Geography games and challenges",
+   "body": [
+    {
+     "t": "Daily random-point challenges, 'where in the world' quizzes and classroom lotteries need a generator with no favourite continents. The "
+    },
+    {
+     "t": "Latitude Longitude Map",
+     "l": "/tools/latitude-longitude-map"
+    },
+    {
+     "t": " explores the neighbourhood of whatever lands."
+    }
+   ]
+  },
+  {
+   "title": "Travel serendipity",
+   "body": [
+    {
+     "t": "Some travellers genuinely go. A random land point within reach is a trip-planning seed no algorithm's recommendation engine would dare make."
+    }
+   ]
+  },
+  {
+   "title": "Unbiased sampling seeds",
+   "body": [
+    {
+     "t": "Monte Carlo work over the sphere needs correct area-uniform points — naive latitude-uniform sampling over-weights the poles, the classic error this generator avoids."
+    }
+   ]
+  },
+  {
+   "title": "Writing and worldbuilding prompts",
+   "body": [
+    {
+     "t": "A random real place as a story's anchor — researched afterwards, chosen by nobody. Fiction with receipts."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Expect the ocean",
+   "body": [
+    {
+     "t": "Oceans cover about 71% of the surface, so roughly seven generates in ten splash. Land-only mode exists because most humans' curiosity is terrestrial — the toggle is labelled, the odds are published."
+    }
+   ]
+  },
+  {
+   "label": "Example · The pole illusion",
+   "body": [
+    {
+     "t": "Picking latitude uniformly at random would crowd points near the poles (where longitude lines converge). Area-uniform sampling thins them correctly — draw many points and the map fills evenly, pole to pole."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Where random points land",
+  "intro": "The honest odds, from the sphere's geometry and the planet's surface.",
+  "columns": [
+   "Outcome",
+   "Share",
+   "Why"
+  ],
+  "rows": [
+   [
+    "Ocean",
+    "~71%",
+    "The planet's surface is mostly water"
+   ],
+   [
+    "Land",
+    "~29%",
+    "All seven continents together"
+   ],
+   [
+    "Within ±30° latitude",
+    "50%",
+    "Half the sphere's area lies in the tropical-temperate band"
+   ],
+   [
+    "Antarctica",
+    "~9% of land",
+    "A continent-sized share of the land draw"
+   ],
+   [
+    "Within 100 km of a city",
+    "Small",
+    "Cities are tiny targets on a big sphere"
+   ]
+  ],
+  "note": "Shares are surface-area facts, not settings. The generator samples the sphere's area uniformly (latitude drawn via the arcsine method), so the odds above are what long runs converge to."
+ },
+ "faq": [
+  [
+   "Can I get a random point in a specific region?",
+   "Constrain by generating and keeping the points that fall in your region, or use the land/country modes the tool offers — rejection sampling keeps the statistics honest inside any boundary."
+  ],
+  [
+   "Why did I get the middle of the Pacific twice?",
+   "The Pacific is the largest target on Earth — about a third of the surface is its neighbourhood. Randomness has no memory and no mercy."
+  ],
+  [
+   "Is each generate independent?",
+   "Yes — no weighting from your history. Streaks of ocean are the distribution working, not the generator sulking."
+  ],
+  [
+   "A random point near me?",
+   "Draw a random point within a radius instead — the radius tools on this site frame that job; a sphere-wide generator's 'near me' would be a different instrument."
+  ],
+  [
+   "Can I seed or reproduce a draw?",
+   "Note the coordinates — they are the record. The generator's job is fresh randomness, not replay."
+  ],
+  [
+   "Random street-level points?",
+   "A random point plus the reverse geocoder's record tells you what is there — frequently nothing with a name, which is itself the geography lesson."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Explore the point: the "
+  },
+  {
+   "t": "Coordinates Lookup Tool",
+   "l": "/tools/coordinates-lookup-tool"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Latitude Longitude Map",
+   "l": "/tools/latitude-longitude-map"
+  },
+  {
+   "t": "; what country is it: "
+  },
+  {
+   "t": "Country from Coordinates Finder",
+   "l": "/tools/country-from-coordinates"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "arcminutes-to-decimal-degrees-converter",
   "arcseconds-to-ground-distance-calculator",

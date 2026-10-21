@@ -8,17 +8,164 @@
   "sales territory area calculator tool",
   "how to use sales territory area calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Sales Territory Area Calculator",
+ "description": "Calculate the area of a sales territory with the Sales Territory Area Calculator — circles, rectangles and drawn regions in square miles. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a territory drawn as a 40 × 25 mile rectangle covers exactly 1,000 square miles — a number that belongs in the territory plan next to the rep's name, not guessed at the annual meeting.",
+ "quick_answer": "The Sales Territory Area Calculator computes the size of a sales territory — from a radius, simple dimensions or a drawn region — in square miles, square kilometres and acres. Enter the shape's numbers and read the area — the workload fact territory balancing and quota fairness depend on.",
+ "steps_intro": "Territories are argued about in feelings and managed in square miles:",
+ "use_cases": [
+  {
+   "title": "Balancing rep workloads",
+   "body": [
+    {
+     "t": "Two territories that look equal on the wall map rarely are. Areas make the imbalance a number — the "
+    },
+    {
+     "t": "Sales Territory Radius Planner",
+     "l": "/tools/sales-territory-radius"
+    },
+    {
+     "t": " shapes them by hub."
+    }
+   ]
+  },
+  {
+   "title": "Travel and fuel budgeting",
+   "body": [
+    {
+     "t": "A 1,000 sq mi territory and a 200 sq mi territory imply different windscreens per week. Area is the budget's first input."
+    }
+   ]
+  },
+  {
+   "title": "Market sizing",
+   "body": [
+    {
+     "t": "Area times demographic density is the territory's opportunity estimate — area first, then the census does its part."
+    }
+   ]
+  },
+  {
+   "title": "Franchise and exclusivity drafting",
+   "body": [
+    {
+     "t": "Agreements grant 'the territory' — its measured size belongs in the file before signatures, not after disputes."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The radius territory",
+   "body": [
+    {
+     "t": "A 15-mile radius around a branch covers π × 15² = 706.9 sq mi (452,389 acres). If a second branch sits 20 miles away, their circles overlap — area alone will not warn you; the coverage tools will."
+    }
+   ]
+  },
+  {
+   "label": "Example · Square miles to acres",
+   "body": [
+    {
+     "t": "1 sq mi = 640 acres exactly, so the 1,000 sq mi rectangle is 640,000 acres. The conversion is the one territory number everyone can sanity-check."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Territory sizes in perspective",
+  "intro": "Radius territories, computed — the areas reps actually inherit.",
+  "columns": [
+   "Radius",
+   "Area (sq mi)",
+   "Area (acres)"
+  ],
+  "rows": [
+   [
+    "5 mi",
+    "78.5",
+    "50,265"
+   ],
+   [
+    "10 mi",
+    "314.2",
+    "201,062"
+   ],
+   [
+    "15 mi",
+    "706.9",
+    "452,389"
+   ],
+   [
+    "20 mi",
+    "1,256.6",
+    "804,248"
+   ],
+   [
+    "25 mi",
+    "1,963.5",
+    "1,256,637"
+   ]
+  ],
+  "note": "Area grows with the square of the radius: doubling the reach quadruples the ground. Territory plans that forget this give one rep four times another's driving."
+ },
+ "faq": [
+  [
+   "Circles or real boundaries?",
+   "The calculator handles radius territories and simple shapes directly; county- or postcode-shaped territories are drawn regions — measure those on the map tools and bring the area here for unit conversion."
+  ],
+  [
+   "Area or account count — what balances a territory?",
+   "Both, and travel time besides. Area is the first screen; a dense urban 78 sq mi can outweigh a rural 700."
+  ],
+  [
+   "Square kilometres?",
+   "Yes — the calculator reports both, for the European half of the sales floor."
+  ],
+  [
+   "Overlapping territories?",
+   "Overlaps double-count area in naive sums. The Service Coverage Gap Viewer shows overlaps explicitly when centres and radii are the model."
+  ],
+  [
+   "How do I get a drawn region's area?",
+   "Draw it with the region tools (Square Miles Calculator measures drawn regions) and use this page for the shape-based cases and conversions."
+  ],
+  [
+   "Population inside the area?",
+   "Area times a density figure is an estimate, labelled as such — boundaries and census data do the precise version."
+  ],
+  [
+   "Is drive time better than area?",
+   "For workload, often — but area is computable today from the plan on the wall, and it catches the gross unfairness drive-time studies later confirm."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Hub-shaped territories: the "
+  },
+  {
+   "t": "Sales Territory Radius Planner",
+   "l": "/tools/sales-territory-radius"
+  },
+  {
+   "t": "; drawn regions: the "
+  },
+  {
+   "t": "Square Miles Calculator",
+   "l": "/tools/square-miles-calculator"
+  },
+  {
+   "t": "; overlaps: the "
+  },
+  {
+   "t": "Service Coverage Gap Viewer",
+   "l": "/tools/service-coverage-gap"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-area-from-radius",

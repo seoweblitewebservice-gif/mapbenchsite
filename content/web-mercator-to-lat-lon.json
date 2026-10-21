@@ -8,17 +8,154 @@
   "web mercator to latitude longitude tool",
   "how to calculate web mercator to latitude longitude"
  ],
- "title": null,
- "description": null,
+ "title": "Web Mercator to Latitude Longitude Converter",
+ "description": "Convert Web Mercator x/y metres back to latitude and longitude with Web Mercator to Latitude Longitude — the exact EPSG:3857 inverse. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, the Mercator pair x −8,236,028, y 4,976,712 inverts to 40.7580, −73.9855 — Times Square, back from the flat world's metres into honest degrees.",
+ "quick_answer": "Web Mercator to Latitude Longitude converts projected x and y metres (EPSG:3857) back into geographic latitude and longitude by the exact inverse formulas. Enter the projected pair and read the degrees: the way back from tile servers, web-map extents and projected datasets to the coordinates everything else speaks.",
+ "steps_intro": "From the flat world's metres back to the round world's degrees:",
+ "use_cases": [
+  {
+   "title": "Decoding API and extent values",
+   "body": [
+    {
+     "t": "A service returns millions and you need degrees — invert a reference pair here and the dataset's geography snaps into focus. The forward trip is "
+    },
+    {
+     "t": "Latitude Longitude to Web Mercator",
+     "l": "/tools/lat-lon-to-web-mercator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "GIS reprojection checks",
+   "body": [
+    {
+     "t": "A layer reprojected wrong lands in the ocean off Africa. Invert a known corner and compare with the source — the check takes ten seconds."
+    }
+   ]
+  },
+  {
+   "title": "Tile and pixel pipelines",
+   "body": [
+    {
+     "t": "World-pixel and tile math end in Mercator metres; this inversion is their last step back to mappable coordinates."
+    }
+   ]
+  },
+  {
+   "title": "Reading legacy projected data",
+   "body": [
+    {
+     "t": "Old exports in 'web mercator, probably' get verified one pair at a time before the bulk reprojection is trusted."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The round trip, closed",
+   "body": [
+    {
+     "t": "40.7580, −73.9855 projected forward (−8,236,028, 4,976,712) and inverted returns 40.7580, −73.9855 to the fourth decimal — the inverse is a closed form, not an approximation."
+    }
+   ]
+  },
+  {
+   "label": "Example · The world's edges",
+   "body": [
+    {
+     "t": "x or y at ±20,037,508 m is the edge of the Mercator square — lon ±180°, lat ±85.0511°. Values beyond the square have no geographic answer, and the converter says so."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The inverse, in one view",
+  "intro": "Closed-form formulas — no iteration, no tables.",
+  "columns": [
+   "Output",
+   "Formula (R = 6,378,137 m)"
+  ],
+  "rows": [
+   [
+    "Longitude",
+    "λ = x / R, converted to degrees"
+   ],
+   [
+    "Latitude",
+    "φ = 2·atan(e^(y/R)) − π/2, in degrees"
+   ],
+   [
+    "Valid x range",
+    "−20,037,508 … +20,037,508 m"
+   ],
+   [
+    "Valid y range",
+    "−20,037,508 … +20,037,508 m (the square world)"
+   ],
+   [
+    "Output frame",
+    "WGS84 latitude/longitude — EPSG:4326 order (lat, lon)"
+   ]
+  ],
+  "note": "EPSG:3857 is built on a sphere using WGS84 latitudes, so the inversion recovers exactly the latitudes that went in — no datum shift hides in this round trip."
+ },
+ "faq": [
+  [
+   "Is the conversion exact?",
+   "Yes — the inverse formulas are closed-form and invert the forward projection to float precision. Errors in practice come from mislabelled inputs, never from this arithmetic."
+  ],
+  [
+   "My input is in pixels, not metres.",
+   "Then it is a world-pixel value, not Mercator metres — the World Pixel lane converts through zoom first; feeding pixels here lands you in a very wrong ocean."
+  ],
+  [
+   "Feet-based Mercator?",
+   "Rare but real in old US data — convert units first, or the inversion faithfully produces a wrong continent."
+  ],
+  [
+   "Values beyond ±20,037,508?",
+   "Outside the square world — either another projection, a unit problem, or data that was never Mercator. The value's size is the first diagnostic."
+  ],
+  [
+   "Axis order confusion?",
+   "GIS in 4326 says (lat, lon); Mercator pairs say (x, y) = (lon-ish, lat-ish). Swapped pairs invert to the Gulf of Guinea's neighbourhood — the classic tell."
+  ],
+  [
+   "Does altitude enter?",
+   "No — the projection is a surface affair; z values pass through life untouched by this page."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Forward: "
+  },
+  {
+   "t": "Latitude Longitude to Web Mercator",
+   "l": "/tools/lat-lon-to-web-mercator"
+  },
+  {
+   "t": "; pixels: the "
+  },
+  {
+   "t": "Latitude Longitude to World Pixel Calculator",
+   "l": "/tools/lat-lon-to-world-pixel-calculator"
+  },
+  {
+   "t": "; tiles: the "
+  },
+  {
+   "t": "Latitude Longitude to Map Tile Calculator",
+   "l": "/tools/lat-lon-to-map-tile-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "coordinate-bounding-box-generator",
   "coordinate-converter",

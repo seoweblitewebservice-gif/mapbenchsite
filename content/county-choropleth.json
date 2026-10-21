@@ -7,17 +7,169 @@
   "choropleth map maker",
   "FIPS map"
  ],
- "title": null,
- "description": null,
+ "title": "US County Choropleth Map: CSV to Counties",
+ "description": "Build a US County Choropleth Map from a two-column CSV of FIPS codes and values — 3,142 counties, five colour classes, legend included. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, paste a CSV with one row — 06037, 10000000 — and Los Angeles County takes its class colour alongside the other 3,141 counties that have data.",
+ "quick_answer": "The US County Choropleth Map turns a simple CSV — one column of 5-digit county FIPS codes, one column of numbers — into a coloured map of all 3,142 US counties. Values are split into five equal-interval classes from green (low) to red (high), with a legend, in your browser.",
+ "steps_intro": "Two columns in, a national data map out — here is the shape of the job:",
+ "use_cases": [
+  {
+   "title": "Census and public-data stories",
+   "body": [
+    {
+     "t": "Income, broadband, vaccination, crop yields — county data is America's default dataset, published by FIPS. This is the fastest honest route from the download to the picture. Find the codes with the "
+    },
+    {
+     "t": "County Boundary Viewer",
+     "l": "/tools/county-boundary-viewer"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Sales and service coverage",
+   "body": [
+    {
+     "t": "Customers per county, stores per county, tickets per county — a choropleth exposes the gaps a spreadsheet hides. Follow coverage questions with "
+    },
+    {
+     "t": "ZIP Codes Within Radius",
+     "l": "/tools/zip-codes-within-radius"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Classrooms and local journalism",
+   "body": [
+    {
+     "t": "A reporter with one CSV and a deadline gets a publishable county map without GIS software or a graphics desk — export via "
+    },
+    {
+     "t": "Map PNG Export",
+     "l": "/tools/map-png-export"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Spotting data errors",
+   "body": [
+    {
+     "t": "One screaming-red county in a calm state usually means a typo, not a phenomenon. Choropleths are the best proofreaders tabular data ever had."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · One row, one county",
+   "body": [
+    {
+     "t": "The line 06037, 10000000 colours Los Angeles County (FIPS 06037 = state 06 California, county 037). Leading zeros matter: 6037 would be a different, invalid code, which is why the CSV column must stay text until it reaches the tool."
+    }
+   ]
+  },
+  {
+   "label": "Example · Reading an equal-interval legend",
+   "body": [
+    {
+     "t": "If values run 0 to 100, the five classes break at 20, 40, 60 and 80. A county at 61 and a county at 99 share the top colour — equal intervals show ranges honestly but hide within-class gaps, so read the legend before the map."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Your CSV, specified",
+  "intro": "The whole data contract fits in this table — honour it and the map just works.",
+  "columns": [
+   "Column",
+   "Content",
+   "Example"
+  ],
+  "rows": [
+   [
+    "Column 1",
+    "5-digit county FIPS code, as text",
+    "06037 (Los Angeles County)"
+   ],
+   [
+    "Column 2",
+    "A number — count, dollars, percent, rate",
+    "12503.75"
+   ],
+   [
+    "Header row",
+    "Optional but welcome",
+    "fips,value"
+   ],
+   [
+    "Coverage",
+    "Any subset of the 3,142 counties",
+    "Counties without rows stay uncoloured"
+   ]
+  ],
+  "note": "Independent cities (like St. Louis, 29510) and Alaska boroughs and census areas have their own FIPS codes; Puerto Rico's municipios are not in the 3,142-county frame. Everything runs locally — the CSV is parsed in your browser, not uploaded."
+ },
+ "faq": [
+  [
+   "What class breaks should I use for skewed data?",
+   "This tool uses five equal-interval classes, which suit evenly spread values. For heavily skewed data (a few huge counties), most counties will bunch into the lowest class — that bunching is itself information, but if it hides your story, transform the values (per-capita rates usually help) before mapping."
+  ],
+  [
+   "My FIPS codes lost their leading zeros in Excel.",
+   "The classic failure. Format the column as text before pasting codes in, or re-pad to five digits (6037 → 06037). The tool expects five characters because state codes begin with 0 for nine states."
+  ],
+  [
+   "Does it handle county name changes and new counties?",
+   "The county frame follows a recent Census vintage (3,142 county equivalents). Rare changes — like Connecticut's move to planning regions — can shift codes; check the boundary viewer if a known county seems missing."
+  ],
+  [
+   "Can I download the map image?",
+   "Yes — export the finished map as a PNG for documents and slides with the Map PNG Export tool, legend included so the picture explains itself."
+  ],
+  [
+   "What do the grey counties mean?",
+   "No data in your CSV — deliberately neutral, not zero. If a county's true value is zero, include the row with 0 so it takes the low class instead of the no-data colour."
+  ],
+  [
+   "Is there a limit on rows?",
+   "The full frame is 3,142 counties and the tool is built for all of them at once. A national CSV is a few thousand lines — well within what a browser parses instantly."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Check individual boundaries with the "
+  },
+  {
+   "t": "County Boundary Viewer",
+   "l": "/tools/county-boundary-viewer"
+  },
+  {
+   "t": ", plot CSV points instead with "
+  },
+  {
+   "t": "CSV to Map",
+   "l": "/tools/csv-to-map"
+  },
+  {
+   "t": ", and export the finished choropleth through "
+  },
+  {
+   "t": "Map PNG Export",
+   "l": "/tools/map-png-export"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "advanced-map-embed-generator",
   "blank-map",

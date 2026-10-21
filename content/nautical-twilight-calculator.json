@@ -8,17 +8,166 @@
   "nautical twilight calculator tool",
   "how to calculate nautical twilight calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Nautical Twilight Calculator: Dawn and Dusk",
+ "description": "Find nautical dawn and dusk for any coordinates and date with the Nautical Twilight Calculator — the Sun 12 degrees below the horizon. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, in New York on June 21, nautical dawn begins about 04:08 and nautical dusk ends about 21:47 — the hours when the horizon is still visible at sea but the bright stars are out.",
+ "quick_answer": "The Nautical Twilight Calculator finds nautical dawn and dusk for your coordinates and date — the times the Sun is 12 degrees below the horizon, when the sea horizon is still visible and navigational stars appear. Enter place and date and plan by the sailor's twilight.",
+ "steps_intro": "The middle twilight — dark enough for stars, light enough for a horizon:",
+ "use_cases": [
+  {
+   "title": "Sailing and night passages",
+   "body": [
+    {
+     "t": "Nautical twilight is when celestial navigation works: stars visible, horizon sharp. Plan sights and watches around it — civil light comes from the "
+    },
+    {
+     "t": "Civil Twilight Calculator",
+     "l": "/tools/civil-twilight-calculator"
+    },
+    {
+     "t": ", deeper dark from the "
+    },
+    {
+     "t": "Astronomical Twilight Calculator",
+     "l": "/tools/astronomical-twilight-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Fishing and boating starts",
+   "body": [
+    {
+     "t": "Leaving a dark harbour needs the horizon readable. Nautical dawn is the practical 'can I see the channel marks yet?' line."
+    }
+   ]
+  },
+  {
+   "title": "Photography of the blue hour's edge",
+   "body": [
+    {
+     "t": "The deep-blue window around nautical dawn and dusk is landscape photography's quietest light."
+    }
+   ]
+  },
+  {
+   "title": "Military and aviation heritage",
+   "body": [
+    {
+     "t": "The term survives from naval practice (and lives on in 'nautical dawn' briefings) — the calculator keeps the tradition computable."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · New York, June 21",
+   "body": [
+    {
+     "t": "Sunrise is about 05:24; nautical dawn starts near 04:08 — roughly 76 minutes earlier. In midwinter the same gap is about 64 minutes (nautical dawn ~06:12 before a 07:16 sunrise)."
+    }
+   ]
+  },
+  {
+   "label": "Example · London's white nights",
+   "body": [
+    {
+     "t": "At London's latitude the Sun dips so shallowly in June that nautical twilight can last all night around the solstice — astronomical darkness vanishes entirely, a fact the calculator shows rather than smooths over."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The three twilights",
+  "intro": "Defined by how far the Sun sits below the horizon — this page owns the middle row.",
+  "columns": [
+   "Twilight",
+   "Sun below horizon",
+   "What it means"
+  ],
+  "rows": [
+   [
+    "Civil",
+    "6°",
+    "Brightest stars only; everyday outdoor light"
+   ],
+   [
+    "Nautical",
+    "12°",
+    "Horizon visible at sea; navigational stars out"
+   ],
+   [
+    "Astronomical",
+    "18°",
+    "True darkness for astronomy"
+   ],
+   [
+    "Night",
+    "Beyond 18°",
+    "The Sun stops contributing light"
+   ]
+  ],
+  "note": "Times are computed for a level sea horizon with standard refraction; hills, buildings and weather move what you actually see."
+ },
+ "faq": [
+  [
+   "What exactly is nautical twilight?",
+   "The periods at dawn and dusk when the Sun's centre is between 6 and 12 degrees below the horizon — dark enough for the brighter stars used in celestial navigation, light enough to see the sea horizon."
+  ],
+  [
+   "Why 12 degrees?",
+   "The 6/12/18-degree ladder of civil, nautical and astronomical twilight is the international convention, inherited from nautical almanac practice."
+  ],
+  [
+   "How long does it last?",
+   "At mid-latitudes, roughly an hour to ninety minutes each end of the day near the equinoxes, stretching toward the poles and shrinking near the equator — the calculator gives your place's real figure."
+  ],
+  [
+   "Can nautical twilight last all night?",
+   "Yes — poleward of about 48.6° latitude at the summer solstice the Sun never dips 12° below the horizon, so dusk runs straight into dawn."
+  ],
+  [
+   "Is it dark enough for stargazing?",
+   "Mostly — bright planets and major constellations show well; faint deep-sky work wants astronomical darkness, one rung deeper."
+  ],
+  [
+   "Does it give both dawn and dusk?",
+   "Yes — morning nautical dawn (when twilight begins) and evening nautical dusk (when it ends), for your date and coordinates."
+  ],
+  [
+   "Why do sailors care specifically?",
+   "A sextant needs stars and a horizon in the same eyepiece — that overlap exists only during nautical twilight, which is why the almanac prints it."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The ladder: "
+  },
+  {
+   "t": "Civil Twilight Calculator",
+   "l": "/tools/civil-twilight-calculator"
+  },
+  {
+   "t": " above, "
+  },
+  {
+   "t": "Astronomical Twilight Calculator",
+   "l": "/tools/astronomical-twilight-calculator"
+  },
+  {
+   "t": " below; the day itself: the "
+  },
+  {
+   "t": "Sunrise and Sunset Calculator",
+   "l": "/tools/sunrise-sunset-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "moon-illumination-calculator",
   "moon-phase-by-date",

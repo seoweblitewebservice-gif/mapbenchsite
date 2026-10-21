@@ -7,17 +7,150 @@
   "province finder",
   "coordinates to state"
  ],
- "title": null,
- "description": null,
+ "title": "State from Coordinates Finder: Name the State",
+ "description": "Get the US state (or province) containing a coordinate pair with the State from Coordinates Finder — boundary data, sea-honest. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, 40.7580, −73.9855 answers 'New York' — while a point at 38.8977, −77.0365 answers 'District of Columbia', the finder's standing reminder that not every US point has a state.",
+ "quick_answer": "The State from Coordinates Finder takes a bare latitude/longitude pair and returns the US state — or Canadian province — containing the point, from boundary records. Paste the pair and read the state — the administrative fact geotagged photos and field data so often assume but rarely record.",
+ "steps_intro": "Coordinates are stateless. Give them their jurisdiction:",
+ "use_cases": [
+  {
+   "title": "Geotagged photo sorting",
+   "body": [
+    {
+     "t": "A road trip's photos sort by the state they were actually taken in — borders crossed at night included. The "
+    },
+    {
+     "t": "City from Coordinates Finder",
+     "l": "/tools/city-from-coordinates"
+    },
+    {
+     "t": " refines the story; this page settles the jurisdiction."
+    }
+   ]
+  },
+  {
+   "title": "Field data validation",
+   "body": [
+    {
+     "t": "A dataset claims Texas; a third of its points sit in Oklahoma. The finder is the audit that takes one paste per suspect point."
+    }
+   ]
+  },
+  {
+   "title": "Compliance and territory work",
+   "body": [
+    {
+     "t": "Sales territories, licensing regions and service areas follow state lines — a point's state is the first key every one of those joins needs."
+    }
+   ]
+  },
+  {
+   "title": "Border curiosity",
+   "body": [
+    {
+     "t": "Points near Four Corners, or along a river border, get their true containing state — geometry over the souvenir's version."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The DC lesson",
+   "body": [
+    {
+     "t": "The White House's coordinates return the District of Columbia — not Maryland, not Virginia. The finder reports the jurisdiction the boundary data holds, including the ones that are not states at all."
+    }
+   ]
+  },
+  {
+   "label": "Example · River borders move",
+   "body": [
+    {
+     "t": "The Mississippi's channel has wandered since its borders were drawn, leaving pockets of states on the 'wrong' bank. The polygon, not the river's current mood, decides — and the finder follows the polygon."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What decides the answer",
+  "intro": "Boundary geometry, with its honest edges.",
+  "columns": [
+   "Situation",
+   "Answer"
+  ],
+  "rows": [
+   [
+    "Point inside a state or province",
+    "That jurisdiction, from its boundary record"
+   ],
+   [
+    "District of Columbia / territories",
+    "Named as themselves — not forced into a state"
+   ],
+   [
+    "Point just offshore",
+    "No state — the honest water answer"
+   ],
+   [
+    "Point on a border line",
+    "The polygon containing it; GPS accuracy at borders is the real question"
+   ]
+  ],
+  "note": "Answers ride on boundary datasets of the Census/OpenStreetMap family. Legal jurisdiction for a disputed point belongs to surveys and courts; this is the map data's verdict, fast and named."
+ },
+ "faq": [
+  [
+   "Canadian provinces too?",
+   "Yes — the finder covers provinces for Canadian points in the same spirit, from the same class of boundary record."
+  ],
+  [
+   "US territories?",
+   "Puerto Rico, Guam and the others are named as themselves where the boundary data carries them."
+  ],
+  [
+   "A point in the Great Lakes?",
+   "Water points return no state — though the lakes are divided between states on paper, the finder's honest land-based answer is none, and it says so."
+  ],
+  [
+   "How close to a border can I trust it?",
+   "The polygon is exact; your coordinate may not be. Within a consumer GPS fix's error of a line, treat the answer as probable, not legal."
+  ],
+  [
+   "County as well?",
+   "The county layer has its own tools — What County Am I In and the County Boundary Viewer go one level deeper."
+  ],
+  [
+   "State parks that cross state lines?",
+   "A few recreation areas straddle borders; the point's own side decides its state — the park's name is not a jurisdiction."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Deeper: "
+  },
+  {
+   "t": "What County Am I In?",
+   "l": "/tools/what-county-am-i-in"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "What State Am I In?",
+   "l": "/tools/what-state-am-i-in"
+  },
+  {
+   "t": "; the full record: the "
+  },
+  {
+   "t": "Coordinates Lookup Tool",
+   "l": "/tools/coordinates-lookup-tool"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "arcminutes-to-decimal-degrees-converter",
   "arcseconds-to-ground-distance-calculator",

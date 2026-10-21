@@ -8,17 +8,159 @@
   "latitude band finder tool",
   "how to use latitude band finder"
  ],
- "title": null,
- "description": null,
+ "title": "Latitude Band Finder: Which Zone Are You In?",
+ "description": "Use the Latitude Band Finder to place any latitude in its band — tropical, temperate or polar — with the exact boundaries and widths. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, London at 51.5°N sits in the north temperate band, a zone about 4,793 km wide measured along the meridian between the tropics and the polar circles.",
+ "quick_answer": "The Latitude Band Finder places any latitude into its classic band — tropical, temperate or polar — in either hemisphere. Enter a latitude or a place and read which band it falls in, the band's boundaries, and how wide that slice of the Earth really is.",
+ "steps_intro": "Three bands per hemisphere, bounded by astronomy — here is where your latitude falls:",
+ "use_cases": [
+  {
+   "title": "Climate literacy without the jargon",
+   "body": [
+    {
+     "t": "Why is Miami not tropical but Havana nearly is? Bands answer with geometry: the tropics end at 23.44°, and Miami at 25.8° misses them. The "
+    },
+    {
+     "t": "Tropics Finder",
+     "l": "/tools/tropics-finder"
+    },
+    {
+     "t": " draws the boundary lines."
+    }
+   ]
+  },
+  {
+   "title": "Gardening and growing zones context",
+   "body": [
+    {
+     "t": "Day length and Sun angle follow bands before they follow borders. A grower comparing sites at 35° and 55° is comparing different light regimes, and the band makes that visible."
+    }
+   ]
+  },
+  {
+   "title": "Travel expectations",
+   "body": [
+    {
+     "t": "Packing for a 'temperate' destination at 44°S — say Queenstown, New Zealand — means something precise about daylight and Sun height. Bands set honest expectations."
+    }
+   ]
+  },
+  {
+   "title": "Checking geography content",
+   "body": [
+    {
+     "t": "Articles love loose labels like 'polar Finland'. Finland's north crosses the Arctic Circle at 66.56° — the band finder verifies claims instead of repeating them."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The wide temperate middle",
+   "body": [
+    {
+     "t": "The north temperate band runs from 23.44° to 66.56° — about 4,793 km of meridian arc. Most of the world's population lives in this one band and its southern twin."
+    }
+   ]
+  },
+  {
+   "label": "Example · The thin polar cap",
+   "body": [
+    {
+     "t": "Beyond the Arctic Circle there are only about 2,616 km of latitude left to the pole — yet that small cap holds the midnight Sun and polar night."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The latitude bands and their true widths",
+  "intro": "Boundaries are set by Earth's axial tilt (about 23.44° today); widths are meridian arcs computed on WGS84.",
+  "columns": [
+   "Band (each hemisphere)",
+   "Latitudes",
+   "Width along a meridian"
+  ],
+  "rows": [
+   [
+    "Tropical",
+    "0° to 23.44°",
+    "≈ 2,593 km"
+   ],
+   [
+    "Temperate",
+    "23.44° to 66.56°",
+    "≈ 4,793 km"
+   ],
+   [
+    "Polar (frigid)",
+    "66.56° to 90°",
+    "≈ 2,616 km"
+   ],
+   [
+    "All six bands together",
+    "Pole to pole",
+    "≈ 20,004 km (meridian circumference)"
+   ]
+  ],
+  "note": "The tilt drifts slowly — about 0.47 arcseconds per year — so the tropics and polar circles creep toward the equator by roughly 15 metres a year. Band boundaries are astronomy, not administration."
+ },
+ "faq": [
+  [
+   "What defines the band boundaries?",
+   "Earth's axial tilt. The tropics sit at ±(tilt) — today about 23.44° — and the polar circles at 90° minus the tilt, about 66.56°. Inside the tropics the Sun can be overhead; inside the polar circles it can stay up or down all day."
+  ],
+  [
+   "Are the bands the same as climate zones?",
+   "They are the astronomical skeleton under climate zones. Real climates add oceans, altitude and winds — a temperate-band desert and a temperate-band rainforest share a band, not a climate."
+  ],
+  [
+   "Why do the boundaries move?",
+   "The tilt oscillates between about 22.1° and 24.5° over a 41,000-year cycle and is currently shrinking, so the tropics narrow by roughly 15 metres a year. Your lifetime moves them about a kilometre."
+  ],
+  [
+   "Which band has the most land?",
+   "The north temperate band, by a wide margin — it holds most of Europe, Asia and North America. The south temperate band is mostly ocean, which is why southern seasons feel maritime."
+  ],
+  [
+   "Can a place change bands without moving?",
+   "Effectively yes, over millennia, as the boundaries creep. With the tilt currently shrinking, the polar circles edge toward the poles (about 15 metres a year) and the tropics toward the equator — Arctic Circle roadside markers in Finland and Sweden have been re-sited for exactly this reason."
+  ],
+  [
+   "What band is the equator in?",
+   "The equator is the tropical band's centre line — the band extends 23.44° each side of it, a total width of about 5,186 km."
+  ],
+  [
+   "Do bands affect daylight hours?",
+   "Directly. Only the polar bands get 24-hour days or nights; only the tropical band gets an overhead Sun; temperate bands get neither extreme — that is most of what 'temperate' means."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Draw the boundary lines with the "
+  },
+  {
+   "t": "Tropics Finder",
+   "l": "/tools/tropics-finder"
+  },
+  {
+   "t": ", see the central line with the "
+  },
+  {
+   "t": "Equator Finder",
+   "l": "/tools/equator-finder"
+  },
+  {
+   "t": ", or measure your distance to a specific line, such as the "
+  },
+  {
+   "t": "Distance from Arctic Circle",
+   "l": "/tools/distance-from-arctic-circle"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "distance-from-prime-meridian-calculator",
   "distance-from-tropic-of-cancer",

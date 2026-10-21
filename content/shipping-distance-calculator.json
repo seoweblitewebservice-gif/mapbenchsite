@@ -6,17 +6,170 @@
   "port distance",
   "freight distance"
  ],
- "title": null,
- "description": null,
+ "title": "Shipping Distance Calculator: Port to Port",
+ "description": "Estimate port-to-port shipping distance with the Shipping Distance Calculator — sea distances in nautical miles, with honest notes on real routes. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, New York to London measures about 3,008 nautical miles port to port on the sphere — roughly 6.3 days of steaming at 20 knots before real sea routes add their detours.",
+ "quick_answer": "The Shipping Distance Calculator estimates the sea distance between ports from their coordinates, in nautical miles, kilometres and land miles. Enter the ports and read the great-circle distance — the baseline every transit-time and freight estimate starts from, before canals, straits and traffic schemes bend the real route longer.",
+ "steps_intro": "Every freight quote starts as geometry. Get the baseline right:",
+ "use_cases": [
+  {
+   "title": "First-pass freight estimates",
+   "body": [
+    {
+     "t": "Before a forwarder quotes, the port distance frames the job: distance drives days, and days drive money. Convert units with the "
+    },
+    {
+     "t": "Nautical Miles to Kilometers Converter",
+     "l": "/tools/nautical-miles-to-kilometers-converter"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Transit-time sanity checks",
+   "body": [
+    {
+     "t": "A quoted 12 days New York–London at a service speed implies an average this page lets you test — distance ÷ speed from the "
+    },
+    {
+     "t": "Nautical Travel Time Calculator",
+     "l": "/tools/nautical-travel-time-calculator"
+    },
+    {
+     "t": " is the audit."
+    }
+   ]
+  },
+  {
+   "title": "Route comparisons",
+   "body": [
+    {
+     "t": "West coast versus east coast discharge, transhipment versus direct — the geometry ranks the options before schedules and rates refine the ranking."
+    }
+   ]
+  },
+  {
+   "title": "Emissions estimates",
+   "body": [
+    {
+     "t": "CO₂ per shipment scales with distance sailed. The baseline distance is the first term of every shipping carbon calculator's arithmetic."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The Atlantic baseline",
+   "body": [
+    {
+     "t": "New York–London: 5,570 km ≈ 3,008 nautical miles. At a 20-knot service speed that is 6.3 days of pure steaming; real schedules quote 10–14 days because sea routes are not straight lines and ports take time. The gap between the two numbers is the lesson."
+    }
+   ]
+  },
+  {
+   "label": "Example · Coast to coast without Panama",
+   "body": [
+    {
+     "t": "Los Angeles–New York measures 3,936 km (2,125 nmi) as the crow flies — a line that crosses the entire continent. Ships cannot sail it: the Panama route runs more than twice as far. This calculator's honesty lies in labelling its number the baseline, never the itinerary."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reference port-pair baselines",
+  "intro": "Great-circle baselines from reference coordinates — real routes run longer.",
+  "columns": [
+   "Port pair",
+   "Baseline distance",
+   "Steaming at 20 kn"
+  ],
+  "rows": [
+   [
+    "New York → London",
+    "3,008 nmi",
+    "≈ 6.3 days"
+   ],
+   [
+    "Los Angeles → New York (overland line)",
+    "2,125 nmi",
+    "≈ 4.4 days — ships must detour via Panama"
+   ],
+   [
+    "New York → London at 25 kn",
+    "3,008 nmi",
+    "≈ 5.0 days"
+   ],
+   [
+    "Rule of thumb",
+    "Sea route = baseline × 1.05–1.3",
+    "Canals and straits decide the factor"
+   ]
+  ],
+  "note": "Published port-to-port sea distances come from routing tables that follow navigable water. This tool computes the geometric baseline those tables start from — never quote it as the sailed distance."
+ },
+ "faq": [
+  [
+   "Why is the real sailed distance longer?",
+   "Ships follow water: out of harbour channels, through straits and canals, around headlands and traffic separation schemes. Each constraint adds miles to the geometric baseline — 5–30% is typical, far more when a canal detour replaces a landmass crossing."
+  ],
+  [
+   "Which ports are covered?",
+   "Major world ports by name, and any two points by coordinates — the geometry is the same once the endpoints are fixed. Harbour-to-harbour precision lives in professional routing tables."
+  ],
+  [
+   "Can it route via Suez or Panama?",
+   "No — this is a baseline calculator, not a routing engine. It tells you the distance the canal route will be compared against, which is the number that makes canal fees intelligible."
+  ],
+  [
+   "What speed should I assume for transit time?",
+   "Container services typically run 16–22 knots; bulk carriers slower, often 11–14. Take the carrier's service speed, divide distance by it, then add port and canal time generously."
+  ],
+  [
+   "Nautical or land miles for freight?",
+   "The sea trades in nautical miles and knots exclusively — quotes, charts and ETAs all assume them. This page reports both so land-side readers can translate."
+  ],
+  [
+   "Does weather change the distance?",
+   "Weather routing lengthens the sailed path to avoid storms — another reason the baseline is a floor. Seasonal planning uses weather-adjusted distances from routing services."
+  ],
+  [
+   "Inland ports and rivers?",
+   "River reaches (the Mississippi, the Rhine) are channel distances, not great circles — the baseline understates them the most. Treat river legs with dedicated inland tables."
+  ],
+  [
+   "How do forwarders actually calculate?",
+   "From published port-distance tables and routing software built on navigable-water graphs — then experience. This calculator's role is the independent check that keeps quotes honest."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Time on the water: the "
+  },
+  {
+   "t": "Nautical Travel Time Calculator",
+   "l": "/tools/nautical-travel-time-calculator"
+  },
+  {
+   "t": "; units: the "
+  },
+  {
+   "t": "Nautical Miles to Kilometers Converter",
+   "l": "/tools/nautical-miles-to-kilometers-converter"
+  },
+  {
+   "t": "; between points: the "
+  },
+  {
+   "t": "Nautical Miles Between Coordinates",
+   "l": "/tools/nautical-miles-between-coordinates"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "closest-facility-finder",
   "compass-bearing-visualizer",

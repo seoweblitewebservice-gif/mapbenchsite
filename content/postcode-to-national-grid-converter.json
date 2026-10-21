@@ -7,17 +7,155 @@
   "postcode easting northing",
   "uk postcode os grid"
  ],
- "title": null,
- "description": null,
+ "title": "Postcode to National Grid Converter — OS Grid",
+ "description": "Convert a UK postcode to its Ordnance Survey grid reference with the Postcode to National Grid Converter — plot postcodes on paper maps. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a Westminster postcode lands in London's TQ square with a six-figure reference good to 100 metres — close enough to find the street on a paper OS map, which is all a postcode ever promised.",
+ "quick_answer": "The Postcode to National Grid Converter turns a UK postcode into its Ordnance Survey grid reference, via the postcode's coordinates. Type the postcode and read the reference at your chosen precision — the fastest bridge between an address book and a paper map, a planning portal or a survey form.",
+ "steps_intro": "Postcodes are for post; grid references are for ground. Convert once:",
+ "use_cases": [
+  {
+   "title": "Plotting addresses on paper maps",
+   "body": [
+    {
+     "t": "A list of venues by postcode becomes points on the OS sheet — the converter supplies the reference your pencil needs. The map view lives at the "
+    },
+    {
+     "t": "National Grid Reference Map",
+     "l": "/tools/national-grid-reference-map"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Planning and official forms",
+   "body": [
+    {
+     "t": "British forms ask for grid references, British life runs on postcodes. This page is the translation desk between them."
+    }
+   ]
+  },
+  {
+   "title": "Site meeting logistics",
+   "body": [
+    {
+     "t": "Attendees get postcodes for the satnav; the site file gets the grid reference for the record. Same place, both languages."
+    }
+   ]
+  },
+  {
+   "title": "Auditing address data",
+   "body": [
+    {
+     "t": "A postcode whose grid reference lands in the wrong county exposes the typo in the spreadsheet — geography as proofreader."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · What a postcode point is",
+   "body": [
+    {
+     "t": "The conversion uses the postcode's representative point (from open postcode data) — a full UK postcode covers a small cluster of addresses, so its grid reference names the cluster's ground, not one doorstep."
+    }
+   ]
+  },
+  {
+   "label": "Example · Precision honesty",
+   "body": [
+    {
+     "t": "Quote six figures (100 m) for a postcode's reference. Ten figures (1 m) would claim a survey the postcode never made — the ladder on this page is a honesty scale, not a quality dial."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Postcode anatomy, for converters",
+  "intro": "The parts of a UK postcode and what they locate.",
+  "columns": [
+   "Part",
+   "Example shape",
+   "Narrows to"
+  ],
+  "rows": [
+   [
+    "Outward code — area",
+    "SW, EH, LL",
+    "A postal town region"
+   ],
+   [
+    "Outward code — district",
+    "SW1, EH1",
+    "A district within the town"
+   ],
+   [
+    "Inward code",
+    "1AA",
+    "A street segment or large user"
+   ],
+   [
+    "Full postcode",
+    "~15 addresses on average",
+    "The delivery cluster the grid reference is drawn from"
+   ]
+  ],
+  "note": "Postcode geography comes from open data built on ONS/Royal Mail-derived sources. A postcode's point is a representative coordinate for its cluster — convert it, but quote it at cluster precision."
+ },
+ "faq": [
+  [
+   "Where does the postcode's location come from?",
+   "Open postcode datasets (the postcodes.io family, built on ONS and Royal Mail-derived open data) publish a representative coordinate per postcode; the converter turns that point into a grid reference."
+  ],
+  [
+   "Rural postcodes cover huge areas — still one reference?",
+   "One representative point, honestly labelled. A scattered rural postcode's reference finds its centre of gravity, not every croft — the map shows the scale of the claim."
+  ],
+  [
+   "New-build postcodes?",
+   "They enter the data as Royal Mail creates them and the open datasets refresh. A brand-new estate's code may lag its first residents by a data cycle."
+  ],
+  [
+   "Terminated or re-coded postcodes?",
+   "Current data answers with current codes; historic addresses may need their successor postcode first."
+  ],
+  [
+   "Northern Ireland postcodes?",
+   "BT postcodes convert to coordinates happily — but their grid is the Irish Grid, not the National Grid; the Irish Grid Helper takes it from there."
+  ],
+  [
+   "Can I convert the reference back to the postcode?",
+   "Not uniquely — a grid square can straddle two postcodes. The NGR to Postcode Finder answers with the nearest postcode, labelled as such."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Back again: the "
+  },
+  {
+   "t": "Grid Reference to Postcode Finder",
+   "l": "/tools/ngr-to-postcode-finder"
+  },
+  {
+   "t": "; references: the "
+  },
+  {
+   "t": "National Grid Reference Converter",
+   "l": "/tools/national-grid-reference-converter"
+  },
+  {
+   "t": "; distances: the "
+  },
+  {
+   "t": "UK Postcode Distance Calculator",
+   "l": "/tools/uk-postcode-distance-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "arcminutes-to-decimal-degrees-converter",
   "arcseconds-to-ground-distance-calculator",

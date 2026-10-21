@@ -6,17 +6,166 @@
   "annotated map maker",
   "map annotation tool"
  ],
- "title": null,
- "description": null,
+ "title": "Map with Legend: Annotated Maps That Explain",
+ "description": "Build a Map with Legend — labelled markers and coloured regions, each added with a click and listed in an auto-generated legend with swatches. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a flood-action group marks three sandbag stores, two rest centres and the streets that flood first — and the legend writes itself as they click.",
+ "quick_answer": "The Map with Legend builder lets you add labelled markers and coloured regions to a map, one click each, while a legend builds itself beside the map — every entry with its colour swatch. Share the finished annotated map by link when it is ready to explain itself.",
+ "steps_intro": "Every thing you add appears twice: on the map, and in the legend that explains it:",
+ "use_cases": [
+  {
+   "title": "Community and council maps",
+   "body": [
+    {
+     "t": "Flood plans, festival layouts, consultation proposals — maps a mixed audience must read without a briefing. The legend is the briefing, built in."
+    }
+   ]
+  },
+  {
+   "title": "Teaching and field-trip prep",
+   "body": [
+    {
+     "t": "Regions coloured by type, sites numbered in the legend — students arrive knowing the code. Print the result via "
+    },
+    {
+     "t": "Map PNG Export",
+     "l": "/tools/map-png-export"
+    },
+    {
+     "t": " for the bus."
+    }
+   ]
+  },
+  {
+   "title": "Business coverage stories",
+   "body": [
+    {
+     "t": "Territories as regions, outlets as markers, one legend to bind them — the honest version of the wall map with pins, made shareable. Bulk CSV points belong in "
+    },
+    {
+     "t": "CSV to Map",
+     "l": "/tools/csv-to-map"
+    },
+    {
+     "t": " first."
+    }
+   ]
+  },
+  {
+   "title": "Event and site planning",
+   "body": [
+    {
+     "t": "Stages, gates, first aid, parking — coloured regions for zones and pins for points, legible to every volunteer who opens the link."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The flood plan",
+   "body": [
+    {
+     "t": "Blue regions for the streets that flood first, house icons for sandbag stores, a hall for the rest centre. A resident opens the link and understands their street's plan in under a minute — the legend did that."
+    }
+   ]
+  },
+  {
+   "label": "Example · The school catchment explainer",
+   "body": [
+    {
+     "t": "Current catchment in green, proposed in amber, the school as a star. Parents argue about the proposal looking at the same picture — which is what consultation maps are for."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Legend craft in four rules",
+  "intro": "An auto-generated legend is only as clear as the entries you feed it.",
+  "columns": [
+   "Rule",
+   "Why",
+   "Example"
+  ],
+  "rows": [
+   [
+    "Name entries like a reader",
+    "The legend is read first by strangers",
+    "'Sandbag store — Village Hall', not 'SB1'"
+   ],
+   [
+    "Colour by category, not by whim",
+    "Same colour must mean same thing",
+    "All rest centres green"
+   ],
+   [
+    "Regions for areas, pins for points",
+    "Geometry should match the thing",
+    "Flood extent shaded; pump sites pinned"
+   ],
+   [
+    "Keep entries few",
+    "Past ~12 entries, group or split the map",
+    "Two maps beat one crowded legend"
+   ]
+  ],
+  "note": "The annotated map shares via a link that encodes your entries — no account and no server copy. Whoever holds the link sees the map, so share it the way you would share the document itself."
+ },
+ "faq": [
+  [
+   "Can I remove or rename an entry?",
+   "Yes — entries stay editable while you build: rename the label, change the colour, or delete the item from map and legend together. The shared link reflects the state when you copy it."
+  ],
+  [
+   "Can regions overlap?",
+   "They can — overlapping areas are sometimes the story (a proposed zone inside a current one). Semi-transparent fills keep both visible; the legend lists each on its own row."
+  ],
+  [
+   "Is there a printable version?",
+   "Export the composed view as a PNG for handouts. For classroom printing at a designed scale, the Printable Map with Scale Context tool frames paper output properly."
+  ],
+  [
+   "Can I import entries from a spreadsheet?",
+   "This builder is for hand-built, story-first maps. Data-first work starts in CSV to Map; bring the handful of entries that need storytelling here afterwards."
+  ],
+  [
+   "Do links expire?",
+   "The link encodes the map's state rather than pointing at a stored file, so it works while the tool's link format is supported. For the permanent record, export a PNG as well."
+  ],
+  [
+   "Can I use my organisation's colours?",
+   "Pick the closest swatches the builder offers; exact brand matching is presentation-software work — export the PNG and finish the design there if the brand police are strict."
+  ],
+  [
+   "What basemap will readers see?",
+   "A standard open street map under your annotations (OpenStreetMap data). Your layer carries the meaning; the base stays neutral and current."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Label pins without regions in the "
+  },
+  {
+   "t": "Custom Labeled Pin Map",
+   "l": "/tools/custom-labeled-map"
+  },
+  {
+   "t": ", start simple with the "
+  },
+  {
+   "t": "Pin Map Maker",
+   "l": "/tools/pin-map-maker"
+  },
+  {
+   "t": ", and export the finished map through "
+  },
+  {
+   "t": "Map PNG Export",
+   "l": "/tools/map-png-export"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "advanced-map-embed-generator",
   "blank-map",

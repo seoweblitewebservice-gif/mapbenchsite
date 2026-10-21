@@ -7,17 +7,166 @@
   "workout heart rate zones gpx",
   "gpx hr data"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Heart Rate Analyzer: Zones From Your File",
+ "description": "Analyse heart rate recorded in a GPX file with the GPX Heart Rate Analyzer — average, maximum and time in zones, read locally. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, against an estimated maximum of 190 bpm (the 220-minus-age estimate at 30), the common zone boundaries fall at 114, 133, 152 and 171 bpm — and the analyzer prices how long you actually spent beyond each.",
+ "quick_answer": "The GPX Heart Rate Analyzer reads the heart-rate channel hidden in a GPX file's extensions and reports average, maximum and time-in-zone estimates from the recording itself. Drop the file — it is read locally, never uploaded — and see the effort story your map viewers have been ignoring.",
+ "steps_intro": "Your watch recorded it; most software throws it away. Read it here:",
+ "use_cases": [
+  {
+   "title": "Training review",
+   "body": [
+    {
+     "t": "Was the 'easy' run actually easy? Time-in-zone from the file answers with evidence. Speed context comes from the "
+    },
+    {
+     "t": "GPX Speed / Pace Helper",
+     "l": "/tools/gpx-speed-pace-helper"
+    },
+    {
+     "t": " on the same recording."
+    }
+   ]
+  },
+  {
+   "title": "Checking a platform's zones",
+   "body": [
+    {
+     "t": "Apps disagree about zone boundaries and smoothing. The file's own samples are the raw material every one of them started from — start there too."
+    }
+   ]
+  },
+  {
+   "title": "Health-data curiosity, privately",
+   "body": [
+    {
+     "t": "Heart data is intimate. An analyzer that runs locally, on the file you drop, keeps the reading between you and your browser."
+    }
+   ]
+  },
+  {
+   "title": "Finding recording gaps",
+   "body": [
+    {
+     "t": "A strap that died at kilometre 12 shows as heart data that simply stops — the analyzer's coverage makes dropouts visible instead of averaging over them silently."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Where the numbers live",
+   "body": [
+    {
+     "t": "Heart rate rides inside GPX extensions — typically Garmin's TrackPointExtension, where each trackpoint can carry an <hr> value beside its <ele> and <time>. Files from phones without a strap or sensor simply have no channel to analyse."
+    }
+   ]
+  },
+  {
+   "label": "Example · Reading an average honestly",
+   "body": [
+    {
+     "t": "An average of 148 bpm over a hilly run hides everything interesting: the zones show whether that was steady threshold work or a sawtooth of climbs and recoveries averaging out to the same innocent number."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The common five-zone model",
+  "intro": "Zones as percentage bands of maximum heart rate — the model most tools start from (boundaries computed for a 190 bpm maximum).",
+  "columns": [
+   "Zone",
+   "% of max HR",
+   "At max 190",
+   "Feels like"
+  ],
+  "rows": [
+   [
+    "Zone 1",
+    "50–60%",
+    "95–114 bpm",
+    "Recovery, warm-up"
+   ],
+   [
+    "Zone 2",
+    "60–70%",
+    "114–133 bpm",
+    "Endurance base"
+   ],
+   [
+    "Zone 3",
+    "70–80%",
+    "133–152 bpm",
+    "Tempo"
+   ],
+   [
+    "Zone 4",
+    "80–90%",
+    "152–171 bpm",
+    "Threshold"
+   ],
+   [
+    "Zone 5",
+    "90–100%",
+    "171–190 bpm",
+    "Maximal efforts"
+   ]
+  ],
+  "note": "Maximum heart rate here uses the 220 − age estimate (190 at age 30), which errs by ±10 bpm or more for individuals. Zone conclusions are estimates with that uncertainty baked in — physiology, not surveying."
+ },
+ "faq": [
+  [
+   "Which files carry heart rate?",
+   "Recordings from watches and bike computers paired with a chest strap or optical sensor — written by Garmin, Wahoo, Suunto, Polar and others into GPX extensions. A phone-only recording usually has no HR channel."
+  ],
+  [
+   "What does 'time in zone' weigh by?",
+   "By the recording's own samples — each trackpoint's heart rate counts for the time until the next point. Dense recordings price zones more faithfully than sparse ones."
+  ],
+  [
+   "My maximum shows 220+ — real?",
+   "Almost certainly a sensor artefact (strap slip, cadence lock, a dry-contact spike at the start). Optical and strap sensors both produce a few wild samples; a single spike does not move the average much, but it owns the 'maximum' line unless filtered."
+  ],
+  [
+   "Cadence lock — what is it?",
+   "An optical sensor mistaking your step rhythm for your pulse, reporting ~170–180 (running cadence) as heart rate. It produces suspiciously steady high readings early in runs before sweat improves contact."
+  ],
+  [
+   "Can it estimate calories?",
+   "Not honestly from heart rate alone — calorie models need body mass, age, sex and device-specific coefficients the file does not carry. This analyzer reports what the recording actually contains."
+  ],
+  [
+   "Resting and max HR settings?",
+   "Zone percentages need a maximum; the 220 − age estimate is the common default. A lab-tested or field-tested personal maximum makes every zone truer."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Pace context: the "
+  },
+  {
+   "t": "GPX Speed / Pace Helper",
+   "l": "/tools/gpx-speed-pace-helper"
+  },
+  {
+   "t": "; speed: the "
+  },
+  {
+   "t": "GPX Average Speed Calculator",
+   "l": "/tools/gpx-average-speed-calculator"
+  },
+  {
+   "t": "; strip a channel: "
+  },
+  {
+   "t": "GPX Timestamp Remover",
+   "l": "/tools/gpx-remove-timestamps"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

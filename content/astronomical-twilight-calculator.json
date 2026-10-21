@@ -8,17 +8,166 @@
   "astronomical twilight calculator tool",
   "how to calculate astronomical twilight calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Astronomical Twilight Calculator: True Darkness",
+ "description": "Find when true night begins and ends with the Astronomical Twilight Calculator — the Sun 18° below the horizon, for any place and date. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, in London on 22 October 2026 astronomical dawn begins about 05:43 and dusk ends about 19:46 (computed) — but around the June solstice London gets no astronomical night at all.",
+ "quick_answer": "The Astronomical Twilight Calculator finds when the Sun passes 18 degrees below the horizon — the end of astronomical dusk and start of astronomical dawn, the boundaries of true night. Enter a place and date and read both times: the astronomer's definition of dark, computed not guessed.",
+ "steps_intro": "When the last scattered sunlight is really gone — Sun at −18°:",
+ "use_cases": [
+  {
+   "title": "Astronomy and astrophotography planning",
+   "body": [
+    {
+     "t": "Faint galaxies and the Milky Way's core demand the full 18°. The "
+    },
+    {
+     "t": "Civil Twilight Calculator",
+     "l": "/tools/civil-twilight-calculator"
+    },
+    {
+     "t": " and its nautical sibling mark the shallower grades of dark on the way down."
+    }
+   ]
+  },
+  {
+   "title": "Choosing dark-sky trip dates",
+   "body": [
+    {
+     "t": "At mid-northern latitudes, midsummer can erase astronomical night entirely — London has none around the solstice. Late autumn dates restore hours of it; this calculator shows which before you book."
+    }
+   ]
+  },
+  {
+   "title": "Night-shift and observatory scheduling",
+   "body": [
+    {
+     "t": "Observatory first-light and last-light are astronomical events by definition. Schedules built on sunset alone overstate the dark by an hour or more each end."
+    }
+   ]
+  },
+  {
+   "title": "Understanding the three twilights",
+   "body": [
+    {
+     "t": "Civil (6°), nautical (12°), astronomical (18°) — one staircase, three landings. Computing the deepest step makes the staircase's whole shape obvious."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · London's missing midsummer night",
+   "body": [
+    {
+     "t": "At the June solstice the Sun's lowest point under London is only about 15° below the horizon — it never reaches 18°. Result: weeks where astronomical night simply does not occur, and the sky stays in nautical twilight all 'night'."
+    }
+   ]
+  },
+  {
+   "label": "Example · New York's short true night",
+   "body": [
+    {
+     "t": "On 21 June 2026 in New York, computed astronomical dusk ends about 22:36 and dawn begins about 03:17 — under five hours of true darkness (22:36 → 03:17) at the year's longest twilight, computed with the standard algorithm."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The twilight staircase",
+  "intro": "One definition per landing — Sun's depth below the horizon.",
+  "columns": [
+   "Stage",
+   "Sun below horizon",
+   "Sky state"
+  ],
+  "rows": [
+   [
+    "Civil twilight",
+    "0° to 6°",
+    "Brightest stars appear; streetlights on"
+   ],
+   [
+    "Nautical twilight",
+    "6° to 12°",
+    "Horizon still traceable at sea"
+   ],
+   [
+    "Astronomical twilight",
+    "12° to 18°",
+    "Horizon gone; sky still not fully dark"
+   ],
+   [
+    "Astronomical night",
+    "Beyond 18°",
+    "Full darkness — the deep-sky window"
+   ]
+  ],
+  "note": "Times here are computed with the standard solar-event algorithm (accurate to a few minutes). Terrain, haze and light pollution decide what you actually see; the geometry decides what is possible."
+ },
+ "faq": [
+  [
+   "Why 18 degrees?",
+   "Below about 18° the Sun's scattered light becomes negligible against natural sky brightness — the convention astronomers settled on and almanacs publish. It is a standard, not a cliff edge in the physics."
+  ],
+  [
+   "Why does my location get no result on some dates?",
+   "Because the event genuinely does not happen: the Sun never sinks 18° below your horizon that night (high latitude, near solstice). The calculator reports the absence rather than inventing a time."
+  ],
+  [
+   "How long does astronomical twilight last?",
+   "From the 12° crossing to the 18° crossing — commonly 30–40 minutes at mid-latitudes, far longer toward the poles where the Sun's path runs shallow."
+  ],
+  [
+   "Is moonlight accounted for?",
+   "No — this is solar geometry. A full moon can brighten an astronomical night considerably; pair these times with the Moon Illumination Calculator for the real observing forecast."
+  ],
+  [
+   "Morning and evening — same definition?",
+   "Yes: astronomical dawn is the morning 18° crossing coming up, astronomical dusk the evening crossing going down. Almanacs name them by the night they bound."
+  ],
+  [
+   "Does elevation change my dark time?",
+   "A high observer sees the Sun dip later and rise earlier — horizon dip deepens the geometry by roughly a degree per 3,000 m. The calculator uses the standard sea-level horizon; mountain observers gain a few minutes of twilight each end."
+  ],
+  [
+   "UTC or local time?",
+   "Times are computed for the place and shown in its local civil time, daylight saving included — the Sun ignores clocks, but your schedule should not have to."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Shallower dark: the "
+  },
+  {
+   "t": "Civil Twilight Calculator",
+   "l": "/tools/civil-twilight-calculator"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Nautical Twilight Calculator",
+   "l": "/tools/nautical-twilight-calculator"
+  },
+  {
+   "t": "; the moon's vote: the "
+  },
+  {
+   "t": "Moon Illumination Calculator",
+   "l": "/tools/moon-illumination-calculator"
+  },
+  {
+   "t": "; daylight: the "
+  },
+  {
+   "t": "Day Length Calculator",
+   "l": "/tools/day-length-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "moon-age-calculator",
   "moon-illumination-calculator",

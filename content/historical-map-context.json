@@ -6,17 +6,170 @@
   "old map coordinates",
   "georeference helper"
  ],
- "title": null,
- "description": null,
+ "title": "Historical Map Context: Anchor Old Maps to Today",
+ "description": "Use Historical Map Context to read old maps against precise modern coordinates and outlines — where that vanished street or border sits today. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a great-grandfather's 1910 street name no longer exists — but its junction's modern coordinates place the house within a few doors of a current address.",
+ "quick_answer": "Historical Map Context helps you read old maps against the modern world: pin the places an old map names to precise modern latitude and longitude, and use clean modern outlines to orient yourself. It is an anchor for historical reading — honest orientation, not warped-image georeferencing.",
+ "steps_intro": "Old maps speak a dead geography — here is how to translate it into today's:",
+ "use_cases": [
+  {
+   "title": "Family history and genealogy",
+   "body": [
+    {
+     "t": "Census addresses, parish boundaries and vanished villages get modern coordinates so descendants can stand in the right field. Start the search from a name with the "
+    },
+    {
+     "t": "Latitude Longitude Finder",
+     "l": "/tools/latitude-longitude-finder"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Local-history research",
+   "body": [
+    {
+     "t": "A mill on an 1840 tithe map, a railway that closed in 1963 — anchor each to today's streets and the archive becomes walkable."
+    }
+   ]
+  },
+  {
+   "title": "Teaching with old maps",
+   "body": [
+    {
+     "t": "Students compare an old county map with the modern outline and list what changed: borders, names, a drained lake. The "
+    },
+    {
+     "t": "Blank Map",
+     "l": "/tools/blank-map"
+    },
+    {
+     "t": " outline is the clean modern half of the comparison."
+    }
+   ]
+  },
+  {
+   "title": "Property and boundary curiosity",
+   "body": [
+    {
+     "t": "Old field names and plot lines raise questions modern coordinates can frame properly — while remembering that legal answers belong to surveyors and archives, not web maps."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The renamed street",
+   "body": [
+    {
+     "t": "A 1905 directory lists a shop on a street renamed twice since. Its junction with a surviving cross-street gives a modern coordinate pair; the shop's block is identifiable today within a few doors."
+    }
+   ]
+  },
+  {
+   "label": "Example · The moved border",
+   "body": [
+    {
+     "t": "A village recorded in one country in 1900 and another by 1950 never moved — the border did. Modern coordinates separate the place's fixed position from the century's politics, the core skill this page supports."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Old map traps and their modern anchors",
+  "intro": "Four recurring ways old maps mislead the modern reader.",
+  "columns": [
+   "Trap",
+   "What happens",
+   "Modern anchor"
+  ],
+  "rows": [
+   [
+    "Renamed places",
+    "Gazetteer searches fail",
+    "Coordinates of a surviving neighbour feature"
+   ],
+   [
+    "Old prime meridians",
+    "Longitudes offset by degrees (Paris: 2.35°E)",
+    "Recompute against Greenwich before plotting"
+   ],
+   [
+    "Pre-survey coastlines",
+    "Coasts drawn by eye and sail",
+    "Modern outline for shape, old map for names"
+   ],
+   [
+    "Changed borders",
+    "Countries that no longer exist",
+    "The point's coordinates never changed — only its flag"
+   ]
+  ],
+  "note": "This page deliberately does not warp or georeference scanned map images — that is specialist GIS work with control points and error measurement. What it gives you is the modern coordinate frame to read old geography against, honestly labelled."
+ },
+ "faq": [
+  [
+   "Can I upload a scan of my old map?",
+   "Not here — this is a context and anchoring tool, not an image-upload georeferencer. Scanned-map warping belongs in GIS software (QGIS's georeferencer is the free standard) with this page's coordinates as your control-point reference."
+  ],
+  [
+   "How accurate were old maps?",
+   "Wildly variable. A 19th-century Ordnance Survey sheet can be accurate to metres; a 17th-century county map may misplace towns by kilometres. Treat every old map's geometry as a claim to test against modern anchors."
+  ],
+  [
+   "Why is the longitude on my old map 'wrong'?",
+   "It may be measured from a different prime meridian — Paris, Ferro, or a national observatory. Convert by the known offset (Paris is 2.337°E of Greenwich) before concluding the mapmaker erred."
+  ],
+  [
+   "Where do I find old maps to work with?",
+   "National library digital collections (the British Library, Library of Congress, Gallica), national mapping agencies' archives and university map libraries all publish scans freely. Their catalogues are the researcher's real starting point."
+  ],
+  [
+   "Can modern coordinates settle a boundary dispute from an old map?",
+   "No. They can show where features sit today; title and boundary law run on deeds, surveys and courts. Use this page for understanding, professionals for verdicts."
+  ],
+  [
+   "What is a tithe map or enclosure map?",
+   "British parish maps made for tax (tithe) and land-reorganisation (enclosure) purposes in the 18th–19th centuries — extraordinarily detailed for fields and owners, and the genealogist's favourite anchor documents."
+  ],
+  [
+   "Do place names on old maps use different spellings?",
+   "Constantly — standardised spelling is recent. Search archives with variant spellings and the parish or district name; the coordinates you anchor will outlast the orthography debate."
+  ],
+  [
+   "Can I print a then-and-now pair?",
+   "Yes: capture the modern outline or map view with Map PNG Export at the same framing as your old map excerpt and print them side by side — the honest comparison format this page encourages."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Find modern coordinates for any named place with the "
+  },
+  {
+   "t": "Latitude Longitude Finder",
+   "l": "/tools/latitude-longitude-finder"
+  },
+  {
+   "t": ", get the clean modern outline from "
+  },
+  {
+   "t": "Blank Map",
+   "l": "/tools/blank-map"
+  },
+  {
+   "t": ", and read the full dossier for a point with the "
+  },
+  {
+   "t": "Coordinates Lookup Tool",
+   "l": "/tools/coordinates-lookup-tool"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "custom-labeled-map",
   "embed-map-link-helper",

@@ -8,17 +8,164 @@
   "soil volume calculator tool",
   "how to use soil volume calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Soil Volume Calculator: Cubic Yards, Honestly",
+ "description": "Calculate soil, compost or topsoil volume for an area and depth with the Soil Volume Calculator — cubic feet and cubic yards for ordering. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, an 8 × 4 ft raised bed filled 12 inches deep needs 32 cubic feet of soil — 1.19 cubic yards, or about 21 standard 1.5-cubic-foot bags, which is the number the garden centre actually sells by.",
+ "quick_answer": "The Soil Volume Calculator works out how much soil, compost or topsoil an area needs at a chosen depth — area times depth, reported in cubic feet and cubic yards. Enter the area and the depth and read the order quantity for raised beds, lawn top-dressing and landscape renovation.",
+ "steps_intro": "Area times depth — but the order is written in cubic yards:",
+ "use_cases": [
+  {
+   "title": "Raised beds",
+   "body": [
+    {
+     "t": "The classic: bed footprint times fill depth. An 8 × 4 ft bed at 12 inches is 1.19 cu yd — order 1.25 and the last corner won't be short."
+    }
+   ]
+  },
+  {
+   "title": "Lawn top-dressing",
+   "body": [
+    {
+     "t": "An acre dressed 1 inch deep swallows 134.4 cubic yards — the number that turns 'a light dressing' into a delivery conversation. Smaller lawns scale from the "
+    },
+    {
+     "t": "Rectangular Lot Acreage Calculator",
+     "l": "/tools/rectangular-lot-acreage-calculator"
+    },
+    {
+     "t": "'s area."
+    }
+   ]
+  },
+  {
+   "title": "Compost and mulch layers",
+   "body": [
+    {
+     "t": "Three inches over 100 sq ft is 25 cu ft (0.93 cu yd). The calculator keeps the layer's promise honest before the bags are bought."
+    }
+   ]
+  },
+  {
+   "title": "Checking a supplier's quote",
+   "body": [
+    {
+     "t": "Their cubic yards against your area × depth — disagreements are usually depth assumptions, and now you can name yours."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The bag conversion",
+   "body": [
+    {
+     "t": "32 cu ft for the raised bed ÷ 1.5 cu ft per bag = 21.3 — buy 22 bags. Bulk wins above about a cubic yard; bags win below it; the calculator's dual units let you price both."
+    }
+   ]
+  },
+  {
+   "label": "Example · Settling is real",
+   "body": [
+    {
+     "t": "Loose soil compacts roughly 10–20% after watering and settling. The calculator gives the placed volume; gardeners order a margin over it and say so."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Volume for common jobs",
+  "intro": "Area × depth, computed — including the acre-inch that surprises everyone.",
+  "columns": [
+   "Job",
+   "Volume (cu ft)",
+   "Volume (cu yd)"
+  ],
+  "rows": [
+   [
+    "100 sq ft at 3 in",
+    "25.0",
+    "0.93"
+   ],
+   [
+    "500 sq ft at 6 in",
+    "250.0",
+    "9.26"
+   ],
+   [
+    "1,000 sq ft at 4 in",
+    "333.3",
+    "12.35"
+   ],
+   [
+    "Raised bed 8 × 4 ft at 12 in",
+    "32.0",
+    "1.19"
+   ],
+   [
+    "1 acre at 1 in",
+    "3,630",
+    "134.44"
+   ]
+  ],
+  "note": "One cubic yard = 27 cubic feet. Depths are finished depths; loose-delivered material fluffs above them and settles back — order with the margin your supplier recommends."
+ },
+ "faq": [
+  [
+   "Cubic yards or cubic feet?",
+   "Both are reported: feet for bag maths, yards for bulk orders. The conversion is exactly 27 cu ft per cu yd."
+  ],
+  [
+   "How deep for a raised bed?",
+   "Most beds run 8–12 inches of soil over the base; vegetables with deep roots like the full 12. The calculator prices whichever depth your design chooses."
+  ],
+  [
+   "Does it handle round beds?",
+   "Area is the input — a circle's area (π r²) works: a 10 ft diameter bed is 78.5 sq ft before depth is applied."
+  ],
+  [
+   "Topsoil versus compost volumes?",
+   "Same geometry — the material changes the supplier, not the arithmetic."
+  ],
+  [
+   "Sloped ground?",
+   "Use the average depth across the slope, or split the area into level sections. Volume forgives averaging better than depth extremes do."
+  ],
+  [
+   "How much does a cubic yard weigh?",
+   "Roughly a ton to 1.4 tons depending on moisture and material — the trailer question. Your supplier's figure governs; volume is this page's department."
+  ],
+  [
+   "Existing soil in the bed?",
+   "Subtract the depth it already fills — fill depth is the empty part's depth, not the bed's full height."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Areas first: the "
+  },
+  {
+   "t": "Rectangular Lot Acreage Calculator",
+   "l": "/tools/rectangular-lot-acreage-calculator"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Acreage Map Calculator",
+   "l": "/tools/acreage-map-calculator"
+  },
+  {
+   "t": "; circles: the "
+  },
+  {
+   "t": "Circle Area From Radius",
+   "l": "/tools/circle-area-from-radius"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-area-from-radius",

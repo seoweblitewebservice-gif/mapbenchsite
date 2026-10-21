@@ -8,17 +8,159 @@
   "calculate geojson centre",
   "featurecollection centroid"
  ],
- "title": null,
- "description": null,
+ "title": "GeoJSON Centroid Calculator: Mean Centre",
+ "description": "Calculate the mean coordinate centre across a GeoJSON object's vertices with the GeoJSON Centroid Calculator — quick dataset orientation. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a four-feature sample around New York centres at 40.7298, −73.9397 — the vertex average, sitting between its Times Square point and its JFK point, exactly as a mean should.",
+ "quick_answer": "The GeoJSON Centroid Calculator computes the mean coordinate centre across all vertices in a GeoJSON object — a fast orientation point for a dataset. Paste the GeoJSON and read the centre — the average of every coordinate pair, vertex-mean nature stated plainly.",
+ "steps_intro": "Every vertex votes once. The mean is the result:",
+ "use_cases": [
+  {
+   "title": "First-view centring",
+   "body": [
+    {
+     "t": "Open the map where the data’s weight sits. The vertex mean is a better default than a capital city — and the "
+    },
+    {
+     "t": "GeoJSON Bounding Box Calculator",
+     "l": "/tools/geojson-bounding-box-calculator"
+    },
+    {
+     "t": " supplies the zoom’s frame around it."
+    }
+   ]
+  },
+  {
+   "title": "Dataset fingerprints",
+   "body": [
+    {
+     "t": "One coordinate summarising a file travels well in catalogues and tickets: ‘the dataset centred at…’ orients anyone in one line."
+    }
+   ]
+  },
+  {
+   "title": "Change detection",
+   "body": [
+    {
+     "t": "This month’s centre versus last month’s quantifies drift — coverage creeping, sensors migrating, territories shifting."
+    }
+   ]
+  },
+  {
+   "title": "Sanity orientation",
+   "body": [
+    {
+     "t": "A file that should centre on Ohio but centres on the Atlantic has swapped or unsigned coordinates. The centroid is the fastest liar-catcher after the bbox."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Vertex density is weight",
+   "body": [
+    {
+     "t": "A file with one detailed coastline polygon (10,000 vertices) and one city point centres near the coastline — the mean counts vertices, not features. That is the method, stated: detailed geometry outvotes sparse geometry."
+    }
+   ]
+  },
+  {
+   "label": "Example · Mean versus mass",
+   "body": [
+    {
+     "t": "A polygon’s true centre of mass can sit far from its vertices’ mean when vertices cluster along one intricate shore. This calculator is explicit about being the vertex mean; polygon-mass centroids are a different, heavier computation."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Centres, distinguished",
+  "intro": "Four centres a GeoJSON file can have.",
+  "columns": [
+   "Centre",
+   "Computed from",
+   "Character"
+  ],
+  "rows": [
+   [
+    "Vertex mean (this tool)",
+    "All coordinate pairs, equally",
+    "Fast orientation; density-sensitive"
+   ],
+   [
+    "Feature mean",
+    "One point per feature (its own centre)",
+    "Feature-democratic"
+   ],
+   [
+    "Polygon mass centroid",
+    "Area-weighted geometry",
+    "The surveyor’s label point"
+   ],
+   [
+    "Bbox midpoint",
+    "The extent’s edges",
+    "A frame property, not a data property"
+   ]
+  ],
+  "note": "The method note is the product: a vertex mean is honest for orientation and fingerprints. Publications needing a defensible ‘centre of the region’ should compute the area-weighted centroid in GIS."
+ },
+ "faq": [
+  [
+   "Is it area-weighted?",
+   "No — deliberately and openly. Every vertex counts once. Densely-digitised geometry pulls the centre toward itself; the examples on this page show the effect so it never surprises you."
+  ],
+  [
+   "Points-only files?",
+   "The mean of the points — identical in spirit to the CSV centroid. A points file is the method’s home turf."
+  ],
+  [
+   "What about polygon holes?",
+   "Hole vertices are vertices — they vote. For most files their pull is negligible; for a donut metropolis it is part of the dataset’s shape."
+  ],
+  [
+   "Date-line files?",
+   "Arithmetic longitude averaging breaks at the seam (179 and −179 average to 0). Pacific-centred files should be seam-shifted before averaging — the calculator reports the naive mean and the caveat stands here in writing."
+  ],
+  [
+   "Precision of the result?",
+   "Displayed to five decimals; the honest uncertainty is the dataset’s spread, typically far larger. A centre is a summary, not a survey mark."
+  ],
+  [
+   "Empty or null geometries?",
+   "They contribute no vertices and no votes; a file with no coordinates at all has no centre, reported as such."
+  ],
+  [
+   "Can I use it as a label point?",
+   "For orientation graphics, yes; for guaranteed inside-the-polygon labels, no — means can fall outside concave shapes (a crescent’s mean sits in its bay). Label points are their own GIS craft."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Extent: the "
+  },
+  {
+   "t": "GeoJSON Bounding Box Calculator",
+   "l": "/tools/geojson-bounding-box-calculator"
+  },
+  {
+   "t": "; area: the "
+  },
+  {
+   "t": "GeoJSON Area Calculator",
+   "l": "/tools/geojson-area-calculator"
+  },
+  {
+   "t": "; CSV twin: the "
+  },
+  {
+   "t": "CSV Coordinate Centroid Calculator",
+   "l": "/tools/csv-coordinate-centroid-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

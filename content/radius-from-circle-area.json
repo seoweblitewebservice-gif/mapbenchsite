@@ -8,17 +8,164 @@
   "radius from circle area calculator tool",
   "how to calculate radius from circle area calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Radius From Circle Area Calculator",
+ "description": "Find a circle's radius and diameter from its area with the Radius From Circle Area Calculator — r = √(A ÷ π), in any area unit. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a circular service area of 100 km² has a radius of 5.64 km — and a one-acre circle, all 43,560 square feet of it, has a radius of just 117.8 feet.",
+ "quick_answer": "The Radius From Circle Area Calculator inverts the area formula: radius equals the square root of area divided by pi. Enter the circle's area and read the radius — plus diameter and circumference — for coverage areas, tanks and plots.",
+ "steps_intro": "Area = π r², run backwards:",
+ "use_cases": [
+  {
+   "title": "Coverage and service areas",
+   "body": [
+    {
+     "t": "A provider claims '314 square miles of coverage' from one site — that is a 10-mile radius wearing an area costume. The forward family starts at the "
+    },
+    {
+     "t": "Map Radius",
+     "l": "/tools/map-radius"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Tanks, silos and round structures",
+   "body": [
+    {
+     "t": "Floor area known from a spec sheet, diameter needed for a lid, liner or foundation: the radius is the hinge number between them."
+    }
+   ]
+  },
+  {
+   "title": "Land and forestry plots",
+   "body": [
+    {
+     "t": "Circular sample plots are forestry's standard: a 1/10-acre plot's radius (37.2 ft) is a number cruisers carry in their heads — this page is where it comes from."
+    }
+   ]
+  },
+  {
+   "title": "Everyday circles",
+   "body": [
+    {
+     "t": "Pizza value comparisons are area comparisons (a 16-inch pizza is two 8-inch pizzas doubled, not quadrupled — area again). The radius keeps the menu honest."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The π km² circle",
+   "body": [
+    {
+     "t": "An area of exactly π km² (3.14159) gives a radius of exactly 1 km — the formula's party trick, and a clean check that the calculator's inverse is honest."
+    }
+   ]
+  },
+  {
+   "label": "Example · The acre circle",
+   "body": [
+    {
+     "t": "1 acre = 43,560 sq ft; r = √(43,560 ÷ π) = 117.8 ft, diameter 235.5 ft. A circular acre fits inside a square acre (208.7 ft sides) with room to spare — circles pack less than squares, as every pizza already knows."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Areas to radii",
+  "intro": "Computed r = √(A/π) across the units circles arrive in.",
+  "columns": [
+   "Area",
+   "Radius",
+   "Diameter"
+  ],
+  "rows": [
+   [
+    "78.54 sq mi",
+    "5.00 mi",
+    "10.00 mi"
+   ],
+   [
+    "100 km²",
+    "5.64 km",
+    "11.28 km"
+   ],
+   [
+    "1 acre",
+    "117.8 ft",
+    "235.5 ft"
+   ],
+   [
+    "1/10 acre (forestry plot)",
+    "37.2 ft",
+    "74.5 ft"
+   ],
+   [
+    "π km²",
+    "1.00 km",
+    "2.00 km"
+   ]
+  ],
+  "note": "Radius grows with the square root of area: quadruple the area, double the radius. Every 'huge' area claim deflates through this root — the calculator is the deflator."
+ },
+ "faq": [
+  [
+   "What is the formula?",
+   "r = √(A ÷ π), the algebraic inverse of A = πr². Diameter is 2r; circumference is 2πr — the page returns the family, since callers rarely want the radius alone."
+  ],
+  [
+   "Which area units are accepted?",
+   "Square feet, square metres, acres, hectares, square kilometres and square miles — converted internally so the radius arrives in the matching length unit."
+  ],
+  [
+   "Can I go the other way (radius to area)?",
+   "Yes — the Circle Area From Radius Calculator is the forward lane, and the pair of pages round-trip exactly."
+  ],
+  [
+   "My area is a radius in disguise from a map tool.",
+   "Common: a 'coverage area' exported from a radius map. Recovering the radius lets you redraw the same circle in the Map Radius tool and compare like with like."
+  ],
+  [
+   "Ellipses or ovals?",
+   "An ellipse needs two axes; from area alone its radius is undefined. If the shape is a squashed circle, measure both axes on the map and use the ellipse's own geometry."
+  ],
+  [
+   "Precision — how many decimals?",
+   "The root is exact for the input; report the radius at the input's dignity. An area paced off in the field earns a whole-foot radius, not hundredths."
+  ],
+  [
+   "Negative or zero area?",
+   "Zero gives a zero radius (a point); negative area is not a thing in this universe, and the calculator declines it accordingly."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Forward: the "
+  },
+  {
+   "t": "Circle Area From Radius Calculator",
+   "l": "/tools/circle-area-from-radius"
+  },
+  {
+   "t": "; from circumference: the "
+  },
+  {
+   "t": "Radius From Circumference",
+   "l": "/tools/radius-from-circumference"
+  },
+  {
+   "t": "; draw it: the "
+  },
+  {
+   "t": "Map Radius",
+   "l": "/tools/map-radius"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-circumference-from-radius",

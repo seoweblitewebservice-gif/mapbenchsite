@@ -8,17 +8,169 @@
   "rectangular lot acreage calculator tool",
   "how to calculate rectangular lot acreage calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Rectangular Lot Acreage Calculator",
+ "description": "Work out a rectangular lot's acreage from its length and width with the Rectangular Lot Acreage Calculator — square feet to acres, exact. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a classic 100 × 150 ft suburban lot is 15,000 square feet — 0.344 acres, which is why 'a third of an acre' is the honest way to describe most suburban yards.",
+ "quick_answer": "The Rectangular Lot Acreage Calculator multiplies a rectangular lot's length by its width to get square feet, then divides by 43,560 to give acres. Enter the two sides in feet (or metres) and read the acreage — the listing-sheet calculation, done exactly instead of estimated from the kerb.",
+ "steps_intro": "Two sides, one multiplication, one division by 43,560:",
+ "use_cases": [
+  {
+   "title": "Checking a listing",
+   "body": [
+    {
+     "t": "The deed says 100 × 150 ft; the listing says 'about half an acre'. The calculator settles it: 0.344 acres — 'about' was doing heavy lifting."
+    }
+   ]
+  },
+  {
+   "title": "Fencing and materials",
+   "body": [
+    {
+     "t": "Acreage drives seed, fertiliser and fencing budgets. Start here for rectangles; the "
+    },
+    {
+     "t": "Acreage Map Calculator",
+     "l": "/tools/acreage-map-calculator"
+    },
+    {
+     "t": " handles drawn shapes."
+    }
+   ]
+  },
+  {
+   "title": "Comparing lots",
+   "body": [
+    {
+     "t": "Two lots, different shapes of rectangle — acreage is the common currency that makes the comparison fair."
+    }
+   ]
+  },
+  {
+   "title": "Tax and record sanity",
+   "body": [
+    {
+     "t": "Assessor records sometimes carry stale dimensions. A two-minute calculation flags the parcels worth a second look."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The quarter-acre classic",
+   "body": [
+    {
+     "t": "66 × 165 ft = 10,890 sq ft = exactly 0.25 acres. Those dimensions are a chain by 2.5 chains — a fossil of survey history still hiding in American suburbs."
+    }
+   ]
+  },
+  {
+   "label": "Example · Near an acre",
+   "body": [
+    {
+     "t": "200 × 200 ft = 40,000 sq ft = 0.918 acres. Close to an acre is not an acre — 3,560 square feet short, about a tennis court of difference."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Common rectangular lots",
+  "intro": "Sizes American and European parcels actually come in — computed, not rounded for the brochure.",
+  "columns": [
+   "Length × width",
+   "Square feet",
+   "Acres"
+  ],
+  "rows": [
+   [
+    "50 × 100 ft",
+    "5,000",
+    "0.115"
+   ],
+   [
+    "66 × 165 ft",
+    "10,890",
+    "0.250"
+   ],
+   [
+    "100 × 150 ft",
+    "15,000",
+    "0.344"
+   ],
+   [
+    "150 × 200 ft",
+    "30,000",
+    "0.689"
+   ],
+   [
+    "200 × 200 ft",
+    "40,000",
+    "0.918"
+   ],
+   [
+    "209 × 209 ft approx",
+    "43,560",
+    "1.000"
+   ]
+  ],
+  "note": "One acre is 43,560 sq ft by definition. A square acre is about 208.7 ft per side — the number that ends most 'is that an acre?' arguments."
+ },
+ "faq": [
+  [
+   "What if my lot is not a true rectangle?",
+   "Split it into rectangles and add the parts, or draw the actual outline on the Acreage Map Calculator — irregular lots deserve the drawn method."
+  ],
+  [
+   "Feet or metres?",
+   "Both — enter metres and the calculator works in square metres, converting to acres (1 acre = 4,046.86 m²) for the headline figure."
+  ],
+  [
+   "Does the slope matter?",
+   "Deeds measure horizontal (plan) area, not slope surface. A steep lot's acreage is its map footprint — this calculator follows the deed's convention."
+  ],
+  [
+   "Road frontage included?",
+   "Lots are usually measured to the street line, not the road's centre — check your deed's dimensions rather than assuming; the calculator uses the dimensions you give it."
+  ],
+  [
+   "Rounding in listings?",
+   "Listings round generously. The exact figure here is your negotiating fact; their 'approx.' is their poetry."
+  ],
+  [
+   "Acreage of a square lot?",
+   "Enter the same number twice — or the Square Acreage From Perimeter tool if you only know the fence length."
+  ],
+  [
+   "Easements and setbacks?",
+   "Acreage is the parcel's total. Usable or buildable area subtracts easements and setbacks — a planning question beyond the rectangle's arithmetic."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Drawn shapes: the "
+  },
+  {
+   "t": "Acreage Map Calculator",
+   "l": "/tools/acreage-map-calculator"
+  },
+  {
+   "t": "; from perimeter: "
+  },
+  {
+   "t": "Square Acreage From Perimeter",
+   "l": "/tools/square-acreage-from-perimeter"
+  },
+  {
+   "t": "; convert onward: the "
+  },
+  {
+   "t": "Acres to Square Feet Converter",
+   "l": "/tools/acres-to-square-feet-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-area-from-radius",

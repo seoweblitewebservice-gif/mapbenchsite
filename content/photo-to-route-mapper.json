@@ -7,17 +7,154 @@
   "photo gps route",
   "jpeg exif map route"
  ],
- "title": null,
- "description": null,
+ "title": "Photo to Route Mapper: EXIF Photos to a Route",
+ "description": "Turn geotagged photos into a route on a map with the Photo to Route Mapper — JPEG GPS tags read locally, joined in time order. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a day's 34 geotagged photos from Keswick to Catbells and back become a mapped route — the summit pin sitting 4.18 km straight-line from the first frame at the car park, the path between them drawn by the photos themselves.",
+ "quick_answer": "The Photo to Route Mapper reads the GPS tags inside your JPEG photos — locally, never uploaded — and joins the pins in time order into the route you actually travelled. Drop the day's photos and see the itinerary they secretly recorded, ready to download as GPX.",
+ "steps_intro": "Your camera roll kept a tracklog. Read it back:",
+ "use_cases": [
+  {
+   "title": "Rebuilding a hike you forgot to record",
+   "body": [
+    {
+     "t": "No watch, no app — but forty photos. Their EXIF positions rebuild the day closely enough to log it, share it and find that viewpoint again. Export it as GPX and the "
+    },
+    {
+     "t": "GPX Viewer",
+     "l": "/tools/gpx-viewer"
+    },
+    {
+     "t": " shows the result."
+    }
+   ]
+  },
+  {
+   "title": "Site and survey documentation",
+   "body": [
+    {
+     "t": "Inspection photos arrive as evidence; mapped in time order they become the inspection's route and coverage proof, asset by asset."
+    }
+   ]
+  },
+  {
+   "title": "Travel journalling",
+   "body": [
+    {
+     "t": "A road trip's photos draw the trip better than memory does — the unplanned detour is right there in the pin sequence."
+    }
+   ]
+  },
+  {
+   "title": "Verifying a claimed itinerary",
+   "body": [
+    {
+     "t": "Expense claims, delivery runs and field reports carry photo trails. The map they draw either matches the claim or starts a conversation."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Gaps are honest",
+   "body": [
+    {
+     "t": "Three hours underground in a show cave: no photos, so the route leaps from the entrance to the café. The line is a join of evidence, not a recording — where photos are silent, the map says nothing, and the straight join is drawn knowing that."
+    }
+   ]
+  },
+  {
+   "label": "Example · The out-of-order camera",
+   "body": [
+    {
+     "t": "A camera whose clock was an hour off still maps correctly by position, but the sequence sorts by its wrong timestamps. Fix the clock offset in your head when the route doubles back inexplicably — EXIF time is the camera's claim, not the truth."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the mapper reads from each photo",
+  "intro": "EXIF GPS fields — the itinerary hidden in the file headers.",
+  "columns": [
+   "EXIF field",
+   "Becomes"
+  ],
+  "rows": [
+   [
+    "GPSLatitude / GPSLongitude (+ refs)",
+    "The pin"
+   ],
+   [
+    "DateTimeOriginal",
+    "The sequence order"
+   ],
+   [
+    "GPSAltitude",
+    "Shown where present — context, not route geometry"
+   ],
+   [
+    "No GPS fields",
+    "The photo is skipped, and reported as skipped"
+   ]
+  ],
+  "note": "Only JPEGs with intact EXIF GPS are placed. Screenshots, most messaging-app downloads and 'optimised' exports have tags stripped by other platforms before they reach you."
+ },
+ "faq": [
+  [
+   "Which photos work?",
+   "JPEGs (and most phone HEICs converted to JPEG) whose EXIF still carries GPS coordinates. The surest test: the photo's details in your gallery show a location."
+  ],
+  [
+   "My photos show as skipped.",
+   "Their GPS tags were stripped or never recorded — location services off, or the images passed through an app that removes EXIF. Originals from the device keep tags; copies often do not."
+  ],
+  [
+   "Time order or file order?",
+   "EXIF timestamps order the route — the journey's actual chronology, not the alphabet of filenames."
+  ],
+  [
+   "How accurate are the pins?",
+   "Phone GPS accuracy: typically 3–10 m outdoors. Good enough for the route's shape; not a survey."
+  ],
+  [
+   "Does it draw the roads we drove?",
+   "No — pins joined by straight lines in time order: a photo itinerary, not a road-snapped track. Between close photos the difference is invisible; across a photo desert it is a beeline."
+  ],
+  [
+   "What GPX does the download contain?",
+   "Waypoints for each placed photo and a track through them in time order — the file your other tools in this family can then measure."
+  ],
+  [
+   "Privacy — faces and number plates?",
+   "The mapper reads headers, not image content; the photos never leave your browser, and the exported route contains positions and times only."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "See the export: the "
+  },
+  {
+   "t": "GPX Viewer",
+   "l": "/tools/gpx-viewer"
+  },
+  {
+   "t": "; measure it: the "
+  },
+  {
+   "t": "GPX Track Distance Calculator",
+   "l": "/tools/gpx-track-distance-calculator"
+  },
+  {
+   "t": "; count photos placed: the "
+  },
+  {
+   "t": "GPX Waypoint Count Tool",
+   "l": "/tools/gpx-waypoint-count-tool"
+  },
+  {
+   "t": " reads the GPX side."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

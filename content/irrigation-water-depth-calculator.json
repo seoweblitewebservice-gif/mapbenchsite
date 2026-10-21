@@ -8,17 +8,159 @@
   "irrigation water depth calculator tool",
   "how to use irrigation water depth calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Irrigation Water Depth Calculator",
+ "description": "Convert irrigation volume or flow into applied water depth with the Irrigation Water Depth Calculator — acre-inches and gallons reconciled. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, 100,000 gallons spread over 2 acres is 1.84 inches of water — the acre-inch (27,154 gallons) is the exchange rate that turns a pump log into a depth.",
+ "quick_answer": "The Irrigation Water Depth Calculator converts a volume of water, or a flow rate over time, into the depth it applies across a field — inches of water over acres. Enter the gallons (or flow and hours) and field size and read the applied depth.",
+ "steps_intro": "Farmers schedule in inches of depth; pumps report in gallons. Translate:",
+ "use_cases": [
+  {
+   "title": "Irrigation scheduling",
+   "body": [
+    {
+     "t": "The crop needs an inch; the pivot ran 10 hours at 500 gallons a minute — that is 300,000 gallons, 2.21 inches over 5 acres. The calculator is where the crop's language and the pump's language meet."
+    }
+   ]
+  },
+  {
+   "title": "Checking a water bill or allocation",
+   "body": [
+    {
+     "t": "Districts allocate in acre-feet; fields drink in inches. One acre-foot is 325,851 gallons — twelve acre-inches stacked — and this page converts allocations into per-field depths."
+    }
+   ]
+  },
+  {
+   "title": "Comparing fields and systems",
+   "body": [
+    {
+     "t": "Two fields, one pump log: depths expose which field was actually watered and which was merely visited. Field areas come from the "
+    },
+    {
+     "t": "Map Area Calculator",
+     "l": "/tools/map-area-calculator"
+    },
+    {
+     "t": " when the acreage is a rumour."
+    }
+   ]
+  },
+  {
+   "title": "Rainfall equivalence",
+   "body": [
+    {
+     "t": "A storm drops 0.8 inches — what would the pump have charged for that? At 27,154 gallons per acre-inch, an inch over 10 acres is 271,543 gallons of free water, priced."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The acre-inch, priced",
+   "body": [
+    {
+     "t": "One acre covered one inch deep holds 27,154 gallons (43,560 sq ft × 1/12 ft × 7.48052 gal/ft³). Every irrigation conversion on this page is that single number wearing different clothes."
+    }
+   ]
+  },
+  {
+   "label": "Example · Flow becomes depth",
+   "body": [
+    {
+     "t": "500 gpm × 600 minutes = 300,000 gallons. Over 5 acres: 300,000 ÷ 27,154 ÷ 5 = 2.21 inches. Three multiplications turn a flow gauge into a soil-moisture decision."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Water depth exchange rates",
+  "intro": "The constants this calculator lives by — all derived from the acre-inch.",
+  "columns": [
+   "Quantity",
+   "Gallons",
+   "Litres"
+  ],
+  "rows": [
+   [
+    "1 acre-inch",
+    "27,154",
+    "102,790"
+   ],
+   [
+    "1 acre-foot",
+    "325,851",
+    "1,233,482"
+   ],
+   [
+    "1 inch over 10 acres",
+    "271,543",
+    "1,027,900"
+   ],
+   [
+    "1 inch over 1 hectare",
+    "102,790 L worth",
+    "102,790"
+   ]
+  ],
+  "note": "Depths are gross applied water. What the crop keeps depends on system efficiency — sprinklers lose some to wind and evaporation, drip loses least; the calculator prices the application, the agronomist prices the loss."
+ },
+ "faq": [
+  [
+   "Does it account for irrigation efficiency?",
+   "The computed depth is water applied at the field. Effective depth in the root zone is lower — multiply by your system's efficiency (drip often 90%+, sprinklers 75–85%, flood lower) for the scheduling figure."
+  ],
+  [
+   "Flow rate instead of a total volume?",
+   "Multiply flow by run time first (gallons per minute × minutes) — or enter flow and hours where the tool offers it; the depth comes from the total volume either way."
+  ],
+  [
+   "What about centre-pivot part circles?",
+   "Use the actually-irrigated acres, not the field's deed acres. A pivot watering 120 of 130 acres concentrates its volume — depth rises accordingly, and corners stay dry by design."
+  ],
+  [
+   "Rainfall in the same units?",
+   "Rain gauges already report depth — one inch of rain on one acre equals one acre-inch, 27,154 gallons you did not pump. Comparing the two is the budgeting habit this page encourages."
+  ],
+  [
+   "Metric fields?",
+   "Hectares and litres convert through the same physics: one inch over one hectare is 102,790 litres (a millimetre over a hectare is 10,000 litres — the metric system's tidier proverb)."
+  ],
+  [
+   "How deep should I irrigate?",
+   "That is an agronomy question — soil type, crop stage and evapotranspiration decide it. This calculator's job is narrower: making sure the depth you intended is the depth you applied."
+  ],
+  [
+   "Small gardens?",
+   "The arithmetic scales down untouched: 100 gallons over 500 sq ft is 0.32 inches. Depth is depth, at farm scale or flower-bed scale."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Field size first: the "
+  },
+  {
+   "t": "Map Area Calculator",
+   "l": "/tools/map-area-calculator"
+  },
+  {
+   "t": "; volumes of soil and mulch: the "
+  },
+  {
+   "t": "Soil Volume Calculator",
+   "l": "/tools/soil-volume-calculator"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Mulch Volume Calculator",
+   "l": "/tools/mulch-volume-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-area-from-radius",

@@ -8,17 +8,166 @@
   "world time converter",
   "convert time zones"
  ],
- "title": null,
- "description": null,
+ "title": "Time Zone Converter: Convert Times Worldwide",
+ "description": "Convert a time between time zones with the Time Zone Converter — daylight saving handled, city to city, date line aware. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, 9:00 a.m. in New York is 2:00 p.m. in London and 7:30 p.m. in Mumbai — the half-hour that reminds everyone India never does anything by halves.",
+ "quick_answer": "The Time Zone Converter converts a time and date between zones — New York to London, Chicago to Berlin — applying each zone's real rules, including daylight saving. Enter the time and both zones and read the converted time, day shift included.",
+ "steps_intro": "Offsets are rules, not constants. Convert with the rules on:",
+ "use_cases": [
+  {
+   "title": "Calls and meetings",
+   "body": [
+    {
+     "t": "The standing use: schedule across zones without the 3 a.m. accident. The working-hours overlap is computed on the "
+    },
+    {
+     "t": "Working Hours Overlap Calculator",
+     "l": "/tools/working-hours-overlap-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Flights and itineraries",
+   "body": [
+    {
+     "t": "Departure in one zone, arrival in another, both printed in local time — the converter is how you learn you land 'before you left' (you did not; the date line did it)."
+    }
+   ]
+  },
+  {
+   "title": "Broadcasts and launches",
+   "body": [
+    {
+     "t": "Kickoffs, product drops and streams publish in one zone and are watched in fifty — convert the announcement once, correctly."
+    }
+   ]
+  },
+  {
+   "title": "Family across the water",
+   "body": [
+    {
+     "t": "London to Sydney swings between 9 and 11 hours across the year — the converter absorbs the two hemispheres' opposite daylight-saving seasons."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 9 a.m. call",
+   "body": [
+    {
+     "t": "9:00 New York (EST, winter) = 14:00 London = 15:00 Berlin = 19:30 Mumbai = 01:00 next day in Sydney (AEDT). One meeting, four dates' worth of arithmetic, one conversion."
+    }
+   ]
+  },
+  {
+   "label": "Example · The changeover-week trap",
+   "body": [
+    {
+     "t": "For about three weeks each spring, the US has sprung forward but Europe has not: New York–London shrinks to 4 hours. Converters using fixed offsets get these weeks wrong; rule-based ones do not."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reference offsets from New York (winter)",
+  "intro": "Standard-time differences — daylight saving moves several of these.",
+  "columns": [
+   "City",
+   "Behind/ahead of New York"
+  ],
+  "rows": [
+   [
+    "Chicago",
+    "1 h behind"
+   ],
+   [
+    "Denver",
+    "2 h behind"
+   ],
+   [
+    "Los Angeles",
+    "3 h behind"
+   ],
+   [
+    "London",
+    "5 h ahead"
+   ],
+   [
+    "Berlin / Paris",
+    "6 h ahead"
+   ],
+   [
+    "Mumbai",
+    "10 h 30 ahead"
+   ],
+   [
+    "Sydney",
+    "16 h ahead (next day)"
+   ]
+  ],
+  "note": "Offsets belong to dates, not cities: always convert the specific date, especially near the March and October/November changeovers."
+ },
+ "faq": [
+  [
+   "What happens in the weeks when only one side has changed its clocks?",
+   "The gap between the zones temporarily grows or shrinks by an hour (New York–London is 4 hours, not 5, for about three weeks each spring). The converter applies each zone's rules for the exact date, so those weeks come out right."
+  ],
+  [
+   "Can I convert a whole schedule of times at once?",
+   "One time per conversion here — step through the schedule, or convert the anchor time and shift the rest by the same difference (valid until a clock-change date intervenes, which the single conversions reveal)."
+  ],
+  [
+   "Does it need my location to work?",
+   "No — you name both zones explicitly, so the conversion is identical anywhere. Your location only matters if you ask for 'my time' as one of the zones."
+  ],
+  [
+   "Why does the date change?",
+   "Enough hours east or west crosses midnight — Sydney is routinely 'tomorrow' from the US. The converter shows the resulting date explicitly."
+  ],
+  [
+   "Half-hour zones?",
+   "Handled — India (+5:30), Iran (+3:30) and Newfoundland (−3:30) among them; Nepal's +5:45 quarter-hour too."
+  ],
+  [
+   "What is UTC in all this?",
+   "The reference meridian time all offsets hang from — the World Time Zone Map shows the whole pattern at a glance."
+  ],
+  [
+   "Arizona and Hawaii?",
+   "No daylight saving there (nor in most of the tropics) — the rules know it even when visitors forget."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The map: the "
+  },
+  {
+   "t": "World Time Zone Map",
+   "l": "/tools/world-time-zone-map"
+  },
+  {
+   "t": "; overlap: the "
+  },
+  {
+   "t": "Working Hours Overlap Calculator",
+   "l": "/tools/working-hours-overlap-calculator"
+  },
+  {
+   "t": "; offset by place: the "
+  },
+  {
+   "t": "UTC Offset by Coordinates",
+   "l": "/tools/utc-offset-by-coordinates"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "golden-hour-calculator",
   "moon-age-calculator",

@@ -8,17 +8,161 @@
   "csv row counter checker",
   "csv row counter validator"
  ],
- "title": null,
- "description": null,
+ "title": "CSV Row Counter: Records in a Paste",
+ "description": "Count the data records in a pasted CSV with the CSV Row Counter — header excluded, blanks handled, no spreadsheet needed. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a six-line paste with one header line counts 5 records — or 6, if one city was pasted twice, which is exactly the kind of surprise this count exists to surface early.",
+ "quick_answer": "The CSV Row Counter counts how many records sit in a small pasted CSV without opening a spreadsheet application. The first non-empty line is the header; the non-empty lines after it count as data rows — paste and read your dataset's size.",
+ "steps_intro": "Know your denominator before anyone quotes a percentage:",
+ "use_cases": [
+  {
+   "title": "Reconciling counts",
+   "body": [
+    {
+     "t": "The vendor said 10,000 records; the file says 9,412. The count is the receipt both sides work from. Its shape partner is the "
+    },
+    {
+     "t": "CSV Column Counter",
+     "l": "/tools/csv-column-counter"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Spot-checking exports",
+   "body": [
+    {
+     "t": "After every export, one paste confirms the job wrote what it promised — filters and failures included."
+    }
+   ]
+  },
+  {
+   "title": "Sampling decisions",
+   "body": [
+    {
+     "t": "‘Check every tenth row’ needs the total first. Counts turn sampling plans from vibes into fractions."
+    }
+   ]
+  },
+  {
+   "title": "Dedupe before-and-after",
+   "body": [
+    {
+     "t": "Count, clean, recount: the pair of numbers proves what the cleaning removed. The "
+    },
+    {
+     "t": "CSV Coordinate Deduplicator",
+     "l": "/tools/csv-coordinate-deduplicator"
+    },
+    {
+     "t": " explains the difference."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Header plus five",
+   "body": [
+    {
+     "t": "A header and five city rows count 5. Paste the same file after a merge gone wrong and 6 appears — the extra row is a duplicate the count cannot name but absolutely announces."
+    }
+   ]
+  },
+  {
+   "label": "Example · The blank-line discount",
+   "body": [
+    {
+     "t": "Empty lines do not count as records. A file padded with blank separators reads smaller here than its line count in a text editor — the honest discrepancy."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Counting conventions",
+  "intro": "What counts, what does not.",
+  "columns": [
+   "Line type",
+   "Counted?"
+  ],
+  "rows": [
+   [
+    "Header (first non-empty line)",
+    "No — it is the label, not a record"
+   ],
+   [
+    "Data lines",
+    "Yes — one per non-empty line"
+   ],
+   [
+    "Blank lines",
+    "No"
+   ],
+   [
+    "Trailing newline at file end",
+    "No phantom record created"
+   ]
+  ],
+  "note": "One line per record is the convention. CSVs with quoted multi-line fields (an address spanning lines) break line-counting — those files need a real parser, and their row counts here will read high."
+ },
+ "faq": [
+  [
+   "Does the header count as a row?",
+   "No — the first non-empty line is treated as the header and excluded. What remains is the record count people actually mean."
+  ],
+  [
+   "What if there is no header?",
+   "Then the first data line is mistaken for a header and the count reads one low. Add a header line to your snippet when the file lacks one."
+  ],
+  [
+   "Blank lines inside the data?",
+   "Skipped, not counted — a record is a non-empty line."
+  ],
+  [
+   "Quoted fields with newlines?",
+   "A quoted address spanning three lines counts as three by line logic. That is the known limit of the simple method, stated openly."
+  ],
+  [
+   "Duplicate rows counted?",
+   "Twice, if present twice — counting is not deduplication. The deduplicator’s census separates unique from repeated."
+  ],
+  [
+   "How large a paste?",
+   "Snippet-scale: thousands of lines paste happily. Whole warehouses belong to wc -l and scripts — which implement this same convention."
+  ],
+  [
+   "CRLF line endings?",
+   "Windows line endings count identically; the carriage return is not a record."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Columns: the "
+  },
+  {
+   "t": "CSV Column Counter",
+   "l": "/tools/csv-column-counter"
+  },
+  {
+   "t": "; duplicates: the "
+  },
+  {
+   "t": "CSV Coordinate Deduplicator",
+   "l": "/tools/csv-coordinate-deduplicator"
+  },
+  {
+   "t": "; validate content: the "
+  },
+  {
+   "t": "CSV Coordinate Validator",
+   "l": "/tools/csv-coordinate-validator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

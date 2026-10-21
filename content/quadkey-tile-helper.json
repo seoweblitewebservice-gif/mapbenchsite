@@ -6,17 +6,164 @@
   "xyz tiles",
   "map tile calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Quadkey / Tile XYZ Helper: Point to Tiles",
+ "description": "Bridge a coordinate to its tile XYZ and quadkey with the Quadkey / Tile XYZ Helper — Bing-style tile addressing from any lat/lng. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, Times Square at zoom 15 is tile (9649, 12314), quadkey 032010110132021 — one point addressed in both dialects of the tile world from a single paste.",
+ "quick_answer": "The Quadkey / Tile XYZ Helper bridges a latitude/longitude point to the tiled web-map concepts many basemap systems use: its XYZ tile numbers and its Bing quadkey at any zoom. Enter the point and read both addresses — the helper for anyone moving between slippy-map tiles and quadkey-indexed data.",
+ "steps_intro": "One point, two tile dialects — fluent in both:",
+ "use_cases": [
+  {
+   "title": "Bing Maps data work",
+   "body": [
+    {
+     "t": "Bing's tile system and quadkey-keyed datasets meet the XYZ world here. Dedicated converters — "
+    },
+    {
+     "t": "Quadkey to XYZ Tile Converter",
+     "l": "/tools/quadkey-to-xyz-tile-converter"
+    },
+    {
+     "t": " and its reverse — handle strings you already hold."
+    }
+   ]
+  },
+  {
+   "title": "Cross-platform debugging",
+   "body": [
+    {
+     "t": "A feature sits right in one stack and one tile off in another: compare the point's XYZ and quadkey and the translation bug confesses."
+    }
+   ]
+  },
+  {
+   "title": "Learning the tile system once",
+   "body": [
+    {
+     "t": "Seeing a point's numbers in both systems at several zooms teaches the pyramid faster than any diagram."
+    }
+   ]
+  },
+  {
+   "title": "Dataset joins by tile",
+   "body": [
+    {
+     "t": "Imagery and statistics keyed by quadkey join to XYZ-keyed layers through the shared point — the helper is the Rosetta stone."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Reading a quadkey",
+   "body": [
+    {
+     "t": "032010110132021 decodes digit by digit from the top of the pyramid: each digit (0–3) picks a quadrant — NW, NE, SW, SE in the quadkey convention — and the string's length IS the zoom (15 digits, zoom 15)."
+    }
+   ]
+  },
+  {
+   "label": "Example · Prefixes are ancestors",
+   "body": [
+    {
+     "t": "Drop the last digit and you hold the parent tile at zoom 14; drop four, the zoom-11 ancestor. Quadkeys make tile genealogy a string operation — the property databases love."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Two dialects, one grid",
+  "intro": "XYZ and quadkey describe the same pyramid.",
+  "columns": [
+   "Property",
+   "XYZ",
+   "Quadkey"
+  ],
+  "rows": [
+   [
+    "Address",
+    "Three numbers (z, x, y)",
+    "One string of 0–3 digits"
+   ],
+   [
+    "Zoom",
+    "The z value",
+    "The string length"
+   ],
+   [
+    "Parent tile",
+    "Halve x and y",
+    "Drop the last digit"
+   ],
+   [
+    "Home systems",
+    "OSM/Google/MapLibre tiles",
+    "Bing Maps and quadkey datasets"
+   ],
+   [
+    "Origin",
+    "Northwest corner; y grows south",
+    "Same grid, interleaved bits"
+   ]
+  ],
+  "note": "A quadkey is the tile's x and y bits interleaved and read in base 4 — the conversion is pure arithmetic, no lookup tables, which is why the two converters on this site are exact."
+ },
+ "faq": [
+  [
+   "What is a quadkey, plainly?",
+   "A tile's address written as one string: each digit narrows to a quadrant, zoom equals length. Bing Maps popularised it; tile-keyed databases adopted it."
+  ],
+  [
+   "Why do digits only run 0–3?",
+   "Each level has four children. Two bits per level — one from x, one from y — make one base-4 digit."
+  ],
+  [
+   "Same grid as Google/OSM tiles?",
+   "Yes — the Web Mercator slippy pyramid. Quadkey and XYZ are two notations for identical tiles (modulo the TMS y-flip some stacks apply)."
+  ],
+  [
+   "Which zoom should I use?",
+   "The zoom your data lives at — imagery and statistics are published per level. The helper shows the address at the zoom you ask for."
+  ],
+  [
+   "Quadkey for a region?",
+   "A region is a set of tiles; quadkey ranges and prefix sets describe it compactly — a list operation, seeded from corner tiles computed here."
+  ],
+  [
+   "Precision of a quadkey?",
+   "A quadkey names a whole tile, not a point — at zoom 15 in New York, a ~926 m square. Finer zooms name smaller squares."
+  ],
+  [
+   "Leading zeros matter?",
+   "Entirely — '032...' and '32...' are different tiles at different zooms. Never store quadkeys as numbers; the zeros are load-bearing."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Convert strings: the "
+  },
+  {
+   "t": "Quadkey to XYZ Tile Converter",
+   "l": "/tools/quadkey-to-xyz-tile-converter"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "XYZ Tile to Quadkey Converter",
+   "l": "/tools/xyz-tile-to-quadkey-converter"
+  },
+  {
+   "t": "; find tiles: the "
+  },
+  {
+   "t": "Latitude Longitude to Map Tile Calculator",
+   "l": "/tools/lat-lon-to-map-tile-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "city-from-coordinates",
   "coordinate-bounding-box-generator",

@@ -8,17 +8,165 @@
   "geojson perimeter calculator",
   "geojson distance calculator"
  ],
- "title": null,
- "description": null,
+ "title": "GeoJSON Length Calculator: Lines and Rings",
+ "description": "Measure great-circle length across GeoJSON lines and polygon rings with the GeoJSON Length Calculator — kilometres and miles. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a sample file’s Times Square–JFK line measures 21.77 km and its square ring adds 3.91 km — 25.68 km of total linework from four features.",
+ "quick_answer": "The GeoJSON Length Calculator measures the approximate great-circle length of GeoJSON linework — LineStrings, MultiLineStrings and polygon rings — summed segment by segment on the sphere. Paste the file and read the total in kilometres or miles: route lengths, river reaches, boundaries and perimeters from the geometry itself.",
+ "steps_intro": "Every segment priced on the sphere, then summed:",
+ "use_cases": [
+  {
+   "title": "Route and trail lengths",
+   "body": [
+    {
+     "t": "A line drawn or exported anywhere gets its true length here — no map clicking, no scale-bar squinting. Areas have their own instrument in the "
+    },
+    {
+     "t": "GeoJSON Area Calculator",
+     "l": "/tools/geojson-area-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Boundary perimeters",
+   "body": [
+    {
+     "t": "Polygon rings measure as perimeters — the fence-line, coastline and constituency numbers that area alone never tells."
+    }
+   ]
+  },
+  {
+   "title": "Network summaries",
+   "body": [
+    {
+     "t": "A file of road or river segments totals its network length — the denominator for density, cost and maintenance statistics."
+    }
+   ]
+  },
+  {
+   "title": "Export verification",
+   "body": [
+    {
+     "t": "A route that was 42.2 km in the planner should be 42.2 km in the exported file. Length is the checksum that catches silent simplification."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Vertex density is length",
+   "body": [
+    {
+     "t": "A coastline measured from sparse vertices cuts every bay; denser vertices follow the shore and the length grows — the coastline effect. Same shore, different files, different lengths: report the vertex count beside any length that matters (the "
+    },
+    {
+     "t": "GeoJSON Coordinate Counter",
+     "l": "/tools/geojson-coordinate-counter"
+    },
+    {
+     "t": " provides it)."
+    }
+   ]
+  },
+  {
+   "label": "Example · Ring closure included",
+   "body": [
+    {
+     "t": "A polygon’s ring closes back to its first point, and the closing segment counts — perimeters here are full circuits, not open chains."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What gets measured",
+  "intro": "Geometry types and their length treatment.",
+  "columns": [
+   "Geometry",
+   "Length"
+  ],
+  "rows": [
+   [
+    "LineString",
+    "Sum of its segment great-circles"
+   ],
+   [
+    "MultiLineString",
+    "Sum over all lines"
+   ],
+   [
+    "Polygon",
+    "Sum over all rings (holes’ rings included)"
+   ],
+   [
+    "MultiPolygon",
+    "Sum over all polygons"
+   ],
+   [
+    "Point / MultiPoint",
+    "Zero — positions have no extent"
+   ]
+  ],
+  "note": "Segments are great-circle arcs on the sphere (Earth radius 6,371 km class) — accurate well within a percent for ordinary lines. Road-following truth needs the road network, not the vertex chain."
+ },
+ "faq": [
+  [
+   "Why does my route measure shorter than my GPS track?",
+   "Because a stored line cuts corners a walked track does not: GPS logs carry dense points following every bend (plus a little jitter that inflates them), while an exported LineString keeps fewer vertices and straightens the path between them. Same journey, different vertex budgets — the file measures exactly what it holds."
+  ],
+  [
+   "Do polygon holes’ rings count?",
+   "Yes — a hole’s boundary is real linework (an island’s shoreline in a lake district is fenceable geography). If you need outer-only, that is a GIS operation on extracted rings."
+  ],
+  [
+   "Straight lines versus the road?",
+   "The chain through the file’s vertices is measured as it lies. A two-vertex ‘route’ measures the crow’s flight, because that is all the file claims."
+  ],
+  [
+   "Altitude counted?",
+   "Length is horizontal surface length; the third element is ignored. Mountain switchbacks are longer in boots than on this page — honestly so."
+  ],
+  [
+   "Units?",
+   "Kilometres and miles — 25.68 km is 15.96 miles, and both are printed so nobody converts in their head."
+  ],
+  [
+   "Self-crossing lines?",
+   "They measure their full walked length, crossings notwithstanding — the chain is summed as drawn."
+  ],
+  [
+   "Antimeridian segments?",
+   "A segment jumping from 179.9 to −179.9 measures the short way in sane implementations via longitude unwrapping; files that draw the long way across the map have a data smell worth fixing."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Area: the "
+  },
+  {
+   "t": "GeoJSON Area Calculator",
+   "l": "/tools/geojson-area-calculator"
+  },
+  {
+   "t": "; vertices behind the length: the "
+  },
+  {
+   "t": "GeoJSON Coordinate Counter",
+   "l": "/tools/geojson-coordinate-counter"
+  },
+  {
+   "t": "; extents: the "
+  },
+  {
+   "t": "GeoJSON Bounding Box Calculator",
+   "l": "/tools/geojson-bounding-box-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

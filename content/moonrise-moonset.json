@@ -8,17 +8,171 @@
   "moon transit",
   "moon phase by location"
  ],
- "title": null,
- "description": null,
+ "title": "Moonrise and Moonset Calculator: Daily Times",
+ "description": "Estimate moonrise, moonset and upper transit for any place and date with the Moonrise and Moonset Calculator — in the location's own time zone. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, at full moon the Moon rises within minutes of sunset and sets near sunrise — so a full-moon date picked from the calendar is automatically a moonlit-all-night plan.",
+ "quick_answer": "The Moonrise and Moonset Calculator estimates the day's moonrise, moonset and upper transit for a place, in that location's own time zone, alongside phase and illumination. Enter a place and date and read the Moon's working hours — the schedule behind moonlit walks and night photography.",
+ "steps_intro": "The Moon keeps shifting hours — about 50 minutes later each day:",
+ "use_cases": [
+  {
+   "title": "Moonlit walks and night events",
+   "body": [
+    {
+     "t": "A walk planned for a 20:00 moonrise fails beautifully when the Moon rises at 23:40. Check the day's times first; pick the phase with the "
+    },
+    {
+     "t": "Moon Phase Calculator",
+     "l": "/tools/moon-phase-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Photography alignment shots",
+   "body": [
+    {
+     "t": "The money shot — full moon rising behind a skyline — needs the rise time, the transit and the azimuth sense together. This tool's transit tells you when the Moon crosses the meridian, highest and due south (or north)."
+    }
+   ]
+  },
+  {
+   "title": "Fishing and boating nights",
+   "body": [
+    {
+     "t": "Moon overhead and underfoot periods anchor solunar lore; tides themselves follow the Moon's transit more than its face. The times here are the ones the lore is computed from."
+    }
+   ]
+  },
+  {
+   "title": "Explaining a moonless night",
+   "body": [
+    {
+     "t": "Some dates have no moonrise at all — the Moon's daily ~50-minute slip means one calendar day a month gets skipped for each event. The tool reports the gap instead of forcing a time."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The harvest-moon exception",
+   "body": [
+    {
+     "t": "Near the autumn equinox at mid-northern latitudes, moonrise comes only about 25–30 minutes later on successive evenings instead of the usual ~50 — the shallow ecliptic angle at work, and the reason harvest moons feel glued to sunset."
+    }
+   ]
+  },
+  {
+   "label": "Example · Quarter-moon schedule",
+   "body": [
+    {
+     "t": "At first quarter the Moon transits near sunset, rises around midday and sets around midnight; at last quarter it rises around midnight and transits near dawn. The phase name alone predicts the shift pattern — the calculator fills in the minutes."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The Moon's shift pattern by phase",
+  "intro": "Approximate local times the phase geometry produces — the calculator's daily answers follow this logic.",
+  "columns": [
+   "Phase",
+   "Rises ≈",
+   "Transits ≈",
+   "Sets ≈"
+  ],
+  "rows": [
+   [
+    "New",
+    "Sunrise",
+    "Noon",
+    "Sunset"
+   ],
+   [
+    "First quarter",
+    "Noon",
+    "Sunset",
+    "Midnight"
+   ],
+   [
+    "Full",
+    "Sunset",
+    "Midnight",
+    "Sunrise"
+   ],
+   [
+    "Last quarter",
+    "Midnight",
+    "Sunrise",
+    "Noon"
+   ]
+  ],
+  "note": "Times are estimates from a truncated lunar model in the place's IANA time zone — expect accuracy within roughly 10–20 minutes typically; terrain on the horizon shifts what you see by more than the model errs."
+ },
+ "faq": [
+  [
+   "Why is there no moonrise on my date?",
+   "About once a month for each event: the Moon's ~50-minute daily delay pushes a rise past midnight, so one calendar date gets none and the next gets a very early one. It is the calendar's edge, not missing data."
+  ],
+  [
+   "How accurate are these times?",
+   "The underlying model is a truncated lunar theory sampled at five-minute intervals — fine for planning, typically within 10–20 minutes of almanac values. Almanac-grade work uses full ephemerides."
+  ],
+  [
+   "What is upper transit good for?",
+   "Transit is the Moon's highest point — best altitude for observing, and the reference moment around which rise and set arrange themselves. Anglers' solunar major periods key off transits (and the opposite, lower transit)."
+  ],
+  [
+   "Why do rise times jump around near the poles?",
+   "At high latitudes the Moon can stay up (or down) for days around its declination extremes — the lunar version of polar day. Missing events there are geometry, reported honestly."
+  ],
+  [
+   "Does the Moon rise exactly in the east?",
+   "Only near the equinoxes. Its rising point swings along the horizon with its declination — up to ±28.6° of latitude worth of swing, wider than the Sun's. The compass point varies monthly, which ruin-alignment hunters know well."
+  ],
+  [
+   "Refraction and the disc — included?",
+   "Event definitions use the Moon's upper limb at the horizon with standard refraction, the almanac convention — the same care the sunrise definition takes, applied to a moving target with parallax, which the model handles approximately."
+  ],
+  [
+   "Can I get times for a whole month?",
+   "Day by day here; the Moon Phase Calendar Map gives the month's phases alongside, and pairing the two — phase for the what, this page for the when — covers a month of planning."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Live position: the "
+  },
+  {
+   "t": "Moon Position Map",
+   "l": "/tools/moon-position-map"
+  },
+  {
+   "t": "; the phase: the "
+  },
+  {
+   "t": "Moon Phase Calculator",
+   "l": "/tools/moon-phase-calculator"
+  },
+  {
+   "t": "; brightness: the "
+  },
+  {
+   "t": "Moon Illumination Calculator",
+   "l": "/tools/moon-illumination-calculator"
+  },
+  {
+   "t": "; the Sun's hours: the "
+  },
+  {
+   "t": "Sunrise Sunset Calculator",
+   "l": "/tools/sunrise-sunset-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "astronomical-twilight-calculator",
   "civil-twilight-calculator",

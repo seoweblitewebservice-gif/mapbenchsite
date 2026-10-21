@@ -1,6 +1,6 @@
 {
  "slug": "slope-gradient-calculator",
- "primary_keyword": "Slope &amp; Gradient Calculator",
+ "primary_keyword": "Slope & Gradient Calculator",
  "secondary_keywords": [
   "slope calculator",
   "gradient calculator",
@@ -8,17 +8,176 @@
   "percent grade calculator",
   "slope angle calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Slope & Gradient Calculator: Percent and Angle",
+ "description": "Convert rise and run into percent grade, angle and ratio with the Slope & Gradient Calculator — all three dialects of steepness at once. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a rise of 3 feet over a 40-foot run is a 7.5% grade, a 4.29° angle and a 1 : 13.3 ratio — one slope, three correct ways to say it.",
+ "quick_answer": "The Slope & Gradient Calculator converts a rise and a run into the three standard ways of stating steepness: percent grade, slope angle in degrees, and rise-over-run ratio. Enter the two measurements in any matching unit and read all three — no translating between road crews, architects and trig tables.",
+ "steps_intro": "Two measurements in, every dialect of steepness out:",
+ "use_cases": [
+  {
+   "title": "Roof pitch translation",
+   "body": [
+    {
+     "t": "Roofers speak in pitch (rise per 12 of run): a 6-in-12 roof is a 50% grade and a 26.57° angle. This is the translator between the roof and the building code."
+    }
+   ]
+  },
+  {
+   "title": "Cycling climb analysis",
+   "body": [
+    {
+     "t": "Race profiles quote percent; your legs feel angle. Convert a climb's numbers before the ride, and check its true length with the "
+    },
+    {
+     "t": "Slope Length Calculator",
+     "l": "/tools/slope-length-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Pipe and sewer falls",
+   "body": [
+    {
+     "t": "Drainage specs come as ratios (1 : 80, 1 : 40). Read them as percent and angle here so the fall you dig is the fall the drawing meant."
+    }
+   ]
+  },
+  {
+   "title": "Landscaping and grading plans",
+   "body": [
+    {
+     "t": "Swales, banks and accessible paths each carry a target steepness in a different dialect. One conversion up front prevents three phone calls later."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 45-degree landmark",
+   "body": [
+    {
+     "t": "Rise equals run and the slope is 100% grade at exactly 45°. Everything steeper is more rise than run — a fact that makes 'a 200% grade' sound dramatic and a 63.4° slope sound merely technical."
+    }
+   ]
+  },
+  {
+   "label": "Example · A gentle accessible path",
+   "body": [
+    {
+     "t": "A path rising 1 m over 20 m of run: 5% grade, 2.86°, ratio 1 : 20. Gentle to walk, and right at the edge of what many accessibility guidelines treat as a ramp rather than a path — the number decides which rules apply."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Steepness in three dialects",
+  "intro": "Computed (angle = atan(rise ÷ run)) — pin the row your project speaks.",
+  "columns": [
+   "Percent grade",
+   "Angle",
+   "Ratio",
+   "Feels like"
+  ],
+  "rows": [
+   [
+    "1%",
+    "0.57°",
+    "1 : 100",
+    "Drainage fall"
+   ],
+   [
+    "5%",
+    "2.86°",
+    "1 : 20",
+    "Gentle path"
+   ],
+   [
+    "8.33%",
+    "4.76°",
+    "1 : 12",
+    "Steepest common ramp standard"
+   ],
+   [
+    "12%",
+    "6.84°",
+    "1 : 8.3",
+    "Hard cycling climb"
+   ],
+   [
+    "50%",
+    "26.57°",
+    "1 : 2",
+    "6-in-12 roof pitch"
+   ],
+   [
+    "100%",
+    "45.00°",
+    "1 : 1",
+    "The diagonal itself"
+   ]
+  ],
+  "note": "Percent and degrees part company as slopes grow: doubling the grade does not double the angle. At small grades they nearly agree, which is exactly why the confusion survives."
+ },
+ "faq": [
+  [
+   "How do I convert percent grade to degrees?",
+   "Take the arctangent of the grade as a decimal: angle = atan(percent ÷ 100). Ten percent is atan(0.10) = 5.71°. The calculator does it both ways."
+  ],
+  [
+   "What does a 1 : 12 ratio mean in percent?",
+   "One unit of rise per twelve of run: 1 ÷ 12 = 8.33%. Ratios divide the other way from how they are often read aloud — 'one in twelve' is rise over run."
+  ],
+  [
+   "Which unit should my rise and run be in?",
+   "Any unit, as long as both match — feet with feet, metres with metres. Grade, angle and ratio are unit-free because the units cancel in the division."
+  ],
+  [
+   "Can the run be measured along the slope?",
+   "That distance is the slope length, not the run. Using it as the run understates steepness slightly; on a 10% grade the error is about half a percent of the value."
+  ],
+  [
+   "Why do roof pitches use 12?",
+   "The foot-based trade convention: pitch states inches of rise per 12 inches (one foot) of run. A 4-in-12 pitch is a 33.3% grade at 18.43°."
+  ],
+  [
+   "Is a negative slope meaningful?",
+   "It records direction — a fall rather than a rise. Drainage and road profiles use the sign; the steepness magnitude is identical."
+  ],
+  [
+   "What is the steepest this can express?",
+   "As the run approaches zero the grade runs to infinity and the angle to 90°. Vertical faces are the limit the mathematics points at but roads never reach."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Grades from a path: the "
+  },
+  {
+   "t": "Slope Grade Calculator",
+   "l": "/tools/slope-grade-calculator"
+  },
+  {
+   "t": "; slope distance: the "
+  },
+  {
+   "t": "Slope Length Calculator",
+   "l": "/tools/slope-length-calculator"
+  },
+  {
+   "t": "; relief: the "
+  },
+  {
+   "t": "Relief Ratio Calculator",
+   "l": "/tools/relief-ratio-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "air-pressure-by-elevation",
   "antenna-height-distance-calculator",

@@ -6,17 +6,158 @@
   "time to sunset",
   "evening walk planner"
  ],
- "title": null,
- "description": null,
+ "title": "Time to Sunset Walk Planner: Beat the Dark",
+ "description": "Plan an out-and-back walk that ends before dark with the Time to Sunset Walk Planner — sunset time, twilight buffer and walking range. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, with 90 minutes to sunset at a steady 5 km/h, your out-and-back turning point is about 3.75 km away — leave the return half in hand, then add twilight as your safety margin.",
+ "quick_answer": "The Time to Sunset Walk Planner turns the time remaining until sunset into a walking plan: how far you can go and still return before dark, with civil twilight as buffer. Enter your start time and pace and read the turnaround point.",
+ "steps_intro": "Half your remaining light is the way out. The planner enforces the rule:",
+ "use_cases": [
+  {
+   "title": "Evening hikes and dog walks",
+   "body": [
+    {
+     "t": "The classic miscalculation — walking out on half the daylight and returning in the dark — is designed out here. Sunset itself comes from the "
+    },
+    {
+     "t": "Sunrise and Sunset Calculator",
+     "l": "/tools/sunrise-sunset-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Photography walks",
+   "body": [
+    {
+     "t": "Shoot the golden hour at the far point and walk back through civil twilight: the planner counts the twilight as usable buffer, labelled as such."
+    }
+   ]
+  },
+  {
+   "title": "New-route caution",
+   "body": [
+    {
+     "t": "Unknown trails run slower than the map suggests; the planner's pace setting is where honesty about that goes."
+    }
+   ]
+  },
+  {
+   "title": "Kids and groups",
+   "body": [
+    {
+     "t": "Group pace is the slowest walker. Enter that pace and the plan forgives you."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 90-minute evening",
+   "body": [
+    {
+     "t": "90 minutes to sunset, 5 km/h pace: 7.5 km of total walking, so the turnaround sits at ~3.75 km. Arrive back at sunset, with civil twilight (roughly another 30 minutes of usable light at mid-latitudes) as unplanned insurance."
+    }
+   ]
+  },
+  {
+   "label": "Example · Winter's short fuse",
+   "body": [
+    {
+     "t": "In December in London the whole post-lunch window can be 2 hours to a 15:53 sunset — the planner's winter answers are bracingly short, which is the point."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "How the plan is built",
+  "intro": "The planner's transparent arithmetic.",
+  "columns": [
+   "Piece",
+   "Rule"
+  ],
+  "rows": [
+   [
+    "Time budget",
+    "Now until sunset (plus optional twilight buffer)"
+   ],
+   [
+    "Pace",
+    "Your honest speed — 5 km/h (3.1 mph) is a fit adult on paths; trails run slower"
+   ],
+   [
+    "Turnaround",
+    "Half the budget out, half back — the rule that cannot be argued with at dusk"
+   ],
+   [
+    "Buffer",
+    "Civil twilight after sunset, ~25–35 min at mid-latitudes, longer in summer"
+   ]
+  ],
+  "note": "Plans assume you can walk the return at the same pace in fading light. Headtorches remain excellent ideas regardless."
+ },
+ "faq": [
+  [
+   "Does it include civil twilight?",
+   "As an optional buffer, clearly labelled — twilight is usable light for paths you know, not a promise on rough ground. The Civil Twilight Calculator prices your exact date's twilight."
+  ],
+  [
+   "What pace should I enter?",
+   "Your slowest realistic pace for the terrain — 4 km/h on hills, 5 on paths, less with children. The plan is only as honest as this number."
+  ],
+  [
+   "One-way walks?",
+   "If transport waits at the far end, the full budget is yours — the planner's out-and-back default is the conservative case; adjust the turnaround fraction consciously."
+  ],
+  [
+   "Why not walk back by moonlight?",
+   "Full-moon nights can be genuinely walkable — and the Next Full Moon Calculator will date them. The planner's job is the no-surprises baseline."
+  ],
+  [
+   "Clouds and woods?",
+   "Overcast and canopy steal the last light early. Treat the twilight buffer as already spent in forests."
+  ],
+  [
+   "Sunset where — my location or the hilltop?",
+   "Computed for your position; a high viewpoint buys a few extra minutes (the Sun sets later uphill), a valley loses them."
+  ],
+  [
+   "Phone battery plan?",
+   "The plan that needs no battery is the one on this page — glance, memorise the turnaround time, walk."
+  ],
+  [
+   "Running instead?",
+   "Double the pace and the same arithmetic holds — trail runners use this exact budget with a headtorch as the buffer's backup."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The deadline: the "
+  },
+  {
+   "t": "Sunrise and Sunset Calculator",
+   "l": "/tools/sunrise-sunset-calculator"
+  },
+  {
+   "t": "; the buffer: the "
+  },
+  {
+   "t": "Civil Twilight Calculator",
+   "l": "/tools/civil-twilight-calculator"
+  },
+  {
+   "t": "; evening light: the "
+  },
+  {
+   "t": "Golden Hour Calculator",
+   "l": "/tools/golden-hour-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "astronomical-twilight-calculator",
   "civil-twilight-calculator",

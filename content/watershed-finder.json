@@ -6,17 +6,180 @@
   "drainage basin",
   "river basin finder"
  ],
- "title": null,
- "description": null,
+ "title": "Watershed Finder: Which Basin Drains Your Point?",
+ "description": "Find the watershed and drainage-basin context for any map point with the Watershed Finder — see which river system your rain joins. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a point on the Montana side of the Continental Divide sends its rain toward the Gulf of Mexico via the Missouri and Mississippi, while a point a ridge away sends its snowmelt to the Pacific.",
+ "quick_answer": "The Watershed Finder shows the drainage context for a point on the map — the watershed whose streams carry its rain to one river system and one sea. Set a point and read which basin claims it: the invisible geography deciding where every raindrop eventually ends up.",
+ "steps_intro": "Every point belongs to a river's territory. Find your point's allegiance:",
+ "use_cases": [
+  {
+   "title": "Land and property due diligence",
+   "body": [
+    {
+     "t": "Which basin a parcel drains to shapes flood context, water rights conversations and environmental review. It is context, not a flood map — pair it with official flood data for decisions."
+    }
+   ]
+  },
+  {
+   "title": "Teaching the water cycle with a map",
+   "body": [
+    {
+     "t": "Students click their school, then trace the basin's river to the sea. The "
+    },
+    {
+     "t": "Rainfall Totals Map",
+     "l": "/tools/world-rainfall-map"
+    },
+    {
+     "t": " shows what falls on the basin they just claimed."
+    }
+   ]
+  },
+  {
+   "title": "Fishing, paddling and conservation",
+   "body": [
+    {
+     "t": "Anglers and watershed groups organise by basin because fish and pollution do. Knowing which system your creek joins is the first fact of local water."
+    }
+   ]
+  },
+  {
+   "title": "Understanding flood and drought news",
+   "body": [
+    {
+     "t": "'The Colorado basin' in a headline is a place, roughly 640,000 km² (247,000 sq mi) of the published basin area. This finder shows whether a given town is inside the story."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The Mississippi's empire",
+   "body": [
+    {
+     "t": "The Mississippi River basin covers about 3.22 million km² (about 1.24 million sq mi) in published USGS figures — parts of 31 US states and two Canadian provinces. A click in Minnesota, Montana or Pennsylvania is usually inside it."
+    }
+   ]
+  },
+  {
+   "label": "Example · Two raindrops, two oceans",
+   "body": [
+    {
+     "t": "At Triple Divide Peak in Montana, three basins meet: rain can leave toward the Pacific, the Atlantic via the Gulf, or Hudson Bay. Watershed boundaries are the rare property lines drawn entirely by gravity."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Great basins by published area",
+  "intro": "Approximate published basin areas — the scale of the territories the finder assigns.",
+  "columns": [
+   "Basin",
+   "Published area (approx.)",
+   "Ends in"
+  ],
+  "rows": [
+   [
+    "Amazon",
+    "≈7.05 million km² (2.72M sq mi)",
+    "Atlantic Ocean"
+   ],
+   [
+    "Congo",
+    "≈3.7 million km² (1.43M sq mi)",
+    "Atlantic Ocean"
+   ],
+   [
+    "Mississippi",
+    "≈3.22 million km² (1.24M sq mi)",
+    "Gulf of Mexico"
+   ],
+   [
+    "Colorado",
+    "≈640,000 km² (247,000 sq mi)",
+    "Gulf of California"
+   ],
+   [
+    "Thames",
+    "≈16,000 km² (6,200 sq mi)",
+    "North Sea"
+   ],
+   [
+    "Your creek",
+    "Measured in hectares",
+    "Someone's river"
+   ]
+  ],
+  "note": "Basin areas vary slightly by source and by where the delta is cut. Every basin nests inside a bigger one until the sea — the finder reports the named drainage context for the point."
+ },
+ "faq": [
+  [
+   "What exactly is a watershed?",
+   "The land area that drains to a common outlet — a stream, river, lake or sea. The word covers both the boundary ridge and the territory inside it; North America says watershed, British usage often says catchment or drainage basin."
+  ],
+  [
+   "How are the boundaries drawn?",
+   "From elevation: water flows downhill, so divides follow ridgelines in terrain data. This finder's context derives from terrain-based drainage data — the same logic the Terrain Elevation Grid Map visualises locally."
+  ],
+  [
+   "Does a point near a divide always drain one way?",
+   "On the map, yes by elevation; in the field, karst limestone, drains, canals and flat wetlands can cheat. Treat flat and engineered landscapes as 'verify locally' country."
+  ],
+  [
+   "Why does my town name a different basin than my creek?",
+   "Basins nest. Your creek belongs to a small sub-basin, inside a river basin, inside a continental drainage. Different maps name different levels of the nest — both can be right."
+  ],
+  [
+   "Can groundwater cross a watershed line?",
+   "Yes — aquifers ignore surface divides, sometimes spectacularly in limestone country. Surface watershed and groundwater basin are cousins, not twins."
+  ],
+  [
+   "Is this the same as a flood zone?",
+   "No. A watershed says where water eventually goes; a flood zone says where water has been and may be again, from official hazard modelling. Never substitute one for the other in a purchase or insurance decision."
+  ],
+  [
+   "Do cities change their watersheds?",
+   "Constantly at the small scale — storm drains and grading move local runoff across natural divides. The named big-basin allegiance of a point rarely changes; the garden-scale path of its rain often does."
+  ],
+  [
+   "What about points in the ocean or a lake?",
+   "Open water is the bottom of someone else's watershed. The finder is a land tool; clicking the sea returns the sea."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Slopes that shed the water: the "
+  },
+  {
+   "t": "Terrain Elevation Grid Map",
+   "l": "/tools/terrain-elevation-grid-map"
+  },
+  {
+   "t": "; what falls: the "
+  },
+  {
+   "t": "Rainfall Totals Map",
+   "l": "/tools/world-rainfall-map"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Snowfall Totals Map (Season Archive)",
+   "l": "/tools/snowfall-map"
+  },
+  {
+   "t": "; heights: the "
+  },
+  {
+   "t": "Elevation Finder",
+   "l": "/tools/elevation-finder"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boiling-point-by-elevation-calculator",
   "central-angle-from-distance-calculator",

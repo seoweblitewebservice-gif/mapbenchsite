@@ -8,17 +8,150 @@
   "polygon perimeter from coordinates tool",
   "how to calculate polygon perimeter from coordinates"
  ],
- "title": null,
- "description": null,
+ "title": "Polygon Perimeter From Coordinates: Boundary",
+ "description": "Compute the boundary length of a coordinate polygon with Polygon Perimeter From Coordinates — geodesic edge sums in miles and kilometres. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, the four Midtown Manhattan corners (40.7580, −73.9855 and around) make a boundary of 5.28 km — 3.28 miles of fence, path or edging, summed edge by edge on the sphere.",
+ "quick_answer": "Polygon Perimeter From Coordinates computes the total boundary length of a polygon given by latitude/longitude corners, summing great-circle distances edge by edge and closing the ring automatically. Paste the corners in boundary order and read the perimeter in kilometres, miles and metres — for fencing, edging, paths and boundaries.",
+ "steps_intro": "Walk the boundary; the sphere measures every step:",
+ "use_cases": [
+  {
+   "title": "Fencing and edging estimates",
+   "body": [
+    {
+     "t": "Materials are bought by the metre. Corners from a walk or a map become the order quantity — with the "
+    },
+    {
+     "t": "Polygon Area From Coordinates",
+     "l": "/tools/polygon-area-from-coordinates"
+    },
+    {
+     "t": " giving the ground inside the fence."
+    }
+   ]
+  },
+  {
+   "title": "Paths, pipelines and perimeters",
+   "body": [
+    {
+     "t": "Anything that follows the boundary — a trail loop, a service run, a security patrol route — is a perimeter with a job title."
+    }
+   ]
+  },
+  {
+   "title": "Checking a stated boundary length",
+   "body": [
+    {
+     "t": "Deeds and listings quote perimeters from older surveys; the corners' own sum is the modern second opinion."
+    }
+   ]
+  },
+  {
+   "title": "Race and event loops",
+   "body": [
+    {
+     "t": "A closed course drawn on the map gets its true lap distance from its corners, geodesically summed."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The test rectangle, edged",
+   "body": [
+    {
+     "t": "Sides of 1.306, 1.334, 1.305 and 1.334 km sum to 5.279 km (3.28 mi). Opposite sides differ slightly — longitude edges ride converging meridians, and the sphere keeps the receipts."
+    }
+   ]
+  },
+  {
+   "label": "Example · More corners, truer curve",
+   "body": [
+    {
+     "t": "A river boundary approximated by 6 corners under-measures the bends; 60 corners hug them. Perimeter grows toward the truth as corners multiply — coastlines taught us this humility."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "How the perimeter is built",
+  "intro": "Edge by edge — the method in one view.",
+  "columns": [
+   "Step",
+   "Detail"
+  ],
+  "rows": [
+   [
+    "Each edge",
+    "Great-circle (haversine) distance between consecutive corners, Earth radius 6,371.0088 km"
+   ],
+   [
+    "Closure",
+    "The last corner joins the first automatically"
+   ],
+   [
+    "Report",
+    "Total in km, miles and metres"
+   ],
+   [
+    "Curves",
+    "Approximated by corner density — your points choose the fidelity"
+   ]
+  ],
+  "note": "Ground distances follow the sphere; slopes and terrain add their own length in the real world (a hillside fence runs longer than its map shadow — allow for it in materials)."
+ },
+ "faq": [
+  [
+   "Does the tool close the polygon automatically?",
+   "Yes — the final edge from the last corner back to the first is included in the total. Do not repeat the first point."
+  ],
+  [
+   "What if my corners are out of order?",
+   "The sum follows the order given — a scrambled order measures a zigzag star, not your boundary. Walk the fence in the list as you would on foot."
+  ],
+  [
+   "Straight lines or ground-following?",
+   "Great-circle chords between your corners. Terrain, bends between corners and paths that wander all run longer in reality."
+  ],
+  [
+   "Miles available?",
+   "Kilometres, miles and metres are all reported — buy materials in whichever your supplier speaks."
+  ],
+  [
+   "A shape with a gap in its boundary?",
+   "Model the gap as part of the ring (the boundary still closes mathematically); for materials, subtract the gap's own length afterwards."
+  ],
+  [
+   "Precision of the sum?",
+   "Geodesic edges are effectively exact for this purpose; the total's honesty is set by your corners' placement, not the arithmetic."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Inside the fence: the "
+  },
+  {
+   "t": "Polygon Area From Coordinates",
+   "l": "/tools/polygon-area-from-coordinates"
+  },
+  {
+   "t": "; balance point: the "
+  },
+  {
+   "t": "Polygon Centroid From Coordinates",
+   "l": "/tools/polygon-centroid-from-coordinates"
+  },
+  {
+   "t": "; routes instead: the "
+  },
+  {
+   "t": "Fence Length Calculator",
+   "l": "/tools/fence-length-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "city-from-coordinates",
   "coordinate-bounding-box-generator",

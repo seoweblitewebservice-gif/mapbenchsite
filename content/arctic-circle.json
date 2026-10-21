@@ -6,17 +6,169 @@
   "midnight sun polar night",
   "arctic circle online"
  ],
- "title": null,
- "description": null,
+ "title": "Arctic Circle: Line of the Midnight Sun",
+ "description": "Explore the Arctic Circle — the latitude of the midnight sun crossing eight countries, from Norway to Alaska, and slowly drifting. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, Reykjavík sits 268.7 km south of the Arctic Circle — close enough that Iceland's June nights never truly darken, even though only tiny Grímsey island touches the line itself.",
+ "quick_answer": "The Arctic Circle is the line at 66.5633 degrees north latitude where the Sun can stay in the sky for a full 24 hours at the June solstice. This page maps where the circle runs and explains the midnight sun it governs.",
+ "steps_intro": "One latitude, eight countries, a Sun that forgets to set:",
+ "use_cases": [
+  {
+   "title": "Trip planning to the far north",
+   "body": [
+    {
+     "t": "Tromsø, Rovaniemi, Fairbanks: whether your trip includes a sunset is a circle question. Your distance to the line: the "
+    },
+    {
+     "t": "Distance From Arctic Circle Calculator",
+     "l": "/tools/distance-from-arctic-circle"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Geography teaching",
+   "body": [
+    {
+     "t": "The circle makes axial tilt visible on a map — pair with the "
+    },
+    {
+     "t": "Polar Day / Night Checker",
+     "l": "/tools/polar-day-night-checker"
+    },
+    {
+     "t": " for the day-by-day verdicts."
+    }
+   ]
+  },
+  {
+   "title": "Road-trip bragging rights",
+   "body": [
+    {
+     "t": "Highways cross the line with signs and visitor stops (Finland's at Rovaniemi is the famous one) — the map shows every crossing a road can reach."
+    }
+   ]
+  },
+  {
+   "title": "Understanding northern life",
+   "body": [
+    {
+     "t": "Light, not cold, is the circle's real curriculum: school terms, festivals and building design all bend around the light calendar."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Tromsø, inside the line",
+   "body": [
+    {
+     "t": "Tromsø (69.65°N) lies 343 km north of the circle, deep enough for a geometric midnight-sun run from about May 23 to July 22 — and the polar-night stretch to match."
+    }
+   ]
+  },
+  {
+   "label": "Example · Santa's address",
+   "body": [
+    {
+     "t": "Rovaniemi, Finland markets itself as the Arctic Circle town — the line runs through its Santa Claus Village, which is why the crossing ceremony happens indoors-adjacent to reindeer."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Where the circle runs",
+  "intro": "The eight countries the line crosses, west to east.",
+  "columns": [
+   "Country",
+   "What the circle touches"
+  ],
+  "rows": [
+   [
+    "Norway, Sweden, Finland",
+    "Mainland far north — towns, roads, railways"
+   ],
+   [
+    "Russia",
+    "The longest stretch — Siberia's north, mostly roadless"
+   ],
+   [
+    "United States (Alaska)",
+    "Interior and Arctic Alaska"
+   ],
+   [
+    "Canada",
+    "Yukon, Northwest Territories, Nunavut waters"
+   ],
+   [
+    "Denmark (Greenland)",
+    "The island's southern third"
+   ],
+   [
+    "Iceland",
+    "Just Grímsey island, off the north coast"
+   ]
+  ],
+  "note": "The line's latitude (66.5633°N) is set by Earth's current axial tilt and drifts ~15 m a year — signs planted decades ago now stand slightly off the true line."
+ },
+ "faq": [
+  [
+   "How many people live inside the circle?",
+   "Roughly four million across the eight countries — the Arctic is inhabited homeland, not empty wilderness, with Tromsø and Murmansk among its cities."
+  ],
+  [
+   "When is the midnight sun at the circle itself?",
+   "One night a year in theory (the solstice), stretched to a few by refraction and the Sun's width — the higher you go, the longer the run."
+  ],
+  [
+   "Can I drive to it?",
+   "Yes, in several countries: Finland's Highway 4 at Rovaniemi, Norway's E6 near the Saltfjellet pass, Alaska's Dalton Highway and Canada's Dempster all cross it."
+  ],
+  [
+   "Why isn't Reykjavík inside it?",
+   "Iceland's mainland tops out just short of the line; only Grímsey, an island 40 km offshore, is crossed — Iceland is the circle's 'nearly' country."
+  ],
+  [
+   "What is polar night like in towns?",
+   "Not full darkness at inhabited latitudes: midday brings a few hours of deep blue twilight near the solstice, which residents plan their outdoor time around."
+  ],
+  [
+   "Does the circle pass through the North Pole's ice cap?",
+   "The pole is 2,600 km north of the circle — the cap's edge varies with sea ice, but the circle itself crosses the Arctic Ocean's waters between Greenland and Russia."
+  ],
+  [
+   "Northern Lights inside the circle?",
+   "The auroral oval hovers near (not on) the circle — its towns are prime aurora territory precisely because their winters are long and dark at the edges."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Southern twin: the "
+  },
+  {
+   "t": "Antarctic Circle",
+   "l": "/tools/antarctic-circle"
+  },
+  {
+   "t": "; distances: the "
+  },
+  {
+   "t": "Distance From Arctic Circle Calculator",
+   "l": "/tools/distance-from-arctic-circle"
+  },
+  {
+   "t": "; day/night verdicts: the "
+  },
+  {
+   "t": "Polar Day / Night Checker",
+   "l": "/tools/polar-day-night-checker"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "antarctic-circle",
   "distance-from-antarctic-circle",

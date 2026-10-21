@@ -8,17 +8,173 @@
   "gpx total point counter tool",
   "how to calculate gpx total point counter"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Total Point Counter: Every Point in a File",
+ "description": "Count every track, route and waypoint point in a GPX file with the GPX Total Point Counter — trkpt, rtept and wpt tallied locally. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a weekend file with two tracks holding 2,100 trackpoints, one 52-point route and 14 waypoints totals 2,166 points — the count this page gives you in one drop.",
+ "quick_answer": "The GPX Total Point Counter counts every coordinate-bearing point in a GPX file — trackpoints inside track segments, route points inside routes, and standalone waypoints — and reports the total with the breakdown. Drop the file and read the count; everything is parsed locally in your browser.",
+ "steps_intro": "One number for the whole file, plus where the points live:",
+ "use_cases": [
+  {
+   "title": "Estimating file weight before sharing",
+   "body": [
+    {
+     "t": "Point count predicts GPX size and device import time better than kilobytes do. Count first, then slim with the "
+    },
+    {
+     "t": "GPX Remove Waypoints Tool",
+     "l": "/tools/gpx-remove-waypoints-tool"
+    },
+    {
+     "t": " if waypoints are the bloat."
+    }
+   ]
+  },
+  {
+   "title": "Checking a device export",
+   "body": [
+    {
+     "t": "A watch that claims 1 Hz recording for a 40-minute run should hold about 2,400 trackpoints. A wildly different count exposes dropped samples or a changed setting."
+    }
+   ]
+  },
+  {
+   "title": "Comparing recordings of the same outing",
+   "body": [
+    {
+     "t": "Two devices, one hike: totals that differ by a few percent are normal; a 10× gap means one file holds a route's handful of points, not a recorded track — the "
+    },
+    {
+     "t": "GPX Track Count Tool",
+     "l": "/tools/gpx-track-count-tool"
+    },
+    {
+     "t": " separates the families."
+    }
+   ]
+  },
+  {
+   "title": "Preparing data for analysis",
+   "body": [
+    {
+     "t": "Point totals size the job before you load a file into GIS or a spreadsheet — 2,000 rows is a glance, 2 million is a database decision."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The weekend file",
+   "body": [
+    {
+     "t": "Track 1: 1,240 trkpt across one segment. Track 2: 860 trkpt. One planned route: 52 rtept. Saved waypoints: 14 wpt. Total = 1,240 + 860 + 52 + 14 = 2,166 points — the breakdown shows tracks dominate, as recorded files always do."
+    }
+   ]
+  },
+  {
+   "label": "Example · Why segments matter",
+   "body": [
+    {
+     "t": "Pausing a recording splits a track into segments, but every segment's points still count. A file with 6 segments and 1,800 points is one outing with five pauses — the total sees the points, not the pauses."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The three point families of GPX",
+  "intro": "GPX 1.1 stores coordinates in exactly three element types — the counter tallies each.",
+  "columns": [
+   "Element",
+   "Lives inside",
+   "Typical share of a recorded file"
+  ],
+  "rows": [
+   [
+    "<trkpt>",
+    "<trk> → <trkseg>",
+    "99%+ of a device recording"
+   ],
+   [
+    "<rtept>",
+    "<rte>",
+    "A planned route's points — dozens, not thousands"
+   ],
+   [
+    "<wpt>",
+    "Top level of the file",
+    "Saved places — usually a handful"
+   ],
+   [
+    "<ele> and <time>",
+    "Inside any point",
+    "Data carried by points, not points themselves"
+   ]
+  ],
+  "note": "Only elements with latitude/longitude attributes count. Metadata, bounds and extension data add bytes, not points."
+ },
+ "faq": [
+  [
+   "Which elements exactly are counted?",
+   "Every <trkpt> in every <trkseg>, every <rtept> in every <rte>, and every top-level <wpt>. The three coordinate-bearing element types of GPX 1.1 — nothing else is a point."
+  ],
+  [
+   "Does a point need elevation or time to count?",
+   "No — a point is a point with just its lat/lon attributes. Elevation and timestamps are payload the point may or may not carry."
+  ],
+  [
+   "Can a GPX file have zero points?",
+   "Yes — an empty shell with metadata only, or a waypoints-only file can even have zero trackpoints. The counter reports the honest zero with the breakdown."
+  ],
+  [
+   "Routes versus tracks — why separate counts?",
+   "Because they mean different things: a route is a plan (sparse), a track is a recording (dense). Totals that mix them mislead; the breakdown keeps them honest."
+  ],
+  [
+   "What about points inside extensions?",
+   "Vendor extensions can nest extra data, but coordinates inside proprietary extension blobs are not standard GPX points and are not counted as such."
+  ],
+  [
+   "Can I count points per track, not just total?",
+   "The breakdown by family is the page's grain; per-track statistics live in the GPX Route Stats family of tools."
+  ],
+  [
+   "Is the count affected by duplicate points?",
+   "No — counting is not cleaning. Stationary GPS drift can stack near-identical points; deduplication is a separate, deliberate step."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Per-family counts: the "
+  },
+  {
+   "t": "GPX Track Count Tool",
+   "l": "/tools/gpx-track-count-tool"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "GPX Waypoint Count Tool",
+   "l": "/tools/gpx-waypoint-count-tool"
+  },
+  {
+   "t": "; see the file: the "
+  },
+  {
+   "t": "GPX Viewer",
+   "l": "/tools/gpx-viewer"
+  },
+  {
+   "t": "; its length: the "
+  },
+  {
+   "t": "GPX Track Distance Calculator",
+   "l": "/tools/gpx-track-distance-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

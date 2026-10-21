@@ -8,17 +8,167 @@
   "tower height calculator",
   "radio distance antenna height"
  ],
- "title": null,
- "description": null,
+ "title": "Antenna Height for Distance Calculator",
+ "description": "Find the antenna height a radio link distance needs with the Antenna Height for Distance Calculator — 4/3-Earth radio horizon maths. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a 40 km link to a 10-metre antenna needs about 43 metres of height at your end — the square-root law of the radio horizon, which this calculator inverts for tower planning.",
+ "quick_answer": "The Antenna Height for Distance Calculator inverts the radio-horizon formula: give it the link distance you need and the other antenna's height, and it returns the height your antenna requires. It uses the standard 4/3-Earth refraction model that radio planners start every line-of-sight estimate with.",
+ "steps_intro": "Radio waves travel nearly straight; the Earth curves away. Height buys distance:",
+ "use_cases": [
+  {
+   "title": "Point-to-point link planning",
+   "body": [
+    {
+     "t": "Two sites, one required distance: the calculator sizes the shorter tower given the taller one — then the "
+    },
+    {
+     "t": "Radio Line of Sight Calculator",
+     "l": "/tools/radio-line-of-sight-calculator"
+    },
+    {
+     "t": " checks terrain between them."
+    }
+   ]
+  },
+  {
+   "title": "Repeater and WISP siting",
+   "body": [
+    {
+     "t": "Coverage promises begin as horizon arithmetic. A 30 m mast sees about 22.6 km of radio horizon; customer antennas add their own — total link reach is the sum of both horizons."
+    }
+   ]
+  },
+  {
+   "title": "Marine VHF expectations",
+   "body": [
+    {
+     "t": "A ship's antenna at 20 m and a shore station at 60 m share a horizon of about 50 km — the honest ceiling on VHF range, whatever the radio's box claims."
+    }
+   ]
+  },
+  {
+   "title": "Amateur radio and emergency comms",
+   "body": [
+    {
+     "t": "'Height is might' in VHF/UHF. The formula prices exactly how much might each extra 10 metres buys — less each time, by the square root."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The square-root tax",
+   "body": [
+    {
+     "t": "Doubling range needs four times the height: 13.0 km from 10 m, but 50 km single-ended demands about 147 m. Every radio planner's intuition is this curve — generous at first, brutal later."
+    }
+   ]
+  },
+  {
+   "label": "Example · Two horizons add",
+   "body": [
+    {
+     "t": "Link range is not one horizon but two: your antenna's horizon plus theirs. Two 30 m antennas reach 22.6 + 22.6 ≈ 45.1 km — which is why raising the low end pays twice as fast as raising the high end."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Radio horizon by height (4/3-Earth model)",
+  "intro": "Distance to the radio horizon from a single antenna, standard refraction.",
+  "columns": [
+   "Antenna height",
+   "Radio horizon",
+   "Optical horizon (for comparison)"
+  ],
+  "rows": [
+   [
+    "2 m (handheld)",
+    "5.8 km",
+    "5.0 km"
+   ],
+   [
+    "10 m (rooftop)",
+    "13.0 km",
+    "11.3 km"
+   ],
+   [
+    "30 m (mast)",
+    "22.6 km",
+    "19.6 km"
+   ],
+   [
+    "60 m (tower)",
+    "31.9 km",
+    "27.7 km"
+   ],
+   [
+    "100 m",
+    "41.2 km",
+    "35.7 km"
+   ]
+  ],
+  "note": "The 4/3 model (effective Earth radius ≈ 8,495 km) accounts for normal atmospheric refraction bending VHF/UHF waves slightly earthward. Ducting and tropospheric events can extend range far beyond it — weather, not geometry."
+ },
+ "faq": [
+  [
+   "What model converts height to distance?",
+   "The radio-horizon formula d ≈ 4.12 × √h kilometres (h in metres) under the 4/3-Earth model. Inverting it — h = (d ÷ 4.12)² — is this calculator's direction."
+  ],
+  [
+   "Why 4/3 of an Earth?",
+   "Standard refraction bends radio rays toward the Earth as if the planet were 4/3 its size and the rays straight. It is an engineering convention that matches typical conditions — not a promise about any given day."
+  ],
+  [
+   "Fresnel clearance — height is not enough?",
+   "Correct: a working link wants the first Fresnel zone substantially clear (about 60% is the field rule), adding clearance height above obstacles beyond bare horizon math. The Fresnel Zone Calculator on this site sizes that bubble."
+  ],
+  [
+   "Higher frequency changes the horizon?",
+   "The geometric horizon is frequency-blind; higher bands suffer more from obstacles and rain, lower bands bend a little more. The formula is the shared starting geometry for all of them."
+  ],
+  [
+   "Terrain between the endpoints?",
+   "Horizon math assumes a smooth Earth (or sea). Hills, buildings and trees subtract — a line-of-sight profile check follows this estimate in real planning."
+  ],
+  [
+   "What if the other antenna's height is zero?",
+   "Then your antenna must cover the whole distance alone: height = (distance ÷ 4.12)², the single-ended case in the examples."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Terrain check: the "
+  },
+  {
+   "t": "Radio Line of Sight Calculator",
+   "l": "/tools/radio-line-of-sight-calculator"
+  },
+  {
+   "t": "; clearance bubble: the "
+  },
+  {
+   "t": "Fresnel Zone Calculator",
+   "l": "/tools/fresnel-zone-calculator"
+  },
+  {
+   "t": "; visual twin: the "
+  },
+  {
+   "t": "Horizon Distance Calculator",
+   "l": "/tools/horizon-distance"
+  },
+  {
+   "t": "; bulge: the "
+  },
+  {
+   "t": "Earth Bulge Calculator",
+   "l": "/tools/earth-bulge-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "air-pressure-by-elevation",
   "antipode-finder",

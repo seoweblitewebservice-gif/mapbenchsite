@@ -8,17 +8,169 @@
   "elevation feet to meters converter converter",
   "elevation feet to meters converter formula"
  ],
- "title": null,
- "description": null,
+ "title": "Elevation Feet to Meters Converter",
+ "description": "Convert elevations from feet to metres exactly with the Elevation Feet to Meters Converter — 0.3048, applied to the world's famous heights. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, Everest's 29,032 feet is 8,849 metres — and Death Valley's floor at −282 feet is −86 metres, the same converter handling the below-sea-level end without complaint.",
+ "quick_answer": "The Elevation Feet to Meters Converter converts elevation values from feet to metres using the exact international foot: 1 foot = 0.3048 metres. Enter the feet and read the metres — for summit heights, airfield elevations, topo maps and every US figure a metric reader needs translated.",
+ "steps_intro": "Multiply by 0.3048 — the exact, treaty-defined factor:",
+ "use_cases": [
+  {
+   "title": "Reading US topo maps abroad",
+   "body": [
+    {
+     "t": "USGS contours speak feet; most of the world files reports in metres. Convert the summit and the trailhead before quoting either — the reverse lane is the "
+    },
+    {
+     "t": "Elevation Meters to Feet Converter",
+     "l": "/tools/elevation-meters-to-feet-converter"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Aviation and airfield data",
+   "body": [
+    {
+     "t": "US charts publish field elevations in feet; international planning tools often want metres. One exact factor, no rounding superstition."
+    }
+   ]
+  },
+  {
+   "title": "Checking famous heights",
+   "body": [
+    {
+     "t": "Denali at 20,310 ft is 6,190.5 m — matching the official metric survey figure of 6,190 m. When converted and official numbers agree, both are probably honest."
+    }
+   ]
+  },
+  {
+   "title": "GPS and app settings",
+   "body": [
+    {
+     "t": "Devices export in the unit you did not grow up with. Convert the track's high point before it goes in the trip report."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Denver, the honest mile",
+   "body": [
+    {
+     "t": "Denver's famous 5,280 ft converts to 1,609.3 m — the 'Mile High City' is 1.61 km up, a fact that reads just as proudly in metric. The step of the Colorado Capitol is marked at exactly this height."
+    }
+   ]
+  },
+  {
+   "label": "Example · Mount Mitchell",
+   "body": [
+    {
+     "t": "The highest US summit east of the Mississippi: 6,684 ft = 2,037.3 m. Appalachian records are kept in feet at home and metres in the literature — this is the bridge."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Famous elevations, feet to metres",
+  "intro": "Converted exactly (× 0.3048) — compare with official metric figures and they agree.",
+  "columns": [
+   "Place",
+   "Feet",
+   "Metres"
+  ],
+  "rows": [
+   [
+    "Mount Everest",
+    "29,032 ft",
+    "8,849.0 m"
+   ],
+   [
+    "Denali",
+    "20,310 ft",
+    "6,190.5 m"
+   ],
+   [
+    "Mount Whitney",
+    "14,505 ft",
+    "4,421.1 m"
+   ],
+   [
+    "Mount Mitchell",
+    "6,684 ft",
+    "2,037.3 m"
+   ],
+   [
+    "Denver (city datum)",
+    "5,280 ft",
+    "1,609.3 m"
+   ],
+   [
+    "Badwater Basin, Death Valley",
+    "−282 ft",
+    "−86.0 m"
+   ]
+  ],
+  "note": "Heights are survey values that get refined over the decades (Everest's current official height is 8,848.86 m). The conversion factor never changes; the mountains' paperwork occasionally does."
+ },
+ "faq": [
+  [
+   "Is the factor exact?",
+   "Yes — the international foot is defined as exactly 0.3048 m (since 1959). Any error in a converted elevation came from the input, never the multiplication."
+  ],
+  [
+   "What about the US survey foot?",
+   "It differed by 2 parts per million (0.3048006096 m) and was retired at the end of 2022. Over an 8,849 m summit the two feet disagreed by about 2 cm — a geodesist's headache, nobody else's."
+  ],
+  [
+   "Negative elevations?",
+   "They convert with their sign: −282 ft (Badwater) is −86.0 m. Below-sea-level places are elevations too."
+  ],
+  [
+   "Flight levels and altitude?",
+   "Aviation altitudes in feet convert identically — the converter does not care whether the feet were measured by a surveyor or an altimeter."
+  ],
+  [
+   "Rounding — how many decimals?",
+   "A whole-foot input earns one decimal of metres at most (a foot is 30.48 cm). Quoting 8,848.953 m for Everest is the input's precision wearing a costume."
+  ],
+  [
+   "Thousands of values?",
+   "One at a time here; a spreadsheet column multiplies by 0.3048 just as exactly — spot-check its output against this page."
+  ],
+  [
+   "Does it convert the other way?",
+   "The sibling converter (Meters to Feet) owns the return trip, so each page stays single-purpose and unambiguous."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Reverse: "
+  },
+  {
+   "t": "Elevation Meters to Feet Converter",
+   "l": "/tools/elevation-meters-to-feet-converter"
+  },
+  {
+   "t": "; find a height: the "
+  },
+  {
+   "t": "Elevation Finder",
+   "l": "/tools/elevation-finder"
+  },
+  {
+   "t": "; your height now: "
+  },
+  {
+   "t": "My Elevation",
+   "l": "/tools/my-elevation"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boiling-point-by-elevation-calculator",
   "central-angle-from-distance-calculator",

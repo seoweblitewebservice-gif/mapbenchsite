@@ -8,17 +8,164 @@
   "temperature lapse rate calculator tool",
   "how to calculate temperature lapse rate calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Temperature Lapse Rate Calculator: 6.5°C per km",
+ "description": "Work with the atmospheric lapse rate in the Temperature Lapse Rate Calculator — standard, dry and moist rates, and rates from your own data. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a valley station at 500 m reading 20°C and a summit station 2,000 m higher reading 7°C imply an observed lapse rate of exactly 6.5°C per kilometre — the standard atmosphere, caught in the wild.",
+ "quick_answer": "The Temperature Lapse Rate Calculator works with the rate at which temperature falls as elevation rises — the standard 6.5°C per kilometre, dry adiabatic 9.8, moist near 5 — and derives the observed rate from two temperatures at two elevations. Enter values and read the rate your air is using.",
+ "steps_intro": "One number describes how fast the sky cools. Measure it or apply it:",
+ "use_cases": [
+  {
+   "title": "Deriving today's real rate",
+   "body": [
+    {
+     "t": "Two known temperatures — valley and summit, ground and a reported cloud base — give the day's observed rate. Compare it with the standard in the "
+    },
+    {
+     "t": "Temperature Change by Elevation Calculator",
+     "l": "/tools/temperature-change-by-elevation"
+    },
+    {
+     "t": " before trusting the standard."
+    }
+   ]
+  },
+  {
+   "title": "Weather and soaring study",
+   "body": [
+    {
+     "t": "Glider pilots live by lapse rates: they set thermal strength and cloud base. The dry adiabatic rate is the yardstick every sounding is read against."
+    }
+   ]
+  },
+  {
+   "title": "Snow-level estimation",
+   "body": [
+    {
+     "t": "Find the freezing level by dividing the surface temperature by the lapse rate — the back-of-envelope snow-line calculation ski reports quietly rely on."
+    }
+   ]
+  },
+  {
+   "title": "Climate and ecology homework",
+   "body": [
+    {
+     "t": "Treelines, frost pockets and growing seasons are lapse-rate stories. Computing with real station pairs turns the textbook rate into local knowledge."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Freezing level in one division",
+   "body": [
+    {
+     "t": "Surface temperature 13°C, standard rate 6.5°C/km: the freezing level sits near 13 ÷ 6.5 = 2.0 km up. Above roughly 2,000 m, precipitation falls as snow — the estimate road crews make first."
+    }
+   ]
+  },
+  {
+   "label": "Example · Dry versus moist air",
+   "body": [
+    {
+     "t": "Unsaturated air rising cools at 9.8°C/km; once its vapour condenses, latent heat softens the rate to about 5°C/km. The same mountain can host both rates on one day — dry on the climb, moist inside the cloud."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The three rates worth knowing",
+  "intro": "Standard reference values from atmospheric science — the calculator's cast of characters.",
+  "columns": [
+   "Rate",
+   "Value",
+   "Where it rules"
+  ],
+  "rows": [
+   [
+    "Environmental (standard)",
+    "6.5°C/km (3.6°F/1,000 ft)",
+    "The defined average atmosphere"
+   ],
+   [
+    "Dry adiabatic",
+    "9.8°C/km (5.4°F/1,000 ft)",
+    "Unsaturated rising or sinking air"
+   ],
+   [
+    "Moist adiabatic",
+    "≈5°C/km (2.7°F/1,000 ft)",
+    "Saturated air, inside cloud"
+   ],
+   [
+    "Inversion",
+    "Negative — warms with height",
+    "Calm clear nights, valley cold pools"
+   ],
+   [
+    "Isothermal",
+    "0°C/km",
+    "Layers that refuse to change"
+   ]
+  ],
+  "note": "A lapse rate is a description of a layer of air at a moment, not a law. It changes by the hour, which is why deriving it from two live measurements beats remembering it."
+ },
+ "faq": [
+  [
+   "How do I calculate a lapse rate from two stations?",
+   "Rate = (lower temperature − upper temperature) ÷ (upper elevation − lower elevation), scaled to per-kilometre. A 13°C difference over 2 km is 6.5°C/km."
+  ],
+  [
+   "What is a superadiabatic layer?",
+   "A layer cooling faster than 9.8°C/km — unstable, usually thin and near sun-heated ground. Air in it overturns eagerly; thermals and dust devils are its signature."
+  ],
+  [
+   "Does the lapse rate change with season?",
+   "Yes — the environmental rate varies with weather, season and place. The 6.5 figure is a standardised average for the troposphere, useful exactly because real rates scatter around it."
+  ],
+  [
+   "Why do pilots care about the dry rate specifically?",
+   "A rising parcel of unsaturated air cools at the dry adiabatic rate regardless of the environment. Comparing parcel and environment rates predicts whether the parcel keeps rising — stability in one subtraction."
+  ],
+  [
+   "Can the calculator handle Fahrenheit and feet?",
+   "Yes — rates convert consistently (9.8°C/km equals about 5.4°F per 1,000 ft). Mixing units inside one calculation is the error to avoid."
+  ],
+  [
+   "What is the tropopause's role?",
+   "The standard lapse applies through the troposphere; above the tropopause temperature stops falling and the model ends. For surface-to-summit work on Earth, you are always inside the troposphere."
+  ],
+  [
+   "How does this relate to boiling point and pressure?",
+   "All three ride the same thinning air: temperature by lapse, pressure by the barometric formula, boiling point by pressure. The sibling tools on this site compute each from elevation."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Apply a rate: the "
+  },
+  {
+   "t": "Temperature Change by Elevation Calculator",
+   "l": "/tools/temperature-change-by-elevation"
+  },
+  {
+   "t": "; pressure: "
+  },
+  {
+   "t": "Air Pressure by Elevation",
+   "l": "/tools/air-pressure-by-elevation"
+  },
+  {
+   "t": "; zones: the "
+  },
+  {
+   "t": "Climate Zone Finder",
+   "l": "/tools/climate-zone-finder"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "central-angle-from-distance-calculator",
   "cicada-emergence-map",

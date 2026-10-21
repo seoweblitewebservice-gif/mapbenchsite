@@ -8,17 +8,165 @@
   "radians to degrees converter converter",
   "radians to degrees converter formula"
  ],
- "title": null,
- "description": null,
+ "title": "Radians to Degrees Converter: Angles for Humans",
+ "description": "Convert radians to degrees with the Radians to Degrees Converter — the exact 180/pi factor, full precision, sign preserved. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, 0.7114 radians — Times Square's latitude in the language of code — converts to 40.76 degrees, the language of humans and charts.",
+ "quick_answer": "The Radians to Degrees Converter converts angles from radians to degrees by the exact factor 180 divided by pi. Enter the radians and read the degrees — the return trip from mathematics' native angle unit to the one charts and people use, at full precision.",
+ "steps_intro": "Code speaks radians; maps speak degrees. Translate back:",
+ "use_cases": [
+  {
+   "title": "Debugging geospatial code",
+   "body": [
+    {
+     "t": "A bearing that prints as 0.7854 is 45 degrees wearing code dress. Convert outputs while debugging — the forward lane is "
+    },
+    {
+     "t": "Degrees to Radians",
+     "l": "/tools/degrees-to-radians-converter"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Reading papers and formulas",
+   "body": [
+    {
+     "t": "Technical literature lives in radians; intuition lives in degrees. Converting the paper's worked example verifies you read the formula right."
+    }
+   ]
+  },
+  {
+   "title": "Physics and engineering results",
+   "body": [
+    {
+     "t": "Angular velocities, phases and oscillation answers emerge in radians per second — degrees per second is the version you can picture."
+    }
+   ]
+  },
+  {
+   "title": "Astronomy data",
+   "body": [
+    {
+     "t": "Catalogues and libraries hand angles in radians more often than amateurs expect. Convert before the telescope session, not during it."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The landmarks, reversed",
+   "body": [
+    {
+     "t": "π ≈ 3.14159 rad = 180°; π/2 = 90°; π/4 = 45°; 1 rad = 57.2958° — the odd-looking constant that is just 180/π being itself."
+    }
+   ]
+  },
+  {
+   "label": "Example · Negative and beyond-full-circle",
+   "body": [
+    {
+     "t": "−1.2913 rad = −73.99° (a west longitude's angle). And 7.0 rad = 401.07° — more than a revolution; normalising to 41.07° is your choice, never the converter's silent edit."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Radian anchors in degrees",
+  "intro": "The conversions worth recognising on sight.",
+  "columns": [
+   "Radians",
+   "Degrees",
+   "Where it appears"
+  ],
+  "rows": [
+   [
+    "0.01745 (approx)",
+    "1°",
+    "The small-angle workhorse"
+   ],
+   [
+    "0.5236",
+    "30°",
+    "π/6"
+   ],
+   [
+    "0.7854",
+    "45°",
+    "π/4 — the diagonal"
+   ],
+   [
+    "1.5708",
+    "90°",
+    "π/2 — the right angle"
+   ],
+   [
+    "3.1416",
+    "180°",
+    "π — the half turn"
+   ],
+   [
+    "6.2832",
+    "360°",
+    "2π — the full turn"
+   ]
+  ],
+  "note": "The factor 180/π = 57.29577951… is exact; table values are rounded for reading, while the converter keeps full float precision."
+ },
+ "faq": [
+  [
+   "Negative radians?",
+   "They convert with their sign — a negative angle is a direction convention (clockwise, west, south), and the converter preserves it faithfully."
+  ],
+  [
+   "Radians above 2π?",
+   "They convert as given (7 rad → 401.07°). Wrapping to a single revolution is an application decision the converter leaves to you."
+  ],
+  [
+   "How precise is the factor?",
+   "180/π at full double precision — conversion error is not a thing that exists at this scale; wrong-unit input is the only real hazard."
+  ],
+  [
+   "Gradians or turns?",
+   "This lane is radians↔degrees, the pair the world runs on. Gradians (400 per circle) convert by 0.9 degrees each, for the surveying antiques that need them."
+  ],
+  [
+   "My code's bearing looks wrong after conversion.",
+   "Check the convention: mathematical angles grow counter-clockwise from east; bearings grow clockwise from north. The unit conversion is innocent — the reference direction is the culprit."
+  ],
+  [
+   "Small-angle reading?",
+   "Below ~0.1 rad, degrees ≈ radians × 57.3 and the angle ≈ its sine — the approximation astronomers and engineers lean on daily."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Forward: "
+  },
+  {
+   "t": "Degrees to Radians Converter",
+   "l": "/tools/degrees-to-radians-converter"
+  },
+  {
+   "t": "; dress the result: the "
+  },
+  {
+   "t": "Decimal to DMS",
+   "l": "/tools/decimal-to-dms"
+  },
+  {
+   "t": " converter; bearings: the "
+  },
+  {
+   "t": "Bearing Calculator",
+   "l": "/tools/bearing-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "city-from-coordinates",
   "coordinate-bounding-box-generator",

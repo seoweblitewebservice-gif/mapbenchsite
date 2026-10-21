@@ -8,17 +8,164 @@
   "square kilometers to square miles converter converter",
   "square kilometers to square miles converter formula"
  ],
- "title": null,
- "description": null,
+ "title": "Square Kilometers to Square Miles Converter",
+ "description": "Convert square kilometres to square miles with the Square Kilometers to Square Miles Converter — multiply by 0.386102, exact. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, Yellowstone National Park's 8,983 km² converts to 3,468 square miles — the figure American sources quote, one multiplication away from the European one.",
+ "quick_answer": "The Square Kilometers to Square Miles Converter turns area in square kilometres into square miles using the exact factor 1 km² = 0.386102 sq mi. Enter the square kilometres and read the square miles — for park sizes, catchment areas, country comparisons and every European dataset an American reader meets.",
+ "steps_intro": "One multiplication, no approximations smuggled in:",
+ "use_cases": [
+  {
+   "title": "Reading European and world data",
+   "body": [
+    {
+     "t": "Datasets, atlases and Wikipedia give km². Convert the headline figure and the comparison with home geography becomes honest. The reverse lane is "
+    },
+    {
+     "t": "Square Miles to Square Kilometers",
+     "l": "/tools/square-miles-to-square-kilometers-converter"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Travel and park planning",
+   "body": [
+    {
+     "t": "A national park at 8,983 km² is 3,468 sq mi — suddenly the drive times inside it make sense to a US reader."
+    }
+   ]
+  },
+  {
+   "title": "Report localisation",
+   "body": [
+    {
+     "t": "Reports crossing the Atlantic need area in the reader's unit — converted exactly, with the factor stated rather than a rounded 'about 0.39' that compounds."
+    }
+   ]
+  },
+  {
+   "title": "Country size intuition",
+   "body": [
+    {
+     "t": "Rhode Island is 4,001 km² = 1,545 sq mi — the unit American comparisons are built from, in both directions."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The mental shortcut, audited",
+   "body": [
+    {
+     "t": "'Multiply by 0.4' overestimates by 3.6% — fine for a headline feel, wrong for a table. The converter's 0.386102 keeps tables true; shortcuts belong in conversation, labelled as such."
+    }
+   ]
+  },
+  {
+   "label": "Example · Small areas behave",
+   "body": [
+    {
+     "t": "1 km² = 0.386 sq mi; 10 km² = 3.86; 100 km² = 38.61. Linear in the factor because area conversion is one multiplication — the squaring already happened in the units."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Conversion table",
+  "intro": "Square kilometres to square miles, exact factor applied.",
+  "columns": [
+   "km²",
+   "sq mi",
+   "Roughly"
+  ],
+  "rows": [
+   [
+    "1",
+    "0.386",
+    "247 acres"
+   ],
+   [
+    "10",
+    "3.861",
+    "A small town's footprint"
+   ],
+   [
+    "100",
+    "38.61",
+    "A city district"
+   ],
+   [
+    "1,000",
+    "386.10",
+    "A small county"
+   ],
+   [
+    "8,983",
+    "3,468.36",
+    "Yellowstone"
+   ]
+  ],
+  "note": "1 sq mi = 2.58999 km² exactly (the international mile squared). Factors this clean deserve exact use — the converter never rounds the factor, only the display."
+ },
+ "faq": [
+  [
+   "What is the exact conversion factor?",
+   "1 km² = 0.3861021585 sq mi, from the exact international mile (1,609.344 m). The converter applies the full factor."
+  ],
+  [
+   "Is the calculation done locally?",
+   "Yes — a multiplication in your browser; nothing travels."
+  ],
+  [
+   "Why not just divide by 2.59?",
+   "That is the same conversion from the other side (1 ÷ 2.58999 = 0.386102) — identical result, and the converter is fluent in both directions."
+  ],
+  [
+   "Hectares and acres along the way?",
+   "1 km² = 100 hectares = 247.105 acres. The area family on this site converts every pair directly — no chaining through this page needed."
+  ],
+  [
+   "Coastline paradox — are country areas exact?",
+   "Areas are official measured figures with their own survey histories; the conversion is exact, the source areas carry their published precision."
+  ],
+  [
+   "Square metres too?",
+   "Divide m² by 1,000,000 for km² first, or use the Square Meters to Hectares Converter family for metric-native work."
+  ],
+  [
+   "Rounding for publication?",
+   "Three significant figures suit most prose (3,468 sq mi); keep the full converted value in tables where readers recompute."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Reverse: "
+  },
+  {
+   "t": "Square Miles to Square Kilometers Converter",
+   "l": "/tools/square-miles-to-square-kilometers-converter"
+  },
+  {
+   "t": "; drawn areas: the "
+  },
+  {
+   "t": "Square Miles Calculator",
+   "l": "/tools/square-miles-calculator"
+  },
+  {
+   "t": "; metric areas: the "
+  },
+  {
+   "t": "Square Meters to Hectares Converter",
+   "l": "/tools/square-meters-to-hectares-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "circle-area-from-radius",
   "circle-circumference-from-radius",

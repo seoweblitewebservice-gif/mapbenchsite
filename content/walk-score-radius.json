@@ -6,17 +6,161 @@
   "walkable area",
   "15 minute walk map"
  ],
- "title": null,
- "description": null,
+ "title": "Walk Reach Radius: The 15-Minute Circle",
+ "description": "Draw the walkable reach around a point with the Walk Reach Radius — 5, 10 and 15-minute circles at honest walking speeds. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, at a typical 3 mph pace, 15 minutes of walking is a 0.75-mile radius covering 1.77 square miles — the famous '15-minute neighbourhood', drawn as the circle it actually is.",
+ "quick_answer": "The Walk Reach Radius draws the area reachable on foot around a point, using walking time and an honest pace — about 3 miles per hour for most adults. Choose 5, 10, 15 or 20 minutes and read the circle — the first-pass walkability map streets later refine.",
+ "steps_intro": "Time times pace equals reach — draw it:",
+ "use_cases": [
+  {
+   "title": "The 15-minute neighbourhood test",
+   "body": [
+    {
+     "t": "Planners' slogan, made measurable: what falls inside a quarter-hour's walk of a home or station? The overlay tools count contents; this page draws the honest circle first."
+    }
+   ]
+  },
+  {
+   "title": "Property and letting research",
+   "body": [
+    {
+     "t": "'Walkable' in a listing becomes a radius around the address — checkable in one drawing, before the viewing."
+    }
+   ]
+  },
+  {
+   "title": "School and service planning",
+   "body": [
+    {
+     "t": "Walking catchments for schools and clinics start as reach circles; policy draws the final line, but the circle is the evidence base."
+    }
+   ]
+  },
+  {
+   "title": "Tourism on foot",
+   "body": [
+    {
+     "t": "A hotel's 10-minute circle is the visitor's real city — sights inside it are today's plan; the rest is tomorrow's bus."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Pace changes everything",
+   "body": [
+    {
+     "t": "At 3 mph, 15 minutes reaches 0.75 mi; at a brisk 4 mph, a full mile — the circle's area grows by 78% (1.77 → 3.14 sq mi). State the pace next to any walkability claim; the claim is meaningless without it."
+    }
+   ]
+  },
+  {
+   "label": "Example · Circle versus streets",
+   "body": [
+    {
+     "t": "Streets rarely run straight at the destination: real walking reach is the circle eroded by the network, often 60–80% of it. The radius map is the ceiling; network tools draw the true shape — and honest pages say which they are showing."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Walking reach at 3 mph",
+  "intro": "The standard pace (20 minutes per mile) — computed circles.",
+  "columns": [
+   "Walk time",
+   "Radius",
+   "Area inside"
+  ],
+  "rows": [
+   [
+    "5 min",
+    "0.25 mi",
+    "0.20 sq mi (126 acres)"
+   ],
+   [
+    "10 min",
+    "0.50 mi",
+    "0.79 sq mi (503 acres)"
+   ],
+   [
+    "15 min",
+    "0.75 mi",
+    "1.77 sq mi (1,131 acres)"
+   ],
+   [
+    "20 min",
+    "1.00 mi",
+    "3.14 sq mi (2,011 acres)"
+   ],
+   [
+    "30 min",
+    "1.50 mi",
+    "7.07 sq mi (4,524 acres)"
+   ]
+  ],
+  "note": "Pace varies — children, hills, heat and age all edit it. The table's 3 mph is the planning standard, adjustable in the tool; what matters is that the pace travels with the claim."
+ },
+ "faq": [
+  [
+   "Does it follow sidewalks and paths?",
+   "No — this is the straight-line reach circle, the honest first pass. Network-based walk sheds are the refinement; the circle is the ceiling they can never exceed."
+  ],
+  [
+   "What pace for children or older walkers?",
+   "About 2–2.5 mph is the kinder planning pace — select it and the circle shrinks to the walker's real world, which is the respectful way to plan."
+  ],
+  [
+   "Hills?",
+   "Gradient eats pace (Naismith's rule adds time for ascent). Flat-circle reach in hill country overstates; treat the drawing as the best case there."
+  ],
+  [
+   "Is 15 minutes really a mile?",
+   "At 4 mph yes; at the standard 3 mph it is 0.75 miles. The slogan survives because brisk walkers exist — the tool lets the pace be chosen rather than assumed."
+  ],
+  [
+   "Cycling reach?",
+   "Multiply pace by roughly four (12 mph) and the same drawing serves — the tool's pace input covers it, labelled as cycling when used so."
+  ],
+  [
+   "Public transport stops inside?",
+   "Overlay question — the buffer tools count what's inside; this page draws how far the feet reach."
+  ],
+  [
+   "Night and safety?",
+   "Reach is geometry; comfort is another layer (lighting, crossings) no radius draws. Planners pair the circle with the street audit."
+  ],
+  [
+   "Kilometres for European planning?",
+   "The 15-minute city was coined in Paris — km circles are this tool's native second language."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "What's inside: the "
+  },
+  {
+   "t": "Spatial Buffer & Overlay Analyzer",
+   "l": "/tools/spatial-buffer-overlay-analyzer"
+  },
+  {
+   "t": "; walk times: the "
+  },
+  {
+   "t": "Walking Time Calculator",
+   "l": "/tools/walking-time-calculator"
+  },
+  {
+   "t": "; buffers: the "
+  },
+  {
+   "t": "Buffer Zone Map",
+   "l": "/tools/buffer-zone-map"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "acreage-map-calculator",
   "acres-to-hectares-converter",

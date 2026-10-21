@@ -7,17 +7,154 @@
   "roof solar calculator",
   "sunlight on my roof"
  ],
- "title": null,
- "description": null,
+ "title": "Solar Roof Potential Calculator: First Estimate",
+ "description": "Estimate your roof's solar potential with the Solar Roof Potential Calculator — usable area, capacity and rough yearly yield, honestly labelled. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, 40 m² of usable south roof at modern panel efficiency holds about 8 kW of panels — at 4.5 peak sun hours a day that is roughly 36 kWh daily, before shade and weather argue.",
+ "quick_answer": "The Solar Roof Potential Calculator gives an honest estimate of what your roof could generate — from usable area, orientation and sunshine, to capacity in kilowatts and rough annual yield. Enter your roof's facts and read the potential — a screening number for deciding if a quote is worth chasing.",
+ "steps_intro": "Area times sunlight, with the assumptions printed on the label:",
+ "use_cases": [
+  {
+   "title": "Before calling installers",
+   "body": [
+    {
+     "t": "Walk into quotes knowing your roof's rough ceiling — a 3 kW roof quoted as 9 kW exposes itself. Sun geometry support comes from the "
+    },
+    {
+     "t": "Solar Position Calculator",
+     "l": "/tools/solar-position-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Comparing houses",
+   "body": [
+    {
+     "t": "Two candidate homes, two roofs: orientation and usable area separate the solar winner before the viewing ends."
+    }
+   ]
+  },
+  {
+   "title": "Landlords and housing associations",
+   "body": [
+    {
+     "t": "Portfolio screening: which roofs justify full surveys. This calculator is the sieve, not the survey."
+    }
+   ]
+  },
+  {
+   "title": "Curiosity, quantified",
+   "body": [
+    {
+     "t": "'Could my house power itself?' deserves a number with its assumptions attached, not a shrug — here it is."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 40 m² roof, step by step",
+   "body": [
+    {
+     "t": "Usable area 40 m² × ~0.20 kW per m² (modern panels at 1,000 W/m² test sunlight) ≈ 8 kW capacity. At 4.5 peak sun hours: ~36 kWh/day, ~13,100 kWh/year at the panels — before inverter, shade and weather losses, which real quotes then deduct."
+    }
+   ]
+  },
+  {
+   "label": "Example · Orientation's tax",
+   "body": [
+    {
+     "t": "At mid-latitudes a south-facing tilt near latitude angle is ideal; east or west roofs typically yield ~15–20% less, a flat roof a bit less again, and north-facing (northern hemisphere) drops steeply. The estimate's orientation factor carries these rules of thumb openly."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What drives the estimate",
+  "intro": "The inputs, and how much each matters.",
+  "columns": [
+   "Input",
+   "Why it matters"
+  ],
+  "rows": [
+   [
+    "Usable roof area",
+    "Sets capacity: ~0.2 kW per m² of modern panels"
+   ],
+   [
+    "Orientation and tilt",
+    "The yield multiplier — south and ~30–40° tilt lead at mid-latitudes"
+   ],
+   [
+    "Local sunshine",
+    "Peak sun hours vary ~2.5 (cloudy north) to 6.5+ (desert Southwest US)"
+   ],
+   [
+    "Shading",
+    "The silent killer — one chimney can tax a whole string"
+   ]
+  ],
+  "note": "A screening estimate, not a quote: it excludes your tariff, battery, roof condition and installer pricing. Treat any number without those as the start of the conversation."
+ },
+ "faq": [
+  [
+   "Can I skip the site survey and order from this number?",
+   "Please don't. The estimate screens roofs and sense-checks quotes; ordering needs measured dimensions, a structural once-over and a shading survey. Roofs are expensive to be wrong about."
+  ],
+  [
+   "Which costs and losses stay outside the estimate?",
+   "Tariffs and export rates, battery storage, scaffolding, roof repairs and your usage pattern — plus inverter and soiling losses a survey quantifies. The estimate is generation potential, not a bill forecast."
+  ],
+  [
+   "How accurate is the yearly figure?",
+   "Order-of-magnitude honest: expect a real system's yield within roughly ±20–25% of the estimate, weather and shade permitting."
+  ],
+  [
+   "What are peak sun hours?",
+   "The day's sunlight expressed as hours at full 1,000 W/m² strength — Chicago averages around 4–4.5; Phoenix around 6.5; London around 2.5–3. Your region's figure drives the estimate hard."
+  ],
+  [
+   "East-west split roofs?",
+   "Common and fine: two smaller arrays facing east and west give a flatter day of generation at a modest total discount versus pure south."
+  ],
+  [
+   "Does it size a battery?",
+   "No — storage sizing follows your usage pattern, not the roof. The estimate stops at generation potential, deliberately."
+  ],
+  [
+   "Old or shaded roof?",
+   "Shade and structure dominate everything else; a shaded 60 m² roof loses to a clear 30 m² one. Get the shading surveyed before believing any number, this page's included."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The geometry: the "
+  },
+  {
+   "t": "Solar Position Calculator",
+   "l": "/tools/solar-position-calculator"
+  },
+  {
+   "t": "; shadows that tax you: the "
+  },
+  {
+   "t": "Shadow Length Calculator",
+   "l": "/tools/shadow-length-calculator"
+  },
+  {
+   "t": "; peak time: the "
+  },
+  {
+   "t": "Solar Noon Calculator",
+   "l": "/tools/solar-noon-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "astronomical-twilight-calculator",
   "civil-twilight-calculator",

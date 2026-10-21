@@ -8,17 +8,158 @@
   "next new moon calculator tool",
   "how to calculate next new moon calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Next New Moon Calculator: Dark-Sky Dates",
+ "description": "Find the date of the next new moon with the Next New Moon Calculator — the darkest nights for stargazing, by the 29.53-day cycle. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, after the full moon of October 26, 2026, the next new moon falls on November 9, 2026 — the night the Milky Way gets the sky to itself.",
+ "quick_answer": "The Next New Moon Calculator finds the date of the next new moon after today or any date you enter, counted on the Moon's 29.53-day cycle. Enter a date and learn when the Moon goes dark — the anchor date for stargazing trips, lunar calendars and spring-tide planning.",
+ "steps_intro": "The month's darkest night, dated:",
+ "use_cases": [
+  {
+   "title": "Stargazing and astrophotography",
+   "body": [
+    {
+     "t": "Deep-sky nights are planned backwards from new moon — the "
+    },
+    {
+     "t": "Moon Illumination Calculator",
+     "l": "/tools/moon-illumination-calculator"
+    },
+    {
+     "t": " grades the nights either side."
+    }
+   ]
+  },
+  {
+   "title": "Lunar calendar starts",
+   "body": [
+    {
+     "t": "Months in lunar calendars (and festivals keyed to them) begin at new moon — this is the reference date."
+    }
+   ]
+  },
+  {
+   "title": "Eclipse seasons",
+   "body": [
+    {
+     "t": "Solar eclipses happen only at new moon — the calculator finds the candidate dates the eclipse maps then refine."
+    }
+   ]
+  },
+  {
+   "title": "Tides and night fishing",
+   "body": [
+    {
+     "t": "Spring tides ride new moons too; night anglers plan the dark-plus-tide combination starting here."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The October–November run",
+   "body": [
+    {
+     "t": "Full moon October 26, 2026 → new moon November 9, 2026: 14 days of waning. The cycle's halves are as regular as its whole."
+    }
+   ]
+  },
+  {
+   "label": "Example · Why 'new' means invisible",
+   "body": [
+    {
+     "t": "At new moon the Moon sits between Earth and Sun: its lit half faces away and it rises and sets with the Sun. The darkest night is a geometry fact, not a mood."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "New moon facts",
+  "intro": "What the date means.",
+  "columns": [
+   "Fact",
+   "Value"
+  ],
+  "rows": [
+   [
+    "Moon age at new moon",
+    "0 days (cycle restarts)"
+   ],
+   [
+    "Cycle length",
+    "29.53 days average"
+   ],
+   [
+    "Illumination",
+    "~0%"
+   ],
+   [
+    "Moonrise at new moon",
+    "Around sunrise"
+   ],
+   [
+    "Solar eclipses",
+    "Only possible at new moon"
+   ]
+  ],
+  "note": "The exact instant is when Moon and Sun share the same ecliptic longitude; for dark-sky planning, the whole surrounding night counts as moonless."
+ },
+ "faq": [
+  [
+   "How is the date calculated?",
+   "By counting the mean 29.53-day synodic cycle from a known new moon — within hours for planning purposes, which is all a dark night needs."
+  ],
+  [
+   "Is the new moon night completely dark?",
+   "Moonlight-wise, yes — the Moon is up only in daytime. Starlight, airglow and light pollution remain, as every rural camper learns."
+  ],
+  [
+   "When is the best stargazing window?",
+   "The three or four nights centred on new moon, before the waxing crescent starts competing after sunset."
+  ],
+  [
+   "Lunar versus calendar months?",
+   "Lunar months (29 or 30 days alternating) chase this cycle; the Gregorian calendar ignores it, which is why full moons drift through the month."
+  ],
+  [
+   "Can a month have no new moon?",
+   "February can — it is shorter than the cycle, so a new moon can slip from late January to early March (last in 2014, a curiosity the calculator reproduces)."
+  ],
+  [
+   "Does new moon affect tides?",
+   "Yes — alignment again: spring tides cluster at new and full. The Coastal Time & Sun Context page ties the threads together."
+  ],
+  [
+   "Can I find new moons for a whole year?",
+   "Step date by date — each result seeds the next search, twelve or thirteen times a year."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The bright twin: the "
+  },
+  {
+   "t": "Next Full Moon Calculator",
+   "l": "/tools/next-full-moon-calculator"
+  },
+  {
+   "t": "; phases by date: "
+  },
+  {
+   "t": "Moon Phase by Date",
+   "l": "/tools/moon-phase-by-date"
+  },
+  {
+   "t": "; coastal tie-in: the "
+  },
+  {
+   "t": "Coastal Time & Sun Context",
+   "l": "/tools/tide-time-context"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "golden-hour-calculator",
   "moon-age-calculator",

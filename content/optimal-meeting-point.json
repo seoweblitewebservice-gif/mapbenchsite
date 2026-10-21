@@ -6,17 +6,170 @@
   "meet in the middle",
   "fair meetup location"
  ],
- "title": null,
- "description": null,
+ "title": "Optimal Meeting Point: Fair Ground for Everyone",
+ "description": "Find the geographic balance point for a group with the Optimal Meeting Point calculator — the fair centre of everyone's locations, on the sphere. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, the balance point of New York, Chicago and Los Angeles sits in Missouri at 40.413, −93.959 — 344 miles from Chicago, 1,045 from New York and 1,401 from Los Angeles.",
+ "quick_answer": "The Optimal Meeting Point calculator finds the geographic balance point of a set of locations — the spherical centre that treats every traveller's position symmetrically. Enter the group's places and read the central point — the starting answer for meetups and offsites where the venue must be argued fairly.",
+ "steps_intro": "Fair has a geometry. Find the point that embodies it:",
+ "use_cases": [
+  {
+   "title": "Friends and family reunions",
+   "body": [
+    {
+     "t": "Scattered households get one defensible venue instead of the loudest voice's hometown. The simple two-person version is the "
+    },
+    {
+     "t": "Halfway Between Two Places",
+     "l": "/tools/halfway-between-two-places"
+    },
+    {
+     "t": " finder."
+    }
+   ]
+  },
+  {
+   "title": "Team offsites and meetups",
+   "body": [
+    {
+     "t": "Remote teams pick a city near the balance point and justify it with a map, not seniority. Compare the candidates' real reach with the "
+    },
+    {
+     "t": "Driving Distance Calculator",
+     "l": "/tools/driving-distance-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Service and depot siting, first pass",
+   "body": [
+    {
+     "t": "The balance point of customer locations is the classic first sketch for a depot — to be refined by roads, rents and reality, in that order."
+    }
+   ]
+  },
+  {
+   "title": "Settling the argument",
+   "body": [
+    {
+     "t": "When every candidate city is someone's favour, the computed centre is the neutral referee all sides agreed to consult."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Three cities, one point in Missouri",
+   "body": [
+    {
+     "t": "New York, Chicago and Los Angeles balance at 40.413, −93.959. Distances from it: Chicago 344 mi, New York 1,045 mi, Los Angeles 1,401 mi — nobody's home turf, which is the point of the exercise."
+    }
+   ]
+  },
+  {
+   "label": "Example · Balance is not the same as least total travel",
+   "body": [
+    {
+     "t": "Those three cities' total travel from the Missouri centre is about 2,791 miles. Meeting in Chicago instead totals about 2,453 miles — less overall, because Chicago already sits central. The centre optimises fairness of position; the sum is a different optimisation, and the honest planner names which one they chose."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "From the example — who travels what",
+  "intro": "Computed great-circle distances from the balance point (40.413, −93.959).",
+  "columns": [
+   "Traveller from",
+   "To the balance point",
+   "To Chicago instead"
+  ],
+  "rows": [
+   [
+    "New York",
+    "1,045 mi",
+    "711 mi"
+   ],
+   [
+    "Chicago",
+    "344 mi",
+    "0 mi"
+   ],
+   [
+    "Los Angeles",
+    "1,401 mi",
+    "1,742 mi"
+   ],
+   [
+    "Total",
+    "2,791 mi",
+    "2,453 mi"
+   ]
+  ],
+  "note": "Great-circle distances — road and flight times reshuffle them. Use the centre as the fairness argument, then check real journeys for the finalists."
+ },
+ "faq": [
+  [
+   "How is the point calculated?",
+   "As the spherical mean of the locations — their 3-D vectors averaged and projected back to the surface. It is the same centre the postal-centroid and coordinate-mean tools compute, dressed for meetings."
+  ],
+  [
+   "Does it minimise total travel distance?",
+   "Not exactly — the balance (centroid) point and the least-total-distance point (geometric median) differ. With one traveller already central, the median can sit on their city; the centroid stays neutral. This page computes the balance point and says so."
+  ],
+  [
+   "What about road travel instead of straight lines?",
+   "Roads bend everything: run the centre, shortlist real towns near it, then compare driving distances for the finalists before deciding."
+  ],
+  [
+   "Can one person weight more?",
+   "Duplicate their location to weight it — transparent weighting, visible in the input list rather than hidden in a setting."
+  ],
+  [
+   "The point is in a lake or field.",
+   "Balance points are geography, not venues. Treat the point as the centre of the search area and pick the nearest sensible town — the map makes that a two-minute job."
+  ],
+  [
+   "International groups?",
+   "The geometry is global; the practical answer must still respect visas, flight networks and time zones — the centre is the start of the conversation, not its end."
+  ],
+  [
+   "Two people only?",
+   "Works — the balance of two is their great-circle midpoint, also served by the dedicated halfway finder."
+  ],
+  [
+   "Fair by time, not distance?",
+   "Time fairness needs travel-time data per candidate; compute the centre first, then test the nearby cities with the routing tools."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Two people: "
+  },
+  {
+   "t": "Halfway Between Two Places",
+   "l": "/tools/halfway-between-two-places"
+  },
+  {
+   "t": "; the raw math: the "
+  },
+  {
+   "t": "Coordinate Mean Calculator",
+   "l": "/tools/coordinate-mean-calculator"
+  },
+  {
+   "t": "; group version: the "
+  },
+  {
+   "t": "Geographic Meeting Point Finder",
+   "l": "/tools/geographic-meeting-point-finder"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "airport-distance-calculator",
   "airport-midpoint-by-coordinates",

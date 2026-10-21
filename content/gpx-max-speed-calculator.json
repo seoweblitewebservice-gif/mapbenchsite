@@ -8,17 +8,150 @@
   "gpx top speed",
   "calculate max speed gpx"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Maximum Speed Calculator: Fastest Segment",
+ "description": "Find the fastest timestamped segment in a GPX track with the GPX Maximum Speed Calculator — distance over time, segment by segment. Free, local.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a segment covering 100 metres in 8 seconds runs at 12.5 metres per second — exactly 45.0 km/h — and the calculator hunts the whole file for the pair of points that beats it.",
+ "quick_answer": "The GPX Maximum Speed Calculator scans a GPX track segment by segment — distance divided by elapsed time between consecutive timestamped points — and reports the fastest one. Load the file locally and read your top speed — with the caveat that one noisy point can invent a legend.",
+ "steps_intro": "Every segment gets its hearing; the fastest wins:",
+ "use_cases": [
+  {
+   "title": "Ski, ride and run bragging — verified",
+   "body": [
+    {
+     "t": "Top speed claims from the chairlift meet the file. Compare against the day's "
+    },
+    {
+     "t": "GPX Average Speed",
+     "l": "/tools/gpx-average-speed-calculator"
+    },
+    {
+     "t": " for the plausible frame around the peak."
+    }
+   ]
+  },
+  {
+   "title": "Finding GPS spikes",
+   "body": [
+    {
+     "t": "A maximum of 300 km/h on a bicycle is not fitness, it is a bad fix. The fastest segment's location in the file is where the corruption lives."
+    }
+   ]
+  },
+  {
+   "title": "Vehicle and delivery logs",
+   "body": [
+    {
+     "t": "Fleet and courier GPX logs answer 'how fast did it actually go?' from the recording, segment by segment."
+    }
+   ]
+  },
+  {
+   "title": "Data-quality screening",
+   "body": [
+    {
+     "t": "Before a dataset of tracks feeds any analysis, maximum-speed outliers flag the files that need cleaning."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The segment arithmetic",
+   "body": [
+    {
+     "t": "Consecutive points 100 m apart with stamps 8 seconds apart: 100 ÷ 8 = 12.5 m/s, × 3.6 = 45.0 km/h. Every top-speed figure is this division applied to the file's best pair — no pair, no speed."
+    }
+   ]
+  },
+  {
+   "label": "Example · Anatomy of a phantom",
+   "body": [
+    {
+     "t": "A single fix jumping 50 metres sideways in a 1-second interval reads as 180 km/h. In a tunnel exit or a city canyon, that phantom tops the chart — which is why this page pairs the result with the spike warning rather than a trophy."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Why maximums mislead (and when they don't)",
+  "intro": "The fastest segment is the statistic most sensitive to noise in the whole file.",
+  "columns": [
+   "Situation",
+   "Reading"
+  ],
+  "rows": [
+   [
+    "Dense 1-second recording, open sky",
+    "Trustworthy to a few percent"
+   ],
+   [
+    "Sparse points (30 s+ apart)",
+    "Segments average out bursts — true peak is higher"
+   ],
+   [
+    "Urban canyons, tunnels, forests",
+    "Spikes likely — check the segment's plausibility"
+   ],
+   [
+    "Smoothed platform export",
+    "Peak pre-shrunk by the platform's filter; the raw file disagrees honestly"
+   ]
+  ],
+  "note": "Averaging speed over longer windows tames noise; the maximum over single segments amplifies it. Read the number with its recording conditions, as this table does."
+ },
+ "faq": [
+  [
+   "Which points are compared?",
+   "Consecutive trackpoints carrying both coordinates and timestamps, within each track segment — segments never leap across the gaps where recording paused."
+  ],
+  [
+   "What if the file has no timestamps?",
+   "No time, no speed: positions alone cannot make a rate. The Timestamp Span tool shows what time data a file actually holds."
+  ],
+  [
+   "mph as well?",
+   "Yes — km/h and mph both, per this site's convention. Downhill sports quote both dialects depending on continent."
+  ],
+  [
+   "Can smoothing be applied?",
+   "Platforms smooth; this calculator reports the file's own fastest segment so you can see what smoothing would be hiding. Knowing the raw peak is the point of the page."
+  ],
+  [
+   "Downhill versus flat — does slope matter?",
+   "The speed is horizontal ground speed from coordinates and time. Slope is real effort the number ignores — the elevation tools carry the vertical story."
+  ],
+  [
+   "Routes with planned times?",
+   "A route's rtept stamps are usually the planner's fiction; speeds from them describe the plan, not a journey. Recorded tracks are the evidence."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The honest middle: the "
+  },
+  {
+   "t": "GPX Average Speed Calculator",
+   "l": "/tools/gpx-average-speed-calculator"
+  },
+  {
+   "t": "; pace: the "
+  },
+  {
+   "t": "GPX Speed / Pace Helper",
+   "l": "/tools/gpx-speed-pace-helper"
+  },
+  {
+   "t": "; count the points: the "
+  },
+  {
+   "t": "GPX Track Point Counter",
+   "l": "/tools/gpx-point-counter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

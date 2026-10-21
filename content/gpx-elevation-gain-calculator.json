@@ -8,17 +8,155 @@
   "total climb gpx",
   "gpx vertical gain"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Elevation Gain Calculator: Total Climb",
+ "description": "Sum the positive elevation changes in a GPX track with the GPX Elevation Gain Calculator — total ascent from the recording itself. Free, local.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a climb profile stepping 100 → 112 → 108 → 125 → 121 → 140 metres gains 48 metres: the three rises (12 + 17 + 19) counted, the two dips ignored.",
+ "quick_answer": "The GPX Elevation Gain Calculator adds up every positive elevation change between consecutive points in a GPX file to give the total ascent. Load the file and read the climb — what 'how much up was there?' actually means, computed from your recording itself.",
+ "steps_intro": "Every upward step, summed; every dip, forgiven:",
+ "use_cases": [
+  {
+   "title": "Verifying route claims",
+   "body": [
+    {
+     "t": "The guidebook says 800 m of climbing; your recording's gain says what the day actually held. Its mirror is the "
+    },
+    {
+     "t": "GPX Elevation Loss Calculator",
+     "l": "/tools/gpx-elevation-loss-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Comparing devices",
+   "body": [
+    {
+     "t": "Barometric watches, GPS-altitude phones and map-corrected platforms produce three different gains from one walk. The raw-file sum is the baseline the arguments start from."
+    }
+   ]
+  },
+  {
+   "title": "Training load tracking",
+   "body": [
+    {
+     "t": "Weekly climbing totals drive hill training. A consistent from-the-file method beats whichever app you happened to sync with."
+    }
+   ]
+  },
+  {
+   "title": "Route grading",
+   "body": [
+    {
+     "t": "Gain per distance is a difficulty language: 48 m over 2 km is a stroll; 1,000 m over 10 km is a serious day. The ratio starts here."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The sum, step by step",
+   "body": [
+    {
+     "t": "Elevations 100, 112, 108, 125, 121, 140: rises are +12, +17, +19 = 48 m of gain; the falls (−4, −4) belong to the loss calculator. Net change is only +40 m — which is why 'net' is the wrong number for effort."
+    }
+   ]
+  },
+  {
+   "label": "Example · Why noise inflates gain",
+   "body": [
+    {
+     "t": "GPS altitude jitter of ±3 m between points manufactures phantom climbs on flat ground — hundreds of false metres over a long track. Platforms smooth or threshold this away, which is why their gains differ from a raw sum like this one."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Gain, loss and net — three different numbers",
+  "intro": "One elevation profile, three honest summaries.",
+  "columns": [
+   "Measure",
+   "Definition",
+   "The example profile"
+  ],
+  "rows": [
+   [
+    "Total gain",
+    "Sum of all positive steps",
+    "48 m"
+   ],
+   [
+    "Total loss",
+    "Sum of all negative steps (as a positive count)",
+    "8 m"
+   ],
+   [
+    "Net change",
+    "Last elevation minus first",
+    "+40 m"
+   ],
+   [
+    "Max elevation",
+    "The profile's ceiling",
+    "140 m"
+   ]
+  ],
+  "note": "For any profile: gain − loss = net change, always. If a platform's numbers break that identity, it filtered something — usually small wiggles, by a threshold it should disclose."
+ },
+ "faq": [
+  [
+   "Does it smooth the elevation first?",
+   "This calculator sums the recorded steps as they stand, so you see the file's own arithmetic. Smoothing and thresholding are platform choices that lower gain — knowing the raw sum tells you how much they removed."
+  ],
+  [
+   "What if points have no <ele>?",
+   "They contribute no step. A file with sparse elevation (only some points stamped) understates gain — the count of elevation-bearing points is part of an honest reading."
+  ],
+  [
+   "Barometric versus GPS elevation?",
+   "Barometric series are smoother (weather drift aside); GPS altitude is noisier, inflating raw gain more. The calculator sums whichever the file carries — the source is the story."
+  ],
+  [
+   "Feet as well as metres?",
+   "Both units are reported, per this site's US/Europe convention — climbs are quoted in feet by American hikers and metres by European ones."
+  ],
+  [
+   "Routes versus tracks?",
+   "Route elevations often come from a map model when the route was planned — gain over a planned route is the model's promise; over a recorded track, the day's evidence."
+  ],
+  [
+   "Thresholds on other platforms (e.g. 3 m)?",
+   "Many platforms ignore rises below a few metres to defeat noise. Their gain will read lower than this raw sum, by design — neither is wrong, they are different definitions."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The way down: the "
+  },
+  {
+   "t": "GPX Elevation Loss Calculator",
+   "l": "/tools/gpx-elevation-loss-calculator"
+  },
+  {
+   "t": "; strip it: "
+  },
+  {
+   "t": "GPX Elevation Remover",
+   "l": "/tools/gpx-remove-elevation"
+  },
+  {
+   "t": "; full picture: "
+  },
+  {
+   "t": "GPX Route Stats",
+   "l": "/tools/gpx-route-stats"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

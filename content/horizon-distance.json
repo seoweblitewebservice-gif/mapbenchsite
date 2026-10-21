@@ -6,17 +6,180 @@
   "horizon distance online",
   "free horizon distance"
  ],
- "title": null,
- "description": null,
+ "title": "Horizon Distance: How Far Can You See?",
+ "description": "Calculate your horizon distance from any height with Horizon Distance — geometric and refraction-adjusted, for eyes, towers and airliners. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, from a cruising airliner at 35,000 feet the geometric horizon lies about 369 km (229 miles) away — and the horizon itself dips some 3.3 degrees below horizontal.",
+ "quick_answer": "Horizon Distance estimates how far you can see to the horizon from a given height above the surface. Enter your height — eye level, a cliff, a tower, a summit — and read the distance to the horizon, with the standard-refraction figure beside it.",
+ "steps_intro": "Height buys distance at a square-root exchange rate:",
+ "use_cases": [
+  {
+   "title": "Viewing and photography planning",
+   "body": [
+    {
+     "t": "Summit-to-summit visibility, lighthouse ranges and skyline shots all start from two horizon distances added together — the "
+    },
+    {
+     "t": "Line of Sight Helper",
+     "l": "/tools/line-of-sight-helper"
+    },
+    {
+     "t": " does the paired version."
+    }
+   ]
+  },
+  {
+   "title": "Coastal and sailing questions",
+   "body": [
+    {
+     "t": "When will the lighthouse's lamp rise? Its light has its own horizon; yours and its sum is the sighting range — mariner's arithmetic, computed here."
+    }
+   ]
+  },
+  {
+   "title": "Explaining the view",
+   "body": [
+    {
+     "t": "Why the sea's edge looks close from the beach (about 4.8 km) and enormous from the headland — height, square-rooted. The "
+    },
+    {
+     "t": "Hidden Height Calculator",
+     "l": "/tools/hidden-height-curvature-calculator"
+    },
+    {
+     "t": " prices what the cut hides."
+    }
+   ]
+  },
+  {
+   "title": "Tower and drone work",
+   "body": [
+    {
+     "t": "A 100 m mast commands a 35.7 km geometric horizon — coverage maps and camera plans start from that circle."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The standing adult",
+   "body": [
+    {
+     "t": "Eyes 1.8 m above the water: horizon 4.8 km geometric, about 5.2 km with standard refraction. The most local fact in geography — your personal edge of the visible world is a city walk away."
+    }
+   ]
+  },
+  {
+   "label": "Example · Mount Washington",
+   "body": [
+    {
+     "t": "From the 1,917 m summit (6,288 ft), the geometric horizon runs 156 km — on the clearest days the Atlantic and four states argue within it, exactly as the mountain's fame claims."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Horizon distance by height",
+  "intro": "Computed geometrically (√(2Rh)) with the standard-refraction column beside it.",
+  "columns": [
+   "Height",
+   "Geometric",
+   "With standard refraction"
+  ],
+  "rows": [
+   [
+    "1.8 m (standing eye)",
+    "4.8 km",
+    "5.2 km"
+   ],
+   [
+    "10 m (cliff path)",
+    "11.3 km",
+    "12.2 km"
+   ],
+   [
+    "30 m (small tower)",
+    "19.6 km",
+    "21.1 km"
+   ],
+   [
+    "100 m (skyscraper deck)",
+    "35.7 km",
+    "38.6 km"
+   ],
+   [
+    "1,000 m (hill summit)",
+    "112.9 km",
+    "121.9 km"
+   ],
+   [
+    "8,849 m (Everest)",
+    "335.9 km",
+    "362.8 km"
+   ]
+  ],
+  "note": "To see an object of height, add its horizon to yours: two 30 m towers can sight each other at 39.1 km — before terrain and weather vote."
+ },
+ "faq": [
+  [
+   "What is the dip of the horizon?",
+   "The angle below horizontal at which the horizon appears: about 0.043° (2.6 arcminutes) at eye level, growing to roughly 3.3° at airliner altitude. Surveyors and navigators correct for it — at sea level it is small, from a cockpit it is not."
+  ],
+  [
+   "Why two numbers — geometric and refraction?",
+   "Air bends light gently Earthward, extending the view (modelled as an Earth about 7⁄6 larger). The geometric figure is the guarantee; the refraction figure is the typical day. Exceptional days break both, upward."
+  ],
+  [
+   "Does eyesight or a telescope extend it?",
+   "No — optics sharpen what arrives; the horizon is set by geometry and your height alone. Only climbing extends it."
+  ],
+  [
+   "Binocular ships appear 'over' the horizon sometimes?",
+   "Refraction again: temperature layers can duct and lift images (superior mirage), letting light from below the geometric horizon reach you. The calculator's standard model is the average; the atmosphere freelances."
+  ],
+  [
+   "Freshwater horizons?",
+   "Identical — the Great Lakes' long sight lines are pure height-and-distance geometry over very flat water."
+  ],
+  [
+   "How far on the Moon?",
+   "Same formula, smaller radius (1,737 km): standing eye height gives about 2.4 km. Astronauts' horizons feel close for a reason."
+  ],
+  [
+   "Is the formula exact?",
+   "√(2Rh + h²) is exact for a sphere; the famous √(2Rh) shortcut differs by less than a metre until heights approach a kilometre. This page uses the full form."
+  ],
+  [
+   "Sunrise timing?",
+   "The visible sunrise comes early by roughly the dip's worth of Earth's rotation — about 2–3 extra minutes of daylight for a mountaintop observer versus the valley, horizon geometry again."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "What the curve hides: the "
+  },
+  {
+   "t": "Hidden Height by Earth Curvature Calculator",
+   "l": "/tools/hidden-height-curvature-calculator"
+  },
+  {
+   "t": "; radio version: the "
+  },
+  {
+   "t": "Radio Line-of-Sight Calculator",
+   "l": "/tools/radio-line-of-sight-calculator"
+  },
+  {
+   "t": "; the drop: the "
+  },
+  {
+   "t": "Earth Curvature Calculator",
+   "l": "/tools/earth-curvature-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "central-angle-from-distance-calculator",
   "cicada-emergence-map",

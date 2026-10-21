@@ -6,17 +6,166 @@
   "service territory map",
   "nearest facility zones"
  ],
- "title": null,
- "description": null,
+ "title": "Voronoi Map Generator: Nearest-Site Territories",
+ "description": "Generate a Voronoi map from seed points with the Voronoi Map Generator — every place coloured by its nearest site. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, with seeds in New York, Boston and Philadelphia, Hartford falls in Boston's cell — 92.4 miles from Boston against 100.4 from New York — so Boston is its nearest-site territory.",
+ "quick_answer": "The Voronoi Map Generator divides a map into territories around seed points, where every spot belongs to the seed it is nearest to. Drop your sites and generate the cells: the cleanest possible picture of natural catchments, service territories and 'which location serves this address?' — answered by geometry alone.",
+ "steps_intro": "Every point on the map gets assigned to its nearest seed:",
+ "use_cases": [
+  {
+   "title": "Service territories and franchises",
+   "body": [
+    {
+     "t": "Nearest-site territories with no overlaps and no gaps — the defensible first draft of a territory map, refinable later with roads and drive times (the "
+    },
+    {
+     "t": "Drive Time Map",
+     "l": "/tools/drive-time-map"
+    },
+    {
+     "t": " shows the road-shaped truth)."
+    }
+   ]
+  },
+  {
+   "title": "Facility planning",
+   "body": [
+    {
+     "t": "Where does the next clinic or depot relieve the most pressure? The largest, most stretched cells point at the answer."
+    }
+   ]
+  },
+  {
+   "title": "Coverage analysis",
+   "body": [
+    {
+     "t": "Warehouses, towers, stores: the cell shapes expose which neighbourhoods are far from every seed — the "
+    },
+    {
+     "t": "Store Locator Map Builder",
+     "l": "/tools/store-locator-map-builder"
+    },
+    {
+     "t": "'s list becomes this map directly."
+    }
+   ]
+  },
+  {
+   "title": "Teaching geometry",
+   "body": [
+    {
+     "t": "Perpendicular bisectors you can see: every cell edge is the set of points equidistant from two seeds. Voronoi is the rare maths topic that explains itself in one picture."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Hartford's cell",
+   "body": [
+    {
+     "t": "Hartford is closer to Boston (92.4 mi) than to New York (100.4 mi) as the crow flies, so it wears Boston's colour — despite every cultural instinct saying otherwise. Straight-line territory is honest about distance and blind to highways; both halves of that sentence matter."
+    }
+   ]
+  },
+  {
+   "label": "Example · The border is a bisector",
+   "body": [
+    {
+     "t": "Between two seeds, the cell border is the perpendicular bisector of the segment joining them: every border point is exactly equidistant from both. Move a seed and the whole neighbourhood's borders swing — the map is a machine for what-if."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading a Voronoi map",
+  "intro": "What the picture claims — and what it does not.",
+  "columns": [
+   "You see",
+   "It means",
+   "It does not mean"
+  ],
+  "rows": [
+   [
+    "A cell",
+    "Ground nearer this seed than any other",
+    "That people actually travel this way"
+   ],
+   [
+    "A straight border",
+    "Equidistance from two seeds",
+    "A road or a legal boundary"
+   ],
+   [
+    "A huge cell",
+    "A seed alone with a big area",
+    "A problem — sparse areas deserve big cells"
+   ],
+   [
+    "A tiny cell",
+    "Seeds clustered tightly",
+    "Inefficiency — cities cluster on purpose"
+   ]
+  ],
+  "note": "Voronoi here is straight-line (Euclidean/great-circle) geometry. Travel-time territories bend along roads; use the Voronoi as the null hypothesis the road version must beat."
+ },
+ "faq": [
+  [
+   "Which distance does it use — straight or road?",
+   "Straight-line proximity: each point joins its geometrically nearest seed. Road and drive-time territories are different, deliberately — compare both before signing a franchise map."
+  ],
+  [
+   "What happens with two seeds at the same spot?",
+   "They share one cell between them (an exact tie along no border at all). Nudge duplicates apart or merge them — the generator treats coincidence literally."
+  ],
+  [
+   "Can cells be clipped to a boundary?",
+   "Territory work usually clips cells to a coastline, county or trade area — the unclipped cell is the raw geometry; clipping is presentation with legal consequences, so it is a deliberate step."
+  ],
+  [
+   "Weighted territories (bigger stores, bigger cells)?",
+   "Weighted Voronoi exists (additive and multiplicative forms) for exactly that. The standard map here is the unweighted classic — know which your decision needs."
+  ],
+  [
+   "How many seeds is sensible?",
+   "From a handful to a few hundred reads clearly. Thousands become a texture, not a map — aggregate first, as the base FAQ's seed question suggests."
+  ],
+  [
+   "Exports for GIS?",
+   "The cells are ordinary polygons conceptually — export paths follow the creation tools' formats, and GIS Voronoi (Thiessen) tools reproduce the geometry natively for verification."
+  ],
+  [
+   "Is this how phone coverage works?",
+   "Conceptually, towers' nearest-areas sketch coverage — real coverage follows signal propagation, not pure distance. The map is the intuition, not the engineering."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The seed list: the "
+  },
+  {
+   "t": "Store Locator Map Builder",
+   "l": "/tools/store-locator-map-builder"
+  },
+  {
+   "t": "; road truth: the "
+  },
+  {
+   "t": "Drive Time Map",
+   "l": "/tools/drive-time-map"
+  },
+  {
+   "t": "; radius view: "
+  },
+  {
+   "t": "Map Radius",
+   "l": "/tools/map-radius"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "advanced-map-embed-generator",
   "blank-map",

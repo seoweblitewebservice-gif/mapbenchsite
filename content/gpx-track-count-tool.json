@@ -8,17 +8,173 @@
   "gpx track count tool tool",
   "how to calculate gpx track count tool"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Track Count Tool: How Many Tracks?",
+ "description": "Count the track elements in a GPX file with the GPX Track Count Tool — multi-day and multi-activity files audited locally. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a file exported from a week-long tour often holds 7 tracks — one per day — and this counter is how you confirm the export kept every day before you archive the originals.",
+ "quick_answer": "The GPX Track Count Tool counts the <trk> elements in a GPX file — each track being one recorded activity or one day of a multi-day export. Drop the file and read the track count locally, so multi-activity files can be audited before they are split, merged or archived.",
+ "steps_intro": "Tracks are the file's chapters. Count the chapters:",
+ "use_cases": [
+  {
+   "title": "Auditing multi-day exports",
+   "body": [
+    {
+     "t": "Touring exports bundle a track per day. Counting tracks verifies the bundle is complete before the device memory is wiped — and the "
+    },
+    {
+     "t": "GPX Merger",
+     "l": "/tools/gpx-merger"
+    },
+    {
+     "t": " is the tool that built such bundles."
+    }
+   ]
+  },
+  {
+   "title": "Splitting decisions",
+   "body": [
+    {
+     "t": "A 12-track file is a split candidate; a 1-track file is not. The count decides whether splitting tools are even needed."
+    }
+   ]
+  },
+  {
+   "title": "Platform import checks",
+   "body": [
+    {
+     "t": "Some platforms import only the first track of a file. Knowing a file holds 4 tracks explains the 'missing' rides before support tickets do."
+    }
+   ]
+  },
+  {
+   "title": "Archive bookkeeping",
+   "body": [
+    {
+     "t": "Cataloguing a GPX library by tracks-per-file separates day trips from expeditions at a glance — totals across families come from the "
+    },
+    {
+     "t": "GPX Total Point Counter",
+     "l": "/tools/gpx-total-point-counter"
+    },
+    {
+     "t": "."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · One activity, many segments, still one track",
+   "body": [
+    {
+     "t": "A runner pauses twice at water stops: the file holds 1 <trk> with 3 <trkseg> elements. Segments record pauses; tracks record activities. This counter counts activities — 1 — and the example is why users think their file 'lost' tracks it never had."
+    }
+   ]
+  },
+  {
+   "label": "Example · The merged expedition file",
+   "body": [
+    {
+     "t": "Five days merged for a trip report: 5 tracks, 11 segments, 9,400 trackpoints. Track count 5 matches the itinerary; segment count 11 matches the pause history. Both numbers are true, about different things."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Track, segment, point — the hierarchy",
+  "intro": "GPX nests three levels; confusing them is the source of most count surprises.",
+  "columns": [
+   "Level",
+   "Element",
+   "Means"
+  ],
+  "rows": [
+   [
+    "Track",
+    "<trk>",
+    "One activity or day"
+   ],
+   [
+    "Segment",
+    "<trkseg>",
+    "One unbroken recording run inside a track"
+   ],
+   [
+    "Point",
+    "<trkpt>",
+    "One recorded position with time"
+   ],
+   [
+    "Route (separate)",
+    "<rte>",
+    "A plan, not a recording — never counted as a track"
+   ]
+  ],
+  "note": "Routes are not tracks and are never tallied here. A file can hold many routes and zero tracks, or the reverse."
+ },
+ "faq": [
+  [
+   "Does it count segments too?",
+   "The headline number is tracks. Segments matter for pause analysis, and the distinction is explained in the table on this page — most 'missing track' puzzles are segment-versus-track confusion."
+  ],
+  [
+   "Can a file have zero tracks?",
+   "Yes — a waypoints-only or route-only GPX is valid and reports zero tracks. That is information, not an error."
+  ],
+  [
+   "My app exported one track per day. Is that normal?",
+   "Very — multi-activity devices and tour planners export exactly that way. The count confirms each day survived the export."
+  ],
+  [
+   "Tracks with no points?",
+   "An empty <trk> shell occasionally survives sloppy exports. It still counts as a track element — structural counting is literal."
+  ],
+  [
+   "What if the file is actually a TCX or FIT?",
+   "Those are different formats (FIT is binary) and will not parse as GPX. Convert at the source app first."
+  ],
+  [
+   "Named tracks?",
+   "Track <name> elements (often the activity title or date) are how you identify which track is which after counting — the viewer displays them on the map."
+  ],
+  [
+   "Count before splitting — why?",
+   "Because a split you cannot verify is a loss you cannot see. Count, split, recount the pieces: the sums must agree."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "All points: the "
+  },
+  {
+   "t": "GPX Total Point Counter",
+   "l": "/tools/gpx-total-point-counter"
+  },
+  {
+   "t": "; combine files: the "
+  },
+  {
+   "t": "GPX Merger",
+   "l": "/tools/gpx-merger"
+  },
+  {
+   "t": "; see them: the "
+  },
+  {
+   "t": "GPX Viewer",
+   "l": "/tools/gpx-viewer"
+  },
+  {
+   "t": "; route family: the "
+  },
+  {
+   "t": "GPX Route Count Tool",
+   "l": "/tools/gpx-route-count-tool"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

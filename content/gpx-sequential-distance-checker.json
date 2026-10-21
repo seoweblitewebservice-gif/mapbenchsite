@@ -8,17 +8,150 @@
   "gpx sequential distance checker tool",
   "how to calculate gpx sequential distance checker"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Sequential Distance Checker: Running Totals",
+ "description": "Compute cumulative distance through a GPX file's points in order with the GPX Sequential Distance Checker — distance at every point. Free, local.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, the worked park loop's running totals read 0, 0.66, 1.41 and 2.06 kilometres at its four points — so the bench at the third point is 1.41 km in, not 'somewhere in the middle'.",
+ "quick_answer": "The GPX Sequential Distance Checker walks a GPX file's points in document order and computes the cumulative distance at each one — the running total from the start. Load the file locally and read distance-at-point values — where the 5 km mark falls and how far in the viewpoint is.",
+ "steps_intro": "Not just how far — how far along:",
+ "use_cases": [
+  {
+   "title": "Locating kilometre marks",
+   "body": [
+    {
+     "t": "Race marshals, water stations and photo points are placed by distance-along. The running total finds the coordinate nearest any target distance — splits knowledge the "
+    },
+    {
+     "t": "Route Stats",
+     "l": "/tools/gpx-route-stats"
+    },
+    {
+     "t": " total cannot give."
+    }
+   ]
+  },
+  {
+   "title": "Checking device splits",
+   "body": [
+    {
+     "t": "Your watch claims the 5 km split at a certain corner. The cumulative table verifies or indicts the claim point by point."
+    }
+   ]
+  },
+  {
+   "title": "Auditing a track's story",
+   "body": [
+    {
+     "t": "A suspicious jump in the running total (0.4 km in one step) exposes a recording gap or a teleporting fix at an exact point in the sequence."
+    }
+   ]
+  },
+  {
+   "title": "Planning segment efforts",
+   "body": [
+    {
+     "t": "Coaches carve routes into segments by distance. The cumulative column is the carving knife."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The running total, built",
+   "body": [
+    {
+     "t": "Points A→B→C→D with hops 0.656, 0.749, 0.656 km give cumulative 0, 0.656, 1.405, 2.062 km. Each row is the previous row plus one hop — trivial arithmetic whose value is entirely in having every row, not just the last."
+    }
+   ]
+  },
+  {
+   "label": "Example · The gap signature",
+   "body": [
+    {
+     "t": "Cumulative totals that leap (say 8.2 → 11.9 km in one step across a tunnel) mark where recording slept. The leap is data: it tells you the file interpolated nothing and the device saw nothing for 3.7 km of road."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Cumulative versus its neighbours",
+  "intro": "Three distance views of the same file.",
+  "columns": [
+   "View",
+   "Question it answers"
+  ],
+  "rows": [
+   [
+    "Total distance",
+    "How long is the whole route? (Route Stats)"
+   ],
+   [
+    "Cumulative (this tool)",
+    "How far along is each point?"
+   ],
+   [
+    "Per-segment hops",
+    "How long is each step? (the max-speed tool's raw material)"
+   ],
+   [
+    "Straight-line start-to-point",
+    "How far as the crow flies? — a different, shorter lie"
+   ]
+  ],
+  "note": "Cumulative distance follows the recorded path in document order — waypoints and later segments enter in the file's own sequence, which is why 'document order' is in this tool's definition."
+ },
+ "faq": [
+  [
+   "Document order — why does it matter?",
+   "GPX files can hold points in any stored sequence; cumulative distance trusts the file's order as the journey's order. A shuffled file yields shuffled totals — garbage order in, gospel-looking numbers out, so check plausibility."
+  ],
+  [
+   "Segments and gaps?",
+   "Within a segment, hops accumulate normally. Across a recording gap, the hop from the last point before to the first after is counted as recorded geometry — or flagged by its size, as the gap example shows."
+  ],
+  [
+   "Multiple tracks?",
+   "The checker follows the file's sequence through its elements. For per-track totals, split the file or read each track's rows in its own block."
+  ],
+  [
+   "Which distance formula?",
+   "Great-circle hops between consecutive points (haversine on the WGS84 sphere), the same engine as the route-stats sum — intermediate rows and total can never disagree."
+  ],
+  [
+   "Can I find the point nearest 10 km?",
+   "Yes — scan the cumulative column for the crossing row; the point beside it is the 10 km mark to within one hop's precision."
+  ],
+  [
+   "Elevation-aware (slope) totals?",
+   "Horizontal distance is the convention; slope distance would inflate totals by the terrain's steepness and matches nobody's signage."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The total: "
+  },
+  {
+   "t": "GPX Route Stats",
+   "l": "/tools/gpx-route-stats"
+  },
+  {
+   "t": "; export points: the "
+  },
+  {
+   "t": "GPX to CSV Converter",
+   "l": "/tools/gpx-to-csv-converter"
+  },
+  {
+   "t": "; endpoints: "
+  },
+  {
+   "t": "GPX Start and End Coordinates",
+   "l": "/tools/gpx-start-end-coordinates"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

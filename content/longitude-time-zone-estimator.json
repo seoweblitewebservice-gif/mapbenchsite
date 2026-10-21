@@ -8,17 +8,183 @@
   "longitude time zone estimator tool",
   "how to use longitude time zone estimator"
  ],
- "title": null,
- "description": null,
+ "title": "Longitude Time Zone Estimator: Solar Time by °",
+ "description": "Use the Longitude Time Zone Estimator to predict a place's time zone from longitude alone — and see where politics overrules the Sun. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, New York's longitude of 74.0°W divides by 15 to give UTC−5 almost exactly — while Mumbai's 72.9°E suggests UTC+5, and India actually keeps UTC+5:30.",
+ "quick_answer": "The Longitude Time Zone Estimator predicts a time zone from longitude alone, using the rule that Earth turns 15 degrees per hour. Enter a longitude or a place and read the solar estimate, then see how far real political time zones bend away from it.",
+ "steps_intro": "Fifteen degrees per hour is the rule — reality is the exceptions:",
+ "use_cases": [
+  {
+   "title": "Estimating time somewhere obscure",
+   "body": [
+    {
+     "t": "A ship's position, a remote island, a coordinate with no label — longitude alone gives a working time estimate before any database is consulted. For the official answer use the "
+    },
+    {
+     "t": "Timezone Converter",
+     "l": "/tools/timezone-converter"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Understanding why zones zigzag",
+   "body": [
+    {
+     "t": "Spain keeps Central European Time despite sitting on Greenwich longitudes — an estimator makes the political offset visible. Comparing estimate with reality is a civics lesson in disguise."
+    }
+   ]
+  },
+  {
+   "title": "Solar time and sundial thinking",
+   "body": [
+    {
+     "t": "Every degree of longitude is 4 minutes of solar time. The estimator converts a place's longitude into its mean solar offset — what a perfect sundial culture would keep."
+    }
+   ]
+  },
+  {
+   "title": "Checking data and APIs",
+   "body": [
+    {
+     "t": "If a service returns UTC+9 for a point at 60°E, something is wrong. The estimator is the five-second plausibility check behind the "
+    },
+    {
+     "t": "UTC Offset by Coordinates",
+     "l": "/tools/utc-offset-by-coordinates"
+    },
+    {
+     "t": " tool."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Kathmandu's quarter hour",
+   "body": [
+    {
+     "t": "Kathmandu sits at 85.32°E. Divided by 15 that is +5.69 hours — and Nepal actually keeps UTC+5:45, the closest quarter-hour to its solar estimate. The odd offset is astronomy winning, for once."
+    }
+   ]
+  },
+  {
+   "label": "Example · China, one zone for five",
+   "body": [
+    {
+     "t": "China spans about 73°E to 135°E — five solar hours — yet keeps a single UTC+8. In Kashgar the clock says noon when the Sun says it is barely 9 a.m. The estimator shows the gap politics created."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Estimate versus reality",
+  "intro": "Longitude ÷ 15, rounded — then the real zone, and the size of the political bend.",
+  "columns": [
+   "Place",
+   "Longitude",
+   "Solar estimate",
+   "Actual zone"
+  ],
+  "rows": [
+   [
+    "New York, USA",
+    "73.99°W",
+    "UTC−5 (est. −4.93)",
+    "UTC−5 (EST) — a near-perfect match"
+   ],
+   [
+    "Berlin, Germany",
+    "13.41°E",
+    "UTC+1 (est. +0.89)",
+    "UTC+1 (CET) — matches"
+   ],
+   [
+    "Mumbai, India",
+    "72.88°E",
+    "UTC+5 (est. +4.86)",
+    "UTC+5:30 — India keeps the half hour"
+   ],
+   [
+    "Kathmandu, Nepal",
+    "85.32°E",
+    "UTC+6 (est. +5.69)",
+    "UTC+5:45 — closest quarter-hour wins"
+   ],
+   [
+    "Perth, Australia",
+    "115.86°E",
+    "UTC+8 (est. +7.72)",
+    "UTC+8 — matches"
+   ],
+   [
+    "Madrid, Spain",
+    "3.70°W",
+    "UTC+0 (est. −0.25)",
+    "UTC+1 — politics bends it an hour east"
+   ]
+  ],
+  "note": "The estimate is mean solar time rounded to the nearest hour. Real zones answer to history, trade and national unity — treat the difference between the two columns as the story, not an error."
+ },
+ "faq": [
+  [
+   "How does the estimate work?",
+   "Earth rotates 360° in 24 hours — 15° per hour, 1° per 4 minutes. Dividing longitude by 15 gives the solar offset from UTC; rounding gives the natural zone. Everything after that is politics."
+  ],
+  [
+   "Why do some countries ignore their estimate?",
+   "National unity (China's single zone), trade alignment (Spain on CET), and history all bend zones. The estimate shows the Sun's answer; the map of real zones shows governments'."
+  ],
+  [
+   "What about half-hour and quarter-hour zones?",
+   "India (+5:30), Iran (+3:30), Newfoundland (−3:30) and Nepal (+5:45) keep fractional offsets — usually because the country's population centres sit between whole-hour meridians, exactly as their estimates suggest."
+  ],
+  [
+   "Does the estimator handle daylight saving?",
+   "No — and that is deliberate. It estimates the standard solar-based offset. Daylight saving is a seasonal clock change layered on top, covered by the DST tools elsewhere on this site."
+  ],
+  [
+   "How accurate is it for islands and ships?",
+   "At sea, the estimate is close to what mariners historically used — nautical time zones really do follow the 15° rule in 15° bands across the oceans, changing at boundaries the ship chooses."
+  ],
+  [
+   "What is the biggest bend on Earth?",
+   "China is the famous one: the far west runs about three hours ahead of its solar estimate. Kiribati's date-line bulge bends the calendar itself — see the International Date Line page."
+  ],
+  [
+   "Can I estimate from coordinates I already have?",
+   "Yes — only the longitude is needed. Latitude plays no part in time of day, which surprises people until they picture the planet spinning."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Get the official offset for a point with "
+  },
+  {
+   "t": "UTC Offset by Coordinates",
+   "l": "/tools/utc-offset-by-coordinates"
+  },
+  {
+   "t": ", convert between real zones with the "
+  },
+  {
+   "t": "Timezone Converter",
+   "l": "/tools/timezone-converter"
+  },
+  {
+   "t": ", or explore the calendar boundary in the "
+  },
+  {
+   "t": "International Date Line",
+   "l": "/tools/international-date-line"
+  },
+  {
+   "t": " tool."
+  }
+ ],
  "more_tools": [
   "distance-from-equator-calculator",
   "distance-from-prime-meridian-calculator",

@@ -6,17 +6,171 @@
   "well known text",
   "wkt to geojson"
  ],
- "title": null,
- "description": null,
+ "title": "WKT / GeoJSON Helper: Two Text Geographies",
+ "description": "Work between WKT and GeoJSON with the WKT / GeoJSON Helper — inspect either format on the map and understand how they correspond. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, the WKT POINT (-73.9855 40.758) and the GeoJSON {\"type\": \"Point\", \"coordinates\": [-73.9855, 40.758]} are the same Times Square in two dialects — this helper is where the translation gets inspected.",
+ "quick_answer": "The WKT / GeoJSON Helper works between the two text formats of modern geography — Well-Known Text and GeoJSON — letting you paste spatial data, inspect it on the map and see how the formats correspond. Both are read locally in your browser; nothing is uploaded.",
+ "steps_intro": "Two dialects, one geography — learn the correspondence by looking:",
+ "use_cases": [
+  {
+   "title": "Moving between PostGIS and the web",
+   "body": [
+    {
+     "t": "Databases speak WKT (ST_AsText), APIs speak GeoJSON. The helper is the phrasebook on the border — validate the WKT side with the "
+    },
+    {
+     "t": "WKT Validator",
+     "l": "/tools/wkt-validator"
+    },
+    {
+     "t": " when the database's output smells wrong."
+    }
+   ]
+  },
+  {
+   "title": "Debugging a conversion",
+   "body": [
+    {
+     "t": "A ring that renders inside-out or a point in the sea: paste both versions and compare geometry against the map until the guilty transformation confesses."
+    }
+   ]
+  },
+  {
+   "title": "Learning both formats at once",
+   "body": [
+    {
+     "t": "Students meet WKT's parentheses and GeoJSON's nested arrays side by side — the correspondence (rings, members, collections) clicks in one sitting."
+    }
+   ]
+  },
+  {
+   "title": "API documentation examples",
+   "body": [
+    {
+     "t": "Docs need the same geometry in both formats; generate one, translate, verify on the map — three steps, no hand-typed coordinates."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The ring-orientation difference",
+   "body": [
+    {
+     "t": "GeoJSON (RFC 7946) recommends the right-hand rule — exterior rings counterclockwise in lon/lat space; WKT (as most databases write it) does not enforce orientation. A polygon can be valid in both yet wound oppositely — the map looks identical, the spec compliance differs, and this is the difference nobody warns you about."
+    }
+   ]
+  },
+  {
+   "label": "Example · Empties and nulls",
+   "body": [
+    {
+     "t": "WKT has POINT EMPTY; GeoJSON has \"coordinates\": [] or a null geometry. Translating emptiness is a decision, not a default — the helper surfaces empty members instead of silently dropping them."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Format correspondence",
+  "intro": "The same geometry, two grammars.",
+  "columns": [
+   "Concept",
+   "WKT",
+   "GeoJSON"
+  ],
+  "rows": [
+   [
+    "Point",
+    "POINT (-73.9855 40.758)",
+    "{\"type\":\"Point\",\"coordinates\":[-73.9855,40.758]}"
+   ],
+   [
+    "Polygon",
+    "POLYGON ((ring…), (hole…))",
+    "coordinates: [ [ring], [hole] ]"
+   ],
+   [
+    "Multi-part",
+    "MULTIPOLYGON / GEOMETRYCOLLECTION",
+    "MultiPolygon / GeometryCollection"
+   ],
+   [
+    "Properties",
+    "None — geometry only",
+    "Feature wraps geometry + properties"
+   ],
+   [
+    "Axis order",
+    "x y (lon lat)",
+    "[lon, lat] — both agree, mercifully"
+   ]
+  ],
+  "note": "Both formats are longitude-first. The agreement ends most arguments; the differences (properties, empties, orientation customs) live in the table above."
+ },
+ "faq": [
+  [
+   "Does the helper convert automatically?",
+   "It lets you inspect and work between the formats on the map — paste one form and see the geometry, with the corresponding form presented for copying. The map is the referee: if both forms draw the same shape, the correspondence is right."
+  ],
+  [
+   "Precision loss in conversion?",
+   "Numbers carry as written; decimal trimming is a deliberate act (and a data-quality decision), never a conversion side-effect here."
+  ],
+  [
+   "Features and properties?",
+   "GeoJSON Features carry properties; WKT has no property concept. Converting WKT→GeoJSON yields bare geometry (or a Feature with empty properties) — nothing is invented to fill the gap."
+  ],
+  [
+   "Z coordinates?",
+   "Both carry a third ordinate (WKT marks it with Z; GeoJSON just adds the number). The helper preserves the third value through inspection."
+  ],
+  [
+   "CRS declarations?",
+   "GeoJSON (RFC 7946) is WGS84 lon/lat by definition — no CRS member. WKT may travel with an SRID in EWKT form. Mixing a projected WKT into a GeoJSON viewer is the classic silent error; the map exposes it instantly (your city lands at metres-scale coordinates near 0,0)."
+  ],
+  [
+   "Invalid input handling?",
+   "Unparseable text is reported as such — the WKT Validator diagnoses WKT syntax specifically; GeoJSON has its own validator in this family."
+  ],
+  [
+   "Which format should I store?",
+   "Store where it will be queried: spatial databases index WKT/WKB natively; web pipelines flow GeoJSON. The helper's existence is the argument for not marrying one."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Validate WKT: the "
+  },
+  {
+   "t": "WKT Validator",
+   "l": "/tools/wkt-validator"
+  },
+  {
+   "t": "; WKT extent: the "
+  },
+  {
+   "t": "WKT Bounding Box Calculator",
+   "l": "/tools/wkt-bounding-box"
+  },
+  {
+   "t": "; GeoJSON side: the "
+  },
+  {
+   "t": "GeoJSON Validator",
+   "l": "/tools/geojson-validator"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "GeoJSON Formatter",
+   "l": "/tools/geojson-formatter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

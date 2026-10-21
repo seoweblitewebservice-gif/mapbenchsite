@@ -8,17 +8,179 @@
   "gpx waypoint count tool tool",
   "how to calculate gpx waypoint count tool"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Waypoint Count Tool: Standalone Waypoints",
+ "description": "Count standalone waypoint elements in a GPX file with the GPX Waypoint Count Tool — saved places tallied locally, trackpoints excluded. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a geocacher's file might hold 250 standalone waypoints and zero tracks — a count this tool reports exactly, where track-focused tools would misleadingly say the file is empty.",
+ "quick_answer": "The GPX Waypoint Count Tool counts the standalone <wpt> elements in a GPX file — the saved places, trailheads and caches stored outside any track or route. Drop the file and read the waypoint count locally; trackpoints and route points are counted by their own tools, never mixed in here.",
+ "steps_intro": "Waypoints are the file's saved places. Count just those:",
+ "use_cases": [
+  {
+   "title": "Geocaching file audits",
+   "body": [
+    {
+     "t": "Pocket queries arrive as waypoint files — hundreds of <wpt> entries with names and symbols. Count them before loading a device with a known waypoint limit."
+    }
+   ]
+  },
+  {
+   "title": "Checking waypoint exports from a GPS",
+   "body": [
+    {
+     "t": "Years of saved places export as one wpt list. The count verifies the export against the device library before a reset."
+    }
+   ]
+  },
+  {
+   "title": "Cleaning bloated files",
+   "body": [
+    {
+     "t": "A track file carrying 300 stale waypoints is a trim candidate — count first, then remove deliberately with the "
+    },
+    {
+     "t": "GPX Remove Waypoints Tool",
+     "l": "/tools/gpx-remove-waypoints-tool"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Marine and aviation point lists",
+   "body": [
+    {
+     "t": "Harbour marks, anchorages and airfield waypoints circulate as wpt files; the count is the manifest check before import."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Waypoints are not trackpoints",
+   "body": [
+    {
+     "t": "A recorded hike: 1,850 trkpt, 0 wpt → this tool reports 0, correctly. The file is full of points and empty of waypoints. Users who expect 1,850 here are meeting the GPX family distinction — the "
+    },
+    {
+     "t": "GPX Total Point Counter",
+     "l": "/tools/gpx-total-point-counter"
+    },
+    {
+     "t": " shows all three families at once."
+    }
+   ]
+  },
+  {
+   "label": "Example · The named list",
+   "body": [
+    {
+     "t": "A trail association's file: 46 wpt named 'Trailhead', 'Ford', 'Shelter 2'… — the count (46) plus names in the "
+    },
+    {
+     "t": "GPX Viewer",
+     "l": "/tools/gpx-viewer"
+    },
+    {
+     "t": " turn an anonymous file into a checked inventory."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Waypoint anatomy",
+  "intro": "What a <wpt> can carry beyond its coordinates.",
+  "columns": [
+   "Child element",
+   "Carries"
+  ],
+  "rows": [
+   [
+    "<name>",
+    "The short label shown on devices and maps"
+   ],
+   [
+    "<desc> / <cmt>",
+    "Longer description and comment text"
+   ],
+   [
+    "<sym>",
+    "The icon symbol (e.g. Flag, Campground, Parking)"
+   ],
+   [
+    "<type>",
+    "A category string some ecosystems use"
+   ],
+   [
+    "<ele>",
+    "The waypoint's elevation, where recorded"
+   ]
+  ],
+  "note": "Only top-level <wpt> elements count. Points inside tracks (<trkpt>) and routes (<rtept>) are positions in a sequence — related, but a different element with a different job."
+ },
+ "faq": [
+  [
+   "Why is my count zero for a full recording?",
+   "Because recordings store trackpoints, not waypoints. Zero here plus thousands in the total counter is the normal signature of a device-recorded file."
+  ],
+  [
+   "Do route points count as waypoints?",
+   "No — <rtept> belongs to a route's sequence. This tool counts only standalone <wpt> elements, the file's free-standing saved places."
+  ],
+  [
+   "Geocache files with huge waypoint counts?",
+   "Pocket queries commonly hold 500–1,000 waypoints plus child points (parking, stages) as additional wpt entries — the count reflects the file, not the cache count."
+  ],
+  [
+   "What limits do devices have?",
+   "Varies by model — handhelds often cap waypoints in the low thousands. Counting before a bulk load prevents the silent truncation devices perform at the limit."
+  ],
+  [
+   "Can I extract the waypoints to a list?",
+   "The viewer shows them; extraction to CSV rides the GPX to CSV Converter, which flattens points including wpt entries."
+  ],
+  [
+   "Child waypoints of geocaches?",
+   "They are ordinary <wpt> elements with conventional name prefixes — counted like all others, which is why cache files count higher than cache numbers."
+  ],
+  [
+   "A waypoint at 0,0?",
+   "It counts — and it usually marks a data-entry accident (the Gulf of Guinea collects default coordinates from every ecosystem)."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Every point: the "
+  },
+  {
+   "t": "GPX Total Point Counter",
+   "l": "/tools/gpx-total-point-counter"
+  },
+  {
+   "t": "; remove them: the "
+  },
+  {
+   "t": "GPX Remove Waypoints Tool",
+   "l": "/tools/gpx-remove-waypoints-tool"
+  },
+  {
+   "t": "; see them: the "
+  },
+  {
+   "t": "GPX Viewer",
+   "l": "/tools/gpx-viewer"
+  },
+  {
+   "t": "; convert: the "
+  },
+  {
+   "t": "GPX to CSV Converter",
+   "l": "/tools/gpx-to-csv-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

@@ -6,17 +6,168 @@
   "FEMA flood",
   "flood risk map"
  ],
- "title": null,
- "description": null,
+ "title": "Flood Zone Check: FEMA Hazard Context",
+ "description": "Check a location's flood hazard context with the Flood Zone Check — FEMA flood zone designations explained in plain language. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a home in Zone AE sits in the 1%-annual-chance floodplain — which sounds rare until you compound it: a 26% chance of at least one flood over a 30-year mortgage.",
+ "quick_answer": "The Flood Zone Check looks up the flood hazard context for a point from FEMA flood map data — the zone designation that insurers, lenders and buyers ask about. Enter the location and read its zone with a plain explanation of what the designation means and what it does not.",
+ "steps_intro": "Awareness first — the zone, in plain language:",
+ "use_cases": [
+  {
+   "title": "Home buying due diligence",
+   "body": [
+    {
+     "t": "A zone result starts the right conversations — with the seller, the insurer and the lender — before contracts. It never replaces the official determination those parties will run themselves."
+    }
+   ]
+  },
+  {
+   "title": "Insurance conversations",
+   "body": [
+    {
+     "t": "Lenders require flood insurance inside Special Flood Hazard Areas (the A and V zones). Knowing the zone before the quote turns a surprise into a line item."
+    }
+   ]
+  },
+  {
+   "title": "Understanding a letter you received",
+   "body": [
+    {
+     "t": "Lenders and insurers write in zone codes (AE, X, VE). This page translates the code on your letter into ground truth about the land."
+    }
+   ]
+  },
+  {
+   "title": "Site screening",
+   "body": [
+    {
+     "t": "Builders and buyers screening several parcels can rank flood context early — formal study stays with engineers, as the "
+    },
+    {
+     "t": "Elevation Finder",
+     "l": "/tools/elevation-finder"
+    },
+    {
+     "t": "'s terrain view complements but never replaces."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 26% fact",
+   "body": [
+    {
+     "t": "Zone AE means a 1% chance of flooding in any year — the so-called 100-year flood. Over a 30-year mortgage that compounds to about a 26% chance of at least one flood (1 − 0.99³⁰). '100-year' describes a probability, not a schedule."
+    }
+   ]
+  },
+  {
+   "label": "Example · Zone X's two faces",
+   "body": [
+    {
+     "t": "Zone X (shaded) is the 0.2%-annual-chance area — a 5.8% chance over 30 years, outside the mandatory-purchase zone but not outside risk. Unshaded X sits outside even that. The letter is the same; the shading is the story."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Common FEMA zone designations",
+  "intro": "The codes that appear on maps, letters and this page's results.",
+  "columns": [
+   "Zone",
+   "Meaning",
+   "Flood insurance purchase"
+  ],
+  "rows": [
+   [
+    "AE",
+    "1% annual chance, base flood elevations determined",
+    "Required with federal-backed mortgage"
+   ],
+   [
+    "VE",
+    "1% annual chance plus storm-surge velocity hazard (coastal)",
+    "Required"
+   ],
+   [
+    "A",
+    "1% annual chance, no detailed base elevations",
+    "Required"
+   ],
+   [
+    "X (shaded)",
+    "0.2% annual chance, or shallow 1% flooding",
+    "Not required — risk remains"
+   ],
+   [
+    "X (unshaded)",
+    "Outside the 0.2% annual chance area",
+    "Not required"
+   ]
+  ],
+  "note": "Zones come from FEMA's Flood Insurance Rate Maps via the National Flood Hazard Layer. Maps get revised; a property's official status is decided by the current effective FIRM and any Letters of Map Change — not by any website, including this one."
+ },
+ "faq": [
+  [
+   "Is a zone the whole risk story?",
+   "No — zones describe riverine and coastal flooding from the mapped study. Intense local rain, drainage failures and new development flood 'safe' zones regularly; a large share of US flood claims historically come from outside the high-risk zones."
+  ],
+  [
+   "What is a base flood elevation?",
+   "The computed height floodwater is expected to reach in the 1% annual event (BFE). Structures' lowest floors are compared against it — the number elevation certificates exist to record."
+  ],
+  [
+   "Can a zone change?",
+   "Yes — restudies, new development and map revisions move boundaries, and a property can be mapped in or out over the years (with formal Letters of Map Change for individual lots). Always argue from the current effective map."
+  ],
+  [
+   "My lender says insurance is required but my check says Zone X.",
+   "The lender's determination (run through a certified flood determination company against the effective FIRM) governs your loan. Treat any mismatch as a prompt to request the determination's map panel details, not as a verdict either way."
+  ],
+  [
+   "Does elevation alone settle it?",
+   "A high house in a low zone can still flood at the road and the septic field; a low house can be protected by local grading. Elevation informs risk — the Elevation Finder supplies it — but the zone plus the structure's own survey is the formal answer."
+  ],
+  [
+   "Renters?",
+   "Zones matter to renters too: contents coverage is separate from the landlord's policy, and the zone tells you what your belongings are sitting in."
+  ],
+  [
+   "What about outside the US?",
+   "FEMA's system is American. Other countries run their own hazard maps (the UK's Environment Agency flood maps, for instance) with different categories — this page speaks FEMA's language only."
+  ],
+  [
+   "How old is the data?",
+   "The National Flood Hazard Layer is updated as maps become effective — some counties' studies are recent, others decades old. The check reports the zone of record; the map's effective date is part of an official determination."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Ground height: the "
+  },
+  {
+   "t": "Elevation Finder",
+   "l": "/tools/elevation-finder"
+  },
+  {
+   "t": "; your point now: "
+  },
+  {
+   "t": "My Elevation",
+   "l": "/tools/my-elevation"
+  },
+  {
+   "t": "; terrain shape: the "
+  },
+  {
+   "t": "Elevation Profile",
+   "l": "/tools/elevation-profile"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boiling-point-by-elevation-calculator",
   "central-angle-from-distance-calculator",

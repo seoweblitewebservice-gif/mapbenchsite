@@ -6,17 +6,159 @@
   "qr coordinates",
   "meetup qr map"
  ],
- "title": null,
- "description": null,
+ "title": "QR Location Helper: Codes That Open Maps",
+ "description": "Format coordinates or Plus Codes for QR generation with the QR Location Helper — geo URIs and map links any QR app can encode. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, the text 'geo:40.7580,-73.9855' is all a QR code needs to open Times Square in a phone's map app — this helper formats that payload correctly, every time.",
+ "quick_answer": "The QR Location Helper formats latitude/longitude or Plus Codes into the payloads QR codes carry — geo: URIs and map links that open the place when scanned. Enter the location and copy the correctly formatted text into any QR generator: signs, invitations and field markers that phones understand instantly.",
+ "steps_intro": "A QR code is only as good as its payload. Format it right:",
+ "use_cases": [
+  {
+   "title": "Trailhead and venue signs",
+   "body": [
+    {
+     "t": "A printed code at the car park opens the exact viewpoint, gate or bothy in every visitor's phone — the "
+    },
+    {
+     "t": "Plus Code Finder",
+     "l": "/tools/plus-code-finder"
+    },
+    {
+     "t": " supplies codes for places with no address to print."
+    }
+   ]
+  },
+  {
+   "title": "Event invitations",
+   "body": [
+    {
+     "t": "Weddings, site visits, open days: the invitation's QR opens the venue pin, not the postcode's approximate neighbourhood."
+    }
+   ]
+  },
+  {
+   "title": "Field and survey markers",
+   "body": [
+    {
+     "t": "Equipment tags and monitoring stations carry codes that open their own locations for the next technician."
+    }
+   ]
+  },
+  {
+   "title": "Real-estate and holiday lets",
+   "body": [
+    {
+     "t": "The key-box, the gate, the exact door — locations prose describes badly and a scanned map nails instantly."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The geo: URI",
+   "body": [
+    {
+     "t": "'geo:40.7580,-73.9855' is the universal payload: Android opens it in maps natively, and as a fallback the helper formats the equivalent https map link that every phone handles."
+    }
+   ]
+  },
+  {
+   "label": "Example · Plus Code payloads",
+   "body": [
+    {
+     "t": "For address-less places, the payload carries the code ('87G8Q257+6Q New York' style in a maps link) — scannable directions to a place with no street to name."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Payload formats compared",
+  "intro": "What to put inside the QR, and where it opens.",
+  "columns": [
+   "Payload",
+   "Shape",
+   "Opens as"
+  ],
+  "rows": [
+   [
+    "geo: URI",
+    "geo:lat,lon",
+    "Native map app (Android-first)"
+   ],
+   [
+    "Maps URL",
+    "https://www.google.com/maps/search/?api=1&query=lat,lon",
+    "Map in any browser or app"
+   ],
+   [
+    "Plus Code in URL",
+    "query=87G8Q257+6Q",
+    "The code's cell, named"
+   ],
+   [
+    "Plain coordinates text",
+    "40.7580, -73.9855",
+    "Just text — the guest must copy it onward"
+   ]
+  ],
+  "note": "The helper formats payloads; the QR image itself is drawn by your QR generator of choice (the page's standing answer to 'QR drawn here?'). Test every printed code with your own phone before the print run."
+ },
+ "faq": [
+  [
+   "Which format should I choose?",
+   "The maps URL is the safest universal payload; the geo: URI is the cleanest on Android. For a mixed audience, print the URL form."
+  ],
+  [
+   "How precise should the coordinates be?",
+   "Five decimals (1.1 m grain) is plenty for a doorway; more decimals make denser QR codes that scan worse in rain and low light."
+  ],
+  [
+   "Dense codes fail outdoors — why?",
+   "Longer payloads mean more modules in the square. Short payloads (short links, codes instead of URLs) print bigger modules that survive weather and cheap cameras."
+  ],
+  [
+   "Can I encode a Plus Code instead?",
+   "Yes — the helper formats code-based payloads for places whose coordinates would be meaningless to read aloud."
+  ],
+  [
+   "Does the code track scanners?",
+   "A plain payload tracks nobody. If your generator wraps links in its own shortener, the tracking is the shortener's — read its terms."
+  ],
+  [
+   "Wedding and event use?",
+   "Pair the QR with the written address anyway — phones die, grandparents persist. The code is the accelerator, not the only road."
+  ],
+  [
+   "What size should I print?",
+   "As a rule, the code's width in centimetres should exceed the scanning distance in metres times ten (10 cm code for a metre's reach) — and always test at the real distance."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Get a code: the "
+  },
+  {
+   "t": "Plus Code Finder",
+   "l": "/tools/plus-code-finder"
+  },
+  {
+   "t": "; get coordinates: the "
+  },
+  {
+   "t": "Latitude and Longitude Finder",
+   "l": "/tools/latitude-longitude-finder"
+  },
+  {
+   "t": "; word codes: the "
+  },
+  {
+   "t": "What3Words-Style Location Helper",
+   "l": "/tools/what3words-converter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "city-from-coordinates",
   "coordinate-bounding-box-generator",

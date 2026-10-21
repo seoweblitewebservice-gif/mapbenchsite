@@ -8,17 +8,154 @@
   "land price calculator",
   "property price per acre"
  ],
- "title": null,
- "description": null,
+ "title": "Land Cost Per Acre Calculator",
+ "description": "Work out price per acre from total price and acreage with the Land Cost Per Acre Calculator — the number land buyers actually negotiate in. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a $250,000 parcel of 5 acres prices at $50,000 per acre — the figure that lets you compare it fairly with the 40-acre listing down the road at $8,500 per acre.",
+ "quick_answer": "The Land Cost Per Acre Calculator divides a parcel's total price by its acreage to give the cost per acre — the unit price land is compared, listed and negotiated in. Enter the total price and the acres and read the per-acre figure, with per-hectare equivalents alongside.",
+ "steps_intro": "Total prices hide. Per-acre prices confess:",
+ "use_cases": [
+  {
+   "title": "Comparing listings of different sizes",
+   "body": [
+    {
+     "t": "A $250,000 5-acre lot and a $340,000 40-acre tract: per acre, $50,000 against $8,500. The calculator makes unlike listings comparable in one division. Acreage from a map comes via the "
+    },
+    {
+     "t": "Map Area Calculator",
+     "l": "/tools/map-area-calculator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Negotiating with a unit price",
+   "body": [
+    {
+     "t": "Offers framed per acre survive acreage corrections at survey — if the parcel measures 4.7 acres instead of 5, a per-acre deal reprices itself cleanly."
+    }
+   ]
+  },
+  {
+   "title": "Splitting and valuing parcels",
+   "body": [
+    {
+     "t": "Selling the back 10 acres of a 40-acre holding? The per-acre figure from the whole prices the part — before improvements, road frontage and zoning argue their adjustments."
+    }
+   ]
+  },
+  {
+   "title": "Translating foreign listings",
+   "body": [
+    {
+     "t": "Much of the world prices land per hectare. The calculator's per-hectare line ($50,000 per acre ≈ $123,553 per hectare) keeps the comparison honest across the Atlantic."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Small parcels cost more per acre",
+   "body": [
+    {
+     "t": "The 5-acre parcel at $50,000 per acre versus the 40-acre tract at $8,500: the small-lot premium is real economics — subdivision potential, frontage and a bigger buyer pool — and per-acre pricing is exactly the lens that reveals it."
+    }
+   ]
+  },
+  {
+   "label": "Example · From the total backwards",
+   "body": [
+    {
+     "t": "A seller says '$8,500 an acre' for 40 acres: the calculator's inverse reading is the $340,000 total. Quoting per-acre and thinking in totals, both directions, is the negotiator's fluency."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "One price, three units",
+  "intro": "The $50,000-per-acre example in every dress a listing might wear.",
+  "columns": [
+   "Unit",
+   "Value"
+  ],
+  "rows": [
+   [
+    "Per acre",
+    "$50,000"
+   ],
+   [
+    "Per hectare",
+    "$123,553"
+   ],
+   [
+    "Per square foot",
+    "$1.15"
+   ],
+   [
+    "Per square metre",
+    "$12.36"
+   ]
+  ],
+  "note": "1 acre = 43,560 sq ft = 0.404686 hectares. Per-acre figures exclude buildings and improvements unless the listing says otherwise — land-only comparisons are the honest ones."
+ },
+ "faq": [
+  [
+   "Does location really swing per-acre prices this much?",
+   "Enormously — development land near a growing suburb can exceed $100,000 per acre while remote agricultural land trades under $3,000. The calculator reports the arithmetic; the market supplies the drama."
+  ],
+  [
+   "Should buildings be included in the price?",
+   "For a land comparison, no — a house on the parcel is a separate asset. Listings that bundle them make per-acre figures misleading, which is why agents separate land value when they can."
+  ],
+  [
+   "What if I only know square feet?",
+   "Divide square feet by 43,560 for acres, then proceed — or start from the Land Cost Per Square Foot Calculator and convert up. The two pages are the same coin."
+  ],
+  [
+   "Timber, mineral or water rights?",
+   "They ride with some parcels and not others, and per-acre comparisons silently assume similar rights. A cheap per-acre price with severed mineral rights is a different product, not a bargain."
+  ],
+  [
+   "How do I get acreage for a parcel I am eyeing?",
+   "Measure it: draw the boundary in the Map Area Calculator, or take the surveyed figure from the listing documents — and trust the survey over the drawing when they disagree."
+  ],
+  [
+   "Per-acre for tiny urban lots?",
+   "Urban land trades by the square foot, where the numbers breathe better. This page still computes per-acre honestly — $1.15 per sq ft wearing its $50,000-per-acre dress."
+  ],
+  [
+   "Does it handle part-acre parcels?",
+   "Yes — 0.25 acres is a standard suburban lot. Price ÷ 0.25 is the same division with a smaller denominator and a bigger answer."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "By the foot: the "
+  },
+  {
+   "t": "Land Cost Per Square Foot Calculator",
+   "l": "/tools/land-cost-per-square-foot"
+  },
+  {
+   "t": "; measure the land: the "
+  },
+  {
+   "t": "Map Area Calculator",
+   "l": "/tools/map-area-calculator"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Lot Size Calculator",
+   "l": "/tools/lot-size-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "acres-to-hectares-converter",
   "acres-to-square-feet-converter",

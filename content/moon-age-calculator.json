@@ -8,17 +8,188 @@
   "moon age calculator tool",
   "how to calculate moon age calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Moon Age Calculator: Days Since New Moon",
+ "description": "Find the Moon's age in days since the last new moon for any date with the Moon Age Calculator — the number every phase name hangs on. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, on 22 October 2026 the Moon's age computes to about 11.1 days — a waxing gibbous Moon roughly three days short of full, at about 86% illumination by the same model.",
+ "quick_answer": "The Moon Age Calculator gives the Moon's age in days since the most recent new moon for any date, counted on the mean synodic month of 29.53 days. Enter a date and read the age — the single number from which phase names and lunar calendars derive.",
+ "steps_intro": "Count the days from new — the Moon's whole biography in one figure:",
+ "use_cases": [
+  {
+   "title": "Naming tonight's phase properly",
+   "body": [
+    {
+     "t": "Age bands map to names: about 7.4 days is first quarter, 14.8 full. The "
+    },
+    {
+     "t": "Moon Phase Calculator",
+     "l": "/tools/moon-phase-calculator"
+    },
+    {
+     "t": " turns the age into the full picture for a date."
+    }
+   ]
+  },
+  {
+   "title": "Planning dark nights",
+   "body": [
+    {
+     "t": "Ages near 0 (and near 29.5) mean moonless nights. Backpackers and astronomers plan backward from the age; the "
+    },
+    {
+     "t": "Next New Moon Calculator",
+     "l": "/tools/next-new-moon-calculator"
+    },
+    {
+     "t": " finds the exact next reset."
+    }
+   ]
+  },
+  {
+   "title": "Fishing, tides and tradition checks",
+   "body": [
+    {
+     "t": "Solunar tables and tide lore hang on moon age. Checking the number behind the claim is the sceptic's first move — and sometimes the believer's confirmation."
+    }
+   ]
+  },
+  {
+   "title": "Lunar calendar literacy",
+   "body": [
+    {
+     "t": "Lunar calendars (Hijri, Hebrew, Chinese) count months from the new moon; a date's moon age explains where it falls inside its lunar month."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · An eclipse as a receipt",
+   "body": [
+    {
+     "t": "A solar eclipse can only happen at age ~0 — and the model's age for 12 August 2026 (the Iceland–Spain total eclipse date) computes to 28.7 days, new within about a day. A mean model landing that close to the eclipse is the check working."
+    }
+   ]
+  },
+  {
+   "label": "Example · The quarter marks",
+   "body": [
+    {
+     "t": "The synodic month quarters at 7.38, 14.77 and 22.15 days. An age of 20 days is therefore a waning gibbous, past full and shrinking — the age alone tells the story before any picture loads."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Age bands and their Moons",
+  "intro": "The mean cycle's landmarks — names follow the age.",
+  "columns": [
+   "Moon age",
+   "Phase",
+   "Lit (approx.)"
+  ],
+  "rows": [
+   [
+    "0 days",
+    "New moon",
+    "0%"
+   ],
+   [
+    "≈3.7 days",
+    "Waxing crescent",
+    "≈15%"
+   ],
+   [
+    "≈7.4 days",
+    "First quarter",
+    "50%"
+   ],
+   [
+    "≈11.1 days",
+    "Waxing gibbous",
+    "≈86%"
+   ],
+   [
+    "≈14.8 days",
+    "Full moon",
+    "100%"
+   ],
+   [
+    "≈22.1 days",
+    "Last quarter",
+    "50%"
+   ],
+   [
+    "≈25.8 days",
+    "Waning crescent",
+    "≈15%"
+   ]
+  ],
+  "note": "Ages come from the mean synodic month (29.53059 days) anchored to a known new moon. Real lunations vary between about 29.2 and 29.8 days, so exact event dates can sit some hours off the mean model."
+ },
+ "faq": [
+  [
+   "How exact is the age?",
+   "It is a mean-motion estimate: right to within roughly half a day in most cycles, occasionally more. Almanac-grade ages come from full lunar ephemerides; this page's model is the standard synodic approximation every phase site shares."
+  ],
+  [
+   "Why 29.53 days and not 27.3?",
+   "27.3 days is the sidereal month — one orbit against the stars. Phases follow the synodic month (29.53) because the Earth has moved along its own orbit meanwhile, and the Sun-Moon geometry needs two extra days to repeat."
+  ],
+  [
+   "Can age be fractional and negative?",
+   "Fractional, yes — the age is a continuous count, so 11.1 days is normal output. It never goes negative; the count resets at each new moon, by definition of 'since the most recent'."
+  ],
+  [
+   "Does the age depend on my location?",
+   "The Moon's phase is essentially a whole-Earth fact at a given instant — location changes the view's tilt, not the age. Dates are read in UTC-anchored terms; a date near a boundary can straddle two ages across timezones."
+  ],
+  [
+   "What age is a 'blue moon'?",
+   "A blue moon is a calendar accident — the second full moon inside one calendar month — not an age at all. Its age is the usual ~14.8 days; the calendar, not the Moon, did something odd."
+  ],
+  [
+   "How do I find a birthday Moon?",
+   "Enter the birth date: the age returned is the phase you were born under. Astrologers make much of it; astronomers merely confirm the number."
+  ],
+  [
+   "Age versus illumination — same thing?",
+   "Two views of one geometry: age counts days along the cycle, illumination the lit fraction of the disc, computed by the Moon Illumination Calculator. Age 7.4 and 22.1 days both give 50% lit — waxing and waning halves."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The full dashboard: the "
+  },
+  {
+   "t": "Moon Phase Calculator",
+   "l": "/tools/moon-phase-calculator"
+  },
+  {
+   "t": "; lit fraction: the "
+  },
+  {
+   "t": "Moon Illumination Calculator",
+   "l": "/tools/moon-illumination-calculator"
+  },
+  {
+   "t": "; by date: "
+  },
+  {
+   "t": "Moon Phase by Date",
+   "l": "/tools/moon-phase-by-date"
+  },
+  {
+   "t": "; next reset: the "
+  },
+  {
+   "t": "Next New Moon Calculator",
+   "l": "/tools/next-new-moon-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "golden-hour-calculator",
   "moon-phase-calculator",

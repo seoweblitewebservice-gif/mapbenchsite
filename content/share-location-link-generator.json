@@ -6,17 +6,166 @@
   "google maps coordinate link",
   "openstreetmap link generator"
  ],
- "title": null,
- "description": null,
+ "title": "Share Location Link Generator: Every Map App",
+ "description": "Turn coordinates into Google Maps, OpenStreetMap and Bing links with the Share Location Link Generator — one pair, every provider. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, Times Square's pair 40.7580, −73.9855 becomes three different links — one per provider — that all open on exactly the same crossroads in Manhattan.",
+ "quick_answer": "The Share Location Link Generator turns one latitude/longitude pair into ready-to-send links for Google Maps, OpenStreetMap and Bing Maps. Enter the coordinates once, pick a zoom, and copy the provider link your recipient prefers — the same WGS84 point, dressed in each service's own URL format.",
+ "steps_intro": "One pair of coordinates, every major map service:",
+ "use_cases": [
+  {
+   "title": "Sending a meeting point",
+   "body": [
+    {
+     "t": "A pin beats an address paragraph. Generate the link for the recipient's usual app instead of making them convert — the pair itself comes from the "
+    },
+    {
+     "t": "Latitude and Longitude Finder",
+     "l": "/tools/latitude-longitude-finder"
+    },
+    {
+     "t": " if you only know the place name."
+    }
+   ]
+  },
+  {
+   "title": "Fieldwork and deliveries",
+   "body": [
+    {
+     "t": "Drivers and crews open links, not coordinates. One paste into the group chat replaces a screenshot plus a typed address plus a phone call."
+    }
+   ]
+  },
+  {
+   "title": "Listings and event pages",
+   "body": [
+    {
+     "t": "A 'find us' link per provider covers every visitor's phone defaults — embed the map with the "
+    },
+    {
+     "t": "Shareable Map Link Helper",
+     "l": "/tools/shareable-map-link-helper"
+    },
+    {
+     "t": "'s embed options when a button is not enough."
+    }
+   ]
+  },
+  {
+   "title": "Emergency and assistance",
+   "body": [
+    {
+     "t": "A link opens centred on the exact spot, zoom set close. In a stressful moment nobody should be reading digits aloud."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Same point, three doors",
+   "body": [
+    {
+     "t": "Google's format carries the pair as a query (…/maps?q=40.7580,-73.9855), OpenStreetMap's as marker parameters (mlat/mlon plus a #map= zoom fragment), Bing's as a centre parameter. Different syntax, identical point — the generator knows each dialect so you never hand-type one."
+    }
+   ]
+  },
+  {
+   "label": "Example · Zoom is a courtesy",
+   "body": [
+    {
+     "t": "A link at zoom 17 opens on the building; at zoom 12, on the district. Setting the zoom when you generate the link is choosing how much context your recipient lands in."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What each provider's link carries",
+  "intro": "The three dialects this generator speaks.",
+  "columns": [
+   "Provider",
+   "Link carries",
+   "Opens as"
+  ],
+  "rows": [
+   [
+    "Google Maps",
+    "Query pair (q=lat,lng)",
+    "Pin with directions available"
+   ],
+   [
+    "OpenStreetMap",
+    "Marker lat/lon + #map=zoom",
+    "Marker on the open map"
+   ],
+   [
+    "Bing Maps",
+    "Centre point (cp=lat~lng)",
+    "Centred view"
+   ],
+   [
+    "All three",
+    "Your zoom choice",
+    "The context you intended"
+   ]
+  ],
+  "note": "The coordinates are never altered between providers — the same WGS84 pair is inserted into each URL format (the tool's own first FAQ, and its whole point)."
+ },
+ "faq": [
+  [
+   "Which providers are covered?",
+   "Google Maps, OpenStreetMap and Bing Maps — the three link formats the tool generates cover the overwhelming majority of phones and desktops your recipients will use."
+  ],
+  [
+   "Can I set the zoom in the link?",
+   "Yes — the zoom you choose is written into the formats that support it, so the recipient lands at your intended context level rather than the provider's default."
+  ],
+  [
+   "Do recipients need an account or app?",
+   "No. The links open in a browser; the matching app intercepts them on phones that have it, which is a convenience, not a requirement."
+  ],
+  [
+   "How precise is the shared point?",
+   "Exactly the pair you entered — links share coordinates losslessly. The pair's own accuracy is your source's business; round it deliberately with the precision tools if the point is sensitive."
+  ],
+  [
+   "Can I share my live location this way?",
+   "This generator shares a fixed point you type in. Live, moving location sharing is your messaging app's feature — use that when the point moves."
+  ],
+  [
+   "The link opens the wrong side of the world.",
+   "Check the signs: western longitudes and southern latitudes are negative. A missing minus mirrors the point across the meridian — the classic link bug, visible in the pair before you send."
+  ],
+  [
+   "Shortened links?",
+   "Providers' own share buttons shorten; a generated full link pastes into any shortener. The full form has the virtue of showing its destination — recipients can see the coordinates before tapping."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Embed instead: the "
+  },
+  {
+   "t": "Shareable Map Link Helper",
+   "l": "/tools/shareable-map-link-helper"
+  },
+  {
+   "t": "; get the pair: the "
+  },
+  {
+   "t": "Latitude and Longitude Finder",
+   "l": "/tools/latitude-longitude-finder"
+  },
+  {
+   "t": "; your own point: "
+  },
+  {
+   "t": "Find My Location",
+   "l": "/tools/find-my-location"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "advanced-map-embed-generator",
   "blank-map",

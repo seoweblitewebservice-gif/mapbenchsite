@@ -8,17 +8,150 @@
   "gpx bounding box tool tool",
   "how to calculate gpx bounding box tool"
  ],
- "title": null,
- "description": null,
+ "title": "GPX Bounding Box Tool: Track Extents in Degrees",
+ "description": "Extract the south, west, north and east bounds of a GPX file with the GPX Bounding Box Tool — min/max coordinates from every point. Free, local.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a four-point park loop spanning latitudes 40.7681 to 40.7740 and longitudes −73.9719 to −73.9630 has its box read off the extremes — no map required.",
+ "quick_answer": "The GPX Bounding Box Tool reads every point in a GPX file and reports the south, west, north and east extremes — the smallest axis-aligned box containing the whole recording. Load the file in your browser and read the four numbers that APIs, map fits and spatial queries ask for.",
+ "steps_intro": "Four extremes from every point in the file:",
+ "use_cases": [
+  {
+   "title": "Fitting a map view",
+   "body": [
+    {
+     "t": "A web map needs an extent to frame the track. The box is that extent — feed it to your map library's fitBounds and the track fills the screen."
+    }
+   ]
+  },
+  {
+   "title": "API and tile queries",
+   "body": [
+    {
+     "t": "Elevation, weather and tile services filter by bounding box. Extract yours from the actual recording instead of eyeballing a map — and compare the "
+    },
+    {
+     "t": "Bounding Box Calculator",
+     "l": "/tools/bounding-box-calculator"
+    },
+    {
+     "t": " for centre-plus-radius boxes."
+    }
+   ]
+  },
+  {
+   "title": "Dataset cataloguing",
+   "body": [
+    {
+     "t": "A folder of GPX files becomes searchable by region once each file's box is catalogued — the metadata a track library is built on."
+    }
+   ]
+  },
+  {
+   "title": "Outlier detection",
+   "body": [
+    {
+     "t": "A box suddenly spanning two continents means one corrupted point teleported. The extremes make the bad point findable."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Reading the loop's box",
+   "body": [
+    {
+     "t": "Points between 40.7681–40.7740 latitude and −73.9719–−73.9630 longitude give the box directly. Note the longitude span (0.0089°) looks bigger than the latitude span (0.0059°) while covering similar ground — degrees shrink east-west, as this site never tires of repeating."
+    }
+   ]
+  },
+  {
+   "label": "Example · The box is not the route",
+   "body": [
+    {
+     "t": "An L-shaped hike's box includes the whole corner the route never visits. Boxes contain; they do not describe — for shape, the track itself (or its length from the route-stats tools) is the document."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What the four numbers are",
+  "intro": "Min/max over every point element the file carries.",
+  "columns": [
+   "Output",
+   "Meaning"
+  ],
+  "rows": [
+   [
+    "South / North",
+    "Minimum and maximum latitude in the file"
+   ],
+   [
+    "West / East",
+    "Minimum and maximum longitude"
+   ],
+   [
+    "Sources counted",
+    "Trackpoints, route points and waypoints alike"
+   ],
+   [
+    "Format out",
+    "Decimal degrees (WGS84) — the order APIs expect varies; labels here are explicit"
+   ]
+  ],
+  "note": "GPX files can carry their own <bounds> element written by the recording app — recomputing from the points, as this tool does, catches files whose stored bounds lie."
+ },
+ "faq": [
+  [
+   "Which points are included?",
+   "All of them — <trkpt>, <rtept> and <wpt> elements. A stray waypoint left from planning can stretch the box; the waypoint tools on this site trim such files."
+  ],
+  [
+   "What about the date line?",
+   "A track crossing ±180° produces a naive box spanning nearly the whole world (min −179, max +179). Honest tools flag it; splitting the track at the seam is the working fix."
+  ],
+  [
+   "Elevation considered?",
+   "No — the box is the horizontal footprint. Vertical extent lives in the elevation tools."
+  ],
+  [
+   "Multiple tracks in one file?",
+   "The box covers the union — every track in the file, as a catalogue entry should."
+  ],
+  [
+   "Order of the output values?",
+   "Labelled south, west, north, east on this page. APIs differ (some want west,south,east,north) — the labels exist because swapped orders are the classic extent bug."
+  ],
+  [
+   "Can I pad the box?",
+   "Add your margin in degrees afterwards (0.01° ≈ 1.1 km of latitude) — padding deliberately beats discovering the map cropped the trailhead."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Centre and size: the "
+  },
+  {
+   "t": "Bounding Box Calculator",
+   "l": "/tools/bounding-box-calculator"
+  },
+  {
+   "t": "; endpoints: "
+  },
+  {
+   "t": "GPX Start and End Coordinates",
+   "l": "/tools/gpx-start-end-coordinates"
+  },
+  {
+   "t": "; counts: the "
+  },
+  {
+   "t": "GPX Track Point Counter",
+   "l": "/tools/gpx-point-counter"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "csv-coordinate-bounding-box",
   "csv-coordinate-centroid-calculator",

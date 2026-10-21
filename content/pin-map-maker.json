@@ -6,17 +6,165 @@
   "custom map pins",
   "map marker tool"
  ],
- "title": null,
- "description": null,
+ "title": "Pin Map Maker: Drop Pins, No Account",
+ "description": "Use the Pin Map Maker to add markers for the places you care about — trips, stores, field sites — and share or export the map, no account needed. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a family planning a road trip drops nine pins from Denver to the Grand Canyon in two minutes — and the map that settles every 'how far apart are they?' argument is ready.",
+ "quick_answer": "The Pin Map Maker lets you add markers for any places you care about — trip stops, stores, field sites, houses for sale — on one map, without an account. Click to drop pins, name them if you like, then share the view or export it for your document.",
+ "steps_intro": "Click, pin, repeat — the simplest useful map there is:",
+ "use_cases": [
+  {
+   "title": "Trip planning on one page",
+   "body": [
+    {
+     "t": "Hotels, sights, that one bakery — pinned together, distances become visible and itineraries sort themselves. Add names and a legend with "
+    },
+    {
+     "t": "Map with Legend",
+     "l": "/tools/map-with-legend"
+    },
+    {
+     "t": " when the plan graduates."
+    }
+   ]
+  },
+  {
+   "title": "House-hunting and relocation",
+   "body": [
+    {
+     "t": "Candidate homes against the office, the school and the station. A pin map ends the spreadsheet-versus-geography argument in one look."
+    }
+   ]
+  },
+  {
+   "title": "Store and site lists",
+   "body": [
+    {
+     "t": "A scout's list of locations becomes a map a manager can reason about — clusters and gaps announce themselves. From data instead? Start with "
+    },
+    {
+     "t": "CSV to Map",
+     "l": "/tools/csv-to-map"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Event gathering points",
+   "body": [
+    {
+     "t": "Meet here, park there, ceremony at the third pin. One shared link replaces a paragraph of directions nobody reads."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The road-trip wall",
+   "body": [
+    {
+     "t": "Nine pins, Denver to the Grand Canyon. Exported as a PNG, the pin map anchors the trip-planning doc; clicked live, it answers spacing questions the itinerary table could not."
+    }
+   ]
+  },
+  {
+   "label": "Example · The two-office problem",
+   "body": [
+    {
+     "t": "A freelancer pins two client offices and six candidate coworking spaces. The map shows instantly which spaces sit on the right side of the river — geography as a filter no listing site offers."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "From pins to a map worth sharing",
+  "intro": "Three small habits separate a pin dump from a useful map.",
+  "columns": [
+   "Habit",
+   "Why it helps"
+  ],
+  "rows": [
+   [
+    "Name every pin",
+    "A map of anonymous dots explains nothing a day later"
+   ],
+   [
+    "Frame before you share",
+    "Set the zoom so all pins fit — the share should open on the whole story"
+   ],
+   [
+    "Export a picture too",
+    "Links are live and lovely; a PNG in the doc survives every platform change"
+   ],
+   [
+    "Prune ruthlessly",
+    "Ten honest pins persuade; forty maybes confuse"
+   ]
+  ],
+  "note": "Pins live in your browser and in the share link if you make one — there is no account and no server-side album of your maps. Keep the export if the map matters."
+ },
+ "faq": [
+  [
+   "How do I share my pin map?",
+   "Use the share link the tool offers — it encodes your pins so the recipient opens the same view. For documents, export a PNG with the Map PNG Export tool and embed the picture."
+  ],
+  [
+   "Can I move a pin after dropping it?",
+   "Yes — drag or delete and re-drop. Get positions right before sharing: recipients see the map as it was when the link was made, not your later edits."
+  ],
+  [
+   "Is there a pin limit?",
+   "No account tier counts pins; readability does. A few dozen labelled pins is a map; a few hundred is a dataset — that is CSV to Map's job."
+  ],
+  [
+   "Can I import an address list?",
+   "Paste-style import belongs to CSV to Map, which geocodes or plots coordinate lists. This maker is for hand-placed pins you choose one by one."
+  ],
+  [
+   "Do pins work offline?",
+   "The basemap needs a connection to load; once you have built and exported the map, the PNG works anywhere, including a printed handout."
+  ],
+  [
+   "Can I colour-code pins by type?",
+   "Basic pins keep one clear style. When colour categories and a legend carry the meaning, build in Map with Legend instead."
+  ],
+  [
+   "What map do the pins sit on?",
+   "An open street map (OpenStreetMap data). If you share the picture, keeping the small attribution line is both polite and the licence's ask."
+  ],
+  [
+   "Can I measure between pins?",
+   "Eyeball clusters here; measure properly by drawing the line in the Map Drawer or running the pair through the distance tools — pins mark places, other tools price the gaps."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Give pins names and structure with the "
+  },
+  {
+   "t": "Custom Labeled Pin Map",
+   "l": "/tools/custom-labeled-map"
+  },
+  {
+   "t": ", add a legend via "
+  },
+  {
+   "t": "Map with Legend",
+   "l": "/tools/map-with-legend"
+  },
+  {
+   "t": ", or export through "
+  },
+  {
+   "t": "Map PNG Export",
+   "l": "/tools/map-png-export"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "advanced-map-embed-generator",
   "color-a-map",

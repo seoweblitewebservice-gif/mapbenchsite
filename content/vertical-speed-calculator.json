@@ -8,17 +8,169 @@
   "vertical speed calculator tool",
   "how to calculate vertical speed calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Vertical Speed Calculator: Climb Rate Math",
+ "description": "Calculate vertical ascent or descent rate from elevation change and time with the Vertical Speed Calculator — m/h, ft/min and m/s. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a hiker who gains 600 metres in 45 minutes is climbing at 800 metres per hour — 13.3 metres a minute, or about 0.22 metres per second straight up.",
+ "quick_answer": "The Vertical Speed Calculator divides elevation change by elapsed time to give your average climb or descent rate, in metres per hour, feet per minute or metres per second. Enter the elevation gained or lost and the time it took — the number behind 'how fast up'.",
+ "steps_intro": "Elevation change over time — the rate your legs, wings or lift motor sustain:",
+ "use_cases": [
+  {
+   "title": "Hiking and climbing performance",
+   "body": [
+    {
+     "t": "Guidebooks think in metres per hour: 300 m/h is a steady club pace, 600 m/h is strong. Compare your days honestly, then look at the climb's shape in the "
+    },
+    {
+     "t": "Elevation Profile",
+     "l": "/tools/elevation-profile"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Cycling climb analysis",
+   "body": [
+    {
+     "t": "Cyclists call it VAM — vertical ascent metres per hour. A 800 m/h climb and a 1,200 m/h climb are different sports wearing the same jersey."
+    }
+   ]
+  },
+  {
+   "title": "Aviation context",
+   "body": [
+    {
+     "t": "Aircraft variometers and climb specs speak feet per minute: a light aircraft climbing at 700 ft/min is rising at about 3.6 m/s. This calculator translates between the cockpits and the trails."
+    }
+   ]
+  },
+  {
+   "title": "Lifts, funiculars and construction",
+   "body": [
+    {
+     "t": "Hoist cycles, funicular timings and crane lifts all budget vertical metres against minutes. The average rate is the planning number; the machinery specs supply the peaks."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 1,000-foot half hour",
+   "body": [
+    {
+     "t": "Gain 1,000 feet in 30 minutes and your vertical speed is 2,000 ft/h — 33.3 ft/min, or 609.6 m/h. Hikers quoting 'two thousand an hour' and pilots quoting 'thirty-three a minute' are describing the same honest climb."
+    }
+   ]
+  },
+  {
+   "label": "Example · Airliner versus alpinist",
+   "body": [
+    {
+     "t": "A jet's initial climb around 2,500 ft/min is roughly 45,700 m/h — about sixty times a strong walker's 800 m/h. Same unit, same formula, wildly different machines: that is the point of a rate."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Vertical speeds in the wild (averages)",
+  "intro": "Representative rates, converted — the calculator's arithmetic on familiar climbers.",
+  "columns": [
+   "Climber",
+   "Typical rate",
+   "In m/s"
+  ],
+  "rows": [
+   [
+    "Steady hill walker",
+    "≈300 m/h (985 ft/h)",
+    "0.08"
+   ],
+   [
+    "Strong hiker",
+    "≈600–800 m/h",
+    "0.17–0.22"
+   ],
+   [
+    "Elite uphill runner",
+    "≈1,500 m/h+",
+    "0.42+"
+   ],
+   [
+    "Office lift (typical)",
+    "≈2.5 m/s",
+    "2.5"
+   ],
+   [
+    "Light aircraft climb",
+    "≈700 ft/min (12,800 m/h)",
+    "3.6"
+   ],
+   [
+    "Airliner initial climb",
+    "≈2,500 ft/min (45,700 m/h)",
+    "12.7"
+   ]
+  ],
+  "note": "Averages all: every entry hides stops, surges and steep ramps. A moving average over the steep part alone is always higher — and always a little bit of a lie."
+ },
+ "faq": [
+  [
+   "What units can I use?",
+   "Elevation in metres or feet, time in minutes, hours or seconds; rates come back as m/h, ft/min, m/s and km/h equivalents. Keep the input pair consistent and the conversions are the calculator's job."
+  ],
+  [
+   "Why does my average look low next to my best hour?",
+   "Averages tax every pause. A climb at 800 m/h moving speed with two ten-minute stops in the hour lands near 530 m/h overall — the calculator reports the overall truth; segment the climb for the flattering one."
+  ],
+  [
+   "Is descent just negative climb?",
+   "Arithmetically yes — the sign records direction. Descents deserve their own respect though: knees and brakes experience downhill rates very differently from engines and legs."
+  ],
+  [
+   "How does this relate to gradient?",
+   "Vertical speed = horizontal speed × grade. Ride at 12 km/h up a 6% grade and you climb at 720 m/h — the Slope Grade Calculator supplies the grade half of the product."
+  ],
+  [
+   "What is VAM in cycling?",
+   "Velocità Ascensionale Media — average vertical metres per hour on a climb, popularised by power-meter era analysis. This calculator computes the same figure from any elevation-time pair."
+  ],
+  [
+   "Can I use it for a lift or escalator?",
+   "Yes — shaft height over ride time gives the car's average vertical speed, stops excluded by how you time it. Rated lift speeds are the machinery's cruise figure, close kin to this average."
+  ],
+  [
+   "Does altitude thin air change the climb rate?",
+   "The calculator does pure arithmetic; your engine — lungs or pistons — loses power with altitude, which is why equal rates get harder higher up. The number stays honest; the effort behind it does not."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "The climb's shape: the "
+  },
+  {
+   "t": "Elevation Profile",
+   "l": "/tools/elevation-profile"
+  },
+  {
+   "t": "; its steepness: the "
+  },
+  {
+   "t": "Slope Grade Calculator",
+   "l": "/tools/slope-grade-calculator"
+  },
+  {
+   "t": "; gain per kilometre: "
+  },
+  {
+   "t": "Average Elevation Gain Per Kilometer",
+   "l": "/tools/average-elevation-gain-per-km"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "cicada-emergence-map",
   "climate-zone-finder",
@@ -26,5 +178,12 @@
   "earth-arc-length-calculator",
   "earth-bulge-calculator",
   "earth-chord-length-calculator"
+ ],
+ "related": [
+  "slope-gradient-calculator",
+  "slope-length-calculator",
+  "average-elevation-gain-per-km",
+  "route-elevation-gain-calculator",
+  "gpx-elevation-gain-calculator"
  ]
 }

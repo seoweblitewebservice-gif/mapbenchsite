@@ -8,17 +8,166 @@
   "rhumb line bearing calculator tool",
   "how to use rhumb line bearing calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Rhumb Line Bearing Calculator: Constant Heading",
+ "description": "Calculate the constant compass bearing of a rhumb-line course with the Rhumb Line Bearing Calculator — one heading that never changes. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, the rhumb line from JFK to LAX holds 259.3° the whole way — one compass heading, coast to coast — while the great-circle route starts at 273.8° and keeps turning.",
+ "quick_answer": "The Rhumb Line Bearing Calculator computes the constant compass bearing of a rhumb-line (loxodrome) course between two coordinates — the single heading a vessel or aircraft can steer without adjustment. Enter the start and end points and read the unchanging bearing, the course traditional navigation is built on.",
+ "steps_intro": "One heading, start to finish — that is the rhumb line's promise:",
+ "use_cases": [
+  {
+   "title": "Traditional navigation and chart work",
+   "body": [
+    {
+     "t": "On a Mercator chart a rhumb line is straight, so its bearing reads off the protractor. The calculator gives the same number without the chart — pair it with the "
+    },
+    {
+     "t": "Rhumb Line Distance Calculator",
+     "l": "/tools/rhumb-line-distance-calculator"
+    },
+    {
+     "t": " for the full course."
+    }
+   ]
+  },
+  {
+   "title": "Comparing against the great circle",
+   "body": [
+    {
+     "t": "JFK to LAX: rhumb 259.3° constant, great circle starts 273.8° and drifts. The "
+    },
+    {
+     "t": "Initial Great Circle Bearing Calculator",
+     "l": "/tools/initial-great-circle-bearing-calculator"
+    },
+    {
+     "t": " gives the other answer; the comparison is the lesson."
+    }
+   ]
+  },
+  {
+   "title": "Short and coastal legs",
+   "body": [
+    {
+     "t": "On legs of a few hundred miles the two courses nearly coincide, and the constant heading wins on simplicity — fishing, coastal sailing and local flying live here."
+    }
+   ]
+  },
+  {
+   "title": "GIS line drawing",
+   "body": [
+    {
+     "t": "Software that draws 'straight' lines on Mercator maps draws rhumbs. Knowing the bearing explains why the line between two cities bows the way it does."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · London to New York",
+   "body": [
+    {
+     "t": "The rhumb bearing from Heathrow's area to New York is about 257.9° held constant, versus a great-circle initial bearing near 287.9° that swings through the flight. One number you can steer; one shortest path you must keep correcting toward."
+    }
+   ]
+  },
+  {
+   "label": "Example · The spiral warning",
+   "body": [
+    {
+     "t": "Extend any rhumb line far enough and it spirals into the pole — a loxodrome with a non-cardinal bearing never stops circling. Bearings due north, south, east or west are the exceptions that run straight."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Rhumb versus great circle, computed",
+  "intro": "Same city pairs, both geometries — from this site's reference coordinates.",
+  "columns": [
+   "Route",
+   "Rhumb bearing (constant)",
+   "Great-circle initial bearing"
+  ],
+  "rows": [
+   [
+    "JFK → LAX",
+    "259.3°",
+    "273.8°"
+   ],
+   [
+    "London → New York",
+    "257.9°",
+    "287.9°"
+   ],
+   [
+    "New York → London",
+    "78.0°",
+    "51.2°"
+   ],
+   [
+    "East or west along a parallel",
+    "90° / 270°",
+    "Differs — the great circle leaves the parallel"
+   ]
+  ],
+  "note": "East-west example aside, the two bearings differ most on long, high-latitude routes — exactly where the distance penalty also grows (see the distance sibling)."
+ },
+ "faq": [
+  [
+   "What is a rhumb line in plain terms?",
+   "A path that crosses every meridian at the same angle — a constant compass course. On Mercator charts it draws as a straight line, which is why navigators loved it for four centuries."
+  ],
+  [
+   "Is the rhumb bearing the shortest course?",
+   "No — the great circle is shortest. The rhumb trades a little distance (about 1% New York–Los Angeles, about 4% across the Atlantic) for a heading that never needs adjusting."
+  ],
+  [
+   "When are the two bearings equal?",
+   "Along a meridian (due north/south) and along the equator (due east/west) the rhumb and great circle coincide. Everywhere else they part, politely at first."
+  ],
+  [
+   "Does the bearing use true or magnetic north?",
+   "True north, like all bearings on this site. Apply local magnetic declination before steering by a physical compass."
+  ],
+  [
+   "What happens near the poles?",
+   "Rhumb lines spiral toward the pole without reaching it (except due-north courses). Polar navigation uses grid navigation instead — a different instrument for a different ocean of ice."
+  ],
+  [
+   "Can a rhumb line cross the date line?",
+   "Yes — the calculator takes the longitude difference the short way, so Pacific crossings produce sensible constant bearings."
+  ],
+  [
+   "Who still uses rhumb lines?",
+   "Coastal and short-sea shipping, chart plotters at harbour scales, and every map user who ever drew a straight line on Mercator and called it the way."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Its distance: the "
+  },
+  {
+   "t": "Rhumb Line Distance Calculator",
+   "l": "/tools/rhumb-line-distance-calculator"
+  },
+  {
+   "t": "; the rival: the "
+  },
+  {
+   "t": "Initial Great Circle Bearing Calculator",
+   "l": "/tools/initial-great-circle-bearing-calculator"
+  },
+  {
+   "t": "; a special course: the "
+  },
+  {
+   "t": "Qibla Direction Finder",
+   "l": "/tools/qibla-direction-finder"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "compass-bearing-visualizer",
   "competitor-distance-map",

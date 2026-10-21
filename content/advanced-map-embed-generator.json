@@ -7,17 +7,166 @@
   "iframe map code",
   "embed google map alternative"
  ],
- "title": null,
- "description": null,
+ "title": "Advanced Map Embed Code Generator: Full Control",
+ "description": "Build an embeddable map with the Advanced Map Embed Code Generator — set centre, zoom, size and marker, preview live, copy clean iframe code. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, set the centre on your shop's street, dial zoom to 16, size the frame at 800 × 450, drop one marker — and the iframe you paste is exactly that view.",
+ "quick_answer": "The Advanced Map Embed Code Generator builds an interactive map embed with the controls people actually ask for: search for the centre, set zoom and pixel size, and drop a marker. Preview the result live and copy clean iframe code for your site — no account, no server of ours.",
+ "steps_intro": "Four settings decide the embed — here is what each one really controls:",
+ "use_cases": [
+  {
+   "title": "Business and venue pages",
+   "body": [
+    {
+     "t": "A café, clinic or trailhead page needs one good map, centred on the door at walking zoom. This generator produces it without a developer. For Google's flavour of the same job, see the "
+    },
+    {
+     "t": "Google Maps Embed Code Generator",
+     "l": "/tools/google-maps-embed-code-generator"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Blog posts and documentation",
+   "body": [
+    {
+     "t": "Writers embed the exact view their text describes — the trail junction, the border crossing — instead of a generic whole-city map readers must pan."
+    }
+   ]
+  },
+  {
+   "title": "Replacing screenshots",
+   "body": [
+    {
+     "t": "A static screenshot of a map dies the day a road changes. An embed stays a real map: zoomable, current basemap, same code."
+    }
+   ]
+  },
+  {
+   "title": "Multiple locations pages",
+   "body": [
+    {
+     "t": "One embed per branch, each with its own centre and marker, generated from the same tool in minutes. Pair with the "
+    },
+    {
+     "t": "Pin Map Maker",
+     "l": "/tools/pin-map-maker"
+    },
+    {
+     "t": " when one map must carry all the pins instead."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · Contact page that works",
+   "body": [
+    {
+     "t": "Centre on the business address, zoom 16 (street level), 800 × 450 frame, marker on. Visitors can zoom out for the neighbourhood and in for the entrance — the two things a static image never lets them do."
+    }
+   ]
+  },
+  {
+   "label": "Example · Trail guide embed",
+   "body": [
+    {
+     "t": "Centre midway on the route at zoom 13 with no marker — the map illustrates the article instead of advertising a single point. Same generator, opposite choices, both valid."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "The settings that matter",
+  "intro": "What each control in the generator changes in the final iframe.",
+  "columns": [
+   "Setting",
+   "What it controls",
+   "Sensible starting point"
+  ],
+  "rows": [
+   [
+    "Centre (search or coordinates)",
+    "Where the map opens",
+    "The exact door, not the postcode centroid"
+   ],
+   [
+    "Zoom",
+    "How much ground fits the frame",
+    "15–17 for a venue, 11–13 for a district"
+   ],
+   [
+    "Width × height (px)",
+    "The iframe's size on your page",
+    "Match your layout column; 800 × 450 is a safe default"
+   ],
+   [
+    "Marker",
+    "Whether a pin marks the centre",
+    "On for one place, off for an area view"
+   ]
+  ],
+  "note": "The embed is served by the basemap provider (the code points at the provider's embed endpoint), so it inherits that map's data freshness and usage terms — MapBench generates the code, it does not host your map."
+ },
+ "faq": [
+  [
+   "What code do I get?",
+   "A standard HTML iframe element with the embed URL built from your settings — centre, zoom, size and marker baked into the parameters. Paste it into any page that accepts HTML."
+  ],
+  [
+   "Does the embedded map work on mobile?",
+   "The iframe itself is as responsive as your layout lets it be — set the width sensibly or wrap it in a responsive container. The map inside pans and zooms with touch like any embedded map."
+  ],
+  [
+   "Can I style the map's colours?",
+   "Not through this generator — the embed shows the provider's standard basemap style. If you need a designed look, export a static image with the Map PNG Export tool instead and accept that it will not pan or zoom."
+  ],
+  [
+   "Why does the map show a different area than I set?",
+   "Check the centre first: an ambiguous search ('Springfield') centres on the first match, which may be the wrong state or country. Re-search with the town or postcode included and regenerate."
+  ],
+  [
+   "Is there a usage limit?",
+   "The generator itself is free and unlimited. The embedded map is served under the basemap provider's fair-use terms — ordinary website traffic is exactly what embeds exist for."
+  ],
+  [
+   "Can I embed a route or directions?",
+   "This generator embeds a centred view with an optional marker, not a computed route. For directions, link out to a routing view rather than embedding one."
+  ],
+  [
+   "What if my CMS strips iframes?",
+   "Some website builders block raw HTML in free tiers. The fallback is a linked static image — build the same view, capture it with Map PNG Export, and link the image to a full map page."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "For Google's basemap instead, use the "
+  },
+  {
+   "t": "Google Maps Embed Code Generator",
+   "l": "/tools/google-maps-embed-code-generator"
+  },
+  {
+   "t": "; for simple links rather than iframes, the "
+  },
+  {
+   "t": "Embed / Link Map Helper",
+   "l": "/tools/embed-map-link-helper"
+  },
+  {
+   "t": "; and for a still image, "
+  },
+  {
+   "t": "Map PNG Export",
+   "l": "/tools/map-png-export"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "blank-map",
   "color-a-map",

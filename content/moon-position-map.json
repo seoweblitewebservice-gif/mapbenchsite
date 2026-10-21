@@ -6,17 +6,161 @@
   "moonrise moonset map",
   "sublunar point"
  ],
- "title": null,
- "description": null,
+ "title": "Moon Position Map: Where the Moon Is Up Now",
+ "description": "See where the Moon is above the horizon right now on the Moon Position Map — live sublunar point, moon-up region and phase. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, the region where the Moon is up at any moment covers about half the Earth, centred on the sublunar point — and that region slides roughly 50 minutes later each day, which is why last week's evening Moon is this week's midnight one.",
+ "quick_answer": "The Moon Position Map shows where the Moon is above the horizon right now — the live moon-up hemisphere centred on the sublunar point, with the current phase. Click any place for its approximate moonrise and moonset: the lunar counterpart to the day-night map.",
+ "steps_intro": "Half the planet has a Moon up. Is it yours?",
+ "use_cases": [
+  {
+   "title": "Deciding whether to look up",
+   "body": [
+    {
+     "t": "Before stepping out: is the Moon even above your horizon, and how lit? One glance answers; "
+    },
+    {
+     "t": "Moonrise and Moonset",
+     "l": "/tools/moonrise-moonset"
+    },
+    {
+     "t": " gives your street's exact times when the glance says maybe."
+    }
+   ]
+  },
+  {
+   "title": "Radio and satellite moonbounce context",
+   "body": [
+    {
+     "t": "EME (Earth-Moon-Earth) operators need mutual visibility windows — the moon-up overlap between two stations is this map's two clicks."
+    }
+   ]
+  },
+  {
+   "title": "Teaching why moonrise moves",
+   "body": [
+    {
+     "t": "Watch the moon-up region lag the Sun's day-night pattern by about 50 minutes daily and the lunar month stops being a list and becomes a mechanism."
+    }
+   ]
+  },
+  {
+   "title": "Travel and photography scouting",
+   "body": [
+    {
+     "t": "A moonlit landmark needs the Moon up, lit and roughly behind the camera. The position map plus the phase narrows the world's candidate nights fast."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The sublunar point's limits",
+   "body": [
+    {
+     "t": "The point where the Moon stands overhead is always within about ±28.6° of latitude — the Moon's orbital tilt (5.1°) added to Earth's (23.4°). It can be overhead in Florida or Mumbai, never in London or Toronto."
+    }
+   ]
+  },
+  {
+   "label": "Example · Full moon geometry",
+   "body": [
+    {
+     "t": "At full moon the moon-up region centres on the midnight meridian — the Moon rises as the Sun sets, opposite the day-night map's lit half. A week later at last quarter, the Moon-up bulge sits over the dawn side instead."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Reading the lunar map",
+  "intro": "The Moon's version of the day-night picture — same grammar, slower clock.",
+  "columns": [
+   "Feature",
+   "Meaning"
+  ],
+  "rows": [
+   [
+    "Sublunar point",
+    "Where the Moon is exactly overhead now"
+   ],
+   [
+    "Moon-up region",
+    "The hemisphere (roughly) where the Moon is above the horizon"
+   ],
+   [
+    "Phase shown",
+    "The lit fraction and shape for the current instant"
+   ],
+   [
+    "Daily slide",
+    "The pattern repeats about 48.8 minutes later per day (24 h ÷ 29.53 days)"
+   ]
+  ],
+  "note": "Positions come from a truncated lunar model — good to a fraction of a degree for a live map, which is all a horizon question needs. Precision rise/set work belongs to the dedicated times tool."
+ },
+ "faq": [
+  [
+   "How far can the sublunar point wander?",
+   "Its latitude swings between about +28.6° and −28.6° across the 18.6-year nodal cycle; its longitude circles the Earth daily. The tropics own the overhead Moon; everyone else gets it at an angle."
+  ],
+  [
+   "Is the phase really identical worldwide?",
+   "At an instant, yes — one Sun-Moon geometry for the whole planet (the base questions cover this). What varies is the view's rotation: the lit edge tips differently by latitude and hour."
+  ],
+  [
+   "Why is the Moon sometimes up all day?",
+   "Near full it rules the night; near the quarters it shares the day — a first-quarter Moon rides the afternoon sky. 'Up' and 'visible' part company in daylight: position here, contrast decides the rest."
+  ],
+  [
+   "The map says up, but I cannot see it.",
+   "Haze, buildings, daylight glare or a thin crescent near the Sun can all hide a geometrically-up Moon. The map reports position, not visibility — the honest half it can compute."
+  ],
+  [
+   "How accurate are clicked rise and set estimates?",
+   "Approximate — sampled from the same truncated model. For planning an event around a moonrise, use the dedicated Moonrise and Moonset Calculator, which is built for the number."
+  ],
+  [
+   "Does the Moon-up region match the night region?",
+   "Only in passing. The two hemispheres drift through each other on the 29.5-day cycle: some nights the Moon-up half and the dark half coincide (glorious), some nights they are opposite (moonless dark — also glorious, to astronomers)."
+  ],
+  [
+   "What is the Moon's path called?",
+   "It tracks near the ecliptic — the Sun's road, tilted 5.1° — which is why Moon and Sun meet at eclipses only when the Moon is near a node, and why this map and the day-night map rhyme."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Your times: "
+  },
+  {
+   "t": "Moonrise and Moonset",
+   "l": "/tools/moonrise-moonset"
+  },
+  {
+   "t": "; the Sun's map: the "
+  },
+  {
+   "t": "Day Night Map",
+   "l": "/tools/day-night-map"
+  },
+  {
+   "t": "; tonight's phase: the "
+  },
+  {
+   "t": "Moon Phase Calculator",
+   "l": "/tools/moon-phase-calculator"
+  },
+  {
+   "t": "; dark windows: the "
+  },
+  {
+   "t": "Astronomical Twilight Calculator",
+   "l": "/tools/astronomical-twilight-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "astronomical-twilight-calculator",
   "civil-twilight-calculator",

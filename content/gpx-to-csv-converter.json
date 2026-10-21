@@ -8,17 +8,160 @@
   "GPX file converter",
   "GPS track to csv"
  ],
- "title": null,
- "description": null,
+ "title": "GPX to CSV Converter: Trackpoints to Rows",
+ "description": "Convert a GPX file to CSV with the GPX to CSV Converter — latitude, longitude, elevation, time and names as spreadsheet columns. Free, local.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a 2,050-point recording becomes a 2,050-row table whose first row reads 40.7681, −73.9719, the point's elevation, its UTC stamp and its name — the whole track, spreadsheet-legible.",
+ "quick_answer": "The GPX to CSV Converter opens a GPX file locally and extracts latitude, longitude, elevation, time and names into a simple CSV for spreadsheets and analysis. Load the file and download the table — one row per point, ready for sorting, filtering and charting.",
+ "steps_intro": "XML in, rows out — the track becomes a table:",
+ "use_cases": [
+  {
+   "title": "Spreadsheet analysis",
+   "body": [
+    {
+     "t": "Filter by time, sort by elevation, chart the profile: the table invites what the XML forbade. GeoJSON sources take the parallel lane through the "
+    },
+    {
+     "t": "GeoJSON to CSV Converter",
+     "l": "/tools/geojson-to-csv-converter"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "title": "Joining with other data",
+   "body": [
+    {
+     "t": "Weather logs, photo times, sensor exports — CSV is the lingua franca every dataset can be joined in, on the timestamp column."
+    }
+   ]
+  },
+  {
+   "title": "Feeding statistics tools",
+   "body": [
+    {
+     "t": "R, pandas, and every BI tool eat CSV natively. The conversion is the on-ramp from a watch's world to an analyst's."
+    }
+   ]
+  },
+  {
+   "title": "Lightweight archiving and sharing",
+   "body": [
+    {
+     "t": "A CSV of the points opens in thirty years of software, past and future — the plainest possible edition of the recording."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The header tells the contract",
+   "body": [
+    {
+     "t": "Columns: latitude, longitude, elevation, time, name — in that order, with latitude and longitude as separate decimal columns (not a fused 'coordinates' string), because tables are for computing and fused strings are for reading."
+    }
+   ]
+  },
+  {
+   "label": "Example · Rows mirror points",
+   "body": [
+    {
+     "t": "Trackpoints become rows in sequence — row order is journey order, so a spreadsheet's row number is a proxy for distance along, and sorting by another column is a decision to break that mirror knowingly."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "What becomes a column",
+  "intro": "The export's field contract — and what stays behind in the XML.",
+  "columns": [
+   "GPX source",
+   "CSV column",
+   "Notes"
+  ],
+  "rows": [
+   [
+    "lat / lon attributes",
+    "latitude, longitude",
+    "Decimal degrees, full precision"
+   ],
+   [
+    "<ele>",
+    "elevation",
+    "Metres as recorded; blank where absent"
+   ],
+   [
+    "<time>",
+    "time",
+    "UTC ISO 8601 as recorded"
+   ],
+   [
+    "<name> on points",
+    "name",
+    "Blank for the unnamed majority of trackpoints"
+   ],
+   [
+    "Extensions (HR, power)",
+    "Not in the basic export",
+    "Channels belong to their analyzers; the CSV is the geometric core"
+   ]
+  ],
+  "note": "Blank means absent in the source, never zero — a missing elevation and a sea-level elevation are different facts, and the export refuses to merge them."
+ },
+ "faq": [
+  [
+   "Which points are exported — tracks, routes, waypoints?",
+   "The export covers the file's points with their type context preserved in the data where the source distinguishes them; trackpoints form the bulk of any recording, route points and waypoints ride with their names doing the identifying."
+  ],
+  [
+   "Time format in the CSV?",
+   "As recorded: ISO 8601 UTC (…Z). Spreadsheets may display it converted to your zone on import — the value travels correctly; watch the display before accusing the data."
+  ],
+  [
+   "Delimiter and quoting?",
+   "Comma-delimited with standard quoting (RFC 4180 conventions): names containing commas are quoted, so the table parses in Excel, Sheets and pandas identically."
+  ],
+  [
+   "Huge recordings?",
+   "Browser memory bounds the party — a million-row CSV is producible but unwieldy; split epic files first, or let desktop tools (ogr2ogr, GPSBabel) carry industrial loads."
+  ],
+  [
+   "Can the CSV go back to GPX?",
+   "Point tables round-trip through the CSV-to-GeoJSON lane for mapping; a full GPX reconstruction needs segment structure the flat table does not promise to keep. Archive the original GPX; export CSVs as working copies."
+  ],
+  [
+   "Elevation units?",
+   "Metres, as GPX stores them. Convert the column in your spreadsheet if feet are required — a deliberate, visible transformation beats a converter's silent one."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "From GeoJSON: the "
+  },
+  {
+   "t": "GeoJSON to CSV Converter",
+   "l": "/tools/geojson-to-csv-converter"
+  },
+  {
+   "t": "; back to map data: the "
+  },
+  {
+   "t": "CSV to GeoJSON Converter",
+   "l": "/tools/csv-to-geojson-converter"
+  },
+  {
+   "t": "; analyse first: "
+  },
+  {
+   "t": "GPX Route Stats",
+   "l": "/tools/gpx-route-stats"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "boundary-kml-downloader",
   "cluster-map-from-points",

@@ -8,17 +8,159 @@
   "mulch volume by area calculator tool",
   "how to use mulch volume by area calculator"
  ],
- "title": null,
- "description": null,
+ "title": "Mulch Volume by Area Calculator: Coverage First",
+ "description": "Calculate mulch volume from a bed's area and depth with the Mulch Volume by Area Calculator — cubic yards and bag counts from square feet. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, 500 square feet at 2 inches deep needs 3.09 cubic yards of mulch — 42 standard 2-cubic-foot bags — a number no eyeball at the garden centre ever guesses right.",
+ "quick_answer": "The Mulch Volume by Area Calculator turns a bed's area and your chosen mulch depth into the volume to buy — cubic yards for bulk orders, cubic feet and bag counts for bagged mulch. Enter the square footage and depth and read the order quantity, settling included.",
+ "steps_intro": "Area × depth = volume. The only trick is the units:",
+ "use_cases": [
+  {
+   "title": "Ordering bulk mulch",
+   "body": [
+    {
+     "t": "Landscape suppliers sell by the cubic yard; beds measure in square feet and inches. This page is the border crossing — beds measured first in the "
+    },
+    {
+     "t": "Map Area Calculator",
+     "l": "/tools/map-area-calculator"
+    },
+    {
+     "t": " if the shape is awkward."
+    }
+   ]
+  },
+  {
+   "title": "Bagged mulch shopping",
+   "body": [
+    {
+     "t": "The big-box run: volume converts to 2-cubic-foot bags so the car is loaded once, correctly, instead of twice in the rain."
+    }
+   ]
+  },
+  {
+   "title": "Landscape quoting",
+   "body": [
+    {
+     "t": "Contractors price mulch by volume installed. Area-and-depth arithmetic is the quote's spine — defensible to clients because it is just geometry."
+    }
+   ]
+  },
+  {
+   "title": "Comparing depths honestly",
+   "body": [
+    {
+     "t": "Two inches refreshes colour; three to four suppresses weeds. The volume difference between the two choices, priced before the order, is this page's most-used comparison."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The 500-square-foot refresh",
+   "body": [
+    {
+     "t": "500 sq ft × 2 in: 500 × (2/12) = 83.3 ft³ = 3.09 yd³ ≈ 42 bags of 2 ft³. Add a settling margin and the order becomes 3.5 yards bulk — the margin is cheaper than a second delivery."
+    }
+   ]
+  },
+  {
+   "label": "Example · One yard's coverage",
+   "body": [
+    {
+     "t": "A cubic yard (27 ft³) covers 108 sq ft at 3 inches, 162 at 2 inches, 324 at 1 inch. Memorise the 108 and most garden-centre math becomes mental arithmetic."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Coverage per cubic yard",
+  "intro": "The table every mulch order is secretly made from.",
+  "columns": [
+   "Depth",
+   "Coverage per yd³",
+   "500 sq ft needs"
+  ],
+  "rows": [
+   [
+    "1 in",
+    "324 sq ft",
+    "1.54 yd³"
+   ],
+   [
+    "2 in",
+    "162 sq ft",
+    "3.09 yd³"
+   ],
+   [
+    "3 in",
+    "108 sq ft",
+    "4.63 yd³"
+   ],
+   [
+    "4 in",
+    "81 sq ft",
+    "6.17 yd³"
+   ]
+  ],
+  "note": "Volumes are loose (fluffed) as sold. Mulch compacts and decomposes — depths settle roughly 20–30% in the first season, which the margin FAQ addresses."
+ },
+ "faq": [
+  [
+   "How much extra should I order for settling?",
+   "Ten to twenty percent over the computed volume is the trade habit for bark and wood mulches; dyed and rubber mulches settle less. Over-ordering slightly beats the second-trip surcharge every time."
+  ],
+  [
+   "Bulk or bags — which is cheaper?",
+   "Bulk wins beyond roughly 2–3 cubic yards in most markets (a yard is 13–14 standard bags); bags win on convenience, cleanliness and small jobs. The calculator reports both quantities so the price comparison is yours to make."
+  ],
+  [
+   "What depth do landscapers recommend?",
+   "Three inches is the working standard for weed suppression and moisture; 2 inches for a colour refresh over existing mulch; 4 inches for new beds on bare soil. Deeper than 4 risks sour, anaerobic mulch — more is not better past the point."
+  ],
+  [
+   "Playground and path mulch differ?",
+   "Play areas use engineered wood fibre at greater depths for fall safety (standards specify by fall height) — that is a safety specification, not a gardening depth, and it has its own product class."
+  ],
+  [
+   "Can I enter the bed as length × width?",
+   "Yes — rectangular beds directly; irregular beds by their measured area from the Map Area Calculator. The depth math does not care how the area arrived."
+  ],
+  [
+   "Stone and gravel instead of mulch?",
+   "The volume arithmetic is identical — only the product changes (and the weight: a yard of stone runs well over a ton). The Soil Volume Calculator is the sibling for soil and fill."
+  ],
+  [
+   "Existing mulch still in place?",
+   "Measure what's there and subtract: refreshing 1 inch of surviving mulch to a 3-inch standard needs 2 inches of new — enter the difference as the depth."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Soil and fill: the "
+  },
+  {
+   "t": "Soil Volume Calculator",
+   "l": "/tools/soil-volume-calculator"
+  },
+  {
+   "t": "; the general mulch lane: the "
+  },
+  {
+   "t": "Mulch Volume Calculator",
+   "l": "/tools/mulch-volume-calculator"
+  },
+  {
+   "t": "; measure beds: the "
+  },
+  {
+   "t": "Map Area Calculator",
+   "l": "/tools/map-area-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "center-of-polygon",
   "circle-area-from-radius",

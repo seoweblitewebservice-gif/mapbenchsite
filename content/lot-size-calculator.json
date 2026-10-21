@@ -6,17 +6,176 @@
   "parcel area",
   "property size map"
  ],
- "title": null,
- "description": null,
+ "title": "Lot Size Calculator: Acres and Square Feet",
+ "description": "Calculate a rectangular lot's size from its dimensions with the Lot Size Calculator — square feet, acres and hectares from length and width. Free.",
  "updated": "October 2026",
- "summary_sentence": null,
- "quick_answer": null,
- "steps_intro": null,
- "use_cases": null,
- "examples": null,
- "popular_table": null,
- "faq": [],
- "related_prose": null,
+ "summary_sentence": "For example, a 100 × 150 ft lot is 15,000 square feet — 0.344 acres — while doubling both sides to 200 × 300 ft quadruples it to 1.377 acres, not doubles.",
+ "quick_answer": "The Lot Size Calculator multiplies a rectangular lot's length and width into its area, reported in square feet, acres, hectares and square metres. Enter the two dimensions and read the size in every unit a listing or deed might use — the arithmetic behind 'quarter-acre lot'.",
+ "steps_intro": "Length × width, then the units fan out:",
+ "use_cases": [
+  {
+   "title": "Verifying listing claims",
+   "body": [
+    {
+     "t": "‘Quarter-acre lot’ with 60 × 150 ft dimensions? That is 9,000 sq ft — 0.207 acre, and the claim is generous. The calculator is the lie detector; the missing-side solvers ("
+    },
+    {
+     "t": "Lot Depth From Area and Width",
+     "l": "/tools/lot-depth-from-area-width"
+    },
+    {
+     "t": ") help when a dimension is coy."
+    }
+   ]
+  },
+  {
+   "title": "Comparing lots across unit systems",
+   "body": [
+    {
+     "t": "A European 800 m² plot and an American 8,600 sq ft lot are near-twins (800 m² ≈ 8,611 sq ft). One calculator, both dialects, no conversion errors."
+    }
+   ]
+  },
+  {
+   "title": "Feeding downstream calculations",
+   "body": [
+    {
+     "t": "Per-acre pricing, seed, mulch, mowing and fencing all begin with area. This is the number they consume — get it here once, correctly."
+    }
+   ]
+  },
+  {
+   "title": "Estate and garden planning",
+   "body": [
+    {
+     "t": "A 200 × 300 ft homesite at 1.377 acres plans very differently from its 0.344-acre suburban cousin — buildings, septic, orchard and ego all scale with the area."
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "label": "Example · The square acre",
+   "body": [
+    {
+     "t": "One acre as a square has sides of 208.7 ft — a useful mental picture: an American football field is 1.32 acres including end zones, and a square acre is a bit under three-quarters of the field's footprint."
+    }
+   ]
+  },
+  {
+   "label": "Example · Doubling sides quadruples area",
+   "body": [
+    {
+     "t": "100 × 150 ft = 0.344 acre; 200 × 300 ft = 1.377 acres. Area grows with the square of dimension — the most underestimated multiplication in property browsing."
+    }
+   ]
+  }
+ ],
+ "popular_table": {
+  "title": "Common lot sizes",
+  "intro": "Dimensions to area, in the units listings mix.",
+  "columns": [
+   "Dimensions",
+   "Square feet",
+   "Acres"
+  ],
+  "rows": [
+   [
+    "50 × 100 ft",
+    "5,000",
+    "0.115"
+   ],
+   [
+    "66 × 165 ft",
+    "10,890",
+    "0.250"
+   ],
+   [
+    "100 × 150 ft",
+    "15,000",
+    "0.344"
+   ],
+   [
+    "150 × 200 ft",
+    "30,000",
+    "0.689"
+   ],
+   [
+    "200 × 300 ft",
+    "60,000",
+    "1.377"
+   ],
+   [
+    "208.7 × 208.7 ft",
+    "43,560",
+    "1.000"
+   ]
+  ],
+  "note": "Rectangular math. Irregular lots — most rural parcels and many urban ones — need the drawn-polygon measurement of the Map Area Calculator."
+ },
+ "faq": [
+  [
+   "What if my lot is a triangle or trapezoid?",
+   "Triangles take base × height ÷ 2, trapezoids average the parallel sides — but the honest general tool is drawing the parcel in the Map Area Calculator, which prices any shape geodesically."
+  ],
+  [
+   "Are easements and road frontage included?",
+   "Deed area usually includes land under easements and sometimes to the road's centreline. The calculator computes the dimensions you give it; what the law counts is a title question."
+  ],
+  [
+   "Metres from a European deed?",
+   "Enter metres and read every unit — 20 × 40 m is 800 m², 0.198 acre. No pre-conversion needed."
+  ],
+  [
+   "Why doesn't my survey match the listing?",
+   "Listings round, borrow from tax records, or err. The survey is the legal instrument; the calculator's role is exposing the gap in thirty seconds."
+  ],
+  [
+   "Usable versus total area?",
+   "Slope, wetlands, floodplain and setbacks shrink usable land below deed area. This page gives the deed number; the buildable number needs the local rules applied to it."
+  ],
+  [
+   "How many houses fit?",
+   "Zoning sets minimum lot sizes and densities — divide your area by the zone's minimum and you have the theoretical count, before roads and reality take their share."
+  ],
+  [
+   "Precision of the answer?",
+   "Exact for the inputs. Tape-measure inputs give tape-measure truth: a 1% error in each side is a 2% error in area, which on an acre is 871 sq ft of fiction."
+  ]
+ ],
+ "related_prose": [
+  {
+   "t": "Drawn shapes: the "
+  },
+  {
+   "t": "Map Area Calculator",
+   "l": "/tools/map-area-calculator"
+  },
+  {
+   "t": "; missing sides: "
+  },
+  {
+   "t": "Lot Depth From Area and Width",
+   "l": "/tools/lot-depth-from-area-width"
+  },
+  {
+   "t": " and "
+  },
+  {
+   "t": "Lot Width From Area and Depth",
+   "l": "/tools/lot-width-from-area-depth"
+  },
+  {
+   "t": "; price it: the "
+  },
+  {
+   "t": "Land Cost Per Acre Calculator",
+   "l": "/tools/land-cost-per-acre-calculator"
+  },
+  {
+   "t": "."
+  }
+ ],
  "more_tools": [
   "acreage-map-calculator",
   "acres-to-hectares-converter",
