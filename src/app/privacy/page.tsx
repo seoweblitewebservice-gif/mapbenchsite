@@ -47,6 +47,7 @@ export default function PrivacyPage() {
         <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from sites or apps that use its services</a> provide more information.</p>
 
         <h2>Advertising</h2>
+        <p>Third-party vendors, including Google, use cookies to serve ads based on a user&apos;s prior visits to this website or other websites. Google&apos;s use of advertising cookies enables it and its partners to serve ads to users based on their visit to this site and/or other sites on the Internet. Users may opt out of personalised advertising by visiting Google Ads Settings: <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">https://adssettings.google.com</a>.</p>
         <p>If advertising such as Google AdSense is enabled, ads are intended to remain separate from tool inputs and results. Google and its advertising partners may use cookies, web beacons, IP addresses and similar identifiers to serve, personalize where permitted, and measure advertising in accordance with applicable consent requirements and Google&apos;s policies.</p>
         <p>Advertising does not give an advertiser access to the geographic files you open in local file tools or to a private MapBench account, because MapBench does not require user accounts for the public toolset.</p>
 
