@@ -6,169 +6,49 @@
   "center of area",
   "polygon center"
  ],
- "title": "Center of Polygon Finder: Centroid on the Map",
- "description": "Find a representative centre for any drawn area with the Center of Polygon Finder — the centroid for labels, origins and distance work. Free.",
+ "title": "Center of Polygon: Centroid from Coordinate Vertices",
+ "description": "Paste an ordered polygon outline to calculate its area centroid in a local equirectangular projection. This is the centre of the shape under that planar a…",
  "updated": "October 2026",
- "summary_sentence": "For example, an L-shaped parcel made of a 200×100 ft block and a 100×100 ft block has its centroid at the area-weighted point (83.3, 83.3) in local feet — not at the middle of its bounding box.",
- "quick_answer": "The Center of Polygon Finder computes a centre — the centroid — for an area you draw on the map. It balances the shape's area the way a balance point balances weight, giving you a point to label, measure distances from, or hand to another tool as the area's origin.",
- "steps_intro": "Every area needs a point that speaks for it. Draw the shape; take its balance point:",
+ "summary_sentence": null,
+ "quick_answer": "Paste an ordered polygon outline to calculate its area centroid in a local equirectangular projection. This is the centre of the shape under that planar approximation, not the average of its vertices and not the location that minimizes driving time.",
+ "steps_intro": "Use the controls in the workspace, then check the interpretation and limitations below.",
  "use_cases": [
   {
-   "title": "Map labels that sit right",
+   "title": "Inspect the result before reusing it",
    "body": [
     {
-     "t": "A label at a bounding-box centre can fall outside a crescent or L-shaped area entirely. The centroid respects the shape — it is where the label belongs."
-    }
-   ]
-  },
-  {
-   "title": "Distance origins for areas",
-   "body": [
-    {
-     "t": "“How far is the farm from town?” needs a point for 'the farm'. The centroid is the defensible choice — then "
-    },
-    {
-     "t": "Distance Between Two Places",
-     "l": "/tools/distance-between-two-places"
-    },
-    {
-     "t": " can measure from it."
-    }
-   ]
-  },
-  {
-   "title": "Service and delivery planning",
-   "body": [
-    {
-     "t": "A territory's centre is where its hub logic starts. Draw the territory, take its centroid, and test coverage from there in the "
-    },
-    {
-     "t": "Delivery Radius Checker",
-     "l": "/tools/delivery-radius-checker"
-    },
-    {
-     "t": "."
-    }
-   ]
-  },
-  {
-   "title": "GIS and data work",
-   "body": [
-    {
-     "t": "Reducing polygons to representative points is a daily GIS operation. This is that operation without the software stack — same area-weighted principle."
+     "t": "Paste an ordered polygon outline to calculate its area centroid in a local equirectangular projection. This is the centre of the shape under that planar approximation, not the average of its vertices and not the location that minimizes driving time. Record the input and mode with any exported or reported result."
     }
    ]
   }
  ],
  "examples": [
   {
-   "label": "Example · The L-shaped parcel",
+   "label": "Reproducible check or interpretation example",
    "body": [
     {
-     "t": "Block A: 200×100 ft (20,000 sq ft, centre 100, 50). Block B: 100×100 ft on top of A's left half (10,000 sq ft, centre 50, 150). The combined centroid is the area-weighted average: ((20,000×100 + 10,000×50) ÷ 30,000, same for y) = (83.3, 83.3) ft — pulled toward the bigger block, as it should be."
-    }
-   ]
-  },
-  {
-   "label": "Example · The square field",
-   "body": [
-    {
-     "t": "For a regular shape the centroid is the obvious middle: a square field's centre is its centre. The tool earns its keep on the shapes where 'obvious' fails — crescents, L's and donuts."
+     "t": "A small rectangle with latitude/longitude corners 0,0; 0,0.01; 0.01,0.01; 0.01,0 has its symmetric centroid near 0.005,0.005. A concave polygon can have a centroid outside the polygon; that is not necessarily a calculation error."
     }
    ]
   }
  ],
- "popular_table": {
-  "title": "Centre definitions compared",
-  "intro": "Three 'centres' an area can have — they agree on regular shapes and part company on real ones. This page computes the centroid.",
-  "columns": [
-   "Centre",
-   "Definition",
-   "Can fall outside?"
-  ],
-  "rows": [
-   [
-    "Centroid",
-    "Balance point of the area",
-    "Yes, for crescent/donut shapes"
-   ],
-   [
-    "Bounding-box centre",
-    "Middle of the smallest axis-aligned rectangle",
-    "Often"
-   ],
-   [
-    "Vertex average",
-    "Mean of the corner points",
-    "Yes — ignores where area actually is"
-   ],
-   [
-    "Pole of inaccessibility",
-    "Point furthest from the boundary",
-    "Never — the label-maker's favourite"
-   ],
-   [
-    "Medial point",
-    "Middle of the longest internal axis",
-    "Rarely"
-   ]
-  ],
-  "note": "For label placement on awkward shapes, the pole of inaccessibility (centre of the largest inscribed circle) beats the centroid; for distance origins and balance, the centroid is the standard."
- },
+ "popular_table": null,
  "faq": [
   [
-   "Is this the true centroid?",
-   "It is the area centroid of the polygon you draw, computed with the standard shoelace-weighted formula on the map's geometry. For typical parcel shapes it matches a GIS centroid to well within drawing accuracy."
-  ],
-  [
-   "Why is my centre outside the shape?",
-   "Crescent, C and donut shapes have centroids in their holes or bays — mathematically correct, occasionally awkward. For a label point that must sit inside, choose a point near the centroid that lies within the boundary."
-  ],
-  [
-   "Centroid or centre of the bounding box?",
-   "They differ exactly when the shape is irregular. The bounding-box centre ignores where the area is; the centroid weights it. For L-shaped land the difference is tens of metres."
-  ],
-  [
-   "Can I use the centre as a distance origin?",
-   "Yes — that is a primary use. Distances from a centroid are 'from the middle of the area' in the only defensible sense the phrase has."
-  ],
-  [
-   "Does it work for shapes drawn anywhere?",
-   "Yes — fields, territories, lakes (as outlines), districts. If it can be drawn as a polygon, it has a centroid."
-  ],
-  [
-   "What about a shape with a hole?",
-   "Draw the outer boundary for the gross centroid. For the net figure, most users draw the main mass; hole-aware centroiding is a GIS refinement."
-  ],
-  [
-   "Is a radius the same as driving distance?",
-   "Unrelated — this tool finds a point, not a distance. From that point, road questions belong to the routing tools."
+   "What should I verify before using this page?",
+   "Paste an ordered polygon outline to calculate its area centroid in a local equirectangular projection. This is the centre of the shape under that planar approximation, not the average of its vertices and not the location that minimizes driving time."
   ]
  ],
  "related_prose": [
   {
-   "t": "Measure the same outline's area in the "
+   "t": "For source conventions and limitations, read the "
   },
   {
-   "t": "Acreage Map Calculator",
-   "l": "/tools/acreage-map-calculator"
+   "t": "MapBench methodology",
+   "l": "/methodology"
   },
   {
-   "t": ", ring it in the "
-  },
-  {
-   "t": "Buffer Zone Map",
-   "l": "/tools/buffer-zone-map"
-  },
-  {
-   "t": ", and list what is inside it with the "
-  },
-  {
-   "t": "Cities Within a Drawn Area Finder",
-   "l": "/tools/cities-within-drawn-area-finder"
-  },
-  {
-   "t": "."
+   "t": ". "
   }
  ],
  "more_tools": [

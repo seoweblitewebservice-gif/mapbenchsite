@@ -6,160 +6,40 @@
   "forecast lat long",
   "weather at coordinates"
  ],
- "title": "Weather by Coordinates Context: Pin the Point",
- "description": "Pin exact coordinates for weather services with the Weather by Coordinates Context page — the lat/long pair forecast apps actually want. Free.",
+ "title": "Weather by Coordinates Context: Current Capabilities & Limits",
+ "description": "This page currently provides coordinate selection, formatting and map position. Live weather observations and forecasts are not included. Use the workspac…",
  "updated": "October 2026",
- "summary_sentence": "For example, a hilltop, a lake's far shore and a farm's back field share one town forecast but live three different weathers — the coordinates are how you ask about the place itself.",
- "quick_answer": "The Weather by Coordinates Context page pins the exact coordinates of a point so you can paste them into weather services that accept latitude and longitude. Find the point, copy the pair, and ask your forecast app about that spot — not the nearest town's centre, yours.",
- "steps_intro": "Forecasts are only as local as the point you give them:",
+ "summary_sentence": null,
+ "quick_answer": "This page currently provides coordinate selection, formatting and map position. Live weather observations and forecasts are not included. Use the workspace only for the available operation; a label in the URL does not mean that a specialist dataset or model has been queried.",
+ "steps_intro": "Use the controls in the workspace, then check the interpretation and limitations below.",
  "use_cases": [
   {
-   "title": "Microclimate honesty",
+   "title": "Use the available operation",
    "body": [
     {
-     "t": "Elevation and water bend weather street by street. The pinned pair lets forecast services model your hill, not the valley's average — elevation context from the "
-    },
-    {
-     "t": "Elevation Finder",
-     "l": "/tools/elevation-finder"
-    },
-    {
-     "t": "."
-    }
-   ]
-  },
-  {
-   "title": "Fieldwork and events",
-   "body": [
-    {
-     "t": "The site, the route's high point, the regatta's start line: points first, forecasts second — the working order of outdoor planning."
-    }
-   ]
-  },
-  {
-   "title": "Photography outings",
-   "body": [
-    {
-     "t": "Sunrise chasers check the exact overlook's forecast, not the city's — then the pair rides along in the trip notes."
-    }
-   ]
-  },
-  {
-   "title": "Garden and farm corners",
-   "body": [
-    {
-     "t": "Frost pockets are coordinate-scale phenomena. Pin the low field, ask its forecast, plant accordingly."
+     "t": "Coordinate selection, formatting and map position. Live weather observations and forecasts are not included."
     }
    ]
   }
  ],
- "examples": [
-  {
-   "label": "Example · Town forecast, hill weather",
-   "body": [
-    {
-     "t": "A town's forecast is modelled at its reference point, often the valley floor. A pinned point 300 metres higher can honestly carry different wind and temperature — the pair is the difference."
-    }
-   ]
-  },
-  {
-   "label": "Example · The format apps want",
-   "body": [
-    {
-     "t": "Decimal latitude/longitude is the lingua franca: the copied pair pastes into weather services, map apps and logbooks without conversion drama."
-    }
-   ]
-  }
- ],
- "popular_table": {
-  "title": "What this page does — and hands off",
-  "intro": "Scope honesty: the pinning is ours, the forecasting is the specialists'.",
-  "columns": [
-   "Job",
-   "Owner"
-  ],
-  "rows": [
-   [
-    "Pin the exact point",
-    "This page"
-   ],
-   [
-    "Copy clean coordinates",
-    "This page"
-   ],
-   [
-    "Model the atmosphere",
-    "Weather services"
-   ],
-   [
-    "Issue warnings",
-    "National weather services — always heed them directly"
-   ]
-  ],
-  "note": "No forecast is computed here, and no warning should ever be sourced from a coordinates page. Pin here; forecast with the services built for it."
- },
+ "examples": null,
+ "popular_table": null,
  "faq": [
   [
-   "Which forecast model does it use?",
-   "None — this page pins coordinates for use in weather services; it does not compute a forecast. The honesty matters: forecast quality lives with the meteorological services, and this page's job is giving them your exact point."
-  ],
-  [
-   "Can I use the tool without sharing my precise location?",
-   "Yes — find any point on the map; your location is optional input, never a requirement."
-  ],
-  [
-   "Why might a boundary or place name look different elsewhere?",
-   "Place labels around a point come from open data; weather services label their grid points independently, so names can differ while coordinates agree."
-  ],
-  [
-   "Does MapBench store my browser location?",
-   "No."
-  ],
-  [
-   "Which format are the coordinates?",
-   "Decimal degrees (WGS84) — the format weather services accepting lat/long expect."
-  ],
-  [
-   "Why not the town name in the app?",
-   "Town-level forecasts use the town's reference point. Coordinates let the service grid your actual spot — worth it wherever terrain varies."
-  ],
-  [
-   "Severe weather?",
-   "Go to your national weather service's warnings directly. A coordinates page is a planning convenience, never a safety source."
-  ],
-  [
-   "Marine weather?",
-   "Pin the harbour or the course; marine forecasts are specialist products the pinned pair unlocks in the proper services."
-  ],
-  [
-   "Historical weather?",
-   "A different product (archives and reanalysis). This page serves the forecast workflow: pin, copy, ask."
+   "What should I verify before using this page?",
+   "This page currently provides coordinate selection, formatting and map position. Live weather observations and forecasts are not included. Use the workspace only for the available operation; a label in the URL does not mean that a specialist dataset or model has been queried."
   ]
  ],
  "related_prose": [
   {
-   "t": "Heights: the "
+   "t": "For source conventions and limitations, read the "
   },
   {
-   "t": "Elevation Finder",
-   "l": "/tools/elevation-finder"
+   "t": "MapBench methodology",
+   "l": "/methodology"
   },
   {
-   "t": "; air: "
-  },
-  {
-   "t": "Air Quality Location",
-   "l": "/tools/air-quality-location"
-  },
-  {
-   "t": "; your point: "
-  },
-  {
-   "t": "Find My Location",
-   "l": "/tools/find-my-location"
-  },
-  {
-   "t": "."
+   "t": ". "
   }
  ],
  "more_tools": [

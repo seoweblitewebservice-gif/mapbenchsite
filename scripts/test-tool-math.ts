@@ -1,0 +1,22 @@
+import assert from 'node:assert/strict';
+import { distanceKm, destination, bearingBetween, midpoint, ringAreaKm2, EARTH_R_KM, kmTo, toKm, parseCoordPair } from '../src/lib/geo';
+import { fuelEstimate } from '../src/lib/tripMath';
+const near = (actual: number, expected: number, tolerance = 1e-8) => assert.ok(Math.abs(actual - expected) <= tolerance, `${actual} != ${expected}`);
+const origin = { lat: 0, lng: 0 };
+near(distanceKm(origin, origin), 0);
+near(distanceKm(origin, { lat: 0, lng: 90 }), Math.PI * EARTH_R_KM / 2);
+near(distanceKm({ lat: 90, lng: 0 }, { lat: -90, lng: 0 }), Math.PI * EARTH_R_KM);
+near(distanceKm({ lat: 0, lng: 179 }, { lat: 0, lng: -179 }), 2 * Math.PI * EARTH_R_KM / 180);
+near(bearingBetween(origin, { lat: 0, lng: 1 }), 90);
+near(midpoint(origin, { lat: 0, lng: 2 }).lng, 1);
+near(distanceKm(origin, destination(origin, 70, 18)), 18);
+for (const unit of ['km', 'mi', 'm', 'ft', 'nmi'] as const) near(toKm(kmTo(12.34, unit), unit), 12.34);
+near(ringAreaKm2([[0,0],[0.001,0],[0.001,0.001],[0,0.001]]) * 1e6, 12364.3459, 0.01);
+assert.equal(parseCoordPair('91, 0'), null);
+assert.deepEqual(parseCoordPair('-12.5, 44'), { lat: -12.5, lng: 44 });
+near(fuelEstimate(200, 5, 2, 'l100')!.cost, 20);
+// 100 miles / 25 mpg = 4 gallons; at $4/gallon the cost is $16, not litres × $4.
+near(fuelEstimate(100 / 0.621371, 25, 4, 'mpg')!.cost, 16);
+assert.equal(fuelEstimate(10, 0, 4, 'mpg'), null);
+assert.equal(fuelEstimate(-10, 5, 2, 'l100'), null);
+console.log('PASS: geometry, antimeridian, coordinate parsing, unit round trips, published lot example, metric/US fuel regression cases.');

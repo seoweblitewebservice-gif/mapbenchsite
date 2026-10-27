@@ -6,171 +6,49 @@
   "magnetic north",
   "declination map"
  ],
- "title": "True North vs Magnetic North: Declination Guide",
- "description": "Understand the difference between true and magnetic north with True North vs Magnetic North — declination, compass correction and worked examples. Free.",
+ "title": "True North vs Magnetic North: Modelled Compass Correction",
+ "description": "Select a coordinate and date to request a WMM magnetic-declination estimate. Enter a true bearing to see its magnetic equivalent. East and west declinatio…",
  "updated": "October 2026",
- "summary_sentence": "For example, in New York your compass needle points about 13° west of true north, while in Los Angeles it points about 12° east of it — same country, opposite corrections, which is why this page exists.",
- "quick_answer": "True North vs Magnetic North explains the angle between the north your map uses and the north your compass finds — the declination. Learn which way your local needle leans, how much, and how to correct a bearing, so compass and map courses stop disagreeing by hundreds of metres.",
- "steps_intro": "Two norths, one needle — here is the angle between them:",
+ "summary_sentence": null,
+ "quick_answer": "Select a coordinate and date to request a WMM magnetic-declination estimate. Enter a true bearing to see its magnetic equivalent. East and west declination change the correction direction; the model result is not a measurement of interference around a physical compass.",
+ "steps_intro": "Use the controls in the workspace, then check the interpretation and limitations below.",
  "use_cases": [
   {
-   "title": "Map and compass navigation",
+   "title": "Inspect the result before reusing it",
    "body": [
     {
-     "t": "The classic use: convert map bearings to compass bearings (and back) with your local declination before the leg, not after the confusion. The "
-    },
-    {
-     "t": "Magnetic Declination",
-     "l": "/tools/magnetic-declination"
-    },
-    {
-     "t": " tool gives the figure for your exact point."
-    }
-   ]
-  },
-  {
-   "title": "Setting a compass's declination adjustment",
-   "body": [
-    {
-     "t": "Adjustable compasses take the correction once and then agree with the map all trip. This page explains what number you are dialling in and why it differs by region."
-    }
-   ]
-  },
-  {
-   "title": "Solar and antenna alignment",
-   "body": [
-    {
-     "t": "Panels and dishes are aligned to true bearings; installers working from a compass reading without correction can miss by the full declination — over 15° in the Pacific Northwest."
-    }
-   ]
-  },
-  {
-   "title": "Understanding old maps and surveys",
-   "body": [
-    {
-     "t": "Historic surveys ran on magnetic bearings of their day. Declination drift since then is part of why an 1890 bearing does not retrace cleanly with a modern needle."
+     "t": "Select a coordinate and date to request a WMM magnetic-declination estimate. Enter a true bearing to see its magnetic equivalent. East and west declination change the correction direction; the model result is not a measurement of interference around a physical compass. Record the input and mode with any exported or reported result."
     }
    ]
   }
  ],
  "examples": [
   {
-   "label": "Example · Correcting a bearing in New York",
+   "label": "Reproducible check or interpretation example",
    "body": [
     {
-     "t": "Declination near New York is about 13°W. A map bearing of 90° (due east) needs a compass course of 90 + 13 = 103° — with west declination, add the angle to go from true to magnetic."
-    }
-   ]
-  },
-  {
-   "label": "Example · The cost of ignoring it",
-   "body": [
-    {
-     "t": "Walk a one-mile leg with a 13° error and you finish about 0.23 miles — roughly 1,200 feet — off to the side of your target (the offset is the leg length times the tangent of the error). Small angle, long walk, missed cabin."
+     "t": "For an illustrative east declination of 5°, a true bearing of 100° becomes 95° magnetic. This arithmetic example does not assert that any selected location has 5° declination; calculate the model for your date and point."
     }
    ]
   }
  ],
- "popular_table": {
-  "title": "Approximate declination, mid-2020s (WMM2025 era)",
-  "intro": "Rounded values for orientation — use the declination tool or NOAA for a current figure at your point.",
-  "columns": [
-   "Place",
-   "Declination",
-   "Needle points"
-  ],
-  "rows": [
-   [
-    "Seattle area",
-    "≈15°E",
-    "East of true north"
-   ],
-   [
-    "Los Angeles",
-    "≈12°E",
-    "East of true north"
-   ],
-   [
-    "Denver",
-    "≈8°E",
-    "East of true north"
-   ],
-   [
-    "Chicago",
-    "≈3°W",
-    "West of true north"
-   ],
-   [
-    "New York",
-    "≈13°W",
-    "West of true north"
-   ],
-   [
-    "London",
-    "≈1°E",
-    "Nearly true north"
-   ]
-  ],
-  "note": "Values drift every year as the magnetic pole wanders — currently a few tenths of a degree per decade in most of the US, faster in places. Any printed figure ages; check the year on it."
- },
+ "popular_table": null,
  "faq": [
   [
-   "Which north does GPS use?",
-   "GPS positions are computed against true (geographic) north references — coordinates and map bearings are true. Only the compass needle answers to magnetic north, which is why phone compasses apply a model-based correction."
-  ],
-  [
-   "What is the agonic line?",
-   "The line of zero declination, where compass and true north agree. In the mid-2020s it runs through the US Midwest-Gulf region and drifts westward over time — Chicago sits just west of it, hence its small westerly value."
-  ],
-  [
-   "How fast does declination change?",
-   "Typically 0.05–0.15° per year in populated latitudes — Olympia, Washington's published figure changes about 0.12° per year westward. Over a decade on a stored map, that is a degree or more of silent error."
-  ],
-  [
-   "Does declination matter for short walks?",
-   "Barely — over a few hundred yards, even 15° is a modest offset and landmarks rescue you. It matters as legs lengthen and visibility shrinks: fog, forest, open water, night."
-  ],
-  [
-   "Why does my phone compass disagree with my handheld?",
-   "Phones apply a magnetic-model correction to display true north; a baseplate compass shows raw magnetic. Set the phone to magnetic in its settings, or adjust the baseplate, and the two agree."
-  ],
-  [
-   "What about grid north?",
-   "Map grids (UTM, national grids) tilt slightly against true north too — a third north, usually within a degree or two at mid-latitudes. Serious map work keeps all three straight; most walkers only ever meet two."
-  ],
-  [
-   "Did explorers really navigate without knowing this?",
-   "They learned it the empirical way — variation was charted from the 1700s (Halley's Atlantic chart of 1701 mapped it), and good navigators carried local values the way they carried tide tables."
-  ],
-  [
-   "Where is the magnetic north pole now?",
-   "In the Canadian Arctic, a few hundred kilometres from the geographic pole, drifting toward Siberia at roughly 30–50 km per year in recent decades (published estimates). That drift is the engine under every number on this page."
+   "What should I verify before using this page?",
+   "Select a coordinate and date to request a WMM magnetic-declination estimate. Enter a true bearing to see its magnetic equivalent. East and west declination change the correction direction; the model result is not a measurement of interference around a physical compass."
   ]
  ],
  "related_prose": [
   {
-   "t": "Your figure: the "
+   "t": "For source conventions and limitations, read the "
   },
   {
-   "t": "Magnetic Declination",
-   "l": "/tools/magnetic-declination"
+   "t": "MapBench methodology",
+   "l": "/methodology"
   },
   {
-   "t": " tool; bearings: the "
-  },
-  {
-   "t": "Bearing Calculator",
-   "l": "/tools/bearing-calculator"
-  },
-  {
-   "t": "; visualise: the "
-  },
-  {
-   "t": "Compass Bearing Visualizer",
-   "l": "/tools/compass-bearing-visualizer"
-  },
-  {
-   "t": "."
+   "t": ". "
   }
  ],
  "more_tools": [

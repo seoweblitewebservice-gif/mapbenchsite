@@ -1,4 +1,5 @@
 "use client";
+import { fuelEstimate } from "@/lib/tripMath";
 import { useMemo, useState } from "react";
 import { distanceKm, fmt, fmtDist, type UnitKey } from "@/lib/geo";
 import { AIRPORTS } from "@/data/airports";
@@ -68,8 +69,9 @@ export function FuelCostTool() {
   };
 
   const distKm = basis === "road" ? roadKm : straightKm;
-  const litres = distKm !== null ? (unit === "l100" ? (distKm * consumption) / 100 : (distKm * 0.621371 / mpg) * 3.78541) : null;
-  const cost = litres !== null ? litres * (unit === "l100" ? price : perGal) : null;
+  const estimate = distKm !== null ? fuelEstimate(distKm, unit === "l100" ? consumption : mpg, unit === "l100" ? price : perGal, unit) : null;
+  const litres = estimate?.litres ?? null;
+  const cost = estimate?.cost ?? null;
 
   return (
     <div className="grid gap-4 lg:grid-cols-2">
@@ -119,7 +121,7 @@ export function NearestAirportTool() {
     <div className="mx-auto max-w-2xl space-y-4">
       <div className="card p-4">
         <PlaceField label="Your location" value={point} onChange={setPoint} placeholder="Search a city or click coordinates…" />
-        <p className="mt-2 text-xs text-mute">Compared against a curated dataset of ~90 major international airports; distances are great-circle to each field's coordinates.</p>
+        <p className="mt-2 text-xs text-mute">Compared against a curated dataset of ~90 major international airports; distances are great-circle to each field’s coordinates.</p>
       </div>
       {nearest.length > 0 && (
         <div className="card p-4">

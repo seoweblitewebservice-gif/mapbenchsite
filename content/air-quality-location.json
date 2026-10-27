@@ -6,174 +6,40 @@
   "aqi by location",
   "air quality coordinates"
  ],
- "title": "Air Quality Location Pin: Coordinates for AQI",
- "description": "Pin a place and copy stable coordinates for air-quality lookups with the Air Quality Location Pin — for OpenAQ and AQI services. Free.",
+ "title": "Air Quality Location Pin: Current Capabilities & Limits",
+ "description": "This page currently provides coordinate selection and map position. This workspace does not query air-quality measurements or calculate an AQI. Use the wo…",
  "updated": "October 2026",
- "summary_sentence": "For example, a researcher tracking one neighbourhood's air pins it once and reuses the same coordinates in every AQI platform — the station data changes, the pin does not.",
- "quick_answer": "The Air Quality Location Pin gives stable latitude and longitude for a place so you can run air-quality lookups on open AQI platforms that think in coordinates. Pin the place, copy the pair, use it in your AQI service — the coordinate step, done once and done exactly.",
- "steps_intro": "AQI platforms speak coordinates. Get yours pinned precisely:",
+ "summary_sentence": null,
+ "quick_answer": "This page currently provides coordinate selection and map position. This workspace does not query air-quality measurements or calculate an AQI. Use the workspace only for the available operation; a label in the URL does not mean that a specialist dataset or model has been queried.",
+ "steps_intro": "Use the controls in the workspace, then check the interpretation and limitations below.",
  "use_cases": [
   {
-   "title": "Neighbourhood air research",
+   "title": "Use the available operation",
    "body": [
     {
-     "t": "Consistent coordinates across platforms make readings comparable — the same pin in OpenAQ-style services, every time."
-    }
-   ]
-  },
-  {
-   "title": "Health and asthma planning",
-   "body": [
-    {
-     "t": "Families checking a new area's air start with a place; the pin turns the place into the query every platform accepts."
-    }
-   ]
-  },
-  {
-   "title": "Data projects",
-   "body": [
-    {
-     "t": "Joining air data to other location data needs one canonical pair per site. The "
-    },
-    {
-     "t": "Batch Geocoder",
-     "l": "/tools/batch-geocoder"
-    },
-    {
-     "t": " scales the same discipline to lists."
-    }
-   ]
-  },
-  {
-   "title": "Sensor siting notes",
-   "body": [
-    {
-     "t": "A proposed sensor location recorded as coordinates is a decision others can revisit exactly — not 'near the school', but the corner."
+     "t": "Coordinate selection and map position. This workspace does not query air-quality measurements or calculate an AQI."
     }
    ]
   }
  ],
- "examples": [
-  {
-   "label": "Example · One pin, many platforms",
-   "body": [
-    {
-     "t": "Copy the pair once and the same location queries every coordinate-based service identically — the reproducibility research quietly depends on."
-    }
-   ]
-  },
-  {
-   "label": "Example · Precision matters",
-   "body": [
-    {
-     "t": "In a city with sharp pollution gradients (near a port, a motorway, a valley), a kilometre of pin error is a different airshed. Pin the exact corner, not the district."
-    }
-   ]
-  }
- ],
- "popular_table": {
-  "title": "What this pin is and is not",
-  "intro": "The honest scope of the page — coordinates here, air data on the platforms built for it.",
-  "columns": [
-   "Question",
-   "This page",
-   "AQI platforms"
-  ],
-  "rows": [
-   [
-    "Coordinates of a place",
-    "Yes — the pin",
-    "Consume them"
-   ],
-   [
-    "AQI values",
-    "No",
-    "Yes — their craft"
-   ],
-   [
-    "Station data",
-    "No",
-    "Yes"
-   ],
-   [
-    "Health guidance",
-    "No",
-    "Partially — read theirs"
-   ],
-   [
-    "Your location stored?",
-    "No",
-    "Their policies govern"
-   ]
-  ],
-  "note": "Air quality varies by hour and by street. A platform reading is a measurement at a station, not a property of your pin — the pin just asks the question precisely."
- },
+ "examples": null,
+ "popular_table": null,
  "faq": [
   [
-   "Are AQI values shown here?",
-   "No — this page provides the coordinates; AQI readings live on the open air-quality platforms the coordinates are for. The division is deliberate and stated on the page."
-  ],
-  [
-   "Can I use the tool without sharing my precise location?",
-   "Yes — pin a place by searching or clicking; your browser's own location is only used if you ask a tool to use it."
-  ],
-  [
-   "Why might a boundary or place name look different elsewhere?",
-   "Place data varies by source. The coordinates are the stable part — names are labels pinned to them."
-  ],
-  [
-   "Does MapBench store my browser location?",
-   "No. The pin is yours to copy; nothing about your position is kept by this page."
-  ],
-  [
-   "Which AQI services take coordinates?",
-   "Open, coordinate-based platforms such as OpenAQ-style services and most air-quality APIs — paste the pair wherever a lat/lng is asked."
-  ],
-  [
-   "How precise should the pin be?",
-   "Four to five decimals (about 1–10 m) suits station-level questions; two decimals names the district. Match precision to the question."
-  ],
-  [
-   "Can I pin several places?",
-   "One at a time here; lists belong to the Batch Geocoder, which returns coordinate tables."
-  ],
-  [
-   "The nearest station is far away.",
-   "Then the platform's reading is a regional estimate — the pin still asks precisely; the answer's coarseness is the network's, and worth knowing."
-  ],
-  [
-   "Can I pin a school or workplace?",
-   "Any place with a location can be pinned. Sensitive places deserve the same discretion online as off — pin the area, not the classroom, for public posts."
-  ],
-  [
-   "Do coordinates expire?",
-   "No — the pin is stable by design. Stations open and close around it; that is the platform's changelog, not yours."
+   "What should I verify before using this page?",
+   "This page currently provides coordinate selection and map position. This workspace does not query air-quality measurements or calculate an AQI. Use the workspace only for the available operation; a label in the URL does not mean that a specialist dataset or model has been queried."
   ]
  ],
  "related_prose": [
   {
-   "t": "General coordinates: "
+   "t": "For source conventions and limitations, read the "
   },
   {
-   "t": "Address to Coordinates",
-   "l": "/tools/address-to-coordinates"
+   "t": "MapBench methodology",
+   "l": "/methodology"
   },
   {
-   "t": "; lists: the "
-  },
-  {
-   "t": "Batch Geocoder",
-   "l": "/tools/batch-geocoder"
-  },
-  {
-   "t": "; place context: "
-  },
-  {
-   "t": "Address to County Lookup",
-   "l": "/tools/address-to-county-lookup"
-  },
-  {
-   "t": "."
+   "t": ". "
   }
  ],
  "more_tools": [

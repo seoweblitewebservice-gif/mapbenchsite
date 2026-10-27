@@ -130,7 +130,7 @@ function useCases(tool: ToolDef): string[] {
   return rotate(cases, tool.slug, 3);
 }
 
-export default function ToolContent({ tool }: { tool: ToolDef }) {
+export default function ToolContent({ tool, focused = false }: { tool: ToolDef; focused?: boolean }) {
   const category = CATEGORIES.find((c) => c.id === tool.category)!;
   const copy = TOOL_COPY[tool.slug] || fallbackAbout(tool);
   const examples = useMemo(() => buildExamples(tool), [tool]);
@@ -145,15 +145,12 @@ export default function ToolContent({ tool }: { tool: ToolDef }) {
 
   return (
     <div className="doc mx-auto max-w-3xl space-y-8">
-      <section aria-label="Quick answer" className="rounded-lg border border-line bg-card px-4 py-3">
-        <p className="!mb-0 text-[15px]"><strong>Quick answer:</strong> {tool.short} Coverage: {tool.scope}. No account is required.</p>
-      </section>
-
       <section aria-label="About this tool" data-content-type="tool-explanation">
         <h2 className="font-display text-2xl font-bold tracking-tight">{copy.h2}</h2>
         {copy.paras.map((p, i) => <p key={i} className="mt-3">{p}</p>)}
       </section>
 
+      {!focused && <>
       <section aria-label="When this tool is useful">
         <h2 className="font-display text-2xl font-bold tracking-tight">When this tool is useful</h2>
         <p className="mt-3">Use {tool.name} when the question matches the method the page actually uses. Typical workflows include:</p>
@@ -175,6 +172,8 @@ export default function ToolContent({ tool }: { tool: ToolDef }) {
         </ul>
       </section>
 
+      </>}
+
       {tips.length > 0 && (
         <section aria-label="Common mistakes and interpretation">
           <h2 className="font-display text-2xl font-bold tracking-tight">How to interpret the result</h2>
@@ -195,11 +194,7 @@ export default function ToolContent({ tool }: { tool: ToolDef }) {
         </section>
       )}
 
-      <section aria-label="Data and methodology note">
-        <h2 className="font-display text-2xl font-bold tracking-tight">Data &amp; methodology</h2>
-        <p className="mt-3">{tool.method ? `${tool.method} ` : ""}{CATEGORY_DATA_NOTE[tool.category]}</p>
-        <p className="mt-2 text-sm text-mute">For source details, licences and model limitations, see <Link href="/data-sources" className="font-bold text-brand-strong hover:underline">Data Sources</Link> and <Link href="/methodology" className="font-bold text-brand-strong hover:underline">Methodology</Link>.</p>
-      </section>
+
 
       {glossary.length > 0 && (
         <section aria-label="Key terms">

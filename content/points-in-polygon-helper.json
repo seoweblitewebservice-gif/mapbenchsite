@@ -6,156 +6,40 @@
   "pip",
   "inside polygon"
  ],
- "title": "Points in Polygon Helper: Inside or Outside?",
- "description": "Test whether points fall inside a polygon with the Points in Polygon Helper — ray-casting point-in-polygon checks for lists of coordinates. Free.",
+ "title": "Points in Polygon Helper: Current Capabilities & Limits",
+ "description": "This page currently provides polygon drawing and area measurement. No separate point list is tested for polygon containment. Use the workspace only for th…",
  "updated": "October 2026",
- "summary_sentence": "For example, the test point 40.7832, −73.9666 falls inside a drawn four-corner parcel while 40.7580, −73.9855 falls outside it — two verdicts from one ray-casting pass each.",
- "quick_answer": "The Points in Polygon Helper tests whether coordinate points lie inside a polygon — the point-in-polygon question behind geofencing, service areas and jurisdiction checks. Supply the polygon and the points and read an inside or outside verdict for each, computed by ray casting.",
- "steps_intro": "Cast a ray, count the crossings — odd is in, even is out:",
+ "summary_sentence": null,
+ "quick_answer": "This page currently provides polygon drawing and area measurement. No separate point list is tested for polygon containment. Use the workspace only for the available operation; a label in the URL does not mean that a specialist dataset or model has been queried.",
+ "steps_intro": "Use the controls in the workspace, then check the interpretation and limitations below.",
  "use_cases": [
   {
-   "title": "Geofence and service-area checks",
+   "title": "Use the available operation",
    "body": [
     {
-     "t": "Is this customer inside the delivery polygon? The verdict list is the operations answer — drawn zones from the "
-    },
-    {
-     "t": "Service Area Map",
-     "l": "/tools/service-area-map"
-    },
-    {
-     "t": " family get audited here point by point."
-    }
-   ]
-  },
-  {
-   "title": "Data cleaning",
-   "body": [
-    {
-     "t": "A spreadsheet of sites claims a county; test the coordinates against the county polygon and the impostors confess. At scale this is a GIS join; for a list, it is this page."
-    }
-   ]
-  },
-  {
-   "title": "Jurisdiction and eligibility spot checks",
-   "body": [
-    {
-     "t": "School zones, tax districts, conservation areas — when the question is one point and one boundary, the helper answers without a GIS installation."
-    }
-   ]
-  },
-  {
-   "title": "Learning spatial algorithms",
-   "body": [
-    {
-     "t": "Ray casting is the undergraduate classic: cast a horizontal ray, count edge crossings, odd means inside. Testing your own implementation against this page is the homework's honest mirror."
+     "t": "Polygon drawing and area measurement. No separate point list is tested for polygon containment."
     }
    ]
   }
  ],
- "examples": [
-  {
-   "label": "Example · Two verdicts",
-   "body": [
-    {
-     "t": "Against a four-corner test parcel (corners near 40.7663–40.8001 N, −73.9762 to −73.9570 W): the centre point 40.7832, −73.9666 is inside — any ray crosses once. Times Square's 40.7580, −73.9855 is outside — it sits south-west of every corner."
-    }
-   ]
-  },
-  {
-   "label": "Example · The boundary itself",
-   "body": [
-    {
-     "t": "A point exactly on an edge is the algorithm's philosophy exam: floating-point geometry rarely lands exactly on, but surveyed points can. The helper reports boundary points as their own verdict rather than flipping a coin — check its note for the convention in force."
-    }
-   ]
-  }
- ],
- "popular_table": {
-  "title": "How the verdict is reached",
-  "intro": "Ray casting in four facts.",
-  "columns": [
-   "Step",
-   "What happens"
-  ],
-  "rows": [
-   [
-    "1. Cast",
-    "A ray leaves the test point in a fixed direction (usually east)"
-   ],
-   [
-    "2. Count",
-    "Each polygon edge the ray crosses adds one"
-   ],
-   [
-    "3. Decide",
-    "Odd crossings → inside; even → outside"
-   ],
-   [
-    "4. Edges cases",
-    "Vertices and boundary points follow a stated convention — never luck"
-   ]
-  ],
-  "note": "The method works for any simple polygon, concave included — the parcel with a bite taken out is where naive bounding-box tests fail and ray casting earns its keep."
- },
+ "examples": null,
+ "popular_table": null,
  "faq": [
   [
-   "What counts as the polygon?",
-   "A closed ring of coordinates in order — the boundary the points are tested against. Self-intersecting rings produce meaningless verdicts; keep the boundary simple, as with area measurement."
-  ],
-  [
-   "Points exactly on the boundary?",
-   "Reported under a stated boundary convention (commonly counted as inside for geofencing, or flagged separately). For legal boundary questions, only the survey decides — the helper flags the case rather than ruling on it."
-  ],
-  [
-   "Holes in the polygon?",
-   "A courtyard or exclusion zone is a hole ring: points inside the hole are outside the effective polygon. Supply the hole ring where the tool accepts one; otherwise test and invert manually."
-  ],
-  [
-   "Which coordinate order?",
-   "Latitude, longitude — this site's convention. Longitude-first lists are the classic silent failure: the polygon lands in the ocean and every verdict is 'outside', correctly and uselessly."
-  ],
-  [
-   "Curved Earth effects?",
-   "At parcel and city scales the planar test is exact enough; continental polygons deserve spherical point-in-polygon, which the geodesy tools discuss. Match the method to the polygon's size."
-  ],
-  [
-   "Thousands of points?",
-   "Lists here; databases and GIS spatial joins at industrial scale. The verdicts must agree — spot-check the industrial output against this page's first principles."
-  ],
-  [
-   "Multiple polygons (a district of zones)?",
-   "Test each polygon in turn; a point's membership is per-polygon, and overlaps are possible where zones overlap. The helper keeps the questions separate so the answers stay true."
-  ],
-  [
-   "Why not use a bounding box?",
-   "Boxes are the fast pre-filter, not the verdict: a concave polygon's box contains much outside ground. Ray casting is the verdict the box only advertises."
+   "What should I verify before using this page?",
+   "This page currently provides polygon drawing and area measurement. No separate point list is tested for polygon containment. Use the workspace only for the available operation; a label in the URL does not mean that a specialist dataset or model has been queried."
   ]
  ],
  "related_prose": [
   {
-   "t": "Draw the area: the "
+   "t": "For source conventions and limitations, read the "
   },
   {
-   "t": "Map Area Calculator",
-   "l": "/tools/map-area-calculator"
+   "t": "MapBench methodology",
+   "l": "/methodology"
   },
   {
-   "t": "; its boundary: the "
-  },
-  {
-   "t": "Perimeter Calculator",
-   "l": "/tools/perimeter-calculator"
-  },
-  {
-   "t": "; centres: the "
-  },
-  {
-   "t": "Center of Polygon",
-   "l": "/tools/center-of-polygon"
-  },
-  {
-   "t": "."
+   "t": ". "
   }
  ],
  "more_tools": [

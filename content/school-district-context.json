@@ -6,172 +6,49 @@
   "school zone map",
   "what school district"
  ],
- "title": "School District Context: Verify Officially",
- "description": "Build school district context from county, city and address tools with School District Context — then verify on official district sites. Free.",
+ "title": "School District Context: Census Coordinate Geography",
+ "description": "Select a US coordinate to query Census school-district geography. The result reports the available district fields for that point and source vintage. It i…",
  "updated": "October 2026",
- "summary_sentence": "For example, a family weighing two houses learns both sit in the same county and city but the page walks them to the official district lookup for the one fact that decides — because districts split streets, not just towns.",
- "quick_answer": "School District Context is the honest starting point for district questions: use the county, city and address tools to frame an address, then verify the assignment on official district sites. Districts split along lines no general map draws cleanly, so this builds context first, then sends you to the authority.",
- "steps_intro": "Context here, verdict from the district — in that order:",
+ "summary_sentence": null,
+ "quick_answer": "Select a US coordinate to query Census school-district geography. The result reports the available district fields for that point and source vintage. It is a geography lookup, not a promise of enrollment eligibility, school assignment or admission.",
+ "steps_intro": "Use the controls in the workspace, then check the interpretation and limitations below.",
  "use_cases": [
   {
-   "title": "House hunting with school stakes",
+   "title": "Inspect the result before reusing it",
    "body": [
     {
-     "t": "Frame each candidate address — county from "
-    },
-    {
-     "t": "Address to County Lookup",
-     "l": "/tools/address-to-county-lookup"
-    },
-    {
-     "t": ", city and ZIP likewise — then run the district's own lookup before the offer."
-    }
-   ]
-  },
-  {
-   "title": "Boundary-edge addresses",
-   "body": [
-    {
-     "t": "Streets split by district lines are exactly where listings get vague. Context tools narrow it; the official site settles it."
-    }
-   ]
-  },
-  {
-   "title": "Relocating employees and families",
-   "body": [
-    {
-     "t": "HR packets use this sequence: locate, contextualise, verify officially. The page exists to keep the middle step honest."
-    }
-   ]
-  },
-  {
-   "title": "Understanding a district's shape",
-   "body": [
-    {
-     "t": "Districts follow history, not grids. The county and city frame explains why a district map looks the way it does."
+     "t": "Select a US coordinate to query Census school-district geography. The result reports the available district fields for that point and source vintage. It is a geography lookup, not a promise of enrollment eligibility, school assignment or admission. Record the input and mode with any exported or reported result."
     }
    ]
   }
  ],
  "examples": [
   {
-   "label": "Example · Same city, two districts",
+   "label": "Reproducible check or interpretation example",
    "body": [
     {
-     "t": "City limits and district limits rarely coincide — suburbs especially can host several districts inside one municipality. Context says 'check officially'; the official lookup says which."
-    }
-   ]
-  },
-  {
-   "label": "Example · The ZIP trap",
-   "body": [
-    {
-     "t": "ZIP codes serve mail, not schools; a ZIP can span districts. The ZIP tool belongs in the context pile ("
-    },
-    {
-     "t": "What ZIP Code Am I In",
-     "l": "/tools/what-zip-code-am-i-in"
-    },
-    {
-     "t": ") and never in the verdict."
+     "t": "For a point close to a district boundary, first inspect the map pin and record its coordinates. Compare the returned district identifier with the local district office before making an enrollment decision; a county name alone is not enough."
     }
    ]
   }
  ],
- "popular_table": {
-  "title": "The context stack, in order",
-  "intro": "Each layer frames the next — and the last step is deliberately off this site.",
-  "columns": [
-   "Step",
-   "Tool or source",
-   "Gives"
-  ],
-  "rows": [
-   [
-    "1. Locate the address",
-    "Address to Coordinates",
-    "The exact point"
-   ],
-   [
-    "2. County and city",
-    "County and city lookups",
-    "The administrative frame"
-   ],
-   [
-    "3. ZIP",
-    "ZIP tools",
-    "Postal context (not school truth)"
-   ],
-   [
-    "4. Verify",
-    "The district's official lookup",
-    "The assignment — the only verdict that counts"
-   ]
-  ],
-  "note": "School assignment drives housing decisions and prices. Anything short of the district's own confirmation is research, and this page labels itself as exactly that."
- },
+ "popular_table": null,
  "faq": [
   [
-   "Is this the official assignment?",
-   "No — explicitly not. This page builds context and routes you to the school district's official lookup for the assignment itself. Enrolment decisions should rest on the district's confirmation, ideally in writing."
-  ],
-  [
-   "Can I use the tool without sharing my precise location?",
-   "Yes — addresses are typed; nothing locates you."
-  ],
-  [
-   "Why might a boundary or place name look different elsewhere?",
-   "District boundaries revise with boards' decisions; commercial maps lag or guess. The official district source is the freshest by definition."
-  ],
-  [
-   "Does MapBench store my browser location?",
-   "No."
-  ],
-  [
-   "Why don't the maps just show districts?",
-   "Some do, unevenly — boundaries are maintained by thousands of districts in incompatible formats. A page that pretends completeness here would mislead exactly where accuracy matters most."
-  ],
-  [
-   "Charter and private schools?",
-   "Assignment logic applies to district public schools. Charter lotteries and private admissions run on their own rules — the district context is background, not the mechanism."
-  ],
-  [
-   "The listing says 'great schools district'.",
-   "Marketing, not evidence. Run the context steps, then the official lookup, then believe."
-  ],
-  [
-   "Boundaries change?",
-   "Yes — rezoning happens, sometimes yearly in growing suburbs. Verify for the school year you care about, not the year of the article you read."
-  ],
-  [
-   "Two districts have similar names.",
-   "Common (city district versus county district versus unified). The county/city frame from step 2 disambiguates which official lookup to trust."
+   "What should I verify before using this page?",
+   "Select a US coordinate to query Census school-district geography. The result reports the available district fields for that point and source vintage. It is a geography lookup, not a promise of enrollment eligibility, school assignment or admission."
   ]
  ],
  "related_prose": [
   {
-   "t": "Frame it: "
+   "t": "For source conventions and limitations, read the "
   },
   {
-   "t": "Address to County Lookup",
-   "l": "/tools/address-to-county-lookup"
+   "t": "MapBench methodology",
+   "l": "/methodology"
   },
   {
-   "t": " and "
-  },
-  {
-   "t": "Schools Near Me Map",
-   "l": "/tools/schools-near-me-map"
-  },
-  {
-   "t": "; ZIP context: "
-  },
-  {
-   "t": "What ZIP Code Am I In",
-   "l": "/tools/what-zip-code-am-i-in"
-  },
-  {
-   "t": "."
+   "t": ". "
   }
  ],
  "more_tools": [

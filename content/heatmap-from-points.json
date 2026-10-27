@@ -6,164 +6,49 @@
   "density map csv",
   "point density"
  ],
- "title": "Heatmap from Points: See Where Points Cluster",
- "description": "Turn coordinate rows into a density heatmap with the Heatmap from Points tool — clusters and hot spots visualised locally in the browser. Free.",
+ "title": "CSV Point Heatmap: Map Coordinate Patterns",
+ "description": "Load a CSV with latitude and longitude to display a point-concentration heatmap. Each point has equal weight and a 28-pixel influence radius in the render…",
  "updated": "October 2026",
- "summary_sentence": "For example, 5,000 delivery stops plotted as a heatmap reveal the two neighbourhoods that generate half the work — structure invisible in the spreadsheet and obvious in the glow.",
- "quick_answer": "The Heatmap from Points tool loads coordinate rows and visualises where they cluster, as a simple density view in your browser. Paste or drop the points and read the pattern — hot spots, cold gaps and the shape of the data — before any formal statistics begin.",
- "steps_intro": "A thousand rows of lat/lon hide their story. Heat shows it:",
+ "summary_sentence": null,
+ "quick_answer": "Load a CSV with latitude and longitude to display a point-concentration heatmap. Each point has equal weight and a 28-pixel influence radius in the rendered layer. Change zoom to inspect the pattern, but do not read the colours as a population, safety or area-normalized rate.",
+ "steps_intro": "Use the controls in the workspace, then check the interpretation and limitations below.",
  "use_cases": [
   {
-   "title": "Delivery and service demand",
+   "title": "Inspect concentration without inventing a rate",
    "body": [
     {
-     "t": "Stops, calls and orders as points glow where the work concentrates — depot and territory decisions start from this picture. Sparse data cleans up first with the "
-    },
-    {
-     "t": "CSV Coordinate Deduplicator",
-     "l": "/tools/csv-coordinate-deduplicator"
-    },
-    {
-     "t": "."
-    }
-   ]
-  },
-  {
-   "title": "Event and incident patterns",
-   "body": [
-    {
-     "t": "Reports, sightings and incidents cluster for reasons — the heatmap is the first look that suggests where to ask why."
-    }
-   ]
-  },
-  {
-   "title": "Ecology and survey points",
-   "body": [
-    {
-     "t": "Sightings density hints at habitat use — a hypothesis generator, honestly labelled as such, before effort-corrected analysis."
-    }
-   ]
-  },
-  {
-   "title": "Data quality checks",
-   "body": [
-    {
-     "t": "A suspicious hot spot at a round coordinate (or at 0,0) is the classic data-entry artefact — heatmaps catch what row counts never will."
+     "t": "Load a CSV with latitude and longitude to display a point-concentration heatmap. Each point has equal weight and a 28-pixel influence radius in the rendered layer. Change zoom to inspect the pattern, but do not read the colours as a population, safety or area-normalized rate."
     }
    ]
   }
  ],
  "examples": [
   {
-   "label": "Example · The headquarters artefact",
+   "label": "Small-file check",
    "body": [
     {
-     "t": "A sales dataset glows brightest at head office — because un-geocoded rows defaulted to the HQ address. The heatmap did not show demand; it showed a data pipeline. Both readings are valuable; only one is true."
-    }
-   ]
-  },
-  {
-   "label": "Example · Radius changes the story",
-   "body": [
-    {
-     "t": "A small radius draws many tight hot spots (individual venues); a large radius merges them into districts. Neither is 'correct' — the radius is an editorial choice, and the honest analyst reports which one the picture used."
+     "t": "Add several rows near one coordinate and a separate isolated row. The nearby group should produce stronger heat than the isolated row at the same zoom. Changing the zoom changes the screen-space density; keep zoom fixed for visual comparisons."
     }
    ]
   }
  ],
- "popular_table": {
-  "title": "Reading a density view honestly",
-  "intro": "What the glow means — and what it cannot mean.",
-  "columns": [
-   "You see",
-   "It means",
-   "It does not mean"
-  ],
-  "rows": [
-   [
-    "Bright hot spot",
-    "Many points close together",
-    "Importance, causation or correctness"
-   ],
-   [
-    "Smooth gradient",
-    "Density thinning with distance",
-    "A real-world gradient — may be sampling effort"
-   ],
-   [
-    "Cold gap",
-    "Few or no points",
-    "Nothing happens there — maybe nobody recorded there"
-   ],
-   [
-    "Single bright pixel",
-    "A pile of identical coordinates",
-    "A phenomenon — check for defaults and duplicates"
-   ]
-  ],
-  "note": "This is a density visualisation, not a kernel-density statistical surface with bandwidth inference. It shows where points are; conclusions about why remain yours."
- },
+ "popular_table": null,
  "faq": [
   [
-   "Is this a true kernel density estimate?",
-   "It is a simple density view — points contribute glow around themselves and the picture aggregates them. Formal KDE with bandwidth selection and edge correction is GIS-statistics work; this page is the honest first look, labelled as such."
-  ],
-  [
-   "What input formats work?",
-   "Coordinate rows — CSV-style lat/lon lists and pasted pairs. Messy files clean up in the CSV coordinate tools first; the heatmap wants two numeric columns it can trust."
-  ],
-  [
-   "Does point order matter?",
-   "No — density is order-blind. Duplicates matter: identical rows stack glow, which the deduplicator exists to tame."
-  ],
-  [
-   "Weighted points?",
-   "A plain density view counts each point once. Weighted analysis (by sales, severity, population) belongs to fuller GIS tooling."
-  ],
-  [
-   "The map looks different at each zoom.",
-   "Density rendering responds to scale — features merge as you zoom out. Fix the zoom when comparing two datasets' pictures, or the comparison is theatre."
-  ],
-  [
-   "Empty areas mean no activity?",
-   "They mean no points. Absence of records and absence of activity are different facts — the map shows the first; only you know the second."
-  ],
-  [
-   "Privacy — points are people's locations.",
-   "Aggregate glow is actually a privacy-friendlier way to share patterns than pins, but dense rural points can still identify. Round coordinates before sharing if the data is personal."
+   "What do the visual groups represent?",
+   "Load a CSV with latitude and longitude to display a point-concentration heatmap. Each point has equal weight and a 28-pixel influence radius in the rendered layer. Change zoom to inspect the pattern, but do not read the colours as a population, safety or area-normalized rate."
   ]
  ],
  "related_prose": [
   {
-   "t": "Bubbles instead: the "
+   "t": "For source conventions and limitations, read the "
   },
   {
-   "t": "Cluster Map from Points",
-   "l": "/tools/cluster-map-from-points"
+   "t": "MapBench methodology",
+   "l": "/methodology"
   },
   {
-   "t": "; clean rows: the "
-  },
-  {
-   "t": "CSV Coordinate Deduplicator",
-   "l": "/tools/csv-coordinate-deduplicator"
-  },
-  {
-   "t": "; on a map: the "
-  },
-  {
-   "t": "CSV to Map",
-   "l": "/tools/csv-to-map"
-  },
-  {
-   "t": "; centre: the "
-  },
-  {
-   "t": "CSV Coordinate Centroid Calculator",
-   "l": "/tools/csv-coordinate-centroid-calculator"
-  },
-  {
-   "t": "."
+   "t": ". "
   }
  ],
  "more_tools": [
