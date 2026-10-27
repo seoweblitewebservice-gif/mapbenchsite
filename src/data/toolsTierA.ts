@@ -66,7 +66,7 @@ export const TIER_A_TOOLS: ToolDef[] = [
     category: "sun",
     scope: "Worldwide",
     component: "solar",
-    keywords: ["shadow length", "sun shadow calculator", "object shadow"],
+    keywords: ["shadow-length-calculator", "sun shadow calculator", "object shadow"],
     faq: [
       [
         "Exact physics?",
