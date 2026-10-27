@@ -114,6 +114,7 @@ export default async function ToolPage({ params }: Props) {
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
+      "@id": `${absoluteUrl}#breadcrumbs`,
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mapbench.site/" },
         { "@type": "ListItem", position: 2, name: "Tools", item: "https://www.mapbench.site/tools" },
@@ -134,11 +135,12 @@ export default async function ToolPage({ params }: Props) {
       name: tool.name,
       description: tool.short,
       author,
-      reviewedBy: author,
       isPartOf: { "@type": "WebSite", name: "MapBench", url: "https://www.mapbench.site" },
+      mainEntity: { "@id": `${absoluteUrl}#tool` },
+      breadcrumb: { "@id": `${absoluteUrl}#breadcrumbs` },
       about: { "@id": `${absoluteUrl}#tool` },
     },
   ];
 
-  return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /><ToolClient slug={tool.slug} pageContent={pc} faqsOverride={faqs} /></>;
+  return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} /><ToolClient slug={tool.slug} pageContent={pc} faqsOverride={faqs} /></>;
 }

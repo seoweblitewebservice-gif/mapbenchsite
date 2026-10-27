@@ -10,7 +10,7 @@ export const GROWTH_TOOLS: ToolDef[] = [
     keywords: ["time zone converter","timezone converter","time converter","city time converter","world time converter","convert time zones","time difference calculator","international time converter","local time converter","UTC time converter","EST to IST converter","PST to GMT converter","meeting time converter","DST time converter","current time difference"],
     faq: [["Does it handle daylight saving time?","Yes. The converter uses the selected date and IANA time-zone rules, so DST changes are reflected where applicable."],["Can I convert between cities?","Yes. Search for each city or place and MapBench resolves its time zone from the coordinates."],["Is the result based on my computer clock?","The selected wall-clock time is converted using the source location's time-zone rules, then shown at the destination." ]],
     howTo: ["Search for the source city or place.","Choose the local date and time there.","Search for the destination city or place.","Read the destination time and the matching UTC instant."],
-    related: ["world-clock-map","best-time-to-call","sunrise-sunset-calculator"],
+    related: ["world-clock-map","time-zone-converter","sunrise-sunset-calculator"],
     method: "Coordinates are mapped to an IANA time zone; browser Intl rules convert the selected local wall time through UTC to the destination zone.",
   },
   {
@@ -46,7 +46,7 @@ export const GROWTH_TOOLS: ToolDef[] = [
     keywords: ["meeting point finder","geographic midpoint calculator","central meeting point","halfway point multiple locations","meeting location calculator","centre between cities","center point calculator","midpoint between multiple cities","geographic center calculator","fair meeting point","central location finder","meet in the middle calculator","group meeting point","city meeting point finder","multiple location midpoint"],
     faq: [["Is this the best city to meet in?","Not necessarily. It is a geographic centre. Travel time, borders, flight networks and roads can make another city more practical."],["Can I add more than two places?","Yes. Add up to six locations and each gets equal weight."],["Why use a spherical centroid?","Simple latitude/longitude averaging can fail near the date line and poles. A 3D spherical average behaves better globally." ]],
     howTo: ["Add at least two locations.","Add more participants if needed.","Read the calculated latitude and longitude.","Use that point as a starting reference for practical meeting-place research."],
-    related: ["midpoint-calculator","distance-between-two-places","best-time-to-call"],
+    related: ["halfway-between-two-places","distance-between-two-places","time-zone-converter"],
     method: "Each point is converted to a unit vector on the sphere; vectors are averaged and converted back to latitude/longitude.",
   },
   {
@@ -142,7 +142,7 @@ export const GROWTH_TOOLS: ToolDef[] = [
     keywords: ["gpx merger","merge gpx files","combine gpx files","join gpx tracks","GPX file merger","merge GPS tracks","combine GPX routes","GPX joiner","merge multiple gpx","combine GPS files","GPX track merger","merge GPX online","join GPS routes","GPX combine tool","merge hiking GPX"],
     faq: [["Does merging connect tracks into one continuous line?","No. It preserves tracks, routes and waypoints as separate GPX elements inside one file."],["Are files uploaded?","No. Parsing and merging happen locally in the browser." ]],
     howTo: ["Select at least two GPX files.","Click merge and download.","Open the merged file in your GPS app or MapBench GPX viewer to verify it."],
-    related: ["gpx-viewer","gpx-to-csv-converter","route-planner"],
+    related: ["gpx-viewer","gpx-to-csv-converter","multi-stop-route-planner"],
     method: "The browser parses each GPX document and serializes its track, route and waypoint elements into a new GPX 1.1 document.",
   },
   {

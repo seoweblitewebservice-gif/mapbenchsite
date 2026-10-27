@@ -73,7 +73,7 @@ export const FLAGSHIP_TOOLS: ToolDef[] = [
       ["Is WMM valid forever?", "No. WMM 2025 is an epoch model intended for the 2025–2030 period. Magnetic field values change over time."],
     ],
     howTo: ["Choose a location by search, GPS, coordinates or map click.", "Choose a date from 2025 through 2030 and enter altitude if needed.", "Calculate the WMM result and review declination, inclination and field strength.", "Optionally enter a true bearing to convert it to magnetic bearing."],
-    related: ["bearing-calculator", "latitude-longitude-finder", "find-my-location", "compass-direction-from-bearing"],
+    related: ["bearing-calculator", "latitude-longitude-finder", "find-my-location", "compass-bearing-visualizer"],
     method: "The browser sends the selected coordinate, altitude and date to a MapBench server route that requests the British Geological Survey WMM 2025 web service. MapBench displays model output and clearly separates it from physical compass measurements.",
   },
   {
@@ -137,7 +137,7 @@ export const FLAGSHIP_TOOLS: ToolDef[] = [
       ["Is an IANA zone better than storing a fixed UTC offset?", "Usually yes. An IANA zone such as America/New_York carries historical and daylight-saving rules, while a fixed offset does not."],
     ],
     howTo: ["Search a place, use GPS/coordinates, or click the world map.", "Read the IANA zone, current local time, UTC offset and DST status.", "Compare the selected location with the live world-clock strip.", "Use the focused Time Zone Finder or Time Difference tool when you need a narrower workflow."],
-    related: ["timezone-map-finder", "time-difference-zones", "us-time-zone-map", "local-time-coordinates"],
+    related: ["timezone-map-finder", "time-difference-between-timezones", "us-time-zone-map", "timezone-map-finder"],
     method: "MapBench resolves the selected latitude/longitude to an IANA time zone locally, then uses the browser Internationalization API for current local time and date-aware UTC offset. The map background samples that lookup on a coarse 5-degree grid for visual reference and is explicitly labelled as generalized rather than a legal boundary layer.",
   },
 ];

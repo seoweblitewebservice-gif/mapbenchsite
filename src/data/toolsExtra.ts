@@ -199,7 +199,7 @@ export const EXTRA_TOOLS: ToolDef[] = [
       ["Panel design?", "Useful for first-pass planning; engineered systems need local irradiance data too."],
     ],
     howTo: ["Set location and date/time.", "Read altitude and azimuth."],
-    related: ["sunrise-sunset-calculator", "golden-hour-calculator", "shadow length"],
+    related: ["sunrise-sunset-calculator", "golden-hour-calculator", "shadow-length-calculator"],
     method: "Standard solar position equations for the selected time and coordinates.",
   },
   {

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import Link from "next/link";
+import ToolMethod from "@/components/ToolMethod";
 import MatrixTool from "@/components/tools/MatrixTool";
 import { Spinner } from "@/components/ui";
 import { toolBySlug, type ToolDef } from "@/lib/registry";
@@ -172,7 +173,7 @@ export default function DistanceMatrixCalculatorPage() {
 
   return (
     <div>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
 
       {/* 1. Breadcrumb */}
       <nav aria-label="Breadcrumb" className="mb-4 text-xs text-mute">
@@ -207,6 +208,17 @@ export default function DistanceMatrixCalculatorPage() {
           </div>
         </div>
       </section>
+
+        {/* 4. Quick answer */}
+        <section aria-labelledby="quick-answer" className="mt-8 rounded-2xl border border-brand/25 bg-brand-soft/40 p-5 shadow-sm sm:p-6">
+          <h2 id="quick-answer" className="font-display text-xl font-bold">Quick answer</h2>
+          <p className="mt-2 leading-7 text-mute">
+            A distance matrix calculator builds a table of the straight-line distance between every pair of places in a list.
+            Add two or more places and each cell shows how far apart that pair is, in miles and kilometres, ready to export
+            as CSV for planning, teaching or analysis.
+          </p>
+        </section>
+
 
       {/* 3. Tool card (tool component unchanged) + plain-language summary */}
       <section className="relative overflow-hidden rounded-2xl border border-line bg-white shadow-[0_14px_42px_rgba(15,23,42,0.07)]">
@@ -245,15 +257,7 @@ export default function DistanceMatrixCalculatorPage() {
           </div>
         </nav>
 
-        {/* 4. Quick answer */}
-        <section aria-labelledby="quick-answer" className="mt-8 rounded-2xl border border-brand/25 bg-brand-soft/40 p-5 shadow-sm sm:p-6">
-          <h2 id="quick-answer" className="font-display text-xl font-bold">Quick answer</h2>
-          <p className="mt-2 leading-7 text-mute">
-            A distance matrix calculator builds a table of the straight-line distance between every pair of places in a list.
-            Add two or more places and each cell shows how far apart that pair is, in miles and kilometres, ready to export
-            as CSV for planning, teaching or analysis.
-          </p>
-        </section>
+        <ToolMethod tool={tool} />
 
         {/* 5. How to use */}
         <section id="how-to-use" aria-labelledby="howto" className="mt-8 rounded-2xl border border-line bg-white p-5 shadow-sm sm:p-6">
