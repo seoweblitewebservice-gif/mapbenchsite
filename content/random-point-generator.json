@@ -6,168 +6,49 @@
   "random coordinates",
   "sample point map"
  ],
- "title": "Random Point in View: Fair Sample Points",
- "description": "Use Random Point in View to generate random points inside your map view or study area — for sampling, games and unbiased spot checks. Free.",
+ "title": "Random Point Generator: Spherical Geographic Sampling",
+ "description": "Generate random coordinates using equal-area sampling on the sphere, with the available land or country filters. Longitude is sampled uniformly and latitu…",
  "updated": "October 2026",
- "summary_sentence": "For example, a soil researcher frames the study field, generates 20 random points, and the sampling stops following the footpaths and starts following the statistics.",
- "quick_answer": "Random Point in View generates random points inside the map area you frame — for sampling designs, games, drills and unbiased spot checks. Pan and zoom to your study area, choose how many points you need, and generate a set whose only pattern is that it has none.",
- "steps_intro": "Randomness with a boundary — you supply the frame, chance supplies the points:",
+ "summary_sentence": null,
+ "quick_answer": "Generate random coordinates using equal-area sampling on the sphere, with the available land or country filters. Longitude is sampled uniformly and latitude is sampled through its sine so the generator does not overrepresent the polar regions.",
+ "steps_intro": "Use the controls in the workspace, then check the interpretation and limitations below.",
  "use_cases": [
   {
-   "title": "Field sampling without bias",
+   "title": "Inspect the result before reusing it",
    "body": [
     {
-     "t": "Soil cores, vegetation quadrats, litter counts: human-chosen 'random' spots cluster near paths and gates. Generated points inside the study frame remove the researcher's feet from the design. Bound the area first in the "
-    },
-    {
-     "t": "Map Drawer",
-     "l": "/tools/map-drawer"
-    },
-    {
-     "t": "."
-    }
-   ]
-  },
-  {
-   "title": "Games and exploration prompts",
-   "body": [
-    {
-     "t": "Geocaching-style challenges, photo-a-day prompts, 'visit a random point in our county' — the generator deals the destination fairly."
-    }
-   ]
-  },
-  {
-   "title": "Drills and audits",
-   "body": [
-    {
-     "t": "Random inspection points for assets spread over an area: the fairest inspection is the one nobody could predict or lobby. Mark the chosen few with the "
-    },
-    {
-     "t": "Pin Map Maker",
-     "l": "/tools/pin-map-maker"
-    },
-    {
-     "t": "."
-    }
-   ]
-  },
-  {
-   "title": "Teaching randomness itself",
-   "body": [
-    {
-     "t": "Generate 10 points, then 1,000, and watch clumping appear in both — real randomness clusters, and seeing it cures the 'evenly spread' misconception better than any lecture."
+     "t": "Generate random coordinates using equal-area sampling on the sphere, with the available land or country filters. Longitude is sampled uniformly and latitude is sampled through its sine so the generator does not overrepresent the polar regions. Record the input and mode with any exported or reported result."
     }
    ]
   }
  ],
  "examples": [
   {
-   "label": "Example · The path-bias cure",
+   "label": "Reproducible check or interpretation example",
    "body": [
     {
-     "t": "A student's 15 'random' hand-picked soil spots all sat within 20 paces of the field path. Fifteen generated points sent her to the far corners — and the nitrogen results changed enough to rewrite the conclusion."
-    }
-   ]
-  },
-  {
-   "label": "Example · The ocean problem",
-   "body": [
-    {
-     "t": "Frame the whole world and generate: about 71% of points land in ocean, because about 71% of Earth's surface is ocean. Random-on-a-map is honest about the planet's proportions whether you wanted the lesson or not."
+     "t": "Repeat an unrestricted global sample several times. The coordinates should vary and may fall in oceans. Choosing a land filter changes the eligible area; it does not guarantee a road, settlement or safe destination at the resulting point."
     }
    ]
   }
  ],
- "popular_table": {
-  "title": "How many points do you need?",
-  "intro": "Rules of thumb — real designs deserve a statistician, practice runs deserve these.",
-  "columns": [
-   "Job",
-   "Points",
-   "Why"
-  ],
-  "rows": [
-   [
-    "Classroom demo",
-    "10–30",
-    "Enough to see clumping and gaps"
-   ],
-   [
-    "Garden / small-plot survey",
-    "15–25",
-    "Coverage without trampling the crop"
-   ],
-   [
-    "Field or farm sampling",
-    "30–50",
-    "Averages start to stabilise"
-   ],
-   [
-    "Games and prompts",
-    "1",
-    "One point, one adventure"
-   ]
-  ],
-  "note": "Points are drawn uniformly across the framed view's rectangle of latitude and longitude. At neighbourhood scale that is effectively uniform on the ground; at world scale, equal longitude bands squeeze toward the poles, so frame tightly around your real study area."
- },
+ "popular_table": null,
  "faq": [
   [
-   "Are the points reproducible?",
-   "A fresh generate deals a fresh set — that is the point of random. If a set matters (an audit, a published design), export or pin the points immediately; the dealt hand is only kept if you keep it."
-  ],
-  [
-   "Can I restrict points to land only?",
-   "Frame the view tightly around your land area to make water points rare; a true land-mask filter is a GIS feature. Treat a stray water point as a redraw, and say so in your method notes if it is research."
-  ],
-  [
-   "Can points fall outside my study plot?",
-   "Points fill the framed view, so frame the view to the plot. For an irregular boundary, generate generously and discard outsiders — discarding by a rule written in advance keeps the design honest."
-  ],
-  [
-   "Is uniform-in-view the same as uniform-on-ground?",
-   "At local scales, yes for practical purposes. Across continents, longitude lines converge, so view-uniform points over-sample high latitudes per square kilometre — one more reason to frame tightly."
-  ],
-  [
-   "How do I navigate to a generated point?",
-   "Copy its coordinates into any map app, or pin it here and share the view. In the field, your phone's GPS and the point's coordinates are the whole system."
-  ],
-  [
-   "Can I generate points along a line or in a ring?",
-   "This generator fills an area. Rings and transects are structured designs — build them with the Coordinate Radius Points Generator or by drawing in the Map Drawer."
-  ],
-  [
-   "What about random points for a whole country?",
-   "Frame the country and generate plenty, discarding sea and border overshoot. For regular official sampling frames, national statistics offices publish grids — this tool is the fast, honest approximation."
-  ],
-  [
-   "Why did my points cluster?",
-   "Because randomness clusters. Uniform points are not evenly-spaced points; if your design needs even coverage, that is a grid or stratified design — a different, also respectable, tool choice."
+   "What should I verify before using this page?",
+   "Generate random coordinates using equal-area sampling on the sphere, with the available land or country filters. Longitude is sampled uniformly and latitude is sampled through its sine so the generator does not overrepresent the polar regions."
   ]
  ],
  "related_prose": [
   {
-   "t": "Keep the chosen points in the "
+   "t": "For source conventions and limitations, read the "
   },
   {
-   "t": "Pin Map Maker",
-   "l": "/tools/pin-map-maker"
+   "t": "MapBench methodology",
+   "l": "/methodology"
   },
   {
-   "t": ", sketch the study boundary in the "
-  },
-  {
-   "t": "Map Drawer",
-   "l": "/tools/map-drawer"
-  },
-  {
-   "t": ", and measure the sampled area with the "
-  },
-  {
-   "t": "Map Area Calculator",
-   "l": "/tools/map-area-calculator"
-  },
-  {
-   "t": "."
+   "t": ". "
   }
  ],
  "more_tools": [

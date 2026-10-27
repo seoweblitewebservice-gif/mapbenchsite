@@ -6,169 +6,49 @@
   "which district am i in",
   "house district"
  ],
- "title": "Congressional District Context: Verify First",
- "description": "Build the context for finding a congressional district — address and county first — with Congressional District Context, then confirm officially. Free.",
+ "title": "Congressional District Context: Census Point Lookup",
+ "description": "Query the Census coordinate geography service for congressional-district context at a US point. Keep the coordinate and source vintage with the returned i…",
  "updated": "October 2026",
- "summary_sentence": "For example, an address near a district line resolves its state and county here first, so the official district lookup that follows starts from verified ground.",
- "quick_answer": "Congressional District Context helps you assemble the verified context — the address's state and county — that a congressional district answer stands on, then points you to the authoritative government lookup to confirm the district itself. Locate the address, note its context, and confirm the district on the official source.",
- "steps_intro": "Districts deserve official answers. This page builds the ground they stand on:",
+ "summary_sentence": null,
+ "quick_answer": "Query the Census coordinate geography service for congressional-district context at a US point. Keep the coordinate and source vintage with the returned identifier. Redistricting can change the correct answer even when the address itself has not moved.",
+ "steps_intro": "Use the controls in the workspace, then check the interpretation and limitations below.",
  "use_cases": [
   {
-   "title": "Civic homework",
+   "title": "Inspect the result before reusing it",
    "body": [
     {
-     "t": "Contacting a representative starts with the right district. Context first (state, county), confirmation second — the sequence this page enforces."
-    }
-   ]
-  },
-  {
-   "title": "Advocacy and campaign work",
-   "body": [
-    {
-     "t": "Lists sorted by district begin as addresses with context. The county layer comes from "
-    },
-    {
-     "t": "Address to County Lookup",
-     "l": "/tools/address-to-county-lookup"
-    },
-    {
-     "t": "."
-    }
-   ]
-  },
-  {
-   "title": "Understanding redistricting",
-   "body": [
-    {
-     "t": "Districts are redrawn after each census; yesterday's district can be wrong today. Context tools plus the current official map is the only safe method."
-    }
-   ]
-  },
-  {
-   "title": "Journalism and research",
-   "body": [
-    {
-     "t": "“The district containing…” is a claim to verify, not to vibe. Build the context, confirm on the official tool, cite both steps."
+     "t": "Query the Census coordinate geography service for congressional-district context at a US point. Keep the coordinate and source vintage with the returned identifier. Redistricting can change the correct answer even when the address itself has not moved. Record the input and mode with any exported or reported result."
     }
    ]
   }
  ],
  "examples": [
   {
-   "label": "Example · The county is not the district",
+   "label": "Reproducible check or interpretation example",
    "body": [
     {
-     "t": "Large urban counties contain several districts; small rural districts contain several counties. Neither contains the other — which is why context precedes confirmation."
-    }
-   ]
-  },
-  {
-   "label": "Example · The line through town",
-   "body": [
-    {
-     "t": "District lines split cities and occasionally streets. Two neighbours can vote in different districts; only the official lookup at the exact address settles it."
+     "t": "Compare two nearby coordinates on opposite sides of a known district boundary. The lookup may return different identifiers; confirm the effective election map with the relevant election authority rather than assuming a current address label proves a district."
     }
    ]
   }
  ],
- "popular_table": {
-  "title": "The verification chain",
-  "intro": "How a district answer is properly built — this page owns the first steps and hands over for the last.",
-  "columns": [
-   "Step",
-   "Question",
-   "Where"
-  ],
-  "rows": [
-   [
-    "1",
-    "What is the exact address point?",
-    "Address to Coordinates"
-   ],
-   [
-    "2",
-    "Which state and county contain it?",
-    "The lookups on this site"
-   ],
-   [
-    "3",
-    "Which district contains it?",
-    "The official House lookup"
-   ],
-   [
-    "4",
-    "Is the map current-cycle?",
-    "The official source's date"
-   ]
-  ],
-  "note": "District boundaries change with redistricting. Any tool — including official ones — is only as current as its map vintage; check it."
- },
+ "popular_table": null,
  "faq": [
   [
-   "Is this the official map?",
-   "No — deliberately. This page builds verified context and directs you to the authoritative government lookup for the district itself, because that answer should come from the source of record."
-  ],
-  [
-   "Can I use the tool without sharing my precise location?",
-   "Yes — you supply the address under study; your own location is not involved."
-  ],
-  [
-   "Why might a boundary or place name look different elsewhere?",
-   "District maps are redrawn and republishing lags vary. The official current-cycle map is the referee."
-  ],
-  [
-   "Does MapBench store my browser location?",
-   "No."
-  ],
-  [
-   "Why not just show the district here?",
-   "Because a stale or unofficial district answer is worse than a handoff. Context here is verified; the district itself deserves the official word."
-  ],
-  [
-   "My district changed since last election.",
-   "Redistricting after the 2020 census redrew many maps. Current-cycle confirmation is the fix, and this workflow builds it in."
-  ],
-  [
-   "Senate districts or state legislature?",
-   "Different maps again — state sources rule those. The context-first method transfers; the official destination changes."
-  ],
-  [
-   "Where is the official lookup?",
-   "The US House of Representatives' find-your-representative service, by ZIP and address — the page's workflow ends there deliberately."
-  ],
-  [
-   "ZIP code alone enough for the official step?",
-   "ZIPs cross district lines; the official tool asks for the full address when a ZIP straddles. Your context from this page explains why."
-  ],
-  [
-   "State legislative districts too?",
-   "Your state legislature's site holds those maps. The context-first method is identical."
+   "What should I verify before using this page?",
+   "Query the Census coordinate geography service for congressional-district context at a US point. Keep the coordinate and source vintage with the returned identifier. Redistricting can change the correct answer even when the address itself has not moved."
   ]
  ],
  "related_prose": [
   {
-   "t": "Context tools: "
+   "t": "For source conventions and limitations, read the "
   },
   {
-   "t": "Address to County Lookup",
-   "l": "/tools/address-to-county-lookup"
+   "t": "MapBench methodology",
+   "l": "/methodology"
   },
   {
-   "t": ", "
-  },
-  {
-   "t": "Address to State Lookup",
-   "l": "/tools/address-to-state-lookup"
-  },
-  {
-   "t": " and "
-  },
-  {
-   "t": "Address to Coordinates",
-   "l": "/tools/address-to-coordinates"
-  },
-  {
-   "t": "."
+   "t": ". "
   }
  ],
  "more_tools": [

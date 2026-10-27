@@ -6,162 +6,40 @@
   "how far from ocean",
   "inland distance"
  ],
- "title": "Distance to Coast Context: Inland to Shore",
- "description": "Measure from an inland point to a coastal point with Distance to Coast Context — the distance in miles and km, for travel and climate context. Free.",
+ "title": "Distance to Coast Context: Current Capabilities & Limits",
+ "description": "This page currently provides distance between two manually selected points. A nearest-coastline search is not performed. Use the workspace only for the av…",
  "updated": "October 2026",
- "summary_sentence": "For example, Denver to Galveston on the Gulf coast measures approx. 924 miles (1,487 km) — the scale of 'landlocked' that a map glance understates.",
- "quick_answer": "Distance to Coast Context measures the distance from an inland point to a coastal point you choose, giving the separation in miles and kilometres. It frames the questions inland places ask about the sea — how far is the coast — as a measured number instead of a map glance.",
- "steps_intro": "Pick the inland point and the stretch of coast you mean; 'the coast' is a line, not a place, until you choose:",
+ "summary_sentence": null,
+ "quick_answer": "This page currently provides distance between two manually selected points. A nearest-coastline search is not performed. Use the workspace only for the available operation; a label in the URL does not mean that a specialist dataset or model has been queried.",
+ "steps_intro": "Use the controls in the workspace, then check the interpretation and limitations below.",
  "use_cases": [
   {
-   "title": "Relocation and lifestyle research",
+   "title": "Use the available operation",
    "body": [
     {
-     "t": "“Near the sea” means different things in estate-agent copy and in miles. Measure a candidate town against the coastal point you would actually visit, then argue with the number, not the brochure."
-    }
-   ]
-  },
-  {
-   "title": "Climate and weather context",
-   "body": [
-    {
-     "t": "Continental versus maritime climate is partly a distance-to-coast story. This measure gives students and gardeners the figure behind a region's frost, fog and rainfall character."
-    }
-   ]
-  },
-  {
-   "title": "Trip planning",
-   "body": [
-    {
-     "t": "The inland leg of a coastal holiday is the part people underestimate. A measured baseline plus the "
-    },
-    {
-     "t": "Driving Distance Calculator",
-     "l": "/tools/driving-distance-calculator"
-    },
-    {
-     "t": " turns 'a few hours to the beach' into a plan."
-    }
-   ]
-  },
-  {
-   "title": "Property descriptions, kept honest",
-   "body": [
-    {
-     "t": "Sellers describing a property's coastal access can quote a measured distance to a named coastal point — a claim a buyer can reproduce, which is the only kind worth making."
+     "t": "Distance between two manually selected points. A nearest-coastline search is not performed."
     }
    ]
   }
  ],
- "examples": [
-  {
-   "label": "Example · The landlocked scale",
-   "body": [
-    {
-     "t": "Denver, Colorado to Galveston, Texas (a Gulf coast city): approx. 1,487.4 km (924.3 mi), initial bearing 138.2°. That is the honest size of 'inland' in the American interior — roughly a London-to-Rome span with no sea in between."
-    }
-   ]
-  },
-  {
-   "label": "Example · Choosing the coastal point matters",
-   "body": [
-    {
-     "t": "From the same inland city, the nearest stretch of coast and the beach you would actually drive to can be different points with different distances. The tool measures to the point you set — which is why it asks you to set one."
-    }
-   ]
-  }
- ],
- "popular_table": {
-  "title": "How to read a coast distance",
-  "intro": "A straight-line figure is context, not a journey. These bands translate common results into the planning language people actually use.",
-  "columns": [
-   "Straight-line distance",
-   "What it usually means",
-   "Road reality"
-  ],
-  "rows": [
-   [
-    "Under 25 mi (40 km)",
-    "Coastal in daily life",
-    "Beach trips are spontaneous"
-   ],
-   [
-    "25–100 mi (40–160 km)",
-    "Day-trip coast",
-    "An early start, home by dark"
-   ],
-   [
-    "100–300 mi (160–480 km)",
-    "Weekend coast",
-    "Overnight makes it pleasant"
-   ],
-   [
-    "300–600 mi (480–965 km)",
-    "Holiday coast",
-    "A planned journey, not a whim"
-   ],
-   [
-    "Over 600 mi (965 km)",
-    "Landlocked scale",
-    "Fly, or commit to the drive"
-   ]
-  ],
-  "note": "Bands are reading conventions for the number, labelled as such — terrain, borders and road quality move any specific trip between them."
- },
+ "examples": null,
+ "popular_table": null,
  "faq": [
   [
-   "Why do I choose the coastal point myself?",
-   "Because 'the coast' nearest an inland point depends on which point of a jagged shoreline you mean, and the tool will not guess silently. You pick the beach, port or headland; the tool measures honestly to it."
-  ],
-  [
-   "Is this an official shoreline measurement?",
-   "No. It is a point-to-point great-circle distance for context and planning, not a surveyed distance to a tidal boundary. Official shoreline work needs hydrographic data."
-  ],
-  [
-   "Why not always measure to the nearest coast automatically?",
-   "Nearest-point-on-a-coastline needs a coastline dataset and a definition of coast (estuaries? islands? tidal flats?). Choosing the point keeps the measurement transparent and reproducible."
-  ],
-  [
-   "Does it work from a coastal town inland?",
-   "The geometry is symmetric — set either point first. The framing is written for inland-to-coast questions, but the number is the same both ways."
-  ],
-  [
-   "How does this differ from Distance Between Two Places?",
-   "Same engine, different question. This page is framed and worded for the coast question — its examples, reading bands and FAQs assume that is what you came to ask."
-  ],
-  [
-   "Can I measure to an island?",
-   "Yes — set the coastal point on the island. Ferries and flights are journeys, but the separation is still the context number."
-  ],
-  [
-   "Miles or kilometres?",
-   "Both are shown. US examples on this page lead with miles; European ones with kilometres."
+   "What should I verify before using this page?",
+   "This page currently provides distance between two manually selected points. A nearest-coastline search is not performed. Use the workspace only for the available operation; a label in the URL does not mean that a specialist dataset or model has been queried."
   ]
  ],
  "related_prose": [
   {
-   "t": "The general instrument behind this page is "
+   "t": "For source conventions and limitations, read the "
   },
   {
-   "t": "Distance Between Two Places",
-   "l": "/tools/distance-between-two-places"
+   "t": "MapBench methodology",
+   "l": "/methodology"
   },
   {
-   "t": "; plan the actual journey to the shore with the "
-  },
-  {
-   "t": "Driving Distance Calculator",
-   "l": "/tools/driving-distance-calculator"
-  },
-  {
-   "t": "; and for the view from the beach itself, the "
-  },
-  {
-   "t": "Horizon Distance Calculator",
-   "l": "/tools/horizon-distance"
-  },
-  {
-   "t": " takes over."
+   "t": ". "
   }
  ],
  "more_tools": [

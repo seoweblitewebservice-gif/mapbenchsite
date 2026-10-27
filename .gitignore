@@ -3,3 +3,4 @@ node_modules/
 *.tsbuildinfo
 public/maplibre/
 next-env.d.ts
+.cache/

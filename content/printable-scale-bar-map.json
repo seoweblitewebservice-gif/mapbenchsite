@@ -6,168 +6,40 @@
   "map scale bar",
   "worksheet map"
  ],
- "title": "Printable Map with Scale Context: Print True",
- "description": "Prepare a Printable Map with Scale Context for classroom or field printouts — scale bars that survive printing, framing that respects the paper. Free.",
+ "title": "Printable Map with Scale Context: Current Capabilities & Limits",
+ "description": "This page currently provides a custom pin map. This workspace does not calculate a calibrated print scale bar. Use the workspace only for the available op…",
  "updated": "October 2026",
- "summary_sentence": "For example, a field class prints a 1:50,000 sheet where the scale bar says 1 cm is 500 metres — and because it is printed at 100%, the bar is telling the truth.",
- "quick_answer": "The Printable Map with Scale Context page helps you prepare maps for paper — classroom sheets and field printouts — where a printed scale bar still means what it says. Frame the area, set the scale context, and print at true size so distances measured with a ruler stay honest.",
- "steps_intro": "Paper changes everything about a map — here is how to keep the scale honest:",
+ "summary_sentence": null,
+ "quick_answer": "This page currently provides a custom pin map. This workspace does not calculate a calibrated print scale bar. Use the workspace only for the available operation; a label in the URL does not mean that a specialist dataset or model has been queried.",
+ "steps_intro": "Use the controls in the workspace, then check the interpretation and limitations below.",
  "use_cases": [
   {
-   "title": "Classroom worksheets",
+   "title": "Use the available operation",
    "body": [
     {
-     "t": "Students measure real distances with real rulers — the exercise only works if the printed scale is true. Start from a "
-    },
-    {
-     "t": "Blank Map",
-     "l": "/tools/blank-map"
-    },
-    {
-     "t": " outline and add the scale framing here."
-    }
-   ]
-  },
-  {
-   "title": "Field and orienteering printouts",
-   "body": [
-    {
-     "t": "A laminated A4 with a truthful scale bar is navigation backup that never runs out of battery. The "
-    },
-    {
-     "t": "Map Scale Calculator",
-     "l": "/tools/map-scale-calculator"
-    },
-    {
-     "t": " converts any ratio you meet."
-    }
-   ]
-  },
-  {
-   "title": "Planning and site handouts",
-   "body": [
-    {
-     "t": "Printed maps at meetings get measured on by pencils and fingers. A correct scale bar is the difference between a discussion and an argument afterwards."
-    }
-   ]
-  },
-  {
-   "title": "Archive and record copies",
-   "body": [
-    {
-     "t": "Paper records outlive platforms. A scale-true print with its date and source noted is a document; a screenshot is a rumour."
+     "t": "A custom pin map. This workspace does not calculate a calibrated print scale bar."
     }
    ]
   }
  ],
- "examples": [
-  {
-   "label": "Example · The fit-to-page trap",
-   "body": [
-    {
-     "t": "A teacher prints at 'fit to page' — the sheet shrinks 6%, and every student's ruler answer is 6% short. The fix is one setting: print at 100% (actual size), and verify with the scale bar before the class measures anything."
-    }
-   ]
-  },
-  {
-   "label": "Example · Scale in two units",
-   "body": [
-    {
-     "t": "A 1:50,000 bar reads 1 cm = 500 m along its metric face; the same sheet's inch is 1.27 km of ground. Good printouts serve both rulers — this page frames for that."
-    }
-   ]
-  }
- ],
- "popular_table": {
-  "title": "Paper-friendly scales",
-  "intro": "Common print ratios and what one centimetre (and one inch) of paper means on the ground.",
-  "columns": [
-   "Scale",
-   "1 cm on paper",
-   "1 inch on paper"
-  ],
-  "rows": [
-   [
-    "1:25,000",
-    "250 m",
-    "≈ 0.63 km"
-   ],
-   [
-    "1:50,000",
-    "500 m",
-    "≈ 1.27 km"
-   ],
-   [
-    "1:100,000",
-    "1 km",
-    "≈ 2.54 km"
-   ],
-   [
-    "1:250,000",
-    "2.5 km",
-    "≈ 6.35 km"
-   ]
-  ],
-  "note": "These truths hold only at 100% print size on the stated paper. 'Fit', 'shrink to printable area' and photocopier scaling all quietly rewrite the scale — the printed bar, re-measured with a ruler, is the only witness that counts."
- },
+ "examples": null,
+ "popular_table": null,
  "faq": [
   [
-   "Which paper size should I choose?",
-   "Match the printer the sheet will actually meet: A4 in most of Europe, Letter in the US. A map framed for one and printed on the other gets margins cropped or the whole sheet scaled — the trap this page exists to prevent."
-  ],
-  [
-   "Why does my scale bar disagree with my ruler?",
-   "Something rescaled the page: a fit-to-page setting, a driver default, or a photocopier. Reprint at 100%/actual size and re-measure the bar before trusting any distance taken from the sheet."
-  ],
-  [
-   "Can I print in black and white?",
-   "Yes — outline-style maps print cleanly in greyscale and photocopy well. Check that any colour coding still reads as distinct greys before printing fifty copies."
-  ],
-  [
-   "How do I add a north arrow and title?",
-   "Frame and export the map image, then finish the furniture — title, north arrow, date, source line — in your document or slides tool where typography is controllable. Record copies deserve all four."
-  ],
-  [
-   "What resolution should the export be?",
-   "Enough that lines stay crisp at the paper size: export at the largest framing offered and avoid enlarging beyond it. A slightly smaller map printed sharp beats a bigger one printed fuzzy."
-  ],
-  [
-   "Can I laminate a printout and draw on it?",
-   "Field classic: laminate, mark with chinagraph or whiteboard pen, wipe, reuse. The scale bar under lamination stays true because the sheet beneath never changed size."
-  ],
-  [
-   "Is a printed map still accurate next year?",
-   "The scale stays true; the content ages. Roads and paths change — date your printouts and re-export for each season's fieldwork rather than trusting last year's sheet."
-  ],
-  [
-   "Can I print a satellite view with a scale bar?",
-   "Yes, if the framed view is the satellite basemap. The same rules apply — 100% size, verify the bar — because paper honesty is about printing, not imagery."
+   "What should I verify before using this page?",
+   "This page currently provides a custom pin map. This workspace does not calculate a calibrated print scale bar. Use the workspace only for the available operation; a label in the URL does not mean that a specialist dataset or model has been queried."
   ]
  ],
  "related_prose": [
   {
-   "t": "Start from an outline with "
+   "t": "For source conventions and limitations, read the "
   },
   {
-   "t": "Blank Map",
-   "l": "/tools/blank-map"
+   "t": "MapBench methodology",
+   "l": "/methodology"
   },
   {
-   "t": ", convert any scale ratio with the "
-  },
-  {
-   "t": "Map Scale Calculator",
-   "l": "/tools/map-scale-calculator"
-  },
-  {
-   "t": ", and export the framed view via "
-  },
-  {
-   "t": "Map PNG Export",
-   "l": "/tools/map-png-export"
-  },
-  {
-   "t": "."
+   "t": ". "
   }
  ],
  "more_tools": [

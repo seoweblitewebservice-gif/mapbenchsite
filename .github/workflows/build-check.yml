@@ -17,4 +17,6 @@ jobs:
         with:
           node-version: 22
       - run: npm install
+      - run: npm run audit:tools
+      - run: npm run test:tools
       - run: npm run build

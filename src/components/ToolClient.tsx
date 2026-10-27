@@ -2,6 +2,7 @@
 import { Suspense } from "react";
 import Link from "next/link";
 import { toolBySlug, CATEGORIES, type ToolDef } from "@/lib/registry";
+import { CAPABILITY_NOTES } from "@/data/toolCapabilities";
 import ToolContent from "./ToolContent";
 import ToolMethod from "./ToolMethod";
 import ToolPageExtras from "./ToolPageExtras";
@@ -29,6 +30,7 @@ export default function ToolClient({ slug, locale, pageContent, faqsOverride }: 
   if (!tool) return null;
   const category = CATEGORIES.find((c) => c.id === tool.category);
   const Component = toolComponents[tool.component];
+  const capability = CAPABILITY_NOTES[slug];
   const relatedSlugs = !locale && pageContent?.related?.length ? pageContent.related : tool.related;
   const related = relatedSlugs.map((s) => toolBySlug.get(s)).filter((t): t is ToolDef => !!t && t.slug !== slug).slice(0, 6);
   const pc = locale ? null : pageContent ?? null;
@@ -42,6 +44,8 @@ export default function ToolClient({ slug, locale, pageContent, faqsOverride }: 
       <section className="relative mb-5 overflow-hidden rounded-2xl border border-line bg-gradient-to-br from-white via-white to-brand-soft/35 p-5 shadow-[0_12px_36px_rgba(15,23,42,0.06)] sm:p-7"><div className="pointer-events-none absolute -right-16 -top-20 h-56 w-56 rounded-full bg-brand-soft/70 blur-3xl" /><div className="relative flex flex-wrap items-start justify-between gap-5"><div className="max-w-3xl"><div className="mb-3 flex flex-wrap items-center gap-2"><span className="rounded-full border border-brand/20 bg-brand-soft px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">Interactive tool</span>{category && <span className="rounded-full border border-line bg-white/80 px-2.5 py-1 text-[10px] font-bold text-mute">{locale ? CATEGORY_LABELS[locale][category.id] ?? category.label : category.label}</span>}</div><h1 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">{localized?.name ?? tool.name}</h1><p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-mute">{localized?.intro ?? tool.intro}</p>{pc && <p className="mt-3 text-xs text-mute">By <Link href="/author/aryan-khan" className="font-semibold text-brand-strong hover:underline">Aryan Khan</Link>, Founder &amp; Editor · Updated {pc.updated}</p>}<div className="mt-4 flex flex-wrap gap-2 text-xs text-mute"><span className="rounded-lg border border-line bg-white/80 px-2.5 py-1.5">✓ No account required</span><span className="rounded-lg border border-line bg-white/80 px-2.5 py-1.5">✓ {tool.scope}</span><span className="rounded-lg border border-line bg-white/80 px-2.5 py-1.5">✓ No installation required</span></div></div><div className="flex shrink-0 flex-wrap gap-2"><ShareControls locale={locale} /></div></div></section>
 
 {pc?.quick_answer && <section id="quick-answer" aria-labelledby="qa-h" className="mt-8 rounded-2xl border border-brand/25 bg-brand-soft/40 p-5 shadow-sm sm:p-6"><h2 id="qa-h" className="font-display text-xl font-bold">Quick answer</h2><p className="mt-2 leading-7 text-mute">{pc.quick_answer}</p></section>}
+
+      {!locale && capability && <aside className="mb-5 rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm leading-7" aria-label="Current tool capability"><strong>Available here: {capability.available}.</strong> {capability.unavailable}{capability.alternative && <Link href={`/tools/${capability.alternative}`} className="ml-1 font-semibold text-brand-strong underline">Open the relevant calculator →</Link>}</aside>}
 
       {Component && <section className="relative overflow-hidden rounded-2xl border border-line bg-white shadow-[0_14px_42px_rgba(15,23,42,0.07)]"><div className="flex items-center justify-between border-b border-line bg-gradient-to-r from-well/60 to-white px-4 py-3 sm:px-5"><div className="flex items-center gap-2"><span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-soft text-brand-strong" aria-hidden>⌁</span><div><div className="text-xs font-extrabold uppercase tracking-[0.12em] text-ink">Tool workspace</div><div className="text-[11px] text-mute">Set your inputs, inspect the map and read the result</div></div></div><div className="hidden items-center gap-2 text-[11px] text-mute sm:flex"><span className="h-2 w-2 rounded-full bg-emerald-500" />Ready</div></div><div className="p-4 sm:p-5 lg:p-6"><Suspense fallback={<div className="flex h-80 items-center justify-center"><Spinner label="Loading tool…" /></div>}><Component params={tool.props} /></Suspense></div></section>}
 
@@ -62,7 +66,7 @@ export default function ToolClient({ slug, locale, pageContent, faqsOverride }: 
 
         {!locale && <ToolMethod tool={tool} />}
 
-        <div id="tool-guide" className="mt-10">{localized ? <section className="doc space-y-8" aria-label="Tool explanation"><section><h2 className="sect-h">{ui?.quickAnswer ?? "Quick answer"}</h2><p className="mt-3 text-mute">{localized.quickAnswer}</p></section><section><h2 className="sect-h">{localized.longForm.title}</h2>{localized.longForm.paras.map((paragraph, i) => <p key={i} className="mt-3 text-mute leading-relaxed">{paragraph}</p>)}</section>{tool.method && localized.method && <section><h2 className="sect-h">{ui?.methodology ?? "Methodology & accuracy"}</h2><p className="mt-3 text-mute">{localized.method}</p></section>}</section> : <><ToolContent tool={tool} /><ToolPageExtras slug={slug} /></>}</div>
+        <div id="tool-guide" className="mt-10">{localized ? <section className="doc space-y-8" aria-label="Tool explanation"><section><h2 className="sect-h">{ui?.quickAnswer ?? "Quick answer"}</h2><p className="mt-3 text-mute">{localized.quickAnswer}</p></section><section><h2 className="sect-h">{localized.longForm.title}</h2>{localized.longForm.paras.map((paragraph, i) => <p key={i} className="mt-3 text-mute leading-relaxed">{paragraph}</p>)}</section>{tool.method && localized.method && <section><h2 className="sect-h">{ui?.methodology ?? "Methodology & accuracy"}</h2><p className="mt-3 text-mute">{localized.method}</p></section>}</section> : <>{!capability && <ToolContent tool={tool} focused={!!pc} />}<ToolPageExtras slug={slug} /></>}</div>
 
         {pc?.related_prose && <section aria-labelledby="relres-h" className="mt-10"><h2 id="relres-h" className="font-display text-2xl font-bold tracking-tight">Related tools and resources</h2><p className="mt-3 leading-7 text-mute"><Segs parts={pc.related_prose} /></p></section>}
 

@@ -1,3 +1,7 @@
+import { CAPABILITY_NOTES } from "@/data/toolCapabilities";
+import { TOOL_ENGINE_UPGRADES } from "@/data/toolEngineUpgrades";
+import { engineMethod } from "@/data/engineMethods";
+
 // Central tool registry
 import { EXTRA_TOOLS } from "@/data/toolsExtra";
 import { CORE_TOOLS } from "@/data/coreTools";
@@ -85,7 +89,54 @@ const RAW_TOOLS: ToolDef[] = [
 ];
 
 const canonicalTools = new Map<string, ToolDef>();
-for (const tool of RAW_TOOLS) canonicalTools.set(tool.slug, tool);
+for (const tool of RAW_TOOLS) {
+  const evidence = engineMethod(tool);
+  canonicalTools.set(tool.slug, { ...tool, method: evidence && (!tool.method || ["area", "radius", "fuel"].includes(tool.component)) ? evidence.method : tool.method });
+}
+
+for (const [slug, targetSlug] of Object.entries(TOOL_ENGINE_UPGRADES)) {
+  const legacy = canonicalTools.get(slug);
+  const target = canonicalTools.get(targetSlug);
+  if (!legacy || !target) throw new Error(`Invalid engine upgrade: ${slug} → ${targetSlug}`);
+  canonicalTools.set(slug, {
+    ...legacy, component: target.component,
+    props: slug === "school-district-context" ? { mode: "school" } : target.props,
+    method: target.method, howTo: target.howTo, faq: target.faq,
+    intro: target.intro, short: target.short,
+    related: [...new Set([targetSlug, ...target.related])].filter(s => s !== slug),
+  });
+}
+
+const heatmapTool = canonicalTools.get("heatmap-from-points")!;
+canonicalTools.set(heatmapTool.slug, { ...heatmapTool, props: { mode: "heatmap" },
+  short: "Map CSV coordinates as a zoom-dependent point-concentration heatmap.",
+  intro: "Load CSV coordinates and inspect a heat layer showing their local concentration. Every point has equal weight; the colours are not a normalized population or risk estimate.",
+  method: "MapLibre's heatmap layer combines equal-weight CSV coordinate points with a 28-pixel screen-space radius. Exports retain the source points, not a raster density surface.",
+  howTo: ["Upload a CSV or paste rows with latitude and longitude columns.", "Confirm the coordinate columns, then zoom to inspect the heat pattern.", "Keep the zoom level consistent when comparing patterns; export the original points if needed."],
+  faq: [["Does the heatmap calculate population density?", "No. It displays equal-weight point concentration in screen space. No area-normalized rate or population model is calculated."]],
+});
+
+const availableWorkflows: Record<string, string[]> = {
+  radius: ["Choose the centre point on the map or by search.", "Set the circle radius and its distance unit.", "Read the geometric footprint; do not infer travel times from it."],
+  latlong: ["Select a coordinate by search, map click or device location.", "Inspect the latitude, longitude and displayed coordinate formats.", "Copy a coordinate or use the available external map links."],
+  distance: ["Select the first point, then the second point.", "Check the selected endpoints and distance unit.", "Read the surface separation; no automatic nearest-feature search is performed."],
+  fileviewer: ["Load a file in the format accepted by this workspace.", "Inspect the parsed geometry on the map.", "Check the current capability note before expecting conversions or geometry edits."],
+  area: ["Click the map to place the polygon vertices in boundary order.", "Complete the outline and inspect the selected shape.", "Read area and perimeter; this workspace does not run a separate containment query."],
+  pinmap: ["Choose locations for the map pins.", "Set the pin labels and inspect the resulting map.", "Use the export controls, then inspect the exported output."],
+  sun: ["Select a location and calendar date.", "Inspect the calculated solar events and displayed time zone.", "Read the solar result only; this workspace does not query tidal stations."],
+  fuel: ["Select trip endpoints and the road or straight-line distance basis.", "Enter fuel efficiency and a price in the matching unit.", "Read estimated fuel quantity and cost; no refuelling stops are optimized."],
+};
+
+for (const [slug, note] of Object.entries(CAPABILITY_NOTES)) {
+  const tool = canonicalTools.get(slug);
+  if (!tool) throw new Error(`Unknown capability note: ${slug}`);
+  canonicalTools.set(slug, {
+    ...tool, short: `${note.available}. ${note.unavailable}`,
+    intro: `Available in this workspace: ${note.available.toLowerCase()}. ${note.unavailable}`,
+    howTo: availableWorkflows[tool.component] ?? tool.howTo,
+    faq: [["What is actually available on this page?", `${note.available}. ${note.unavailable}`]],
+  });
+}
 
 export const TOOLS: ToolDef[] = [...canonicalTools.values()];
 export const toolBySlug = new Map(TOOLS.map((t) => [t.slug, t]));

@@ -7,7 +7,8 @@ import { DynamicMap, PALETTE } from "./shared";
 
 const MAX_POINTS = 50000;
 
-export default function CsvMapTool() {
+export default function CsvMapTool({ params }: { params?: Record<string, unknown> }) {
+  const heatmap = params?.mode === "heatmap";
   const [data, setData] = useState<ParsedCsv | null>(null);
   const [latCol, setLatCol] = useState(-1);
   const [lngCol, setLngCol] = useState(-1);
@@ -86,6 +87,7 @@ export default function CsvMapTool() {
 
   return (
     <div className="space-y-4">
+      {heatmap && <p className="text-sm leading-7 text-mute">Heat intensity represents nearby point concentration on screen, not population or a normalized geographic rate. Zoom level changes the apparent pattern; exported files contain the original points, not a density raster.</p>}
       {!data && (
         <FileDropzone onFile={(f) => f.text().then(ingest)} accept=".csv,text/csv">
           <div className="mt-3 text-center">
@@ -147,7 +149,15 @@ export default function CsvMapTool() {
         mapRef.current = map; libRef.current = lib;
         map.addSource("csv", {
           type: "geojson", data: { type: "FeatureCollection", features: [] },
-          cluster: true, clusterMaxZoom: 14, clusterRadius: 46,
+          cluster: !heatmap, clusterMaxZoom: 14, clusterRadius: 46,
+        });
+        if (heatmap) map.addLayer({
+          id: "csv-heat", type: "heatmap", source: "csv",
+          paint: {
+            "heatmap-weight": 1, "heatmap-intensity": 1,
+            "heatmap-radius": 28, "heatmap-opacity": 0.8,
+            "heatmap-color": ["interpolate", ["linear"], ["heatmap-density"], 0, "rgba(0,0,0,0)", 0.2, "#67b7dc", 0.5, "#ffffbf", 0.8, "#f46d43", 1, "#a50026"],
+          },
         });
         map.addLayer({
           id: "csv-clusters", type: "circle", source: "csv", filter: ["has", "point_count"],
@@ -163,7 +173,7 @@ export default function CsvMapTool() {
           paint: { "text-color": "#ffffff" },
         });
         map.addLayer({
-          id: "csv-points", type: "circle", source: "csv", filter: ["!", ["has", "point_count"]],
+          id: "csv-points", type: "circle", source: "csv", layout: { visibility: heatmap ? "none" : "visible" }, filter: ["!", ["has", "point_count"]],
           paint: {
             "circle-color": categories.length
               ? (["match", ["get", "cat"], ...categories.flatMap((c, i) => [c, PALETTE[i % PALETTE.length]]), "#1d6e63"] as any)

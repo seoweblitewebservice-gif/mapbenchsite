@@ -34,3 +34,15 @@ Schema improvements are based on MapBench's own visible content and Schema.org e
 ## Originality
 
 No competitor text, tables, city-pair figures, scenario statistics, source claims or implementation code were added to MapBench. Existing MapBench content remains in place; new editorial text is written for its own models and scope. The comparison records techniques and critiques rather than reproducing the competitor's content.
+
+## Continuation — 28 October 2026
+
+Also sampled the rendered text of:
+- https://www.simplemaplab.com/tools/gps-coordinate-converter (first text chunk)
+- https://www.simplemaplab.com/tools/what-county-am-i-in (first text chunk)
+
+Useful additional patterns are coordinate-format comparison tables, input/output examples, scope distinctions and contextual next-step links. These patterns are not proof that the competitor's claims are correct: six decimal places express numeric precision, not measured positional accuracy, and county lookup prose must distinguish an address record from a Census boundary query. MapBench's continuation therefore prioritizes source-matched method text and honest capabilities over reproducing long example lists or unverified local statistics.
+
+Applied in this continuation: source-linked engine methods, corrected spherical-vs-ellipsoidal claims, six intent-matched workspace upgrades, original checkable examples, a working point heat layer, explicit boundaries on incomplete specialist tools, and schema-to-visible-content verification across the whole catalogue. Existing original MapBench instructions, FAQs and contextual resource links are retained where applicable. No competitor paragraphs, coordinate tables, case-study populations, regulatory examples or claims of sub-metre real-world accuracy were imported.
+
+This remains a sampled competitor study, not a raw-schema audit or an assertion of universal feature parity. In particular, the 18 explicitly limited legacy tools are not represented as fully implemented specialist tools.

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { engineMethod } from "@/data/engineMethods";
 import type { CategoryId, ToolDef } from "@/lib/registry";
 
 /** Scope notes, not a substitute for an implementation-specific formula. */
@@ -19,13 +20,15 @@ const CHECKS: Record<CategoryId, [string, string]> = {
 
 export default function ToolMethod({ tool }: { tool: ToolDef }) {
   const [check, limit] = CHECKS[tool.category];
+  const evidence = engineMethod(tool);
   return <section id="method-and-limits" aria-labelledby="method-heading" className="mt-8 rounded-2xl border border-line bg-white p-5 sm:p-6">
     <h2 id="method-heading" className="font-display text-2xl font-bold">Method, assumptions &amp; limits</h2>
     <dl className="mt-4 space-y-4 text-sm leading-7 text-mute">
       {tool.method && <div><dt className="font-bold text-ink">This tool’s method</dt><dd>{tool.method}</dd></div>}
       <div><dt className="font-bold text-ink">Before relying on the answer</dt><dd>{check}</dd></div>
-      <div><dt className="font-bold text-ink">What the result cannot establish</dt><dd>{limit}</dd></div>
+      <div><dt className="font-bold text-ink">What the result cannot establish</dt><dd>{evidence?.limitation ?? limit}</dd></div>
     </dl>
+    {evidence && <p className="mt-4 text-xs leading-6 text-mute">Implementation reference: <a href={`https://github.com/seoweblitewebservice-gif/mapbenchsite/blob/main/src/components/tools/${evidence.source}`} className="font-semibold text-brand-strong hover:underline" target="_blank" rel="noreferrer">{evidence.source}</a>. Shared engines can serve several focused tools; input mode determines which outputs apply.</p>}
     <p className="mt-4 text-sm leading-7 text-mute">Coverage: {tool.scope}. Search, basemap and external data requests may use third-party services; browser-based does not mean every operation is offline. Read the <Link href="/data-sources" className="font-semibold text-brand-strong hover:underline">source and licence notes</Link>, <Link href="/methodology" className="font-semibold text-brand-strong hover:underline">calculation methodology</Link> and <Link href="/privacy" className="font-semibold text-brand-strong hover:underline">privacy policy</Link>. If a result looks inconsistent, <Link href="/corrections" className="font-semibold text-brand-strong hover:underline">report a correction</Link> with the inputs and mode used.</p>
   </section>;
 }
