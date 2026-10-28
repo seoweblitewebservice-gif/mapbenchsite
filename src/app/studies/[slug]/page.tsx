@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ResourceToolLinks from "@/components/ResourceToolLinks";
 import { notFound } from "next/navigation";
 import { STUDIES, antipodeRows, cityPairRows, density500Rows, equatorRows, getStudy, isolationRows, population1000Rows, primeMeridianRows } from "@/data/studies";
 import { largestCountryGeometryRows, northernCentroidCountryRows, widestLongitudeCountryRows } from "@/data/countryStudies";
@@ -14,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 function MethodBox({ children }: { children: React.ReactNode }) {
-  return <section className="rounded-xl border border-line bg-well/40 p-5"><h2 className="font-display text-2xl font-bold">Method</h2><div className="mt-3 space-y-3 text-sm leading-relaxed text-mute">{children}</div></section>;
+  return <section id="study-method" className="scroll-mt-24 rounded-xl border border-line bg-well/40 p-5"><h2 className="font-display text-2xl font-bold">Method</h2><div className="mt-3 space-y-3 text-sm leading-relaxed text-mute">{children}</div></section>;
 }
 
 export default async function StudyPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -32,6 +33,8 @@ export default async function StudyPage({ params }: { params: Promise<{ slug: st
       <div className="mt-6 rounded-lg border border-line bg-card p-4"><strong>Research question:</strong> {study.question}</div>
       <div className="mt-4 flex flex-wrap gap-2 text-sm"><a className="btn btn-ghost" href={`/studies/${study.slug}/data?format=csv`}>Download CSV</a><a className="btn btn-ghost" href={`/studies/${study.slug}/data?format=json`}>Download JSON</a></div>
 
+      <nav className="contents-nav mt-8" aria-label="On this page"><div className="flex flex-wrap gap-5 text-sm font-semibold text-brand-strong"><a href="#study-results">Results &amp; tables</a><a href="#study-method">Calculation method</a><a href="#study-limits">Dataset limitations</a><a href="#study-resources">Related resources</a></div></nav>
+      <div id="study-results" className="scroll-mt-24">
       {study.slug === "most-isolated-major-cities" && <IsolationStudy />}
       {study.slug === "major-city-density-within-500km" && <DensityStudy />}
       {study.slug === "closest-major-cities-to-antipodes" && <AntipodeStudy />}
@@ -44,8 +47,9 @@ export default async function StudyPage({ params }: { params: Promise<{ slug: st
       {study.slug === "widest-country-longitude-spans" && <WidestLongitudeStudy />}
       {study.slug === "northernmost-country-centroids" && <NorthernCentroidStudy />}
 
-      <section className="mt-10 border-t border-line pt-8"><h2 className="font-display text-2xl font-bold">Important caveat</h2>{countryGeometryStudy ? <><p className="mt-3">These country rankings use generalized world-atlas/Natural Earth geometry intended for small-scale mapping. Polygon area, bounds and centroid can differ from official national statistics because coastlines, islands, disputed boundaries and geometry detail are represented differently.</p><p className="mt-3">Use these results as a reproducible comparison of one consistent public world geometry dataset, not as a replacement for official land-area or legal-boundary figures.</p></> : <><p className="mt-3">This is a ranking inside MapBench&apos;s curated major-city dataset, not a complete census of every settlement on Earth. Population values are approximate and city-centre coordinates are used consistently for comparison.</p><p className="mt-3">The study is useful for reproducible geographic comparison and method demonstrations. It should not be cited as an official global urban ranking without this scope note.</p></>}</section>
-      <section className="mt-8 rounded-xl border border-line bg-card p-5"><h2 className="font-display text-xl font-bold">Reproduce the measurements</h2><p className="mt-2 text-sm leading-relaxed text-mute">Use MapBench tools and the downloadable dataset to check individual values or reproduce the ranking.</p><div className="mt-4 flex flex-wrap gap-2 font-sans text-sm"><Link href="/tools/distance-between-two-places" className="btn btn-ghost">Distance Between Two Places</Link><Link href="/tools/map-area-calculator" className="btn btn-ghost">Map Area Calculator</Link><Link href="/reference" className="btn btn-ghost">Country Reference</Link><Link href="/methodology" className="btn btn-ghost">Methodology</Link></div></section>
+      </div>
+      <section id="study-limits" className="mt-10 scroll-mt-24 border-t border-line pt-8"><h2 className="font-display text-2xl font-bold">Important caveat</h2>{countryGeometryStudy ? <><p className="mt-3">These country rankings use generalized world-atlas/Natural Earth geometry intended for small-scale mapping. Polygon area, bounds and centroid can differ from official national statistics because coastlines, islands, disputed boundaries and geometry detail are represented differently.</p><p className="mt-3">Use these results as a reproducible comparison of one consistent public world geometry dataset, not as a replacement for official land-area or legal-boundary figures.</p></> : <><p className="mt-3">This is a ranking inside MapBench&apos;s curated major-city dataset, not a complete census of every settlement on Earth. Population values are approximate and city-centre coordinates are used consistently for comparison.</p><p className="mt-3">The study is useful for reproducible geographic comparison and method demonstrations. It should not be cited as an official global urban ranking without this scope note.</p></>}</section>
+      <section id="study-resources" className="mt-8 scroll-mt-24 border-t border-line pt-8"><h2 className="font-display text-xl font-bold">Understand and check the dataset</h2><p className="mt-3 text-sm leading-7 text-mute">Start with this study’s CSV or JSON export when reproducing the ranking. Related tools can help check individual geographic calculations, but their source data and scope may differ. Read the <Link href="/methodology" className="editorial-link">calculation methodology</Link> and <Link href="/data-sources" className="editorial-link">source and licence notes</Link> before reusing a result.</p><ResourceToolLinks href={`/studies/${study.slug}`} /></section>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Article", headline: study.title, description: study.description, datePublished: study.date, dateModified: study.date, author: { "@type": "Person", "@id": "https://www.mapbench.site/author/aryan-khan#person", name: "Aryan Khan", url: "https://www.mapbench.site/author/aryan-khan", sameAs: ["https://www.linkedin.com/in/aryan-khan-b77438438/"] }, publisher: { "@type": "Organization", name: "MapBench", url: "https://www.mapbench.site" }, mainEntityOfPage: `https://www.mapbench.site/studies/${study.slug}` }) }} />
     </article>
   );

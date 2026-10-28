@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ResourceToolLinks from "@/components/ResourceToolLinks";
 import { notFound } from "next/navigation";
 import { type GuideBlock } from "@/data/guides";
 import { ALL_GUIDES, allGuideBySlug } from "@/data/allGuides";
@@ -238,6 +239,7 @@ export default async function GuidePage({ params }: Props) {
             </div>
           </aside>
         </div>
+        <ResourceToolLinks href={`/guides/${g.slug}`} exclude={toolboxSlugs} />
       </article>
     </>
   );

@@ -362,3 +362,10 @@ body {
 .editorial-body #faq summary { font-size: 15px; }
 .editorial-body .editorial-examples p { font-size: 15px; }
 .editorial-body a:focus-visible, .category-pill:focus-visible { outline: 2px solid var(--sf-brand); outline-offset: 4px; }
+
+.contents-nav { padding: 18px 0; border-block: 1px solid var(--sf-line); }
+.workflow-answer { color: var(--sf-mute); line-height: 1.85; }
+.editorial-body #how-to-use .workflow-answer { border: 0; padding: 0; background: transparent; }
+.editorial-body #method-and-limits { border: 0; border-block: 1px solid var(--sf-line); border-radius: 0; padding: 28px 0; background: transparent; }
+.editorial-body #worked-examples > h2 { margin-bottom: 18px; }
+.editorial-body #related-tools .card, .editorial-body #more-tools .card { box-shadow: none; border-radius: 6px; transform: none; }

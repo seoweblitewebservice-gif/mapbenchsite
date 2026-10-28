@@ -80,6 +80,8 @@ export default async function CategoryPage({ params }: Props) {
         <p className="mt-4 text-lg leading-relaxed text-mute">{category.short} This hub groups {tools.length} tools that answer related geographic questions while keeping the underlying method, data source and limitations visible.</p>
       </header>
 
+      <nav aria-label="On this page" className="contents-nav mt-8"><div className="flex flex-wrap gap-5 text-sm font-semibold text-brand-strong"><a href="#featured-category-tools">Popular tools</a>{remaining.length > 0 && <a href="#all-category-tools">Full directory</a>}<a href="#category-method">Choosing a method</a><a href="#category-terms">Key terms</a></div></nav>
+
       <section className="mt-10" aria-labelledby="featured-category-tools">
         <div><h2 id="featured-category-tools" className="sect-h">Start with these tools</h2><p className="mt-2 max-w-3xl">Choose the tool that matches the question rather than the one with the most familiar name. Related tools can use different geographic models and legitimately return different answers.</p></div>
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

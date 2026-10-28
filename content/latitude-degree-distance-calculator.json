@@ -9,166 +9,148 @@
   "how to calculate latitude degree distance calculator"
  ],
  "title": "Latitude Degree Distance Calculator",
- "description": "Convert a latitude-degree difference into north-south distance with the Latitude Degree Distance Calculator — mid-latitude aware. Free.",
+ "description": "Convert a latitude difference to approximate north-south distance using 111.195 km per degree. Worked examples, units and limitations explained.",
  "updated": "October 2026",
- "summary_sentence": "For example, a site spanning 40.0° to 40.9° of latitude covers 0.9 degrees — about 100 km north to south, the calculator's one-line verdict.",
- "quick_answer": "The Latitude Degree Distance Calculator converts a latitude-degree difference into north-south distance, applying WGS84's degree length at the span's own latitude. Enter the degree difference and where it sits, and read the distance in kilometres or miles — the dedicated instrument for latitude spans, sibling to the general degrees-to-kilometres page.",
- "steps_intro": "Latitude spans, converted at their own latitude:",
+ "summary_sentence": "A difference of 0.9° gives 100.0755 km before rounding, using the calculator’s constant 111.195 km-per-degree scale.",
+ "quick_answer": "This calculator multiplies the absolute latitude difference by 111.195 to estimate kilometres, and by 69.093 to estimate miles. It uses a constant mean-Earth scale, not a latitude-dependent ellipsoidal calculation. The reference field does not change this conversion. Use it for quick north-south scale estimates rather than legal measurements.",
+ "steps_intro": "Subtract the two latitude values, preserving their signs when calculating the difference. Enter that angular difference, then read the distance. The tool uses the absolute size of the difference; it does not report northbound or southbound travel.",
  "use_cases": [
   {
-   "title": "Study-area dimensions",
+   "title": "Estimate the height of a study area",
    "body": [
     {
-     "t": "A research area defined by latitudes gets its true height here — report it in kilometres, not degrees, and reviewers relax."
+     "t": "A dataset bounded by 40.0°N and 40.9°N spans 0.9 degrees of latitude. Converting that span to approximately 100.076 km gives a useful sense of its north-south size before opening a GIS project. This is the height implied by the bounding latitudes, not the length of an irregular boundary or the distance along a road. Keep the original coordinates with the reported estimate so another reader can check the input."
     }
    ]
   },
   {
-   "title": "Route north-south legs",
+   "title": "Check coordinate units before an import",
    "body": [
     {
-     "t": "The meridian component of a journey, isolated: how much of the trip was pure northing."
+     "t": "A coordinate column containing 0.01-degree steps is not describing points ten metres apart. Under this model, 0.01 degrees of latitude is about 1.112 km. This simple check can catch a unit assumption before a dataset is imported into a mapping application. It does not tell you whether the source coordinates are accurate, whether they use the expected datum, or whether a missing minus sign has placed them in the wrong hemisphere."
     }
    ]
   },
   {
-   "title": "Verifying extents",
+   "title": "Describe the scale of a gridded dataset",
    "body": [
     {
-     "t": "A dataset's stated latitude extent cross-checked against its claimed size — one subtraction and this conversion is the audit."
+     "t": "Latitude bands provide one dimension of an angular grid. Converting the band height helps explain a climate or terrain raster in familiar units, but it does not establish the area of a cell. The east-west width also depends on latitude. Pair this calculation with a longitude conversion rather than assuming that a cell measuring one degree by one degree is a square on the ground. For area statistics, use the dataset’s documented area method."
     }
    ]
   },
   {
-   "title": "Climate-band arithmetic",
+   "title": "Separate north-south change from total separation",
    "body": [
     {
-     "t": "Each 1° band is ~111 km of climate — storm tracks and growing zones sized in degrees become kilometres of reality here."
+     "t": "Two locations can have nearly identical latitudes while still being thousands of kilometres apart east to west. This calculator measures only the latitude component, so a small result does not mean the locations are close. Use it to describe north-south extent, then use a two-point distance calculator when the question is actual surface separation. A driving route introduces another distinction because roads do not follow the geometric shortest path."
     }
    ]
   }
  ],
  "examples": [
   {
-   "label": "Example · The span matters where it sits",
+   "label": "Worked example · Crossing the equator",
    "body": [
     {
-     "t": "0.9° of latitude at 40°N = 99.9 km; the same 0.9° at the equator = 99.5 km. Small differences — but this calculator exists so you never have to call them zero."
+     "t": "From −0.2° to +0.3°, the latitude difference is 0.5°, not 0.1°. The estimate is 0.5 × 111.195 = 55.5975 km, displayed as about 55.598 km. Compute the signed subtraction first, then take its magnitude. Adding the absolute coordinates happens to work for opposite hemispheres but would be incorrect for two points in the same hemisphere."
     }
    ]
   },
   {
-   "label": "Example · The whole meridian",
+   "label": "Worked example · Decimal precision",
    "body": [
     {
-     "t": "Pole to pole is 180° and about 20,003 km of meridian — the half-circumference whose near-twin (the equator's 40,075 km) measures the Earth's flattening by their difference."
+     "t": "A latitude step of 0.00001° corresponds to 0.00111195 km, or approximately 1.112 metres under the model. That describes the spacing between coordinate values, not GPS accuracy. A device reading can show five decimals while the physical location is uncertain by several metres. Do not use the number of displayed decimals as a substitute for a measurement accuracy specification."
     }
    ]
   }
  ],
  "popular_table": {
-  "title": "Latitude degree lengths (WGS84)",
-  "intro": "The shared table of the latitude family — computed, not remembered.",
+  "title": "Latitude differences using this calculator’s scale",
+  "intro": "Calculated as absolute degrees × 111.195 km. These are mean-scale estimates, not ellipsoidal degree lengths at different latitudes.",
   "columns": [
-   "At latitude",
-   "1° latitude",
-   "0.1°"
+   "Difference (degrees)",
+   "Distance (km)",
+   "Distance (metres)"
   ],
   "rows": [
    [
-    "0°",
-    "110.574 km",
-    "11.06 km"
+    "1",
+    "111.195000",
+    "111195.000"
    ],
    [
-    "40°",
-    "111.035 km",
-    "11.10 km"
+    "0.5",
+    "55.597500",
+    "55597.500"
    ],
    [
-    "45°",
-    "111.132 km",
-    "11.11 km"
+    "0.1",
+    "11.119500",
+    "11119.500"
    ],
    [
-    "60°",
-    "111.412 km",
-    "11.14 km"
+    "0.01",
+    "1.111950",
+    "1111.950"
    ],
    [
-    "80°",
-    "111.660 km",
-    "11.17 km"
+    "0.001",
+    "0.111195",
+    "111.195"
+   ],
+   [
+    "1e-05",
+    "0.001112",
+    "1.112"
    ]
   ],
-  "note": "Enter the span's mid-latitude for the best single-rate conversion of a long span — the method note the professionals use without thinking."
+  "note": "The implementation also uses 69.093 miles per degree. Small differences can occur if a rounded kilometre output is converted separately to miles."
  },
  "faq": [
   [
-   "What does this tool calculate?",
-   "North-south ground distance for a latitude-degree difference, using the WGS84 meridional degree length at the stated latitude."
+   "Does the reference field change the answer?",
+   "No. The current latitude-span implementation uses a fixed distance per degree and does not use the reference value in its calculation. It should not be described as a latitude-aware ellipsoidal solver."
   ],
   [
-   "Do I need an account?",
-   "No — degrees and latitude in, distance out."
+   "Is one degree of latitude exactly 111.195 km?",
+   "Not on the real ellipsoidal Earth. The calculator uses a convenient mean scale. Actual meridional degree length varies with latitude, so surveying and precise geographic analysis need a suitable geodesic method."
   ],
   [
-   "Can I rely on this for professional work?",
-   "The geometry is ellipsoid-true — for planning, reporting and checking, yes. Legal measurement follows survey practice, as everywhere on this site."
+   "Can I use negative latitude differences?",
+   "The output uses the absolute magnitude. A negative difference therefore produces the same estimated distance as the equivalent positive difference. Keep direction separately if your workflow needs it."
   ],
   [
-   "Which datum do these coordinate tools use?",
-   "WGS84, the frame web maps and GPS share — tile and pixel systems on this page are defined over it."
+   "Can I estimate a whole meridian with this tool?",
+   "The arithmetic will scale a large angular span, but it remains the same constant-scale approximation. It does not integrate the varying degree length along an ellipsoid. Do not quote that result as an exact pole-to-pole measurement."
   ],
   [
-   "Do more decimal places always mean better accuracy?",
-   "No — pixels and tiles quantise the world; extra coordinate decimals beyond the cell size are decoration."
+   "What if both coordinates are south of the equator?",
+   "Use signed decimal coordinates when subtracting. For −35° and −34.5°, the difference is 0.5°. The fact that both points are south does not change the magnitude of the span."
   ],
   [
-   "How is it different from the Degrees Latitude page?",
-   "Same physics, different doorway: that page converts degrees generally; this one is framed around a difference between two latitudes. Use whichever matches your input's shape."
-  ],
-  [
-   "Long spans (10°+)?",
-   "Apply the mid-latitude rate, or split the span — degree length drifts ~1% across the whole quadrant, so even the simple approach errs by metres per hundred kilometres."
-  ],
-  [
-   "Crossing the equator?",
-   "The difference is still just degrees; use the mid-latitude (≈0) rate. Signs handle hemispheres."
-  ],
-  [
-   "Feet or yards?",
-   "Kilometres and miles are the working pair; survey chains remain a romance for other pages."
-  ],
-  [
-   "Longitude instead?",
-   "A different, latitude-hungry conversion — the Longitude Degree Distance Calculator owns it."
+   "Which tool should I use for full point-to-point distance?",
+   "Use Distance Between Two Places when both latitude and longitude change. This calculator deliberately isolates one coordinate dimension; it cannot determine a complete journey from a latitude difference alone."
   ]
  ],
  "related_prose": [
   {
-   "t": "General lane: "
+   "t": "For a full geographic separation, use "
   },
   {
-   "t": "Degrees Latitude to Kilometers Calculator",
-   "l": "/tools/latitude-degree-distance"
+   "t": "Distance Between Two Places",
+   "l": "/tools/distance-between-two-places"
   },
   {
-   "t": "; east-west: the "
+   "t": ". For formatting coordinates before a calculation, use the "
   },
   {
-   "t": "Longitude Degree Distance Calculator",
-   "l": "/tools/longitude-degree-distance-calculator"
+   "t": "Coordinate Converter",
+   "l": "/tools/coordinate-converter"
   },
   {
-   "t": "; sets: the "
-  },
-  {
-   "t": "Coordinate Span Calculator",
-   "l": "/tools/coordinate-span-calculator"
-  },
-  {
-   "t": "."
+   "t": ". Keep the angular-span estimate separate from routing time, parcel area and source-coordinate accuracy."
   }
  ],
  "more_tools": [

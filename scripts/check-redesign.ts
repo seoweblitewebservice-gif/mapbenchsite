@@ -20,7 +20,7 @@ async function main() {
   const directory = await page("/tools");
   assert(directory.indexOf('id="search-directory"') < directory.indexOf('id="tool-category-hubs"'), "Search must precede category guides");
   const radius = await page("/tools/map-radius");
-  assert(radius.includes("Four practical radius-map examples"));
+  assert(radius.includes("Ten practical radius-map examples"));
   assert(radius.includes("Radius, route or drive-time map?"));
   assert(radius.indexOf("Tool workspace") < radius.indexOf('id="quick-answer"'), "Calculator must precede editorial content");
   assert(radius.replace(/<!--.*?-->/g, "").includes("28.3 square miles"), "3-mile worked example should be correct");
