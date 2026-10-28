@@ -1,19 +1,21 @@
 /**
- * Curated-homepage + complete-directory coverage test.
+ * Homepage format + complete-directory coverage test.
  * Run with the preview server running: npx tsx scripts/check-redesign.ts
  * (or: npm run test:homepage, with PREVIEW_ORIGIN pointing at the server)
  *
- * Replaces the old assertion that the homepage must link all tools. The
- * homepage is now a curated entry point; the complete directory lives at
- * /tools and across the 12 canonical category hubs.
+ * The homepage lists the full tool directory (all registry tools,
+ * category-wise) plus blank-map spotlights, a US-states strip, studies,
+ * guides, popular questions, data sources and FAQ.
  */
 import assert from "node:assert/strict";
 import { CATEGORIES, TOOLS } from "../src/lib/registry";
 import {
-  FEATURED_SECTIONS,
   HOMEPAGE_GUIDE_SLUGS,
+  POPULAR_QUESTIONS,
   POPULAR_SLUGS,
+  homepageMapHrefs,
 } from "../src/data/homepage";
+import { US_BLANK_MAP_STATES } from "../src/data/usBlankMapStates";
 import { STUDIES } from "../src/data/studies";
 
 const origin = process.env.PREVIEW_ORIGIN ?? "http://localhost:3000";
@@ -34,25 +36,10 @@ function toolSlugsIn(html: string): Set<string> {
 }
 
 async function main() {
-  // ---- Curated homepage structure ----
-  assert.equal(POPULAR_SLUGS.length, 8, "Homepage must feature exactly 8 popular tools");
-  assert.ok(
-    FEATURED_SECTIONS.length <= 3,
-    "Homepage must have at most 3 featured category sections",
-  );
-  for (const section of FEATURED_SECTIONS) {
-    assert.equal(
-      section.slugs.length,
-      4,
-      `Featured section ${section.categoryId} must list exactly 4 tools`,
-    );
-    for (const slug of section.slugs) {
-      assert.ok(
-        !POPULAR_SLUGS.includes(slug),
-        `Featured tool ${slug} must not repeat a popular-tools link`,
-      );
-    }
-  }
+  assert.equal(POPULAR_SLUGS.length, 4, "Homepage hero must feature exactly 4 popular tools");
+  assert.equal(HOMEPAGE_GUIDE_SLUGS.length, 3, "Homepage must showcase exactly 3 guides");
+  assert.equal(POPULAR_QUESTIONS.length, 12, "Homepage must list exactly 12 popular questions");
+  assert.equal(homepageMapHrefs().length, 12, "Homepage must spotlight exactly 12 blank maps");
 
   const home = await page("/");
   assert.equal((home.match(/<h1[ >]/g) ?? []).length, 1, "Homepage needs exactly one H1");
@@ -61,7 +48,7 @@ async function main() {
     "Homepage hero needs a working tool search box",
   );
 
-  // Popular + featured selections resolve to live registry tools and are linked.
+  // Popular hero tools resolve to live registry tools and are linked.
   for (const slug of POPULAR_SLUGS) {
     assert.ok(
       TOOLS.some((tool) => tool.slug === slug),
@@ -72,57 +59,70 @@ async function main() {
       `Homepage is missing popular tool ${slug}`,
     );
   }
-  for (const section of FEATURED_SECTIONS) {
-    assert.ok(
-      CATEGORIES.some((category) => category.id === section.categoryId),
-      `Featured category ${section.categoryId} must exist`,
-    );
-    for (const slug of section.slugs) {
-      assert.ok(
-        TOOLS.some((tool) => tool.slug === slug),
-        `Featured slug ${slug} must exist in the registry`,
-      );
-      assert.ok(
-        home.includes(`href="/tools/${slug}"`),
-        `Homepage is missing featured tool ${slug}`,
-      );
-    }
-  }
 
-  // All 12 category hubs are linked from the homepage with live canonical URLs.
+  // Full directory: every category section exists and every tool is linked.
   assert.equal(CATEGORIES.length, 12, "Registry must define 12 categories");
   for (const category of CATEGORIES) {
     assert.ok(
+      home.includes(`id="category-${category.id}"`),
+      `Homepage is missing directory section ${category.id}`,
+    );
+    assert.ok(
       home.includes(`href="/tools/category/${category.id}"`),
-      `Homepage is missing category link ${category.id}`,
+      `Homepage is missing category hub link ${category.id}`,
     );
   }
+  const homeToolLinks = toolSlugsIn(home);
+  const missingTools = TOOLS.filter((tool) => !homeToolLinks.has(tool.slug)).map(
+    (tool) => tool.slug,
+  );
+  assert.equal(
+    missingTools.length,
+    0,
+    `Homepage directory is missing tools: ${missingTools.join(", ")}`,
+  );
 
-  // Exactly 3 guides and 3 studies are showcased.
-  assert.equal(HOMEPAGE_GUIDE_SLUGS.length, 3, "Homepage must showcase exactly 3 guides");
-  for (const slug of HOMEPAGE_GUIDE_SLUGS) {
-    assert.ok(home.includes(`href="/guides/${slug}"`), `Homepage is missing guide ${slug}`);
+  // Blank-map spotlights resolve to live map pages.
+  for (const href of homepageMapHrefs()) {
+    assert.ok(home.includes(`href="${href}"`), `Homepage is missing map link ${href}`);
+    await page(href);
   }
+
+  // US-states strip: every state county page is linked and loads.
+  assert.ok(home.includes('id="us-states"'), "Homepage needs the US-states section");
+  for (const state of US_BLANK_MAP_STATES) {
+    const href = `/states/${state.slug}/counties`;
+    assert.ok(home.includes(`href="${href}"`), `Homepage is missing state link ${href}`);
+  }
+  for (const slug of ["california", "texas", "florida"]) {
+    await page(`/states/${slug}/counties`);
+  }
+  await page("/states");
+
+  // Studies, guides, popular questions, data sources, FAQ.
   for (const study of STUDIES.slice(0, 3)) {
     assert.ok(
       home.includes(`href="/studies/${study.slug}"`),
       `Homepage is missing study ${study.slug}`,
     );
   }
+  for (const slug of HOMEPAGE_GUIDE_SLUGS) {
+    assert.ok(home.includes(`href="/guides/${slug}"`), `Homepage is missing guide ${slug}`);
+    await page(`/guides/${slug}`);
+  }
+  assert.ok(home.includes('id="popular-questions"'), "Homepage needs popular questions");
+  for (const item of POPULAR_QUESTIONS) {
+    assert.ok(
+      home.includes(`href="${item.href}"`),
+      `Homepage is missing popular question link ${item.href}`,
+    );
+  }
+  assert.ok(home.includes('id="data-sources"'), "Homepage needs the data-sources section");
+  const faqQuestions = (home.match(/<details/g) ?? []).length;
+  assert.equal(faqQuestions, 8, "Homepage FAQ must contain 8 questions");
 
-  // Curated, not exhaustive: the homepage must NOT carry the full directory.
-  const homeToolLinks = toolSlugsIn(home);
-  assert.ok(
-    homeToolLinks.size < TOOLS.length,
-    `Homepage should be curated, but links ${homeToolLinks.size}/${TOOLS.length} tools`,
-  );
-  assert.ok(
-    homeToolLinks.size >= POPULAR_SLUGS.length + FEATURED_SECTIONS.flatMap((s) => s.slugs).length,
-    "Homepage is missing curated tool links",
-  );
-
-  // ---- Complete directory coverage (outside the homepage) ----
-  // Every registry tool must remain discoverable via its canonical category hub.
+  // Complete directory coverage also holds outside the homepage: every tool
+  // must remain discoverable via its canonical category hub.
   const covered = new Set<string>();
   for (const category of CATEGORIES) {
     const html = await page(`/tools/category/${category.id}`);
@@ -133,11 +133,13 @@ async function main() {
     );
     for (const slug of toolSlugsIn(html)) covered.add(slug);
   }
-  const missing = TOOLS.filter((tool) => !covered.has(tool.slug)).map((tool) => tool.slug);
+  const missingFromHubs = TOOLS.filter((tool) => !covered.has(tool.slug)).map(
+    (tool) => tool.slug,
+  );
   assert.equal(
-    missing.length,
+    missingFromHubs.length,
     0,
-    `Tools missing from every category hub: ${missing.join(", ")}`,
+    `Tools missing from every category hub: ${missingFromHubs.join(", ")}`,
   );
 
   // /tools directory keeps search-first layout and links the hubs.
@@ -147,12 +149,6 @@ async function main() {
       directory.indexOf('id="search-directory"') < directory.indexOf('id="tool-category-hubs"'),
     "Search must precede category guides on /tools",
   );
-  for (const category of CATEGORIES) {
-    assert.ok(
-      directory.includes(`href="/tools/category/${category.id}"`),
-      `/tools is missing category hub link ${category.id}`,
-    );
-  }
 
   // Spot-check a flagship tool page still renders with one H1 and canonical URL.
   const radius = await page("/tools/map-radius");
@@ -163,10 +159,10 @@ async function main() {
   );
 
   console.log(
-    `PASS: curated homepage (${POPULAR_SLUGS.length} popular + ` +
-      `${FEATURED_SECTIONS.flatMap((s) => s.slugs).length} featured links, ` +
-      `${CATEGORIES.length} category hubs, 3 guides, 3 studies) + complete ` +
-      `directory coverage (${covered.size}/${TOOLS.length} tools via category hubs).`,
+    `PASS: full-directory homepage (${homeToolLinks.size}/${TOOLS.length} tools, ` +
+      `${CATEGORIES.length} categories, ${POPULAR_SLUGS.length} popular, 12 map spotlights, ` +
+      `${US_BLANK_MAP_STATES.length} states, 3 studies, 3 guides, 12 questions, 8 FAQs) + ` +
+      `category-hub coverage (${covered.size}/${TOOLS.length}).`,
   );
 }
 
