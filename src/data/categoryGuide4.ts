@@ -64,8 +64,8 @@ export const LIMITS: Record<CategoryId, { paras: string[]; escalate: string[] }>
   },
   files: {
     paras: [
-      "The file tools' limits are format-inherent and honestly named. GPX carries time and elevation but not polygons or rich properties; KML carries presentation but ages into XML quirks; GeoJSON carries data but no styling; CSV carries anything and guarantees nothing. Conversions therefore always have a named loss, and the professional move — keep the original, export the derivative — is recommended on every export panel. A second boundary is source quality: a track's elevation is only as calm as the receiver that logged it, and a CSV's coordinates are only as sane as the column that birthed them; the viewers show counts, boxes and skipped-row tallies so those truths surface immediately.",
-      "What remains after those limits is a genuinely complete local workbench: validation, inspection, measurement, conversion and export, with zero upload. The escalation path is about scale and authority rather than privacy — national cadastral formats, laser-scan point clouds and billion-row rasters belong to GIS workstations; everything a laptop holds is welcome here, and the honesty labels travel with it.",
+      "File formats support different combinations of geometry, timestamps, properties and styling. Converting between them can lose information, so keep the original and inspect the output before sharing or using it.",
+      "Capabilities differ by workspace: check the accepted format and the operations actually offered on this page. Some tools process files locally but may request map tiles or other services over the network; large or specialised datasets may require dedicated GIS software.",
     ],
     escalate: [
       "Cadastral/legal formats → jurisdictional land-registry exports.",

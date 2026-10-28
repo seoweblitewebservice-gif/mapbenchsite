@@ -8,6 +8,8 @@ const rows: string[] = [];
 for (const tool of TOOLS) {
   const html = readFileSync(`.next/server/app/tools/${tool.slug}.html`, "utf8");
   const errors: string[] = [];
+  if (/MapForge|genuinely complete local workbench|built for people who need a practical answer/i.test(html)) errors.push("obsolete branding or repetitive fallback copy");
+  if (tool.component === "list-radius" && tool.category === "population" && /Population tools live closest to the honesty line/i.test(html)) errors.push("unrelated population boilerplate on a postcode tool");
   const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
   const required = ["how-to-use", "use-cases", "worked-examples", "popular-table", "tool-guide", "method-and-limits", "faq", "trust"];
   for (const id of required) if (!ids.includes(id)) errors.push(`missing ${id}`);

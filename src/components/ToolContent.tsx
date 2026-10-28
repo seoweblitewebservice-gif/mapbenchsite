@@ -4,7 +4,7 @@ import Link from "next/link";
 import { CATEGORIES, toolBySlug, type ToolDef } from "@/lib/registry";
 import { TOOL_COPY } from "@/data/toolCopy";
 import { LIMITS } from "@/data/categoryGuide4";
-import { CATEGORY_DATA_NOTE, CATEGORY_GLOSSARY, CATEGORY_TIPS } from "@/data/categoryExtras";
+import { CATEGORY_GLOSSARY, CATEGORY_TIPS } from "@/data/categoryExtras";
 import { MAJOR_CITIES } from "@/data/cities";
 import { distanceKm, bearingBetween, compassPoint, fmt, normLng } from "@/lib/geo";
 import { formatDms, latLngToUtm, formatUtm, latLngToMgrs } from "@/lib/coords";
@@ -133,15 +133,17 @@ function useCases(tool: ToolDef): string[] {
 
 export default function ToolContent({ tool, pageContent }: { tool: ToolDef; pageContent?: PageContent | null }) {
   const category = CATEGORIES.find((c) => c.id === tool.category)!;
-  const copy = TOOL_COPY[tool.slug] || fallbackAbout(tool);
+  const copy = TOOL_COPY[tool.slug] || (!pageContent ? fallbackAbout(tool) : null);
   const examples = useMemo(() => buildExamples(tool), [tool]);
-  const limits = LIMITS[tool.category];
+  // Postal list workspaces do not use population totals, density or cost indices.
+  const postalList = tool.component === "list-radius" && tool.category === "population";
+  const limits = postalList ? undefined : LIMITS[tool.category];
   const related = (tool.related || [])
     .map((s) => toolBySlug.get(s))
     .filter((t): t is ToolDef => !!t && t.slug !== tool.slug)
     .slice(0, 4);
-  const tips = rotate(CATEGORY_TIPS[tool.category] || [], tool.slug, 2);
-  const glossary = rotate(CATEGORY_GLOSSARY[tool.category] || [], tool.slug + tool.name, 2);
+  const tips = postalList ? [] : rotate(CATEGORY_TIPS[tool.category] || [], tool.slug, 2);
+  const glossary = postalList ? [] : rotate(CATEGORY_GLOSSARY[tool.category] || [], tool.slug + tool.name, 2);
   const cases = useCases(tool);
 
   return (
@@ -150,10 +152,10 @@ export default function ToolContent({ tool, pageContent }: { tool: ToolDef; page
         <p className="!mb-0 text-[15px]"><strong>Quick answer:</strong> {tool.short} Coverage: {tool.scope}. No account is required.</p>
       </section>}
 
-      <section aria-label="About this tool" data-content-type="tool-explanation">
+      {copy && <section aria-label="About this tool" data-content-type="tool-explanation">
         <h2 className="font-display text-2xl font-bold tracking-tight">{copy.h2}</h2>
         {copy.paras.map((p, i) => <p key={i} className="mt-3"><ContextualText text={p} tool={tool} /></p>)}
-      </section>
+      </section>}
 
       {!pageContent?.use_cases?.length && <section aria-label="When this tool is useful">
         <h2 className="font-display text-2xl font-bold tracking-tight">When this tool is useful</h2>
@@ -198,7 +200,7 @@ export default function ToolContent({ tool, pageContent }: { tool: ToolDef; page
 
       <section aria-label="Data and methodology note">
         <h2 className="font-display text-2xl font-bold tracking-tight">Data &amp; methodology</h2>
-        <p className="mt-3">{tool.method ? `${tool.method} ` : ""}{CATEGORY_DATA_NOTE[tool.category]}</p>
+        <p className="mt-3">{tool.method || "Sources and methods vary by tool. Check the workspace and the linked source information before using the result."}</p>
         <p className="mt-2 text-sm text-mute">For source details, licences and model limitations, see <Link href="/data-sources" className="font-bold text-brand-strong hover:underline">Data Sources</Link> and <Link href="/methodology" className="font-bold text-brand-strong hover:underline">Methodology</Link>.</p>
       </section>
 

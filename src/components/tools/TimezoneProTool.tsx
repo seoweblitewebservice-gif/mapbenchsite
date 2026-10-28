@@ -45,8 +45,10 @@ function diffLabel(minutes: number) {
 export default function TimezoneProTool() {
   const [place, setPlace] = useState<PlaceValue | null>(() => {
     const p = readUrlParams();
-    const lat = Number(p.get("lat")), lng = Number(p.get("lng"));
-    return Number.isFinite(lat) && Number.isFinite(lng) ? { lat, lng } : null;
+    const latRaw = p.get("lat"), lngRaw = p.get("lng");
+    if (!latRaw?.trim() || !lngRaw?.trim()) return null;
+    const lat = Number(latRaw), lng = Number(lngRaw);
+    return Number.isFinite(lat) && Number.isFinite(lng) && Math.abs(lat) <= 90 && Math.abs(lng) <= 180 ? { lat, lng } : null;
   });
   const [now, setNow] = useState(new Date());
   const mapRef = useRef<any>(null);
@@ -95,7 +97,7 @@ export default function TimezoneProTool() {
 
         <div className="relative overflow-hidden rounded-2xl border border-slate-800 bg-[radial-gradient(circle_at_top_right,#334155_0,#0f172a_42%,#020617_100%)] p-5 text-white shadow-xl">
           <div className="relative">
-            <div className="flex items-center justify-between gap-3"><span className="text-[11px] font-extrabold uppercase tracking-[.14em] text-slate-300">Current local time</span>{selected && <span className={`rounded-full px-2.5 py-1 text-[10px] font-extrabold ${selected.isDst ? "bg-amber-300 text-amber-950" : "bg-emerald-300 text-emerald-950"}`}>{selected.isDst ? "DST active" : "No DST"}</span>}</div>
+            <div className="flex items-center justify-between gap-3"><span className="text-[11px] font-extrabold uppercase tracking-[.14em] text-slate-300">Current local time</span>{selected && <span className={`rounded-full px-2.5 py-1 text-[10px] font-extrabold ${selected.isDst ? "bg-amber-300 text-amber-950" : "bg-emerald-300 text-emerald-950"}`}>{selected.isDst ? "DST likely active" : "DST not detected"}</span>}</div>
             <div className="mt-5 font-display text-4xl font-bold tracking-tight sm:text-5xl">{selected?.time ?? "--:--:--"}</div>
             <div className="mt-1 text-sm text-slate-300">{selected?.date ?? "Choose a location to begin"}</div>
             <div className="mt-5 grid grid-cols-2 gap-3 text-sm">
@@ -129,7 +131,7 @@ export default function TimezoneProTool() {
         <>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             <Stat label="Time zone" value={tz} sub={selected.shortName} />
-            <Stat label="UTC offset" value={selected.offset} sub={selected.isDst ? "DST currently active" : "current civil offset"} />
+            <Stat label="UTC offset" value={selected.offset} sub={selected.isDst ? "DST likely active" : "current civil offset"} />
             <Stat label="Coordinates" value={`${place.lat.toFixed(4)}, ${place.lng.toFixed(4)}`} sub="WGS84" />
             <Stat label="Vs your device" value={diffLabel(diff)} sub={diff > 0 ? "selected place is ahead" : diff < 0 ? "selected place is behind" : "same current offset"} />
           </div>

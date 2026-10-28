@@ -384,10 +384,10 @@ export const BULK1_TOOLS: ToolDef[] = [
     name: "Slope Grade Calculator",
     short: "Relate elevation change and run distance to approximate grade.",
     intro: "Combine elevation and horizontal distance ideas for a simple slope percentage sketch.",
-    category: "earth", scope: "Worldwide", component: "elevation",
+    category: "earth", scope: "Worldwide", component: "slopegrade",
     keywords: ["slope calculator", "grade percent", "hill grade"],
     faq: [["Road design grade?", "Planning estimate only — engineering needs surveyed profiles."]],
-    howTo: ["Sample elevations along a path.", "Compare height change to run length."],
+    howTo: ["Enter the elevation change and horizontal distance in the same unit.", "Read the average grade and angle; optionally use the elevation lookup for individual points."],
     related: ["elevation-finder", "trail-distance-estimator"],
   },
   {

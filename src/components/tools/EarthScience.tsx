@@ -1,4 +1,5 @@
 "use client";
+import { annualMinimumMean, hardinessZone } from "@/lib/hardiness";
 import { useEffect, useMemo, useState } from "react";
 import { fmt } from "@/lib/geo";
 import { readUrlParams, syncUrl, ErrorBox, Field, Spinner, Stat } from "@/components/ui";
@@ -117,7 +118,7 @@ export function ClimateZoneTool() {
       const data = await res.json();
       const tm: number[] = data.monthly?.temperature_2m_mean ?? [];
       const pm: number[] = data.monthly?.precipitation_sum ?? [];
-      if (tm.length < 360) throw new Error();
+      if (tm.length !== 360 || pm.length !== 360 || !tm.every(Number.isFinite) || !pm.every(Number.isFinite)) throw new Error();
       const t: number[] = [], p: number[] = [];
       for (let m = 0; m < 12; m++) {
         let ts = 0, tc = 0, ps = 0;
@@ -130,7 +131,7 @@ export function ClimateZoneTool() {
       }
       setOut({ ...koppen(t, p), t, p });
     } catch {
-      setErr("The climate archive (ERA5 via Open-Meteo) didn't answer — try again shortly.");
+      setErr("The climate archive is unavailable or returned incomplete data — try again shortly.");
     }
     setBusy(false);
   };
@@ -166,11 +167,6 @@ export function ClimateZoneTool() {
 }
 
 // ---------- USDA hardiness ----------
-const ZONES: [number, string][] = [
-  [-51, "1"], [-46, "2"], [-40, "3"], [-34.4, "4"], [-28.9, "5"], [-23.3, "6"], [-17.8, "7"],
-  [-12.2, "8"], [-6.7, "9"], [-1.1, "10"], [4.4, "11"], [10, "12"], [99, "13"],
-];
-
 export function HardinessTool() {
   const [point, setPoint] = usePoint();
   const [busy, setBusy] = useState(false);
@@ -185,21 +181,12 @@ export function HardinessTool() {
       if (!res.ok) throw new Error();
       const data = await res.json();
       const mins: (number | null)[] = data.daily?.temperature_2m_min ?? [];
-      if (!mins.length) throw new Error();
-      const byYear: Record<number, number> = {};
-      const startYear = 2000;
-      mins.forEach((v, i) => {
-        if (v == null) return;
-        const y = startYear + Math.floor(i / 365.25);
-        byYear[y] = byYear[y] === undefined ? v : Math.min(byYear[y], v);
-      });
-      const annuals = Object.values(byYear);
-      const avgMin = annuals.reduce((a, b) => a + b, 0) / annuals.length;
-      let zone = "13";
-      for (const [lim, z] of ZONES) { if (avgMin < lim) { zone = z; break; } }
+      const times: string[] = data.daily?.time ?? [];
+      const avgMin = annualMinimumMean(times, mins, 2000, 2023);
+      const zone = String(hardinessZone(avgMin));
       setOut({ zone, minC: avgMin });
     } catch {
-      setErr("The ERA5 temperature archive didn't answer — try again shortly.");
+      setErr("The temperature archive is unavailable or returned incomplete data. Please try again shortly.");
     }
     setBusy(false);
   };
@@ -214,7 +201,7 @@ export function HardinessTool() {
       </div>
       {out && (
         <div className="grid content-start grid-cols-2 gap-2">
-          <Stat label="Hardiness zone" value={`Zone ${out.zone}`} sub="USDA scale" />
+          <Stat label="Hardiness zone" value={`Zone ${out.zone}`} sub="estimate, not the official USDA map" />
           <Stat label="Avg annual extreme min" value={`${fmt(out.minC, 1)} °C`} sub={`${fmt(out.minC * 9 / 5 + 32, 1)} °F`} />
         </div>
       )}

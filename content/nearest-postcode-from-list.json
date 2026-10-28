@@ -8,17 +8,17 @@
   "postcode list distance"
  ],
  "title": "Nearest Postcode From Your List Finder",
- "description": "Find the nearest postcode from your own list to any point with the Nearest Postcode From Your List Finder — your candidates, ranked. Free.",
+ "description": "Rank up to 50 UK postcodes or US ZIPs by straight-line distance from your chosen point.",
  "updated": "October 2026",
- "summary_sentence": "For example, a depot choosing among its own candidate ZIPs — 02108, 20001, 60601, 90210 — for a Manhattan customer finds 02108 (Boston) nearest at 187.9 miles, because the list, not the world, is the candidate pool.",
- "quick_answer": "The Nearest Postcode From Your List Finder takes a point and your own list of postcodes or ZIP codes and returns the nearest one on that list, with its distance. Paste the list, set the point, and read the winner — for routing work to your closest depot or clinic.",
+ "summary_sentence": "Rank resolved representative postcode points, not exact addresses or road journeys.",
+ "quick_answer": "Enter a target point and up to 50 full UK postcodes or five-digit US ZIPs. The tool requests representative coordinates from postcodes.io or Zippopotam and ranks successfully resolved codes by spherical distance. Unmatched codes are omitted, so check the returned list.",
  "steps_intro": "Your candidates, the point's verdict:",
  "use_cases": [
   {
    "title": "Depot and warehouse assignment",
    "body": [
     {
-     "t": "Every order gets the nearest stocking depot from your network's list — the assignment rule a spreadsheet VLOOKUP approximates and this tool computes properly, by distance on the sphere."
+     "t": "Compare candidate depot postcodes by straight-line distance. Confirm the actual depot address and road route before making an assignment."
     }
    ]
   },
@@ -26,7 +26,7 @@
    "title": "Territory coverage checks",
    "body": [
     {
-     "t": "A customer's postcode not on any rep's list is an orphan. Run territory lists against demand points and the orphans list themselves. The territories themselves map well with the "
+     "t": "Compare a point with a list of candidate postcodes. This tool does not identify uncovered customers or create territories; for an illustrative separate diagram see the "
     },
     {
      "t": "Voronoi Map Generator",
@@ -41,7 +41,7 @@
    "title": "Clinic and service routing",
    "body": [
     {
-     "t": "Referrals go to the nearest of your facilities — the list is your facilities, the point is the patient, the answer is defensible because the geometry is shown."
+     "t": "Use the ranking as an initial geographic comparison, not as a medical referral or emergency-service decision."
     }
    ]
   },
@@ -49,7 +49,7 @@
    "title": "Franchise protection checks",
    "body": [
     {
-     "t": "A proposed site must sit a minimum distance from existing territories' postcodes — check the candidate against the protected list before the lawyers do."
+     "t": "Screen candidate postcodes for approximate separation; verify exact locations and any contractual requirements independently."
     }
    ]
   }
@@ -59,7 +59,7 @@
    "label": "Example · Why 'from your list' matters",
    "body": [
     {
-     "t": "The world's nearest postcode to a point is a trivia answer. The nearest of YOUR postcodes is an operational one — the constraint is the entire tool. Boston's 02108 wins for Manhattan among the example's four candidates even though hundreds of nearer ZIPs exist off-list."
+     "t": "If a list contains several UK or US codes, only successfully resolved entries are ranked. A nearer code outside the submitted list is not considered."
     }
    ]
   },
@@ -67,7 +67,7 @@
    "label": "Example · Centroid distances",
    "body": [
     {
-     "t": "Distances run point-to-centroid: each postcode stands at its area's centre. For big rural codes the centroid can sit miles from the address that matters — the method is stated so edge cases get human review, not blind trust."
+     "t": "A provider’s representative postcode coordinate may differ from the actual address. Straight-line distances can differ from road distances."
     }
    ]
   }
@@ -81,23 +81,23 @@
   ],
   "rows": [
    [
-    "Geocode the list",
-    "Each postcode resolves to its centroid coordinates"
+    "Resolve candidates",
+    "UK codes go to postcodes.io; US ZIPs go to Zippopotam"
    ],
    [
-    "Measure every candidate",
-    "Great-circle distance from your point to each centroid"
+    "Measure",
+    "Spherical distance from the target to each resolved representative point"
    ],
    [
-    "Rank and report",
-    "Nearest first, distances shown"
+    "Rank",
+    "Show the returned results in increasing distance"
    ],
    [
-    "Ties and near-ties",
-    "Both shown — a 0.1-mile 'winner' is a coin flip, not a verdict"
+    "Unresolved",
+    "Omitted; compare the input with the result list"
    ]
   ],
-  "note": "Your list is processed for the match (the base FAQs cover where it goes — nowhere it should not). Postcode systems supported are those the tool's data covers; UK postcodes and US ZIPs are the home pair."
+  "note": "Up to 50 entries per run. The workspace sends codes to the providers; do not submit sensitive lists without reviewing their terms."
  },
  "faq": [
   [
@@ -106,7 +106,7 @@
   ],
   [
    "What if a code on my list cannot be found?",
-   "It is reported as unmatched, not silently dropped — a list with a typo should shrink visibly, and the report keeps your count honest."
+   "Unmatched, unsupported or failed lookups are omitted without an individual report. Compare your input list with the output before relying on it."
   ],
   [
    "Nearest by road instead?",
@@ -114,7 +114,7 @@
   ],
   [
    "How many codes can the list hold?",
-   "Working lists of hundreds rank instantly; thousands remain practical in the browser. The tool is built for operational lists, not the national postcode file."
+   "The current workspace accepts at most 50 entries per run."
   ],
   [
    "Multiple points at once?",
@@ -122,7 +122,7 @@
   ],
   [
    "Exact ties?",
-   "Equidistant candidates are both reported with their shared distance. Assignment policy (alphabetical? capacity?) is yours to apply on top of the honest tie."
+   "Resolved results are listed by distance. Displayed rounding can make nearby values look equal; the tool does not provide a special tie policy."
   ],
   [
    "Why not just use the single nearest postcode tool?",

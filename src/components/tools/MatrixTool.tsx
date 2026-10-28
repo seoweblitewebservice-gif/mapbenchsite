@@ -1,5 +1,5 @@
 "use client";
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { Map as MLMap } from "maplibre-gl";
 import { distanceKm, kmTo, type UnitKey } from "@/lib/geo";
 import { downloadText, toCsv } from "@/lib/formats";
@@ -45,6 +45,8 @@ export default function MatrixTool() {
   const mapRef = useRef<MLMap | null>(null);
   const libRef = useRef<any>(null);
   const markersRef = useRef<any[]>([]);
+  const requestId = useRef(0);
+  const [mapReady, setMapReady] = useState(false);
 
   const valid = useMemo(() => places.filter(Boolean) as PlaceValue[], [places]);
   const straight = useMemo(() => valid.map((a) => valid.map((b) => distanceKm(a, b))), [valid]);
@@ -86,43 +88,50 @@ export default function MatrixTool() {
     }
   };
 
-  const resetRoad = () => { setRoadDistances(null); setRoadDurations(null); setError(null); };
+  useEffect(() => {
+    if (mapReady) redraw(valid);
+    // redraw reads map refs; run when the points or map readiness change.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [valid, mapReady]);
+
+  const resetRoad = () => { requestId.current++; setBusy(false); setRoadDistances(null); setRoadDurations(null); setError(null); };
   const setPoint = (i: number, v: PlaceValue | null) => {
     setPlaces((ps) => ps.map((p, j) => j === i ? v : p));
     resetRoad();
-    setTimeout(() => redraw(), 0);
   };
 
   const applyPreset = (points: PlaceValue[]) => {
     setPlaces(points);
     resetRoad();
-    setTimeout(() => redraw(points), 0);
   };
 
   const parsePaste = () => {
     const lines = paste.split(/\n+/).map((s) => s.trim()).filter(Boolean);
+    if (lines.length > 50) { setError("Import at most 50 lines; no points were imported."); return; }
     const parsed: PlaceValue[] = [];
-    for (const line of lines.slice(0, 50)) {
+    for (const line of lines) {
       const parts = line.split(/\s*[,;|\t]\s*/);
       let label = "";
       let lat: number, lng: number;
-      if (parts.length >= 3 && Number.isFinite(Number(parts[parts.length - 2])) && Number.isFinite(Number(parts[parts.length - 1]))) {
+      if (parts.length >= 3 && parts[parts.length - 2] && parts[parts.length - 1] && Number.isFinite(Number(parts[parts.length - 2])) && Number.isFinite(Number(parts[parts.length - 1]))) {
         label = parts.slice(0, -2).join(", "); lat = Number(parts[parts.length - 2]); lng = Number(parts[parts.length - 1]);
-      } else if (parts.length >= 2) {
+      } else if (parts.length === 2 && parts[0] && parts[1]) {
         lat = Number(parts[0]); lng = Number(parts[1]);
       } else continue;
       if (Math.abs(lat) <= 90 && Math.abs(lng) <= 180) parsed.push({ lat, lng, label: label || `Point ${parsed.length + 1}` });
     }
-    if (parsed.length < 2) { setError("Paste at least two valid lines such as: Delhi, 28.6139, 77.2090"); return; }
-    setPlaces(parsed); setError(null); resetRoad(); setTimeout(() => redraw(parsed), 0);
+    if (parsed.length !== lines.length || parsed.length < 2) { setError("Every line must contain valid coordinates; at least two lines are required. Example: Delhi, 28.6139, 77.2090"); return; }
+    setPlaces(parsed); setError(null); resetRoad();
   };
 
   const calculateRoad = async () => {
     if (mode === "straight") return;
     if (valid.length < 2) { setError("Add at least two places."); return; }
     if (valid.length > 15) { setError("Road/walk/cycle matrices are limited to 15 points. Straight-line mode supports up to 50."); return; }
+    const id = ++requestId.current;
     setBusy(true); setError(null);
     const res = await networkMatrix(valid, mode);
+    if (id !== requestId.current) return;
     setBusy(false);
     if (!res.ok) { setError(res.message); setRoadDistances(null); setRoadDurations(null); return; }
     setRoadDistances(res.distancesKm); setRoadDurations(res.durationsS);
@@ -172,14 +181,14 @@ export default function MatrixTool() {
             {places.map((p, i) => (
               <div key={i} className="relative rounded-xl border border-line bg-white p-3">
                 <PlaceField label={`Place ${i + 1}`} value={p} onChange={(v) => setPoint(i, v)} />
-                {places.length > 2 && <button type="button" className="btn btn-ghost btn-sm mt-2" onClick={() => { const next = places.filter((_, j) => j !== i); setPlaces(next); resetRoad(); setTimeout(() => redraw(next.filter(Boolean) as PlaceValue[]), 0); }}>Remove</button>}
+                {places.length > 2 && <button type="button" className="btn btn-ghost btn-sm mt-2" onClick={() => { const next = places.filter((_, j) => j !== i); setPlaces(next); resetRoad(); }}>Remove</button>}
               </div>
             ))}
           </div>
 
           <div className="flex flex-wrap gap-2">
             {places.length < 50 && <button type="button" className="btn btn-ghost btn-sm" onClick={() => setPlaces((ps) => [...ps, null])}>+ Add place</button>}
-            <button type="button" className="btn btn-ghost btn-sm" onClick={() => { setPlaces([null, null]); resetRoad(); redraw([]); }}>Clear all</button>
+            <button type="button" className="btn btn-ghost btn-sm" onClick={() => { setPlaces([null, null]); resetRoad(); }}>Clear all</button>
           </div>
           {mode !== "straight" && <button type="button" className="btn btn-primary w-full" disabled={busy || valid.length < 2} onClick={calculateRoad}>{busy ? <Spinner label="Building matrix…" /> : `Calculate ${mode} matrix`}</button>}
           {error && <ErrorBox>{error}</ErrorBox>}
@@ -187,12 +196,16 @@ export default function MatrixTool() {
 
         <div className="order-1 space-y-3 lg:order-2">
           <DynamicMap center={{ lat: 28, lng: 10 }} zoom={1.6} className="tall" onReady={(map, lib) => {
-            mapRef.current = map; libRef.current = lib; redraw();
+            mapRef.current = map; libRef.current = lib; setMapReady(true);
             map.on("click", (e: any) => {
-              if (places.length >= 50) return;
-              const p: PlaceValue = { lat: e.lngLat.lat, lng: e.lngLat.lng, label: `Map point ${places.length + 1}` };
-              const next = places.length === 2 && places.every((x) => !x) ? [p, null] : [...places, p];
-              setPlaces(next); resetRoad(); setTimeout(() => redraw(next.filter(Boolean) as PlaceValue[]), 0);
+              const lat = e.lngLat.lat, lng = e.lngLat.lng;
+              setPlaces((current) => {
+                if (current.length >= 50) return current;
+                const p: PlaceValue = { lat, lng, label: `Map point ${current.filter(Boolean).length + 1}` };
+                const emptyIndex = current.findIndex((x) => !x);
+                return emptyIndex >= 0 ? current.map((x, i) => i === emptyIndex ? p : x) : [...current, p];
+              });
+              resetRoad();
             });
           }} />
           <p className="text-xs text-mute">Click the map to add points. Search, GPS and pasted coordinates are also supported.</p>
