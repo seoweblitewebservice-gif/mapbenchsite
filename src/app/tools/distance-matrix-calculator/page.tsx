@@ -172,7 +172,7 @@ export default function DistanceMatrixCalculatorPage() {
   ];
 
   return (
-    <div>
+    <div className="tool-editorial">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
 
       {/* 1. Breadcrumb */}
@@ -209,15 +209,7 @@ export default function DistanceMatrixCalculatorPage() {
         </div>
       </section>
 
-        {/* 4. Quick answer */}
-        <section aria-labelledby="quick-answer" className="mt-8 rounded-2xl border border-brand/25 bg-brand-soft/40 p-5 shadow-sm sm:p-6">
-          <h2 id="quick-answer" className="font-display text-xl font-bold">Quick answer</h2>
-          <p className="mt-2 leading-7 text-mute">
-            A distance matrix calculator builds a table of the straight-line distance between every pair of places in a list.
-            Add two or more places and each cell shows how far apart that pair is, in miles and kilometres, ready to export
-            as CSV for planning, teaching or analysis.
-          </p>
-        </section>
+
 
 
       {/* 3. Tool card (tool component unchanged) + plain-language summary */}
@@ -243,21 +235,21 @@ export default function DistanceMatrixCalculatorPage() {
         (1,144 km), and the farthest pair is New York ↔ Los Angeles at approx. 2,446 miles (3,936 km) — every other pair falls between those two.
       </p>
 
-      <div className="mx-auto mt-8 max-w-4xl">
+      <div className="editorial-body mx-auto mt-8 max-w-3xl">
         <nav aria-label="On this page" className="rounded-xl border border-line bg-white px-4 py-3 shadow-sm">
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
             <span className="font-extrabold text-ink">On this page</span>
             <a href="#how-to-use" className="font-semibold text-brand-strong hover:underline">How to use</a>
             <a href="#use-cases" className="font-semibold text-brand-strong hover:underline">Uses &amp; examples</a>
-            <a href="#city-pairs" className="font-semibold text-brand-strong hover:underline">Popular city pairs</a>
-            <a href="#calculation" className="font-semibold text-brand-strong hover:underline">How it is calculated</a>
+            <a href="#popular-table" className="font-semibold text-brand-strong hover:underline">Popular city pairs</a>
+            <a href="#tool-guide" className="font-semibold text-brand-strong hover:underline">How it is calculated</a>
             <a href="#faq" className="font-semibold text-brand-strong hover:underline">FAQ</a>
             <a href="#related-tools" className="font-semibold text-brand-strong hover:underline">Related tools</a>
             <a href="#trust" className="font-semibold text-brand-strong hover:underline">Sources &amp; trust</a>
           </div>
         </nav>
 
-        <ToolMethod tool={tool} />
+
 
         {/* 5. How to use */}
         <section id="how-to-use" aria-labelledby="howto" className="mt-8 rounded-2xl border border-line bg-white p-5 shadow-sm sm:p-6">
@@ -270,6 +262,7 @@ export default function DistanceMatrixCalculatorPage() {
               already on the page.
             </p>
           </div>
+          <p id="quick-answer" className="workflow-answer mb-5">A distance matrix compares every pair in a list of places. Use straight-line mode for geographic separation or a routing mode for network distance. Read both directions when routes are directional, and keep the selected units with any exported table.</p>
           <ol className="grid gap-3 md:grid-cols-3">
             <li className="flex gap-3 rounded-xl border border-line bg-well/35 p-4 text-sm leading-relaxed text-mute">
               <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand text-xs font-extrabold text-white">1</span>
@@ -314,6 +307,7 @@ export default function DistanceMatrixCalculatorPage() {
             </div>
           </div>
 
+          <h2 id="worked-examples" className="mt-8 font-display text-2xl font-bold">Worked examples</h2>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             <div className="rounded-2xl border border-brand/25 bg-brand-soft/40 p-5">
               <div className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">Example · United States</div>
@@ -342,7 +336,7 @@ export default function DistanceMatrixCalculatorPage() {
         </section>
 
         {/* 7. Popular city pairs */}
-        <section id="city-pairs" aria-labelledby="pairs" className="mt-10">
+        <section id="popular-table" aria-labelledby="pairs" className="mt-10">
           <h2 id="pairs" className="font-display text-2xl font-bold tracking-tight">Popular city pairs</h2>
           <p className="mt-3 text-sm leading-7 text-mute">
             Straight-line distances between city centres, computed with this tool&apos;s own formula (haversine, mean Earth radius
@@ -374,7 +368,7 @@ export default function DistanceMatrixCalculatorPage() {
         </section>
 
         {/* 8. How the distances are calculated */}
-        <section id="calculation" aria-labelledby="calc" className="mt-10 rounded-2xl border border-line bg-well/35 p-5 sm:p-6">
+        <section id="tool-guide" aria-labelledby="calc" className="mt-10 rounded-2xl border border-line bg-well/35 p-5 sm:p-6">
           <h2 id="calc" className="font-display text-2xl font-bold tracking-tight">How the distances are calculated</h2>
           <p className="mt-3 leading-7 text-mute">
             For every pair of places, the straight-line mode converts both coordinates to radians and applies the haversine
@@ -427,6 +421,8 @@ export default function DistanceMatrixCalculatorPage() {
         </section>
 
         {/* 10. FAQ */}
+        <ToolMethod tool={tool} />
+
         <section id="faq" aria-labelledby="faq-heading" className="mt-10">
           <div className="max-w-3xl">
             <div className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">Common questions</div>

@@ -9,7 +9,13 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "audit:tools": "tsx scripts/audit-tools.ts"
+    "audit:tools": "tsx scripts/audit-tools.ts",
+    "test:geo": "tsx scripts/check-geo-regressions.ts",
+    "test:links": "tsx scripts/check-editorial-links.ts",
+    "audit:structure": "tsx scripts/audit-page-structure.ts",
+    "audit:site": "python3 scripts/audit-site-pages.py",
+    "verify:site": "npm run build && npm run audit:structure && npm run audit:site && npm run test:links && npm run test:geo",
+    "audit:depth": "python3 scripts/audit-content-depth.py"
   },
   "dependencies": {
     "@types/d3-geo": "^3.1.1",

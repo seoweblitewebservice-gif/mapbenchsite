@@ -11,7 +11,6 @@ import { formatDms, latLngToUtm, formatUtm, latLngToMgrs } from "@/lib/coords";
 import { sunTimes, fmtDurationHours } from "@/lib/astronomy";
 import ContextualText from "./ContextualText";
 import type { PageContent } from "@/lib/pageContent";
-import RelatedReading from "@/components/RelatedReading";
 
 interface Example { lead: string; body: string }
 
@@ -217,7 +216,6 @@ export default function ToolContent({ tool, pageContent }: { tool: ToolDef; page
         </section>
       )}
 
-      <RelatedReading tool={tool} />
 
       {!pageContent && related.length > 0 && (
         <section aria-label="Related tools in context">

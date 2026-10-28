@@ -9,173 +9,148 @@
   "how to calculate longitude degree distance calculator"
  ],
  "title": "Longitude Degree Distance Calculator",
- "description": "Convert a longitude-degree difference into east-west distance with the Longitude Degree Distance Calculator — at the span's own latitude. Free.",
+ "description": "Estimate east-west distance from longitude degrees and latitude using a cosine scale. Original examples explain grid widths, date-line crossings and limits.",
  "updated": "October 2026",
- "summary_sentence": "For example, the 0.2074 degrees of longitude between Times Square and JFK is 17.5 km of east-west ground at their latitude — and would be 23.1 km at the equator, which is why the latitude input exists.",
- "quick_answer": "The Longitude Degree Distance Calculator converts a longitude-degree difference into east-west distance at the latitude where the span actually lies. Enter the difference and the latitude and read kilometres or miles — the dedicated instrument for longitude spans, built around the cosine truth the general pages summarise.",
- "steps_intro": "Longitude spans, priced where they lie:",
+ "summary_sentence": "At 60° latitude, a 1° longitude span gives approximately 55.660 km; at the equator the same angular span gives 111.320 km.",
+ "quick_answer": "This calculator estimates east-west distance as the absolute longitude difference × 111.32 km × cos(latitude). Enter latitude in degrees, within −90° to +90°. The formula describes a parallel-based angular scale; it is not an ellipsoidal geodesic solver or a road-distance calculation. Large spans and near-polar work need particular care.",
+ "steps_intro": "Enter the longitude difference and the latitude where you want to evaluate it. Decide whether you mean the smaller wraparound span before entering the difference. The calculator does not infer your intended path from two full coordinate pairs.",
  "use_cases": [
   {
-   "title": "Study-area widths",
+   "title": "Estimate an angular grid cell’s width",
    "body": [
     {
-     "t": "A region defined by longitudes gets its true width at its own latitude — the number the methods section should carry."
+     "t": "A one-degree-wide cell becomes narrower on the ground as latitude increases. At 60° latitude this formula gives half the equatorial width because cos(60°) equals 0.5. Use that comparison when explaining why a latitude-longitude raster does not contain equal-sized cells worldwide. The width is only one dimension: cell area needs both dimensions and an appropriate area model. A projected grid measured in metres follows different rules from an angular grid."
     }
    ]
   },
   {
-   "title": "Route east-west components",
+   "title": "Check the scale of a bounding box",
    "body": [
     {
-     "t": "How much of the journey was pure easting, separated from the northing the "
-    },
-    {
-     "t": "Latitude Degree Distance Calculator",
-     "l": "/tools/latitude-degree-distance-calculator"
-    },
-    {
-     "t": " prices."
+     "t": "A five-degree longitude span at 55° latitude gives approximately 319.253 km under this formula. This provides a quick check against a claimed east-west extent, but a broad bounding box may cover many latitudes with different widths. State which latitude you used and why. A midpoint latitude can be a rough reporting convention, not proof that the whole region has one exact width or that its boundary follows a parallel."
     }
    ]
   },
   {
-   "title": "Verifying claimed extents",
+   "title": "Compare longitudinal coordinate precision",
    "body": [
     {
-     "t": "A vendor's 'covers 500 km east-west' from a 5° span at 55°: 5 × 63.9 = 319 km. The calculator is the audit."
+     "t": "An extra decimal place has a different east-west ground spacing at different latitudes. For example, 0.00001° of longitude is approximately 1.113 metres at the equator and 0.557 metres at 60°. This explains why coordinate precision cannot be reduced to a single global metres-per-decimal rule. It still says nothing about the accuracy of the device or survey that produced the original coordinate. Preserve the source’s accuracy statement separately from numeric resolution."
     }
    ]
   },
   {
-   "title": "Grid and cell sizing",
+   "title": "Recognize date-line and route ambiguities",
    "body": [
     {
-     "t": "Degree-gridded data (climate cells, 1° tiles) has latitude-dependent ground size — this conversion is the cell-size table's engine."
+     "t": "Two longitudes close to opposite sides of the date line can be nearby, despite a large raw numerical difference. If your intended span is the shorter one, calculate that wrapped difference before using the tool. For an actual journey between two points, particularly when latitude also changes, use the full distance calculator instead. A constant-latitude arc and a shortest great-circle path are not generally the same route, even when they share endpoints."
     }
    ]
   }
  ],
  "examples": [
   {
-   "label": "Example · Same span, two planets",
+   "label": "Worked example · Same angle, different latitude",
    "body": [
     {
-     "t": "2° of longitude: 222.6 km at the equator, 111.6 km at 60° — a factor of two from latitude alone. Any tool ignoring the input is selling the equator's answer to everyone."
+     "t": "For a 0.1° span at the equator, the estimate is 0.1 × 111.32 = 11.132 km. At 60°, multiply by 0.5 to obtain 5.566 km. Nothing about the angle changed; longitude meridians simply lie closer together at the higher latitude. This comparison is useful for interpreting gridded data, not for claiming that every road across those cells has that length."
     }
    ]
   },
   {
-   "label": "Example · The date-line span",
+   "label": "Worked example · Crossing the date line",
    "body": [
     {
-     "t": "From 179.5°E to 179.5°W is 1° of span — the short way across the seam. Differences should be taken the short way; the calculator assumes the true (smaller) difference you give it."
+     "t": "For endpoints at 179.8°E and 179.8°W, the raw difference is 359.6°. The shorter wrapped span is 360° − 359.6° = 0.4°. At the equator that gives 44.528 km using this calculator. Enter 0.4° only if that shorter span is the question you intend to answer; the calculator cannot decide whether you meant a small crossing or the long way around."
     }
    ]
   }
  ],
  "popular_table": {
-  "title": "Longitude degree lengths (WGS84)",
-  "intro": "The family's shared table — computed at each latitude.",
+  "title": "One longitude degree at selected latitudes",
+  "intro": "Values use the same 111.32 × cos(latitude) approximation as the tool.",
   "columns": [
-   "At latitude",
-   "1° longitude",
-   "0.1°"
+   "Latitude",
+   "1° longitude (km)",
+   "0.1° longitude (km)"
   ],
   "rows": [
    [
     "0°",
-    "111.319 km",
-    "11.13 km"
+    "111.320",
+    "11.132"
    ],
    [
     "30°",
-    "96.486 km",
-    "9.65 km"
+    "96.406",
+    "9.641"
    ],
    [
     "45°",
-    "78.847 km",
-    "7.88 km"
+    "78.715",
+    "7.872"
    ],
    [
     "60°",
-    "55.800 km",
-    "5.58 km"
+    "55.660",
+    "5.566"
    ],
    [
     "75°",
-    "28.902 km",
-    "2.89 km"
+    "28.812",
+    "2.881"
+   ],
+   [
+    "89°",
+    "1.943",
+    "0.194"
    ]
   ],
-  "note": "Mid-latitude of the span is the right rate for long spans — degree length changes along the way, and the middle is the honest compromise."
+  "note": "For wide spans, this parallel-based scale differs from a shortest-path geodesic. It is not a WGS84 ellipsoidal distance calculation."
  },
  "faq": [
   [
-   "What does this tool calculate?",
-   "East-west ground distance for a longitude-degree difference at a stated latitude, from WGS84 ellipsoid geometry."
+   "Why do I need latitude?",
+   "Longitude meridians converge toward the poles. The cosine factor adjusts their approximate spacing for the selected latitude. A longitude difference by itself is not enough to specify an east-west distance."
   ],
   [
-   "Do I need an account?",
-   "No — difference and latitude in, distance out."
+   "Is the result exact on WGS84?",
+   "No. The implementation uses a constant equatorial scale multiplied by cosine. That is useful for quick comparisons, but it is not the complete ellipsoidal formula and should not be advertised as survey-accurate."
   ],
   [
-   "Can I rely on this for professional work?",
-   "For planning, reporting and verification, yes — ellipsoid-true numbers. Legal measurement remains survey practice."
+   "Do negative latitudes work?",
+   "Within the valid latitude range, north and south values of the same magnitude have the same cosine and therefore the same estimated width. The calculation does not include regional terrain or a road network."
   ],
   [
-   "Which datum do these coordinate tools use?",
-   "WGS84 — the frame GPS produces and web maps consume."
+   "What happens close to the poles?",
+   "The width approaches zero because meridians converge. Longitude becomes a poor standalone way to describe local displacement there. Use a suitable polar projection or geodesic calculation for precise work."
   ],
   [
-   "Do more decimal places always mean better accuracy?",
-   "No — resolution is not accuracy; the precision tools on this site price each decimal place in metres."
+   "Does it automatically handle the date line?",
+   "No. The tool accepts a difference, not two endpoints. You must decide and enter the intended wrapped span. For a simple shorter-span calculation, normalize the raw difference to the range 0°–180° first."
   ],
   [
-   "How does it differ from the Degrees Longitude page?",
-   "Same physics; this page is framed for a difference between two longitudes (a span), that one for degrees generally. Doorways differ, arithmetic agrees."
-  ],
-  [
-   "Very wide spans (90°)?",
-   "A quarter of the planet's girth at that latitude — the mid-latitude rate keeps it honest within a percent."
-  ],
-  [
-   "Southern latitudes?",
-   "Symmetric — −45° prices like +45°. The ellipsoid does not play hemispheric favourites."
-  ],
-  [
-   "Time zones again?",
-   "15° per solar hour at any latitude — but the kilometres per hour of longitude halve by 60°, computed above."
-  ],
-  [
-   "Polar research?",
-   "Near the pole longitude differences become metres — the calculator follows the geometry to its honest zero."
+   "Is a wide span the shortest distance between endpoints?",
+   "Usually not away from the equator. This formula follows the scale of a latitude parallel. A shortest surface path may bend toward a pole. Use two complete coordinates in a distance tool for that question."
   ]
  ],
  "related_prose": [
   {
-   "t": "General lane: "
+   "t": "For a full geographic separation, use "
   },
   {
-   "t": "Degrees Longitude to Kilometers Calculator",
-   "l": "/tools/longitude-degree-distance"
+   "t": "Distance Between Two Places",
+   "l": "/tools/distance-between-two-places"
   },
   {
-   "t": "; north-south: the "
+   "t": ". For formatting coordinates before a calculation, use the "
   },
   {
-   "t": "Latitude Degree Distance Calculator",
-   "l": "/tools/latitude-degree-distance-calculator"
+   "t": "Coordinate Converter",
+   "l": "/tools/coordinate-converter"
   },
   {
-   "t": "; sets: the "
-  },
-  {
-   "t": "Coordinate Span Calculator",
-   "l": "/tools/coordinate-span-calculator"
-  },
-  {
-   "t": "."
+   "t": ". Keep the angular-span estimate separate from routing time, parcel area and source-coordinate accuracy."
   }
  ],
  "more_tools": [

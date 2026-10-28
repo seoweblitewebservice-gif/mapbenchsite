@@ -44,7 +44,7 @@ const E2 = F * (2 - F), EP2 = E2 / (1 - E2);
 export interface Utm { zone: number; hemi: "N" | "S"; easting: number; northing: number }
 
 export function latLngToUtm(p: LatLng): Utm | null {
-  if (!isValidLat(p.lat) || !isValidLng(p.lng)) return null;
+  if (!isValidLat(p.lat) || !isValidLng(p.lng) || p.lat < -80 || p.lat > 84) return null;
   // Norway / Svalbard exceptions
   let zone = Math.floor((normLng(p.lng) + 180) / 6) + 1;
   if (p.lat >= 56 && p.lat < 64 && p.lng >= 3 && p.lng < 12) zone = 32;
@@ -70,7 +70,7 @@ export function latLngToUtm(p: LatLng): Utm | null {
 }
 
 export function utmToLatLng(u: Utm): LatLng | null {
-  if (u.zone < 1 || u.zone > 60) return null;
+  if (!Number.isInteger(u.zone) || u.zone < 1 || u.zone > 60 || !Number.isFinite(u.easting) || !Number.isFinite(u.northing) || u.easting < 100000 || u.easting > 900000 || u.northing < 0 || u.northing > 10000000 || !["N", "S"].includes(u.hemi)) return null;
   const x = u.easting - 500000;
   let y = u.northing;
   if (u.hemi === "S") y -= 10000000;
@@ -90,7 +90,7 @@ export function utmToLatLng(u: Utm): LatLng | null {
   const lng = (D - ((1 + 2 * T1 + C1) * D ** 3) / 6
     + ((5 - 2 * C1 + 28 * T1 - 3 * C1 * C1 + 8 * EP2 + 24 * T1 * T1) * D ** 5) / 120) / Math.cos(φ1);
   const λ0 = ((u.zone - 1) * 6 - 180 + 3) * (Math.PI / 180);
-  return { lat: (lat * 180) / Math.PI, lng: normLng((lng * 180) / Math.PI) };
+  return { lat: (lat * 180) / Math.PI, lng: normLng(((λ0 + lng) * 180) / Math.PI) };
 }
 
 export function formatUtm(u: Utm) {
@@ -151,48 +151,58 @@ export function parseMgrs(s: string): LatLng | null {
 // ---------- Open Location Code (Plus Codes) ----------
 const OLC_ALPHABET = "23456789CFGHJMPQRVWX";
 
+/** Full Open Location Codes: paired digits through 10, then 5×4 grid refinement. */
 export function encodePlusCode(lat: number, lng: number, length = 10): string {
-  let la = Math.min(90, Math.max(-90, lat)) + 90;
-  let lo = normLng(lng) + 180;
-  let code = "";
-  for (let i = 0; i < 10; i++) {
-    if (i === 8) code += "+";
-    if (i < 8) {
-      const laD = Math.floor(la / 20), loD = Math.floor(lo / 20);
-      code += OLC_ALPHABET[laD] + OLC_ALPHABET[loD];
-      la = (la - laD * 20) * 20;
-      lo = (lo - loD * 20) * 20;
-    } else {
-      const laD = Math.floor(la / 4), loD = Math.floor(lo / 4);
-      code += OLC_ALPHABET[laD * 4 + loD];
-      la -= laD * 4; lo -= loD * 4;
-    }
+  if (!isValidLat(lat) || !Number.isFinite(lng)) return "";
+  if (!Number.isInteger(length) || length < 2 || length > 15 || (length < 10 && length % 2 !== 0)) return "";
+  const pairLength = Math.min(length, 10);
+  const resolutions = [20, 1, 0.05, 0.0025, 0.000125];
+  const precision = length <= 10 ? resolutions[length / 2 - 1] : 0.000125 / 5 ** (length - 10);
+  // Integer arithmetic prevents floating-point drift at fine grid boundaries.
+  const latitude = (lat === 90 ? lat - precision : lat) + 90;
+  const longitude = ((lng + 180) % 360 + 360) % 360;
+  let la = Math.floor(Number((latitude * 25000000).toFixed(6)));
+  let lo = Math.floor(Number((longitude * 8192000).toFixed(6)));
+  let grid = "";
+  for (let i = 0; i < 5; i++) {
+    grid = OLC_ALPHABET[(la % 5) * 4 + lo % 4] + grid;
+    la = Math.floor(la / 5); lo = Math.floor(lo / 4);
   }
-  if (!code.includes("+")) code = code.slice(0, 8) + "+" + code.slice(8);
-  return code.slice(0, Math.min(length + 1, 11));
+  let pairs = "";
+  for (let i = 0; i < 5; i++) {
+    pairs = OLC_ALPHABET[la % 20] + OLC_ALPHABET[lo % 20] + pairs;
+    la = Math.floor(la / 20); lo = Math.floor(lo / 20);
+  }
+  let code = pairs.slice(0, pairLength).padEnd(8, "0");
+  code = code.slice(0, 8) + "+" + code.slice(8);
+  if (length > 10) code += grid.slice(0, length - 10);
+  return code;
 }
 
+/** Decode a full code to its cell centre; short codes need locality and are rejected. */
 export function decodePlusCode(code: string): LatLng | null {
-  let c = code.trim().toUpperCase().replace(/\s/g, "");
-  if (!c.includes("+")) {
-    if (c.length < 8) return null;
-    c = c.slice(0, 8) + "+" + c.slice(8);
-  }
-  const body = c.replace("+", "");
-  if (body.length < 2 || body.length % 2 !== 0 || body.length > 10) return null;
+  const c = code.trim().toUpperCase();
+  if (c.indexOf("+") !== 8 || c.lastIndexOf("+") !== 8) return null;
+  const raw = c.replace("+", "");
+  if (raw.length > 15 || raw.length < 8 || raw.length === 9) return null;
+  const zero = raw.indexOf("0");
+  if (zero >= 0 && (zero < 2 || zero % 2 !== 0 || raw.length !== 8 || !/^0+$/.test(raw.slice(zero)))) return null;
+  const body = zero >= 0 ? raw.slice(0, zero) : raw;
+  if ([...body].some(ch => !OLC_ALPHABET.includes(ch))) return null;
+  if (OLC_ALPHABET.indexOf(body[0]) > 8 || OLC_ALPHABET.indexOf(body[1]) > 17) return null;
+  const resolutions = [20, 1, 0.05, 0.0025, 0.000125];
   let lat = -90, lng = -180, latRes = 20, lngRes = 20;
-  for (let i = 0; i < body.length; i += 2) {
-    if (i < 8) {
-      const la = OLC_ALPHABET.indexOf(body[i]), lo = OLC_ALPHABET.indexOf(body[i + 1]);
-      if (la < 0 || lo < 0) return null;
-      latRes /= 20; lngRes /= 20;
-      lat += la * latRes * 20; lng += lo * lngRes * 20;
-    } else {
-      const v = OLC_ALPHABET.indexOf(body[i]);
-      if (v < 0) return null;
-      latRes /= 4; lngRes /= 4;
-      lat += Math.floor(v / 4) * latRes * 4; lng += (v % 4) * lngRes * 4;
-    }
+  const pairs = Math.min(body.length, 10);
+  for (let i = 0; i < pairs; i += 2) {
+    latRes = lngRes = resolutions[i / 2];
+    lat += OLC_ALPHABET.indexOf(body[i]) * latRes;
+    lng += OLC_ALPHABET.indexOf(body[i + 1]) * lngRes;
+  }
+  for (let i = 10; i < body.length; i++) {
+    latRes /= 5; lngRes /= 4;
+    const value = OLC_ALPHABET.indexOf(body[i]);
+    lat += Math.floor(value / 4) * latRes;
+    lng += (value % 4) * lngRes;
   }
   return { lat: lat + latRes / 2, lng: normLng(lng + lngRes / 2) };
 }
