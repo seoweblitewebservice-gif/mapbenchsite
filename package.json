@@ -15,7 +15,8 @@
     "audit:structure": "tsx scripts/audit-page-structure.ts",
     "audit:site": "python3 scripts/audit-site-pages.py",
     "verify:site": "npm run build && npm run audit:structure && npm run audit:site && npm run test:links && npm run test:geo",
-    "audit:depth": "python3 scripts/audit-content-depth.py"
+    "audit:depth": "python3 scripts/audit-content-depth.py",
+    "test:homepage": "tsx scripts/check-redesign.ts"
   },
   "dependencies": {
     "@types/d3-geo": "^3.1.1",

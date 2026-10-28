@@ -36,10 +36,11 @@ const us: Thumb = {
 };
 const all = [thumbs[0], us, ...thumbs.slice(1)];
 
-export default function BlankMapsHomeGrid() {
+export default function BlankMapsHomeGrid({ limit }: { limit?: number }) {
+  const items = typeof limit === "number" ? all.slice(0, limit) : all;
   return (
     <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
-      {all.map((t) => (
+      {items.map((t) => (
         <Link key={t.id} href="/maps" className="card group overflow-hidden">
           <div className="bg-white p-2 dark:bg-[#141210]">
             <svg viewBox="0 0 160 100" className="h-auto w-full" role="img" aria-label={`Blank map of ${t.name}`}>

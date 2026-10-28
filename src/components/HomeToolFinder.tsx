@@ -17,6 +17,7 @@ type SearchTool = {
 type Props = {
   tools: SearchTool[];
   suggested: SearchTool[];
+  compact?: boolean;
 };
 
 const QUICK_CATEGORIES = [
@@ -49,7 +50,7 @@ function score(tool: SearchTool, query: string) {
   return points;
 }
 
-export default function HomeToolFinder({ tools, suggested }: Props) {
+export default function HomeToolFinder({ tools, suggested, compact = false }: Props) {
   const router = useRouter();
   const [query, setQuery] = useState("");
   const [focused, setFocused] = useState(false);
@@ -124,15 +125,18 @@ export default function HomeToolFinder({ tools, suggested }: Props) {
         )}
       </div>
 
-      <div className="mt-4 flex flex-wrap items-center gap-2">
-        <span className="mr-1 font-sans text-[11px] font-bold uppercase tracking-wide text-mute">Browse:</span>
-        {QUICK_CATEGORIES.map(([label, href]) => (
-          <Link key={href} href={href} className="rounded-full border border-line bg-card/90 px-3 py-1.5 font-sans text-xs font-semibold text-ink transition hover:border-brand hover:text-brand-strong">
-            {label}
-          </Link>
-        ))}
-      </div>
+      {!compact && (
+        <div className="mt-4 flex flex-wrap items-center gap-2">
+          <span className="mr-1 font-sans text-[11px] font-bold uppercase tracking-wide text-mute">Browse:</span>
+          {QUICK_CATEGORIES.map(([label, href]) => (
+            <Link key={href} href={href} className="rounded-full border border-line bg-card/90 px-3 py-1.5 font-sans text-xs font-semibold text-ink transition hover:border-brand hover:text-brand-strong">
+              {label}
+            </Link>
+          ))}
+        </div>
+      )}
 
+      {!compact && (
       <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {suggested.slice(0, 8).map((tool, index) => (
           <Link key={tool.slug} href={`/tools/${tool.slug}`} className="group rounded-xl border border-line bg-card/95 p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-brand hover:shadow-md">
@@ -145,6 +149,7 @@ export default function HomeToolFinder({ tools, suggested }: Props) {
           </Link>
         ))}
       </div>
+      )}
     </div>
   );
 }
