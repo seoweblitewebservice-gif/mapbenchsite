@@ -9,75 +9,89 @@
  "title": "Drive Time Map: How Far in 10–120 Minutes",
  "description": "See how far you can drive, walk or cycle in 10 to 120 minutes with the Drive Time Map — real road-network areas in up to four time bands. Free.",
  "updated": "October 2026",
- "summary_sentence": "For example, the popular 30-minute driving band has a hard geometric ceiling: even at a steady 30 mph average it cannot reach beyond 15 miles (24.1 km) in any direction — and the real polygon, following roads, is always smaller.",
+ "summary_sentence": "A 30-minute travel area follows the available network. It can extend along faster roads and contract around barriers; it is not a fixed-radius circle or a guarantee of arrival time.",
  "quick_answer": "A Drive Time Map shows how far you can travel in a set number of minutes, following the road, path or cycle network instead of a straight line. Choose 10 to 120 minutes, add up to four bands, and compare driving, walking and cycling reach from one start point.",
- "steps_intro": "A circle tells you distance; this map tells you time — the measure people actually plan their lives around. Three steps:",
+ "steps_intro": "Choose a starting point, travel mode and time budget. Inspect the returned shape alongside the roads: the routing model and network determine the result, not a universal miles-per-minute rule.",
  "use_cases": [
   {
-   "title": "Retail and site catchments",
+   "title": "Compare candidate shop locations",
    "body": [
     {
-     "t": "A shop's real market is the area people can reach in the time they will actually spend travelling — often 15 or 30 minutes. Drawing that area on the network, not as a circle, stops a river or a missing junction from quietly inflating your catchment."
-    }
-   ]
-  },
-  {
-   "title": "Commuting and relocation",
-   "body": [
-    {
-     "t": "Compare two candidate homes by the place that matters — the office, the school, the station. The same 30 minutes reaches very different distances in different directions, and this map shows that asymmetry before you sign anything."
-    }
-   ]
-  },
-  {
-   "title": "Service and engineer coverage",
-   "body": [
-    {
-     "t": "Response-time promises (an engineer within 45 minutes, a crew within the hour) are drive-time statements. Sketch them here first; for the order stops should be visited in, continue to the "
+     "t": "Draw the same time band from each candidate site using the same travel mode. Inspect which neighbourhoods are reachable before bringing in demographic data. A travel-area polygon alone does not count customers; the "
     },
     {
-     "t": "Multi-Stop Route Planner",
-     "l": "/tools/multi-stop-route-planner"
+     "t": "population-radius tool",
+     "l": "/tools/population-within-radius"
     },
     {
-     "t": "."
+     "t": " uses a different, circular boundary and should not be presented as the population of this polygon."
     }
    ]
   },
   {
-   "title": "Walking and cycling catchments",
+   "title": "Build a realistic commute shortlist",
    "body": [
     {
-     "t": "Schools, clinics and stations draw most of their users from walk and cycle range. The walking and cycling modes follow paths and cycleways, so the areas stretch along good routes and stop at barriers a circle would happily cross."
+     "t": "Use a time band as an initial filter, then inspect a specific home-to-work journey with the "
+    },
+    {
+     "t": "Driving Distance Calculator",
+     "l": "/tools/driving-distance-calculator"
+    },
+    {
+     "t": ". Direction, congestion and route restrictions can affect the actual journey. Do not treat an outbound area as proof of the same inbound commute."
+    }
+   ]
+  },
+  {
+   "title": "Explore a service territory before making promises",
+   "body": [
+    {
+     "t": "Compare a time-based area with a "
+    },
+    {
+     "t": "radius map",
+     "l": "/tools/map-radius"
+    },
+    {
+     "t": " to see where simple distance rules differ from road access. Dispatch delays, parking and on-site work are not included in the mapped travel budget; operational commitments need separate evidence."
+    }
+   ]
+  },
+  {
+   "title": "Compare walking and cycling access",
+   "body": [
+    {
+     "t": "Keep the origin and time budget constant when switching modes. Each mode follows the network available to the routing service, not every path visible on a basemap. Check local access restrictions before using a suggested area for a real journey."
     }
    ]
   }
  ],
  "examples": [
   {
-   "label": "Example · The 30-minute ceiling",
+   "label": "Worked example · Distance is not a time polygon",
    "body": [
     {
-     "t": "At a steady 30 mph average, 30 minutes of driving is 15.0 miles (24.1 km) — so the 30-minute polygon can never extend beyond a 15-mile circle, whose area would be approx. 707 mi² (1,831 km²). Real 30-minute areas are visibly smaller and finger-shaped, reaching far along fast roads and barely at all across a river with one bridge. That gap between ceiling and shape is the entire point of the tool."
+     "t": "In a hypothetical constant-speed model, 30 minutes at 30 mph gives 15 miles of travel. This arithmetic is not a universal ceiling for a real 30-minute area: a routing service may use higher or lower speeds on different roads. The modelled polygon must be read from the routing result, not inferred from this example."
     }
    ]
   },
   {
-   "label": "Example · The 15-minute walk",
+   "label": "Worked example · Walking budget",
    "body": [
     {
-     "t": "At a typical walking pace of approx. 3 mph, 15 minutes covers 0.75 miles (1.2 km) at most — a ceiling circle of approx. 1.77 mi². The walking polygon hugs the streets and paths that exist, which is why two homes the same distance from a school can sit in different bands."
+     "t": "Assuming a constant 3 mph pace, 15 minutes corresponds to 0.75 miles along a route. A crossing delay or an indirect path reduces how far you can get in practice. This is a simple distance-time illustration, not a measured walking catchment for a particular location."
     }
    ]
   }
  ],
  "popular_table": {
-  "title": "Time bands and their ceilings",
-  "intro": "Every contour this tool offers, with the furthest it could possibly reach at two reference speeds. These ceilings are arithmetic, labeled approx.: your real polygon is drawn on the network and is always smaller.",
+  "title": "Illustrative distance at assumed constant speeds",
+  "intro": "Arithmetic examples only: distance = speed × time. These figures are not limits or predictions for the routing engine. Actual network speeds vary.",
   "columns": [
    "Time band",
-   "Driving ceiling at 30 mph avg",
-   "Walking ceiling at 3 mph",
+   "Driving illustration at 30 mph avg",
+   "Walking illustration at 3 mph",
    "Often used for"
   ],
   "rows": [
@@ -130,7 +144,7 @@
     "Maximum single-leg planning"
    ]
   ],
-  "note": "Ceilings assume a constant average speed in every direction — something no road network offers. Treat them as upper bounds that make the real polygon's shape easier to read."
+  "note": "Do not use this table to draw a drive-time boundary. Compare the returned routing area and verify real journeys when timing matters."
  },
  "faq": [
   [

@@ -14,27 +14,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-const HOME_PRIORITY_SLUGS = [
-  "map-radius",
-  "what-county-am-i-in",
-  "drive-time-map",
-  "halfway-between-two-places",
-  "coordinate-converter",
-  "elevation-finder",
-  "timezone-map-finder",
-  "population-within-radius",
-  "distance-between-two-places",
-  "what-zip-code-am-i-in",
-  "what-state-am-i-in",
-  "csv-to-map",
-  "latitude-longitude-finder",
-  "cities-within-radius",
-  "driving-distance-calculator",
-  "kml-viewer",
-  "geojson-viewer",
-  "gpx-viewer",
-] as const;
-
 const HOME_FAQ: [string, string][] = [
   ["What is MapBench?", "MapBench is a free collection of interactive map tools, geographic calculators, printable blank maps, original geographic studies and practical mapping guides. Use it for distance, radius, drive time, coordinates, elevation, GPS files, location questions and more."],
   ["Are the tools really free?", "Yes. Public MapBench tools are free to use and do not require an account."],
@@ -47,10 +26,6 @@ const HOME_FAQ: [string, string][] = [
 ];
 
 export default function HomePage() {
-  const priorityTools = HOME_PRIORITY_SLUGS
-    .map((slug) => TOOLS.find((tool) => tool.slug === slug))
-    .filter((tool): tool is NonNullable<typeof tool> => Boolean(tool));
-
   const compact = (tool: (typeof TOOLS)[number]) => ({
     slug: tool.slug,
     name: tool.name,
@@ -62,7 +37,7 @@ export default function HomePage() {
   });
 
   const searchTools = TOOLS.map(compact);
-  const suggested = priorityTools.slice(0, 8).map(compact);
+  const suggested: ReturnType<typeof compact>[] = [];
 
   return (
     <div className="doc">

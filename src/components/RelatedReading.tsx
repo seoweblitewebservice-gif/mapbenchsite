@@ -23,15 +23,13 @@ export default function RelatedReading({ tool }: { tool: ToolDef }) {
         Use these resources when you need the reasoning behind the calculation, a comparison with another geographic method,
         or an example of the same approach applied across a dataset.
       </p>
-      <div className="mt-3 grid gap-3 sm:grid-cols-2">
-        {links.map((item) => (
-          <Link key={item.href} href={item.href} className="rounded-lg border border-line bg-card px-4 py-3 hover:border-brand">
-            <span className="font-sans text-[10px] font-extrabold uppercase tracking-wide text-mute">{item.kind}</span>
-            <span className="mt-1 block font-sans text-sm font-extrabold text-brand-strong">{item.label}</span>
-            <span className="mt-1 block text-sm leading-relaxed text-mute">{item.note}</span>
-          </Link>
-        ))}
-      </div>
+      <ul className="mt-4 space-y-4">
+        {links.map(item => <li key={item.href} className="border-l-2 border-line pl-4">
+          <span className="text-xs font-bold uppercase tracking-wide text-mute">{item.kind} · </span>
+          <Link href={item.href} className="editorial-link font-semibold">{item.label}</Link>
+          <p className="mt-1 text-sm leading-7 text-mute">{item.note}</p>
+        </li>)}
+      </ul>
     </section>
   );
 }

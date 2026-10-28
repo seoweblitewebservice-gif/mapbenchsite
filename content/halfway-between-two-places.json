@@ -11,51 +11,58 @@
  "updated": "October 2026",
  "summary_sentence": "For example, the halfway point between New York and Los Angeles sits at 39.5103, −97.1601 in central Kansas — approx. 1,223 miles (1,968 km) from each city, and approx. 52 miles northeast of Salina.",
  "quick_answer": "The Halfway Between Two Places calculator finds the true geographic midpoint between any two locations, measured along the surface of the Earth rather than on a flat map. Enter two places and it shows the midpoint on a map, its coordinates, and the equal half-distance in miles and kilometres.",
- "steps_intro": "Fair meetings and honest overnight stops both start with the same question — where is the middle, really? Three steps:",
+ "steps_intro": "Start with two verified locations. The result divides their great-circle distance equally; it does not divide driving time, fuel cost or road mileage.",
  "use_cases": [
   {
-   "title": "Meeting a friend or client fairly",
+   "title": "Choose a fair starting area for a meeting",
    "body": [
     {
-     "t": "Two people driving toward each other should split distance, not postcodes. Find the midpoint, then look at which town sits near it — the geographic answer starts the conversation, the map finishes it."
+     "t": "Use the midpoint to identify a search area, then choose an accessible public venue nearby. Check both journeys with the "
+    },
+    {
+     "t": "Driving Distance Calculator",
+     "l": "/tools/driving-distance-calculator"
+    },
+    {
+     "t": ". A geographically central venue can still take one person much longer to reach."
     }
    ]
   },
   {
-   "title": "Splitting a long drive",
+   "title": "Plan a stop without confusing road and air distance",
    "body": [
     {
-     "t": "On a two-day road trip the halfway point is where the overnight stop belongs. Check it against the "
+     "t": "For a long road trip, treat the midpoint as context rather than a mandatory overnight stop. Road geometry, opening hours and fatigue matter more than equal great-circle halves. Use the "
     },
     {
-     "t": "Drive Time Map",
-     "l": "/tools/drive-time-map"
+     "t": "meeting-point guide",
+     "l": "/guides/how-to-choose-a-meeting-point-between-places"
     },
     {
-     "t": " when one side's roads are slower than the other's, because equal distance is not always equal time."
+     "t": " to turn the calculated point into a practical shortlist."
     }
    ]
   },
   {
-   "title": "Relocation and custody logistics",
+   "title": "Compare separation between two offices",
    "body": [
     {
-     "t": "When two households exchange children, equipment or documents, a defensible midpoint ends arguments about whose trip is longer. The coordinates give both sides the same number to plan from."
+     "t": "The halfway point is a reproducible reference for comparing two sites, even when no road runs through it. Use "
+    },
+    {
+     "t": "Distance Between Two Places",
+     "l": "/tools/distance-between-two-places"
+    },
+    {
+     "t": " to check the full separation before interpreting either half."
     }
    ]
   },
   {
-   "title": "Comparing two bases",
+   "title": "Understand why the middle can be offshore",
    "body": [
     {
-     "t": "Field teams working from two depots use the midpoint line as a first sketch of who covers what. For the many-point version of the question, the "
-    },
-    {
-     "t": "Geographic Center Finder",
-     "l": "/tools/geographic-center-finder"
-    },
-    {
-     "t": " balances several places at once."
+     "t": "The shortest surface path between coastal cities can cross water. An offshore midpoint is a valid geographic answer, but not a recommended meeting place. Keep the calculated coordinate separate from any nearby destination you choose."
     }
    ]
   }
@@ -180,28 +187,35 @@
  ],
  "related_prose": [
   {
-   "t": "The midpoint starts from a distance, so for the full figure between the same two places use "
+   "t": "Next, compare the full "
   },
   {
-   "t": "Distance Between Two Places",
+   "t": "straight-line distance",
    "l": "/tools/distance-between-two-places"
   },
   {
-   "t": ". To balance three or more origins, the "
+   "t": " with a "
   },
   {
-   "t": "Geographic Center Finder",
-   "l": "/tools/geographic-center-finder"
+   "t": "driving route",
+   "l": "/tools/driving-distance-calculator"
   },
   {
-   "t": " generalises this page's idea, and once a meeting town is chosen, the "
+   "t": ". For a fixed-distance search around a possible venue, draw a "
   },
   {
-   "t": "Meeting Time Planner",
-   "l": "/tools/meeting-time-planner"
+   "t": "radius circle",
+   "l": "/tools/map-radius"
   },
   {
-   "t": " helps the two sides agree when to leave."
+   "t": "; for time-based accessibility, use a "
+  },
+  {
+   "t": "Drive Time Map",
+   "l": "/tools/drive-time-map"
+  },
+  {
+   "t": ". These tools answer different questions, so their results need not agree."
   }
  ],
  "more_tools": [
