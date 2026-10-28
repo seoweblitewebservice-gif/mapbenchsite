@@ -151,12 +151,15 @@ function BufferTool() {
   const [center, setCenter] = useState<PlaceValue | null>(null);
   const m = useFeatMap();
   const [radiusMi, setRadiusMi] = useState(5);
+  const request = useRef(0);
+  const invalidate = () => { request.current++; setBusy(false); setResult(null); setError(null); m.show(null); };
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<{ towns: number; schools: number; hospitals: number; areaSqMi: number } | null>(null);
 
   const run = async () => {
     if (!center) { setError("Set the centre point first."); return; }
+    const id = ++request.current;
     setBusy(true); setError(null); setResult(null);
     const radiusKm = radiusMi * 1.609344;
     const ring = circlePolygon(center, radiusKm);
@@ -172,16 +175,17 @@ function BufferTool() {
         else if (e.tags?.amenity === "school") schools++;
         else if (e.tags?.amenity === "hospital") hospitals++;
       }
+      if (id !== request.current) return;
       setResult({ towns, schools, hospitals, areaSqMi: Math.PI * radiusMi * radiusMi });
-    } catch (e: any) { setError(e?.message ?? "Overlay count failed — the buffer is drawn."); }
-    setBusy(false);
+    } catch (e: any) { if (id === request.current) setError(e?.message ?? "Overlay count failed — the buffer is drawn."); }
+    if (id === request.current) setBusy(false);
   };
 
   return (
     <Layout map={m.el} panel={<>
-      <PlaceField label="Buffer centre" value={center} onChange={setCenter} />
+      <PlaceField label="Buffer centre" value={center} onChange={(value) => { invalidate(); setCenter(value); }} />
       <Field label={`Buffer radius: ${radiusMi} miles`}>
-        <input type="range" min={1} max={50} className="w-full" value={radiusMi} onChange={(e) => setRadiusMi(Number(e.target.value))} />
+        <input type="range" min={1} max={50} className="w-full" value={radiusMi} onChange={(e) => { invalidate(); setRadiusMi(Number(e.target.value)); }} />
       </Field>
       <button type="button" className="btn btn-primary w-full" onClick={run} disabled={busy || !center}>{busy ? <Spinner label="Counting what is inside…" /> : "Draw buffer & count what's inside"}</button>
       {error && <ErrorBox>{error}</ErrorBox>}
@@ -209,6 +213,8 @@ function SuitabilityTool() {
   const [wAnchor, setWAnchor] = useState(50);
   const [wEle, setWEle] = useState(25);
   const [wCity, setWCity] = useState(25);
+  const request = useRef(0);
+  const invalidate = () => { request.current++; setBusy(false); setRows(null); setError(null); m.show(null); };
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [rows, setRows] = useState<(Candidate & { score: number; anchorKm: number })[] | null>(null);
@@ -219,17 +225,20 @@ function SuitabilityTool() {
     if (list.length > 10) { setError("Use at most 10 candidates."); return; }
     if (wAnchor + wEle + wCity === 0) { setError("Set at least one non-zero weight."); return; }
     if (list.length < 2) { setError("List at least two candidate places, one per line."); return; }
+    const id = ++request.current;
     setBusy(true); setError(null); setRows(null);
     try {
       const cands: Candidate[] = [];
       for (const name of list) {
         const r = await photonSearch(name, 1);
+        if (id !== request.current) return;
         if (r.ok && r.results.length) cands.push({ name, p: { lat: r.results[0].lat, lng: r.results[0].lng }, eleM: null, cityKm: null });
       }
       if (cands.length !== list.length) throw new Error("Some candidates could not be geocoded. Check each name and add a state or country before retrying.");
       // elevations in one Open-Meteo call
       const url = `https://api.open-meteo.com/v1/elevation?latitude=${cands.map((c) => c.p.lat.toFixed(5)).join(",")}&longitude=${cands.map((c) => c.p.lng.toFixed(5)).join(",")}`;
       const er = await fetch(url);
+      if (id !== request.current) return;
       if (er.ok) {
         const ed = await er.json();
         if (Array.isArray(ed.elevation)) ed.elevation.slice(0, cands.length).forEach((v: unknown, i: number) => { if (typeof v === "number" && Number.isFinite(v)) cands[i].eleM = v; });
@@ -238,6 +247,7 @@ function SuitabilityTool() {
       for (const c of cands) {
         try {
           const data = await overpass(`[out:json][timeout:30];node["place"="city"](around:80000,${c.p.lat},${c.p.lng});out 40;`);
+          if (id !== request.current) return;
           let best: number | null = null;
           for (const e of data.elements ?? []) {
             if (typeof e.lat === "number" && Number.isFinite(e.lat) && typeof e.lon === "number" && Number.isFinite(e.lon)) { const d = distanceKm(c.p, { lat: e.lat, lng: e.lon }); if (best === null || d < best) best = d; }
@@ -259,22 +269,23 @@ function SuitabilityTool() {
       const sC = norm(cands.map((c) => c.cityKm), true);
       const wSum = Math.max(1, wAnchor + wEle + wCity);
       const scored = cands.map((c, i) => ({ ...c, anchorKm: distanceKm(anchor, c.p), score: (sA[i] * wAnchor + sE[i] * wEle + sC[i] * wCity) / wSum })).sort((a, b) => b.score - a.score);
+      if (id !== request.current) return;
       setRows(scored);
       m.show(null, scored.map((c, i) => ({ p: c.p, color: i === 0 ? "#1d6e63" : "#8a4f9e", label: String(i + 1) })), [anchor, ...scored.map((c) => c.p)]);
-    } catch (e: any) { setError(e?.message ?? "Scoring failed."); }
-    setBusy(false);
+    } catch (e: any) { if (id === request.current) setError(e?.message ?? "Scoring failed."); }
+    if (id === request.current) setBusy(false);
   };
 
   return (
     <Layout map={m.el} panel={<>
-      <PlaceField label="Anchor place (closeness is good)" value={anchor} onChange={setAnchor} />
+      <PlaceField label="Anchor place (closeness is good)" value={anchor} onChange={(value) => { invalidate(); setAnchor(value); }} />
       <Field label="Candidate places, one per line">
-        <textarea className="textarea min-h-24" value={names} onChange={(e) => setNames(e.target.value)} />
+        <textarea className="textarea min-h-24" value={names} onChange={(e) => { invalidate(); setNames(e.target.value); }} />
       </Field>
       <div className="space-y-2">
-        <Field label={`Weight — close to anchor: ${wAnchor}%`}><input type="range" min={0} max={100} className="w-full" value={wAnchor} onChange={(e) => setWAnchor(Number(e.target.value))} /></Field>
-        <Field label={`Weight — lower elevation: ${wEle}%`}><input type="range" min={0} max={100} className="w-full" value={wEle} onChange={(e) => setWEle(Number(e.target.value))} /></Field>
-        <Field label={`Weight — close to a city: ${wCity}%`}><input type="range" min={0} max={100} className="w-full" value={wCity} onChange={(e) => setWCity(Number(e.target.value))} /></Field>
+        <Field label={`Weight — close to anchor: ${wAnchor}%`}><input type="range" min={0} max={100} className="w-full" value={wAnchor} onChange={(e) => { invalidate(); setWAnchor(Number(e.target.value)); }} /></Field>
+        <Field label={`Weight — lower elevation: ${wEle}%`}><input type="range" min={0} max={100} className="w-full" value={wEle} onChange={(e) => { invalidate(); setWEle(Number(e.target.value)); }} /></Field>
+        <Field label={`Weight — close to a city: ${wCity}%`}><input type="range" min={0} max={100} className="w-full" value={wCity} onChange={(e) => { invalidate(); setWCity(Number(e.target.value)); }} /></Field>
       </div>
       <button type="button" className="btn btn-primary w-full" onClick={run} disabled={busy}>{busy ? <Spinner label="Scoring candidates…" /> : "Score & rank the candidates"}</button>
       {error && <ErrorBox>{error}</ErrorBox>}
@@ -296,12 +307,15 @@ function DashboardTool() {
   const m = useFeatMap();
   const [center, setCenter] = useState<PlaceValue | null>(null);
   const [radiusMi, setRadiusMi] = useState(10);
+  const request = useRef(0);
+  const invalidate = () => { request.current++; setBusy(false); setStats(null); setError(null); m.show(null); };
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [stats, setStats] = useState<{ label: string; value: string }[] | null>(null);
 
   const run = async () => {
     if (!center) { setError("Set the area centre first."); return; }
+    const id = ++request.current;
     setBusy(true); setError(null); setStats(null);
     const radiusKm = radiusMi * 1.609344;
     const ring = circlePolygon(center, radiusKm);
@@ -325,6 +339,7 @@ function DashboardTool() {
         const er = await fetch(`https://api.open-meteo.com/v1/elevation?latitude=${center.lat}&longitude=${center.lng}`);
         if (er.ok) { const ed = await er.json(); const elevation = ed.elevation?.[0]; if (typeof elevation === "number" && Number.isFinite(elevation)) eleNote = `${fmt(elevation * 3.28084, 0)} ft at centre`; }
       } catch { /* keep fallback */ }
+      if (id !== request.current) return;
       setStats([
         { label: "Area", value: `${fmt(Math.PI * radiusMi * radiusMi, 1)} sq mi circle` },
         { label: "Cities & towns", value: String(counts.towns) },
@@ -335,14 +350,14 @@ function DashboardTool() {
         { label: "Hotels", value: String(counts.hotels) },
         { label: "Elevation", value: eleNote },
       ]);
-    } catch (e: any) { setError(e?.message ?? "Dashboard failed."); }
-    setBusy(false);
+    } catch (e: any) { if (id === request.current) setError(e?.message ?? "Dashboard failed."); }
+    if (id === request.current) setBusy(false);
   };
 
   return (
     <Layout map={m.el} panel={<>
-      <PlaceField label="Area centre" value={center} onChange={setCenter} />
-      <Field label={`Radius: ${radiusMi} miles`}><input type="range" min={2} max={30} className="w-full" value={radiusMi} onChange={(e) => setRadiusMi(Number(e.target.value))} /></Field>
+      <PlaceField label="Area centre" value={center} onChange={(value) => { invalidate(); setCenter(value); }} />
+      <Field label={`Radius: ${radiusMi} miles`}><input type="range" min={2} max={30} className="w-full" value={radiusMi} onChange={(e) => { invalidate(); setRadiusMi(Number(e.target.value)); }} /></Field>
       <button type="button" className="btn btn-primary w-full" onClick={run} disabled={busy || !center}>{busy ? <Spinner label="Building the dashboard…" /> : "Build the area dashboard"}</button>
       {error && <ErrorBox>{error}</ErrorBox>}
       {stats && (
@@ -471,12 +486,15 @@ function FormBuilderTool() {
 function ConnectorTool() {
   const m = useFeatMap();
   const [url, setUrl] = useState("");
+  const request = useRef(0);
+  const changeUrl = (value: string) => { request.current++; setBusy(false); setInfo(null); setError(null); m.show(null); setUrl(value); };
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [info, setInfo] = useState<{ count: number; updatedAt: string; props: [string, string][] } | null>(null);
 
   const connect = async () => {
     if (!url.trim()) { setError("Paste a GeoJSON or CSV endpoint URL first."); return; }
+    const id = ++request.current;
     setBusy(true); setError(null); setInfo(null);
     try {
       const res = await fetch(url.trim());
@@ -500,26 +518,27 @@ function ConnectorTool() {
         pts = fc.features.map((f: GeoJSON.Feature<GeoJSON.Point>) => ({ lng: f.geometry.coordinates[0], lat: f.geometry.coordinates[1] }));
       }
       const firstProps = (fc.features?.[0]?.properties ?? {}) as Record<string, unknown>;
+      if (id !== request.current) return;
       setInfo({ count: fc.features?.length ?? 0, updatedAt: new Date().toLocaleTimeString(), props: Object.entries(firstProps).slice(0, 6).map(([k, v]) => [k, String(v)] as [string, string]) });
       m.show(fc, [], pts.slice(0, 500));
     } catch (e: any) {
-      setError(`${e?.message ?? "Connection failed."} If the endpoint blocks cross-origin requests (CORS), the data owner has to allow browser access — that cannot be bypassed from here.`);
+      if (id === request.current) setError(`${e?.message ?? "Connection failed."} If the endpoint blocks cross-origin requests (CORS), the data owner has to allow browser access — that cannot be bypassed from here.`);
     }
-    setBusy(false);
+    if (id === request.current) setBusy(false);
   };
 
   return (
     <Layout map={m.el} panel={<>
       <Field label="Live data endpoint (GeoJSON or CSV URL)" hint="Fetched directly by your browser each time you connect or refresh.">
-        <input className="input font-mono text-xs" value={url} onChange={(e) => setUrl(e.target.value)} placeholder="https://example.org/data.geojson" />
+        <input className="input font-mono text-xs" value={url} onChange={(e) => changeUrl(e.target.value)} placeholder="https://example.org/data.geojson" />
       </Field>
       <div className="flex gap-2">
         <button type="button" className="btn btn-primary flex-1" onClick={connect} disabled={busy}>{busy ? <Spinner label="Fetching…" /> : info ? "↻ Refresh data" : "Connect"}</button>
         {info && <CopyBtn text={url} label="Copy endpoint URL" />}
       </div>
       <div className="flex flex-wrap gap-2">
-        <button type="button" className="btn btn-ghost btn-sm" onClick={() => setUrl("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson")}>Example: USGS earthquakes (GeoJSON)</button>
-        <button type="button" className="btn btn-ghost btn-sm" onClick={() => setUrl("https://davidmegginson.github.io/ourairports-data/airports.csv")}>Example: OurAirports (CSV)</button>
+        <button type="button" className="btn btn-ghost btn-sm" onClick={() => changeUrl("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson")}>Example: USGS earthquakes (GeoJSON)</button>
+        <button type="button" className="btn btn-ghost btn-sm" onClick={() => changeUrl("https://davidmegginson.github.io/ourairports-data/airports.csv")}>Example: OurAirports (CSV)</button>
       </div>
       {error && <ErrorBox>{error}</ErrorBox>}
       {info && (
