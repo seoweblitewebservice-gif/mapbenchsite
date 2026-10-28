@@ -6,6 +6,7 @@ import { STUDIES } from "@/data/studies";
 import BlankMapsHomeGrid from "@/components/BlankMapsHomeGrid";
 import HomeToolIndex from "@/components/HomeToolIndex";
 import HomeToolFinder from "@/components/HomeToolFinder";
+import HomeGlobe from "@/components/HomeGlobe";
 
 export const metadata: Metadata = {
   title: "Free Map Tools, Geographic Calculators & Blank Maps",
@@ -40,11 +41,11 @@ export default function HomePage() {
   const suggested: ReturnType<typeof compact>[] = [];
 
   return (
-    <div className="doc">
+    <div className="doc home-redesign">
       <section className="hero-map relative overflow-visible border-b border-line">
         <div className="hero-map-bg" aria-hidden />
         <div className="hero-map-fade" aria-hidden />
-        <div className="relative z-[1] mx-auto max-w-5xl px-4 py-14 text-center sm:py-20">
+        <div className="home-hero-inner relative z-[1] mx-auto max-w-5xl px-4 py-14 sm:py-20"><div className="home-hero-copy">
           <p className="mb-3 font-sans text-[11px] font-extrabold uppercase tracking-[0.16em] text-brand-strong">
             Free · No sign-up · Methods explained
           </p>
@@ -56,7 +57,7 @@ export default function HomePage() {
           </p>
 
           <HomeToolFinder tools={searchTools} suggested={suggested} />
-
+        </div><div className="home-hero-art"><HomeGlobe /></div>
         </div>
       </section>
 
@@ -66,7 +67,7 @@ export default function HomePage() {
 
       <HomeToolIndex />
 
-      <section aria-labelledby="blank-maps" className="border-t border-line bg-well/50 py-10">
+      <section aria-labelledby="blank-maps" className="home-maps border-t border-line bg-well/50 py-10">
         <div className="container-sf">
           <h2 id="blank-maps" className="sect-h">Free Printable Blank Maps</h2>
           <p className="mt-3 max-w-3xl">Clean outline maps rendered from public geographic geometry for worksheets, presentations and design work. Download available formats without watermarks.</p>
@@ -122,7 +123,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section aria-labelledby="faq" className="border-t border-line bg-well/40 py-12">
+      <section aria-labelledby="faq" className="home-faq border-t border-line bg-well/40 py-12">
         <div className="mx-auto max-w-3xl px-4">
           <h2 id="faq" className="sect-h">Frequently asked questions</h2>
           <div className="mt-6 divide-y divide-line rounded-xl border border-line bg-card">

@@ -5,8 +5,8 @@ import { CATEGORIES, TOOLS } from "@/lib/registry";
 export default function HomeToolIndex() {
   return <div className="home-directory mx-auto max-w-5xl px-4 pb-12">
     <nav id="legend" aria-label="Tool categories" className="category-legend">
-      <p className="mb-3 text-xs font-bold uppercase tracking-widest text-mute">Find the right tool</p>
-      <div className="flex flex-wrap gap-2">{CATEGORIES.map(category => <a key={category.id} href={`#category-${category.id}`} className="category-pill"><span aria-hidden style={{ background: category.tone }} />{category.label}</a>)}</div>
+      <h2 className="home-category-title">Browse map tools by category</h2><p className="home-category-intro">Explore the complete collection of free map and geographic tools.</p>
+      <div className="flex flex-wrap gap-2">{CATEGORIES.map(category => <a key={category.id} href={`#category-${category.id}`} className="category-pill"><span aria-hidden style={{ background: category.tone }} /><span className="category-pill-label">{category.label}<small>{category.short}</small></span><b aria-hidden>→</b></a>)}</div>
     </nav>
     {CATEGORIES.map(category => {
       const tools = TOOLS.filter(tool => tool.category === category.id);
