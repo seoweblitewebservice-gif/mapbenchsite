@@ -9,6 +9,8 @@ import { MAJOR_CITIES } from "@/data/cities";
 import { distanceKm, bearingBetween, compassPoint, fmt, normLng } from "@/lib/geo";
 import { formatDms, latLngToUtm, formatUtm, latLngToMgrs } from "@/lib/coords";
 import { sunTimes, fmtDurationHours } from "@/lib/astronomy";
+import ContextualText from "./ContextualText";
+import type { PageContent } from "@/lib/pageContent";
 import RelatedReading from "@/components/RelatedReading";
 
 interface Example { lead: string; body: string }
@@ -130,7 +132,7 @@ function useCases(tool: ToolDef): string[] {
   return rotate(cases, tool.slug, 3);
 }
 
-export default function ToolContent({ tool }: { tool: ToolDef }) {
+export default function ToolContent({ tool, pageContent }: { tool: ToolDef; pageContent?: PageContent | null }) {
   const category = CATEGORIES.find((c) => c.id === tool.category)!;
   const copy = TOOL_COPY[tool.slug] || fallbackAbout(tool);
   const examples = useMemo(() => buildExamples(tool), [tool]);
@@ -145,24 +147,24 @@ export default function ToolContent({ tool }: { tool: ToolDef }) {
 
   return (
     <div className="doc mx-auto max-w-3xl space-y-8">
-      <section aria-label="Quick answer" className="rounded-lg border border-line bg-card px-4 py-3">
+      {!pageContent?.quick_answer && <section aria-label="Quick answer" className="rounded-lg border border-line bg-card px-4 py-3">
         <p className="!mb-0 text-[15px]"><strong>Quick answer:</strong> {tool.short} Coverage: {tool.scope}. No account is required.</p>
-      </section>
+      </section>}
 
       <section aria-label="About this tool" data-content-type="tool-explanation">
         <h2 className="font-display text-2xl font-bold tracking-tight">{copy.h2}</h2>
-        {copy.paras.map((p, i) => <p key={i} className="mt-3">{p}</p>)}
+        {copy.paras.map((p, i) => <p key={i} className="mt-3"><ContextualText text={p} tool={tool} /></p>)}
       </section>
 
-      <section aria-label="When this tool is useful">
+      {!pageContent?.use_cases?.length && <section aria-label="When this tool is useful">
         <h2 className="font-display text-2xl font-bold tracking-tight">When this tool is useful</h2>
         <p className="mt-3">Use {tool.name} when the question matches the method the page actually uses. Typical workflows include:</p>
         <ul className="mt-3 list-disc space-y-2 pl-6">
           {cases.map((item) => <li key={item}>{item}</li>)}
         </ul>
-      </section>
+      </section>}
 
-      <section aria-label="Worked examples">
+      {!pageContent?.examples?.length && <section aria-label="Worked examples">
         <h2 className="font-display text-2xl font-bold tracking-tight">Worked examples</h2>
         <p className="mt-3">These examples are meant to show how to interpret this kind of output, not to replace the values produced from your own inputs.</p>
         <ul className="mt-3 space-y-3">
@@ -173,7 +175,7 @@ export default function ToolContent({ tool }: { tool: ToolDef }) {
             </li>
           ))}
         </ul>
-      </section>
+      </section>}
 
       {tips.length > 0 && (
         <section aria-label="Common mistakes and interpretation">
@@ -188,7 +190,7 @@ export default function ToolContent({ tool }: { tool: ToolDef }) {
       {limits && (
         <section aria-label="Limits and appropriate use">
           <h2 className="font-display text-2xl font-bold tracking-tight">Limits &amp; appropriate use</h2>
-          {limits.paras.slice(0, 2).map((p, i) => <p key={i} className="mt-3">{p}</p>)}
+          {limits.paras.slice(0, 2).map((p, i) => <p key={i} className="mt-3"><ContextualText text={p} tool={tool} /></p>)}
           <ul className="mt-2 list-disc space-y-1.5 pl-6">
             {limits.escalate.slice(0, 3).map((e) => <li key={e}>{e}</li>)}
           </ul>
@@ -217,7 +219,7 @@ export default function ToolContent({ tool }: { tool: ToolDef }) {
 
       <RelatedReading tool={tool} />
 
-      {related.length > 0 && (
+      {!pageContent && related.length > 0 && (
         <section aria-label="Related tools in context">
           <h2 className="font-display text-2xl font-bold tracking-tight">Related tools</h2>
           <p className="mt-3">If this page answers only part of your question, these tools use a nearby but different method or dataset.</p>
