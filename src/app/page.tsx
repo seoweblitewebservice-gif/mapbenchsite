@@ -4,7 +4,7 @@ import { CATEGORIES, TOOLS } from "@/lib/registry";
 import { ALL_GUIDES } from "@/data/allGuides";
 import { STUDIES } from "@/data/studies";
 import BlankMapsHomeGrid from "@/components/BlankMapsHomeGrid";
-import HomeToolIndex, { HomeFullDirectory } from "@/components/HomeToolIndex";
+import HomeToolIndex from "@/components/HomeToolIndex";
 import HomeToolFinder from "@/components/HomeToolFinder";
 import HomeGlobe from "@/components/HomeGlobe";
 
@@ -61,21 +61,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="home-highlights" aria-label="MapBench highlights">
-        <div><span aria-hidden>✓</span><p><strong>Free to use</strong><br />No account required</p></div>
-        <div><span aria-hidden>⌖</span><p><strong>Explore places</strong><br />Map and geographic tools</p></div>
-        <div><span aria-hidden>▧</span><p><strong>Printable maps</strong><br />Maps for learning and projects</p></div>
-        <div><span aria-hidden>ⓘ</span><p><strong>Methods explained</strong><br />Sources and limitations documented</p></div>
-      </section>
-
       <HomeToolIndex />
-
-      <section className="home-popular" aria-labelledby="home-popular-title">
-        <div className="home-section-heading"><div><h2 id="home-popular-title">Popular map tools</h2><p>Quick access to some of our most-used tools.</p></div><Link href="/tools" className="home-section-link">View all tools →</Link></div>
-        <div className="home-popular-grid">{["halfway-between-two-places", "map-radius", "elevation-finder", "timezone-map-finder"].map(slug => TOOLS.find(t => t.slug === slug)).filter((t): t is (typeof TOOLS)[number] => Boolean(t)).map(tool => <Link key={tool.slug} href={`/tools/${tool.slug}`} className="home-popular-card"><span className="home-popular-icon" aria-hidden>↗</span><span><strong>{tool.name}</strong><span>{tool.short}</span></span></Link>)}</div>
-      </section>
-
-      <HomeFullDirectory />
 
       <section aria-labelledby="blank-maps" className="home-maps border-t border-line bg-well/50 py-10">
         <div className="container-sf">
@@ -84,11 +70,6 @@ export default function HomePage() {
           <div className="mt-5"><BlankMapsHomeGrid /></div>
           <p className="mt-4 font-sans text-sm"><Link href="/maps" className="font-extrabold text-brand-strong hover:underline">Browse all blank maps →</Link></p>
         </div>
-      </section>
-
-      <section className="home-places" aria-labelledby="home-places-title">
-        <div className="home-section-heading"><div><h2 id="home-places-title">Explore places and maps</h2><p>Find geographic reference pages, US state resources and printable maps.</p></div></div>
-        <div className="home-places-links"><Link href="/reference"><strong>Country reference</strong><span>Explore country geography and reference information.</span><b aria-hidden>→</b></Link><Link href="/states"><strong>US states and counties</strong><span>Browse state maps and county lists.</span><b aria-hidden>→</b></Link><Link href="/maps"><strong>Blank map library</strong><span>Browse printable maps for countries and US states.</span><b aria-hidden>→</b></Link></div>
       </section>
 
       <section aria-labelledby="studies" className="border-t border-line py-12">
@@ -124,7 +105,7 @@ export default function HomePage() {
             <Link key={g.slug} href={`/guides/${g.slug}`} className="card group p-5">
               <div className="text-[10px] font-extrabold uppercase tracking-wide text-mute">{g.readMins} min read</div>
               <h3 className="mt-2 font-display text-[17px] font-bold leading-snug group-hover:text-brand-strong">{g.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-mute">{g.description}</p>
+              <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-mute">{g.description}</p>
             </Link>
           ))}
         </div>
@@ -134,7 +115,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-3xl px-4">
           <h2 id="sources" className="sect-h">Documented data sources</h2>
           <p className="mt-3">MapBench identifies the source behind geographic results instead of hiding data provenance. Depending on the tool, sources include OpenStreetMap-based services, Valhalla/OSRM routing, US Census data, Natural Earth, Copernicus elevation data and the IANA time-zone database.</p>
-          <p className="mt-3 font-sans text-sm"><Link href="/data-sources" className="font-extrabold text-brand-strong hover:underline">Full attribution, sources & licences →</Link> <span aria-hidden> · </span> <Link href="/methodology" className="font-extrabold text-brand-strong hover:underline">Methodology →</Link></p>
+          <p className="mt-3 font-sans text-sm"><Link href="/data-sources" className="font-extrabold text-brand-strong hover:underline">Full attribution, sources & licences →</Link></p>
         </div>
       </section>
 

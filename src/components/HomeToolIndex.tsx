@@ -26,18 +26,3 @@ export default function HomeToolIndex() {
     </div>
   </section>;
 }
-
-/** Every tool remains visible as a crawlable link with its original description. */
-export function HomeFullDirectory() {
-  return <section className="home-full-directory" aria-labelledby="home-directory-title">
-    <div className="home-section-heading"><div><h2 id="home-directory-title">Explore all map tools</h2><p>Browse the complete directory by geographic task.</p></div><Link href="/tools" className="home-section-link">Search all tools →</Link></div>
-    {CATEGORIES.map(category => {
-      const tools = TOOLS.filter(tool => tool.category === category.id);
-      return <section key={category.id} id={`category-${category.id}`} className="home-directory-section" aria-labelledby={`heading-${category.id}`}>
-        <div className="home-directory-heading"><span className={`home-category-icon home-category-${category.id}`} aria-hidden>{ICONS[category.id]}</span><div><h3 id={`heading-${category.id}`}>{category.label} <span className="home-directory-count">{tools.length} tools</span></h3><p>{category.short}</p></div><Link href={`/tools/category/${category.id}`} className="home-section-link">Category guide →</Link></div>
-        <div className="home-directory-list">{tools.map(tool => <Link key={tool.slug} href={`/tools/${tool.slug}`} className="home-directory-item"><h4>{tool.name} {tool.scope !== "Worldwide" && <span className="scope-label">{tool.scope === "US focused" ? "US" : tool.scope}</span>}</h4><p>{tool.short}</p></Link>)}</div>
-        <a href="#legend" className="home-back-categories">↑ All categories</a>
-      </section>;
-    })}
-  </section>;
-}
