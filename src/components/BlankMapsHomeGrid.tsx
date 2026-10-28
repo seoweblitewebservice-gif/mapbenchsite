@@ -40,7 +40,7 @@ export default function BlankMapsHomeGrid() {
   return (
     <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
       {all.map((t) => (
-        <Link key={t.id} href="/maps" className="card group overflow-hidden">
+        <Link key={t.id} href={t.id === "world" ? "/maps" : `/maps/blank/${t.id === "united-states" ? "united-states-of-america" : t.id}`} className="card group overflow-hidden">
           <div className="bg-white p-2 dark:bg-[#141210]">
             <svg viewBox="0 0 160 100" className="h-auto w-full" role="img" aria-label={`Blank map of ${t.name}`}>
               <path d={t.d} fill="var(--sf-brand-soft)" stroke="var(--sf-brand)" strokeWidth="1" strokeLinejoin="round" />
