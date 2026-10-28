@@ -23,6 +23,7 @@ const components: Record<string, () => Promise<{ default: ComponentType<{ params
   zipradius: () => import("./ZipRadiusTool"),
   nearby: () => import("./NearbyTool"),
   elevation: () => import("./ElevationTool"),
+  slopegrade: () => import("./SlopeGradeTool"),
   horizon: () => import("./EarthTools").then((m) => ({ default: m.HorizonTool })),
   antipode: () => import("./EarthTools").then((m) => ({ default: m.AntipodeTool })),
   sun: () => import("./SunMoon").then((m) => ({ default: m.SunTool })),

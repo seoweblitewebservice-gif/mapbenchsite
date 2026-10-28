@@ -9,17 +9,17 @@
   "ZIP Codes by State"
  ],
  "title": "ZIP Codes by State, County & City Lists",
- "description": "Browse ZIP Codes by State, County & City with the ZIP Codes by State, County & City explorer — the list for a place, structured three ways. Free.",
+ "description": "Find provider-listed ZIP codes for a city or sample mapped postcodes in areas matching a county name.",
  "updated": "October 2026",
- "summary_sentence": "For example, asking for Chicago's ZIPs and asking for Cook County's are different questions with overlapping answers — Chicago spills past Cook into DuPage, and the county list catches what the city list cannot.",
- "quick_answer": "ZIP Codes by State, County & City lists the ZIP codes belonging to a state, a county or a city — the same postal geography sliced three ways. Choose the place and read its codes — the list behind territory planning and mailing work.",
- "steps_intro": "One postal geography, three honest slices:",
+ "summary_sentence": "City and county lookup modes use different sources; a state-only list is not available.",
+ "quick_answer": "Search a city and state through Zippopotam, or collect postcodes from up to 800 mapped OSM objects inside areas matching a county name. County matching is not state-filtered; results may be incomplete or combine places with the same name.",
+ "steps_intro": "Choose a city or county lookup:",
  "use_cases": [
   {
    "title": "Territory and franchise lists",
    "body": [
     {
-     "t": "A territory defined as 'these counties' becomes a mailing list only through the county-to-ZIP slice — the step franchise agreements quietly depend on."
+     "t": "Use returned codes as a preliminary territory reference, then check names and coverage against an authoritative current source."
     }
    ]
   },
@@ -27,7 +27,7 @@
    "title": "Mailing and outreach targeting",
    "body": [
     {
-     "t": "Campaigns buy geography by the slice they think in: a city's codes for an event, a state's for a launch. The list in hand ends the guessing."
+     "t": "Explore a city’s provider-listed codes before preparing a mailing list; this page does not offer a state-wide export."
     }
    ]
   },
@@ -35,7 +35,7 @@
    "title": "Data validation",
    "body": [
     {
-     "t": "A record claiming ZIP 60601 in 'DuPage County' is wrong — it is Cook. The county slice is the audit table the CRM never had."
+     "t": "Compare reported postcodes with other sources. This sample is not a definitive address-validation service."
     }
    ]
   },
@@ -43,7 +43,7 @@
    "title": "Service-area definitions",
    "body": [
     {
-     "t": "Insurers, utilities and delivery zones publish coverage by ZIP. Building your own list starts from one of the three slices, checked against the "
+     "t": "Inspect codes associated with a city or mapped addresses in matching county areas. For a separate geographic view, see the "
     },
     {
      "t": "ZIP Code Boundary Viewer",
@@ -60,7 +60,7 @@
    "label": "Example · City versus county, Chicago",
    "body": [
     {
-     "t": "Chicago's city ZIPs cluster in the 606xx range; Cook County adds the suburban 600xx–608xx ring that is not Chicago at all. Overlapping but different lists — choosing the wrong slice mails the suburbs and calls it the city."
+     "t": "A city query and a county-name query use different datasets and do not necessarily return the same codes or boundaries."
     }
    ]
   },
@@ -68,14 +68,14 @@
    "label": "Example · The straddling ZIP",
    "body": [
     {
-     "t": "Some ZIP areas cross county and even city lines — a delivery route does not stop for a surveyor. Such codes appear on both counties' lists, because the postal geography and the civic geography were never the same map."
+     "t": "A code can be recorded on addresses in more than one area. Absence from the capped OSM sample does not prove that it is not used there."
     }
    ]
   }
  ],
  "popular_table": {
-  "title": "The three slices",
-  "intro": "Same codes, different questions.",
+  "title": "Available lookups",
+  "intro": "Choose the source and scope that match your question.",
   "columns": [
    "Slice",
    "Answers",
@@ -83,32 +83,27 @@
   ],
   "rows": [
    [
-    "By state",
-    "What is the state's full postal footprint?",
-    "Multi-metro states are enormous lists"
+    "City and state",
+    "Zippopotam city lookup",
+    "Provider coverage can be incomplete"
    ],
    [
-    "By county",
-    "Which codes touch this county?",
-    "Straddling codes appear on neighbours too"
+    "County name",
+    "OSM address postcode tags",
+    "No state filter; up to 800 objects and 300 displayed codes"
    ],
    [
-    "By city",
-    "Which codes does this city use?",
-    "Postal city names differ from municipal boundaries"
-   ],
-   [
-    "Any slice",
-    "A working list",
-    "ZIPs are routes — areas here are ZCTA approximations"
+    "State only",
+    "Not available",
+    "Use a suitable postal data source"
    ]
   ],
-  "note": "The standing ZIP caveat applies: ZIP codes are USPS delivery constructs, and list membership follows the best public ZIP-to-place data — the USPS itself is the authority for delivery questions."
+  "note": "ZIP codes are postal delivery constructs. These results are not official boundary or mailing validation."
  },
  "faq": [
   [
    "Why is a ZIP on two counties' lists?",
-   "Its delivery area crosses the line. Postal routes were drawn for mail, not for census neatness — dual membership is the honest representation, not a bug."
+   "A code may be present on addresses in more than one matched area; a result alone does not establish its delivery boundary. County names are not state-filtered."
   ],
   [
    "Postal city versus real city?",
@@ -124,7 +119,7 @@
   ],
   [
    "Can I get the list as a file?",
-   "The results copy out as text for your documents and spreadsheets — the working form of a reference list — with the map view one click away in the ZIP Code Map."
+   "The current workspace displays a result list; it does not offer a dedicated file export."
   ],
   [
    "Canadian or UK equivalents?",

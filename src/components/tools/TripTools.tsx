@@ -1,5 +1,6 @@
 "use client";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
+import { fuelEstimate } from "@/lib/fuelEstimate";
 import { distanceKm, fmt, fmtDist, type UnitKey } from "@/lib/geo";
 import { AIRPORTS } from "@/data/airports";
 import { route, fmtDuration } from "@/lib/routing";
@@ -56,26 +57,30 @@ export function FuelCostTool() {
   const [roadKm, setRoadKm] = useState<number | null>(null);
   const [err, setErr] = useState<string | null>(null);
 
+  const requestId = useRef(0);
+  const changePlace = (setter: (v: PlaceValue | null) => void, v: PlaceValue | null) => { requestId.current++; setBusy(false); setRoadKm(null); setErr(null); setter(v); };
   const straightKm = a && b ? distanceKm(a, b) : null;
 
   const calcRoad = async () => {
     if (!a || !b) { setErr("Set both points first."); return; }
-    setBusy(true); setErr(null);
+    const id = ++requestId.current;
+    setBusy(true); setErr(null); setRoadKm(null);
     const r = await route([a, b], "driving");
+    if (id !== requestId.current) return;
     setBusy(false);
     if (!r.ok) { setErr(r.message); setRoadKm(null); return; }
     setRoadKm(r.distanceKm);
   };
 
   const distKm = basis === "road" ? roadKm : straightKm;
-  const litres = distKm !== null ? (unit === "l100" ? (distKm * consumption) / 100 : (distKm * 0.621371 / mpg) * 3.78541) : null;
-  const cost = litres !== null ? litres * (unit === "l100" ? price : perGal) : null;
+  const estimate = distKm !== null ? fuelEstimate(distKm, unit, unit === "l100" ? consumption : mpg, unit === "l100" ? price : perGal) : null;
+  const cost = estimate?.cost ?? null;
 
   return (
     <div className="grid gap-4 lg:grid-cols-2">
       <div className="card space-y-4 p-4">
-        <PlaceField label="From" value={a} onChange={setA} />
-        <PlaceField label="To" value={b} onChange={setB} />
+        <PlaceField label="From" value={a} onChange={(v) => changePlace(setA, v)} />
+        <PlaceField label="To" value={b} onChange={(v) => changePlace(setB, v)} />
         <div className="flex flex-wrap items-center gap-2">
           <Seg ariaLabel="Distance basis" options={[{ value: "road" as const, label: "Road distance" }, { value: "straight" as const, label: "Straight line" }]} value={basis} onChange={setBasis} />
           {basis === "road" && <button type="button" className="btn btn-ghost btn-sm" onClick={calcRoad} disabled={busy}>{busy ? <Spinner label="Routing…" /> : "Fetch road distance"}</button>}
@@ -93,11 +98,11 @@ export function FuelCostTool() {
               : <input type="number" step="0.01" min={0} className="input" value={perGal} onChange={(e) => setPerGal(Math.max(0, parseFloat(e.target.value) || 0))} aria-label="Price per gallon" />}
           </Field>
         </div>
-        <Seg ariaLabel="Units" options={[{ value: "l100" as const, label: "L/100 km + /litre" }, { value: "mpg" as const, label: "MPG + /gallon" }]} value={unit} onChange={setUnit} />
+        <Seg ariaLabel="Units" options={[{ value: "l100" as const, label: "L/100 km + /litre" }, { value: "mpg" as const, label: "US MPG + /US gallon" }]} value={unit} onChange={setUnit} />
       </div>
       <div className="grid content-start grid-cols-2 gap-2">
         <Stat label="Distance" value={distKm !== null ? fmt(distKm) + " km" : "—"} sub={distKm !== null ? fmt(distKm * 0.621371) + " mi" : basis === "road" ? "fetch or switch basis" : "set both points"} />
-        <Stat label="Fuel needed" value={litres !== null ? fmt(litres) + (unit === "l100" ? " L" : " gal") : "—"} />
+        <Stat label="Fuel needed" value={estimate ? fmt(estimate.amount) + (unit === "l100" ? " L" : " US gal") : "—"} />
         <Stat label="Estimated fuel cost" value={cost !== null ? fmt(cost, 1) : "—"} sub="local currency units" />
         <Stat label="Round trip" value={cost !== null ? fmt(cost * 2, 1) : "—"} />
       </div>
@@ -119,7 +124,7 @@ export function NearestAirportTool() {
     <div className="mx-auto max-w-2xl space-y-4">
       <div className="card p-4">
         <PlaceField label="Your location" value={point} onChange={setPoint} placeholder="Search a city or click coordinates…" />
-        <p className="mt-2 text-xs text-mute">Compared against a curated dataset of ~90 major international airports; distances are great-circle to each field's coordinates.</p>
+        <p className="mt-2 text-xs text-mute">Compared against a curated dataset of ~90 major international airports; distances are great-circle to each field&apos;s coordinates.</p>
       </div>
       {nearest.length > 0 && (
         <div className="card p-4">

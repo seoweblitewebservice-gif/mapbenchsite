@@ -149,3 +149,34 @@ assert.equal(csvPoints.features[0].properties?.name, 'A, B');
 assert.equal(csvPoints.features[1].properties?.name, 'two\nlines');
 assert.throws(() => csvPointFeatures('latitude,longitude\n"10,20'));
 console.log('PASS: spatial CSV quoted fields, missing and out-of-range coordinates.');
+
+import { csvMapPoints } from '../src/lib/csvMapPoints';
+const mapRows = [['0', '0'], ['', '1'], ['12oops', '2'], ['91', '1'], ['-3.5', '12']];
+assert.deepEqual(csvMapPoints(mapRows, 0, 1, -1, -1).map(p => [p.lat, p.lng]), [[0, 0], [-3.5, 12]]);
+assert.equal(csvMapPoints(mapRows, 0, 1, -1, -1, 1).length, 1);
+assert.deepEqual(csvMapPoints(mapRows, -1, 1, -1, -1), []);
+console.log('PASS: CSV map rejects missing, partial and invalid coordinates and respects the point limit.');
+
+import { fuelEstimate } from '../src/lib/fuelEstimate';
+near(fuelEstimate(100, 'l100', 8, 2).cost, 16, 1e-9, 'metric fuel cost');
+near(fuelEstimate(160.9344, 'mpg', 25, 4).amount, 4, 1e-8, 'US gallons');
+near(fuelEstimate(160.9344, 'mpg', 25, 4).cost, 16, 1e-8, 'US gallon cost');
+console.log('PASS: fuel estimates use prices in matching litre or US gallon units.');
+
+import { hardinessZone, annualMinimumMean } from '../src/lib/hardiness';
+assert.equal(hardinessZone(-20), 6);
+assert.equal(hardinessZone(-40), 3);
+assert.equal(hardinessZone(0), 10);
+assert.equal(hardinessZone(20), 13);
+const archiveDates = Array.from({length: 366}, (_, i) => new Date(Date.UTC(2020, 0, 1 + i)).toISOString().slice(0, 10));
+const temperatures = archiveDates.map((_, i) => i === 60 ? -20 : 0);
+assert.equal(annualMinimumMean(archiveDates, temperatures, 2020, 2020), -20);
+assert.throws(() => annualMinimumMean(archiveDates.slice(1), temperatures.slice(1), 2020, 2020));
+assert.throws(() => annualMinimumMean(archiveDates, temperatures.map((v,i)=>i===2 ? null : v), 2020, 2020));
+console.log('PASS: hardiness thresholds and complete leap-year archive minima.');
+
+import { describeFloodResponse } from '../src/lib/floodResponse';
+assert.match(describeFloodResponse({features: []}), /Coverage or mapping status is unknown/);
+assert.equal(describeFloodResponse({features: [{attributes: {FLD_ZONE: 'AE'}}]}), 'FEMA flood zone AE');
+assert.throws(() => describeFloodResponse({error: {message: 'unavailable'}, features: []}));
+console.log('PASS: missing or failed FEMA responses are not reported as safe.');

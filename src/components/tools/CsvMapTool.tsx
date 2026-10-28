@@ -4,6 +4,7 @@ import type { Map as MLMap, GeoJSONSource } from "maplibre-gl";
 import { guessLatLngCols, parseCsv, toCsv, downloadText, geojsonToKml, escapeXml, type ParsedCsv } from "@/lib/formats";
 import { ErrorBox, FileDropzone, Field } from "@/components/ui";
 import { DynamicMap, PALETTE } from "./shared";
+import { csvMapPoints } from "@/lib/csvMapPoints";
 
 const MAX_POINTS = 50000;
 
@@ -19,6 +20,8 @@ export default function CsvMapTool() {
   const mapRef = useRef<MLMap | null>(null);
   const libRef = useRef<any>(null);
   const [ready, setReady] = useState(false);
+  const dataRef = useRef(data);
+  useEffect(() => { dataRef.current = data; }, [data]);
 
   const ingest = (text: string) => {
     setErr(null);
@@ -36,16 +39,7 @@ export default function CsvMapTool() {
   };
 
   const points = useMemo(() => {
-    if (!data || latCol < 0 || lngCol < 0) return [];
-    const out: { lat: number; lng: number; label: string; cat: string; row: string[] }[] = [];
-    for (const row of data.rows) {
-      if (out.length >= MAX_POINTS) break;
-      const lat = parseFloat(row[latCol]), lng = parseFloat(row[lngCol]);
-      if (Number.isFinite(lat) && Number.isFinite(lng) && Math.abs(lat) <= 90 && Math.abs(lng) <= 180) {
-        out.push({ lat, lng, label: labelCol >= 0 ? row[labelCol] ?? "" : "", cat: catCol >= 0 ? row[catCol] ?? "" : "", row });
-      }
-    }
-    return out;
+    return data ? csvMapPoints(data.rows, latCol, lngCol, labelCol, catCol, MAX_POINTS) : [];
   }, [data, latCol, lngCol, catCol, labelCol]);
 
   const categories = useMemo(() => {
@@ -70,10 +64,19 @@ export default function CsvMapTool() {
     const src = map.getSource("csv") as GeoJSONSource | undefined;
     src?.setData({ type: "FeatureCollection", features });
     if (features.length) {
-      const lngs = points.map((p) => p.lng), lats = points.map((p) => p.lat);
-      map.fitBounds([[Math.min(...lngs), Math.min(...lats)], [Math.max(...lngs), Math.max(...lats)]], { padding: 55, maxZoom: 13, duration: 600 });
+      let west = Infinity, south = Infinity, east = -Infinity, north = -Infinity;
+      for (const p of points) { west = Math.min(west, p.lng); south = Math.min(south, p.lat); east = Math.max(east, p.lng); north = Math.max(north, p.lat); }
+      map.fitBounds([[west, south], [east, north]], { padding: 55, maxZoom: 13, duration: 600 });
     }
   }, [points, ready, data]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !ready || !map.getLayer("csv-points")) return;
+    map.setPaintProperty("csv-points", "circle-color", categories.length
+      ? ["match", ["get", "cat"], ...categories.flatMap((c, i) => [c, PALETTE[i % PALETTE.length]]), "#1d6e63"] as any
+      : "#1d6e63");
+  }, [categories, ready]);
 
   const fc = (): GeoJSON.FeatureCollection => ({
     type: "FeatureCollection",
@@ -131,13 +134,13 @@ export default function CsvMapTool() {
           </div>
           <div className="flex flex-wrap items-center gap-2">
             <span className="chip chip-brand">{points.length.toLocaleString()} of {data.rows.length.toLocaleString()} rows mapped</span>
-            {points.length < data.rows.length && <span className="chip chip-ember">{(data.rows.length - points.length).toLocaleString()} rows skipped (invalid coordinates)</span>}
+            {points.length < data.rows.length && <span className="chip chip-ember">{(data.rows.length - points.length).toLocaleString()} rows not mapped (invalid coordinates or 50,000-point limit)</span>}
             {categories.length > 0 && <span className="chip">{categories.length} categories</span>}
             <div className="ml-auto flex flex-wrap gap-2">
               <button type="button" className="btn btn-ghost btn-sm" onClick={() => { setData(null); setErr(null); }}>Load another file</button>
-              <button type="button" className="btn btn-primary btn-sm" disabled={!points.length} onClick={() => downloadText("mapforge-points.geojson", JSON.stringify(fc(), null, 2), "application/geo+json")}>Export GeoJSON</button>
-              <button type="button" className="btn btn-ghost btn-sm" disabled={!points.length} onClick={() => downloadText("mapforge-points.kml", geojsonToKml(fc(), "CSV map"), "application/vnd.google-earth.kml+xml")}>KML</button>
-              <button type="button" className="btn btn-ghost btn-sm" onClick={() => downloadText("mapforge.csv", toCsv(data.headers, data.rows), "text/csv")}>CSV</button>
+              <button type="button" className="btn btn-primary btn-sm" disabled={!points.length} onClick={() => downloadText("mapbench-points.geojson", JSON.stringify(fc(), null, 2), "application/geo+json")}>Export GeoJSON</button>
+              <button type="button" className="btn btn-ghost btn-sm" disabled={!points.length} onClick={() => downloadText("mapbench-points.kml", geojsonToKml(fc(), "CSV map"), "application/vnd.google-earth.kml+xml")}>KML</button>
+              <button type="button" className="btn btn-ghost btn-sm" onClick={() => downloadText("mapbench.csv", toCsv(data.headers, data.rows), "text/csv")}>CSV</button>
             </div>
           </div>
         </>
@@ -179,7 +182,7 @@ export default function CsvMapTool() {
           const f = e.features?.[0];
           if (!f) return;
           const p = f.properties;
-          const rows = data?.headers.slice(0, 10).map((h, ci) => `<tr><td style="padding:1px 8px 1px 0;color:var(--sf-mute)">${escapeXml(h)}</td><td>${escapeXml(String(p[`c${ci}`] ?? "")).slice(0, 100)}</td></tr>`).join("") ?? "";
+          const rows = dataRef.current?.headers.slice(0, 10).map((h, ci) => `<tr><td style="padding:1px 8px 1px 0;color:var(--sf-mute)">${escapeXml(h)}</td><td>${escapeXml(String(p[`c${ci}`] ?? "")).slice(0, 100)}</td></tr>`).join("") ?? "";
           new lib.Popup({ maxWidth: "280px" }).setLngLat(e.lngLat).setHTML(`<div style="max-height:200px;overflow:auto"><strong>${escapeXml(String(p.label || ""))}</strong><table style="font-size:12px;margin-top:4px">${rows}</table></div>`).addTo(map);
         });
         setReady(true);

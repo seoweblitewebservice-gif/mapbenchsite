@@ -1163,15 +1163,14 @@ export function CountrySizeTool({ params }: ToolProps) {
                   <h3 className="truncate font-display text-base font-bold">{c.name}</h3>
                   <span className="shrink-0 font-mono text-sm font-semibold">{fmt(c.area, 0)} km²</span>
                 </div>
-                <svg viewBox={`0 0 ${SIZE_W} ${SIZE_H}`} className="h-auto w-full rounded-lg bg-well" role="img" aria-label={`True-scale outline of ${c.name}`}>
+                <svg viewBox={`0 0 ${SIZE_W} ${SIZE_H}`} className="h-auto w-full rounded-lg bg-well" role="img" aria-label={`Approximate longitude-latitude outline of ${c.name}`}>
                   <path d={c.d} fill={c.color} fillOpacity={0.75} stroke={c.color} strokeWidth={1.2} />
                 </svg>
               </div>
             ))}
           </div>
           <p className="text-center text-xs text-mute">
-            Both outlines use the same map scale, so on-screen areas are directly comparable.
-            The km² figures are true spherical areas — unlike web maps, no Mercator stretching is applied.
+            The outlines use longitude and latitude coordinates, which distort on-screen area, especially at high latitudes. Compare the numerical spherical area estimates instead; boundaries are simplified.
           </p>
         </>
       )}

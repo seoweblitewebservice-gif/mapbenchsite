@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { describeFloodResponse } from "@/lib/floodResponse";
 import { distanceKm, fmt, fmtCoords, type LatLng } from "@/lib/geo";
 import { nominatimReverse, addressBreakdown, geolocation } from "@/lib/geocode";
 import { STATE_AREA_CODES } from "@/data/compare";
@@ -177,18 +178,20 @@ export function FloodTool() {
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState<string | null>(null);
   const [out, setOut] = useState<string | null>(null);
+  const requestId = useRef(0);
 
   const resolve = async (p: LatLng) => {
+    const id = ++requestId.current;
     setPoint(p); setBusy(true); setErr(null); setOut(null);
     try {
       const url = `https://hazards.fema.gov/gis/nfhl/rest/services/public/NFHL/MapServer/28/query?where=1%3D1&geometry=${p.lng}%2C${p.lat}&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=FLD_ZONE%2CZONE_SUBTY&returnGeometry=false&f=json`;
       const res = await fetch(url);
       if (!res.ok) throw new Error();
       const data = await res.json();
-      const a = data?.features?.[0]?.attributes;
-      if (a?.FLD_ZONE) setOut(`FEMA flood zone ${a.FLD_ZONE}${a.ZONE_SUBTY ? " (" + a.ZONE_SUBTY + ")" : ""}`);
-      else setOut("No mapped Special Flood Hazard Area at this point (unshaded Zone X by default where NFHL data exists).");
+      if (id !== requestId.current) return;
+      setOut(describeFloodResponse(data));
     } catch {
+      if (id !== requestId.current) return;
       setErr("FEMA's NFHL service didn't answer for this point — it covers US communities with mapped floodplains. For authoritative checks use the FEMA Flood Map Service Center.");
     }
     setBusy(false);

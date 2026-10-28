@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import type { Map as MLMap, GeoJSONSource } from "maplibre-gl";
-import { distanceKm, fmtCoords, fmtDist, type LatLng } from "@/lib/geo";
+import { distanceKm, fmtCoords, fmtDist, isValidLat, isValidLng, type LatLng } from "@/lib/geo";
 import { photonSearch } from "@/lib/geocode";
 import { ErrorBox, Field, FileDropzone, Seg, Spinner, Stat } from "@/components/ui";
 import { DynamicMap, pinElement, PlaceField, type PlaceValue } from "./shared";
@@ -26,8 +26,8 @@ async function overpass(ql: string): Promise<any[]> {
 }
 
 function elPoint(e: any): LatLng | null {
-  if (typeof e.lat === "number" && typeof e.lon === "number") return { lat: e.lat, lng: e.lon };
-  if (e.center) return { lat: e.center.lat, lng: e.center.lon };
+  if (isValidLat(e.lat) && isValidLng(e.lon)) return { lat: e.lat, lng: e.lon };
+  if (isValidLat(e.center?.lat) && isValidLng(e.center?.lon)) return { lat: e.center.lat, lng: e.center.lon };
   return null;
 }
 
@@ -169,7 +169,8 @@ function ZipsRegionTool() {
         const data = await res.json();
         const places = (data.places ?? []) as Record<string, string>[];
         if (!places.length) throw new Error("No ZIP codes were found for that state and city.");
-        const found = places.map((pl) => ({ name: `${pl["post code"]} — ${pl["place name"]}, ${pl["state abbreviation"]}`, p: { lat: Number(pl.latitude), lng: Number(pl.longitude) }, d: 0 }));
+        const found = places.filter(pl => pl.latitude?.trim() && pl.longitude?.trim() && isValidLat(Number(pl.latitude)) && isValidLng(Number(pl.longitude))).map((pl) => ({ name: `${pl["post code"]} — ${pl["place name"]}, ${pl["state abbreviation"]}`, p: { lat: Number(pl.latitude), lng: Number(pl.longitude) }, d: 0 }));
+        if (!found.length) throw new Error("The provider returned no usable ZIP coordinates.");
         setHits(found);
         m.show(found);
         setNote("ZIP codes and their centre points come from Zippopotam.us (USPS-derived open data). A ZIP code is a delivery route, not a boundary — the point is its representative centre.");
@@ -187,7 +188,7 @@ function ZipsRegionTool() {
         if (!found.length) throw new Error(`No postal codes were found inside “${name}”. The county name must match the OpenStreetMap boundary name — try the full name your state uses.`);
         setHits(found.slice(0, 300));
         m.show(found);
-        setNote("Codes are collected from addresses mapped inside the county boundary in OpenStreetMap, so a code with few mapped addresses can be missing. This is a finder, not the official USPS list.");
+        setNote("Up to 800 mapped objects are searched and up to 300 distinct codes shown. County names are not filtered by state and may combine namesakes. The sample is incomplete and is not an official USPS list.");
       }
     } catch (e: any) { setError(e?.message ?? "Search failed."); }
     setBusy(false);
@@ -270,7 +271,8 @@ function NearestListTool() {
 
   const run = async () => {
     if (!target) { setError("Set your target point first."); return; }
-    const codes = text.split(/[\n,;]+/).map((s) => s.trim()).filter(Boolean).slice(0, 50);
+    const codes = text.split(/[\n,;]+/).map((s) => s.trim()).filter(Boolean);
+    if (codes.length > 50) { setError("Use at most 50 codes per run."); return; }
     if (!codes.length) { setError("Paste or upload a list of postcodes first."); return; }
     setBusy(true); setError(null); setHits(null);
     try {
@@ -290,7 +292,7 @@ function NearestListTool() {
           const data = await res.json();
           (data.result ?? []).forEach((row: any, i: number) => {
             const r = row?.result;
-            if (!r) return;
+            if (!r || !isValidLat(r.latitude) || !isValidLng(r.longitude)) return;
             const p = { lat: r.latitude, lng: r.longitude };
             found.push({ name: uk[i], p, d: distanceKm(target, p) });
           });
@@ -306,7 +308,7 @@ function NearestListTool() {
             if (!res.ok) continue;
             const d = await res.json();
             const pl = d.places?.[0];
-            if (!pl) continue;
+            if (!pl || !pl.latitude?.trim() || !pl.longitude?.trim() || !isValidLat(Number(pl.latitude)) || !isValidLng(Number(pl.longitude))) continue;
             const p = { lat: Number(pl.latitude), lng: Number(pl.longitude) };
             found.push({ name: code, p, d: distanceKm(target, p) });
           }
@@ -333,11 +335,11 @@ function NearestListTool() {
       {error && <ErrorBox>{error}</ErrorBox>}
       {hits && (
         <div className="space-y-3">
-          <Stat label="Nearest postcode" value={hits[0].name} sub={`${fmtDist(hits[0].d, "mi")} from your target (${fmtCoords(hits[0].p)})`} />
+          <Stat label="Nearest resolved postcode" value={hits[0].name} sub={`${fmtDist(hits[0].d, "mi")} from your target (${fmtCoords(hits[0].p)})`} />
           <HitList hits={hits} empty="" />
         </div>
       )}
-      <p className="text-xs text-mute">The list is geocoded in your browser (UK via postcodes.io, US ZIPs via Zippopotam) — it is never uploaded to MapBench. Up to 50 codes per run.</p>
+      <p className="text-xs text-mute">Up to 50 codes are sent to postcodes.io (UK) or Zippopotam (US), not to MapBench. Unresolved codes are omitted, so compare the results with your input. Distances are straight-line between representative points.</p>
     </>} />
   );
 }

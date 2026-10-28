@@ -151,6 +151,6 @@ export const CATEGORY_DATA_NOTE: Record<CategoryId, string> = {
   earth: "Elevation and radiation use Open-Meteo's open API on Copernicus/ERA5 datasets; visibility math adds standard refraction (k = 0.13). US hydrology/flood layers come from USGS and FEMA public services.",
   sun: "Solar times use the NOAA algorithm with the 90.833° official zenith; lunar phase uses the synodic cycle. Timezone geometry comes from the open tz database resolved locally in your browser.",
   lines: "Line positions follow the current axial tilt (23.437°); basemap © OpenStreetMap contributors. Facts cite standard astronomical and geodetic references.",
-  population: "City populations, densities and cost indices are MapForge's curated ≈2020–2023 snapshot, printed with its vintage and intended for transparent estimation; authoritative US counts live at the Census Bureau.",
+  population: "Population and place tools may use different data sources and reference periods. Check the specific source and vintage shown for each result; official US population counts are available from the Census Bureau.",
   network: "Public IP metadata is supplied by the IP lookup service and represents an approximate network location; VPNs, proxies, mobile networks and reassignment can reduce geographic accuracy.",
 };

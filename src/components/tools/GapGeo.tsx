@@ -1144,7 +1144,7 @@ export function DateLineTool({ params }: { params?: Record<string, unknown> }) {
         <p className="mt-2 max-w-3xl text-sm leading-relaxed text-mute">
           The International Date Line is the imaginary boundary where each new calendar day begins.
           It roughly follows the 180° meridian through the Pacific Ocean — but it zigzags around islands
-          and nations so that no country is split across two calendar days.
+          and nations to reflect local civil time choices.
         </p>
       </div>
       <DynamicMap
@@ -1175,17 +1175,16 @@ export function DateLineTool({ params }: { params?: Record<string, unknown> }) {
           </ol>
         </div>
         <div className="card space-y-2 p-4">
-          <h3 className="font-display text-base font-bold">The 21-hour Diomede gap</h3>
+          <h3 className="font-display text-base font-bold">The Diomede time gap</h3>
           <p className="text-sm leading-relaxed text-mute">
             Big Diomede runs on Russian time (UTC+12) while Little Diomede, in sight across the water,
-            runs on Alaska time (UTC−9). Stand on one island and look at the other: it is <strong className="text-ink">21 hours</strong> a
-            different day — the largest time jump between two places you can see with the naked eye.
+            runs on Alaska time (UTC−9 in standard time, UTC−8 during daylight saving). The offset difference is 21 or 20 hours depending on the date.
           </p>
           <h3 className="font-display text-base font-bold pt-2">Date-change facts</h3>
           <ul className="list-disc space-y-1.5 pl-5 text-sm text-mute">
             <li>Crossing westward you skip a day; crossing eastward you repeat a day.</li>
             <li>Kiritimati (Christmas Island, UTC+14) is the first inhabited place to see each new day.</li>
-            <li>The line has no legal status — it is a cartographic convention every country follows voluntarily.</li>
+            <li>The line is a cartographic convention; local civil time is set by jurisdictions and may change.</li>
           </ul>
         </div>
       </div>

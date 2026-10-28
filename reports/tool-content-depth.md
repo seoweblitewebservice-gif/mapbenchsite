@@ -1,6 +1,6 @@
 # Tool content-depth inventory
 
-All 496 rendered tool articles counted. Range: 1547–3307 words. Median: 1735 words.
+All 496 rendered tool articles counted. Range: 1173–3364 words. Median: 1638 words.
 
 Counts include article headings, FAQs, examples, source notes and related-resource text. They exclude the global header/footer, tool controls, calculator results and page hero. They are not measures of originality, accuracy, uniqueness or reading quality.
 

@@ -105,7 +105,7 @@ export function W3wTool() {
             <CopyBtn text={fmtCoords(result)} label="Copy coordinates" />
           </div>
         )}
-        <p className="text-xs text-mute">what3words is a proprietary system requiring a licensed API. MapForge never bundles a key; your own key is used only from this tab.</p>
+        <p className="text-xs text-mute">what3words is a proprietary system requiring a licensed API. MapBench never bundles a key; your own key is used only from this tab.</p>
       </div>
       <div className="card space-y-3 p-4">
         <div className="font-display text-base font-bold">Free open alternative: Plus Codes</div>

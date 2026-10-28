@@ -22,6 +22,7 @@ import { CENSUS_US_TOOLS } from "@/data/toolsCensusUS";
 import { CENSUS_EXPLORER_TOOLS } from "@/data/toolsCensusExplorer";
 import { LIVE_SEO_OVERRIDES } from "@/data/toolsLiveSeoOverrides";
 import { LIST_ADDITIONS } from "@/data/toolsListAdditions";
+import { REVIEWED_TOOL_METHODS } from "@/data/reviewedToolMethods";
 
 export type CategoryId =
   | "location" | "distance" | "radius" | "routing" | "coordinates"
@@ -87,7 +88,9 @@ const RAW_TOOLS: ToolDef[] = [
 const canonicalTools = new Map<string, ToolDef>();
 for (const tool of RAW_TOOLS) canonicalTools.set(tool.slug, tool);
 
-export const TOOLS: ToolDef[] = [...canonicalTools.values()];
+export const TOOLS: ToolDef[] = [...canonicalTools.values()].map((tool) =>
+  !tool.method && REVIEWED_TOOL_METHODS[tool.slug] ? { ...tool, method: REVIEWED_TOOL_METHODS[tool.slug] } : tool
+);
 export const toolBySlug = new Map(TOOLS.map((t) => [t.slug, t]));
 export const popularTools = TOOLS.filter((t) => t.popular);
 export const toolsByCategory = (id: CategoryId) => TOOLS.filter((t) => t.category === id);

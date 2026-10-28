@@ -108,7 +108,7 @@ export const COPY6A: Record<string, { h2: string; paras: string[] }> = {
   "what3words-converter": {
     h2: "Three-word addresses, handled honestly",
     paras: [
-      "what3words has carved a niche in delivery and emergency workflows by giving every 3-metre square a memorable three-word name — and it is also a proprietary system whose API requires a licensed key. MapForge refuses to hide a shared key in the page, so this tool works the respectful way: paste your own what3words API key (it stays in your browser tab) and the official service converts your three-word address to coordinates, or skip the key entirely and use the built-in open alternative.",
+      "what3words has carved a niche in delivery and emergency workflows by giving every 3-metre square a memorable three-word name — and it is also a proprietary system whose API requires a licensed key. MapBench refuses to hide a shared key in the page, so this tool works the respectful way: paste your own what3words API key (it stays in your browser tab) and the official service converts your three-word address to coordinates, or skip the key entirely and use the built-in open alternative.",
       "That alternative is Plus Codes — Open Location Codes — which give any spot on Earth a short, shareable code computed by pure open math: no database, no licence, no expiry. The page encodes and decodes them on the spot, so even without a w3w key you leave with a working short-code for your location. The framing matters as much as the function: proprietary grids and open grids coexist in the real world, and a good tool tells you which is which, what each costs, and where the exits are. Coordinates from either path copy cleanly into every other tool on the platform.",
     ],
   },
