@@ -7,7 +7,7 @@ import { CATEGORIES, TOOLS, type CategoryId } from "@/lib/registry";
 export default function ToolsDirectory() {
   const sp = useSearchParams();
   const [q, setQ] = useState(sp.get("q") ?? "");
-  const cat = (sp.get("cat") ?? "") as CategoryId | "";
+  const [cat, setCat] = useState<CategoryId | "">((sp.get("cat") ?? "") as CategoryId | "");
 
   const results = useMemo(() => {
     const needle = q.trim().toLowerCase();
@@ -31,15 +31,15 @@ export default function ToolsDirectory() {
           />
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden className="absolute left-3 top-1/2 -translate-y-1/2 text-mute"><circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2" /><path d="m20 20-3.5-3.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>
         </div>
-        <span className="text-sm text-mute">{results.length} tool{results.length !== 1 ? "s" : ""}</span>
+        <span role="status" aria-live="polite" className="text-sm text-mute">{results.length} tool{results.length !== 1 ? "s" : ""}</span>
       </div>
       <div className="flex flex-wrap gap-1.5">
-        <Link href="/tools" className={`chip !py-1.5 ${!cat ? "!border-transparent chip-brand" : "hover:border-brand"}`}>All</Link>
+        <button type="button" onClick={() => setCat("")} aria-pressed={!cat} className={`chip !py-1.5 ${!cat ? "!border-transparent chip-brand" : "hover:border-brand"}`}>All</button>
         {CATEGORIES.map((c) => (
-          <Link key={c.id} href={`/tools/category/${c.id}`} className="chip !py-1.5 hover:border-brand">
+          <button key={c.id} type="button" onClick={() => setCat(c.id)} aria-pressed={cat === c.id} className={`chip !py-1.5 hover:border-brand ${cat === c.id ? "chip-brand" : ""}`}>
             <span className="h-2 w-2 rounded-full" style={{ background: c.tone }} aria-hidden />
             {c.label}
-          </Link>
+          </button>
         ))}
       </div>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -58,7 +58,7 @@ export default function ToolsDirectory() {
         ))}
       </div>
       {!results.length && (
-        <div className="card p-10 text-center text-sm text-mute">No tools match “{q}”. Try “distance”, “radius”, “coordinates” or “map”.</div>
+        <div className="card p-10 text-center text-sm text-mute">No tools match “{q}”{cat ? " in this category" : ""}. Try another keyword or <button type="button" onClick={() => { setQ(""); setCat(""); }} className="font-semibold text-brand-strong underline">reset filters</button>.</div>
       )}
     </div>
   );
