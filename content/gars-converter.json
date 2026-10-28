@@ -7,17 +7,17 @@
   "gars grid"
  ],
  "title": "GARS Converter: Global Area Reference System",
- "description": "Convert between coordinates and GARS references with the GARS Converter — the coarse global grid used in aviation and planning contexts. Free.",
+ "description": "GARS structure explained; the coordinate workspace does not calculate GARS references.",
  "updated": "October 2026",
  "summary_sentence": "For example, GARS divides the world into 30-minute cells — each roughly 55 km tall — addressed by a compact designator, so a search area can be spoken over a radio without a single decimal.",
- "quick_answer": "The GARS Converter converts between map coordinates and Global Area Reference System references — the coarse global grid of 30-minute cells, subdivided into 15- and 5-minute areas, used in some aviation and planning contexts. Enter coordinates and read the cell designator — an area reference that survives radios and whiteboards.",
- "steps_intro": "Areas, not points — GARS names the neighbourhood any point lives in:",
+ "quick_answer": "GARS divides the world into area cells, but the workspace on this page currently does not encode or decode GARS. It converts several common coordinate formats instead.",
+ "steps_intro": "Use the coordinate workspace for supported global formats; use a validated GARS tool for GARS references.",
  "use_cases": [
   {
    "title": "Search and rescue planning",
    "body": [
     {
-     "t": "GARS was designed for area referencing in joint operations — cells let teams divide a search map by spoken designators. This converter bridges those designators and the coordinates your other tools use."
+     "t": "GARS cells can help teams divide an area for planning. This workspace does not translate GARS designators; use an authorised tool for operational work."
     }
    ]
   },
@@ -25,7 +25,7 @@
    "title": "Aviation and exercise documents",
    "body": [
     {
-     "t": "Planning papers referencing GARS cells become mappable once converted — the cell's corner coordinates feed the "
+     "t": "A GARS cell can be represented by bounds obtained from a validated GARS converter. Those bounds can be used in a "
     },
     {
      "t": "Coordinate Bounding Box Generator",
@@ -108,12 +108,12 @@
     "One digit (1–9, keypad layout)"
    ]
   ],
-  "note": "GARS is a US DoD standard (NGA) for area referencing. This converter supports interoperability and learning; operational use follows official publications and tools."
+  "note": "GARS is a US DoD standard for area referencing. This page explains the structure but does not calculate GARS references; operational use follows official publications and tools."
  },
  "faq": [
   [
    "Is this an official DoD tool?",
-   "No — it is an independent converter implementing the published GARS structure for planning support and interoperability. Official operations use authorised NGA tools and current publications."
+   "No. This page does not implement GARS conversion. Use authorised NGA tools and current publications for official operations."
   ],
   [
    "Which datum do these coordinate tools use?",
@@ -125,7 +125,7 @@
   ],
   [
    "Can I copy the result into GIS software?",
-   "Cell corners convert to coordinates and paste as extents; designators travel as labels. GIS layers for GARS exist in defence GIS ecosystems."
+   "The workspace does not calculate GARS cell corners or designators. Use a validated GARS tool to obtain data for GIS."
   ],
   [
    "GARS versus MGRS?",
@@ -137,11 +137,11 @@
   ],
   [
    "Polar handling?",
-   "Latitudinal bands cap at the poles in the standard's scheme; the converter follows the published banding rather than inventing polar cells."
+   "GARS has defined polar banding, but this workspace does not calculate GARS cells."
   ],
   [
    "Cell containing a coordinate — or all cells in an area?",
-   "Point-to-cell here; tiling an area with cells is a GIS operation the corners from this converter can seed."
+   "Neither is calculated here; use a validated GARS implementation."
   ],
   [
    "Historical references?",
@@ -149,7 +149,7 @@
   ],
   [
    "Can a designator be wrong but plausible?",
-   "Yes — neighbouring cells differ by one character. Cross-check by converting back to coordinates and glancing at the map, the grid-user's standing habit."
+   "Yes. Neighbouring cells may differ by one character; verify with a validated GARS converter and map."
   ],
   [
    "Radio pronunciation?",

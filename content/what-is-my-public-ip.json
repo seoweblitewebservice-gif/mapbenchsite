@@ -7,17 +7,17 @@
   "my ip address"
  ],
  "title": "What Is My Public IP? Your Address, Explained",
- "description": "Answer 'What Is My Public IP?' instantly — see the public address your connection presents to the internet, and what it does and does not reveal. Free.",
+ "description": "Find your public IP address using the lookup button, and learn what its approximate network location can and cannot tell you.",
  "updated": "October 2026",
  "summary_sentence": "For example, the address shown is the one every website you visit already sees — which is why checking it with a VPN on and off is the quickest privacy sanity check there is.",
- "quick_answer": "What Is My Public IP? is the question every connection answers silently — this page shows you the address your network presents to the internet — the one websites see when you connect. Read it here, with what it reveals — and what it never can (your name or street).",
- "steps_intro": "The address the internet sees when it looks at you:",
+ "quick_answer": "Choose Detect my public IP to ask the lookup provider which public address your connection uses for that request. The result can include approximate network and location details; it does not identify a precise physical address.",
+ "steps_intro": "Use the detection button to check the address seen by the lookup provider:",
  "use_cases": [
   {
    "title": "VPN sanity checks",
    "body": [
     {
-     "t": "VPN on: the page should show the exit city's address. VPN off: your ISP's. Any other result is a leak or a misconfiguration worth knowing about now — the general lookup is the "
+     "t": "Compare the reported address with your VPN enabled and disabled. A difference can be useful context, but an IP lookup alone cannot prove that all traffic or DNS requests use the VPN. For a specific address, use the "
     },
     {
      "t": "IP Address Lookup",
@@ -58,7 +58,7 @@
    "label": "Example · On and off the VPN",
    "body": [
     {
-     "t": "Two refreshes, two addresses, two geographies — the pair of results is the entire privacy model of a VPN in one gesture: sites see the exit, not you. If both refreshes agree while the VPN claims to run, something is leaking."
+     "t": "Run the lookup once with the VPN enabled and again with it disabled. Compare the reported addresses and network information. This checks only the connection to the lookup provider; it is not a complete VPN leak test."
     }
    ]
   },
@@ -100,7 +100,7 @@
     "IPv4: 4,294,967,296 total — the scarcity that NAT and IPv6 answer"
    ]
   ],
-  "note": "This page reflects the connection that loaded it: open it through a different network (phone off Wi-Fi, say) and you are a different address. There is no single 'your IP' independent of the path taken."
+  "note": "The result reflects the connection to the IP lookup provider. A different network, VPN route or address family may produce a different address."
  },
  "faq": [
   [
@@ -113,7 +113,7 @@
   ],
   [
    "Why does the page show IPv6 sometimes?",
-   "If your connection offers both families, browsers pick per site — the address displayed is the family that actually carried this page load. Dual-stack connections genuinely have two public identities."
+   "If your connection supports IPv4 and IPv6, the address shown depends on the connection used to reach the lookup provider. A single result does not test both address families."
   ],
   [
    "My IP says a different city than mine.",
@@ -133,7 +133,7 @@
   ],
   [
    "The number changed mid-day.",
-   "Lease renewal, router reboot or carrier renumbering — all mundane. If it changes only when you toggle the VPN, that is the VPN working; if it changes despite it, check for leaks."
+   "IP addresses can change for several reasons, including switching networks, VPN routes, or ISP reassignment. A change alone does not establish whether a VPN is leaking."
   ]
  ],
  "related_prose": [

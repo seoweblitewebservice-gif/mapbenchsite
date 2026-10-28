@@ -8,10 +8,10 @@
   "district by coordinates"
  ],
  "title": "District Finder by Coordinates",
- "description": "Find the district-level entry for any point with the District Finder by Coordinates — from the map's administrative record. Free.",
+ "description": "Explore district and fallback area fields for coordinates using reverse geocoding.",
  "updated": "October 2026",
- "summary_sentence": "For example, a point in a big city can sit in a school district, a council district and a postal district that share no borders at all — the finder reports the district layer its record holds, named as what it is.",
- "quick_answer": "The District Finder by Coordinates reports the district-level entry in a point's administrative record from OpenStreetMap's address data, together with the surrounding administrative levels. Enter coordinates or click the map and read the district that the mapped record assigns to that exact point.",
+ "summary_sentence": "The displayed field can fall back to a suburb or county and is not a verified school or administrative district.",
+ "quick_answer": "This tool reverse-geocodes the chosen point using Nominatim and displays available address fields from a nearby suitable mapped object. Fields may be missing or use broader fallbacks; the result is not a verified legal boundary or a guarantee of the nearest place.",
  "steps_intro": "'District' means five different boundaries on one street. Read the one the record holds:",
  "use_cases": [
   {
@@ -137,7 +137,7 @@
   ],
   [
    "Is this the school district?",
-   "Only if the record's district entry is the school one — which varies. For enrolment decisions, confirm with the school authority's own lookup; this finder is the fast first pass."
+   "Not necessarily. The highlighted value can be a city district, district, suburb or county from the reverse-geocoded address. Check the official school authority for school boundaries."
   ],
   [
    "What if no district is recorded?",

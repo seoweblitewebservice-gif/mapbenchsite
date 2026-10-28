@@ -7,10 +7,10 @@
   "nearest facility zones"
  ],
  "title": "Voronoi Map Generator: Nearest-Site Territories",
- "description": "Generate a Voronoi map from seed points with the Voronoi Map Generator — every place coloured by its nearest site. Free.",
+ "description": "Create bounded planar Voronoi cells from up to 30 map clicks and export GeoJSON.",
  "updated": "October 2026",
- "summary_sentence": "For example, with seeds in New York, Boston and Philadelphia, Hartford falls in Boston's cell — 92.4 miles from Boston against 100.4 from New York — so Boston is its nearest-site territory.",
- "quick_answer": "The Voronoi Map Generator divides a map into territories around seed points, where every spot belongs to the seed it is nearest to. Drop your sites and generate the cells: the cleanest possible picture of natural catchments, service territories and 'which location serves this address?' — answered by geometry alone.",
+ "summary_sentence": "The diagram uses longitude and latitude as flat degrees, not geographic or road distance.",
+ "quick_answer": "Click up to 30 seeds to generate cells clipped to a padded rectangle and download GeoJSON. Distances are calculated in longitude/latitude degrees, so cells are not reliable geodesic or drive-time catchments.",
  "steps_intro": "Every point on the map gets assigned to its nearest seed:",
  "use_cases": [
   {
@@ -108,36 +108,28 @@
     "Inefficiency — cities cluster on purpose"
    ]
   ],
-  "note": "Voronoi here is straight-line (Euclidean/great-circle) geometry. Travel-time territories bend along roads; use the Voronoi as the null hypothesis the road version must beat."
+  "note": "Examples are conceptual; the tool uses degree-space distances and a bounded rectangle, not guaranteed geographic nearest areas."
  },
  "faq": [
   [
-   "Which distance does it use — straight or road?",
-   "Straight-line proximity: each point joins its geometrically nearest seed. Road and drive-time territories are different, deliberately — compare both before signing a franchise map."
+   "Which distance does it use?",
+   "Euclidean distance in longitude/latitude degrees. This distorts real-world distances, including locally, and is not road or geodesic distance."
   ],
   [
-   "What happens with two seeds at the same spot?",
-   "They share one cell between them (an exact tie along no border at all). Nudge duplicates apart or merge them — the generator treats coincidence literally."
+   "What happens with duplicate seeds?",
+   "Coincident seeds can produce overlapping cells. Remove duplicates before use."
   ],
   [
-   "Can cells be clipped to a boundary?",
-   "Territory work usually clips cells to a coastline, county or trade area — the unclipped cell is the raw geometry; clipping is presentation with legal consequences, so it is a deliberate step."
+   "Can cells be clipped to a custom boundary?",
+   "No. Cells are clipped to an automatically padded bounding rectangle."
   ],
   [
-   "Weighted territories (bigger stores, bigger cells)?",
-   "Weighted Voronoi exists (additive and multiplicative forms) for exactly that. The standard map here is the unweighted classic — know which your decision needs."
+   "How many seeds?",
+   "Up to 30."
   ],
   [
-   "How many seeds is sensible?",
-   "From a handful to a few hundred reads clearly. Thousands become a texture, not a map — aggregate first, as the base FAQ's seed question suggests."
-  ],
-  [
-   "Exports for GIS?",
-   "The cells are ordinary polygons conceptually — export paths follow the creation tools' formats, and GIS Voronoi (Thiessen) tools reproduce the geometry natively for verification."
-  ],
-  [
-   "Is this how phone coverage works?",
-   "Conceptually, towers' nearest-areas sketch coverage — real coverage follows signal propagation, not pure distance. The map is the intuition, not the engineering."
+   "Can I export?",
+   "Yes, the generated polygons can be downloaded as GeoJSON. Verify results with an appropriate GIS method before making decisions."
   ]
  ],
  "related_prose": [

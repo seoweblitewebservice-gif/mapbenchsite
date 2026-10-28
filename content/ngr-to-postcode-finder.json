@@ -8,10 +8,10 @@
   "os grid to postcode"
  ],
  "title": "Grid Reference to Postcode Finder: NGR Lookup",
- "description": "Find the nearest UK postcode for an Ordnance Survey grid reference with the Grid Reference to Postcode Finder — via postcodes.io data. Free.",
+ "description": "Find postcodes near the approximate centre of a British grid square using postcodes.io.",
  "updated": "October 2026",
- "summary_sentence": "For example, a grid reference paced out on a paper map for a Cotswold barn converts to coordinates, and the finder returns the postcode the Royal Mail would recognise for that ground.",
- "quick_answer": "The Grid Reference to Postcode Finder takes an Ordnance Survey grid reference, converts it to coordinates, and returns the nearest UK postcode using postcodes.io data. Paste the reference and read the postcode — the bridge between the paper-map world of letters and digits and the delivery world of postal addresses.",
+ "summary_sentence": "The postcode search uses an approximate square centre; results depend on service coverage and the uncorrected datum difference.",
+ "quick_answer": "The tool takes the centre of a British National Grid square, converts it approximately to latitude and longitude without a datum shift, then asks postcodes.io for nearby postcodes. These are not necessarily addresses within the square.",
  "steps_intro": "Grid references name squares; postcodes name delivery points. Translate:",
  "use_cases": [
   {
@@ -67,7 +67,7 @@
    "label": "Example · The two-step, exposed",
    "body": [
     {
-     "t": "Grid references are OSGB36-flavoured; postcodes.io works in coordinates. The finder converts datum-aware — skipping that step is how naive tools land a field's postcode in the next parish."
+     "t": "The conversion does not apply a WGS84–OSGB36 datum shift. That approximation can change which postcodes appear near the search point."
     }
    ]
   }
@@ -81,23 +81,23 @@
   ],
   "rows": [
    [
-    "Point in a built-up area",
-    "The postcode of the nearest delivery point in the data"
+    "Grid square",
+    "The tool queries using its approximate centre"
    ],
    [
-    "Point in open country",
-    "The nearest postcode, possibly a lane or farm away"
+    "Nearby postcodes",
+    "A limited list returned by postcodes.io"
    ],
    [
-    "Point at a postcode boundary",
-    "The geographically nearest — boundaries are delivery rounds, not fences"
+    "Address at a specific property",
+    "Not established by the nearby search"
    ],
    [
-    "New or changed postcode",
-    "The dataset's current record; Royal Mail revisions flow in as data updates"
+    "Provider coverage",
+    "Current results depend on the postcode service"
    ]
   ],
-  "note": "Postcodes identify delivery points (typically around 15 addresses per full postcode, varying widely) — they were never designed as area codes, and this finder treats them accordingly."
+  "note": "The provider search is based on an approximate square centre; nearby postcodes are not necessarily addresses in the grid square."
  },
  "faq": [
   [
@@ -114,11 +114,11 @@
   ],
   [
    "How near is 'nearest'?",
-   "In towns, metres to a street away; in sparse country, it can be a kilometre or more — the finder reports the postcode, and the map shows you the gap."
+   "The provider returns nearby postcodes within its search coverage. The query point is an approximate square centre without a datum shift, so verify the result."
   ],
   [
    "Can I use the postcode for navigation?",
-   "Yes — that is its best use. For a formal address, pair it with the street and locality from the map record."
+   "A nearby postcode is not necessarily an address in the grid square. Verify it with authoritative address data before navigation or delivery."
   ],
   [
    "Business parks and large users?",

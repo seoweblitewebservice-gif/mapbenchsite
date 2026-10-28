@@ -7,10 +7,10 @@
   "free kml viewer"
  ],
  "title": "KML Viewer: Placemarks, Paths and Polygons",
- "description": "Open a KML or KMZ file and see its placemarks, paths and polygons in the browser with the KML Viewer — parsed locally, nothing uploaded. Free.",
+ "description": "View supported KML placemarks, paths and polygons locally. Extract KMZ archives before opening.",
  "updated": "October 2026",
- "summary_sentence": "For example, a council's KMZ of proposed cycle lanes unzips in the browser and draws every route and zone — no Google Earth install, no upload, just the map the file describes.",
- "quick_answer": "The KML Viewer draws a KML or KMZ file's placemarks, paths and polygons on a map, entirely in your browser. Drop the file and inspect what it contains — geometry, names and structure — before it goes into a GIS, a presentation or the ground.",
+ "summary_sentence": "Upload a KML file to inspect supported geometry; KMZ archives must be extracted first.",
+ "quick_answer": "The viewer parses supported KML placemarks, points, LineStrings and polygons locally. KMZ archives, GroundOverlay images and KML styles are not supported; extract the KML file first.",
  "steps_intro": "KML files promise maps. This one shows the map:",
  "use_cases": [
   {
@@ -66,54 +66,50 @@
    "label": "Example · KMZ is a zip, not a mystery",
    "body": [
     {
-     "t": "A KMZ is KML plus its assets in a zip archive (doc.kml inside). The viewer opens the package directly; counters that ask for 'the KML' mean the doc.kml within."
+     "t": "KMZ is a ZIP archive. Extract its KML file first; the viewer does not open KMZ directly or render bundled images."
     }
    ]
   }
  ],
  "popular_table": {
-  "title": "What the viewer renders",
-  "intro": "KML content, as drawn.",
+  "title": "Supported KML content",
+  "intro": "The viewer uses default map styling.",
   "columns": [
    "Content",
-   "Rendered as"
+   "Support"
   ],
   "rows": [
    [
-    "Placemark + Point",
-    "A pin with its name"
+    "Point, LineString, Polygon in Placemark",
+    "Supported subset"
    ],
    [
-    "LineString",
-    "A path polyline"
+    "MultiGeometry",
+    "Supported geometries are displayed"
    ],
    [
-    "Polygon (outer + inner rings)",
-    "A filled area, holes honoured"
+    "KMZ archive",
+    "Extract KML first"
    ],
    [
-    "GroundOverlay",
-    "The image draped on its LatLonBox"
-   ],
-   [
-    "Folders",
-    "Organisation — contents drawn, structure respected"
+    "GroundOverlay, styles, NetworkLink",
+    "Not rendered or fetched"
    ]
   ],
-  "note": "Advanced Earth features (3D Models, photo tours, gx:Tracks) are simplified or skipped by a 2D web viewer — stated plainly so their absence is expected, not alarming."
+  "note": "Parsing happens locally. Map tile requests can reveal the viewed map area; exported files may lose data."
  },
  "faq": [
   [
    "Does it open KMZ directly?",
-   "Yes — the viewer unpacks the archive in the browser and draws the doc.kml inside, with its bundled icons and images where the file provides them."
+   "No. Extract the .kml file from the KMZ archive and open the KML."
   ],
   [
    "My polygons have no fill colour.",
-   "KML styling lives in <Style> elements; unstyled geometry draws with defaults. Missing styles are a file property, not a viewer failure."
+   "The viewer applies default styles; it does not reproduce KML Style definitions."
   ],
   [
    "Labels missing on placemarks?",
-   "Labels come from each Placemark's <name>. The Named Placemark Counter audits exactly that coverage."
+   "Names appear in the feature list and properties popup, not as permanent map labels."
   ],
   [
    "NetworkLinks?",
@@ -129,7 +125,7 @@
   ],
   [
    "Share the view?",
-   "Screenshot it — the picture is the portable artefact; the file remains the data of record."
+   "You can export converted data or take a screenshot, but conversion may lose styles and other metadata. Keep the original."
   ]
  ],
  "related_prose": [

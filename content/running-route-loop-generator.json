@@ -8,17 +8,17 @@
   "bike loop generator"
  ],
  "title": "Running Route Loop Generator: Circular Routes",
- "description": "Generate a loop route of your target distance from any start point with the Running Route Loop Generator — real streets, sampled climb. Free.",
+ "description": "Generate a suggested walking or cycling loop from a chosen start. Routing and elevation depend on external services; check the result before use.",
  "updated": "October 2026",
- "summary_sentence": "For example, set a 10 km target from your front door and get a loop whose real, routed distance and climb are reported — not the same out-and-back you have run forty times.",
- "quick_answer": "The Running Route Loop Generator builds a circular route on real streets and paths from your start point, aiming at the target distance you set, and reports the loop's actual routed distance with its elevation gain sampled along the way. Set the start, choose the length, and run somewhere new.",
+ "summary_sentence": "Choose a start and a target between 1 and 30 miles; the generated loop may be substantially longer or shorter than the target.",
+ "quick_answer": "The generator attempts a walking or cycling loop from your chosen start through four surrounding points, then reports the routed length and sampled elevation when available. If routing fails, it displays a straight-line fallback, not a usable road or path route.",
  "steps_intro": "Variety is a training input. Generate a loop and let the streets surprise you safely:",
  "use_cases": [
   {
    "title": "Breaking the out-and-back rut",
    "body": [
     {
-     "t": "Loops see more world per mile. Generate three candidates and the week's long run chooses itself — one-way routes belong to the "
+     "t": "Generate a suggested loop for variety. The same settings produce the same candidate; point-to-point routes belong to the "
     },
     {
      "t": "Running Route Planner",
@@ -41,7 +41,7 @@
    "title": "Distance-target sessions",
    "body": [
     {
-     "t": "The plan says 15 km. A loop that measures 15 km (checked, not hoped) makes the session honest — pace it with the "
+     "t": "Choose a target distance and check the actual reported length; the route is not guaranteed to match it. Pace it with the "
     },
     {
      "t": "Pace to Speed Calculator",
@@ -56,7 +56,7 @@
    "title": "Cycling loops too",
    "body": [
     {
-     "t": "Set run or cycle and the loop builds on the right network — a 40 km Sunday loop is the same request at a different scale."
+     "t": "Choose walking or cycling routing for a suggested loop. The target slider covers 1 to 30 miles and actual distance can differ."
     }
    ]
   }
@@ -66,7 +66,7 @@
    "label": "Example · The honest target",
    "body": [
     {
-     "t": "Street networks rarely allow exactly 10.00 km. The generator aims at the target and reports the loop it actually built — 9.7 or 10.4 km — so your log records the truth."
+     "t": "Street networks need not produce the target distance. Check the reported length and whether the result is a routed loop or a straight-line fallback."
     }
    ]
   },
@@ -74,14 +74,14 @@
    "label": "Example · Climb as a dial",
    "body": [
     {
-     "t": "Generate two loops of the same length in a hilly town and their sampled climbs differ wildly. Choose flat for the easy day, hills for the session — the numbers make the choice."
+     "t": "Sampled elevation can help indicate the climb on the proposed loop, but sampling can miss changes between points and the service may be unavailable."
     }
    ]
   }
  ],
  "popular_table": {
   "title": "Loop targets and their sessions",
-  "intro": "Common target distances and the training they usually serve — the generator builds any of them from your door.",
+  "intro": "Illustrative session distances. The target input ranges from 1 to 30 miles; actual routed length can differ.",
   "columns": [
    "Target",
    "Session it serves",
@@ -119,7 +119,7 @@
     "Streets and lanes at bike scale"
    ]
   ],
-  "note": "Generated loops follow the street and path network the data knows; a loop is only as explorable as the map is complete."
+  "note": "When routing fails, a straight-line fallback is shown instead of a navigable path. Check local access and conditions."
  },
  "faq": [
   [
@@ -128,7 +128,7 @@
   ],
   [
    "How is the loop built?",
-   "From your start point, the generator shapes a circuit over the local street and path network toward the target length, then routes it properly and samples its climb."
+   "The tool routes from the selected start through four points placed around it and back to the start. It samples elevation when available. If routing fails, it shows a straight-line fallback."
   ],
   [
    "Does the route include live traffic?",
@@ -136,7 +136,7 @@
   ],
   [
    "Why is road distance longer than straight-line?",
-   "A loop's distance is the streets it follows — the only distance your legs will meet. The generator reports that figure."
+   "A routed loop follows the available network. If routing fails, the displayed fallback uses straight segments instead and should not be treated as a usable trail."
   ],
   [
    "Can route results change over time?",
@@ -148,7 +148,7 @@
   ],
   [
    "Run or cycle — does it matter?",
-   "Yes: the networks differ (paths a bike cannot use, roads a runner should not). Set the mode and the loop respects it."
+   "The chosen activity requests a walking or cycling route. If routing fails, the tool shows a straight-line fallback rather than a navigable path. Check access and conditions locally."
   ],
   [
    "The loop crosses a river twice — intended?",
@@ -156,11 +156,11 @@
   ],
   [
    "Can I ask for a hillier loop?",
-   "Generate a few and compare their sampled climbs — selection is the current dial for hilliness."
+   "There is no hilliness control or alternative generator. Sampled climb is shown when elevation data is available."
   ],
   [
    "Loops for a pram or wheelchair?",
-   "Stick to the paved network by choosing city starts; the surface finder can audit a generated loop before little wheels commit."
+   "The tool does not verify accessibility, pavement, gradients, crossings or barriers. Consult reliable local accessibility information before travel."
   ]
  ],
  "related_prose": [

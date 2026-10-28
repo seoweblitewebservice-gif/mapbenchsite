@@ -8,10 +8,10 @@
   "jpeg exif map route"
  ],
  "title": "Photo to Route Mapper: EXIF Photos to a Route",
- "description": "Turn geotagged photos into a route on a map with the Photo to Route Mapper — JPEG GPS tags read locally, joined in time order. Free.",
+ "description": "Map geotagged JPEG photo locations, sorted by available EXIF or file modification time.",
  "updated": "October 2026",
- "summary_sentence": "For example, a day's 34 geotagged photos from Keswick to Catbells and back become a mapped route — the summit pin sitting 4.18 km straight-line from the first frame at the car park, the path between them drawn by the photos themselves.",
- "quick_answer": "The Photo to Route Mapper reads the GPS tags inside your JPEG photos — locally, never uploaded — and joins the pins in time order into the route you actually travelled. Drop the day's photos and see the itinerary they secretly recorded, ready to download as GPX.",
+ "summary_sentence": "Photo points are connected with straight lines; the result is not a recorded or road-snapped journey.",
+ "quick_answer": "This tool reads supported JPEG EXIF GPS data locally, orders photos by EXIF time or file modification time, and connects points with straight lines. The route is an approximation, not the actual path travelled; map tile requests can reveal the viewed area.",
  "steps_intro": "Your camera roll kept a tracklog. Read it back:",
  "use_cases": [
   {
@@ -81,20 +81,20 @@
   ],
   "rows": [
    [
-    "GPSLatitude / GPSLongitude (+ refs)",
-    "The pin"
+    "GPS latitude / longitude",
+    "The photo pin"
    ],
    [
-    "DateTimeOriginal",
-    "The sequence order"
+    "EXIF date or file modification date",
+    "Ordering; EXIF time has no timezone correction"
    ],
    [
-    "GPSAltitude",
-    "Shown where present — context, not route geometry"
+    "GPS altitude",
+    "Not shown"
    ],
    [
-    "No GPS fields",
-    "The photo is skipped, and reported as skipped"
+    "Missing GPS",
+    "Photo skipped"
    ]
   ],
   "note": "Only JPEGs with intact EXIF GPS are placed. Screenshots, most messaging-app downloads and 'optimised' exports have tags stripped by other platforms before they reach you."
@@ -106,15 +106,15 @@
   ],
   [
    "My photos show as skipped.",
-   "Their GPS tags were stripped or never recorded — location services off, or the images passed through an app that removes EXIF. Originals from the device keep tags; copies often do not."
+   "Files may lack supported EXIF GPS fields or be unreadable by this parser. Check the originals and metadata."
   ],
   [
    "Time order or file order?",
-   "EXIF timestamps order the route — the journey's actual chronology, not the alphabet of filenames."
+   "EXIF time is used when present, otherwise file modification time. The parser treats EXIF time as local browser time without timezone correction; order may be wrong."
   ],
   [
    "How accurate are the pins?",
-   "Phone GPS accuracy: typically 3–10 m outdoors. Good enough for the route's shape; not a survey."
+   "Accuracy varies with device, conditions and the recorded metadata. Do not treat photo pins as surveyed positions."
   ],
   [
    "Does it draw the roads we drove?",
@@ -122,11 +122,11 @@
   ],
   [
    "What GPX does the download contain?",
-   "Waypoints for each placed photo and a track through them in time order — the file your other tools in this family can then measure."
+   "It includes waypoints and a straight-line track. Waypoint names and valid times are included; trackpoint times and original photo metadata are not preserved."
   ],
   [
    "Privacy — faces and number plates?",
-   "The mapper reads headers, not image content; the photos never leave your browser, and the exported route contains positions and times only."
+   "The photos are read locally, but map tiles can reveal the viewed area to the tile provider. Exports contain coordinates, photo names and timestamps; review before sharing."
   ]
  ],
  "related_prose": [

@@ -8,10 +8,10 @@
   "click for elevation anywhere"
  ],
  "title": "World Elevation Atlas: Sample Any Point on Earth",
- "description": "Sample a 7×7 grid of real elevations around any point with the World Elevation Atlas — from Everest's 8,849 m to the Dead Sea's shore. Free.",
+ "description": "Explore a 7×7 sample of modelled elevations around a point, not a survey.",
  "updated": "October 2026",
- "summary_sentence": "For example, the atlas's ceiling is Everest at 8,849 metres (29,032 ft) and its floor is the Dead Sea shore at roughly −430 metres (−1,411 ft) — every sampled point on Earth lives between those two published extremes.",
- "quick_answer": "The World Elevation Atlas samples a 7×7 grid of real elevations around any point on Earth, so you can read a place's height pattern rather than a single number. Set a centre, choose an area size, and read forty-nine elevations at once — the neighbourhood's relief in one view.",
+ "summary_sentence": "The displayed grid summarizes sampled model estimates, not a complete terrain survey.",
+ "quick_answer": "This tool requests 49 elevation samples from Open-Meteo, colors cells by their centre samples, and reports sample minimum, maximum, mean and relief. It cannot establish the true highest or lowest ground in the whole area.",
  "steps_intro": "One point's elevation is a fact; forty-nine are a landscape:",
  "use_cases": [
   {
@@ -67,7 +67,7 @@
    "label": "Example · Below sea level, honestly",
    "body": [
     {
-     "t": "Sample the Dead Sea shore and the grid returns negative elevations around −430 m — land below the ocean's level, protected by geography. Death Valley's Badwater Basin reads about −86 m on the same scale."
+     "t": "A model sample can be below sea level, but a sampled cell need not reproduce an exact shoreline or basin elevation. Use authoritative surveys for precise measurements."
     }
    ]
   }
@@ -105,7 +105,7 @@
     "≈−430 m (−1,411 ft)"
    ]
   ],
-  "note": "Grid values come from global terrain-model sampling (via the elevation API), which smooths sharp peaks and narrow ridges — a sampled Everest cell can read lower than the surveyed summit. Published point surveys outrank grid samples at famous points."
+  "note": "The tool reports modelled sample values; point surveys can differ. Do not treat the sampled range as the entire area’s true range."
  },
  "faq": [
   [

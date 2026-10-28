@@ -8,10 +8,10 @@
   "which municipality am i in"
  ],
  "title": "Municipality Finder by Coordinates",
- "description": "Find the municipality or local government area for exact coordinates with the Municipality Finder by Coordinates — full admin breakdown. Free.",
+ "description": "Explore municipality or settlement fields returned for coordinates; not a legal boundary lookup.",
  "updated": "October 2026",
- "summary_sentence": "For example, a point just outside a city's famous boundary can belong to a small municipality nobody mentions — the finder names it, because the point does not care about fame.",
- "quick_answer": "The Municipality Finder by Coordinates reads the administrative record for an exact point from OpenStreetMap's address data and reports its municipality or local government area, with the full breakdown around it. Enter coordinates or click the map and read which municipality governs that spot.",
+ "summary_sentence": "Municipality, city or town fields may be returned, but their presence does not establish which municipality legally contains the point.",
+ "quick_answer": "This tool reverse-geocodes the chosen point using Nominatim and displays available address fields from a nearby suitable mapped object. Fields may be missing or use broader fallbacks; the result is not a verified legal boundary or a guarantee of the nearest place.",
  "steps_intro": "Municipality is the layer that empties the bins and paves the street. Name it for any point:",
  "use_cases": [
   {
@@ -140,7 +140,7 @@
   ],
   [
    "Is the answer legally definitive?",
-   "It is the map data's record — excellent for orientation and first-pass decisions; legal questions deserve the authority's own register."
+   "No. This is a reverse-geocoded address result, not a legal boundary determination. Consult the responsible authority."
   ],
   [
    "Unincorporated areas?",

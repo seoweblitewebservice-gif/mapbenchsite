@@ -8,8 +8,8 @@
 // as if they were on the Airy ellipsoid, so converting a WGS84 point with
 // these formulae alone can differ from a true OSGB36 position by up to
 // about 100 m. That is fine for finding places, not for surveying.
-// Postcode lookups (below) are different: postcodes.io returns the official
-// Ordnance Survey eastings/northings, so grid refs built from those are exact.
+// Postcode lookups may include National Grid eastings/northings from postcodes.io.
+// These are representative postcode coordinates, not surveyed address positions.
 
 import { toDeg, toRad, type LatLng } from "@/lib/geo";
 
@@ -189,6 +189,7 @@ export function gridRefToEN(ref: string): { easting: number; northing: number } 
     easting += parseInt(digitsStr.slice(0, perAxis), 10) * factor;
     northing += parseInt(digitsStr.slice(perAxis), 10) * factor;
   }
+  if (easting >= 700000 || northing >= 1300000) return null;
   return { easting, northing };
 }
 
@@ -202,17 +203,24 @@ export interface UkPostcode {
   northing: number;
   district: string;
   region: string;
+  country: string;
+}
+
+function numberOrNaN(value: unknown): number {
+  if (value === null || value === undefined || value === "") return NaN;
+  return Number(value);
 }
 
 function mapPostcode(r: any): UkPostcode {
   return {
     postcode: String(r?.postcode ?? ""),
-    lat: Number(r?.latitude),
-    lng: Number(r?.longitude),
-    easting: Number(r?.eastings),
-    northing: Number(r?.northings),
+    lat: numberOrNaN(r?.latitude),
+    lng: numberOrNaN(r?.longitude),
+    easting: numberOrNaN(r?.eastings),
+    northing: numberOrNaN(r?.northings),
     district: String(r?.admin_district ?? ""),
     region: String(r?.region ?? ""),
+    country: String(r?.country ?? ""),
   };
 }
 

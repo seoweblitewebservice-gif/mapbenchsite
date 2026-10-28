@@ -8,10 +8,10 @@
   "find country by gps"
  ],
  "title": "Country from Coordinates Finder",
- "description": "Get the country containing a bare coordinate pair with the Country from Coordinates Finder — boundary data, honest about water and borders. Free.",
+ "description": "Look up a country field returned by reverse geocoding; not an authoritative boundary determination.",
  "updated": "October 2026",
- "summary_sentence": "For example, 40.7580, −73.9855 answers 'United States' from boundary data alone — while a point a mile offshore answers with the honest emptiness of open water.",
- "quick_answer": "The Country from Coordinates Finder gives a quick, unambiguous answer for a bare coordinate pair: the country containing the point, taken from OpenStreetMap's address record. Paste the pair and read the country — including an honest open-water result for ocean points instead of a borrowed nearest nation.",
+ "summary_sentence": "Water, borders and disputed locations need authoritative sources; a reverse-geocoding result is not a legal boundary test.",
+ "quick_answer": "This tool reverse-geocodes the chosen point using Nominatim and displays available address fields from a nearby suitable mapped object. Fields may be missing or use broader fallbacks; the result is not a verified legal boundary or a guarantee of the nearest place.",
  "steps_intro": "Two numbers in, one country out — with the edges handled honestly:",
  "use_cases": [
   {
@@ -102,7 +102,7 @@
  "faq": [
   [
    "What about points at sea?",
-   "Open-ocean points return an honest empty result ('open water' style), not the nearest country. Near coasts, the record follows the boundary data's shoreline treatment."
+   "A water point may have no result or a nearby mapped result. This tool does not establish maritime jurisdiction."
   ],
   [
    "Are disputed borders handled?",

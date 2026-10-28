@@ -8,24 +8,17 @@
   "footpath route postcodes"
  ],
  "title": "UK Postcode Walking Route Planner",
- "description": "Plan a walking route between two UK postcodes with the UK Postcode Walking Route Planner — footpath routing, distance and time. Free.",
+ "description": "Request a walking route between two UK postcode representative locations; verify access and conditions locally.",
  "updated": "October 2026",
- "summary_sentence": "For example, two London postcodes a mile apart as the crow flies can be a 1.4-mile walk once the Thames has chosen which bridge you will use.",
- "quick_answer": "The UK Postcode Walking Route Planner geocodes two UK postcodes and routes between them on footpaths and streets, with the walking distance and time. Type the start and destination postcodes, press plan, and follow the route on the map — the walk between any two British addresses, planned properly.",
+ "summary_sentence": "A postcode route starts and ends at representative provider locations, not necessarily the desired doorsteps.",
+ "quick_answer": "The tool resolves two postcodes via postcodes.io and requests a pedestrian route from Valhalla. Postcode locations are representative, route data can be incomplete, and a route may be unavailable or unsuitable.",
  "steps_intro": "Britain runs on postcodes; walks should too. Two codes, one route:",
  "use_cases": [
   {
    "title": "Everyday journeys on foot",
    "body": [
     {
-     "t": "Station to office, home to school: the walkable route with an honest time replaces the guessed one. General walking routes beyond postcodes live in the "
-    },
-    {
-     "t": "Walking Route Planner",
-     "l": "/tools/walking-route-planner"
-    },
-    {
-     "t": "."
+     "t": "Request an initial walking route, then check entrances and current access."
     }
    ]
   },
@@ -33,7 +26,7 @@
    "title": "Property and area research",
    "body": [
     {
-     "t": "“Ten minutes from the station” is a claim this page verifies — in routed minutes, not estate-agent minutes."
+     "t": "A routed estimate between postcode points cannot verify an estate-agent claim for a particular property."
     }
    ]
   },
@@ -41,7 +34,7 @@
    "title": "Health walks with known doses",
    "body": [
     {
-     "t": "A prescribed 30-minute walk needs a route whose time is known before the door closes behind you."
+     "t": "The reported time is an estimate, not a personalised or guaranteed exercise duration."
     }
    ]
   },
@@ -49,7 +42,7 @@
    "title": "Visitors in British cities",
    "body": [
     {
-     "t": "Hotels give postcodes; walks start from them. The visitor's two codes become a route without local knowledge."
+     "t": "Visitors can request a route between two postcode points and confirm the actual start, end and access locally."
     }
    ]
   }
@@ -67,52 +60,42 @@
    "label": "Example · Postcode precision",
    "body": [
     {
-     "t": "A full UK postcode covers a handful of addresses on average, so the start point is usefully exact — the route begins at a real doorstep, not a district's middle."
+     "t": "The route uses representative postcode coordinates returned by the provider. They need not identify the desired front doors."
     }
    ]
   }
  ],
  "popular_table": {
-  "title": "Walking times between postcodes",
-  "intro": "Orientation: routed walks run longer than crow distance, and time follows the pedestrian network. Your two codes give the real figures.",
+  "title": "What affects a walking estimate",
+  "intro": "The result is a route-service estimate between representative postcode locations.",
   "columns": [
-   "Crow distance",
-   "Typical routed walk",
-   "At 3 mph"
+   "Factor",
+   "Limitation"
   ],
   "rows": [
    [
-    "0.5 mi",
-    "0.6–0.8 mi",
-    "12–16 min"
+    "Postcode points",
+    "May not match the desired entrances"
    ],
    [
-    "1.0 mi",
-    "1.2–1.5 mi",
-    "24–30 min"
+    "Paths and access",
+    "Map data may be incomplete or outdated"
    ],
    [
-    "2.0 mi",
-    "2.4–3.0 mi",
-    "48–60 min"
+    "Walking time",
+    "A router estimate, not a personal guarantee"
    ],
    [
-    "3.5 mi",
-    "4.2–5.2 mi",
-    "1 h 24 m – 1 h 44 m"
-   ],
-   [
-    "5.0 mi",
-    "6.0–7.5 mi",
-    "2 h – 2 h 30 m"
+    "Live closures",
+    "Check local signs and notices"
    ]
   ],
-  "note": "Ranges are reading guidance for the planner's output, not measurements of your postcodes — bridges, cuttings and estates shape every real pair differently."
+  "note": "Verify access, weather and current conditions before setting off."
  },
  "faq": [
   [
    "Does the route use footpaths?",
-   "Yes — the pedestrian network: footpaths, streets and paths as the open data records them, which in Britain is a rich record."
+   "It requests pedestrian routing on mapped paths and streets. Access, closures and completeness are not guaranteed; check official local information."
   ],
   [
    "Is the time realistic?",
@@ -124,7 +107,7 @@
   ],
   [
    "Why is road distance longer than straight-line?",
-   "Footpaths wind, bridges detour, estates gate. The planner's distance is the walkable one — the only one your feet will meet."
+   "A route may detour around barriers, but this tool’s result is only a routing estimate between representative postcode points. Check access and conditions locally."
   ],
   [
    "Can route results change over time?",
@@ -132,7 +115,7 @@
   ],
   [
    "Partial postcodes?",
-   "Full postcodes pinpoint best. A district code (SW1A) resolves to its middle — fine for area research, blunt for doorsteps."
+   "The postcode lookup expects a postcode resolved by postcodes.io. Partial district codes are not guaranteed to resolve."
   ],
   [
    "Outside the UK?",
@@ -144,7 +127,7 @@
   ],
   [
    "Walking time feels optimistic.",
-   "It assumes a steady adult pace on clear paths. Your Walking Pace figure, once measured, replaces the assumption."
+   "The displayed time is the router’s estimate. This workspace does not let you replace it with your own pace; allow for terrain, breaks and conditions."
   ],
   [
    "Can I plan from a postcode to a place?",

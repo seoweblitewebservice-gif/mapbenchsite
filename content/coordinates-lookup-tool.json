@@ -8,24 +8,17 @@
   "look up latitude longitude"
  ],
  "title": "Coordinates Lookup Tool: Map, Record and Facts",
- "description": "Look up a coordinate pair fully with the Coordinates Lookup Tool — map position, administrative record, antipode heading and equator distance. Free.",
+ "description": "Look up a coordinate on a map and read available Nominatim address fields.",
  "updated": "October 2026",
- "summary_sentence": "For example, one paste of 40.7580, −73.9855 returns the map pin, the address record, the distance to the equator (about 4,514 km of latitude) and the antipode heading — the whole dossier on two numbers.",
- "quick_answer": "The Coordinates Lookup Tool does the whole job for a coordinate pair: it shows where the point is on the map, reads its administrative record, and derives facts like the antipode heading and equator distance. Paste the coordinates — or click instead — and read the point's complete dossier.",
- "steps_intro": "One lookup, the full dossier:",
+ "summary_sentence": "Enter decimal latitude and longitude in separate fields or click the map to look up nearby mapped address information.",
+ "quick_answer": "This workspace plots a selected point and requests available address fields from Nominatim. It does not calculate an antipode, equator distance or derived bearings.",
+ "steps_intro": "Enter decimal coordinates, search a place or click the map:",
  "use_cases": [
   {
    "title": "Mystery coordinate triage",
    "body": [
     {
-     "t": "A pair arrives from a log, a photo, a colleague. The dossier answers what/where/whose in one paste — deeper fields live in the "
-    },
-    {
-     "t": "Reverse Geocoder",
-     "l": "/tools/reverse-geocoder"
-    },
-    {
-     "t": "."
+     "t": "Inspect available address fields for a coordinate from a log or photograph; the result is not a verified boundary."
     }
    ]
   },
@@ -33,7 +26,7 @@
    "title": "Field verification",
    "body": [
     {
-     "t": "Standing at a claimed point? Compare the device's pair against the lookup's record before trusting either."
+     "t": "Compare a point and a reverse-geocoded name for initial orientation. Check authoritative data for important decisions."
     }
    ]
   },
@@ -41,7 +34,7 @@
    "title": "Report dressing",
    "body": [
     {
-     "t": "Coordinates in a report deserve their context — place record plus derived facts turns naked numbers into a defensible entry."
+     "t": "Use returned address fields as preliminary context, checking their source and date independently."
     }
    ]
   },
@@ -49,104 +42,80 @@
    "title": "Curiosity, fully served",
    "body": [
     {
-     "t": "Antipode headings and equator distances are the geography-party facts. This page computes them properly instead of letting you guess."
+     "t": "Use the related antipode and distance tools separately for calculations this lookup does not provide."
     }
    ]
   }
  ],
  "examples": [
   {
-   "label": "Example · Equator distance",
+   "label": "Example · Decimal coordinates",
    "body": [
     {
-     "t": "Times Square's latitude of 40.758° is about 4,514 km of meridian arc from the equator — computed from the latitude with WGS84's degree length (the WGS84 meridian arc for that latitude, as the tool's method states)."
+     "t": "Enter latitude and longitude in the separate input fields, then press Look up to request address information."
     }
    ]
   },
   {
-   "label": "Example · Antipode heading",
+   "label": "Example · Missing data",
    "body": [
     {
-     "t": "Dig straight through from Times Square and you surface in the Indian Ocean southwest of Australia — the lookup's antipode facts give the heading and the far point's coordinates for the map."
+     "t": "A point in a sparsely mapped area may have few or no address fields. This does not prove a jurisdiction or feature is absent."
     }
    ]
   }
  ],
  "popular_table": {
-  "title": "The dossier, field by field",
-  "intro": "What one lookup returns — and where each fact comes from.",
+  "title": "What the lookup returns",
+  "intro": "Inputs and outputs for one selected point.",
   "columns": [
    "Field",
-   "Source"
+   "Availability"
   ],
   "rows": [
    [
     "Map pin",
-    "The coordinates themselves, plotted"
+    "Chosen coordinates"
    ],
    [
-    "Administrative record",
-    "Open map data's address stack for the point"
+    "Address fields",
+    "As returned by Nominatim"
    ],
    [
-    "Equator distance",
-    "Computed from latitude (meridian arc)"
+    "Antipode or equator distance",
+    "Not calculated here"
    ],
    [
-    "Antipode",
-    "Computed — the point through the Earth's centre"
-   ],
-   [
-    "Derived bearings and distances",
-    "Great-circle arithmetic on the sphere"
+    "Legal boundary determination",
+    "Not provided"
    ]
   ],
-  "note": "Record fields are only as deep as the open data at that point — a rich dossier in mapped country, an honest sparse one at sea."
+  "note": "Nominatim resolves a nearby suitable mapped object; the result is not guaranteed to describe the exact point."
  },
  "faq": [
   [
-   "What do I get beyond the address?",
-   "The derived layer: antipode heading and point, equator distance and the map context — facts computed from the coordinates themselves, alongside the record's address fields."
+   "What does it show?",
+   "A map point and available reverse-geocoded address fields. It does not calculate antipodes or equator distance."
   ],
   [
    "Can I click instead of typing?",
-   "Yes — the map accepts clicks as happily as pastes; the dossier builds for the clicked point identically."
+   "Yes. Clicking the map looks up that point."
   ],
   [
-   "Which datum do these coordinate tools use?",
-   "WGS84 — paste GPS pairs as they come."
+   "Which coordinate format?",
+   "Enter decimal latitude and longitude in separate fields."
   ],
   [
-   "Do more decimal places always mean better accuracy?",
-   "The dossier's record fields saturate quickly (the city is the city at 3 decimals); derived facts keep the input's figures honestly."
+   "Can I copy fields?",
+   "Returned address fields have copy controls; the coordinates are displayed on the page."
   ],
   [
-   "Can I copy the result into GIS software?",
-   "Coordinates and fields both copy — the dossier is designed as the paste source for notes, reports and GIS attributes."
+   "Is the lookup private?",
+   "The selected coordinate is sent to Nominatim for reverse geocoding; a place search also uses an external geocoder. See the privacy page."
   ],
   [
-   "Ocean points?",
-   "The record thins to little or nothing, while derived facts (antipode, equator distance) still compute — the page shows which kind of answer each field is."
-  ],
-  [
-   "The record disagrees with my other app.",
-   "Different data vintages and providers. The lookup reports the open record; where it matters, the disagreement itself is the finding."
-  ],
-  [
-   "Batch lookups?",
-   "One pair at a time — the dossier is a per-point instrument. Lists belong to the Batch Geocoder."
-  ],
-  [
-   "Antipode on land?",
-   "Most antipodes are ocean (the planet is mostly water, and land antipodes are rare) — the lookup reports whichever yours is, land naming included where the record reaches."
-  ],
-  [
-   "Equator distance versus latitude degrees?",
-   "Same fact, two dresses: degrees for charts, kilometres for humans. The lookup gives the kilometre reading."
-  ],
-  [
-   "Is my lookup stored?",
-   "No — the pair is processed for the answer, not kept."
+   "Can I look up a batch?",
+   "This workspace handles one point at a time."
   ]
  ],
  "related_prose": [

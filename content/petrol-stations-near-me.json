@@ -9,8 +9,8 @@
  "title": "Petrol Stations Near Me: Fuel Stations Mapped",
  "description": "Find petrol stations near any place with Petrol Stations Near Me — stations mapped from open data, ranked by distance, prices honestly excluded. Free.",
  "updated": "October 2026",
- "summary_sentence": "For example, a driver at a quarter tank in unknown country gets the ranked stations in seconds — and gets them without a fake price column, because this page's intro says plainly that no free source publishes trustworthy live fuel prices.",
- "quick_answer": "Petrol Stations Near Me maps fuel stations recorded near a place or your location, ranked by distance. Search, press find, and choose from the map or ranked list. Prices are deliberately not shown — no free source publishes trustworthy live prices — so prices are left to the stations.",
+ "summary_sentence": "The tool lists nearby mapped fuel stations; it does not provide prices or live availability.",
+ "quick_answer": "The tool searches OpenStreetMap for mapped fuel station records around a chosen location, then sorts returned records by straight-line distance. It requests at most 200 records and displays up to 100, so it cannot guarantee the closest result or a complete list. Data, access and opening status can be incomplete or outdated.",
  "steps_intro": "Fuel first, brands second, prices at the pump where they belong:",
  "use_cases": [
   {
@@ -32,7 +32,7 @@
    "title": "Route fuel reconnaissance",
    "body": [
     {
-     "t": "Before the rural leg, know which villages have fuel at all. Absence on this map is route intelligence, not just a gap."
+     "t": "A mapped fuel station can be a starting point for planning, but absence from results does not establish that there is no fuel. Verify stations and opening hours directly."
     }
    ]
   },
@@ -40,7 +40,7 @@
    "title": "Comparing station density",
    "body": [
     {
-     "t": "Two candidate stops on the itinerary: the one with three stations has competition and a backup; the one-station town has neither."
+     "t": "Returned record counts can be capped and incomplete, so do not use them as a complete station census."
     }
    ]
   },
@@ -65,7 +65,7 @@
    "label": "Example · Why no prices is honesty",
    "body": [
     {
-     "t": "Fuel prices change daily and vary by forecourt; a scraped price column would be theatre. The stations are real and mapped — the price honesty is a feature this page advertises rather than hides."
+     "t": "The workspace does not display fuel prices. Confirm price, opening status and available fuel directly with the station."
     }
    ]
   },
@@ -79,48 +79,49 @@
   }
  ],
  "popular_table": {
-  "title": "Reading the station list",
-  "intro": "What the finder promises, and the one thing it refuses to fake.",
+  "title": "What the finder shows",
+  "intro": "Review the scope of the result before relying on it.",
   "columns": [
-   "Question",
-   "Answer"
+   "Result",
+   "Available here?",
+   "Limit"
   ],
   "rows": [
    [
-    "Stations shown",
-    "Those recorded in open map data near your point, nearest first"
+    "Mapped names and points",
+    "Yes, for returned records",
+    "Coverage and result caps apply"
    ],
    [
-    "Brands",
-    "All recorded networks and independents"
+    "Distance",
+    "Straight-line to returned point",
+    "Not road or walking distance"
    ],
    [
-    "Fuel prices",
-    "Not shown — no trustworthy free live source exists"
+    "Current access and opening status",
+    "No",
+    "Confirm with the operator"
    ],
    [
-    "Opening hours",
-    "Where recorded; motorway services usually longest"
-   ],
-   [
-    "Your location stored?",
-    "No — search use only"
+    "Full details and live availability",
+    "No",
+    "Consult an authoritative source"
    ]
   ],
-  "note": "Coverage follows mapper activity: dense in Europe and North America, thinner in deep-rural areas where the one station matters most — check the long gaps with the range tools before remote legs."
+  "note": "OpenStreetMap coverage and result limits can omit relevant places. Records may be outdated; confirm access, services and current conditions with an authoritative source."
  },
  "faq": [
   [
    "Why are there no fuel prices?",
-   "Because no free data source publishes trustworthy live prices, and an invented or stale price column would be worse than none. The page states this up front — stations and distances are facts; prices live at the pump and on the brands' own channels."
+   "This tool does not provide prices or live availability. Check current information with the station or a suitable price service."
   ],
   [
    "Which brands are included?",
-   "Every station the open record holds — majors, supermarkets and independents alike, ranked by distance rather than by network."
+   "The tool searches OSM fuel-station records, subject to coverage and result limits. It does not guarantee every brand or station is returned."
   ],
   [
    "Can I use the tool without sharing my precise location?",
-   "Yes — search a place name; location is optional."
+   "You can search for a place instead of using device location. The selected search centre is sent to OpenStreetMap-based services for the lookup."
   ],
   [
    "Why might a boundary or place name look different elsewhere?",
@@ -128,7 +129,7 @@
   ],
   [
    "Does MapBench store my browser location?",
-   "No."
+   "Device location is optional. The selected coordinates are sent to Overpass to search; consult the privacy page for provider and site details."
   ],
   [
    "The station closed last year.",
@@ -136,11 +137,11 @@
   ],
   [
    "Motorway services included?",
-   "Service-area stations are recorded like others and usually appear — the road context on the map shows which side and junction."
+   "Some stations may appear if tagged as fuel stations in OpenStreetMap, subject to coverage and caps. Confirm access and road direction separately."
   ],
   [
    "LPG or diesel specifics?",
-   "Where mappers recorded fuel types, the detail exists; coverage varies. The station's own signage is the final word."
+   "Fuel types are not shown. Confirm them directly with the station."
   ],
   [
    "Can it plan a whole route?",

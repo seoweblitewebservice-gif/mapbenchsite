@@ -9,8 +9,8 @@
  "title": "Mountain Peaks Near Me: Named Summits Nearby",
  "description": "Discover the named summits around a place with Mountain Peaks Near Me — recorded elevations where the map carries them. Free.",
  "updated": "October 2026",
- "summary_sentence": "For example, a valley town in the Lakes or the Alps sits inside a ring of named fells and peaks most visitors never learn the names of — this finder is the introduction.",
- "quick_answer": "Mountain Peaks Near Me searches a place or your location and lists the named summits recorded around it, each with its recorded elevation where OpenStreetMap carries one. Search the valley town or trailhead, press find, and browse the peaks by distance — the skyline around you, finally introduced by name.",
+ "summary_sentence": "Results are limited to returned OpenStreetMap records and may omit closer or unmapped places. Confirm details with an authoritative local source.",
+ "quick_answer": "The tool searches OpenStreetMap for mapped peak records around a chosen location, then sorts returned records by straight-line distance. It requests at most 200 records and displays up to 100, so it cannot guarantee the closest result or a complete list. Data, access and opening status can be incomplete or outdated.",
  "steps_intro": "Every skyline is a cast of characters. Get their names:",
  "use_cases": [
   {
@@ -72,36 +72,36 @@
   }
  ],
  "popular_table": {
-  "title": "Reading the peaks list",
-  "intro": "What the record knows about a summit, honestly graded.",
+  "title": "What the finder shows",
+  "intro": "Review the scope of the result before relying on it.",
   "columns": [
-   "Field",
-   "Coverage",
-   "Note"
+   "Result",
+   "Available here?",
+   "Limit"
   ],
   "rows": [
    [
-    "Peak name",
-    "Where mapped",
-    "Names can be local-language first"
-   ],
-   [
-    "Elevation",
-    "Often, not always",
-    "Survey-grade for famous tops; rounded for others"
+    "Mapped names and points",
+    "Yes, for returned records",
+    "Coverage and result caps apply"
    ],
    [
     "Distance",
-    "Computed for all",
-    "Straight-line from your point"
+    "Straight-line to returned point",
+    "Not road or walking distance"
    ],
    [
-    "Prominence and routes",
-    "Not in this list",
-    "The planner and guidebooks own those"
+    "Current access and opening status",
+    "No",
+    "Confirm with the operator"
+   ],
+   [
+    "Full details and live availability",
+    "No",
+    "Consult an authoritative source"
    ]
   ],
-  "note": "OpenStreetMap peak coverage follows mapper enthusiasm: dense in the Alps, Lakes, and US ranges with active communities; sparse where fewer walkers map."
+  "note": "OpenStreetMap coverage and result limits can omit relevant places. Records may be outdated; confirm access, services and current conditions with an authoritative source."
  },
  "faq": [
   [
@@ -114,7 +114,7 @@
   ],
   [
    "Can I use the tool without sharing my precise location?",
-   "Yes — search a town or trailhead instead."
+   "You can search for a place instead of using device location. The selected search centre is sent to OpenStreetMap-based services for the lookup."
   ],
   [
    "Why might a boundary or place name look different elsewhere?",
@@ -122,7 +122,7 @@
   ],
   [
    "Does MapBench store my browser location?",
-   "No."
+   "Device location is optional. The selected coordinates are sent to Overpass to search; consult the privacy page for provider and site details."
   ],
   [
    "What counts as a peak?",
@@ -134,7 +134,7 @@
   ],
   [
    "Highest peak near me?",
-   "Sort the list by the elevation column where present — with the caveat that an unrecorded giant can hide among the numberless."
+   "The list is sorted by straight-line distance, not elevation. Heights appear in names only when a numeric elevation is recorded; use an authoritative source for rankings."
   ],
   [
    "Peaks across a border?",
@@ -146,7 +146,7 @@
   ],
   [
    "Ski areas and lifts?",
-   "Peaks near ski country arrive with their summits; the resort layer is a different map. The elevation column still plans the day."
+   "The tool searches peak nodes, not ski areas or lifts."
   ]
  ],
  "related_prose": [

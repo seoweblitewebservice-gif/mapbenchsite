@@ -8,10 +8,10 @@
   "how far between postcodes"
  ],
  "title": "UK Postcode Distance Calculator",
- "description": "The UK Postcode Distance Calculator gives the straight-line distance between any two UK postcodes in km and miles, from postcodes.io data. Free.",
+ "description": "Estimate the spherical straight-line distance between two representative UK postcode locations.",
  "updated": "October 2026",
- "summary_sentence": "For example, SW1A 1AA in Westminster to M1 1AE in Manchester measures approx. 262.0 km (162.8 miles) in a straight line — the drive is longer, because the motorway network cannot follow the geometric minimum.",
- "quick_answer": "The UK Postcode Distance Calculator measures the straight-line distance between any two UK postcodes. Enter both postcodes and it looks up their coordinates from postcodes.io, applies the haversine formula, and shows the result in kilometres and miles — the fast way to compare two addresses anywhere in the UK.",
+ "summary_sentence": "The postcode coordinates represent locations, not necessarily individual doorsteps.",
+ "quick_answer": "The tool uses postcodes.io representative coordinates and calculates spherical great-circle distance, not address-to-address or driving distance. Coverage and input precision depend on the postcode service.",
  "steps_intro": "Two postcodes, one honest number — useful whenever a form, a quote or a territory decision depends on how far apart two UK addresses really are:",
  "use_cases": [
   {
@@ -33,7 +33,7 @@
    "title": "Engineer and carer coverage",
    "body": [
     {
-     "t": "Agencies matching staff to clients need to know which carer or engineer is genuinely nearest. Postcode-to-postcode distance beats guessing from town names, especially where two towns share a border."
+     "t": "Postcode distance can inform preliminary coverage comparisons, but it does not identify the nearest person by road or guarantee precise addresses."
     }
    ]
   },
@@ -59,7 +59,7 @@
    "label": "Example · London to Edinburgh",
    "body": [
     {
-     "t": "SW1A 1AA (Westminster) to EH1 1YZ (Edinburgh) computes to approx. 533.9 km (331.8 miles) in a straight line. The rail and road journeys are both longer — the number here is the geographic fact underneath them, and the right baseline for comparing the same trip against Glasgow or Cardiff."
+     "t": "The result is calculated from the representative coordinates returned for the two entered postcodes. Verify the locations and use routing for a road distance."
     }
    ]
   },
@@ -67,71 +67,37 @@
    "label": "Example · Edinburgh to Glasgow",
    "body": [
     {
-     "t": "Scotland's two cities are close enough that the method matters: EH1 1YZ to G1 1AA is approx. 66.8 km (41.5 miles) as the crow flies. Two postcodes in the same city can differ by several kilometres, which is why the calculator takes the full postcode rather than the district alone."
+     "t": "The result is calculated from the representative coordinates returned for the two entered postcodes. Verify the locations and use routing for a road distance."
     }
    ]
   }
  ],
  "popular_table": {
-  "title": "Popular UK postcode pairs",
-  "intro": "Straight-line distances between well-known UK postcodes, computed with this tool's method — coordinates from postcodes.io, haversine on the mean sphere — and rounded; treat as approx. planning figures, not road mileage.",
+  "title": "Understanding postcode distance",
+  "intro": "The value is a spherical estimate between provider-reported points.",
   "columns": [
-   "From",
-   "To",
-   "Kilometres",
-   "Miles"
+   "Question",
+   "Answer"
   ],
   "rows": [
    [
-    "SW1A 1AA (London)",
-    "M1 1AE (Manchester)",
-    "262.0",
-    "162.8"
+    "Input",
+    "Two postcodes resolved by postcodes.io"
    ],
    [
-    "SW1A 1AA (London)",
-    "EH1 1YZ (Edinburgh)",
-    "533.9",
-    "331.8"
+    "Distance",
+    "Great-circle estimate between representative points"
    ],
    [
-    "SW1A 1AA (London)",
-    "B1 1AA (Birmingham)",
-    "162.7",
-    "101.1"
+    "Road distance",
+    "Not calculated"
    ],
    [
-    "SW1A 1AA (London)",
-    "CF10 1AA (Cardiff)",
-    "210.3",
-    "130.7"
-   ],
-   [
-    "SW1A 1AA (London)",
-    "BT1 1AA (Belfast)",
-    "517.6",
-    "321.6"
-   ],
-   [
-    "M1 1AE (Manchester)",
-    "LS1 1AA (Leeds)",
-    "58.1",
-    "36.1"
-   ],
-   [
-    "EH1 1YZ (Edinburgh)",
-    "G1 1AA (Glasgow)",
-    "66.8",
-    "41.5"
-   ],
-   [
-    "B1 1AA (Birmingham)",
-    "L1 8JQ (Liverpool)",
-    "125.7",
-    "78.1"
+    "Actual address locations",
+    "Not guaranteed by a postcode"
    ]
   ],
-  "note": "Distances run between postcode centroids — the representative point postcodes.io publishes for each code. Two addresses sharing a postcode can still be a short walk apart."
+  "note": "The result depends on provider coverage and location accuracy."
  },
  "faq": [
   [
@@ -140,7 +106,7 @@
   ],
   [
    "Is this the driving distance?",
-   "No — it is the straight-line (great-circle) distance between the two postcode coordinates. Road distance is always longer because roads follow the network. Use this figure for consistent comparisons and charge bands, and a routing tool for the actual journey."
+   "No. It is a spherical great-circle estimate between representative postcode coordinates, not a road route."
   ],
   [
    "Where do the coordinates come from?",
@@ -148,7 +114,7 @@
   ],
   [
    "Does it work for Northern Ireland?",
-   "Yes — BT postcodes are part of the same postcodes.io dataset, so Belfast to London computes the same way as any mainland pair (approx. 517.6 km, 321.6 miles, in a straight line across the Irish Sea)."
+   "postcodes.io may resolve Northern Ireland postcodes. Availability depends on the provider, and results use representative locations."
   ],
   [
    "Why does my result differ from a mileage calculator?",
@@ -156,7 +122,7 @@
   ],
   [
    "How accurate is a postcode-to-postcode distance?",
-   "As accurate as the postcode centroids: for most urban codes that is within a few hundred metres of the address, and rural codes cover larger areas. It is a planning and comparison figure, not a surveyed measurement between two front doors."
+   "It is an estimate between provider-reported representative coordinates, not a measured distance between properties. Coverage, point accuracy and postcode extent vary."
   ],
   [
    "Can I compare many postcodes at once?",

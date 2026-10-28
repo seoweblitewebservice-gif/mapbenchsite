@@ -9,7 +9,7 @@
  "title": "GPX Viewer: See Tracks, Routes and Waypoints",
  "description": "Open a GPX file and see its tracks, routes and waypoints drawn in the browser with the GPX Viewer — parsed locally, never uploaded. Free.",
  "updated": "October 2026",
- "summary_sentence": "For example, dropping in a hiking club's GPX draws the loop, its named waypoints and the planned route in different colours — the fastest sanity check a downloaded trail file can get.",
+ "summary_sentence": "The viewer draws supported GPX tracks, routes and waypoints with default styles and shows approximate statistics.",
  "quick_answer": "The GPX Viewer draws a GPX file's tracks, routes and waypoints on a map, entirely in your browser. Drop the file and see what it actually contains — geometry, waypoint names and all — before trusting it in a device, a report or your boots.",
  "steps_intro": "Files lie by filename. The map shows the truth:",
  "use_cases": [
@@ -108,12 +108,12 @@
     "Where recording paused"
    ]
   ],
-  "note": "Elevation and timestamps are not drawn — they are read by the stats tools. The viewer owns geometry: shape first, numbers second."
+  "note": "The viewer also displays timestamp span and raw elevation statistics when available. GPX exports can omit timestamps and extensions."
  },
  "faq": [
   [
    "Does it show elevation profiles?",
-   "The viewer's job is the map shape. Elevation profiles and gain/loss live in the dedicated GPX elevation tools, reading the same file."
+   "Yes, when enough plotted line points have elevation. The profile is a simplified display and raw elevation can be noisy."
   ],
   [
    "The map is empty but the file has size.",
@@ -121,7 +121,7 @@
   ],
   [
    "Waypoint names show?",
-   "Yes — <name> text labels its pin, which is how trailhead and camp waypoints identify themselves."
+   "Names are shown in the feature list and properties popup, not as permanent labels on the map."
   ],
   [
    "Why does my track look angular?",
@@ -129,7 +129,7 @@
   ],
   [
    "Tracks in different colours?",
-   "Multiple tracks and segments are distinguished so multi-day files read as journeys, not spaghetti."
+   "No. The viewer uses the same default line style for tracks and routes."
   ],
   [
    "A file from a very old GPS?",

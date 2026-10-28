@@ -8,10 +8,10 @@
   "moon illumination calendar"
  ],
  "title": "Moon Phase Calendar Map: A Month of Moons",
- "description": "See a full month of moon phases and illumination day by day with the Moon Phase Calendar Map — plan dark nights and full-moon evenings ahead. Free.",
+ "description": "View approximate daily moon phases for a selected month using a mean-cycle model.",
  "updated": "October 2026",
- "summary_sentence": "For example, October 2026's grid runs from a waning start through the new moon near the 10th to a full moon on the 26th (model dates) — the whole month's night-light budget on one page.",
- "quick_answer": "The Moon Phase Calendar Map lays out a full month of moon phases day by day — each date's phase name and lit percentage on one calendar grid. Pick a month and read the pattern: where the dark weekends fall and when the full moon lands.",
+ "summary_sentence": "Phase labels and illumination are estimates at noon UTC and can differ from a precise local ephemeris.",
+ "quick_answer": "This calendar estimates phase names and illumination at noon UTC using a fixed mean synodic cycle. It is an approximation, not a precise ephemeris or a map of moon visibility.",
  "steps_intro": "A month of nights, visible at once:",
  "use_cases": [
   {
@@ -56,18 +56,18 @@
  ],
  "examples": [
   {
-   "label": "Example · Reading October 2026",
+   "label": "Example · Reading a day",
    "body": [
     {
-     "t": "The model month opens with a waning gibbous (the full was late September), thins to new around the 10th, waxes through first quarter near the 18th, and fills to full on the 26th — the grid shows why mid-month weekends are the dark ones."
+     "t": "Each calendar cell shows a phase label and estimated illumination at noon UTC. That instant may not correspond to your local evening."
     }
    ]
   },
   {
-   "label": "Example · The five-weekend gift",
+   "label": "Example · Planning",
    "body": [
     {
-     "t": "Some months fit two new moons or two full ones into their weekends; the second full in a calendar month is the famous blue moon. Only the grid view reveals which months are generous."
+     "t": "For precise phase instants or local moonrise, consult a reliable astronomical ephemeris or observatory."
     }
    ]
   }
@@ -97,12 +97,12 @@
     "Stretches under ~25% lit around new moon — the observing gold"
    ]
   ],
-  "note": "Phases are evaluated at noon UTC per date in the underlying model, so a milestone instant falling near midnight can label either adjacent date depending on your timezone — the astronomy is shared, the calendar is local."
+  "note": "The fixed mean-cycle model is approximate; phase dates and illumination can differ from a precise ephemeris."
  },
  "faq": [
   [
    "Why can the full-moon date differ from my wall calendar?",
-   "Calendars print the full instant's date in a chosen timezone from a precise ephemeris; this grid uses the mean cycle at noon UTC. A few hours of model difference near midnight flips the labelled date — the Moon itself is unbothered."
+   "The model uses a fixed mean cycle at noon UTC, rather than an exact lunar ephemeris. Both model error and time-zone differences can change a date."
   ],
   [
    "Some months have no full moon — really?",
@@ -110,7 +110,7 @@
   ],
   [
    "Does the grid work for past centuries?",
-   "It computes, with slowly growing model drift — fine for pattern and teaching, softer for sworn historical claims. Treat very old months as reconstructions."
+   "The year control supports 1950–2100. The mean-cycle approximation is not suitable as a precise historical ephemeris."
   ],
   [
    "Can I see illumination for a whole season?",

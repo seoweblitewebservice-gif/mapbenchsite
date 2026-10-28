@@ -10,15 +10,15 @@
  "title": "Libraries Near Me Map: Find a Public Library",
  "description": "Map the public libraries near any place with the Libraries Near Me Map — from open map records, nearest first. Free.",
  "updated": "October 2026",
- "summary_sentence": "For example, a small town's list often reveals a branch library two streets from the hotel that no travel guide mentioned — open map data is good at exactly this kind of local wealth.",
- "quick_answer": "The Libraries Near Me Map maps the library records OpenStreetMap holds around a place you search or your location, ranked nearest first. Search the place, press find, and pick a library from the list — the quietest useful answer in any new town, from Wi-Fi to story time, starts here.",
+ "summary_sentence": "Results are limited to returned OpenStreetMap records and may omit closer or unmapped places. Confirm details with an authoritative local source.",
+ "quick_answer": "The tool searches OpenStreetMap for mapped library records around a chosen location, then sorts returned records by straight-line distance. It requests at most 200 records and displays up to 100, so it cannot guarantee the closest result or a complete list. Data, access and opening status can be incomplete or outdated.",
  "steps_intro": "Every town's best free room, mapped. Find yours:",
  "use_cases": [
   {
    "title": "Working while travelling",
    "body": [
     {
-     "t": "Libraries are the original coworking spaces — desks, Wi-Fi, printing, no coffee purchase required. Travellers' secret, mapped."
+     "t": "A mapped library may have desks, Wi-Fi or printing, but the tool does not show or verify these services. Check the branch before visiting."
     }
    ]
   },
@@ -59,7 +59,7 @@
    "label": "Example · Branches and mains",
    "body": [
     {
-     "t": "Library systems run a main library and branches with different hours and collections. The list ranks all recorded branches by distance — nearest first, with the main often worth the extra mile."
+     "t": "Returned library-tagged records are sorted by straight-line distance, but result caps can omit branches and access is not checked."
     }
    ]
   },
@@ -73,54 +73,49 @@
   }
  ],
  "popular_table": {
-  "title": "Reading the library list",
-  "intro": "What the finder shows, and where the details live.",
+  "title": "What the finder shows",
+  "intro": "Review the scope of the result before relying on it.",
   "columns": [
-   "Question",
-   "Here",
-   "Authoritative source"
+   "Result",
+   "Available here?",
+   "Limit"
   ],
   "rows": [
    [
-    "Which libraries exist nearby",
-    "Listed, nearest first",
-    "The library system's own site"
+    "Mapped names and points",
+    "Yes, for returned records",
+    "Coverage and result caps apply"
    ],
    [
-    "Opening hours",
-    "Where recorded",
-    "Usually the branch page"
+    "Distance",
+    "Straight-line to returned point",
+    "Not road or walking distance"
    ],
    [
-    "Services (printing, rooms)",
-    "Where tagged",
-    "The branch page"
-   ],
-   [
-    "Membership rules",
-    "Not covered",
-    "The system's site"
-   ],
-   [
-    "Your location stored?",
+    "Current access and opening status",
     "No",
-    "—"
+    "Confirm with the operator"
+   ],
+   [
+    "Full details and live availability",
+    "No",
+    "Consult an authoritative source"
    ]
   ],
-  "note": "OpenStreetMap library coverage is strong in towns and cities. Hours change seasonally — the branch's own page outranks any map, including this one."
+  "note": "OpenStreetMap coverage and result limits can omit relevant places. Records may be outdated; confirm access, services and current conditions with an authoritative source."
  },
  "faq": [
   [
    "Does it show opening hours?",
-   "Where the map record carries them, the detail is there to read; coverage varies. The library system's branch page is the authority on the day — check it before a special trip."
+   "No. The tool shows names, points and distances, not hours or services. Check the library directly."
   ],
   [
    "How complete is the list?",
-   "As complete as the community's mapping of your area: excellent in most towns and cities, thinner in rural places where a part-time library may go unrecorded."
+   "Coverage varies. Results are capped, so even mapped libraries may be omitted; verify important searches with the local library system."
   ],
   [
    "Can I use the tool without sharing my precise location?",
-   "Yes — search a place name; your location is only one optional input."
+   "You can search for a place instead of using device location. The selected search centre is sent to OpenStreetMap-based services for the lookup."
   ],
   [
    "Why might a boundary or place name look different elsewhere?",
@@ -128,7 +123,7 @@
   ],
   [
    "Does MapBench store my browser location?",
-   "No."
+   "Device location is optional. The selected coordinates are sent to Overpass to search; consult the privacy page for provider and site details."
   ],
   [
    "University libraries included?",

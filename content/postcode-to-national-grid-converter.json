@@ -8,10 +8,10 @@
   "uk postcode os grid"
  ],
  "title": "Postcode to National Grid Converter — OS Grid",
- "description": "Convert a UK postcode to its Ordnance Survey grid reference with the Postcode to National Grid Converter — plot postcodes on paper maps. Free.",
+ "description": "Find a British National Grid reference for a representative postcode location when the provider supplies suitable grid coordinates.",
  "updated": "October 2026",
- "summary_sentence": "For example, a Westminster postcode lands in London's TQ square with a six-figure reference good to 100 metres — close enough to find the street on a paper OS map, which is all a postcode ever promised.",
- "quick_answer": "The Postcode to National Grid Converter turns a UK postcode into its Ordnance Survey grid reference, via the postcode's coordinates. Type the postcode and read the reference at your chosen precision — the fastest bridge between an address book and a paper map, a planning portal or a survey form.",
+ "summary_sentence": "A postcode coordinate represents an area or group of addresses, not a verified property location.",
+ "quick_answer": "postcodes.io supplies a representative postcode location and, where available, British National Grid eastings and northings. The workspace displays six- and ten-figure references; they do not establish an individual address or survey-level accuracy.",
  "steps_intro": "Postcodes are for post; grid references are for ground. Convert once:",
  "use_cases": [
   {
@@ -111,7 +111,7 @@
   ],
   [
    "Rural postcodes cover huge areas — still one reference?",
-   "One representative point, honestly labelled. A scattered rural postcode's reference finds its centre of gravity, not every croft — the map shows the scale of the claim."
+   "The postcode has a representative point, not a guarantee for every property. The result is not a surveyed address location."
   ],
   [
    "New-build postcodes?",
@@ -123,7 +123,7 @@
   ],
   [
    "Northern Ireland postcodes?",
-   "BT postcodes convert to coordinates happily — but their grid is the Irish Grid, not the National Grid; the Irish Grid Helper takes it from there."
+   "Northern Ireland uses a different grid. This tool does not produce British National Grid references for those postcodes; use an authoritative Irish grid converter."
   ],
   [
    "Can I convert the reference back to the postcode?",

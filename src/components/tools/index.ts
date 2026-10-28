@@ -14,6 +14,7 @@ const components: Record<string, () => Promise<{ default: ComponentType<{ params
   iplookup: () => import("./IpLookupTool"),
   latlong: () => import("./LatLongTool"),
   converter: () => import("./ConverterTool"),
+  maidenhead: () => import("./MaidenheadTool"),
   fileviewer: () => import("./FileViewer"),
   csv: () => import("./CsvMapTool"),
   pinmap: () => import("./PinMapTool"),

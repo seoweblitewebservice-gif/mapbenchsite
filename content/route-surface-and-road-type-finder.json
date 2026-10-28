@@ -9,17 +9,17 @@
   "Route Surface &amp"
  ],
  "title": "Route Surface & Road Type Finder",
- "description": "Analyse a route's surfaces and road types from OpenStreetMap with the Route Surface & Road Type Finder — paved, gravel, tracks, climb. Free.",
+ "description": "Inspect OpenStreetMap surface and road-type tags on ways near a driving route; counts are not route distances.",
  "updated": "October 2026",
- "summary_sentence": "For example, a 'mostly paved' tour can turn out to carry 11 miles of gravel and a farm track the road bike would rather know about tonight than meet tomorrow.",
- "quick_answer": "The Route Surface & Road Type Finder routes your journey, samples its roads in OpenStreetMap, and reports the recorded surfaces and road types — paved, unpaved, gravel, tracks and more — together with the route's elevation gain. Add start and destination and read what the road is made of.",
- "steps_intro": "A route is not one road; it is a census of them. Take the census before the tyres vote:",
+ "summary_sentence": "Nearby mapped roads can have different surface tags from the actual route. Verify the route and current conditions before travel.",
+ "quick_answer": "The tool routes a drive and counts OpenStreetMap ways within 30 metres of up to 20 sampled route points. Nearby ways can be off the route; counts are not distance shares. Elevation gain is sampled when available.",
+ "steps_intro": "Enter a start and destination, then inspect nearby map tags as preliminary context:",
  "use_cases": [
   {
    "title": "Gravel and adventure riding",
    "body": [
     {
-     "t": "Gravel riders hunt unpaved miles; road riders avoid them. Both need the same census — this page takes it. Climb joins from the "
+     "t": "Nearby surface tags can flag possible unpaved roads, but cannot establish which surfaces a route follows. For elevation context see the "
     },
     {
      "t": "Route Elevation Gain Calculator",
@@ -34,7 +34,7 @@
    "title": "Loaded touring",
    "body": [
     {
-     "t": "A loaded tourer's enemy is the surprise surface at mile 60. Surfaces sampled in advance turn the route into a known quantity."
+     "t": "Mapped surface tags may be incomplete or out of date. Check current route conditions with local sources before touring."
     }
    ]
   },
@@ -42,7 +42,7 @@
    "title": "Vehicle suitability",
    "body": [
     {
-     "t": "Low cars, hire cars with unpaved restrictions, classic cars: the surface report is a suitability opinion based on data, not hope."
+     "t": "Counts of nearby ways do not establish whether a route is suitable or accessible for a vehicle. Check local restrictions and conditions."
     }
    ]
   },
@@ -50,32 +50,32 @@
    "title": "Route comparison",
    "body": [
     {
-     "t": "Two routes, similar distances: the one whose surfaces suit your wheels wins, with the counts as the evidence."
+     "t": "Compare nearby mapped tags cautiously: counts are neither route length nor proof of the surface on the selected road."
     }
    ]
   }
  ],
  "examples": [
   {
-   "label": "Example · The honest label",
+   "label": "Example · Nearby is not necessarily on-route",
    "body": [
     {
-     "t": "A route advertised by a friend as 'all tarmac' samples at 82% paved, 11% gravel, 7% track. Both riders reroute one section and keep the friendship."
+     "t": "A gravel-tagged way within 30 metres of a sampled point may be a parallel road. Its presence in the count does not prove the routed road is gravel."
     }
    ]
   },
   {
-   "label": "Example · Missing data, stated",
+   "label": "Example · Missing data",
    "body": [
     {
-     "t": "Where OpenStreetMap records no surface, the report says so instead of guessing — an 'unknown' share is part of the census, and on remote routes it can be the biggest slice."
+     "t": "Ways without an OpenStreetMap surface tag are counted as not recorded. Missing data should not be treated as a paved or unpaved classification."
     }
    ]
   }
  ],
  "popular_table": {
   "title": "Surface types you will meet",
-  "intro": "The vocabulary of the report — what the OpenStreetMap surface and road-type values mean for wheels.",
+  "intro": "Examples of OpenStreetMap surface and road-type tags that may appear among nearby ways.",
   "columns": [
    "Recorded as",
    "Means",
@@ -113,16 +113,16 @@
     "Treat as a question, not a promise"
    ]
   ],
-  "note": "Counts come from sampling the roads along the routed path in OpenStreetMap — a census of recorded data, with the gaps labelled as gaps."
+  "note": "Counts cover nearby returned ways, not the length or percentage of the route. Data can be incomplete or outdated."
  },
  "faq": [
   [
    "What if a road has no surface recorded?",
-   "It is counted as unknown and reported as such. The finder never upgrades a gap into a guess — the unknown share is printed with the rest."
+   "A returned nearby way without a surface tag is counted as not recorded. The counts are not percentages of the route."
   ],
   [
    "How is the sampling done?",
-   "The routed path is sampled along its length and each sample's road is looked up in OpenStreetMap for its surface and type tags; the shares are tallied from the samples."
+   "The tool samples up to 20 points along the driving route and requests OSM highway ways within 30 metres, up to 400 returned ways. These can include ways not on the route; counts are by way, not distance."
   ],
   [
    "Does the route include live traffic?",
@@ -138,11 +138,11 @@
   ],
   [
    "Does it show elevation too?",
-   "Yes — the route's elevation gain rides along, because surface and climb together grade a route's difficulty."
+   "When the elevation service is available, it estimates gain from sampled elevations along the route. Sampling may miss changes between points."
   ],
   [
    "Can it force a gravel-only or paved-only route?",
-   "It analyses the route it is given rather than constraining it. Choose or adjust the route with the surface census in hand."
+   "No. It uses a driving route and does not constrain routing by surface."
   ],
   [
    "Can it tell me a road is closed?",
@@ -150,11 +150,11 @@
   ],
   [
    "Why does my route show 100% unknown?",
-   "Rural and newly mapped areas can lack surface tags entirely. The census reports the gap; OpenStreetMap improves as mappers pass."
+   "The tool reports counts, not percentages. Returned ways without a surface tag are shown as not recorded."
   ],
   [
    "Cobblestone counts as paved?",
-   "It is sealed but slow — the report lists it as its own recorded value so you can judge it as your wheels would."
+   "The tool displays the recorded surface value rather than assigning it to a paved or unpaved category."
   ]
  ],
  "related_prose": [

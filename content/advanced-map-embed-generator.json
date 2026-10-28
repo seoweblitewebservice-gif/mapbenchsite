@@ -74,7 +74,7 @@
    "label": "Example · Trail guide embed",
    "body": [
     {
-     "t": "Centre midway on the route at zoom 13 with no marker — the map illustrates the article instead of advertising a single point. Same generator, opposite choices, both valid."
+     "t": "Centre on an area to illustrate an article. If no marker is entered, the generated embed uses a marker at the centre."
     }
    ]
   }
@@ -105,8 +105,8 @@
    ],
    [
     "Marker",
-    "Whether a pin marks the centre",
-    "On for one place, off for an area view"
+    "One optional coordinate; defaults to centre",
+    "One marker only"
    ]
   ],
   "note": "The embed is served by the basemap provider (the code points at the provider's embed endpoint), so it inherits that map's data freshness and usage terms — MapBench generates the code, it does not host your map."
@@ -130,7 +130,7 @@
   ],
   [
    "Is there a usage limit?",
-   "The generator itself is free and unlimited. The embedded map is served under the basemap provider's fair-use terms — ordinary website traffic is exactly what embeds exist for."
+   "The embedded map is served by OpenStreetMap. Review its current usage and tile policies for your site; service terms may change."
   ],
   [
    "Can I embed a route or directions?",

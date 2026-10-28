@@ -115,7 +115,7 @@ function ToolCards({ slugs }: { slugs: string[] }) {
       {tools.map((r) => (
         <Link key={r.slug} href={`/tools/${r.slug}`} className="card group rounded-xl p-4 transition-all hover:-translate-y-0.5 hover:border-brand hover:shadow-md">
           <div className="text-sm font-bold group-hover:text-brand-strong">{r.name}</div>
-          <div className="mt-1 line-clamp-2 text-xs leading-relaxed text-mute">{r.short}</div>
+          <div className="mt-1 text-sm leading-relaxed text-mute">{r.short}</div>
           <span className="mt-2 block text-xs font-extrabold text-brand-strong">Open tool →</span>
         </Link>
       ))}
@@ -172,7 +172,7 @@ export default function DistanceMatrixCalculatorPage() {
   ];
 
   return (
-    <div className="tool-editorial">
+    <div className="tool-editorial tool-page-layout">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
 
       {/* 1. Breadcrumb */}
@@ -198,6 +198,7 @@ export default function DistanceMatrixCalculatorPage() {
           </div>
           <h1 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">Distance Matrix Calculator</h1>
           <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-mute">{tool.short}</p>
+          <div className="tool-page-jumps"><a href="#tool-workspace">Open tool ↓</a><a href="#how-to-use">How to use</a></div>
           <p className="mt-3 text-xs text-mute">
             By <Link href="/author/aryan-khan" className="font-semibold text-brand-strong hover:underline">Aryan Khan</Link>, Founder &amp; Editor · Updated October 21, 2026
           </p>
@@ -213,16 +214,15 @@ export default function DistanceMatrixCalculatorPage() {
 
 
       {/* 3. Tool card (tool component unchanged) + plain-language summary */}
-      <section className="relative overflow-hidden rounded-2xl border border-line bg-white shadow-[0_14px_42px_rgba(15,23,42,0.07)]">
+      <section id="tool-workspace" aria-label="Distance Matrix Calculator" className="tool-workspace relative overflow-hidden rounded-2xl border border-line bg-card shadow-[0_14px_42px_rgba(15,23,42,0.07)]">
         <div className="flex items-center justify-between border-b border-line bg-gradient-to-r from-well/60 to-white px-4 py-3 sm:px-5">
           <div className="flex items-center gap-2">
             <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-soft text-brand-strong" aria-hidden>⌁</span>
             <div>
               <div className="text-xs font-extrabold uppercase tracking-[0.12em] text-ink">Tool workspace</div>
-              <div className="text-[11px] text-mute">Set your inputs, inspect the map and read the result</div>
+              <div className="text-[11px] text-mute">Enter your inputs and review the result</div>
             </div>
           </div>
-          <div className="hidden items-center gap-2 text-[11px] text-mute sm:flex"><span className="h-2 w-2 rounded-full bg-emerald-500" />Ready</div>
         </div>
         <div className="p-4 sm:p-5 lg:p-6">
           <Suspense fallback={<div className="flex h-80 items-center justify-center"><Spinner label="Loading tool…" /></div>}>

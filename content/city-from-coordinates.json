@@ -8,10 +8,10 @@
   "lat long to city name"
  ],
  "title": "City from Coordinates Finder: Name That Point",
- "description": "Get the city or nearest town for a bare coordinate pair with the City from Coordinates Finder — from the map's address record. Free.",
+ "description": "Explore city, town, village or municipality fields returned for a point.",
  "updated": "October 2026",
- "summary_sentence": "For example, a GPS log entry at 40.7580, −73.9855 resolves to New York — the city field of the point's address record, no map-reading required.",
- "quick_answer": "The City from Coordinates Finder takes a bare latitude/longitude pair and returns the city (or nearest town) for that point from OpenStreetMap's address record. Paste the pair and read the settlement the record assigns — turning GPS logs and photo metadata back into named places.",
+ "summary_sentence": "A reverse-geocoded settlement field is not a verified city boundary or guaranteed nearest town.",
+ "quick_answer": "This tool reverse-geocodes the chosen point using Nominatim and displays available address fields from a nearby suitable mapped object. Fields may be missing or use broader fallbacks; the result is not a verified legal boundary or a guarantee of the nearest place.",
  "steps_intro": "Coordinates are anonymous. Give them back their city:",
  "use_cases": [
   {
@@ -109,7 +109,7 @@
  "faq": [
   [
    "What if the point is in the countryside?",
-   "The finder reports the nearest town the record supports, as 'nearest' — rural points get orientation, not a pretend municipality."
+   "The result can contain a city, town, village or municipality field from a nearby mapped object. It is not a nearest-town calculation."
   ],
   [
    "Which formats can I paste?",

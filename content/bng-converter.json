@@ -7,17 +7,17 @@
   "osgb"
  ],
  "title": "British National Grid Helper: BNG Conversions",
- "description": "Work between GPS coordinates and British National Grid references with the British National Grid Helper — grid letters and figures explained. Free.",
+ "description": "British National Grid references explained; this coordinate workspace does not perform BNG or OSGB36 conversions.",
  "updated": "October 2026",
  "summary_sentence": "For example, London sits in the TQ 100-kilometre square — two letters that narrow a GPS point to one square of Britain before a single digit is read.",
- "quick_answer": "The British National Grid Helper supports UK coordinate workflows between GPS latitude/longitude and National Grid style values. Grid references combine two letters naming a 100-kilometre square with digits that refine the point inside it — four figures to a kilometre, six to 100 metres, ten to a metre.",
- "steps_intro": "Britain's own grid, letters first:",
+ "quick_answer": "British National Grid references identify locations in a grid based on OSGB36. This workspace does not produce or decode them or perform an OSGB36 transformation.",
+ "steps_intro": "Use the workspace for supported global coordinate formats; use a validated OSGB36 conversion tool for British grid references.",
  "use_cases": [
   {
    "title": "Walking and Landranger maps",
    "body": [
     {
-     "t": "Ordnance Survey maps speak grid references. Convert a GPS point to its reference before quoting it to a walking group — the group will navigate by it."
+     "t": "Ordnance Survey maps use grid references. Use a validated OSGB36 tool to convert GPS coordinates before quoting a reference."
     }
    ]
   },
@@ -25,7 +25,7 @@
    "title": "UK forms and planning portals",
    "body": [
     {
-     "t": "British officialdom asks for grid references. The helper bridges between the GPS world and the form's expectation."
+     "t": "UK forms may request grid references. Obtain them with a validated British National Grid converter, not this workspace."
     }
    ]
   },
@@ -33,7 +33,7 @@
    "title": "Archaeology and recording schemes",
    "body": [
     {
-     "t": "Finds and sites are logged by grid reference in UK practice — the museum-grade habit starts with a correct conversion."
+     "t": "Finds and sites are often recorded by grid reference. Check the coordinate reference system and transformation used for the record."
     }
    ]
   },
@@ -41,7 +41,7 @@
    "title": "Understanding the letters",
    "body": [
     {
-     "t": "The two-letter square system (SV in the far southwest up to TA, TQ for London, and the rest) becomes obvious once you convert a few home points."
+     "t": "The two-letter square system identifies 100 km squares, including TQ for part of southeast England."
     }
    ]
   }
@@ -66,7 +66,7 @@
  ],
  "popular_table": {
   "title": "Grid reference anatomy",
-  "intro": "How a British grid reference is built — the structure the helper works with.",
+  "intro": "How a British grid reference is built. This workspace does not perform the conversion.",
   "columns": [
    "Part",
    "Meaning",
@@ -99,7 +99,7 @@
  "faq": [
   [
    "Is it full OSGB36?",
-   "The helper supports National Grid style workflows; rigorous OSGB36 transformation (the OSTN-class shift) is Ordnance Survey's own product. For walking, forms and general work the helper's level is the working standard — survey law wants the official transformation."
+   "No. This workspace does not convert British National Grid references or perform an OSGB36 transformation. Use Ordnance Survey or validated GIS tools with an appropriate transformation."
   ],
   [
    "Which datum do these coordinate tools use?",
@@ -111,7 +111,7 @@
   ],
   [
    "Can I copy the result into GIS software?",
-   "Yes — grid references and coordinates both paste into GIS; set the layer's CRS to OSGB36 (EPSG:27700) for grid values so the software honours the datum."
+   "The workspace provides supported global formats, not British grid references. For OSGB36 grid data use the correct CRS and a validated transformation in GIS."
   ],
   [
    "Why two letters and not one?",
@@ -127,7 +127,7 @@
   ],
   [
    "Can I convert a reference back to GPS?",
-   "The workflow runs both ways — reference to coordinates for the GPS, coordinates to reference for the map and the form."
+   "Not in this workspace. Use a validated British National Grid converter for either direction."
   ],
   [
    "Offshore points?",

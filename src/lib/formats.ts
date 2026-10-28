@@ -22,7 +22,7 @@ export const escapeXml = (s: string) =>
 type GJ = GeoJSON.GeoJsonObject;
 
 // ---------- GeoJSON → KML ----------
-export function geojsonToKml(fc: GJ, name = "MapForge export"): string {
+export function geojsonToKml(fc: GJ, name = "MapBench export"): string {
   const placemarks: string[] = [];
   const visit = (obj: any) => {
     if (!obj) return;
@@ -55,28 +55,29 @@ function geomToKml(g: any): string {
   if (!g?.type) return "";
   switch (g.type) {
     case "Point": return `<Point><coordinates>${coordsToStr(g.coordinates)}</coordinates></Point>`;
-    case "MultiPoint": return g.coordinates.map((c: any) => `<Point><coordinates>${coordsToStr(c)}</coordinates></Point>`).join("");
+    case "MultiPoint": return `<MultiGeometry>${g.coordinates.map((c: any) => `<Point><coordinates>${coordsToStr(c)}</coordinates></Point>`).join("")}</MultiGeometry>`;
     case "LineString": return `<LineString><coordinates>${coordsToStr(g.coordinates)}</coordinates></LineString>`;
-    case "MultiLineString": return g.coordinates.map((r: any) => `<LineString><coordinates>${coordsToStr(r)}</coordinates></LineString>`).join("");
+    case "MultiLineString": return `<MultiGeometry>${g.coordinates.map((r: any) => `<LineString><coordinates>${coordsToStr(r)}</coordinates></LineString>`).join("")}</MultiGeometry>`;
     case "Polygon": return `<Polygon><outerBoundaryIs><LinearRing><coordinates>${coordsToStr(g.coordinates[0])}</coordinates></LinearRing></outerBoundaryIs>${(g.coordinates.slice(1) || []).map((r: any) => `<innerBoundaryIs><LinearRing><coordinates>${coordsToStr(r)}</coordinates></LinearRing></innerBoundaryIs>`).join("")}</Polygon>`;
-    case "MultiPolygon": return g.coordinates.map((poly: any) => geomToKml({ type: "Polygon", coordinates: poly })).join("");
-    case "GeometryCollection": return (g.geometries || []).map(geomToKml).join("");
+    case "MultiPolygon": return `<MultiGeometry>${g.coordinates.map((poly: any) => geomToKml({ type: "Polygon", coordinates: poly })).join("")}</MultiGeometry>`;
+    case "GeometryCollection": return `<MultiGeometry>${(g.geometries || []).map(geomToKml).join("")}</MultiGeometry>`;
     default: return "";
   }
 }
 
 // ---------- GeoJSON → GPX ----------
-export function geojsonToGpx(fc: GJ, name = "MapForge export"): string {
+export function geojsonToGpx(fc: GJ, name = "MapBench export"): string {
   const wpts: string[] = [], trks: string[] = [];
-  const visit = (obj: any, idx: number) => {
+  const visit = (obj: any, idx: number, properties: Record<string, unknown> = {}) => {
     if (!obj) return;
-    if (obj.type === "FeatureCollection") return obj.features?.forEach(visit);
-    if (obj.type === "Feature") return visit(obj.geometry, idx);
-    const p = obj?.properties || {};
-    const nm = escapeXml(String(p.name ?? `item-${idx + 1}`));
+    if (obj.type === "FeatureCollection") return obj.features?.forEach((feature: any, i: number) => visit(feature, i));
+    if (obj.type === "Feature") return visit(obj.geometry, idx, obj.properties ?? {});
+    const nm = escapeXml(String(properties.name ?? `item-${idx + 1}`));
+    const date = typeof properties.time === "string" ? new Date(properties.time) : null;
+    const time = date && Number.isFinite(date.getTime()) ? `<time>${date.toISOString()}</time>` : "";
     switch (obj?.type) {
       case "Point":
-        wpts.push(`<wpt lat="${obj.coordinates[1]}" lon="${obj.coordinates[0]}">${obj.coordinates[2] !== undefined ? `<ele>${obj.coordinates[2]}</ele>` : ""}<name>${nm}</name></wpt>`);
+        wpts.push(`<wpt lat="${obj.coordinates[1]}" lon="${obj.coordinates[0]}">${obj.coordinates[2] !== undefined ? `<ele>${obj.coordinates[2]}</ele>` : ""}${time}<name>${nm}</name></wpt>`);
         break;
       case "MultiPoint":
         obj.coordinates.forEach((c: any) => wpts.push(`<wpt lat="${c[1]}" lon="${c[0]}"><name>${nm}</name></wpt>`));
@@ -87,13 +88,16 @@ export function geojsonToGpx(fc: GJ, name = "MapForge export"): string {
       case "MultiLineString":
         trks.push(`<trk><name>${nm}</name>${obj.coordinates.map((seg: any) => `<trkseg>${seg.map((c: any) => `<trkpt lat="${c[1]}" lon="${c[0]}"></trkpt>`).join("")}</trkseg>`).join("")}</trk>`);
         break;
+      case "GeometryCollection":
+        (obj.geometries ?? []).forEach((geometry: any) => visit(geometry, idx, properties));
+        break;
       case "Polygon":
         trks.push(`<trk><name>${nm} (boundary)</name><trkseg>${obj.coordinates[0].map((c: any) => `<trkpt lat="${c[1]}" lon="${c[0]}"></trkpt>`).join("")}</trkseg></trk>`);
         break;
     }
   };
   visit(fc, 0);
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<gpx version="1.1" creator="MapForge" xmlns="http://www.topografix.com/GPX/1/1"><metadata><name>${escapeXml(name)}</name></metadata>${wpts.join("")}${trks.join("")}</gpx>`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<gpx version="1.1" creator="MapBench" xmlns="http://www.topografix.com/GPX/1/1"><metadata><name>${escapeXml(name)}</name></metadata>${wpts.join("")}${trks.join("")}</gpx>`;
 }
 
 // ---------- CSV ----------

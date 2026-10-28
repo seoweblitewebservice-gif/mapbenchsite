@@ -7,24 +7,17 @@
   "cross streets finder"
  ],
  "title": "Street Intersection Finder: Where Streets Cross",
- "description": "Locate where two streets cross in a town with the Street Intersection Finder — junction coordinates from the open map. Free.",
+ "description": "Search for possible junction matches using two street names; independently verify any crossing and coordinates.",
  "updated": "October 2026",
- "summary_sentence": "For example, 'meet at 5th and Main' becomes coordinates you can drop into any map — assuming your town's 5th and Main actually cross, which the finder also settles.",
- "quick_answer": "The Street Intersection Finder locates where two named streets cross within a town, using OpenStreetMap, and gives you the junction's coordinates. Enter the town, type the two street names, and read the crossing — the meeting point, the landmark, the address-less address every city conversation runs on.",
- "steps_intro": "'Fifth and Main' is an address in the language everyone speaks. Get its coordinates:",
+ "summary_sentence": "Text-search results are possible matches, not verified intersections between road geometries.",
+ "quick_answer": "This workspace sends two street names and an optional town to Nominatim and displays possible matches. It does not calculate whether road geometries intersect, so verify any result independently.",
+ "steps_intro": "Search for a possible match, then verify the actual crossing on an authoritative map:",
  "use_cases": [
   {
    "title": "Meeting points without addresses",
    "body": [
     {
-     "t": "Corners are how humans rendezvous. Coordinates make the corner machine-shareable — pair with the "
-    },
-    {
-     "t": "Offline Coordinate Card",
-     "l": "/tools/offline-coordinate-card"
-    },
-    {
-     "t": " for the field version."
+     "t": "Search for a possible junction to investigate; confirm the exact meeting point separately."
     }
    ]
   },
@@ -32,7 +25,7 @@
    "title": "Verifying that streets cross",
    "body": [
     {
-     "t": "Parallel streets, renamed segments, one-way riddles — the finder settles whether the famous corner exists at all."
+     "t": "The search does not prove that streets cross. Verify using a map with road geometry or an authoritative local source."
     }
    ]
   },
@@ -40,7 +33,7 @@
    "title": "Local reporting and history",
    "body": [
     {
-     "t": "News and memory locate events 'at the corner of…' — coordinates pin the archive to the ground it happened on."
+     "t": "A search result can be a lead for historical or local research, but the correct junction needs independent verification."
     }
    ]
   },
@@ -48,104 +41,76 @@
    "title": "Delivery and pickup precision",
    "body": [
     {
-     "t": "A corner is a pickup point a driver can find. The coordinates remove the last hundred metres of circling."
+     "t": "Do not use an unverified search result as a precise pickup point; confirm it with the driver and a reliable map."
     }
    ]
   }
  ],
  "examples": [
   {
-   "label": "Example · Towns with grids make it easy",
+   "label": "Example · Multiple matches",
    "body": [
     {
-     "t": "Numbered avenues crossing named streets resolve cleanly — the grid was designed for exactly this query. Curved old towns answer too, with the map's record as the witness."
+     "t": "Common street names may produce several text matches. A listed alternative is not necessarily a junction; verify it."
     }
    ]
   },
   {
-   "label": "Example · The streets that never meet",
+   "label": "Example · No result",
    "body": [
     {
-     "t": "Some famous pairs run parallel, or one ends before the other begins. The finder reports no crossing — an answer, not an error, and often the discovery of the day."
+     "t": "No search result does not prove that the roads never intersect. Try alternate spellings and check an authoritative map."
     }
    ]
   }
  ],
  "popular_table": {
-  "title": "How the finder works",
-  "intro": "The lookup's mechanics — and its edge cases.",
+  "title": "How the search works",
+  "intro": "This is text geocoding, not a road-geometry intersection test.",
   "columns": [
    "Step",
    "What happens"
   ],
   "rows": [
    [
-    "Scope",
-    "The town or city you name bounds the search"
+    "Query",
+    "Two street names and optional town are sent to Nominatim"
    ],
    [
-    "Match",
-    "Both street names matched against the map record"
+    "Results",
+    "Up to five possible text matches from the first successful query"
    ],
    [
-    "Crossing",
-    "The junction point computed, coordinates out"
+    "Verification",
+    "Check the actual crossing independently"
    ],
    [
-    "Multiple crossings",
-    "Streets that cross twice (curves, loops) report their junctions — pick by the map"
-   ],
-   [
-    "No crossing",
-    "Reported honestly — parallels stay parallel"
+    "No match",
+    "Not proof that the crossing does not exist"
    ]
   ],
-  "note": "Street names must match the record's forms ('Fifth Avenue' versus '5th Ave' handling is built into the matching, within reason). The town scope matters: every state has a Main Street."
+  "note": "A town in the query is not a strict geographic boundary filter."
  },
  "faq": [
   [
    "How does it find the crossing?",
-   "It matches both street names within the town's OpenStreetMap record and computes where their lines cross, returning the junction's coordinates."
+   "It searches Nominatim for the two street names. It does not compute a geometric intersection or prove that a match is a junction."
   ],
   [
-   "What if the streets never cross?",
-   "You get an honest 'no crossing' — parallel streets and near-misses resolved by data rather than by hope. Check name spellings, then accept the geography."
+   "What does no match mean?",
+   "The search found no result; it does not prove that the streets do not cross."
   ],
   [
-   "Can I use the tool without sharing my precise location?",
-   "Yes — the town is typed; your location plays no part."
+   "Does it need device location?",
+   "No. Entered street names and town are sent to Nominatim."
   ],
   [
-   "Why might a boundary or place name look different elsewhere?",
-   "Street names change (renamings, honorary names) and other sources hold different vintages; the record here is OpenStreetMap's."
+   "Can there be several matches?",
+   "Yes. Alternatives are possible text matches, not verified road crossings."
   ],
   [
-   "Does MapBench store my browser location?",
-   "No."
-  ],
-  [
-   "Streets crossing twice?",
-   "Curved and looping streets can intersect at two points; both are reported with the map to choose between."
-  ],
-  [
-   "Highways and ramps?",
-   "Junctions of major roads resolve where the record models them; interchange geometry can make 'the crossing' a small region rather than a point."
-  ],
-  [
-   "A street with two names?",
-   "Dual-named streets match by either recorded name in most cases — try the alternate if the first fails."
-  ],
-  [
-   "Coordinates format?",
-   "Latitude/longitude for the junction — paste them into any tool on this site, from Distance Calculator onward."
-  ],
-  [
-   "Intersection of a street with itself?",
-   "Looping streets do cross themselves occasionally — the finder reports genuine self-junctions where the record models them, geography's little joke."
-  ],
-  [
-   "City not listed?",
-   "The finder searches within the town scope you give; a very small settlement may need its county or nearest town as the scope, then the street names do the rest."
+   "Are coordinates exact?",
+   "Coordinates are for the returned search result, which may not be the intersection. Verify independently."
   ]
  ],
  "related_prose": [

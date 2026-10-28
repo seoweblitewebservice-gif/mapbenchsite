@@ -8,10 +8,10 @@
   "centre of postcodes"
  ],
  "title": "Postal Code Centroid Calculator: Center of Codes",
- "description": "Find the centre of gravity of a list of ZIP or postal codes with the Postal Code Centroid Calculator — spherical centroid plus each code's distance. Free.",
+ "description": "Calculate an equal-weight spherical vector mean from up to 25 resolved postal codes. Results depend on external geocoding coverage.",
  "updated": "October 2026",
- "summary_sentence": "For example, the centroid of ZIPs 10001 (New York), 60601 (Chicago) and 90210 (Beverly Hills) falls near 39.0, −94.8 in Missouri — the spherical centre of the three, computed by this page's method.",
- "quick_answer": "The Postal Code Centroid Calculator finds the centre of gravity of a pasted list of ZIP or postal codes: the point on the sphere that minimises the average straight-line distance to all of them. Paste the codes, press find, and read the centre, its nearest place, and each code's distance.",
+ "summary_sentence": "Resolve up to 25 postal codes and calculate an equal-weight spherical vector mean of the locations that are found.",
+ "quick_answer": "The tool geocodes up to 25 postal codes and calculates the spherical vector mean of the resolved locations, with a distance for each. It does not necessarily minimise the average distance or travel time.",
  "steps_intro": "Meeting points for mailing lists, delivery territories and teams:",
  "use_cases": [
   {
@@ -41,7 +41,7 @@
    "title": "Event site shortlisting",
    "body": [
     {
-     "t": "Attendees' codes give the centre; venues near it minimise the group's average travel — fairness, computed."
+     "t": "A geographic mean can suggest an initial search area. It does not guarantee a venue that minimises travel or average distance."
     }
    ]
   },
@@ -59,7 +59,7 @@
    "label": "Example · Three coasts, one centre",
    "body": [
     {
-     "t": "10001, 60601 and 90210 yield a centre near 39.0, −94.8 in Missouri — no attendee's home, everybody's compromise, and the arithmetic that the Geographic Center Finder celebrates at national scale."
+     "t": "Resolve the supplied codes and review their returned locations before relying on their vector mean. Different geocoding providers can return different approximate points."
     }
    ]
   },
@@ -106,7 +106,7 @@
  "faq": [
   [
    "How is the centre computed?",
-   "By the spherical (3D vector) average of the codes' centroid points — the point minimising average straight-line distance on the sphere — not by flat latitude/longitude averaging."
+   "It is the normalised average of the resolved locations as 3D unit vectors, converted back to latitude and longitude. This is not generally the point that minimises average surface distance."
   ],
   [
    "Which countries work?",
@@ -114,7 +114,7 @@
   ],
   [
    "Can I use the tool without sharing my precise location?",
-   "Yes — the codes are the only input."
+   "The tool does not request device location. Entered postal codes are sent to external geocoding providers and the calculated centre is reverse geocoded."
   ],
   [
    "Why might a boundary or place name look different elsewhere?",
@@ -122,7 +122,7 @@
   ],
   [
    "Does MapBench store my browser location?",
-   "No."
+   "The tool does not request browser location. Postal codes and the calculated centre are sent to external geocoding services for lookup."
   ],
   [
    "One code dominates my list — can I weight?",
@@ -130,7 +130,7 @@
   ],
   [
    "The centre is in a lake or nowhere.",
-   "Centres are geometry, not venues. Treat the nearest place in the result as the practical meeting town."
+   "The mean can fall somewhere impractical. A reverse-geocoded place name is only a nearby label, not a verified venue."
   ],
   [
    "Duplicate codes?",
@@ -146,7 +146,7 @@
   ],
   [
    "Thousands of codes?",
-   "Paste in reasonable batches; the method scales, but a territory-scale job belongs in a GIS with this page's method as the sanity check."
+   "The tool accepts at most 25 codes per calculation. Larger datasets require a suitable GIS or batch workflow."
   ]
  ],
  "related_prose": [

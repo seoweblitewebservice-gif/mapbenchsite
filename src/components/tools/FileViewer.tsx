@@ -1,7 +1,9 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Map as MLMap, GeoJSONSource } from "maplibre-gl";
-import { distanceKm, fmt, type LatLng } from "@/lib/geo";
+import { distanceKm, fmt, isValidLat, isValidLng, type LatLng } from "@/lib/geo";
+import { geojsonLineLengthKm } from "@/lib/geojsonLineLength";
+import { buildElevationProfile } from "@/lib/gpxProfile";
 import { asFeatureCollection, downloadText, escapeXml, geojsonBbox, geojsonToGpx, geojsonToKml } from "@/lib/formats";
 import { ErrorBox, FileDropzone, Stat, Spinner } from "@/components/ui";
 import { DynamicMap } from "./shared";
@@ -9,7 +11,12 @@ import { DynamicMap } from "./shared";
 // ---------- Parsers (local, never uploaded) ----------
 
 function parseCoordsText(text: string): number[][] {
-  return text.trim().split(/\s+/).map((t) => t.split(",").map(parseFloat).filter(Number.isFinite)).filter((c) => c.length >= 2);
+  if (!text.trim()) return [];
+  return text.trim().split(/\s+/).map((t) => {
+    const c = t.split(",").map((v) => v.trim() === "" ? NaN : Number(v));
+    if (c.length < 2 || !c.every(Number.isFinite) || !isValidLng(c[0]) || !isValidLat(c[1])) throw new Error("KML contains invalid coordinates.");
+    return c;
+  });
 }
 
 export function kmlToGeoJson(text: string): GeoJSON.FeatureCollection {
@@ -68,11 +75,11 @@ export function gpxToGeoJson(text: string): { fc: GeoJSON.FeatureCollection; sta
   if (!doc.getElementsByTagName("gpx").length) throw new Error("No GPX content found in this file.");
   const features: GeoJSON.Feature[] = [];
   const stats: GpxStats = { distanceKm: 0, gain: 0, loss: 0, minEle: null, maxEle: null, durationS: null, points: 0 };
-  const times: number[] = [];
+  let minTime = Infinity, maxTime = -Infinity, timeCount = 0;
 
   Array.from(doc.getElementsByTagName("wpt")).forEach((w) => {
     const lat = parseFloat(w.getAttribute("lat") ?? ""), lon = parseFloat(w.getAttribute("lon") ?? "");
-    if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
+    if (!isValidLat(lat) || !isValidLng(lon)) return;
     const ele = parseFloat(w.getElementsByTagName("ele")[0]?.textContent ?? "");
     features.push({
       type: "Feature",
@@ -82,16 +89,17 @@ export function gpxToGeoJson(text: string): { fc: GeoJSON.FeatureCollection; sta
   });
 
   const processPts = (pts: Element[], asRoute: boolean) => {
-    const coords: number[][] = [];
+    const lines: number[][][] = [];
+    let coords: number[][] = [];
     let prev: LatLng | null = null, prevEle: number | null = null;
     for (const p of pts) {
       const lat = parseFloat(p.getAttribute("lat") ?? ""), lon = parseFloat(p.getAttribute("lon") ?? "");
-      if (!Number.isFinite(lat) || !Number.isFinite(lon)) continue;
+      if (!isValidLat(lat) || !isValidLng(lon)) { if (coords.length > 1) lines.push(coords); coords = []; prev = null; prevEle = null; continue; }
       const eleT = p.getElementsByTagName("ele")[0]?.textContent;
       const ele = eleT !== undefined && eleT !== "" ? parseFloat(eleT) : NaN;
       const timeT = p.getElementsByTagName("time")[0]?.textContent;
       const time = timeT ? new Date(timeT) : null;
-      if (time && !isNaN(time.getTime())) times.push(time.getTime());
+      if (time && !isNaN(time.getTime())) { const t = time.getTime(); minTime = Math.min(minTime, t); maxTime = Math.max(maxTime, t); timeCount++; }
       coords.push(Number.isFinite(ele) ? [lon, lat, ele] : [lon, lat]);
       const cur = { lat, lng: lon };
       if (prev && !asRoute) stats.distanceKm += distanceKm(prev, cur);
@@ -106,15 +114,17 @@ export function gpxToGeoJson(text: string): { fc: GeoJSON.FeatureCollection; sta
         }
         prevEle = ele;
       }
+      if (!Number.isFinite(ele)) prevEle = null;
       prev = cur;
     }
-    return coords;
+    if (coords.length > 1) lines.push(coords);
+    return lines;
   };
 
   Array.from(doc.getElementsByTagName("trk")).forEach((trk) => {
     const name = trk.getElementsByTagName("name")[0]?.textContent ?? "Track";
     const segs = Array.from(trk.getElementsByTagName("trkseg"));
-    const lines = segs.map((s) => processPts(Array.from(s.getElementsByTagName("trkpt")), false)).filter((c) => c.length > 1);
+    const lines = segs.flatMap((s) => processPts(Array.from(s.getElementsByTagName("trkpt")), false));
     if (!lines.length) return;
     features.push({
       type: "Feature",
@@ -124,28 +134,27 @@ export function gpxToGeoJson(text: string): { fc: GeoJSON.FeatureCollection; sta
   });
   Array.from(doc.getElementsByTagName("rte")).forEach((rte) => {
     const name = rte.getElementsByTagName("name")[0]?.textContent ?? "Route";
-    const coords = processPts(Array.from(rte.getElementsByTagName("rtept")), true);
-    if (coords.length > 1) features.push({ type: "Feature", properties: { name, kind: "route" }, geometry: { type: "LineString", coordinates: coords } });
+    const lines = processPts(Array.from(rte.getElementsByTagName("rtept")), true);
+    if (lines.length) features.push({ type: "Feature", properties: { name, kind: "route" }, geometry: lines.length === 1 ? { type: "LineString", coordinates: lines[0] } : { type: "MultiLineString", coordinates: lines } });
   });
 
-  if (times.length >= 2) stats.durationS = (Math.max(...times) - Math.min(...times)) / 1000;
+  if (timeCount >= 2) stats.durationS = (maxTime - minTime) / 1000;
   return { fc: { type: "FeatureCollection", features }, stats };
 }
 
 // ---------- Elevation chart ----------
-function ElevationChart({ pts }: { pts: { dist: number; ele: number }[] }) {
+function ElevationChart({ segments }: { segments: { dist: number; ele: number }[][] }) {
+  const pts = segments.flat();
   if (pts.length < 2) return null;
   const w = 560, h = 130, pad = 6;
-  const eles = pts.map((p) => p.ele);
-  const min = Math.min(...eles), max = Math.max(...eles);
-  const span = Math.max(1, max - min);
-  const x = (i: number) => pad + (i / (pts.length - 1)) * (w - pad * 2);
+  let min = Infinity, max = -Infinity;
+  for (const p of pts) { min = Math.min(min, p.ele); max = Math.max(max, p.ele); }
+  const span = Math.max(1, max - min), total = pts[pts.length - 1].dist;
+  const x = (d: number) => pad + (total > 0 ? d / total : 0) * (w - pad * 2);
   const y = (e: number) => h - pad - ((e - min) / span) * (h - pad * 2);
-  const path = pts.map((p, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(p.ele).toFixed(1)}`).join("");
   return (
-    <svg viewBox={`0 0 ${w} ${h}`} className="w-full" role="img" aria-label="Elevation profile">
-      <path d={`${path} L${x(pts.length - 1)},${h} L${x(0)},${h} Z`} fill="var(--sf-brand)" opacity=".15" />
-      <path d={path} fill="none" stroke="var(--sf-brand)" strokeWidth="2" />
+    <svg viewBox={`0 0 ${w} ${h}`} className="w-full" role="img" aria-label="Elevation profile by cumulative distance; gaps are not connected">
+      {segments.map((segment, i) => <path key={i} d={segment.map((p, j) => `${j ? "L" : "M"}${x(p.dist).toFixed(1)},${y(p.ele).toFixed(1)}`).join(" ")} fill="none" stroke="var(--sf-brand)" strokeWidth="2" />)}
     </svg>
   );
 }
@@ -259,33 +268,18 @@ export default function FileViewer({ params }: { params?: Record<string, unknown
 
   const gpxProfile = useMemo(() => {
     if (state.status !== "ok" || !state.gpx) return null;
-    const pts: { dist: number; ele: number }[] = [];
-    let d = 0; let prev: LatLng | null = null;
-    const walk = (c: any) => {
-      if (typeof c?.[0] === "number") {
-        const p = { lat: c[1], lng: c[0] };
-        if (prev) d += distanceKm(prev, p);
-        prev = p;
-        if (Number.isFinite(c[2])) pts.push({ dist: d, ele: c[2] });
-        return;
-      }
-      if (Array.isArray(c)) c.forEach(walk);
-    };
-    state.fc.features.forEach((f) => {
-      const g: any = f.geometry;
-      if (g?.type?.includes("Line")) walk(g.coordinates);
-    });
-    return pts.length > 1 ? pts.filter((_, i) => i % Math.ceil(pts.length / 400) === 0 || i === pts.length - 1) : null;
+    return buildElevationProfile(state.fc);
   }, [state]);
 
   const exportFc = state.status === "ok" ? state.fc : null;
+  const lineLength = exportFc && format === "kml" ? geojsonLineLengthKm(exportFc) : null;
 
   return (
     <div className="space-y-4">
       {state.status !== "ok" && (
         <FileDropzone onFile={onFile} accept={format === "geojson" ? ".geojson,.json,application/geo+json,application/json" : `.${format}`}>
           {format === "geojson" && (
-            <div className="mt-3 text-center">
+            <div className="mt-3 text-center" onClick={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
               <button type="button" className="btn btn-ghost btn-sm" onClick={() => setPasting((v) => !v)}>{pasting ? "Hide paste box" : "…or paste GeoJSON text"}</button>
               {pasting && (
                 <div className="mt-2">
@@ -320,6 +314,7 @@ export default function FileViewer({ params }: { params?: Record<string, unknown
           setMapReady(true);
         }} />
         <div className="space-y-3">
+          {lineLength !== null && <Stat label="LineString length" value={`${fmt(lineLength)} km`} sub={`${fmt(lineLength * 0.621371)} mi · spherical segments; polygons excluded`} />}
           {state.status === "ok" && state.gpx && (
             <div className="grid grid-cols-2 gap-2">
               <Stat label="Distance" value={`${fmt(state.gpx.distanceKm)} km`} sub={`${fmt(state.gpx.distanceKm * 0.621371)} mi`} />
@@ -333,7 +328,8 @@ export default function FileViewer({ params }: { params?: Record<string, unknown
           {state.status === "ok" && gpxProfile && (
             <div className="card p-3">
               <div className="label">Elevation profile</div>
-              <ElevationChart pts={gpxProfile} />
+              <ElevationChart segments={gpxProfile} />
+              <p className="text-sm text-slate-600">Horizontal position shows cumulative distance within recorded segments; gaps and missing elevations are not connected.</p>
             </div>
           )}
           {state.status === "ok" && (
@@ -363,12 +359,12 @@ export default function FileViewer({ params }: { params?: Record<string, unknown
             <div className="card space-y-2 p-3">
               <div className="label">Export / convert</div>
               <div className="flex flex-wrap gap-2">
-                <button type="button" className="btn btn-primary btn-sm" onClick={() => downloadText("mapforge.geojson", JSON.stringify(exportFc, null, 2), "application/geo+json")}>GeoJSON</button>
-                <button type="button" className="btn btn-ghost btn-sm" onClick={() => downloadText("mapforge.kml", geojsonToKml(exportFc, state.status === "ok" ? state.sourceName : "export"), "application/vnd.google-earth.kml+xml")}>KML</button>
-                <button type="button" className="btn btn-ghost btn-sm" onClick={() => downloadText("mapforge.gpx", geojsonToGpx(exportFc, state.status === "ok" ? state.sourceName : "export"), "application/gpx+xml")}>GPX</button>
+                <button type="button" className="btn btn-primary btn-sm" onClick={() => downloadText("mapbench.geojson", JSON.stringify(exportFc, null, 2), "application/geo+json")}>GeoJSON</button>
+                <button type="button" className="btn btn-ghost btn-sm" onClick={() => downloadText("mapbench.kml", geojsonToKml(exportFc, state.status === "ok" ? state.sourceName : "export"), "application/vnd.google-earth.kml+xml")}>KML</button>
+                <button type="button" className="btn btn-ghost btn-sm" onClick={() => downloadText("mapbench.gpx", geojsonToGpx(exportFc, state.status === "ok" ? state.sourceName : "export"), "application/gpx+xml")}>GPX</button>
                 {format === "csv-note" && null}
               </div>
-              <p className="text-xs text-mute">Conversion runs locally — your file never leaves the browser.</p>
+              <p className="text-xs text-mute">Parsing and conversion run locally. Export can omit styles, timestamps, extensions or geometry; keep the original and inspect the result. Map tiles are requested over the network and can reveal the viewed area.</p>
             </div>
           )}
         </div>

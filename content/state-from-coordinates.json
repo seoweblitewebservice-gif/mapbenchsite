@@ -8,10 +8,10 @@
   "coordinates to state"
  ],
  "title": "State from Coordinates Finder: Name the State",
- "description": "Get the US state (or province) containing a coordinate pair with the State from Coordinates Finder — boundary data, sea-honest. Free.",
+ "description": "Look up state or region fields using reverse geocoding; confirm jurisdictions with official data.",
  "updated": "October 2026",
- "summary_sentence": "For example, 40.7580, −73.9855 answers 'New York' — while a point at 38.8977, −77.0365 answers 'District of Columbia', the finder's standing reminder that not every US point has a state.",
- "quick_answer": "The State from Coordinates Finder takes a bare latitude/longitude pair and returns the US state — or Canadian province — containing the point, from boundary records. Paste the pair and read the state — the administrative fact geotagged photos and field data so often assume but rarely record.",
+ "summary_sentence": "The returned address field is not an authoritative point-in-boundary result, including for water and border locations.",
+ "quick_answer": "This tool reverse-geocodes the chosen point using Nominatim and displays available address fields from a nearby suitable mapped object. Fields may be missing or use broader fallbacks; the result is not a verified legal boundary or a guarantee of the nearest place.",
  "steps_intro": "Coordinates are stateless. Give them their jurisdiction:",
  "use_cases": [
   {
@@ -110,11 +110,11 @@
   ],
   [
    "A point in the Great Lakes?",
-   "Water points return no state — though the lakes are divided between states on paper, the finder's honest land-based answer is none, and it says so."
+   "Nominatim results for water points vary with mapped data. This tool does not test authoritative water boundaries; use official sources for jurisdiction."
   ],
   [
    "How close to a border can I trust it?",
-   "The polygon is exact; your coordinate may not be. Within a consumer GPS fix's error of a line, treat the answer as probable, not legal."
+   "The tool does not perform a verified point-in-polygon boundary test. Near boundaries or for legal use, consult the responsible authority and consider coordinate uncertainty."
   ],
   [
    "County as well?",

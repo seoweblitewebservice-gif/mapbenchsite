@@ -7,17 +7,17 @@
   "map tile calculator"
  ],
  "title": "Quadkey / Tile XYZ Helper: Point to Tiles",
- "description": "Bridge a coordinate to its tile XYZ and quadkey with the Quadkey / Tile XYZ Helper — Bing-style tile addressing from any lat/lng. Free.",
+ "description": "Understand XYZ tiles and quadkeys; this coordinate workspace does not calculate tile addresses.",
  "updated": "October 2026",
- "summary_sentence": "For example, Times Square at zoom 15 is tile (9649, 12314), quadkey 032010110132021 — one point addressed in both dialects of the tile world from a single paste.",
- "quick_answer": "The Quadkey / Tile XYZ Helper bridges a latitude/longitude point to the tiled web-map concepts many basemap systems use: its XYZ tile numbers and its Bing quadkey at any zoom. Enter the point and read both addresses — the helper for anyone moving between slippy-map tiles and quadkey-indexed data.",
- "steps_intro": "One point, two tile dialects — fluent in both:",
+ "summary_sentence": "XYZ and quadkeys are two ways to address map tiles. The coordinate workspace here does not calculate either; dedicated tile tools are linked below.",
+ "quick_answer": "XYZ tile addresses and quadkeys identify tiles in a map pyramid. This workspace does not calculate either; use the dedicated linked tile tools for those conversions.",
+ "steps_intro": "Use the coordinate workspace for supported global formats, or choose a linked dedicated tile calculator.",
  "use_cases": [
   {
    "title": "Bing Maps data work",
    "body": [
     {
-     "t": "Bing's tile system and quadkey-keyed datasets meet the XYZ world here. Dedicated converters — "
+     "t": "Bing-style quadkey datasets and XYZ tiles use related addressing. The dedicated converters linked below handle these values; this workspace does not."
     },
     {
      "t": "Quadkey to XYZ Tile Converter",
@@ -32,7 +32,7 @@
    "title": "Cross-platform debugging",
    "body": [
     {
-     "t": "A feature sits right in one stack and one tile off in another: compare the point's XYZ and quadkey and the translation bug confesses."
+     "t": "A feature can appear one tile off between systems. Compare XYZ and quadkey addresses with a dedicated tile tool."
     }
    ]
   },
@@ -40,7 +40,7 @@
    "title": "Learning the tile system once",
    "body": [
     {
-     "t": "Seeing a point's numbers in both systems at several zooms teaches the pyramid faster than any diagram."
+     "t": "Comparing addresses at several zooms can help explain the tile pyramid; use a dedicated tile calculator for the values."
     }
    ]
   },
@@ -48,7 +48,7 @@
    "title": "Dataset joins by tile",
    "body": [
     {
-     "t": "Imagery and statistics keyed by quadkey join to XYZ-keyed layers through the shared point — the helper is the Rosetta stone."
+     "t": "Tile-keyed imagery and statistics may be joined using a validated XYZ-to-quadkey conversion."
     }
    ]
   }
@@ -106,7 +106,7 @@
     "Same grid, interleaved bits"
    ]
   ],
-  "note": "A quadkey is the tile's x and y bits interleaved and read in base 4 — the conversion is pure arithmetic, no lookup tables, which is why the two converters on this site are exact."
+  "note": "A quadkey encodes tile x and y bits as base-4 digits. The coordinate workspace on this page does not calculate tile addresses."
  },
  "faq": [
   [
@@ -123,11 +123,11 @@
   ],
   [
    "Which zoom should I use?",
-   "The zoom your data lives at — imagery and statistics are published per level. The helper shows the address at the zoom you ask for."
+   "Use the zoom associated with your data. This workspace does not calculate tile addresses; use a dedicated tile calculator."
   ],
   [
    "Quadkey for a region?",
-   "A region is a set of tiles; quadkey ranges and prefix sets describe it compactly — a list operation, seeded from corner tiles computed here."
+   "A region may cover multiple tiles. This workspace does not calculate the tiles or quadkeys for it."
   ],
   [
    "Precision of a quadkey?",

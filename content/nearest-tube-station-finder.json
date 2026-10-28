@@ -8,17 +8,17 @@
   "underground station near me"
  ],
  "title": "Nearest Tube / Subway Station Finder",
- "description": "Find the nearest tube, subway, metro or underground station to any place with the Nearest Tube / Subway Station Finder — ranked by distance. Free.",
+ "description": "Find nearby Underground-tagged station nodes and subway entrances in OpenStreetMap. Coverage and result limits apply.",
  "updated": "October 2026",
- "summary_sentence": "For example, an address in a new city resolves its nearest station in seconds — and the second nearest, which is the one whose line actually goes where you are headed.",
- "quick_answer": "The Nearest Tube / Subway Station Finder maps the subway, tube, metro and underground stations recorded around a place you search or your location, ranked by distance. Search the place, press find, and read the nearest stations — the first question of any city arrival, answered from open map data.",
+ "summary_sentence": "Results are limited to returned OpenStreetMap records and may omit closer or unmapped places. Confirm details with an authoritative local source.",
+ "quick_answer": "The tool searches OpenStreetMap for mapped Underground-tagged station or subway entrance records around a chosen location, then sorts returned records by straight-line distance. It requests at most 300 records and displays up to 100, so it cannot guarantee the closest result or a complete list. Data, access and opening status can be incomplete or outdated.",
  "steps_intro": "New city, first question: where is my station? Ask the map:",
  "use_cases": [
   {
    "title": "Hotel and rental choice",
    "body": [
     {
-     "t": "“Ten minutes from the station” in a listing versus the measured nearest station: this page is the fact-check, before booking."
+     "t": "Use returned points for initial orientation only; the list does not guarantee the nearest station or calculate walking time."
     }
    ]
   },
@@ -41,7 +41,7 @@
    "title": "Airport arrival orientation",
    "body": [
     {
-     "t": "Land, find the hotel's station, ride the right line. The arrival hour gets calmer with the station named."
+     "t": "The results do not show transit lines or services. Consult the operator for the correct airport route and timetable."
     }
    ]
   },
@@ -67,52 +67,47 @@
    "label": "Example · Every city's word",
    "body": [
     {
-     "t": "Tube in London, subway in New York, metro in Paris and most of the world, U-Bahn in Berlin: the finder searches the concept, not the local brand."
+     "t": "The query selects Underground-tagged station nodes and subway entrances. It does not cover every city or tagging convention; consult the relevant transit operator."
     }
    ]
   }
  ],
  "popular_table": {
-  "title": "What the finder covers",
-  "intro": "Rapid transit in the open record — scope and limits.",
+  "title": "What the finder shows",
+  "intro": "Review the scope of the result before relying on it.",
   "columns": [
-   "System type",
-   "Covered",
-   "Note"
+   "Result",
+   "Available here?",
+   "Limit"
   ],
   "rows": [
    [
-    "Metro / subway / tube / underground",
-    "Yes — the core",
-    "Stations as recorded"
+    "Mapped names and points",
+    "Yes, for returned records",
+    "Coverage and result caps apply"
    ],
    [
-    "Light rail and trams",
-    "Where recorded as stations",
-    "Tagging varies by city"
+    "Distance",
+    "Straight-line to returned point",
+    "Not road or walking distance"
    ],
    [
-    "Mainline rail stations",
-    "Often nearby in data",
-    "This page's focus is rapid transit"
+    "Current access and opening status",
+    "No",
+    "Confirm with the operator"
    ],
    [
-    "Lines and timetables",
-    "Not shown",
-    "The operator owns live service"
-   ],
-   [
-    "Step-free status",
-    "Where tagged",
-    "Authority's map is definitive"
+    "Full details and live availability",
+    "No",
+    "Consult an authoritative source"
    ]
   ],
-  "note": "Coverage follows the world's mapping communities: comprehensive in the great metro cities, patchier where systems are new or data is young."
+  "note": "OpenStreetMap coverage and result limits can omit relevant places. Records may be outdated; confirm access, services and current conditions with an authoritative source."
  },
  "faq": [
   [
    "Does it cover every rapid-transit type?",
-   "It searches the recorded station data for subway, metro, tube and underground systems — the family of urban rapid transit. Light rail and tram stops appear where the data records them similarly; tagging varies by city."
+   "No. It searches station nodes whose network tag contains Underground and subway entrance nodes. Other station tagging and cities may be missed; entrances can appear separately."
   ],
   [
    "Does it show lines and timetables?",
@@ -120,7 +115,7 @@
   ],
   [
    "Can I use the tool without sharing my precise location?",
-   "Yes — search any address or place name."
+   "You can search for a place instead of using device location. The selected search centre is sent to OpenStreetMap-based services for the lookup."
   ],
   [
    "Why might a boundary or place name look different elsewhere?",
@@ -128,7 +123,7 @@
   ],
   [
    "Does MapBench store my browser location?",
-   "No."
+   "Device location is optional. The selected coordinates are sent to Overpass to search; consult the privacy page for provider and site details."
   ],
   [
    "The station exists but is not listed.",
@@ -136,7 +131,7 @@
   ],
   [
    "Walking distance to the entrance?",
-   "Distances rank to the station's recorded point; entrances can sit a street apart. The map view shows the geography your feet will negotiate."
+   "The displayed distance is straight-line to the recorded station or entrance node, not a walking route."
   ],
   [
    "Which station for the airport?",
@@ -152,7 +147,7 @@
   ],
   [
    "Interchange stations?",
-   "One station, several lines — the record models the station once. Lines and interchanges are the operator's layer."
+   "The query returns matching station nodes and entrances; it does not show lines or consolidate entrances into one station."
   ]
  ],
  "related_prose": [

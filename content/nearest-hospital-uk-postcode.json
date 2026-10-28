@@ -11,8 +11,8 @@
  "title": "Nearest Hospital to a UK Postcode",
  "description": "Find the Nearest Hospital to a UK Postcode with the dedicated finder — postcodes.io locates the centre, hospitals ranked by distance. Free.",
  "updated": "October 2026",
- "summary_sentence": "For example, a postcode in a market town resolves to its centre and ranks the district general hospital against the smaller community units — the shape of rural NHS geography in one list.",
- "quick_answer": "The Nearest Hospital to a UK Postcode finder takes a UK postcode, locates its centre with postcodes.io, and maps the hospitals OpenStreetMap records around it, nearest first. Type the postcode, press find, and read the ranked hospitals. In an emergency, call 999 first — this is for planning.",
+ "summary_sentence": "Results are limited to returned OpenStreetMap records and may omit closer or unmapped places. Confirm details with an authoritative local source.",
+ "quick_answer": "The tool searches OpenStreetMap for mapped hospital records around a chosen location, then sorts returned records by straight-line distance. It requests at most 200 records and displays up to 100, so it cannot guarantee the closest result or a complete list. Data, access and opening status can be incomplete or outdated. In an emergency, contact local emergency services; this is not an emergency directory.",
  "steps_intro": "Built for Britain's address system, from the postcode outward:",
  "use_cases": [
   {
@@ -60,7 +60,7 @@
    "label": "Example · The postcode centre",
    "body": [
     {
-     "t": "Distances are measured from the postcode's centre as postcodes.io locates it. A rural postcode can span a mile or more, so a boundary property's true distance differs a little — the ranking usually survives."
+     "t": "Distances are measured from the coordinate returned by postcodes.io. That representative point may not match an individual property or preserve the same ranking."
     }
    ]
   },
@@ -74,41 +74,41 @@
   }
  ],
  "popular_table": {
-  "title": "How the finder works",
-  "intro": "Two open data sources, one ranked answer.",
+  "title": "What the finder shows",
+  "intro": "Review the scope of the result before relying on it.",
   "columns": [
-   "Step",
-   "Source",
-   "Note"
+   "Result",
+   "Available here?",
+   "Limit"
   ],
   "rows": [
    [
-    "Postcode → centre",
-    "postcodes.io",
-    "The postcode's official centroid"
+    "Mapped names and points",
+    "Yes, for returned records",
+    "Coverage and result caps apply"
    ],
    [
-    "Hospitals around it",
-    "OpenStreetMap",
-    "Ranked nearest first"
+    "Distance",
+    "Straight-line to returned point",
+    "Not road or walking distance"
    ],
    [
-    "Distances",
-    "Computed straight-line",
-    "Road journeys will be longer"
+    "Current access and opening status",
+    "No",
+    "Confirm with the operator"
    ],
    [
-    "Emergency advice",
-    "Call 999",
-    "Always first, finder second"
+    "Full details and live availability",
+    "No",
+    "Consult an authoritative source"
    ]
   ],
-  "note": "postcodes.io resolves UK postcodes from open data. Terminated postcodes (old developments) may not resolve — a nearby current postcode stands in."
+  "note": "OpenStreetMap coverage and result limits can omit relevant places. Records may be outdated; confirm access, services and current conditions with an authoritative source."
  },
  "faq": [
   [
    "Is the postcode location exact?",
-   "It is the postcode's centre from postcodes.io — exact as a centroid. Your property sits somewhere within the postcode's area around it, so distances are near-exact for compact urban postcodes and approximate for sprawling rural ones."
+   "postcodes.io returns a representative coordinate for the postcode. It may not match an individual property; calculated distances are straight-line approximations."
   ],
   [
    "What should I do in an emergency?",
@@ -116,7 +116,7 @@
   ],
   [
    "Can I use the tool without sharing my precise location?",
-   "Yes — the postcode is the only input; no device location is involved at all."
+   "You can enter a postcode without using device location. The postcode is sent to postcodes.io and the selected coordinates are sent to Overpass."
   ],
   [
    "Why might a boundary or place name look different elsewhere?",
@@ -124,7 +124,7 @@
   ],
   [
    "Does MapBench store my browser location?",
-   "No — and this page never asks for it."
+   "Device location is optional, including on this page. The selected coordinates are sent to Overpass; consult the privacy page for details."
   ],
   [
    "Does the nearest have A&E?",
@@ -132,7 +132,7 @@
   ],
   [
    "My postcode is not found.",
-   "New or terminated postcodes can miss the open dataset. Try the nearest current postcode — the hospital ranking barely notices a street's difference."
+   "Check the postcode with an official source. A different postcode can change the location and ranking; do not substitute one for a critical decision."
   ],
   [
    "Scotland, Wales, Northern Ireland?",
@@ -140,7 +140,7 @@
   ],
   [
    "Minor injuries units?",
-   "Where the map records them as hospitals or clinics they may appear; NHS sources remain the authority on unit types and hours."
+   "The search selects hospital-tagged OSM records, not clinics as a separate category, and does not verify services. Check NHS or local official listings."
   ]
  ],
  "related_prose": [

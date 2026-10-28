@@ -205,8 +205,8 @@ export default function RadiusTool({ params }: { params?: Record<string, unknown
               type="button" className="btn btn-ghost w-full"
               onClick={() => {
                 const base = circles[0];
-                const off = 0.15 * circles.length;
-                setCircles((cs) => [...cs, { id: nextId.current++, center: { lat: base.center.lat + off, lng: base.center.lng + off }, radiusKm: base.radiusKm }]);
+                const center = destination(base.center, 45, 15 * circles.length);
+                setCircles((cs) => [...cs, { id: nextId.current++, center, radiusKm: base.radiusKm }]);
               }}
             >+ Add circle</button>
           </div>

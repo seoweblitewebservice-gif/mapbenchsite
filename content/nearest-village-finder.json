@@ -8,24 +8,17 @@
   "rural place finder"
  ],
  "title": "Nearest Village Finder: Closest Village",
- "description": "Find the nearest village to any point with the Nearest Village Finder — name, distance and compass direction from open map records. Free.",
+ "description": "Look up settlement fields near a point. This workspace does not find or rank the nearest village.",
  "updated": "October 2026",
- "summary_sentence": "For example, a point deep in farmland resolves to a village two miles northeast that the driver had never heard of — rural geography's everyday magic, and deliveries' everyday need.",
- "quick_answer": "The Nearest Village Finder scans OpenStreetMap's village records around a point and reports the nearest village with its distance and compass direction. Search a place or use your location, press find, and read the answer — built for rural addresses and deliveries where 'near X' needs a name.",
- "steps_intro": "Out where the towns run out, the village is the address. Find yours:",
+ "summary_sentence": "Nominatim may return a village, town or hamlet field for a nearby mapped object. The workspace does not calculate the nearest village.",
+ "quick_answer": "This workspace reverse-geocodes a point and highlights a village, town or hamlet field when present. It does not scan nearby villages or calculate distance or direction.",
+ "steps_intro": "Enter coordinates, search a place or click the map to inspect available settlement fields:",
  "use_cases": [
   {
    "title": "Rural deliveries and directions",
    "body": [
     {
-     "t": "“Nearest village?” is the question rural directions actually run on. The finder answers with distance and direction — the "
-    },
-    {
-     "t": "Bearing Calculator",
-     "l": "/tools/bearing-calculator"
-    },
-    {
-     "t": " refines the bearing."
+     "t": "A settlement field may help orient a rural address, but verify the location before using it for deliveries."
     }
    ]
   },
@@ -33,7 +26,7 @@
    "title": "Property hunting in the country",
    "body": [
     {
-     "t": "A listing's 'rural setting' becomes a measured village distance — the shop, the pub, the school run's real anchor."
+     "t": "A mapped settlement name is preliminary context, not a measured distance to shops or services."
     }
    ]
   },
@@ -41,7 +34,7 @@
    "title": "Breakdown and pickup orientation",
    "body": [
     {
-     "t": "Tell the recovery service the nearest village and direction and you have given them a map reference a human can use."
+     "t": "For a breakdown or emergency, share your verified location directly with the relevant service. This lookup does not calculate the nearest village."
     }
    ]
   },
@@ -49,97 +42,72 @@
    "title": "Walking and cycling base-finding",
    "body": [
     {
-     "t": "Villages mean water, food and buses. Route planning through village country starts with knowing where they are."
+     "t": "Use the mapped address field for orientation and consult local sources for access, services and routes."
     }
    ]
   }
  ],
  "examples": [
   {
-   "label": "Example · Direction included",
+   "label": "Example · Settlement field",
    "body": [
     {
-     "t": "Name plus distance plus compass direction is a complete rural reference: 'two miles northeast' orients a human; coordinates orient a machine. The finder gives the human version."
+     "t": "When a reverse-geocoding result includes a village field, the workspace highlights that name. It may fall back to a town or hamlet field."
     }
    ]
   },
   {
-   "label": "Example · What is a village?",
+   "label": "Example · Missing field",
    "body": [
     {
-     "t": "The map's settlement classification decides — village between hamlet and town in the record's terms. Local pride may grade settlements differently; the data's word is the one reported."
+     "t": "An absent village field does not prove that no village is nearby. The search does not rank settlements."
     }
    ]
   }
  ],
  "popular_table": {
-  "title": "The settlement ladder",
-  "intro": "Where 'village' sits in the map record's vocabulary — the finder's target, in context.",
+  "title": "Settlement lookup limits",
+  "intro": "The result comes from a nearby suitable mapped object, not a nearest-village calculation.",
   "columns": [
-   "Class",
-   "Character",
-   "Finder relevance"
+   "Output",
+   "Available?"
   ],
   "rows": [
    [
-    "Hamlet",
-    "A cluster of houses, no services implied",
-    "Below the target"
+    "Village, town or hamlet field",
+    "When returned by Nominatim"
    ],
    [
-    "Village",
-    "A community with a name and usually a heart — church, hall, shop in some order",
-    "This finder's target"
+    "Distance to nearest village",
+    "No"
    ],
    [
-    "Town",
-    "Larger, market functions",
-    "Above the target"
+    "Direction to nearest village",
+    "No"
    ],
    [
-    "City",
-    "The big league",
-    "A different finder entirely"
+    "Verified municipal boundary",
+    "No"
    ]
   ],
-  "note": "Classifications are mapper-recorded and culture-shaped: a Scandinavian 'village' and an English one differ in scale. The finder reports the record's class honestly."
+  "note": "Settlement names and coverage can vary; confirm important uses with a local source."
  },
  "faq": [
   [
-   "How is 'nearest' measured?",
-   "Straight-line distance from your point across OpenStreetMap's village records, reported with the compass direction to it. Roads may wind further; the crow's measure is the ranking's honest basis."
+   "Does this find the nearest village?",
+   "No. It reads a settlement field from a reverse-geocoding result, without ranking villages."
   ],
   [
-   "Does it work outside the US and Europe?",
-   "Wherever OpenStreetMap carries settlement records — most of the inhabited world, at varying depth. Sparse-data regions return sparser answers, labelled by their scarcity."
+   "Does it give distance or direction?",
+   "No. Neither is calculated by this workspace."
   ],
   [
-   "Can I use the tool without sharing my precise location?",
-   "Yes — search a place name or enter a point instead."
+   "Why might the settlement field be absent?",
+   "It may be missing in the returned record. This does not prove that no settlement exists nearby."
   ],
   [
-   "Why might a boundary or place name look different elsewhere?",
-   "Village names and classifications vary by source and language; the record's version is shown as recorded."
-  ],
-  [
-   "Does MapBench store my browser location?",
-   "No."
-  ],
-  [
-   "It returned a hamlet, not a village.",
-   "In sparse records the nearest settlement of village class can be far; where the finder widens the net, it reports what it actually found, class included."
-  ],
-  [
-   "The village has two names.",
-   "Bilingual regions record both; the finder shows the record's name forms. Both are right — maps carry communities' names, not verdicts."
-  ],
-  [
-   "Can I find the nearest town instead?",
-   "The settlement tools and 'what place' finders cover the ladder's other rungs — see the related pages for the town-shaped tools."
-  ],
-  [
-   "Seasonal villages?",
-   "Resort settlements exist in the record year-round; whether the shop is open in February is a question for the village itself."
+   "Can I search without device location?",
+   "Yes. Enter coordinates, search a place, or click the map. The selected coordinates are sent to Nominatim."
   ]
  ],
  "related_prose": [

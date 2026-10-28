@@ -1,6 +1,6 @@
 # Whole-site rendered-page audit
 
-Pages checked: **888**. Internal links checked (unique per page): **48603**. Findings: **0**.
+Pages checked: **888**. Internal links checked (unique per page): **48525**. Findings: **0**.
 
 ## Coverage
 

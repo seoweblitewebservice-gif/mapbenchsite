@@ -7,17 +7,17 @@
   "path length map"
  ],
  "title": "Trail Distance Estimator: Path Length on the Map",
- "description": "Estimate a trail's length from its path on the map with the Trail Distance Estimator — waypoint segments summed honestly, switchbacks included. Free.",
+ "description": "Compare two locations by straight-line distance; this workspace does not measure a traced trail.",
  "updated": "October 2026",
- "summary_sentence": "For example, four waypoints on a short ridge walk sum to 1.62 km of path while the endpoints sit only 1.34 km apart — the trail is 21% longer than the map's straight line, as trails always are.",
- "quick_answer": "The Trail Distance Estimator measures the length of a path drawn or entered as waypoints on the map, summing the great-circle distance of every segment. Trace the route and read its true length in kilometres or miles — the number hikers and trail crews actually walk.",
- "steps_intro": "Trails are not straight lines. Measure the line they actually take:",
+ "summary_sentence": "Straight-line distance between two endpoints can be shorter than a winding trail; this workspace does not trace the route.",
+ "quick_answer": "This workspace measures the spherical great-circle distance between two points. It does not trace trails or sum multiple path segments, so the result is not a trail-length estimate.",
+ "steps_intro": "Choose two locations by searching or clicking the map, then read their straight-line distance. Use a suitable route or track tool for an actual path.",
  "use_cases": [
   {
    "title": "Hike planning",
    "body": [
     {
-     "t": "Trace the route before you walk it and the day gains an honest length — then pair it with elevation context, since a flat 10 miles and a mountainous 10 miles are different days wearing the same number."
+     "t": "A straight-line endpoint distance can provide context for a hike, but it does not account for the actual trail or elevation."
     }
    ]
   },
@@ -25,7 +25,7 @@
    "title": "Race and event courses",
    "body": [
     {
-     "t": "Trail races measured by waypoint sums explain why your watch disagrees: GPS sampling cuts corners the estimator keeps, if the waypoints hug the path."
+     "t": "Race course length requires the actual path and a suitable measurement method, not just its two endpoints."
     }
    ]
   },
@@ -33,14 +33,7 @@
    "title": "Trail maintenance and signage",
    "body": [
     {
-     "t": "Segment lengths between junctions are what signposts print. Crews measure them here before the signs are carved — and check totals against the "
-    },
-    {
-     "t": "Driving Distance Calculator",
-     "l": "/tools/driving-distance-calculator"
-    },
-    {
-     "t": " for the road approach."
+     "t": "For trail signage, measure the route between junctions with a suitable track or survey workflow; this workspace only measures endpoints."
     }
    ]
   },
@@ -48,93 +41,72 @@
    "title": "Checking a published trail length",
    "body": [
     {
-     "t": "Guidebooks disagree with each other constantly. An independent waypoint sum is the audit that ends the argument at the trailhead."
+     "t": "Compare endpoint distance with a published trail length only as a rough context, not an independent trail measurement."
     }
    ]
   }
  ],
  "examples": [
   {
-   "label": "Example · The switchback tax",
+   "label": "Example · Endpoint versus path",
    "body": [
     {
-     "t": "Four example waypoints (a ridge path sampled from a GPS log) sum to 1.62 km, segment by segment: 0.25 + 0.68 + 0.68 km. Endpoint-to-endpoint is 1.34 km. The 21% difference is why straight-line tools understate every real trail."
+     "t": "A winding trail can be longer than the shortest surface distance between its endpoints. Measuring that trail requires its route, not only the endpoints."
     }
    ]
   },
   {
-   "label": "Example · Waypoint density decides truth",
+   "label": "Example · Ground and map distance",
    "body": [
     {
-     "t": "The same path traced with two points instead of four collapses to its chord and loses a fifth of its length. On curves, add waypoints until adding more stops changing the total — that convergence is the measurement."
+     "t": "A horizontal map measurement does not account for elevation changes. Terrain and the route taken can affect the distance travelled."
     }
    ]
   }
  ],
  "popular_table": {
-  "title": "Segments of the worked example",
-  "intro": "Each leg is a great-circle segment; the trail is their sum.",
+  "title": "What this workspace measures",
+  "intro": "Choose the measurement that fits the task.",
   "columns": [
-   "Segment",
-   "Length",
-   "Running total"
+   "Measurement",
+   "Input",
+   "Available here?"
   ],
   "rows": [
    [
-    "Waypoint 1 → 2",
-    "0.25 km",
-    "0.25 km"
+    "Straight-line surface distance",
+    "Two locations",
+    "Yes"
    ],
    [
-    "Waypoint 2 → 3",
-    "0.68 km",
-    "0.94 km"
+    "Multi-segment trail distance",
+    "Route or track points",
+    "No"
    ],
    [
-    "Waypoint 3 → 4",
-    "0.68 km",
-    "1.62 km"
-   ],
-   [
-    "Endpoints straight-line (for contrast)",
-    "1.34 km",
-    "— the underestimate"
+    "Terrain-adjusted distance",
+    "Path and elevation data",
+    "No"
    ]
   ],
-  "note": "On the ground, GPS tracks sample every few seconds and still cut sharp corners slightly. Denser waypoints approach the true path; the estimator is exact for the path you give it."
+  "note": "The displayed result uses a spherical great-circle approximation and does not follow trails or roads."
  },
  "faq": [
   [
-   "How many waypoints do I need?",
-   "Enough that the polyline hugs the path: every switchback turn and curve deserves one. When doubling the points changes the total by under a percent, you have converged."
-  ],
-  [
-   "Why does my GPS watch show a different distance?",
-   "Sampling rate, signal noise in trees and gorges, and corner-cutting algorithms all move the total. A careful map trace and a watch recording measure the same trail with different instruments — small disagreements are normal, large ones mean a sparse trace."
+   "Can this measure a drawn trail?",
+   "No. It measures straight-line distance between two locations, not a drawn or uploaded trail."
   ],
   [
    "Does it include climbing?",
-   "The length is horizontal map distance; steep ground adds a little true distance (a 20% grade adds about 2%). Your legs experience the climb as effort, not mileage — plan time with elevation tools alongside."
+   "No. Elevation and terrain are not included."
   ],
   [
-   "Out-and-back trails?",
-   "Trace the outward path and double it — or trace the return too if the route differs. The estimator sums what you give it, symmetrically honest."
-  ],
-  [
-   "Can I estimate a road route this way?",
-   "You can trace roads with waypoints, but the dedicated routing tools follow the road network automatically and add travel time. Waypoint tracing shines where no network exists: trails, fields, water, ice."
-  ],
-  [
-   "Miles or kilometres?",
-   "Both, with feet for short paths — trail culture in the US speaks miles, most of the world kilometres, and the estimator translates without opinion."
-  ],
-  [
-   "Closed loops?",
-   "Add the first point again at the end (or use the loop option where offered) so the closing segment counts — park loops and lollipop routes depend on it."
+   "Can it measure a road route?",
+   "No. It does not follow roads; use a routing tool for road-network distances."
   ],
   [
    "How accurate is the result?",
-   "As accurate as the traced path. The segment arithmetic is geodesic-exact; the fidelity question is entirely in waypoint placement, which the convergence habit in the first FAQ controls."
+   "The calculation is a spherical great-circle approximation. Location input accuracy and the chosen earth model affect the result."
   ]
  ],
  "related_prose": [

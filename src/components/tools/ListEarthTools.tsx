@@ -3,6 +3,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import type { Map as MLMap, GeoJSONSource } from "maplibre-gl";
 import { destination, distanceKm, fmt, fmtCoords, type LatLng } from "@/lib/geo";
 import { geolocation } from "@/lib/geocode";
+import { sumArchiveDaily } from "@/lib/archiveTotals";
 import { ErrorBox, Field, Seg, Spinner, Stat } from "@/components/ui";
 import { DynamicMap, pinElement, PlaceField, type PlaceValue } from "./shared";
 
@@ -50,7 +51,7 @@ async function fetchElevations(points: LatLng[]): Promise<number[]> {
   if (!res.ok) throw new Error("elevation");
   const data: any = await res.json();
   const vals: number[] = data?.elevation ?? [];
-  if (vals.length !== points.length) throw new Error("elevation");
+  if (vals.length !== points.length || vals.some((v) => typeof v !== "number" || !Number.isFinite(v))) throw new Error("elevation");
   return vals;
 }
 
@@ -62,7 +63,13 @@ async function fetchArchiveTotals(points: LatLng[], start: string, end: string, 
   const data: any = await res.json();
   const arr: any[] = Array.isArray(data) ? data : [data];
   if (arr.length !== points.length) throw new Error("archive");
-  return arr.map((item) => ((item?.daily?.[variable] ?? []) as (number | null)[]).reduce((a: number, v) => a + (v ?? 0), 0));
+  const expectedDays = Math.round((Date.parse(`${end}T00:00:00Z`) - Date.parse(`${start}T00:00:00Z`)) / 86400000) + 1;
+  if (!Number.isFinite(expectedDays) || expectedDays < 1) throw new Error("invalid date range");
+  return arr.map((item) => {
+    const total = sumArchiveDaily(item?.daily?.[variable], expectedDays);
+    if (total === null) throw new Error("incomplete archive");
+    return total;
+  });
 }
 
 function bandColor(value: number, min: number, max: number, colors: string[]): string {
@@ -151,21 +158,25 @@ function ElevationAtlas() {
   const [center, setCenter] = useState<PlaceValue | null>(null);
   const [span, setSpan] = useState("10");
   const [busy, setBusy] = useState(false);
+  const requestId = useRef(0);
+  const invalidate = () => { requestId.current++; setBusy(false); setCells([]); setStats(null); setError(null); };
   const [error, setError] = useState<string | null>(null);
   const [cells, setCells] = useState<Cell[]>([]);
   const [stats, setStats] = useState<{ min: number; max: number; mean: number; hi: LatLng; lo: LatLng } | null>(null);
 
   const run = async () => {
     if (!center) { setError("Pick a centre first — search, click the map, or use GPS."); return; }
-    setBusy(true); setError(null);
+    const id = ++requestId.current;
+    setBusy(true); setError(null); setCells([]); setStats(null);
     try {
       const { samples } = buildGrid(center, parseFloat(span), 7);
       const elevs = await fetchElevations(samples.map((s) => s.pt));
+      if (id !== requestId.current) return;
       const min = Math.min(...elevs), max = Math.max(...elevs);
       const mean = elevs.reduce((a, b) => a + b, 0) / elevs.length;
       setCells(samples.map((s, i) => ({ ...s, value: elevs[i], color: bandColor(elevs[i], min, max, ELEV_COLORS) })));
       setStats({ min, max, mean, hi: samples[elevs.indexOf(max)].pt, lo: samples[elevs.indexOf(min)].pt });
-    } catch { setError("The Open-Meteo elevation service didn't answer — try again shortly."); }
+    } catch { if (id !== requestId.current) return; setError("The Open-Meteo elevation service didn't answer — try again shortly."); }
     setBusy(false);
   };
 
@@ -178,8 +189,8 @@ function ElevationAtlas() {
   return (
     <div className="grid gap-4 lg:grid-cols-[400px,1fr]">
       <div className="card order-2 space-y-4 p-4 lg:order-1">
-        <CenterPicker center={center} setCenter={(v) => { setCenter(v); setCells([]); setStats(null); }} setError={setError} />
-        <div><span className="label">Area size</span><Seg options={SPANS} value={span} onChange={setSpan} ariaLabel="Area size" /></div>
+        <CenterPicker center={center} setCenter={(v) => { setCenter(v); invalidate(); }} setError={setError} />
+        <div><span className="label">Area size</span><Seg options={SPANS} value={span} onChange={(v) => { setSpan(v); invalidate(); }} ariaLabel="Area size" /></div>
         <button type="button" className="btn btn-primary w-full" onClick={run} disabled={busy}>{busy ? <Spinner label="Sampling 49 elevations…" /> : "Map the elevations"}</button>
         {error && <ErrorBox>{error}</ErrorBox>}
         {stats && (
@@ -195,7 +206,7 @@ function ElevationAtlas() {
         )}
         <p className="text-xs text-mute">A 7 × 7 grid of real elevations from the Open-Meteo elevation API (based on terrain models such as SRTM). Each cell is coloured by its centre sample — a picture of the ground, not a survey.</p>
       </div>
-      <GridMap center={center} cells={cells} onPick={(p) => { setCenter(p); setCells([]); setStats(null); }} />
+      <GridMap center={center} cells={cells} onPick={(p) => { setCenter(p); invalidate(); }} />
     </div>
   );
 }
@@ -214,17 +225,21 @@ function TerrainGrid() {
   const [center, setCenter] = useState<PlaceValue | null>(null);
   const [span, setSpan] = useState("5");
   const [busy, setBusy] = useState(false);
+  const requestId = useRef(0);
+  const invalidate = () => { requestId.current++; setBusy(false); setCells([]); setStats(null); setError(null); };
   const [error, setError] = useState<string | null>(null);
   const [cells, setCells] = useState<Cell[]>([]);
   const [stats, setStats] = useState<{ mean: number; max: number; steepPct: number } | null>(null);
 
   const run = async () => {
     if (!center) { setError("Pick a centre first — search, click the map, or use GPS."); return; }
-    setBusy(true); setError(null);
+    const id = ++requestId.current;
+    setBusy(true); setError(null); setCells([]); setStats(null);
     try {
       const n = 9;
       const { samples, stepKm } = buildGrid(center, parseFloat(span), n);
       const elevs = await fetchElevations(samples.map((s) => s.pt));
+      if (id !== requestId.current) return;
       const at = (r: number, c: number) => elevs[r * n + c];
       const out: Cell[] = [];
       for (let r = 1; r < n - 1; r++) {
@@ -243,15 +258,15 @@ function TerrainGrid() {
         max: Math.max(...slopes),
         steepPct: (slopes.filter((s) => s > 15).length / slopes.length) * 100,
       });
-    } catch { setError("The Open-Meteo elevation service didn't answer — try again shortly."); }
+    } catch { if (id !== requestId.current) return; setError("The Open-Meteo elevation service didn't answer — try again shortly."); }
     setBusy(false);
   };
 
   return (
     <div className="grid gap-4 lg:grid-cols-[400px,1fr]">
       <div className="card order-2 space-y-4 p-4 lg:order-1">
-        <CenterPicker center={center} setCenter={(v) => { setCenter(v); setCells([]); setStats(null); }} setError={setError} />
-        <div><span className="label">Area size</span><Seg options={SPANS} value={span} onChange={setSpan} ariaLabel="Area size" /></div>
+        <CenterPicker center={center} setCenter={(v) => { setCenter(v); invalidate(); }} setError={setError} />
+        <div><span className="label">Area size</span><Seg options={SPANS} value={span} onChange={(v) => { setSpan(v); invalidate(); }} ariaLabel="Area size" /></div>
         <button type="button" className="btn btn-primary w-full" onClick={run} disabled={busy}>{busy ? <Spinner label="Sampling 81 elevations…" /> : "Map the slopes"}</button>
         {error && <ErrorBox>{error}</ErrorBox>}
         {stats && (
@@ -266,7 +281,7 @@ function TerrainGrid() {
         )}
         <p className="text-xs text-mute">Slope is worked out from a 9 × 9 elevation sample (the map shows the inner 7 × 7 cells, which have neighbours on all sides). Honest note: resolution depends on the span you pick — a wide span smooths out small steep spots. This is a sampled model, not a survey.</p>
       </div>
-      <GridMap center={center} cells={cells} onPick={(p) => { setCenter(p); setCells([]); setStats(null); }} />
+      <GridMap center={center} cells={cells} onPick={(p) => { setCenter(p); invalidate(); }} />
     </div>
   );
 }
@@ -281,11 +296,14 @@ function ArchiveGrid({ kind }: { kind: "snow" | "rain" }) {
   const [today] = useState(() => new Date());
   const iso = (d: Date) => d.toISOString().slice(0, 10);
   const [center, setCenter] = useState<PlaceValue | null>(null);
-  const [year, setYear] = useState(today.getFullYear() - 1);
-  const [start, setStart] = useState(iso(new Date(today.getTime() - 90 * 86400000)));
+  const latestWinter = today.getUTCFullYear() - (today.getUTCMonth() < 3 ? 2 : 1);
+  const [year, setYear] = useState(latestWinter);
+  const [start, setStart] = useState(iso(new Date(today.getTime() - 89 * 86400000)));
   const [end, setEnd] = useState(iso(today));
   const [period, setPeriod] = useState("90");
   const [busy, setBusy] = useState(false);
+  const requestId = useRef(0);
+  const invalidate = () => { requestId.current++; setBusy(false); setCells([]); setStats(null); setError(null); };
   const [error, setError] = useState<string | null>(null);
   const [cells, setCells] = useState<Cell[]>([]);
   const [stats, setStats] = useState<{ point: number; max: number; mean: number } | null>(null);
@@ -295,16 +313,18 @@ function ArchiveGrid({ kind }: { kind: "snow" | "rain" }) {
     const s = isSnow ? `${year}-12-01` : start;
     const e = isSnow ? `${year + 1}-03-31` : end;
     if (!isSnow && (!s || !e || s > e)) { setError("Pick a start date that comes before the end date."); return; }
-    setBusy(true); setError(null);
+    const id = ++requestId.current;
+    setBusy(true); setError(null); setCells([]); setStats(null);
     try {
       const { samples } = buildGrid(center, 25, 5);
       const raw = await fetchArchiveTotals(samples.map((x) => x.pt), s, e, isSnow ? "snowfall_sum" : "precipitation_sum");
+      if (id !== requestId.current) return;
       const totals = raw.map((v) => v * (isSnow ? CM_TO_IN : MM_TO_IN));
       const min = 0, max = Math.max(...totals, 0.01);
       const colors = isSnow ? SNOW_COLORS : RAIN_COLORS;
       setCells(samples.map((x, i) => ({ ...x, value: totals[i], color: bandColor(totals[i], min, max, colors) })));
       setStats({ point: totals[12], max, mean: totals.reduce((a, b) => a + b, 0) / totals.length });
-    } catch { setError("The Open-Meteo weather archive didn't answer — try again shortly."); }
+    } catch { if (id !== requestId.current) return; setError("The archive request failed or returned missing daily values. Check the dates and try again; incomplete totals are not shown."); }
     setBusy(false);
   };
 
@@ -317,34 +337,34 @@ function ArchiveGrid({ kind }: { kind: "snow" | "rain" }) {
   return (
     <div className="grid gap-4 lg:grid-cols-[400px,1fr]">
       <div className="card order-2 space-y-4 p-4 lg:order-1">
-        <CenterPicker center={center} setCenter={(v) => { setCenter(v); setCells([]); setStats(null); }} setError={setError} label="Your point" />
+        <CenterPicker center={center} setCenter={(v) => { setCenter(v); invalidate(); }} setError={setError} label="Your point" />
         {isSnow ? (
           <Field label="Winter season (starts this December)">
-            <input type="number" className="input" min={1980} max={today.getFullYear() - 1} value={year}
-              onChange={(e) => setYear(Math.min(today.getFullYear() - 1, Math.max(1980, parseInt(e.target.value) || today.getFullYear() - 1)))} />
+            <input type="number" className="input" min={1980} max={latestWinter} value={year}
+              onChange={(e) => { setYear(Math.min(latestWinter, Math.max(1980, parseInt(e.target.value) || latestWinter))); invalidate(); }} />
           </Field>
         ) : (
           <>
             <div><span className="label">Quick period</span>
               <Seg options={[{ value: "30", label: "30 days" }, { value: "90", label: "90 days" }, { value: "365", label: "1 year" }]}
                 value={period}
-                onChange={(v) => { setPeriod(v); const d = parseInt(v); setEnd(iso(new Date())); setStart(iso(new Date(Date.now() - d * 86400000))); }}
+                onChange={(v) => { invalidate(); setPeriod(v); const d = parseInt(v); setEnd(iso(new Date())); setStart(iso(new Date(Date.now() - (d - 1) * 86400000))); }}
                 ariaLabel="Quick period" />
             </div>
             <div className="grid grid-cols-2 gap-3">
-              <Field label="Start date"><input type="date" className="input" value={start} onChange={(e) => { setPeriod(""); setStart(e.target.value); }} /></Field>
-              <Field label="End date"><input type="date" className="input" value={end} onChange={(e) => { setPeriod(""); setEnd(e.target.value); }} /></Field>
+              <Field label="Start date"><input type="date" className="input" value={start} onChange={(e) => { invalidate(); setPeriod(""); setStart(e.target.value); }} /></Field>
+              <Field label="End date"><input type="date" className="input" value={end} onChange={(e) => { invalidate(); setPeriod(""); setEnd(e.target.value); }} /></Field>
             </div>
           </>
         )}
         <button type="button" className="btn btn-primary w-full" onClick={run} disabled={busy}>
-          {busy ? <Spinner label="Adding up the archive…" /> : isSnow ? "Map the season's snowfall" : "Map the rainfall"}
+          {busy ? <Spinner label="Adding up the archive…" /> : isSnow ? "Map the season's snowfall" : "Map the precipitation"}
         </button>
         {error && <ErrorBox>{error}</ErrorBox>}
         {stats && (
           <>
             <div className="grid grid-cols-2 gap-2">
-              <Stat label={isSnow ? "Snowfall at your point" : "Rain at your point"} value={`${fmt(stats.point, 1)} in`} />
+              <Stat label={isSnow ? "Snowfall at your point" : "Precipitation at your point"} value={`${fmt(stats.point, 1)} in`} />
               <Stat label="Wettest cell nearby" value={`${fmt(stats.max, 1)} in`} sub="highest of the 25 cells" />
               <Stat label="Area average" value={`${fmt(stats.mean, 1)} in`} sub="25 cells over about 25 miles" />
             </div>
@@ -353,11 +373,11 @@ function ArchiveGrid({ kind }: { kind: "snow" | "rain" }) {
         )}
         <p className="text-xs text-mute">
           {isSnow
-            ? "Snow depth on the ground is not in the free archive — this tool maps total snowfall for the season, not depth. Totals come from the ERA5 archive via Open-Meteo, summed over December 1 to March 31."
-            : "Totals come from the ERA5 weather archive via Open-Meteo, summed day by day over your dates across a 5 × 5 grid about 25 miles wide. Rain gauges on the ground can read differently."}
+            ? "This maps modelled total snowfall, not snow depth. Daily Open-Meteo archive values are summed over December 1 to March 31; missing values cause an error instead of being counted as zero."
+            : "Daily total precipitation from the Open-Meteo archive is summed over your dates across a 5 × 5 grid about 25 miles wide. It includes snow water equivalent, not just rain. Model estimates and ground gauges can differ."}
         </p>
       </div>
-      <GridMap center={center} cells={cells} onPick={(p) => { setCenter(p); setCells([]); setStats(null); }} zoom={9} />
+      <GridMap center={center} cells={cells} onPick={(p) => { setCenter(p); invalidate(); }} zoom={9} />
     </div>
   );
 }
@@ -412,7 +432,7 @@ function GpsSpeedometer() {
           if ((mps === null || !Number.isFinite(mps)) && dt > 0) mps = (dKm * 1000) / dt;
         }
         lastRef.current = { pt, t: now };
-        if (mps !== null && Number.isFinite(mps)) {
+        if (mps !== null && Number.isFinite(mps) && mps >= 0) {
           const mph = mps * 2.23694;
           setSpeedMph(mph); setSpeedKmh(mps * 3.6);
           if (mph > maxRef.current) { maxRef.current = mph; setMaxMph(mph); }
@@ -434,6 +454,8 @@ function GpsSpeedometer() {
   const stopWatch = () => {
     if (watchRef.current !== null && typeof navigator !== "undefined") navigator.geolocation?.clearWatch(watchRef.current);
     watchRef.current = null;
+    lastRef.current = null;
+    setSpeedMph(null); setSpeedKmh(null);
     if (startStampRef.current) baseElapsedRef.current += (nowMs() - startStampRef.current) / 1000;
     startStampRef.current = null;
     setWatching(false);
@@ -463,11 +485,11 @@ function GpsSpeedometer() {
           <button type="button" className="btn btn-ghost" onClick={clear}>Clear</button>
         </div>
         {error && <ErrorBox>{error}</ErrorBox>}
-        <p className="text-xs text-mute">Speed comes straight from your device&apos;s GPS. Readings jump around when you are standing still or indoors — that&apos;s the GPS signal, not the tool. Nothing is uploaded or saved.</p>
+        <p className="text-xs text-mute">Speed uses the device reading when available or estimates it from successive fixes. Distance can be affected by jitter or missed movement. This display is not a certified speedometer; do not use it while driving. The speedometer itself does not upload or save the location stream.</p>
       </div>
       <div className="grid content-start grid-cols-2 gap-2">
         <Stat label="Top speed" value={`${fmt(maxMph, 1)} mph`} />
-        <Stat label="Average speed" value={`${fmt(avgMph, 1)} mph`} sub="distance ÷ moving time" />
+        <Stat label="Average speed" value={`${fmt(avgMph, 1)} mph`} sub="distance ÷ time tracking was active" />
         <Stat label="Distance travelled" value={`${fmt(distMi, 2)} mi`} sub={`${fmt(distMi * 1.609344, 2)} km`} />
         <Stat label="Elapsed time" value={`${mm}:${String(ss).padStart(2, "0")}`} sub="minutes : seconds" />
         <Stat label="GPS accuracy" value={accuracy !== null ? `± ${fmt(accuracy * M_TO_FT, 0)} ft` : "—"} sub={accuracy !== null ? `± ${fmt(accuracy, 0)} m` : "no fix yet"} />
@@ -534,7 +556,7 @@ function MoonCalendar() {
           {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((d) => <div key={d}>{d}</div>)}
         </div>
         <div className="grid grid-cols-7 gap-2">{cells}</div>
-        <p className="mt-3 text-xs text-mute">Phases use the standard synodic approximation, counted from the new moon of January 6, 2000 (18:14 UTC). Good enough for planning a night out or a photo — not for astronomy papers. Times can land a few hours off the exact moment of each phase.</p>
+        <p className="mt-3 text-xs text-mute">Phases are approximate mean-cycle estimates at noon UTC, anchored to January 6, 2000. Actual phase times and illumination vary from this simplified model; check a reliable ephemeris for precise dates and times.</p>
       </div>
     </div>
   );
@@ -634,14 +656,15 @@ function CicadaMap() {
       const data: any = await res.json();
       const props = data?.features?.[0]?.properties ?? {};
       const country: string = props.country ?? "";
-      if (country && country !== "United States") throw new Error("Periodical Magicicada broods live only in the eastern and central United States.");
+      if (country !== "United States") throw new Error("Select a location that the geocoder identifies as being in the United States.");
+      if (!props.state) throw new Error("The location service did not return a US state. Choose a different point.");
       const abbr = STATE_ABBR[(props.state ?? "").toLowerCase()] ?? (props.state ?? "").toUpperCase();
       const list = BROODS.filter((b) => b.states.includes(abbr))
         .map((b) => ({ name: b.name, cycle: b.cycle, next: nextEmergence(b) }))
         .sort((a, b) => a.next - b.next);
       setBroods({ state: props.state ?? abbr, list });
     } catch (e: any) {
-      setBroodError(e?.message && String(e.message).includes("United States") ? e.message : "The location lookup didn't answer — try again shortly.");
+      setBroodError(e?.message && (String(e.message).includes("United States") || String(e.message).includes("US state")) ? e.message : "The location lookup didn't answer — try again shortly.");
     }
     setBroodBusy(false);
   };
@@ -650,17 +673,17 @@ function CicadaMap() {
     <div className="grid gap-4 lg:grid-cols-[400px,1fr]">
       <div className="card order-2 space-y-4 p-4 lg:order-1">
         <div className="space-y-3 rounded-xl border border-line p-3">
-          <div className="label">Which brood is at your location?</div>
+          <div className="label">Possible broods listed for a state</div>
           <PlaceField label="US location" value={place} onChange={setPlace} />
-          <button type="button" className="btn btn-primary w-full" onClick={identifyBrood} disabled={broodBusy || !place}>{broodBusy ? <Spinner label="Looking up the brood…" /> : "Identify the brood & next emergence"}</button>
+          <button type="button" className="btn btn-primary w-full" onClick={identifyBrood} disabled={broodBusy || !place}>{broodBusy ? <Spinner label="Looking up the brood…" /> : "List possible state broods"}</button>
           {broodError && <ErrorBox>{broodError}</ErrorBox>}
           {broods && (broods.list.length ? (
             <div className="space-y-2">
-              <p className="text-sm font-medium">{broods.state} falls in these recorded brood ranges:</p>
+              <p className="text-sm font-medium">Broods in the tool’s state-level list for {broods.state}:</p>
               {broods.list.map((b) => (
                 <div key={b.name} className="flex items-center justify-between gap-2 rounded-lg bg-paper px-3 py-2">
                   <span className="text-sm font-semibold">{b.name}</span>
-                  <span className="chip chip-brand">{b.cycle}-year · next {b.next}</span>
+                  <span className="chip chip-brand">{b.cycle}-year · next after this year: {b.next}</span>
                 </div>
               ))}
               <p className="text-xs text-mute">Ranges are matched at state level from the published brood maps — a brood rarely covers a whole state, so treat this as “possible here” and check a county-level brood map for certainty.</p>
@@ -672,7 +695,7 @@ function CicadaMap() {
         <button type="button" className="btn btn-primary w-full" onClick={load} disabled={busy}>{busy ? <Spinner label="Fetching observations…" /> : "Reload observations"}</button>
         {error && <ErrorBox>{error}</ErrorBox>}
         <div className="grid grid-cols-2 gap-2">
-          <Stat label="Observations plotted" value={pts.length ? fmt(pts.length, 0) : "—"} sub="most recent 300 with coordinates" />
+          <Stat label="Observations plotted" value={pts.length ? fmt(pts.length, 0) : "—"} sub="up to 300 returned records" />
           <Stat label="Years covered" value={yearRange} />
         </div>
         <p className="text-xs text-mute">These dots are recorded observations of <em>Magicicada</em> — the periodical cicadas of the eastern United States — reported to GBIF by researchers and the public. They show where cicadas have been seen, mostly in the US. This is a record of the past, not a forecast of the next emergence.</p>

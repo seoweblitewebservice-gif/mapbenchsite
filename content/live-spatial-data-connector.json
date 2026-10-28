@@ -10,8 +10,8 @@
  "title": "Live Spatial Data Connector: Feeds on a Map",
  "description": "Connect a public GeoJSON or CSV feed with the Live Spatial Data Connector and watch it render on a map — refresh re-reads the source. Free, in-browser.",
  "updated": "October 2026",
- "summary_sentence": "For example, paste the USGS earthquake feed address and the map fills with the past hour's quakes — hit refresh in ten minutes and new ones have arrived, because the map re-reads the feed, not a copy.",
- "quick_answer": "The Live Spatial Data Connector renders a public data endpoint — a GeoJSON feed or a CSV with latitude and longitude columns — directly onto a map in your browser. Paste the feed address and the map draws it; refresh re-reads the source.",
+ "summary_sentence": "Data is fetched directly by the browser when you connect or refresh; CORS must allow access.",
+ "quick_answer": "Fetch a compatible GeoJSON Feature or FeatureCollection, or a CSV with latitude and longitude headers, directly in the browser. Refresh is manual; the endpoint receives the request and its CORS rules apply.",
  "steps_intro": "No uploads, no server of ours — your browser talks to the feed directly:",
  "use_cases": [
   {
@@ -122,7 +122,7 @@
   ],
   [
    "Can I connect a private or key-protected API?",
-   "No — deliberately. The connector works with public endpoints only; if a feed needs credentials, use it through its owner's tools rather than pasting keys into a web page."
+   "The browser makes a direct fetch and provides no dedicated credential controls. Avoid placing secrets in URLs; the endpoint and browser history may expose them."
   ],
   [
    "How do I know the data is current?",
@@ -134,7 +134,7 @@
   ],
   [
    "Can I style the points by a data field?",
-   "The connector renders a clear default view so you can judge the data. Styled, classified presentation is dashboard work — the Spatial Dashboard Builder is the heavier sibling for that job."
+   "No. The connector has fixed styles; the area dashboard also does not provide field-based styling."
   ],
   [
    "Does it work with KML feeds?",
