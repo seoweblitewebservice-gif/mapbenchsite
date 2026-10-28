@@ -50,7 +50,7 @@ export default function HomePage() {
             Free · No sign-up · Methods explained
           </p>
           <h1 className="font-display text-4xl font-bold leading-[1.12] tracking-tight text-ink sm:text-5xl md:text-[3.25rem]">
-            Free Map Tools & Printable Maps
+            Free Map Tools & <span className="home-title-accent">Printable Maps</span>
           </h1>
           <p className="mx-auto mt-5 max-w-3xl text-[15px] leading-relaxed text-mute sm:text-base">
             {TOOLS.length} free tools for measuring distances, finding places, converting coordinates and making maps. Start with a question. No account required.
@@ -59,10 +59,6 @@ export default function HomePage() {
           <HomeToolFinder tools={searchTools} suggested={suggested} />
         </div><div className="home-hero-art"><HomeGlobe /></div>
         </div>
-      </section>
-
-      <section aria-label="Popular tools" className="home-shortcuts mx-auto grid max-w-5xl gap-3 px-4 py-7 sm:grid-cols-2 lg:grid-cols-4">
-        {["halfway-between-two-places", "map-radius", "elevation-finder", "timezone-map-finder"].map(slug => TOOLS.find(t => t.slug === slug)).filter((t): t is (typeof TOOLS)[number] => Boolean(t)).map(tool => <Link key={tool.slug} href={`/tools/${tool.slug}`} className="card p-4 hover:border-brand"><h2 className="font-sans text-sm font-bold text-brand-strong">{tool.name} <span aria-hidden>↗</span></h2><p className="mt-2 text-xs leading-relaxed text-mute">{tool.short}</p></Link>)}
       </section>
 
       <HomeToolIndex />
