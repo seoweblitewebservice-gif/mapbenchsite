@@ -8,10 +8,10 @@
   "gpx hr data"
  ],
  "title": "GPX Heart Rate Analyzer: Zones From Your File",
- "description": "Analyse heart rate recorded in a GPX file with the GPX Heart Rate Analyzer — average, maximum and time in zones, read locally. Free.",
+ "description": "Inspect GPX heart-rate samples and fixed BPM bands locally; sample shares are not time-in-zone.",
  "updated": "October 2026",
- "summary_sentence": "For example, against an estimated maximum of 190 bpm (the 220-minus-age estimate at 30), the common zone boundaries fall at 114, 133, 152 and 171 bpm — and the analyzer prices how long you actually spent beyond each.",
- "quick_answer": "The GPX Heart Rate Analyzer reads the heart-rate channel hidden in a GPX file's extensions and reports average, maximum and time-in-zone estimates from the recording itself. Drop the file — it is read locally, never uploaded — and see the effort story your map viewers have been ignoring.",
+ "summary_sentence": "The bands count samples in fixed BPM ranges, not personalised zones or time spent in each range.",
+ "quick_answer": "The analyzer reads GPX trackpoint heart-rate samples and displays their average, range and share in fixed BPM bands. Sample shares are not time-weighted or personalised training zones. The file is parsed locally; map tile requests can reveal the viewed area.",
  "steps_intro": "Your watch recorded it; most software throws it away. Read it here:",
  "use_cases": [
   {
@@ -67,53 +67,41 @@
    "label": "Example · Reading an average honestly",
    "body": [
     {
-     "t": "An average of 148 bpm over a hilly run hides everything interesting: the zones show whether that was steady threshold work or a sawtooth of climbs and recoveries averaging out to the same innocent number."
+     "t": "An average hides variation. Fixed-band sample shares show sample distribution, but do not establish time in zone or training intensity."
     }
    ]
   }
  ],
  "popular_table": {
-  "title": "The common five-zone model",
-  "intro": "Zones as percentage bands of maximum heart rate — the model most tools start from (boundaries computed for a 190 bpm maximum).",
+  "title": "Fixed BPM bands",
+  "intro": "These are arbitrary sample-count bands, not personalised training or medical zones.",
   "columns": [
-   "Zone",
-   "% of max HR",
-   "At max 190",
-   "Feels like"
+   "Band",
+   "Heart rate"
   ],
   "rows": [
    [
-    "Zone 1",
-    "50–60%",
-    "95–114 bpm",
-    "Recovery, warm-up"
+    "1",
+    "Under 110 bpm"
    ],
    [
-    "Zone 2",
-    "60–70%",
-    "114–133 bpm",
-    "Endurance base"
+    "2",
+    "110–129 bpm"
    ],
    [
-    "Zone 3",
-    "70–80%",
-    "133–152 bpm",
-    "Tempo"
+    "3",
+    "130–149 bpm"
    ],
    [
-    "Zone 4",
-    "80–90%",
-    "152–171 bpm",
-    "Threshold"
+    "4",
+    "150–169 bpm"
    ],
    [
-    "Zone 5",
-    "90–100%",
-    "171–190 bpm",
-    "Maximal efforts"
+    "5",
+    "170 bpm and above"
    ]
   ],
-  "note": "Maximum heart rate here uses the 220 − age estimate (190 at age 30), which errs by ±10 bpm or more for individuals. Zone conclusions are estimates with that uncertainty baked in — physiology, not surveying."
+  "note": "Percentages count samples equally; irregular sample intervals can make them differ from time-based percentages."
  },
  "faq": [
   [
@@ -122,11 +110,11 @@
   ],
   [
    "What does 'time in zone' weigh by?",
-   "By the recording's own samples — each trackpoint's heart rate counts for the time until the next point. Dense recordings price zones more faithfully than sparse ones."
+   "This tool does not calculate time in zone. It counts heart-rate samples in fixed BPM bands and divides by the total number of heart-rate samples."
   ],
   [
    "My maximum shows 220+ — real?",
-   "Almost certainly a sensor artefact (strap slip, cadence lock, a dry-contact spike at the start). Optical and strap sensors both produce a few wild samples; a single spike does not move the average much, but it owns the 'maximum' line unless filtered."
+   "A high recorded value may be a sensor error or a genuine reading. This tool cannot diagnose it; check the recording and seek professional advice when appropriate."
   ],
   [
    "Cadence lock — what is it?",
@@ -138,7 +126,7 @@
   ],
   [
    "Resting and max HR settings?",
-   "Zone percentages need a maximum; the 220 − age estimate is the common default. A lab-tested or field-tested personal maximum makes every zone truer."
+   "The bands use fixed BPM values; this workspace does not accept a personal maximum or calculate personalised zones."
   ]
  ],
  "related_prose": [

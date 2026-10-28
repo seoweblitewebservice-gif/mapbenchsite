@@ -7,10 +7,10 @@
   "fsa centroid"
  ],
  "title": "Canadian Postal Code Meeting Point",
- "description": "Find the fair meeting centre for a set of Canadian postal codes with the Canadian Postal Code Meeting Point — each code's travel shown. Free.",
+ "description": "Estimate a geographic mean for up to 25 postal-code search results. Verify Canadian matches and practical travel separately.",
  "updated": "October 2026",
  "summary_sentence": "For example, a team spread across Toronto (M), Ottawa (K) and Montreal (H) codes gets one balance point with each member's distance to it printed beside their code.",
- "quick_answer": "The Canadian Postal Code Meeting Point takes a set of Canadian postal codes, resolves each to its location, and computes the balance point — the centre that treats the set fairly — with the distance each code travels to reach it. Paste codes, one per line, and read the centre.",
+ "quick_answer": "The tool searches for up to 25 entered codes using Photon with Canada included in each query, then calculates the spherical vector mean of resolved locations. Results are approximate and should be checked; it does not guarantee the minimum travel distance.",
  "steps_intro": "Fairness is a coordinate. Compute it from the whole team's codes:",
  "use_cases": [
   {
@@ -66,7 +66,7 @@
    "label": "Example · Full code or FSA?",
    "body": [
     {
-     "t": "A full code (M5V 1J1) pins a block; the FSA (M5V) pins the district. Sets mixed at FSA level still centre sensibly — precision per member varies, fairness survives."
+     "t": "Full postal codes and FSAs can be searched, but resolution and precision depend on the external geocoder. Check that each result corresponds to the intended area."
     }
    ]
   }
@@ -117,7 +117,7 @@
  "faq": [
   [
    "Full codes or just FSAs?",
-   "Both work: full codes resolve precisely, FSAs resolve to their districts. A set of either (or mixed) produces a centre; full codes make it sharpest."
+   "Both can be entered, but Photon coverage and precision vary. Results may be missing or approximate and should be checked independently."
   ],
   [
    "Is the centre always sensible?",
@@ -125,7 +125,7 @@
   ],
   [
    "Can I use the tool without sharing my precise location?",
-   "Yes — the codes you paste are the inputs; your own location is never asked."
+   "It does not request device location. Entered codes are sent to Photon and the resulting centre is reverse geocoded."
   ],
   [
    "Why might a boundary or place name look different elsewhere?",
@@ -133,7 +133,7 @@
   ],
   [
    "Does MapBench store my browser location?",
-   "No."
+   "The tool does not request browser location. Entered codes and the resulting centre are sent to external geocoding services."
   ],
   [
    "Balance point or middle code?",
@@ -145,7 +145,7 @@
   ],
   [
    "The centre landed in a lake.",
-   "Arithmetic has no shore sense. Nudge to the nearest town on the winning shore — the distances printed tell you what the nudge costs each member."
+   "The mean can fall in an impractical place. The distances shown refer to the computed centre, not to a different venue you choose later."
   ],
   [
    "One code is in the territories.",

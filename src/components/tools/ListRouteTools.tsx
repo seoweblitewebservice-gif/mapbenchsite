@@ -1,9 +1,10 @@
 "use client";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import type { Map as MLMap, GeoJSONSource } from "maplibre-gl";
-import { bearingBetween, destination, distanceKm, fmt, fmtCoords, fmtDist, midpoint, type LatLng } from "@/lib/geo";
+import { bearingBetween, destination, distanceKm, fmt, fmtCoords, fmtDist, type LatLng } from "@/lib/geo";
 import { nominatimReverse, photonSearch } from "@/lib/geocode";
 import { ukPostcode } from "@/lib/nationalGrid";
+import { equidistanceArc } from "@/lib/equidistance";
 import { route, fmtDuration, type TravelMode } from "@/lib/routing";
 import { downloadText } from "@/lib/formats";
 import { ErrorBox, Field, FileDropzone, Seg, Spinner, Stat } from "@/components/ui";
@@ -228,12 +229,12 @@ function LoopTool() {
     const targetKm = milesTarget * 1.609344;
     const radiusKm = (targetKm / (2 * Math.PI)) * 1.15;
     const ring = [0, 90, 180, 270].map((b) => destination(center, b, radiusKm));
-    const loopPts = [...ring, ring[0]];
+    const loopPts = [center, ...ring, center];
     const r = await route(loopPts, profile);
     let shape: LatLng[], distKm: number, durS: number, note: string;
     if (r.ok) {
       shape = r.shape; distKm = r.distanceKm; durS = r.durationS;
-      note = "Routed on real paths and streets from four points around your start, so the loop length differs from the target — real streets are not a perfect circle.";
+      note = "Routed from your start through four points around it and back. The loop length differs from the target; check access and safety before travelling.";
     } else {
       shape = loopPts;
       distKm = cumulative(shape)[shape.length - 1];
@@ -292,6 +293,7 @@ function StageTool({ driving }: { driving: boolean }) {
     const cum = cumulative(r.shape);
     const totalKm = cum[cum.length - 1];
     const count = splitBy === "days" ? Math.max(1, days) : Math.max(1, Math.ceil((totalKm * 0.621371) / Math.max(1, maxMiles)));
+    if (count > 100) { setBusy(false); setError("This route needs more than 100 stages. Increase the maximum distance per day."); return; }
     const bounds: number[] = [];
     for (let i = 1; i <= count; i++) bounds.push((totalKm * i) / count);
     const s = await sampleElevations(r.shape, Math.min(60, Math.max(12, count * 8)));
@@ -322,7 +324,7 @@ function StageTool({ driving }: { driving: boolean }) {
       <StopsEditor stops={stops} setStops={setStops} />
       <Seg ariaLabel="Split by" value={splitBy} onChange={(v) => setSplitBy(v)} options={[{ value: "days", label: "Number of days" }, { value: "distance", label: "Max per day" }]} />
       {splitBy === "days"
-        ? <Field label="Days"><input type="number" min={1} max={30} className="input" value={days} onChange={(e) => setDays(Math.max(1, Number(e.target.value) || 1))} /></Field>
+        ? <Field label="Days"><input type="number" min={1} max={30} className="input" value={days} onChange={(e) => setDays(Math.min(30, Math.max(1, Math.floor(Number(e.target.value) || 1))))} /></Field>
         : <Field label={driving ? "Max driving miles per day" : "Max miles per day"}><input type="number" min={1} className="input" value={maxMiles} onChange={(e) => setMaxMiles(Math.max(1, Number(e.target.value) || 1))} /></Field>}
       <button type="button" className="btn btn-primary w-full" onClick={run} disabled={busy}>{busy ? <Spinner label="Planning stages…" /> : "Plan stages"}</button>
       {error && <ErrorBox>{error}</ErrorBox>}
@@ -346,17 +348,15 @@ function EquidistanceTool() {
   const [a, setA] = useState<PlaceValue | null>(null);
   const [b, setB] = useState<PlaceValue | null>(null);
   const [result, setResult] = useState<{ mid: LatLng; distKm: number; bearing: number } | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   const run = () => {
     if (!a || !b) return;
-    const distKm = distanceKm(a, b);
-    const bearing = bearingBetween(a, b);
-    const mid = midpoint(a, b);
-    const halfLen = Math.max(10, distKm * 0.75);
-    const p1 = destination(mid, (bearing + 90) % 360, halfLen);
-    const p2 = destination(mid, (bearing + 270) % 360, halfLen);
-    setResult({ mid, distKm, bearing });
-    m.draw([p2, p1], [a, b, mid]);
+    const arc = equidistanceArc(a, b);
+    if (!arc) { m.draw([], []); setResult(null); setError("Choose distinct, non-antipodal points; these do not define a unique midpoint and bisector."); return; }
+    setError(null);
+    setResult({ mid: arc.mid, distKm: arc.distance, bearing: bearingBetween(a, b) });
+    m.draw(arc.line, [a, b, arc.mid]);
   };
 
   return (
@@ -364,13 +364,14 @@ function EquidistanceTool() {
       <PlaceField label="Place A" value={a} onChange={setA} />
       <PlaceField label="Place B" value={b} onChange={setB} />
       <button type="button" className="btn btn-primary w-full" onClick={run} disabled={!a || !b}>Draw the equidistance line</button>
+      {error && <ErrorBox>{error}</ErrorBox>}
       {result && (
         <div className="space-y-3 border-t border-line pt-3">
           <div className="grid grid-cols-2 gap-2">
             <Stat label="Distance A ↔ B" value={fmtDist(result.distKm, "mi")} sub={fmtDist(result.distKm, "km")} />
             <Stat label="Midpoint" value={fmtCoords(result.mid)} sub={`bearing A→B ${fmt(result.bearing, 1)}°`} />
           </div>
-          <p className="text-xs leading-relaxed text-mute">Every point on the drawn line is the same straight-line distance from A and from B — it is the perpendicular bisector of the two places, drawn through the midpoint at right angles to the great-circle path. Over long distances the true equidistant locus curves with the Earth; the segment shown is the practical local answer.</p>
+          <p className="text-xs leading-relaxed text-mute">The sampled line approximates a section of the spherical equidistance locus, not the whole locus. Distances are surface great-circle distances, not road distances or travel times. Map rendering interpolates between samples.</p>
         </div>
       )}
     </>} />
@@ -400,12 +401,13 @@ async function geocodePostal(code: string, canada: boolean): Promise<LatLng | nu
   return null;
 }
 
-function sphericalCentroid(pts: LatLng[]): LatLng {
+function sphericalCentroid(pts: LatLng[]): LatLng | null {
   let x = 0, y = 0, z = 0;
   for (const p of pts) {
     const φ = (p.lat * Math.PI) / 180, λ = (p.lng * Math.PI) / 180;
     x += Math.cos(φ) * Math.cos(λ); y += Math.cos(φ) * Math.sin(λ); z += Math.sin(φ);
   }
+  if (Math.hypot(x, y, z) < 1e-12 * pts.length) return null;
   const λ = Math.atan2(y, x);
   const φ = Math.atan2(z, Math.sqrt(x * x + y * y));
   return { lat: (φ * 180) / Math.PI, lng: (λ * 180) / Math.PI };
@@ -419,7 +421,8 @@ function PostalCentroidTool({ canada }: { canada: boolean }) {
   const [result, setResult] = useState<{ centre: LatLng; name: string; rows: { code: string; distKm: number }[] } | null>(null);
 
   const run = async () => {
-    const codes = text.split(/[\n,;]+/).map((s) => s.trim()).filter(Boolean).slice(0, 25);
+    const codes = text.split(/[\n,;]+/).map((s) => s.trim()).filter(Boolean);
+    if (codes.length > 25) { setError("Enter no more than 25 codes at a time."); return; }
     if (codes.length < 2) { setError("Enter at least two postal codes, one per line."); return; }
     setBusy(true); setError(null); setResult(null);
     const found: { code: string; p: LatLng }[] = [];
@@ -430,6 +433,7 @@ function PostalCentroidTool({ canada }: { canada: boolean }) {
     }
     if (found.length < 2) { setBusy(false); setError("Fewer than two of those codes could be found. Check the codes and try again."); return; }
     const centre = sphericalCentroid(found.map((f) => f.p));
+    if (!centre) { setBusy(false); setError("The resolved locations do not have a unique spherical vector mean. Try a different set of locations."); return; }
     const name = await placeName(centre);
     setResult({ centre, name, rows: found.map((f) => ({ code: f.code, distKm: distanceKm(centre, f.p) })) });
     m.draw([], [...found.map((f) => f.p), centre]);
@@ -446,11 +450,11 @@ function PostalCentroidTool({ canada }: { canada: boolean }) {
       {error && <ErrorBox>{error}</ErrorBox>}
       {result && (
         <div className="space-y-3 border-t border-line pt-3">
-          <Stat label="Centre of gravity" value={fmtCoords(result.centre)} sub={`nearest place: ${result.name}`} />
+          <Stat label="Centre of gravity" value={fmtCoords(result.centre)} sub={`reverse-geocoded area: ${result.name}`} />
           <table className="tbl"><thead><tr><th>Code</th><th className="text-right">Distance to centre</th></tr></thead>
-            <tbody>{result.rows.map((r) => <tr key={r.code}><td className="font-mono text-xs">{r.code}</td><td className="text-right">{fmtDist(r.distKm, "mi")}</td></tr>)}</tbody>
+            <tbody>{result.rows.map((r, i) => <tr key={`${r.code}-${i}`}><td className="font-mono text-xs">{r.code}</td><td className="text-right">{fmtDist(r.distKm, "mi")}</td></tr>)}</tbody>
           </table>
-          <p className="text-xs text-mute">The centre is the balance point of the code locations on the sphere (equal weight per code). It minimises average straight-line distance — road time to reach it can still differ per person.</p>
+          <p className="text-xs text-mute">The centre is the spherical vector mean of resolved locations, with one equal weight per entered code. It does not necessarily minimise average distance or travel time. Postal codes are sent to geocoding providers; check results before use.</p>
         </div>
       )}
     </>} />
@@ -514,14 +518,14 @@ function SurfaceTool() {
             {result.gainFt !== null && <Stat label="Elevation gain" value={`${fmt(result.gainFt, 0)} ft`} sub={result.maxEleFt !== null ? `highest point ${fmt(result.maxEleFt, 0)} ft` : undefined} />}
           </div>
           <div>
-            <div className="label">Surface (sampled road segments)</div>
+            <div className="label">Surface tags on nearby OSM ways</div>
             <table className="tbl"><tbody>{result.surfaces.map(([k, v]) => <tr key={k}><td className="capitalize">{k}</td><td className="text-right">{v}</td></tr>)}</tbody></table>
           </div>
           <div>
             <div className="label">Road types nearby</div>
             <table className="tbl"><tbody>{result.roads.map(([k, v]) => <tr key={k}><td className="capitalize">{k.replace(/_/g, " ")}</td><td className="text-right">{v}</td></tr>)}</tbody></table>
           </div>
-          <p className="text-xs leading-relaxed text-mute">Counts come from OpenStreetMap ways within about 100 ft (30 m) of 20 sampled points along the route. Ways without a recorded surface tag are reported as “not recorded” — the surface is never guessed.</p>
+          <p className="text-xs leading-relaxed text-mute">Counts are OpenStreetMap ways within about 100 ft (30 m) of up to 20 sampled points, limited to 400 returned ways. They can include nearby roads not on your route and are not distances or percentages. Missing surface tags are “not recorded”; verify conditions locally.</p>
         </div>
       )}
     </>} />
@@ -618,7 +622,7 @@ function RoadbookTool({ multiDay }: { multiDay: boolean }) {
   return (
     <Layout map={m.el} panel={<>
       <StopsEditor stops={stops} setStops={setStops} />
-      {multiDay && <Field label="Days"><input type="number" min={1} max={30} className="input" value={days} onChange={(e) => setDays(Math.max(1, Number(e.target.value) || 1))} /></Field>}
+      {multiDay && <Field label="Days"><input type="number" min={1} max={30} className="input" value={days} onChange={(e) => setDays(Math.min(30, Math.max(1, Math.floor(Number(e.target.value) || 1))))} /></Field>}
       <button type="button" className="btn btn-primary w-full" onClick={run} disabled={busy}>{busy ? <Spinner label="Building roadbook…" /> : "Build the roadbook"}</button>
       {error && <ErrorBox>{error}</ErrorBox>}
       {book && (

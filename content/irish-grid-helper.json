@@ -7,17 +7,17 @@
   "ireland coordinates"
  ],
  "title": "Irish Grid Helper: ITM and Irish Grid Workflows",
- "description": "Bridge GPS coordinates and Irish mapping with the Irish Grid Helper — ITM versus the older Irish Grid, letters and digits explained. Free.",
+ "description": "Irish Grid and ITM explained; this coordinate workspace does not convert either Irish grid.",
  "updated": "October 2026",
  "summary_sentence": "For example, Dublin sits in the O 100-kilometre square of the Irish Grid — the letter on every Irish site plan and archaeology report, with ITM now the modern system beneath it.",
- "quick_answer": "The Irish Grid Helper bridges GPS coordinates and Irish mapping workflows, covering both the modern Irish Transverse Mercator (ITM) and the older Irish Grid references found on decades of maps and reports. Learn which system a value belongs to, and convert between the GPS world and Ireland's grids.",
- "steps_intro": "Two Irish systems, one island — know which one your numbers are:",
+ "quick_answer": "Irish Grid and Irish Transverse Mercator use different coordinate reference systems. This workspace does not convert either system or perform Irish datum transformations.",
+ "steps_intro": "Use the workspace for supported global formats; use validated GIS or an official transformation tool for Irish grids.",
  "use_cases": [
   {
    "title": "Reading older Irish maps and reports",
    "body": [
     {
-     "t": "Historic site records speak Irish Grid references with letter squares — the helper decodes the system so the archive stays usable. Britain's sibling is the "
+     "t": "Historic site records use Irish Grid letter references. A validated Irish Grid conversion tool can help interpret them. Britain has a separate system; see the "
     },
     {
      "t": "British National Grid Helper",
@@ -73,7 +73,7 @@
  ],
  "popular_table": {
   "title": "Ireland's two systems",
-  "intro": "The comparison the helper keeps straight.",
+  "intro": "A comparison of the two systems. This workspace does not convert either one.",
   "columns": [
    "",
    "Irish Grid",
@@ -115,15 +115,15 @@
   ],
   [
    "Which datum do these coordinate tools use?",
-   "WGS84, the frame web maps and GPS share — tile and pixel systems on this page are defined over it."
+   "The workspace uses WGS84 latitude and longitude; it does not transform to ITM or Irish Grid."
   ],
   [
    "Do more decimal places always mean better accuracy?",
-   "No — pixels and tiles quantise the world; extra coordinate decimals beyond the cell size are decoration."
+   "No. Extra displayed digits do not improve the accuracy of the original measurement."
   ],
   [
    "Can I copy the result into GIS software?",
-   "Yes — set the layer CRS correctly (2157 for ITM, 29903 for Irish Grid) or the software will faithfully plot your point in the wrong county."
+   "Supported global coordinate outputs can be used in GIS with the correct CRS. Irish Grid or ITM transformations require an appropriate validated tool."
   ],
   [
    "Northern Ireland?",
@@ -135,7 +135,7 @@
   ],
   [
    "Townland references?",
-   "Ireland's townlands predate grids; references in heritage records pair townland names with grid references. The grid part converts here; the names are their own scholarship."
+   "Townland names and historical grid references are separate forms of location information. This workspace does not convert Irish Grid references."
   ],
   [
    "Precision of digits?",

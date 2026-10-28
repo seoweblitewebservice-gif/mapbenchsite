@@ -11,7 +11,7 @@ import {
 import { fmtDuration, route } from "@/lib/routing";
 
 const DATUM_NOTE =
-  "Converted from WGS84 with the Ordnance Survey formulae; WGS84 and OSGB36 differ by up to about 100 m — fine for finding places, not for surveying.";
+  "Approximate projection only: no WGS84–OSGB36 datum transformation is applied. The error can be substantial; do not use for surveying or safety-critical navigation. Use an authoritative transformation for accurate results.";
 const GB = { lat: 54.5, lng: -2.5 };
 
 interface En { easting: number; northing: number }
@@ -25,6 +25,11 @@ function gridRefToPoint(ref: string): GridPoint | null {
   const cell = digitCount === 0 ? 100000 : 10 ** (5 - digitCount / 2);
   const en = { easting: sw.easting + cell / 2, northing: sw.northing + cell / 2 };
   return { en, point: enToLatLng(en.easting, en.northing) };
+}
+
+function postcodeGrid(pc: UkPostcode): En | null {
+  if (!["England", "Scotland", "Wales"].includes(pc.country) || !Number.isFinite(pc.easting) || !Number.isFinite(pc.northing) || enToGridRef(pc.easting, pc.northing) === "Outside the National Grid") return null;
+  return { easting: pc.easting, northing: pc.northing };
 }
 
 function fmtEn(en: En): string {
@@ -79,8 +84,8 @@ function NgrConvert() {
   const active: GridPoint | null = fromGrid ?? (point ? { point, en: latLngToEN(point) } : null);
 
   const convertLatLng = () => {
-    const lat = parseFloat(latText), lng = parseFloat(lngText);
-    if (!Number.isFinite(lat) || !Number.isFinite(lng) || Math.abs(lat) > 90 || Math.abs(lng) > 180) {
+    const lat = Number(latText), lng = Number(lngText);
+    if (!latText.trim() || !lngText.trim() || !Number.isFinite(lat) || !Number.isFinite(lng) || Math.abs(lat) > 90 || Math.abs(lng) > 180) {
       setError("Enter a valid latitude (-90 to 90) and longitude (-180 to 180)."); return;
     }
     setError(null); setFromGrid(null); setPoint({ lat, lng });
@@ -160,7 +165,7 @@ function NgrToPostcode() {
       {centre && results && (
         <div className="space-y-3">
           <p className="text-sm text-mute">
-            Centre of {enToGridRef(centre.en.easting, centre.en.northing, 6)}: {fmtCoords(centre.point)} · Easting / northing {fmtEn(centre.en)}
+            Centre of the entered grid square: {fmtCoords(centre.point)} · Easting / northing {fmtEn(centre.en)}
           </p>
           <div className="overflow-x-auto">
             <table className="tbl">
@@ -219,14 +224,13 @@ function PostcodeToNgr() {
         {error && <ErrorBox>{error}</ErrorBox>}
         {result && (
           <div className="space-y-3">
-            <GridReadout en={{ easting: result.easting, northing: result.northing }} point={result} />
+            {postcodeGrid(result) ? <GridReadout en={postcodeGrid(result)!} point={result} /> : <ErrorBox>No usable British National Grid coordinates were returned for this postcode. Northern Ireland uses a different grid.</ErrorBox>}
             <div className="grid grid-cols-2 gap-3">
               <Stat label="District" value={result.district || "—"} />
               <Stat label="Region" value={result.region || "—"} />
             </div>
             <p className="rounded-lg bg-well px-3 py-2 text-xs leading-relaxed text-mute">
-              Exact grid reference: the eastings and northings come straight from postcodes.io
-              (Ordnance Survey open data), so no datum shortcut was used for this result.
+              The grid reference uses eastings and northings supplied by postcodes.io for a representative postcode location, not an individual property or a surveyed position.
             </p>
           </div>
         )}
@@ -240,15 +244,24 @@ function PostcodeToNgr() {
 
 // -------------------------------------------------------------------- ngr-map
 function NgrMap() {
+  const [ref, setRef] = useState("");
+  const [error, setError] = useState<string | null>(null);
   const [picked, setPicked] = useState<GridPoint | null>(null);
   const { mapRef, libRef } = useSinglePin(picked?.point ?? null, PALETTE[2]);
   return (
     <div className="grid gap-4 lg:grid-cols-[400px,1fr]">
       <div className="card order-2 space-y-4 p-4 lg:order-1">
         <p className="text-sm leading-relaxed text-mute">
-          Click anywhere in Great Britain on the map. You will get the National Grid reference,
-          easting and northing, and the latitude and longitude for that exact spot.
+          Enter a grid reference to plot its square’s approximate centre, or click the map to read an approximate reference. Grid squares and grid lines are not drawn.
         </p>
+        <Field label="Grid reference"><input className="input" value={ref} onChange={(e) => setRef(e.target.value)} placeholder="TQ 300 800" /></Field>
+        <button type="button" className="btn btn-primary w-full" onClick={() => {
+          const gp = gridRefToPoint(ref);
+          if (!gp) { setError("Enter a valid British National Grid reference."); return; }
+          setError(null); setPicked(gp);
+          mapRef.current?.flyTo({ center: [gp.point.lng, gp.point.lat], zoom: 12, essential: true });
+        }}>Plot reference centre</button>
+        {error && <ErrorBox>{error}</ErrorBox>}
         {picked ? (
           <GridReadout en={picked.en} point={picked.point} />
         ) : (
@@ -261,7 +274,7 @@ function NgrMap() {
           mapRef.current = map; libRef.current = lib;
           map.on("click", (e: any) => {
             const p = { lat: e.lngLat.lat, lng: e.lngLat.lng };
-            setPicked({ point: p, en: latLngToEN(p) });
+            setError(null); setPicked({ point: p, en: latLngToEN(p) });
           });
         }} />
       </div>
@@ -309,7 +322,7 @@ function OsGridDistance() {
             <Stat label="Midpoint lat / lng" value={fmtCoords(result.mid.point)} sub={`Easting / northing ${fmtEn(result.mid.en)}`} />
           </div>
           <p className="text-xs text-mute">
-            Distance is measured between the centres of the two referenced squares, straight across the grid.
+            Distance and bearing are calculated between the centres of the two referenced squares in the projected grid. Grid north differs from true north; the displayed midpoint latitude/longitude has no datum shift.
           </p>
         </div>
       )}
@@ -358,9 +371,9 @@ function UkPostcodeDistance() {
             <Stat label="Nearest postcode to midpoint" value={result.midPc?.postcode ?? "—"} sub={result.midPc ? `${result.midPc.district}${result.midPc.region ? `, ${result.midPc.region}` : ""}` : "Not found"} />
           </div>
           <p className="text-sm text-mute">
-            <span className="chip mr-2">{result.a.postcode}</span>{result.a.district} · grid ref {enToGridRef(result.a.easting, result.a.northing, 6)}
+            <span className="chip mr-2">{result.a.postcode}</span>{result.a.district} · grid ref {postcodeGrid(result.a) ? enToGridRef(result.a.easting, result.a.northing, 6) : "not available"}
             <br />
-            <span className="chip mr-2 mt-1">{result.b.postcode}</span>{result.b.district} · grid ref {enToGridRef(result.b.easting, result.b.northing, 6)}
+            <span className="chip mr-2 mt-1">{result.b.postcode}</span>{result.b.district} · grid ref {postcodeGrid(result.b) ? enToGridRef(result.b.easting, result.b.northing, 6) : "not available"}
           </p>
         </div>
       )}

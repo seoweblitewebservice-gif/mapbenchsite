@@ -8,17 +8,17 @@
   "country border file"
  ],
  "title": "Country Boundary Downloader: Full Outlines",
- "description": "Download a country's complete boundary — every polygon part, islands included — with the Country Boundary Downloader, as KML or GeoJSON. Free.",
+ "description": "Download a matched country polygon from a fixed country list as KML or GeoJSON; verify its coverage.",
  "updated": "October 2026",
- "summary_sentence": "For example, France arrives as a MultiPolygon: the mainland plus Corsica and its coastal islands in a single file, with the enclosed land area computed from the outline.",
- "quick_answer": "The Country Boundary Downloader gives you a country's complete boundary as one file — all polygon parts, islands included — in KML or GeoJSON. Pick the country and download the outline with its land area computed from the geometry — raw material for maps that need real borders.",
- "steps_intro": "One country, one complete file:",
+ "summary_sentence": "The returned OSM outline may contain multiple polygon parts; check the match and coverage.",
+ "quick_answer": "Choose one of the listed countries to retrieve the first polygon match from Nominatim, download its geometry, and see an approximate spherical area. This is not an official land-area figure.",
+ "steps_intro": "Choose a listed country and check the match:",
  "use_cases": [
   {
    "title": "Teaching and publishing maps",
    "body": [
     {
-     "t": "A true national outline beats a traced approximation in every classroom and report. Style it, label it, print it — the geometry is the real shape."
+     "t": "Use the matched outline for a map or report after checking its source and geographic coverage."
     }
    ]
   },
@@ -59,7 +59,7 @@
    "label": "Example · Archipelago nations",
    "body": [
     {
-     "t": "Indonesia and the Philippines download as thousands of island polygons in one MultiPolygon — ‘complete’ means every part, which is why these files are big and why partial ones mislead."
+     "t": "Some returned country features contain several polygon parts. Inspect the matched feature before using the download."
     }
    ]
   },
@@ -67,7 +67,7 @@
    "label": "Example · Mainland plus islands",
    "body": [
     {
-     "t": "France’s file pairs the European mainland polygon with Corsica; Greece adds its island constellation. One feature, many parts — GIS software handles the family as a single country."
+     "t": "Detached parts or holes depend on the specific geometry returned by Nominatim."
     }
    ]
   }
@@ -102,16 +102,16 @@
     "Same figure, from the outline"
    ]
   ],
-  "note": "Boundaries reflect OpenStreetMap’s documented positions, including its handling of disputed areas. Almanac land areas may differ slightly — outlines include coastal detail and tidal choices that statistics smooth away."
+  "note": "The approximate spherical area includes the returned outline, which may include water. It is not an official land-area measurement; disputed borders follow OSM mapping."
  },
  "faq": [
   [
    "Which countries are available?",
-   "Every country present in the open boundary data — effectively the whole world map, from France to Fiji. A place without a recorded administrative outline is the rare exception."
+   "The selector has a fixed list of 24 countries, not every country. A polygon match is not guaranteed."
   ],
   [
    "Are overseas territories included?",
-   "The download follows the boundary record for the country as mapped — metropolitan outlines and separately-administered territories are distinct entries in the data. Download the territory itself when you need it."
+   "Coverage follows the returned feature; verify whether a territory is included independently."
   ],
   [
    "KML or GeoJSON?",
@@ -127,7 +127,7 @@
   ],
   [
    "Are enclaves handled?",
-   "Yes — Lesotho inside South Africa, and similar geometries, arrive as their own complete country files; the surrounding country’s outline has the hole where the enclave sits."
+   "Holes in the returned polygon geometry are exported, but their presence depends on the matched OSM record."
   ],
   [
    "Whose borders for disputed areas?",

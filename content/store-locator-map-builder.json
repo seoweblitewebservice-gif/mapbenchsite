@@ -8,17 +8,17 @@
   "dealer locator tool"
  ],
  "title": "Store Locator Map Builder: Locations Mapped",
- "description": "Build a store locator map from your own location list with the Store Locator Map Builder — nearest-first results, no platform lock-in. Free.",
+ "description": "Rank pasted store coordinates by straight-line distance from a visitor point in your browser.",
  "updated": "October 2026",
- "summary_sentence": "For example, a visitor at Times Square with three Manhattan-area stores sees them ranked 6.0, 11.0 and 13.5 miles away — nearest first, the only order a locator is allowed to use.",
- "quick_answer": "The Store Locator Map Builder turns a list of your own locations into a locator map — visitors see your stores on a map and ranked by distance from where they search. Paste your locations and build the locator — the small-business essential chains take for granted.",
+ "summary_sentence": "This is a browser-based ranking tool, not a publishable store-locator service.",
+ "quick_answer": "Paste lines in Name, latitude, longitude format, then choose a visitor point to rank stores by straight-line distance. The list stays in this tab; no deployable locator or directions are generated.",
  "steps_intro": "Your locations, a map, and honest nearest-first ranking:",
  "use_cases": [
   {
    "title": "Independent retailers and cafes",
    "body": [
     {
-     "t": "Three branches or thirty — a locator that does not send customers to a competitor's platform first. Pair with the "
+     "t": "Compare a visitor point with a list of branch coordinates in this tab. Separately, see the "
     },
     {
      "t": "Share Location Link Generator",
@@ -41,7 +41,7 @@
    "title": "Event and pop-up locations",
    "body": [
     {
-     "t": "Temporary sites on one map for the season — farmers' markets, tour stops, enrolment centres — then taken down when the season ends."
+     "t": "Compare temporary site coordinates against a chosen point. The list is not published or saved as a hosted map."
     }
    ]
   },
@@ -56,7 +56,7 @@
      "l": "/tools/voronoi-map-generator"
     },
     {
-     "t": " draws each store's natural catchment from the same list."
+     "t": " is a separate click-based tool; it does not import this store list."
     }
    ]
   }
@@ -88,20 +88,16 @@
   ],
   "rows": [
    [
-    "Accurate coordinates per store",
-    "An address geocoded to the wrong block ranks you wrong"
+    "Store name and coordinates",
+    "One entry per line"
+   ],
+   [
+    "Visitor location",
+    "Search or use device location"
    ],
    [
     "Distance shown per result",
-    "Visitors plan journeys, not impressions"
-   ],
-   [
-    "Hours and phone per pin",
-    "The locator's answer is 'go here, now' — completeness is kindness"
-   ],
-   [
-    "A rebuild habit",
-    "Lists rot; the map must not"
+    "Straight-line ranking, not road travel"
    ]
   ],
   "note": "Store data stays yours — the base FAQs cover where the list goes (processed in the browser for this tool's workflow) and remind you that customer-facing accuracy is a maintenance job, not a launch event."
@@ -109,31 +105,19 @@
  "faq": [
   [
    "What format should my location list be in?",
-   "Name plus address — or name plus coordinates for exactness — one location per entry, in the shape the builder's form shows. Coordinates remove the geocoder's guesswork entirely."
+   "Enter one store per line as Name, latitude, longitude. Store addresses are not geocoded by this tool."
   ],
   [
-   "How many locations can it handle?",
-   "Small and mid-size networks comfortably — the locator's natural habitat. National chains with thousands of stores belong on database-backed platforms."
+   "Can I publish this as a locator?",
+   "No. This workspace ranks stores in the current tab; it does not create an embeddable multi-store application."
   ],
   [
-   "Driving directions from each result?",
-   "Each store's entry can hand off to the visitor's map app for directions — the locator finds the store, the phone's maps do the driving."
+   "Does it provide driving directions or store hours?",
+   "No. Results show names and straight-line distances only."
   ],
   [
-   "Can visitors search by ZIP or postcode?",
-   "Yes — the search resolves the code's area and ranks your stores by distance from it, the way customers actually think ('near 90210')."
-  ],
-  [
-   "Does it collect my customers' locations?",
-   "The locator ranks for the visitor in their browser; a well-built locator (and this builder's philosophy) does not need to harvest searches to do its job."
-  ],
-  [
-   "Branding and styling?",
-   "The builder keeps the provider map's clean default look. Full brand theatre is the custom-platform tier — the honest trade of a free builder."
-  ],
-  [
-   "Seasonal hours and closures?",
-   "They belong in the list data you rebuild with — a locator is only as current as its last rebuild, which is why the rebuild is one paste away."
+   "Is my data uploaded?",
+   "The store list is processed in the browser tab. Location search and map tiles use external services, which receive the relevant search or map requests."
   ]
  ],
  "related_prose": [

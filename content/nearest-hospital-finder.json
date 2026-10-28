@@ -10,8 +10,8 @@
  "title": "Nearest Hospital Finder: Closest Hospitals",
  "description": "Find the nearest hospitals to a place or your location with the Nearest Hospital Finder — mapped from open data, ranked by distance. Free.",
  "updated": "October 2026",
- "summary_sentence": "For example, in unfamiliar country the finder answers in seconds which town holds the nearest hospital — the kind of fact worth knowing before it is ever needed.",
- "quick_answer": "The Nearest Hospital Finder maps the hospitals OpenStreetMap records around a place or your location, ranked by distance. Search or use your location, press find, and see the closest hospitals. In an emergency, call your local emergency number first — this finder is for planning and peace of mind.",
+ "summary_sentence": "Results are limited to returned OpenStreetMap records and may omit closer or unmapped places. Confirm details with an authoritative local source.",
+ "quick_answer": "The tool searches OpenStreetMap for mapped hospital records around a chosen location, then sorts returned records by straight-line distance. It requests at most 200 records and displays up to 100, so it cannot guarantee the closest result or a complete list. Data, access and opening status can be incomplete or outdated. In an emergency, contact local emergency services; this is not an emergency directory.",
  "steps_intro": "Learn your nearest hospitals on a calm day, not a bad one:",
  "use_cases": [
   {
@@ -33,7 +33,7 @@
    "title": "Travel preparation",
    "body": [
     {
-     "t": "Remote trips deserve a hospital answer in the plan. Note the nearest two towns with hospitals before the route goes quiet."
+     "t": "For travel preparation, verify facilities and emergency arrangements with official local sources; a returned map record is not a service guarantee."
     }
    ]
   },
@@ -49,7 +49,7 @@
    "title": "Event and venue planning",
    "body": [
     {
-     "t": "Organisers record the nearest hospital in the safety plan. The ranked list is that line of the document, sourced."
+     "t": "Use an official health directory and emergency plan to identify appropriate facilities. This capped list cannot establish which hospital is nearest or confirm its services."
     }
    ]
   }
@@ -59,7 +59,7 @@
    "label": "Example · Ranked, with distances",
    "body": [
     {
-     "t": "The nearest entry is the answer; the second and third are the strategy — a closed road or a full department sends you down the list, so the list exists before you need it."
+     "t": "Returned hospital records are sorted by straight-line distance. They may omit closer hospitals and do not confirm emergency care, opening status or road access."
     }
    ]
   },
@@ -74,38 +74,35 @@
  ],
  "popular_table": {
   "title": "What the finder shows",
-  "intro": "And the limits that matter for this of all topics.",
+  "intro": "Review the scope of the result before relying on it.",
   "columns": [
-   "Question",
-   "Answer"
+   "Result",
+   "Available here?",
+   "Limit"
   ],
   "rows": [
    [
-    "Hospitals shown",
-    "Those OpenStreetMap records near your point, nearest first"
+    "Mapped names and points",
+    "Yes, for returned records",
+    "Coverage and result caps apply"
    ],
    [
-    "Distances",
-    "Straight-line; road routes will be longer"
+    "Distance",
+    "Straight-line to returned point",
+    "Not road or walking distance"
    ],
    [
-    "A&E / ER status",
-    "Where the data records it — not guaranteed"
+    "Current access and opening status",
+    "No",
+    "Confirm with the operator"
    ],
    [
-    "Live waiting times",
-    "Not shown — hospitals' own channels own those"
-   ],
-   [
-    "In an emergency",
-    "Call the emergency number first, always"
-   ],
-   [
-    "Your location",
-    "Used for the search if you allow it; not stored"
+    "Full details and live availability",
+    "No",
+    "Consult an authoritative source"
    ]
   ],
-  "note": "Open map data covers hospitals well in populated areas; small clinics and new facilities may be unrecorded. Verify critical plans with the health service's own finder."
+  "note": "OpenStreetMap coverage and result limits can omit relevant places. Records may be outdated; confirm access, services and current conditions with an authoritative source."
  },
  "faq": [
   [
@@ -118,7 +115,7 @@
   ],
   [
    "Can I use the tool without sharing my precise location?",
-   "Yes — search any place name instead."
+   "You can search for a place instead of using device location. The selected search centre is sent to OpenStreetMap-based services for the lookup."
   ],
   [
    "Why might a boundary or place name look different elsewhere?",
@@ -126,11 +123,11 @@
   ],
   [
    "Does MapBench store my browser location?",
-   "No."
+   "Device location is optional. The selected coordinates are sent to Overpass to search; consult the privacy page for provider and site details."
   ],
   [
    "Does it show emergency departments?",
-   "Where the map data records emergency facilities, the entries reflect it — but the data is not a live directory of A&E status. The hospital's own listing decides."
+   "No. Hospital records are not checked for emergency department services or current operating status; verify with an official health directory."
   ],
   [
    "Straight-line distance misleads across water or mountains.",
@@ -138,7 +135,7 @@
   ],
   [
    "Clinics and urgent care?",
-   "Facilities recorded as clinics may appear depending on the record; the hospital category is the finder's design."
+   "The query selects records tagged amenity=hospital, not clinics as a separate category. Check official healthcare directories."
   ],
   [
    "Outside the US and Europe?",
@@ -146,11 +143,11 @@
   ],
   [
    "Children's hospitals?",
-   "Where the record distinguishes them, entries reflect it; paediatric emergencies still start with the emergency number, whose dispatchers route correctly."
+   "Some named hospital records may indicate a specialty, but this tool does not verify services. Check an official health directory."
   ],
   [
    "Urgent care centres?",
-   "Recorded clinics may appear with their own labelling. For anything time-critical, the hospital with emergency services is the destination — confirm its status on official listings."
+   "The query selects hospital-tagged records and does not verify urgent care services. Use an official directory and contact emergency services if needed."
   ]
  ],
  "related_prose": [

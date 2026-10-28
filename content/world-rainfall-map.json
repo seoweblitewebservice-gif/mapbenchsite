@@ -8,10 +8,10 @@
   "average rainfall places"
  ],
  "title": "Rainfall Totals Map: Any Dates, Any Point",
- "description": "Map total rainfall for any dates around any point with the Rainfall Totals Map — ERA5 archive totals for trips, gardens and dry spells. Free.",
+ "description": "Explore modelled total precipitation for selected dates from the Open-Meteo archive, including snow water equivalent.",
  "updated": "October 2026",
- "summary_sentence": "For example, published climate averages credit Mawsynram, India with about 11,871 mm (467 inches) of rain a year, while Death Valley manages roughly 60 mm (2.4 inches) — this map lets you pull the actual totals for the dates you care about.",
- "quick_answer": "The Rainfall Totals Map sums archived daily precipitation around your point for any start and end dates you choose, using the ERA5 weather archive. Pick a point and a period — last month, a holiday week, a drought year — and read what actually fell, not what usually falls.",
+ "summary_sentence": "The displayed total is modelled precipitation, not necessarily rainfall or what fell at one exact property.",
+ "quick_answer": "This tool sums complete daily precipitation values at 25 sample points from the Open-Meteo archive. Precipitation includes frozen precipitation as water equivalent; it is not a rainfall-only measurement or a gauge record.",
  "steps_intro": "Actual rain for actual dates, from the archive:",
  "use_cases": [
   {
@@ -41,7 +41,7 @@
    "title": "Drought and deluge context",
    "body": [
     {
-     "t": "A dry spell means little until it is a number against a normal season. Pull both periods onto the same map and the anomaly measures itself."
+     "t": "Compare periods as context, but the tool displays one period at a time and does not calculate an anomaly against a climate normal."
     }
    ]
   },
@@ -59,7 +59,7 @@
    "label": "Example · A tale of two averages",
    "body": [
     {
-     "t": "Published averages put Seattle near 952 mm (37.5 in) a year — spread across many grey days — while desert stations a few hundred miles inland record a tenth of that in a handful of storms. Totals alone rank wetness; the date range reveals character."
+     "t": "A yearly total can differ from station measurements and includes frozen precipitation as water equivalent. Compare modelled periods with authoritative climate sources."
     }
    ]
   },
@@ -67,50 +67,46 @@
    "label": "Example · What a cell holds",
    "body": [
     {
-     "t": "Each cell sums the archive's daily precipitation over your dates, across a 5×5 grid spanning about 25 miles. A cell is a district's rainfall for your period — not one rain gauge's luck."
+     "t": "Each displayed cell represents the modelled precipitation sum at its sample point, not a measurement at every location inside the cell."
     }
    ]
   }
  ],
  "popular_table": {
-  "title": "Reading the totals honestly",
-  "intro": "The archive's terms, before you quote its numbers.",
+  "title": "Reading the archive grid",
+  "intro": "The displayed cells are based on modelled values at sample points.",
   "columns": [
    "Item",
-   "What it is"
+   "Meaning"
   ],
   "rows": [
    [
-    "Source",
-    "ERA5 reanalysis daily precipitation (Open-Meteo archive API)"
-   ],
-   [
-    "Your window",
-    "Any start and end dates — a week, a season, a decade"
+    "Provider",
+    "Open-Meteo historical weather archive"
    ],
    [
     "Grid",
-    "5×5 cells spanning roughly 25 miles"
+    "25 sample points over an area about 25 miles wide"
    ],
    [
-    "Units",
-    "Millimetres and inches of precipitation"
+    "Daily values",
+    "Summed over the inclusive selected dates; incomplete data is rejected"
    ],
    [
     "Not this",
-    "A forecast, a single gauge record, or flood prediction"
+    "Live conditions, an exact gauge record or a certified decision tool"
    ]
   ],
-  "note": "Reanalysis precipitation is modelled from observations on a roughly 25–30 km grid — convective downpours in particular can be smoothed. Station records outrank cells at their exact points; cells win everywhere between stations."
+  "note": "Model selection, archive coverage and spatial resolution depend on the provider and dates. Data can differ from local measurements."
  },
  "faq": [
   [
    "Precipitation or rainfall — same thing here?",
-   "The archive total is all precipitation water equivalent in the daily sum; this map reads it as rainfall totals for the chosen period. Snow's water content rides inside the number where the model's daily sum includes it."
+   "No. The requested precipitation total includes frozen precipitation as water equivalent; it is not rainfall-only."
   ],
   [
    "How far back can I query?",
-   "The ERA5 archive reaches back to 1940 in current form. Recent decades rest on far denser observations; mid-century totals carry model-era uncertainty and deserve softer quoting."
+   "Coverage varies with the Open-Meteo archive and requested location. Requests with unavailable or incomplete daily data are rejected."
   ],
   [
    "Why does the official gauge disagree with my cell?",
@@ -118,7 +114,7 @@
   ],
   [
    "Can I compare this year with the climate normal?",
-   "Yes — run the same dates for several years and eyeball the spread, or compare with published 30-year normals for the area. The map gives actuals; the normal is the published expectation."
+   "You can run periods separately, but this tool does not calculate climate normals or anomalies. Use an authoritative climate dataset for those comparisons."
   ],
   [
    "Does it work for monsoon or Mediterranean climates?",

@@ -11,8 +11,8 @@
  "title": "Spatial Buffer & Overlay Analyzer",
  "description": "Run buffer and overlay analysis with the Spatial Buffer & Overlay Analyzer — what's within X miles, and what exactly is in there. Free.",
  "updated": "October 2026",
- "summary_sentence": "For example, a 3-mile buffer around a proposed depot covers 28.3 square miles — and the overlay count of towns, schools and hospitals inside it is the site study's first exhibit.",
- "quick_answer": "The Spatial Buffer & Overlay Analyzer performs the two GIS operations every site study starts with: buffer — everything within a set distance of a centre — and overlay — counting what falls inside. Set a centre and radius and read the counts of what the buffer contains.",
+ "summary_sentence": "A 72-point spherical circle and capped OSM node counts provide a preliminary approximation.",
+ "quick_answer": "Choose a centre and a 1–50 mile radius to draw an approximate circle and count up to 2,000 returned OSM city, town, village, school and hospital nodes. Ways and relations are excluded; results are not complete or official.",
  "steps_intro": "Buffer draws the circle; overlay counts its contents:",
  "use_cases": [
   {
@@ -113,7 +113,7 @@
  "faq": [
   [
    "What data gets counted?",
-   "Settlements and facilities in the open map record within the buffer — towns, schools, hospitals among them, as this page's tool describes. Record completeness varies by region."
+   "Only returned OSM nodes with the selected tags are counted, with a combined limit of 2,000. Ways, relations and unmapped features are excluded."
   ],
   [
    "Buffer around a point or a shape?",
@@ -133,7 +133,7 @@
   ],
   [
    "How big a radius is sane?",
-   "The study question decides: walking catchments in hundreds of metres, facility screening in miles. Absurd radii produce true but useless counts."
+   "The radius control is limited to 1–50 miles. The area shown uses the planar πr² approximation."
   ],
   [
    "Can I analyse several centres?",

@@ -5,33 +5,12 @@ import type { Map as MLMap } from "maplibre-gl";
 import { isValidLat, isValidLng, parseCoordPair, type LatLng } from "@/lib/geo";
 import { decodePlusCode, encodePlusCode, formatDms, formatUtm, latLngToMgrs, latLngToUtm, parseDms, parseMgrs, utmToLatLng } from "@/lib/coords";
 import { downloadText, toCsv } from "@/lib/formats";
+import { decodeGeohash, encodeGeohash } from "@/lib/geohash";
 import { CopyBtn, ErrorBox, Field } from "@/components/ui";
 import { DynamicMap, pinElement } from "./shared";
 
 type Parsed = { point: LatLng; source: string } | { error: string };
 type Converted = { input: string; source: string; point: LatLng; decimal: string; dmm: string; dms: string; utm: string; mgrs: string; plus: string; geohash: string };
-
-const GEOHASH_BASE32 = "0123456789bcdefghjkmnpqrstuvwxyz";
-
-function encodeGeohash(lat: number, lng: number, precision = 9): string {
-  let latMin = -90, latMax = 90, lngMin = -180, lngMax = 180;
-  let bit = 0, ch = 0, even = true;
-  let out = "";
-  const bits = [16, 8, 4, 2, 1];
-  while (out.length < precision) {
-    if (even) {
-      const mid = (lngMin + lngMax) / 2;
-      if (lng >= mid) { ch |= bits[bit]; lngMin = mid; } else lngMax = mid;
-    } else {
-      const mid = (latMin + latMax) / 2;
-      if (lat >= mid) { ch |= bits[bit]; latMin = mid; } else latMax = mid;
-    }
-    even = !even;
-    if (bit < 4) bit += 1;
-    else { out += GEOHASH_BASE32[ch]; bit = 0; ch = 0; }
-  }
-  return out;
-}
 
 function formatDmm(value: number, axis: "lat" | "lng", minutePrecision = 4): string {
   const hemi = axis === "lat" ? (value >= 0 ? "N" : "S") : (value >= 0 ? "E" : "W");
@@ -59,9 +38,12 @@ function parseAnything(input: string): Parsed {
     const p = utmToLatLng({ zone, hemi, easting: parseFloat(um[3]), northing: parseFloat(um[4]) });
     if (p && isValidLat(p.lat) && isValidLng(p.lng)) return { point: p, source: "UTM" };
   }
+  // Require at least four characters here to avoid interpreting ordinary numbers as hashes.
+  const geohash = s.length >= 4 ? decodeGeohash(s) : null;
+  if (geohash) return { point: geohash, source: "geohash cell centre" };
   const single = parseDms(s);
   if (single !== null && isValidLat(single)) return { point: { lat: single, lng: 0 }, source: "single DMS (assumed latitude)" };
-  return { error: "No supported coordinate format was recognised. Try decimal degrees, DMS, UTM, MGRS or a Plus Code." };
+  return { error: "No supported coordinate format was recognised. Try decimal degrees, DMS, UTM, MGRS, a Plus Code or a geohash." };
 }
 
 function convert(input: string, precision: number): Converted | null {
@@ -135,6 +117,7 @@ export default function ConverterTool({ params }: { params?: Record<string, unkn
 
   return (
     <div className="space-y-4">
+      <p className="text-sm leading-relaxed text-mute">Geohash input resolves to the centre of its grid cell, not the original exact coordinate.</p>
       <div className="card flex flex-wrap items-center justify-between gap-3 p-3">
         <div className="premium-seg">
           <button type="button" className="premium-seg-btn" data-active={mode === "single"} onClick={() => setMode("single")}>Single coordinate</button>
@@ -195,7 +178,7 @@ export default function ConverterTool({ params }: { params?: Record<string, unkn
       ) : (
         <div className="space-y-4">
           <div className="card p-4">
-            <Field label="One coordinate per line" hint="Mix decimal, DMS, UTM, MGRS and Plus Codes in the same batch. Every valid point exports to DD, DMM, DMS, UTM, MGRS, Geohash and Plus Code.">
+            <Field label="One coordinate per line" hint="Mix decimal, DMS, UTM, MGRS, Plus Codes and geohashes in the same batch. A geohash decodes to its cell centre.">
               <textarea className="textarea min-h-48 font-mono text-xs" value={batch} onChange={(e) => setBatch(e.target.value)} />
             </Field>
             <div className="mt-3 flex flex-wrap items-center gap-2">

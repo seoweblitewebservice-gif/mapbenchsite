@@ -109,11 +109,11 @@
   ],
   [
    "Can I view properties too?",
-   "The viewer's job is geography; properties become columns in the CSV converter. Clicking features in richer GIS tools inspects attributes — here, the map is the message."
+   "Select a feature from the list to inspect up to ten properties in a map popup."
   ],
   [
    "Does it handle huge files?",
-   "Browser memory and rendering patience are the limits — tens of thousands of features are fine; million-vertex boundaries belong in a GIS or a simplifier first."
+   "Limits depend on browser memory and rendering performance. Large datasets may be slow or fail; no specific capacity is guaranteed."
   ],
   [
    "Styling — colours and weights?",

@@ -8,17 +8,17 @@
   "list of cities by county"
  ],
  "title": "Cities in a County Finder: Full Settlement List",
- "description": "List every city, town and village in a US county with the Cities in a County Finder — from the county's mapped boundary, CSV included. Free.",
+ "description": "Find mapped city, town and village nodes in matching county areas; download up to 300 returned points as CSV.",
  "updated": "October 2026",
- "summary_sentence": "For example, a large Texas county returns dozens of settlements — cities, towns and villages with coordinates — including the unincorporated places mailing lists usually miss.",
- "quick_answer": "The Cities in a County Finder takes a county name and state and returns its full settlement list from the county's OpenStreetMap boundary: cities, towns and villages with their coordinates, downloadable as CSV. Type the county, add the two-letter state code, and read the county as its people populate it.",
+ "summary_sentence": "Results are limited OSM place nodes, not a complete or official settlement list.",
+ "quick_answer": "Enter a county name and optional two-letter state abbreviation. The Overpass query returns up to 300 mapped city, town or village nodes in matching administrative areas; results may be incomplete or ambiguous.",
  "steps_intro": "Counties contain more places than their famous city. List them all:",
  "use_cases": [
   {
    "title": "Mailing and service-area planning",
    "body": [
     {
-     "t": "Coverage claims get audited against complete lists. A county 'fully covered' means these places, each one — context from "
+     "t": "Explore mapped settlements as a starting point for coverage planning; verify membership and completeness independently. Related context: "
     },
     {
      "t": "Address to County Lookup",
@@ -49,7 +49,7 @@
    "title": "Emergency and outreach planning",
    "body": [
     {
-     "t": "Every settlement is somewhere people must be reached. Complete lists are the difference between coverage and a story about coverage."
+     "t": "Use the returned points as a starting list, not proof that every settlement has been covered."
     }
    ]
   }
@@ -59,7 +59,7 @@
    "label": "Example · Why the state code matters",
    "body": [
     {
-     "t": "Dozens of counties share names across states — there is a Washington County in most of them. County plus state code is the unique key; the finder asks for both on purpose."
+     "t": "County names may recur. A state code helps narrow the search, but missing or inconsistent OSM state tags can prevent a match."
     }
    ]
   },
@@ -67,7 +67,7 @@
    "label": "Example · The unincorporated majority",
    "body": [
     {
-     "t": "In rural counties most named places are unincorporated communities. A list built from mapped settlements catches them; a list of incorporated cities alone would call the county emptier than it is."
+     "t": "Unincorporated communities may appear when mapped as a city, town or village node, but other tags are not included."
     }
    ]
   }
@@ -82,29 +82,19 @@
   ],
   "rows": [
    [
-    "Place name",
-    "As mapped in OpenStreetMap",
-    "Matching your records"
-   ],
-   [
-    "Place type",
-    "City, town or village as tagged",
-    "Sorting the list's shape"
+    "Name",
+    "As tagged in OpenStreetMap",
+    "Identifying returned places"
    ],
    [
     "Coordinates",
-    "The settlement's point",
-    "Mapping and distance work"
-   ],
-   [
-    "County and state",
-    "The boundary it fell inside",
-    "Auditing the membership"
+    "Node latitude and longitude",
+    "Mapping returned points"
    ],
    [
     "CSV export",
-    "The whole list as a file",
-    "Mailings, research, planning"
+    "Returned names and coordinates",
+    "Saving the limited results"
    ]
   ],
   "note": "Membership is by the county's mapped boundary: a settlement whose point falls inside is listed. Boundary-adjacent places can sit either side of different maps' lines."
@@ -112,47 +102,19 @@
  "faq": [
   [
    "Does it include unincorporated places?",
-   "Yes — settlements as mapped: cities, towns and villages including unincorporated communities with a mapped point. That completeness is the page's purpose."
+   "Only those mapped as city, town or village nodes in matching areas. Results are capped at 300 and are not complete."
   ],
   [
    "Why add the state?",
-   "County names repeat across America. The state code makes the county unique; without it the finder would be guessing among namesakes."
+   "The optional two-letter code filters by an OSM state tag, which may be missing or inconsistent; it does not guarantee a unique match."
   ],
   [
-   "Can I use the tool without sharing my precise location?",
-   "Yes — you type a county; your location is irrelevant to it."
+   "Can I list a parish or borough?",
+   "The search appends County to the supplied name, so other county-equivalent naming conventions may not match."
   ],
   [
-   "Why might a boundary or place name look different elsewhere?",
-   "OpenStreetMap's county boundary and settlement tags evolve with mapper contributions; another source may draw a line or spell a name differently."
-  ],
-  [
-   "Does MapBench store my browser location?",
-   "No — and this tool never asks for it."
-  ],
-  [
-   "A settlement is missing.",
-   "Likely unmapped or mapped without a place point yet. Open data's gaps are visible and fixable by mappers — the list shows what the map knows today."
-  ],
-  [
-   "Can I get places within a radius instead?",
-   "That is Cities Within a Drawn Area and the radius family — a circle's list rather than a county's. Different boundary, different question."
-  ],
-  [
-   "The list is huge — biggest counties?",
-   "Large western counties and big urban ones hold dozens of settlements. The CSV exists because some lists outgrow the screen honestly."
-  ],
-  [
-   "Are ghost towns listed?",
-   "If mapped as a place, a historic settlement can appear tagged as it is recorded. The map's memory is long; check the type field."
-  ],
-  [
-   "Can I list places in a parish or borough?",
-   "County-equivalents in Census geography behave the same for listing purposes where the boundary data exists."
-  ],
-  [
-   "Why does a suburb appear in two counties' lists?",
-   "It should not — a point falls in one. If it does, one list's boundary generalised across it. The county lookup's polygon test arbitrates."
+   "What is exported?",
+   "The CSV includes returned names, latitude and longitude; it does not include place types or verified administrative membership."
   ]
  ],
  "related_prose": [

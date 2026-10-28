@@ -20,17 +20,17 @@ type Mode =
 
 const FOCUS: Record<string, { label: string; zoom: number; pick: (a: Record<string, string>) => string; missing: string }> = {
   municipality: {
-    label: "Municipality", zoom: 14,
+    label: "Municipality / fallback settlement", zoom: 14,
     pick: (a) => a.municipality || a.city || a.town || "",
     missing: "No municipality is recorded for this point in OpenStreetMap. The wider area fields below are the closest recorded answer.",
   },
   village: {
-    label: "Village", zoom: 14,
+    label: "Village / fallback settlement", zoom: 14,
     pick: (a) => a.village || a.town || a.hamlet || "",
-    missing: "No village is recorded for this point — the nearest settlement may be a town or city (see the fields below).",
+    missing: "No village, town or hamlet field was returned. This does not establish which settlement is nearest.",
   },
   district: {
-    label: "District", zoom: 14,
+    label: "District / fallback area", zoom: 14,
     pick: (a) => a.city_district || a.district || a.suburb || a.county || "",
     missing: "No district is recorded for this point in OpenStreetMap.",
   },
@@ -40,7 +40,7 @@ const FOCUS: Record<string, { label: string; zoom: number; pick: (a: Record<stri
     missing: "No civil parish is recorded in OpenStreetMap for this point. Civil parishes exist mainly in England and parts of Wales; many points have none.",
   },
   "coords-city": {
-    label: "City", zoom: 12,
+    label: "City / fallback settlement", zoom: 12,
     pick: (a) => a.city || a.town || a.village || a.municipality || "",
     missing: "No city or town is recorded for these coordinates.",
   },
@@ -76,17 +76,21 @@ function ReverseFocusTool({ mode }: { mode: Exclude<Mode, "intersection"> }) {
   const [error, setError] = useState<string | null>(null);
   const [address, setAddress] = useState<Record<string, string> | null>(null);
   const [displayName, setDisplayName] = useState("");
+  const lookupId = useRef(0);
   const mapRef = useRef<MLMap | null>(null);
   const libRef = useRef<any>(null);
   const markerRef = useRef<any>(null);
 
   const lookup = async (p: LatLng) => {
+    const id = ++lookupId.current;
     setPoint(p);
+    setAddress(null); setDisplayName("");
     setLatIn(p.lat.toFixed(6));
     setLngIn(p.lng.toFixed(6));
     setBusy(true);
     setError(null);
     const r = await nominatimReverse(p.lat, p.lng, cfg.zoom);
+    if (id !== lookupId.current) return;
     setBusy(false);
     if (!r.ok) {
       setAddress(null);
@@ -137,8 +141,8 @@ function ReverseFocusTool({ mode }: { mode: Exclude<Mode, "intersection"> }) {
         </div>
         <div className="flex flex-wrap gap-2">
           <button type="button" className="btn btn-primary flex-1" disabled={busy} onClick={() => {
-            const lat = parseFloat(latIn), lng = parseFloat(lngIn);
-            if (!isValidLat(lat) || !isValidLng(lng)) { setError("Latitude must be between −90 and 90, longitude between −180 and 180."); return; }
+            const lat = Number(latIn), lng = Number(lngIn);
+            if (!latIn.trim() || !lngIn.trim() || !isValidLat(lat) || !isValidLng(lng)) { setError("Latitude must be between −90 and 90, longitude between −180 and 180."); return; }
             lookup({ lat, lng });
             mapRef.current?.flyTo({ center: [lng, lat], zoom: 13, essential: true });
           }}>{busy ? "Looking up…" : "Look up"}</button>
@@ -165,7 +169,7 @@ function ReverseFocusTool({ mode }: { mode: Exclude<Mode, "intersection"> }) {
                 ))}
               </tbody></table>
             )}
-            <p className="text-[11px] leading-relaxed text-mute">Names and boundaries come from OpenStreetMap via Nominatim. New or rural areas can be incomplete; for legal boundaries use the responsible local authority.</p>
+            <p className="text-[11px] leading-relaxed text-mute">Nominatim returns the address of a nearby suitable mapped object, not a verified point-in-boundary result. Fields can be missing, outdated or approximate; for legal boundaries use the responsible authority. Municipality, district and city modes may use broader fallback fields.</p>
           </div>
         )}
       </div>
@@ -212,7 +216,7 @@ function IntersectionTool() {
 
   const find = async () => {
     if (!streetA.trim() || !streetB.trim()) { setError("Enter both street names."); return; }
-    setBusy(true); setError(null); setAlternatives([]);
+    setBusy(true); setError(null); setAlternatives([]); setPoint(null); setAddress("");
     try {
       const suffix = city.trim() ? `, ${city.trim()}` : "";
       let found: NomHit[] = [];
@@ -222,7 +226,7 @@ function IntersectionTool() {
       }
       if (!found.length) {
         setPoint(null);
-        setError("No crossing of those two streets was found. Check the spellings, add the city, and make sure the streets really cross — some pairs only meet in a different town of the same name.");
+        setError("No search match was returned. This does not establish whether the streets cross; check spellings and verify with local mapping.");
         return;
       }
       const top = found[0];
@@ -233,8 +237,9 @@ function IntersectionTool() {
       setAddress(rev.ok ? rev.result.displayName : top.displayName);
     } catch {
       setError("The search service could not be reached. Try again in a moment.");
+    } finally {
+      setBusy(false);
     }
-    setBusy(false);
   };
 
   return (
@@ -253,9 +258,10 @@ function IntersectionTool() {
           {busy ? <Spinner label="Searching OpenStreetMap…" /> : "Find the intersection"}
         </button>
         {error && <ErrorBox>{error}</ErrorBox>}
+        <p className="text-xs leading-relaxed text-mute">Search results are possible matches only: this tool does not check whether the mapped street geometries cross.</p>
         {point && (
           <div className="space-y-3 border-t border-line pt-3">
-            <Stat label="Intersection coordinates" value={fmtCoords(point, 6)} />
+            <Stat label="Possible match coordinates" value={fmtCoords(point, 6)} />
             {address && <p className="text-sm leading-snug text-mute">{address}</p>}
             {alternatives.length > 0 && (
               <div>
@@ -269,7 +275,7 @@ function IntersectionTool() {
                 </div>
               </div>
             )}
-            <p className="text-[11px] leading-relaxed text-mute">Results come from OpenStreetMap road data via Nominatim. A named junction is matched directly; otherwise the closest recorded point to the crossing is shown and the address line confirms it.</p>
+            <p className="text-[11px] leading-relaxed text-mute">These are Nominatim text-search matches, not a geometric intersection calculation. A result may not be the junction or even a crossing; verify both roads and the location independently before using it.</p>
           </div>
         )}
       </div>

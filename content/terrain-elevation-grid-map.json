@@ -8,24 +8,17 @@
   "elevation range map"
  ],
  "title": "Terrain Elevation Grid Map: Slopes Cell by Cell",
- "description": "Map slopes cell by cell from a 9×9 elevation sample with the Terrain Elevation Grid Map — see where the ground tilts, and how hard. Free.",
+ "description": "Explore rough slope estimates from a grid of modelled elevations; not for engineering or access decisions.",
  "updated": "October 2026",
- "summary_sentence": "For example, around a point on a Colorado foothill the grid can read gentle 4% cells on the bench and 38% cells in the gully two cells over — the slope pattern a single centre elevation could never tell you.",
- "quick_answer": "The Terrain Elevation Grid Map samples elevations on a 9×9 grid around your point and turns them into a cell-by-cell slope map, each cell coloured by its steepest gradient in percent. Set the centre and area size and read the pattern — benches, gullies and scarps made visible.",
+ "summary_sentence": "The slope display is a coarse estimate, not a guarantee of safe access, drainage or buildability.",
+ "quick_answer": "The tool samples elevations on a 9×9 grid and colors the inner 7×7 cells by the largest elevation difference to a cardinal neighbor divided by spacing. This coarse estimate can miss steep or hazardous features.",
  "steps_intro": "Eighty-one samples, one honest picture of the tilt:",
  "use_cases": [
   {
    "title": "Site and access scouting",
    "body": [
     {
-     "t": "Before visiting a parcel, see whether the flat-looking field hides a steep bank. Cell slopes flag where machines, wheelchairs and foundations will struggle. For one slope's exact forms, use the "
-    },
-    {
-     "t": "Slope & Gradient Calculator",
-     "l": "/tools/slope-gradient-calculator"
-    },
-    {
-     "t": "."
+     "t": "A coarse slope grid can suggest where to investigate further. It does not assess vehicle or wheelchair access or foundations."
     }
    ]
   },
@@ -33,7 +26,7 @@
    "title": "Trail and route sense-checking",
    "body": [
     {
-     "t": "A proposed line crossing a wall of red cells is a scramble, whatever the map's contour spacing suggested at a glance."
+     "t": "A grid can give a rough terrain overview, but it does not establish a route’s safety or difficulty. Check local conditions and reliable maps."
     }
    ]
   },
@@ -41,14 +34,7 @@
    "title": "Drainage intuition",
    "body": [
     {
-     "t": "Steep cells collect and shed water; flat cells hold it. The grid is the quickest way to guess where a site wets and dries — context for the "
-    },
-    {
-     "t": "Watershed Finder",
-     "l": "/tools/watershed-finder"
-    },
-    {
-     "t": "."
+     "t": "Slope samples alone do not determine drainage, flooding or soil conditions. Use qualified assessment and authoritative data."
     }
    ]
   },
@@ -56,7 +42,7 @@
    "title": "Teaching terrain reading",
    "body": [
     {
-     "t": "Students predict the slope pattern from contours, then reveal the grid. The mismatches are the lesson."
+     "t": "Compare rough sampled gradients with contours as an educational exercise; sampling may miss features."
     }
    ]
   }
@@ -66,7 +52,7 @@
    "label": "Example · Why cell size matters",
    "body": [
     {
-     "t": "The same hillside sampled with a small area gives small cells and sharp detail; a large area averages slopes down. A 30% gully wall inside a gentle cell reads as that cell's maximum gradient — pattern first, precision by zooming in."
+     "t": "Changing the area size changes the distance between samples. A narrow steep feature can be missed even at the smallest available span."
     }
    ]
   },
@@ -74,45 +60,37 @@
    "label": "Example · Reading a scarp",
    "body": [
     {
-     "t": "A straight line of steep cells crossing otherwise calm ground is a scarp, terrace edge or road cut — linear features announce themselves in grids long before they are named."
+     "t": "A band of higher sample gradients may suggest terrain changes, but it does not identify a scarp, road cut or a particular landform."
     }
    ]
   }
  ],
  "popular_table": {
-  "title": "Slope bands and what they mean on foot",
-  "intro": "The per-cell maximum gradient, translated into ground truth.",
+  "title": "How the slope estimate works",
+  "intro": "The estimate compares cardinal-neighbour samples, not every point on the ground.",
   "columns": [
-   "Cell slope",
-   "Ground truth"
+   "Input or output",
+   "Limit"
   ],
   "rows": [
    [
-    "0–2%",
-    "Effectively flat — water ponds"
+    "81 elevation samples",
+    "From the terrain model"
    ],
    [
-    "2–8%",
-    "Easy walking and driving"
+    "49 displayed inner cells",
+    "Edges are not displayed"
    ],
    [
-    "8–15%",
-    "Noticeable hill; vehicles fine, legs aware"
+    "Gradient estimate",
+    "Largest cardinal elevation difference divided by grid spacing"
    ],
    [
-    "15–30%",
-    "Steep — scrambling territory on foot"
-   ],
-   [
-    "30–60%",
-    "Very steep — hands come out"
-   ],
-   [
-    "60%+",
-    "Cliff-like ground (31° and up)"
+    "Safe access or drainage",
+    "Not determined"
    ]
   ],
-  "note": "Slopes come from sampled elevations (Open-Meteo elevation data over the grid), so a feature narrower than a cell can be softened or missed. It is a scouting lens, not a survey."
+  "note": "Do not use this coarse estimate for engineering, accessibility or safety decisions."
  },
  "faq": [
   [
@@ -125,7 +103,7 @@
   ],
   [
    "Can I get one exact slope instead?",
-   "Yes — pick the two elevations yourself and use the Slope & Gradient Calculator for a single precise figure. This map is for pattern; that tool is for a number."
+   "A calculator can estimate grade from the inputs you provide, but precision and accuracy depend on how those elevations and distances were measured."
   ],
   [
    "What elevation data does it use?",

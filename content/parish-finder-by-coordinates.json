@@ -8,10 +8,10 @@
   "parish by postcode area"
  ],
  "title": "Parish Finder by Coordinates: Civil Parishes",
- "description": "Find the civil parish for a point in England and Wales with the Parish Finder by Coordinates — Louisiana and church parishes where recorded. Free.",
+ "description": "Look up a parish field when present in a reverse-geocoded address record.",
  "updated": "October 2026",
- "summary_sentence": "For example, a Wiltshire point resolves to a civil parish whose council sets a tiny precept and maintains the village green — the smallest tier of English government, named from a single click.",
- "quick_answer": "The Parish Finder by Coordinates reads a point's OpenStreetMap address record for its parish: the civil parish in England and Wales, Louisiana parishes and church parishes where that is what the record holds. Enter coordinates or click the map and read the parish name with the administrative breakdown.",
+ "summary_sentence": "The result only reports a returned parish field. A missing field does not establish that no parish exists.",
+ "quick_answer": "This tool reverse-geocodes the chosen point using Nominatim and displays available address fields from a nearby suitable mapped object. Fields may be missing or use broader fallbacks; the result is not a verified legal boundary or a guarantee of the nearest place.",
  "steps_intro": "The oldest layer of local government, one point at a time:",
  "use_cases": [
   {

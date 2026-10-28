@@ -8,10 +8,10 @@
   "neighbourhood data dashboard"
  ],
  "title": "Spatial Dashboard Builder: Maps That Summarise",
- "description": "Assemble a simple spatial dashboard from map layers and summary panels with the Spatial Dashboard Builder — share the picture, honestly sourced. Free.",
+ "description": "View capped OSM node counts and optional elevation for a chosen circular area.",
  "updated": "October 2026",
- "summary_sentence": "For example, a city team can pair one map of service locations with counts by district — a dashboard whose every panel traces back to the same open data the map shows.",
- "quick_answer": "The Spatial Dashboard Builder assembles a simple spatial dashboard — a map view accompanied by the summary panels, counts and breakdowns that make the map legible. Choose your area and layers and read the combined picture: geography plus its headline numbers, built from stated data rather than decoration.",
+ "summary_sentence": "This fixed dashboard counts at most 3,000 returned OSM nodes; it is not an official statistics report.",
+ "quick_answer": "Choose a centre and radius to display fixed counts for selected OSM node tags and an Open-Meteo centre elevation when available. Counts are capped and omit ways and relations; they are not official statistics.",
  "steps_intro": "A map alone is a picture; a dashboard is a picture with its evidence attached:",
  "use_cases": [
   {
@@ -101,32 +101,20 @@
  },
  "faq": [
   [
-   "What data can it show?",
-   "Point and area data from the open sources MapBench works with, organised by the areas and categories you choose. The dashboard's ceiling is its data's quality — stated on the panel, always."
+   "What data does it show?",
+   "A fixed set of OSM city, town, village, school, hospital, food, fuel and hotel nodes; at most 3,000 returned nodes are counted."
   ],
   [
-   "Do panels update live?",
-   "They reflect the data at build and refresh time. 'Live' is a claim about a feed, not a layout — where no feed exists, the dashboard shows its data's date."
+   "Does it update automatically?",
+   "No. Run the query again to refresh; provider availability and mapping completeness affect the results."
   ],
   [
-   "Can I embed the dashboard elsewhere?",
-   "Sharing follows the creation tools' pattern — links and embeds where supported, with source licences travelling with the output."
+   "Can I embed or customize the dashboard?",
+   "No. The workspace displays a fixed set of cards in this page; it does not generate an embeddable dashboard or selectable layers."
   ],
   [
-   "Rates or counts — which should I show?",
-   "Rates for comparing areas of different sizes; counts for operational totals. Showing counts alone across unequal areas is the classic dashboard sin this page warns about."
-  ],
-  [
-   "Is coding required?",
-   "No — the builder is form-driven. The trade for that ease is a fixed, honest set of panel types rather than a BI platform's infinity."
-  ],
-  [
-   "Private data?",
-   "Do not put sensitive datasets into shareable public views. Aggregate first (cells and districts exist for this), then build."
-  ],
-  [
-   "Big datasets?",
-   "Dashboards summarise; raw thousands belong in the dataset, with the dashboard as its window. Aggregate until the map reads at a glance."
+   "Is the elevation guaranteed?",
+   "No. It is requested from Open-Meteo and shown as unavailable when missing."
   ]
  ],
  "related_prose": [

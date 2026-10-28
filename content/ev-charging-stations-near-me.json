@@ -10,22 +10,15 @@
  "title": "EV Charging Stations Near Me: Map and List",
  "description": "Find EV charging stations near any place with EV Charging Stations Near Me — mapped from open data, nearest first. Free.",
  "updated": "October 2026",
- "summary_sentence": "For example, a market town's map shows the supermarket charger a visiting driver would never have guessed at — the finder's whole value is the ones you did not know.",
- "quick_answer": "EV Charging Stations Near Me maps the charging stations OpenStreetMap records around a place you search or your location, ranked nearest first. Search, press find, and browse the stations on the map and list — the layer between 'the car needs charge' and 'there is a plug in that town'.",
+ "summary_sentence": "Results are limited to returned OpenStreetMap records and may omit closer or unmapped places. Confirm details with an authoritative local source.",
+ "quick_answer": "The tool searches OpenStreetMap for mapped charging station records around a chosen location, then sorts returned records by straight-line distance. It requests at most 200 records and displays up to 100, so it cannot guarantee the closest result or a complete list. Data, access and opening status can be incomplete or outdated.",
  "steps_intro": "Charge exists where mappers have recorded it. See your area's record:",
  "use_cases": [
   {
    "title": "Trip charging reconnaissance",
    "body": [
     {
-     "t": "Before the journey, know the towns with charge on your route — the "
-    },
-    {
-     "t": "EV Range Radius",
-     "l": "/tools/ev-range-radius"
-    },
-    {
-     "t": " shows how far the car reaches; this shows what is there when it arrives."
+     "t": "Search near a location for mapped charging stations, then verify connectors, access, opening status and availability with the operator."
     }
    ]
   },
@@ -41,7 +34,7 @@
    "title": "Backup planning",
    "body": [
     {
-     "t": "The nearest charger is a plan; the second nearest is a strategy. The ranked list gives both."
+     "t": "A second returned station is only a candidate backup; verify compatibility, access and live availability."
     }
    ]
   },
@@ -67,52 +60,47 @@
    "label": "Example · The recorded detail",
    "body": [
     {
-     "t": "Where mappers recorded them, stations carry the practical details. Where they did not, the station still appears — presence first, particulars where the data has them."
+     "t": "The list shows a station name and distance, but not connector type, power, prices or operating status. Check the provider before travelling."
     }
    ]
   }
  ],
  "popular_table": {
-  "title": "Reading the station list",
-  "intro": "What the finder can and cannot promise — the honesty table for open charging data.",
+  "title": "What the finder shows",
+  "intro": "Review the scope of the result before relying on it.",
   "columns": [
-   "Question",
-   "This finder",
-   "Reality check"
+   "Result",
+   "Available here?",
+   "Limit"
   ],
   "rows": [
    [
-    "Stations that exist in OSM",
-    "Shown, nearest first",
-    "The working set"
+    "Mapped names and points",
+    "Yes, for returned records",
+    "Coverage and result caps apply"
    ],
    [
-    "Brand-new chargers",
-    "Appear once mapped",
-    "Data lags construction"
+    "Distance",
+    "Straight-line to returned point",
+    "Not road or walking distance"
    ],
    [
-    "Connector types and prices",
-    "Where recorded",
-    "Varies by mapper and operator"
-   ],
-   [
-    "Live availability",
-    "Not shown",
-    "The operator's app owns that"
-   ],
-   [
-    "Your location stored?",
+    "Current access and opening status",
     "No",
-    "Used for the search only"
+    "Confirm with the operator"
+   ],
+   [
+    "Full details and live availability",
+    "No",
+    "Consult an authoritative source"
    ]
   ],
-  "note": "OpenStreetMap charging data is community-built: strong in much of Europe and North America's cities, thinner in rural areas — improving with every mapper who adds a plug."
+  "note": "OpenStreetMap coverage and result limits can omit relevant places. Records may be outdated; confirm access, services and current conditions with an authoritative source."
  },
  "faq": [
   [
    "Does it show connector types and prices?",
-   "Where the map data records them, the detail travels with the station; prices and live status belong to operators and change faster than maps. Treat this as the where, and the operator as the how much."
+   "No. This workspace shows names, locations and distances, not connector types, prices or live availability. Check the operator."
   ],
   [
    "How current is the data?",
@@ -120,7 +108,7 @@
   ],
   [
    "Can I use the tool without sharing my precise location?",
-   "Yes — search a place name instead. Location is one input option, never a requirement."
+   "You can search for a place instead of using device location. The selected search centre is sent to OpenStreetMap-based services for the lookup."
   ],
   [
    "Why might a boundary or place name look different elsewhere?",
@@ -128,7 +116,7 @@
   ],
   [
    "Does MapBench store my browser location?",
-   "No — it is used for the search and not kept."
+   "Device location is optional. The selected coordinates are sent to Overpass to search; consult the privacy page for provider and site details."
   ],
   [
    "The nearest station is across a river or border.",
@@ -136,7 +124,7 @@
   ],
   [
    "Tesla-only stations included?",
-   "Stations are listed as the data records them, including network restrictions where tagged. The car's compatibility is a filter you apply with the record in hand."
+   "The search does not filter or display network access restrictions. Verify compatibility and access with the operator."
   ],
   [
    "Can I plan a full route's charging here?",
@@ -148,11 +136,11 @@
   ],
   [
    "Fast chargers specifically?",
-   "Where the data tags power and connector detail, the station record shows it. Dedicated network apps filter harder; this map's job is the unbiased where."
+   "The workspace does not show or filter by charging power. Verify speed and connector details with the operator."
   ],
   [
    "Free charging points?",
-   "Pricing lives with operators and changes often — the station's own listing or app is the source. The map's neutrality is why it shows all networks alike."
+   "Pricing is not shown. Check current costs with the operator."
   ]
  ],
  "related_prose": [

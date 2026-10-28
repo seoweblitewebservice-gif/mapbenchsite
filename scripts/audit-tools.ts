@@ -13,6 +13,13 @@ for (const t of TOOLS) {
   const pc = JSON.parse(readFileSync(`content/${t.slug}.json`, 'utf8')) as PageContent;
   const dedicated = t.slug === 'distance-matrix-calculator';
   if (!(t.component in toolComponents)) errors.push(`${t.slug}: component ${t.component} missing`);
+  if (t.component === 'list-spatial' && !['voronoi', 'buffer', 'suitability', 'dashboard', 'form-builder', 'live-connector'].includes(String(t.props?.mode))) errors.push(`${t.slug}: invalid list-spatial mode ${t.props?.mode}`);
+  if (t.component === 'list-map' && !['county-cities', 'boundary-kml', 'boundary-country', 'airport-routes', 'advanced-embed', 'store-locator'].includes(String(t.props?.mode))) errors.push(`${t.slug}: invalid list-map mode ${t.props?.mode}`);
+  if (t.component === 'list-location' && !['municipality', 'village', 'district', 'parish', 'coords-city', 'coords-country', 'coords-state', 'coords-lookup', 'intersection'].includes(String(t.props?.mode))) errors.push(`${t.slug}: invalid list-location mode ${t.props?.mode}`);
+  if (t.component === 'list-grid' && !['ngr-convert', 'ngr-to-postcode', 'postcode-to-ngr', 'ngr-map', 'osgrid-distance', 'uk-postcode-distance', 'uk-postcode-walking'].includes(String(t.props?.mode))) errors.push(`${t.slug}: invalid list-grid mode ${t.props?.mode}`);
+  if (t.component === 'list-earth' && !['elevation-atlas', 'terrain-grid', 'gps-speedometer', 'moon-calendar', 'snow', 'rain', 'cicada'].includes(String(t.props?.mode))) errors.push(`${t.slug}: invalid list-earth mode ${t.props?.mode}`);
+  if (t.component === 'list-file' && !['gpx-hr', 'photo-route'].includes(String(t.props?.mode))) errors.push(`${t.slug}: invalid list-file mode ${t.props?.mode}`);
+  if (t.component === 'fileviewer' && !['kml', 'gpx', 'geojson'].includes(String(t.props?.format))) errors.push(`${t.slug}: invalid fileviewer format ${t.props?.format}`);
   if (pc.slug !== t.slug) errors.push(`${t.slug}: content slug mismatch`);
   for (const field of ['title', 'description', 'quick_answer'] as const) {
     if (!dedicated && !pc[field]?.trim()) errors.push(`${t.slug}: missing ${field}`);

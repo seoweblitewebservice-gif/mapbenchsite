@@ -10,8 +10,8 @@
  "title": "Map Data Collection Form Builder: Field Forms",
  "description": "Build a field form with the Map Data Collection Form Builder — text, number and choice fields, GPS attached automatically, CSV or GeoJSON out. Free.",
  "updated": "October 2026",
- "summary_sentence": "For example, a tree-survey crew builds a form in five minutes — species, condition, photo note — and every submission lands on the map with its GPS position already attached.",
- "quick_answer": "The Map Data Collection Form Builder lets you design a simple data-collection form — text, number and choice fields — and collect submissions with GPS positions attached automatically. Everything runs in your browser with no account and no server, and exports cleanly as CSV or GeoJSON.",
+ "summary_sentence": "Submissions use local browser storage when available; the form design resets on reload.",
+ "quick_answer": "Design text, number and choice fields and save submissions in this browser. Device location is requested on submission and may be unavailable. CSV includes saved fields; GeoJSON contains only submissions with a position.",
  "steps_intro": "Design the form, walk the field, export the data — all without a platform:",
  "use_cases": [
   {
@@ -114,15 +114,15 @@
  "faq": [
   [
    "What happens if the browser closes mid-survey?",
-   "Saved submissions persist in the browser's local storage, so reopening the page restores your collection. Unsaved half-filled entries are not promised — submit as you go, which is good field practice anyway."
+   "Saved submissions are restored if local storage is available, but the form design resets on reload. Export backups regularly; storage can fail or be cleared."
   ],
   [
    "Can I edit the form after collecting some data?",
-   "You can adjust the form, but changing fields mid-project makes earlier and later submissions disagree in shape. Professional habit: pilot the form for ten records, fix it, then freeze it for the real collection."
+   "Yes. CSV includes labels from older submissions as well as the current form, but old values may not appear in the on-page table after a field is renamed. Use unique labels and export backups."
   ],
   [
    "How accurate is the automatic GPS?",
-   "As accurate as the device reports — typically a few metres outdoors for a modern phone, worse under trees, bridges and indoors. The reading comes from the device's own location services, not from this page."
+   "The browser requests device location, which may be inaccurate, unavailable or denied. Submissions without a position are omitted from GeoJSON export."
   ],
   [
    "CSV or GeoJSON — which export?",

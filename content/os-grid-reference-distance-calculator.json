@@ -8,24 +8,24 @@
   "ngr distance"
  ],
  "title": "OS Grid Reference Distance Calculator",
- "description": "Measure straight-line distance between two OS grid references with the OS Grid Reference Distance Calculator — eastings and northings, exactly. Free.",
+ "description": "Measure projected-grid distance and bearing between the centres of two British grid reference squares.",
  "updated": "October 2026",
- "summary_sentence": "For example, TQ 300 800 to TQ 330 840 is exactly 5.00 km — a 3-4-5 triangle hiding inside London's grid: 3 km east, 4 km north, 5 km between the points.",
- "quick_answer": "The OS Grid Reference Distance Calculator measures the straight-line distance between two Ordnance Survey grid references by converting them to eastings and northings and applying Pythagoras. Enter both references and read the distance in metres, kilometres or miles — the grid's own flat geometry, exact within the references' precision.",
+ "summary_sentence": "A grid-distance result is not a surveyed ground distance or walking route.",
+ "quick_answer": "The tool converts two references to square centres and uses Pythagoras for projected-grid distance and grid bearing. Precision is limited by the referenced squares and projection; latitude/longitude output has no datum shift.",
  "steps_intro": "Grid references are coordinates in disguise. Subtract, square, root:",
  "use_cases": [
   {
    "title": "Walking route checks",
    "body": [
     {
-     "t": "Start and finish references on a Landranger map become a crow-flies distance in seconds — context for the winding path the "
+     "t": "Projected centre-to-centre distance gives context for a route, but does not measure the path; the "
     },
     {
      "t": "Trail Distance Estimator",
      "l": "/tools/trail-distance-estimator"
     },
     {
-     "t": " prices properly."
+     "t": " also measures two-point distance, not trail length."
     }
    ]
   },
@@ -74,7 +74,7 @@
    "label": "Example · Precision sets the floor",
    "body": [
     {
-     "t": "Two 6-figure references locate their points within 100 m squares, so their distance carries up to ~140 m of inherited fuzz. Ten-figure references (1 m squares) make the same calculation survey-crisp. The distance cannot be better than the references."
+     "t": "Six-figure references name 100 m squares. The calculation uses their centres; it does not determine the exact positions or surveyed ground distance."
     }
    ]
   }
@@ -109,7 +109,7 @@
     "533,000 E, 184,000 N"
    ]
   ],
-  "note": "Within Britain the grid is a plane, so distances are plain Pythagoras — no spherical correction is needed at grid scale, which is the grid's founding convenience."
+  "note": "The calculation is planar in the projected grid, not a surveyed ground distance; reference-square precision and projection distortion matter."
  },
  "faq": [
   [
@@ -126,7 +126,7 @@
   ],
   [
    "Is this the walking distance?",
-   "No — it is the straight line between the points. Paths, roads and terrain only add length; treat this as the floor every real route exceeds."
+   "No. It is a planar distance between the square centres on the projected grid, not a path or a surveyed ground distance."
   ],
   [
    "Metres or kilometres or miles?",
@@ -134,7 +134,7 @@
   ],
   [
    "Northern Ireland references?",
-   "The Irish Grid is a separate system with its own lettering — the Irish Grid Helper covers it; mixing the two systems' references produces confident nonsense."
+   "The Irish Grid is a separate system. The Irish Grid Helper on this site does not currently perform Irish Grid conversion; use an authoritative tool."
   ],
   [
    "What datum sits under the grid?",

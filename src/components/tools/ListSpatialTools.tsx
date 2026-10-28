@@ -4,6 +4,7 @@ import type { Map as MLMap, GeoJSONSource } from "maplibre-gl";
 import { destination, distanceKm, fmt, fmtCoords, fmtDist, type LatLng } from "@/lib/geo";
 import { photonSearch } from "@/lib/geocode";
 import { downloadText, toCsv } from "@/lib/formats";
+import { csvPointFeatures } from "@/lib/spatialCsv";
 import { CopyBtn, ErrorBox, Field, Seg, Spinner, Stat } from "@/components/ui";
 import { DynamicMap, pinElement, PlaceField, type PlaceValue } from "./shared";
 
@@ -132,14 +133,14 @@ function VoronoiTool() {
 
   return (
     <Layout map={m.el} panel={<>
-      <p className="text-sm leading-relaxed text-mute">Click the map to drop seed points (up to 30). Each coloured cell is the area closer to its seed than to any other — the classic way to draw delivery zones, service territories and nearest-facility catchments.</p>
+      <p className="text-sm leading-relaxed text-mute">Click the map to drop seed points (up to 30). Cells show nearest seeds in a planar longitude/latitude degree calculation within a bounding rectangle, not road or geodesic catchments.</p>
       <div className="flex items-center gap-2">
         <span className="chip chip-brand">{seeds.length} seeds</span>
         <button type="button" className="btn btn-ghost btn-sm" onClick={() => setSeeds([])}>Clear</button>
         {seeds.length > 0 && <button type="button" className="btn btn-ghost btn-sm" onClick={() => setSeeds(seeds.slice(0, -1))}>Undo last</button>}
       </div>
       {fc && <button type="button" className="btn btn-primary btn-sm" onClick={() => downloadText("mapbench-voronoi.geojson", JSON.stringify(fc, null, 1), "application/geo+json")}>Download cells as GeoJSON</button>}
-      <p className="text-xs leading-relaxed text-mute">Cells are computed in flat map coordinates, which is accurate for local areas (a city or county). For continent-scale seed sets, use a projected GIS workflow — straight lines on a world map are not true nearest-point boundaries.</p>
+      <p className="text-xs leading-relaxed text-mute">Distances in longitude/latitude degrees distort geography, including at local scales away from the equator. The cells are clipped to a padded rectangle; duplicate seeds overlap and antimeridian cases are unreliable. Use an appropriate projected or geodesic GIS method for decisions.</p>
     </>} />
   );
 }
@@ -192,7 +193,7 @@ function BufferTool() {
           <Stat label="Hospitals inside" value={String(result.hospitals)} />
         </div>
       )}
-      <p className="text-xs leading-relaxed text-mute">The overlay counts features recorded in OpenStreetMap inside the circle. Counts reflect mapping completeness, not an official register.</p>
+      <p className="text-xs leading-relaxed text-mute">Counts are limited to 2,000 returned OSM nodes, not ways or relations. They may be incomplete and are not an official register. The area is a planar πr² approximation; the circle is a 72-point spherical approximation.</p>
     </>} />
   );
 }
@@ -210,11 +211,13 @@ function SuitabilityTool() {
   const [wCity, setWCity] = useState(25);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [rows, setRows] = useState<(Candidate & { score: number })[] | null>(null);
+  const [rows, setRows] = useState<(Candidate & { score: number; anchorKm: number })[] | null>(null);
 
   const run = async () => {
     if (!anchor) { setError("Set the anchor place (for example your office or home city)."); return; }
-    const list = names.split("\n").map((s) => s.trim()).filter(Boolean).slice(0, 10);
+    const list = names.split("\n").map((s) => s.trim()).filter(Boolean);
+    if (list.length > 10) { setError("Use at most 10 candidates."); return; }
+    if (wAnchor + wEle + wCity === 0) { setError("Set at least one non-zero weight."); return; }
     if (list.length < 2) { setError("List at least two candidate places, one per line."); return; }
     setBusy(true); setError(null); setRows(null);
     try {
@@ -223,13 +226,13 @@ function SuitabilityTool() {
         const r = await photonSearch(name, 1);
         if (r.ok && r.results.length) cands.push({ name, p: { lat: r.results[0].lat, lng: r.results[0].lng }, eleM: null, cityKm: null });
       }
-      if (cands.length < 2) throw new Error("Fewer than two candidates could be geocoded. Add the state or country to each name.");
+      if (cands.length !== list.length) throw new Error("Some candidates could not be geocoded. Check each name and add a state or country before retrying.");
       // elevations in one Open-Meteo call
       const url = `https://api.open-meteo.com/v1/elevation?latitude=${cands.map((c) => c.p.lat.toFixed(5)).join(",")}&longitude=${cands.map((c) => c.p.lng.toFixed(5)).join(",")}`;
       const er = await fetch(url);
       if (er.ok) {
         const ed = await er.json();
-        (ed.elevation ?? []).forEach((v: number, i: number) => { cands[i].eleM = v; });
+        if (Array.isArray(ed.elevation)) ed.elevation.slice(0, cands.length).forEach((v: unknown, i: number) => { if (typeof v === "number" && Number.isFinite(v)) cands[i].eleM = v; });
       }
       // distance to nearest city (Overpass, best effort per candidate)
       for (const c of cands) {
@@ -237,7 +240,7 @@ function SuitabilityTool() {
           const data = await overpass(`[out:json][timeout:30];node["place"="city"](around:80000,${c.p.lat},${c.p.lng});out 40;`);
           let best: number | null = null;
           for (const e of data.elements ?? []) {
-            if (typeof e.lat === "number") { const d = distanceKm(c.p, { lat: e.lat, lng: e.lon }); if (best === null || d < best) best = d; }
+            if (typeof e.lat === "number" && Number.isFinite(e.lat) && typeof e.lon === "number" && Number.isFinite(e.lon)) { const d = distanceKm(c.p, { lat: e.lat, lng: e.lon }); if (best === null || d < best) best = d; }
           }
           c.cityKm = best;
         } catch { c.cityKm = null; }
@@ -255,7 +258,7 @@ function SuitabilityTool() {
       const sE = norm(cands.map((c) => c.eleM), true);
       const sC = norm(cands.map((c) => c.cityKm), true);
       const wSum = Math.max(1, wAnchor + wEle + wCity);
-      const scored = cands.map((c, i) => ({ ...c, score: (sA[i] * wAnchor + sE[i] * wEle + sC[i] * wCity) / wSum })).sort((a, b) => b.score - a.score);
+      const scored = cands.map((c, i) => ({ ...c, anchorKm: distanceKm(anchor, c.p), score: (sA[i] * wAnchor + sE[i] * wEle + sC[i] * wCity) / wSum })).sort((a, b) => b.score - a.score);
       setRows(scored);
       m.show(null, scored.map((c, i) => ({ p: c.p, color: i === 0 ? "#1d6e63" : "#8a4f9e", label: String(i + 1) })), [anchor, ...scored.map((c) => c.p)]);
     } catch (e: any) { setError(e?.message ?? "Scoring failed."); }
@@ -278,11 +281,11 @@ function SuitabilityTool() {
       {rows && (
         <div className="overflow-hidden rounded-xl border border-line">
           <table className="tbl"><thead><tr><th>#</th><th>Place</th><th className="text-right">Score</th><th className="text-right">To anchor</th><th className="text-right">Elevation</th></tr></thead>
-            <tbody>{rows.map((r, i) => <tr key={i}><td className="font-semibold">{i + 1}</td><td>{r.name}</td><td className="text-right font-semibold">{fmt(r.score, 0)}/100</td><td className="text-right">{anchor ? fmtDist(distanceKm(anchor, r.p), "mi") : "—"}</td><td className="text-right">{r.eleM !== null ? `${fmt(r.eleM * 3.28084, 0)} ft` : "—"}</td></tr>)}</tbody>
+            <tbody>{rows.map((r, i) => <tr key={i}><td className="font-semibold">{i + 1}</td><td>{r.name}</td><td className="text-right font-semibold">{fmt(r.score, 0)}/100</td><td className="text-right">{fmtDist(r.anchorKm, "mi")}</td><td className="text-right">{r.eleM !== null ? `${fmt(r.eleM * 3.28084, 0)} ft` : "—"}</td></tr>)}</tbody>
           </table>
         </div>
       )}
-      <p className="text-xs leading-relaxed text-mute">Scores are relative among your candidates only (best-in-list = 100 on each criterion) and combine straight-line distances with Open-Meteo elevation. A structured shortlist, not a site survey — visit finalists before committing.</p>
+      <p className="text-xs leading-relaxed text-mute">Scores use relative min–max scaling and normalized weights; missing values score 50 and ties score 100. City distance uses at most 40 OSM city nodes within 80 km, so may not be the true nearest. Geocoding and elevation use external providers. Not a site survey.</p>
     </>} />
   );
 }
@@ -320,7 +323,7 @@ function DashboardTool() {
       let eleNote = "not available";
       try {
         const er = await fetch(`https://api.open-meteo.com/v1/elevation?latitude=${center.lat}&longitude=${center.lng}`);
-        if (er.ok) { const ed = await er.json(); eleNote = `${fmt((ed.elevation?.[0] ?? 0) * 3.28084, 0)} ft at centre`; }
+        if (er.ok) { const ed = await er.json(); const elevation = ed.elevation?.[0]; if (typeof elevation === "number" && Number.isFinite(elevation)) eleNote = `${fmt(elevation * 3.28084, 0)} ft at centre`; }
       } catch { /* keep fallback */ }
       setStats([
         { label: "Area", value: `${fmt(Math.PI * radiusMi * radiusMi, 1)} sq mi circle` },
@@ -347,7 +350,7 @@ function DashboardTool() {
           {stats.map((s) => <Stat key={s.label} label={s.label} value={s.value} />)}
         </div>
       )}
-      <p className="text-xs leading-relaxed text-mute">A snapshot of what OpenStreetMap records inside the circle, plus centre elevation from Open-Meteo. Useful for a first look at an area — not a substitute for official statistics.</p>
+      <p className="text-xs leading-relaxed text-mute">At most 3,000 returned OSM nodes are counted; ways and relations are excluded. Counts may be incomplete. Circle area is a planar approximation and elevation is from Open-Meteo, if available. Not official statistics.</p>
     </>} />
   );
 }
@@ -369,6 +372,7 @@ function FormBuilderTool() {
   const [values, setValues] = useState<Record<string, string>>({});
   const [subs, setSubs] = useState<Submission[]>([]);
   const [note, setNote] = useState<string | null>(null);
+  const [saving, setSaving] = useState(false);
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect -- hydrate saved submissions once, after mount (SSR-safe)
@@ -377,24 +381,29 @@ function FormBuilderTool() {
 
   const save = (next: Submission[]) => {
     setSubs(next);
-    try { localStorage.setItem(LS_KEY, JSON.stringify(next)); } catch { /* ignore */ }
+    try { localStorage.setItem(LS_KEY, JSON.stringify(next)); return true; } catch { return false; }
   };
 
   const submit = async () => {
+    const labels = fields.map(f => f.label.trim());
+    if (labels.some((label, i) => !label || label !== fields[i].label) || new Set(labels).size !== labels.length) { setNote("Use unique, non-empty field labels without leading or trailing spaces."); return; }
+    setSaving(true);
     let lat: number | null = null, lng: number | null = null;
     try {
       const pos = await new Promise<GeolocationPosition>((resolve, reject) => navigator.geolocation.getCurrentPosition(resolve, reject, { timeout: 6000 }));
       lat = pos.coords.latitude; lng = pos.coords.longitude;
     } catch { /* location stays empty, said in the note */ }
     const sub: Submission = { at: new Date().toISOString(), lat, lng, values: { ...values } };
-    save([sub, ...subs]);
+    const persisted = save([sub, ...subs]);
     setValues({});
-    setNote(lat !== null ? "Submission saved with your current GPS position." : "Submission saved without a position (location was not available or not allowed).");
+    setNote(!persisted ? "Storage failed. The submission is in this tab only; export it before closing." : lat !== null ? "Submission saved with your current device position." : "Submission saved without a position (location was not available or not allowed).");
+    setSaving(false);
   };
 
+  const savedLabels = [...new Set([...fields.map(f => f.label), ...subs.flatMap(s => Object.keys(s.values))])];
   const exportCsv = () => {
-    const header = ["submitted_at", "latitude", "longitude", ...fields.map((f) => f.label)];
-    const body = subs.map((s) => [s.at, s.lat ?? "", s.lng ?? "", ...fields.map((f) => s.values[f.label] ?? "")] as (string | number)[]);
+    const header = ["submitted_at", "latitude", "longitude", ...savedLabels];
+    const body = subs.map((s) => [s.at, s.lat ?? "", s.lng ?? "", ...savedLabels.map((label) => s.values[label] ?? "")] as (string | number)[]);
     downloadText("mapbench-form-submissions.csv", toCsv(header, body), "text/csv");
   };
   const exportGeo = () => {
@@ -431,7 +440,7 @@ function FormBuilderTool() {
               : <input className="input" type={f.type === "number" ? "number" : "text"} value={values[f.label] ?? ""} onChange={(e) => setValues({ ...values, [f.label]: e.target.value })} />}
           </Field>
         ))}
-        <button type="button" className="btn btn-primary" onClick={submit}>Save submission</button>
+        <button type="button" className="btn btn-primary" onClick={submit} disabled={saving}>{saving ? "Getting location…" : "Save submission"}</button>
         {note && <p className="text-sm text-mute">{note}</p>}
       </div>
 
@@ -447,11 +456,11 @@ function FormBuilderTool() {
             <div className="flex flex-wrap gap-2">
               <button type="button" className="btn btn-ghost btn-sm" onClick={exportCsv}>Download CSV</button>
               <button type="button" className="btn btn-ghost btn-sm" onClick={exportGeo}>Download GeoJSON</button>
-              <button type="button" className="btn btn-ghost btn-sm" onClick={() => save([])}>Clear all</button>
+              <button type="button" className="btn btn-ghost btn-sm" onClick={() => { if (!save([])) setNote("Could not clear local storage; previously saved entries may return after reload."); }}>Clear all</button>
             </div>
           </>
         )}
-        <p className="text-xs leading-relaxed text-mute">Honest limit: submissions are stored only in this browser (local storage) — there is no MapBench account or shared team inbox behind this page. For a real multi-person survey you need a hosted form backend; this builder is for solo fieldwork and prototyping.</p>
+        <p className="text-xs leading-relaxed text-mute">Honest limit: Saved submissions use this browser’s local storage if available; the form design itself resets on reload. CSV includes fields from older submissions even after renaming. GeoJSON omits submissions without a position. Export backups regularly; there is no shared team inbox.</p>
       </div>
     </div>
   );
@@ -468,7 +477,7 @@ function ConnectorTool() {
 
   const connect = async () => {
     if (!url.trim()) { setError("Paste a GeoJSON or CSV endpoint URL first."); return; }
-    setBusy(true); setError(null);
+    setBusy(true); setError(null); setInfo(null);
     try {
       const res = await fetch(url.trim());
       if (!res.ok) throw new Error(`The endpoint answered HTTP ${res.status}.`);
@@ -478,32 +487,17 @@ function ConnectorTool() {
       if (text.trim().startsWith("{")) {
         const json = JSON.parse(text);
         fc = json.type === "Feature" ? { type: "FeatureCollection", features: [json] } : json;
-        if (fc?.type !== "FeatureCollection") throw new Error("That JSON is not GeoJSON (expected a FeatureCollection).");
+        if (fc?.type !== "FeatureCollection" || !Array.isArray(fc.features)) throw new Error("That JSON is not a GeoJSON FeatureCollection.");
         for (const f of fc.features ?? []) {
           const g = f.geometry;
           if (!g) continue;
           if (g.type === "Point") pts.push({ lat: g.coordinates[1], lng: g.coordinates[0] });
-          else if (g.type === "Polygon") pts.push({ lat: g.coordinates[0][0][1], lng: g.coordinates[0][0][0] });
-          else if (g.type === "LineString") pts.push({ lat: g.coordinates[0][1], lng: g.coordinates[0][0] });
+          else if (g.type === "Polygon" && g.coordinates?.[0]?.[0]) pts.push({ lat: g.coordinates[0][0][1], lng: g.coordinates[0][0][0] });
+          else if (g.type === "LineString" && g.coordinates?.[0]) pts.push({ lat: g.coordinates[0][1], lng: g.coordinates[0][0] });
         }
       } else {
-        // CSV with latitude/longitude columns
-        const lines = text.split("\n").filter(Boolean);
-        const head = lines[0].toLowerCase().split(",").map((s) => s.trim());
-        const li = head.findIndex((h) => h.includes("lat"));
-        const lo = head.findIndex((h) => h.includes("lon") || h.includes("lng"));
-        if (li < 0 || lo < 0) throw new Error("The response was not GeoJSON, and the CSV has no latitude/longitude columns.");
-        const features: any[] = [];
-        for (const line of lines.slice(1)) {
-          const cells = line.split(",");
-          const lat = Number(cells[li]), lng = Number(cells[lo]);
-          if (!Number.isFinite(lat) || !Number.isFinite(lng)) continue;
-          pts.push({ lat, lng });
-          const props: Record<string, string> = {};
-          head.forEach((h, i) => { props[h] = cells[i] ?? ""; });
-          features.push({ type: "Feature", properties: props, geometry: { type: "Point", coordinates: [lng, lat] } });
-        }
-        fc = { type: "FeatureCollection", features };
+        fc = csvPointFeatures(text);
+        pts = fc.features.map((f: GeoJSON.Feature<GeoJSON.Point>) => ({ lng: f.geometry.coordinates[0], lat: f.geometry.coordinates[1] }));
       }
       const firstProps = (fc.features?.[0]?.properties ?? {}) as Record<string, unknown>;
       setInfo({ count: fc.features?.length ?? 0, updatedAt: new Date().toLocaleTimeString(), props: Object.entries(firstProps).slice(0, 6).map(([k, v]) => [k, String(v)] as [string, string]) });
@@ -539,7 +533,7 @@ function ConnectorTool() {
               <table className="tbl"><tbody>{info.props.map(([k, v]) => <tr key={k}><td className="font-mono text-xs">{k}</td><td className="text-xs">{v}</td></tr>)}</tbody></table>
             </div>
           )}
-          <p className="text-xs text-mute">“Live” here means the map re-reads the endpoint whenever you press Refresh — the freshness depends on how often the publisher updates that feed.</p>
+          <p className="text-xs text-mute">The endpoint is fetched only when you connect or refresh. The publisher receives your request; do not include secrets in the URL. CORS and source data quality affect results.</p>
         </div>
       )}
     </>} />

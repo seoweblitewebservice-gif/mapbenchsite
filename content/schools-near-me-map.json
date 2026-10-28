@@ -10,8 +10,8 @@
  "title": "Schools Near Me Map: Schools Around Any Place",
  "description": "Map the schools near any place with the Schools Near Me Map — schools recorded in open data, each with its straight-line distance. Free.",
  "updated": "October 2026",
- "summary_sentence": "For example, a street under consideration for a family move shows three recorded schools within a mile — the start of a school-run conversation that official district sources then finish.",
- "quick_answer": "The Schools Near Me Map shows the schools OpenStreetMap records around a place you search or your own location, each with its straight-line distance from your point. Search, press find, and browse the ranked list and pins — the geography of the school day, before district assignments enter.",
+ "summary_sentence": "Results are limited to returned OpenStreetMap records and may omit closer or unmapped places. Confirm details with an authoritative local source.",
+ "quick_answer": "The tool searches OpenStreetMap for mapped school records around a chosen location, then sorts returned records by straight-line distance. It requests at most 200 records and displays up to 100, so it cannot guarantee the closest result or a complete list. Data, access and opening status can be incomplete or outdated.",
  "steps_intro": "See the schools around a place — then do the district homework properly:",
  "use_cases": [
   {
@@ -74,7 +74,7 @@
    "label": "Example · All recorded schools",
    "body": [
     {
-     "t": "Public, private, primary, secondary — the record classes them together as schools. Type and level live in the names and the schools' own pages; assignment lives with districts."
+     "t": "The search returns some mapped school-tagged records, subject to coverage and result limits. It does not determine school assignment; check with the relevant district."
     }
    ]
   }
@@ -114,7 +114,7 @@
     "—"
    ]
   ],
-  "note": "School coverage in open data is strong in towns and cities. A missing pin can mean an unrecorded school — new schools especially — so cross-check an important move with the district's list."
+  "note": "OpenStreetMap coverage and result limits can omit relevant places. Records may be outdated; confirm access, services and current conditions with an authoritative source."
  },
  "faq": [
   [
@@ -127,7 +127,7 @@
   ],
   [
    "Can I use the tool without sharing my precise location?",
-   "Yes — search any place; location is an optional input."
+   "You can search for a place instead of using device location. The selected search centre is sent to OpenStreetMap-based services for the lookup."
   ],
   [
    "Why might a boundary or place name look different elsewhere?",
@@ -135,7 +135,7 @@
   ],
   [
    "Does MapBench store my browser location?",
-   "No."
+   "Device location is optional. The selected coordinates are sent to Overpass to search; consult the privacy page for provider and site details."
   ],
   [
    "Which school will my child attend?",

@@ -1,7 +1,8 @@
 "use client";
 import { useRef, useState, type ReactNode } from "react";
 import type { Map as MLMap, GeoJSONSource } from "maplibre-gl";
-import { distanceKm, fmt, fmtCoords, fmtDist, parseCoordPair, type LatLng } from "@/lib/geo";
+import { distanceKm, fmt, fmtCoords, fmtDist, parseCoordPair, isValidLat, isValidLng, type LatLng } from "@/lib/geo";
+import { airportRouteGraph, airportConnections, sphericalPolygonAreaKm2 } from "@/lib/mapToolData";
 import { downloadText, geojsonToKml } from "@/lib/formats";
 import { geolocation } from "@/lib/geocode";
 import { CopyBtn, ErrorBox, Field, FileDropzone, Spinner, Stat } from "@/components/ui";
@@ -30,8 +31,9 @@ function useShapeMap() {
     markersRef.current = marks.map((mk) => new lib.Marker({ element: pinElement(mk.color ?? "#1d6e63", mk.label) }).setLngLat([mk.p.lng, mk.p.lat]).addTo(map));
     const pts = fitPts ?? marks.map((x) => x.p);
     if (pts.length > 1) {
-      const lngs = pts.map((p) => p.lng), lats = pts.map((p) => p.lat);
-      map.fitBounds([[Math.min(...lngs), Math.min(...lats)], [Math.max(...lngs), Math.max(...lats)]], { padding: 50, maxZoom: 12, duration: 500 });
+      let minLng = Infinity, maxLng = -Infinity, minLat = Infinity, maxLat = -Infinity;
+      for (const p of pts) { minLng = Math.min(minLng, p.lng); maxLng = Math.max(maxLng, p.lng); minLat = Math.min(minLat, p.lat); maxLat = Math.max(maxLat, p.lat); }
+      map.fitBounds([[minLng, minLat], [maxLng, maxLat]], { padding: 50, maxZoom: 12, duration: 500 });
     } else if (pts.length === 1) map.flyTo({ center: [pts[0].lng, pts[0].lat], zoom: 9, essential: true });
   };
   const el = (
@@ -61,17 +63,6 @@ async function overpass(ql: string): Promise<any> {
   return res.json();
 }
 
-/** Rough spherical polygon area in km² (Chamberlain & Duquette). */
-function polygonAreaKm2(ring: [number, number][]): number {
-  let total = 0;
-  const R = 6371;
-  for (let i = 0; i < ring.length - 1; i++) {
-    const [x1, y1] = ring[i], [x2, y2] = ring[i + 1];
-    total += ((x2 - x1) * Math.PI) / 180 * (2 + Math.sin((y1 * Math.PI) / 180) + Math.sin((y2 * Math.PI) / 180));
-  }
-  return Math.abs((total * R * R) / 2);
-}
-
 interface BoundaryResult { name: string; fc: any; areaKm2: number; rings: number }
 
 async function fetchBoundary(query: string): Promise<BoundaryResult> {
@@ -83,7 +74,7 @@ async function fetchBoundary(query: string): Promise<BoundaryResult> {
   if (!feat) throw new Error(`No boundary polygon was found for “${query}”. Try a more specific name, like “Austin city, Texas”.`);
   let area = 0;
   const polys = feat.geometry.type === "Polygon" ? [feat.geometry.coordinates] : feat.geometry.coordinates;
-  for (const poly of polys) area += polygonAreaKm2(poly[0]);
+  for (const poly of polys) area += sphericalPolygonAreaKm2(poly);
   return { name: feat.properties?.display_name ?? query, fc: { type: "FeatureCollection", features: [feat] }, areaKm2: area, rings: polys.length };
 }
 
@@ -112,6 +103,7 @@ function CountyCitiesTool() {
   const run = async () => {
     setBusy(true); setError(null); setCities(null);
     try {
+      if (stateCode.trim() && !/^[a-zA-Z]{2}$/.test(stateCode.trim())) throw new Error("Enter a two-letter state abbreviation.");
       const name = county.trim().toLowerCase().endsWith("county") ? county.trim() : `${county.trim()} County`;
       const stateFilter = stateCode.trim() ? `["is_in:state_code"="US-${stateCode.trim().toUpperCase()}"]` : "";
       const ql = `[out:json][timeout:90];area["boundary"="administrative"]["name"="${name.replace(/"/g, "")}"]${stateFilter}->.a;node["place"~"city|town|village"](area.a);out 300;`;
@@ -142,7 +134,7 @@ function CountyCitiesTool() {
           <button type="button" className="btn btn-ghost btn-sm" onClick={() => downloadText("mapbench-county-cities.csv", `name,latitude,longitude\n${cities.map((c) => `"${c.name.replace(/"/g, '""')}",${c.p.lat},${c.p.lng}`).join("\n")}`, "text/csv")}>Download CSV</button>
         </div>
       )}
-      <p className="text-xs text-mute">The list comes from places mapped inside the county boundary in OpenStreetMap. Census-designated places and unincorporated communities may be missing if nobody has mapped them as place nodes.</p>
+      <p className="text-xs text-mute">Up to 300 OSM place nodes are returned before sorting, not a complete or official list. County matching depends on OSM boundary names and state tags; some communities may be missing.</p>
     </>} />
   );
 }
@@ -186,12 +178,12 @@ function BoundaryTool({ country }: { country: boolean }) {
       {result && (
         <div className="space-y-3 border-t border-line pt-3">
           <Stat label="Matched boundary" value={result.name.split(",").slice(0, 2).join(",")} sub={`${result.rings} polygon part${result.rings > 1 ? "s" : ""}`} />
-          <Stat label="Land area inside the outline" value={`${fmt(result.areaKm2 * 0.386102, 0)} sq mi`} sub={`${fmt(result.areaKm2, 0)} km² — computed from the outline geometry`} />
+          <Stat label="Approximate area inside the outline" value={`${fmt(result.areaKm2 * 0.386102, 0)} sq mi`} sub={`${fmt(result.areaKm2, 0)} km² — spherical estimate, not a land-area or survey measurement`} />
           <div className="flex flex-wrap gap-2">
             <button type="button" className="btn btn-primary btn-sm" onClick={() => downloadText("mapbench-boundary.kml", geojsonToKml(result.fc, result.name), "application/vnd.google-earth.kml+xml")}>Download KML</button>
             <button type="button" className="btn btn-ghost btn-sm" onClick={() => downloadText("mapbench-boundary.geojson", JSON.stringify(result.fc, null, 1), "application/geo+json")}>Download GeoJSON</button>
           </div>
-          <p className="text-xs text-mute">Boundary © OpenStreetMap contributors (ODbL), served via Nominatim. Maritime borders and disputed areas follow the OSM community&apos;s mapping.</p>
+          <p className="text-xs text-mute">Boundary © OpenStreetMap contributors (ODbL), served via Nominatim. Verify the matched feature and its coverage; maritime borders and disputed areas follow OSM mapping. The preview fits the first outer ring only.</p>
         </div>
       )}
     </>} />
@@ -227,7 +219,8 @@ function loadAirports(): Promise<Airport[]> {
       .then((text) => text.split("\n").filter(Boolean).map((line) => {
         const c = splitCsvLine(line);
         return { id: c[0], name: c[1], city: c[2], iata: c[4], p: { lat: Number(c[6]), lng: Number(c[7]) } } as Airport;
-      }).filter((a) => a.iata && a.iata !== "\\N" && Number.isFinite(a.p.lat)));
+      }).filter((a) => a.iata && a.iata !== "\\N" && isValidLat(a.p.lat) && isValidLng(a.p.lng)))
+      .catch((error) => { airportsCache = null; throw error; });
   }
   return airportsCache;
 }
@@ -236,20 +229,8 @@ function loadRoutes(): Promise<Map<string, Set<string>>> {
   if (!routesCache) {
     routesCache = fetch("https://raw.githubusercontent.com/jpatokal/openflights/master/data/routes.dat")
       .then((r) => { if (!r.ok) throw new Error(); return r.text(); })
-      .then((text) => {
-        const map = new Map<string, Set<string>>();
-        for (const line of text.split("\n")) {
-          if (!line) continue;
-          const c = line.split(",");
-          const src = c[3], dst = c[5];
-          if (!src || !dst || src === "\\N" || dst === "\\N") continue;
-          if (!map.has(src)) map.set(src, new Set());
-          map.get(src)!.add(dst);
-          if (!map.has(dst)) map.set(dst, new Set());
-          map.get(dst)!.add(src);
-        }
-        return map;
-      });
+      .then(airportRouteGraph)
+      .catch((error) => { routesCache = null; throw error; });
   }
   return routesCache;
 }
@@ -275,13 +256,9 @@ function AirportTool() {
       const direct = routes.get(a.id)?.has(b.id) ?? false;
       const via: Airport[] = [];
       if (!direct) {
-        const fromSet = routes.get(a.id) ?? new Set<string>();
-        const toSet = routes.get(b.id) ?? new Set<string>();
-        for (const id of fromSet) {
-          if (toSet.has(id)) {
-            const ap = byId.get(id);
-            if (ap) via.push(ap);
-          }
+        for (const id of airportConnections(routes, a.id, b.id)) {
+          const ap = byId.get(id);
+          if (ap) via.push(ap);
           if (via.length >= 8) break;
         }
       }
@@ -306,11 +283,11 @@ function AirportTool() {
         <div className="space-y-3 border-t border-line pt-3">
           <Stat label={`${result.a.city} (${result.a.iata}) → ${result.b.city} (${result.b.iata})`} value={fmtDist(distanceKm(result.a.p, result.b.p), "mi")} sub={`${result.a.name} → ${result.b.name} · great-circle distance`} />
           {result.direct
-            ? <p className="rounded-lg bg-accentsoft px-3 py-2 text-sm font-medium text-accent">✈ A non-stop route between these airports exists in the OpenFlights schedule data.</p>
+            ? <p className="rounded-lg bg-accentsoft px-3 py-2 text-sm font-medium text-accent">✈ A non-stop route appears in the historical OpenFlights dataset.</p>
             : result.via.length
               ? <div><div className="label">One-stop options in the data (first 8)</div><div className="flex flex-wrap gap-1.5">{result.via.map((v) => <span key={v.id} className="chip">{v.city} ({v.iata})</span>)}</div></div>
               : <p className="text-sm text-mute">No non-stop or single shared one-stop route appears in the OpenFlights data for this pair.</p>}
-          <p className="text-xs leading-relaxed text-mute">Route data: OpenFlights (public airport/route datasets, community maintained). Schedules change constantly — treat this as route existence, not a live timetable or booking information.</p>
+          <p className="text-xs leading-relaxed text-mute">Route data: OpenFlights (public airport/route datasets, community maintained). The dataset is historical and not a live timetable. Confirm both legs and current availability with airlines before booking; a connection may not be bookable.</p>
         </div>
       )}
     </>} />
@@ -371,7 +348,7 @@ function parseStores(text: string): Store[] {
     if (parts.length < 3) continue;
     const lat = Number(parts[parts.length - 2]), lng = Number(parts[parts.length - 1]);
     const name = parts.slice(0, -2).join(", ");
-    if (name && Number.isFinite(lat) && Number.isFinite(lng)) out.push({ name, p: { lat, lng } });
+    if (name && parts[parts.length - 2] !== "" && parts[parts.length - 1] !== "" && isValidLat(lat) && isValidLng(lng)) out.push({ name, p: { lat, lng } });
   }
   return out;
 }
@@ -423,7 +400,7 @@ function StoreTool() {
           </div>
         </div>
       )}
-      <p className="text-xs leading-relaxed text-mute">Distances are straight-line from the visitor point. Your store list stays in this browser tab — nothing is uploaded — so use the embed map generator if you need a locator that lives on your own website permanently.</p>
+      <p className="text-xs leading-relaxed text-mute">Distances are straight-line from the visitor point. Your store list stays in this browser tab — nothing is uploaded — The embed generator creates a single-marker map, not a permanent multi-store locator. Address search and map tiles contact external providers.</p>
     </>} />
   );
 }

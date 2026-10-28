@@ -9,8 +9,8 @@
  "title": "Hiking Trails Near Me: Mapped Routes Nearby",
  "description": "Find named, mapped hiking routes near a place with Hiking Trails Near Me — from the open map's hiking data, nearest first. Free.",
  "updated": "October 2026",
- "summary_sentence": "For example, a village you have driven through for years turns out to have three named round walks starting at its church — the finder's talent is introducing you to your own countryside.",
- "quick_answer": "Hiking Trails Near Me searches a place or your location and lists the named hiking routes the open map's community has recorded nearby, nearest first. Search the town or trailhead area, press find, and browse routes by distance — the local knowledge of thousands of mappers, ranked for your Sunday.",
+ "summary_sentence": "Results are limited to returned OpenStreetMap records and may omit closer or unmapped places. Confirm details with an authoritative local source.",
+ "quick_answer": "The tool searches OpenStreetMap for mapped hiking-route relation records around a chosen location, then sorts returned records by straight-line distance. It requests at most 100 records and displays up to 100, so it cannot guarantee the closest result or a complete list. Data, access and opening status can be incomplete or outdated.",
  "steps_intro": "The trails are already mapped by the people who walk them. Ask the map:",
  "use_cases": [
   {
@@ -40,7 +40,7 @@
    "title": "Checking a route exists",
    "body": [
     {
-     "t": "Guidebook route from 2009? The map's record is the fresher witness — trails get recorded, renamed and extended by the community."
+     "t": "A mapped route relation may be incomplete or outdated. Check current access and route details with the land manager."
     }
    ]
   },
@@ -58,7 +58,7 @@
    "label": "Example · Named routes, not just paths",
    "body": [
     {
-     "t": "The finder lists recorded routes — waymarked trails with names and lengths where the data carries them — rather than every footpath segment. A route is a walk someone designed; a path is only a line."
+     "t": "The search looks for OpenStreetMap hiking route relations, not every individual path. It displays a representative point rather than the full trail geometry or length."
     }
    ]
   },
@@ -72,46 +72,36 @@
   }
  ],
  "popular_table": {
-  "title": "What counts as a trail here",
-  "intro": "The record's vocabulary — what the finder can surface and what it cannot.",
+  "title": "What the finder shows",
+  "intro": "Review the scope of the result before relying on it.",
   "columns": [
-   "Thing",
-   "In the finder?",
-   "Note"
+   "Result",
+   "Available here?",
+   "Limit"
   ],
   "rows": [
    [
-    "Named hiking routes",
-    "Yes — the core",
-    "Waymarked and recorded routes"
+    "Mapped names and points",
+    "Yes, for returned records",
+    "Coverage and result caps apply"
    ],
    [
-    "Plain footpaths",
-    "As routes use them",
-    "Segments, not itineraries"
+    "Distance",
+    "Straight-line to returned point",
+    "Not road or walking distance"
    ],
    [
-    "Trail length",
-    "Where recorded",
-    "From the route's data"
-   ],
-   [
-    "Difficulty grade",
-    "Where recorded",
-    "Scales vary by country"
-   ],
-   [
-    "Conditions today",
+    "Current access and opening status",
     "No",
-    "Weather and boots decide"
+    "Confirm with the operator"
    ],
    [
-    "Your location stored?",
+    "Full details and live availability",
     "No",
-    "Search only"
+    "Consult an authoritative source"
    ]
   ],
-  "note": "Coverage follows the hiking community's mapping energy: superb in much of Europe and North America's popular country, thinner where fewer walkers map."
+  "note": "OpenStreetMap coverage and result limits can omit relevant places. Records may be outdated; confirm access, services and current conditions with an authoritative source."
  },
  "faq": [
   [
@@ -120,11 +110,11 @@
   ],
   [
    "Does it give trail length and difficulty?",
-   "Where the route's record carries them, yes. Length usually; difficulty grading varies by country and mapper, and absence is shown as absence."
+   "No. The list shows names, representative points and distances to those points; it does not display trail lengths or difficulty."
   ],
   [
    "Can I use the tool without sharing my precise location?",
-   "Yes — search a town or area instead. Location is an option, never a toll."
+   "You can search for a place instead of using device location. The selected search centre is sent to OpenStreetMap-based services for the lookup."
   ],
   [
    "Why might a boundary or place name look different elsewhere?",
@@ -132,7 +122,7 @@
   ],
   [
    "Does MapBench store my browser location?",
-   "No."
+   "Device location is optional. The selected coordinates are sent to Overpass to search; consult the privacy page for provider and site details."
   ],
   [
    "A trail I know is missing.",
@@ -144,15 +134,15 @@
   ],
   [
    "Are these official rights of way?",
-   "Mapped routes usually follow legal paths, but the legal record is your country's or state's own register. Signs and closures on the ground rule the day."
+   "Not necessarily. A mapped hiking relation does not establish legal access. Check local rights-of-way records and current land-manager notices."
   ],
   [
    "Dog-friendly? Facilities?",
-   "Such tags exist in the data unevenly. Where recorded they help; where not, the trailhead's own information is the guide."
+   "The workspace does not display these details. Check with the land manager."
   ],
   [
    "Circular routes specifically?",
-   "Many recorded routes are loops; the record's shape tells. Filter with your eyes on the list's route context — the planner draws the chosen one fully."
+   "The workspace shows representative points, not route geometries or a circular-route filter. Check the complete route with another authoritative source."
   ],
   [
    "Winter conditions and closures?",

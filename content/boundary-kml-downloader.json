@@ -10,8 +10,8 @@
  "title": "Boundary KML Downloader: Place Outlines as Files",
  "description": "Download a city, county or region boundary as KML or GeoJSON with the Boundary KML Downloader — preview on the map, area included. Free.",
  "updated": "October 2026",
- "summary_sentence": "For example, downloading Austin, Texas gives you the city's full outline as one KML file — about 845.7 km² of enclosed ground (326.5 square miles), ready for Google Earth or any GIS.",
- "quick_answer": "The Boundary KML Downloader finds the outline of a city, county or region and saves it as a KML or GeoJSON file you can open anywhere. Search the place, check the boundary on the map, and download — with the enclosed area computed from the outline itself, in your browser.",
+ "summary_sentence": "Search for an OSM polygon and inspect the matched name and returned geometry before downloading.",
+ "quick_answer": "Search for a place and retrieve the first polygon among up to five Nominatim matches. Download the returned geometry as KML or GeoJSON; the approximate spherical area is not an official land-area figure.",
  "steps_intro": "A place name in, a boundary file out:",
  "use_cases": [
   {
@@ -67,7 +67,7 @@
    "label": "Example · Islands and enclaves",
    "body": [
     {
-     "t": "Places with detached parts (islands, exclaves) download as MultiPolygons — every part in one file, so an island county does not arrive amputated."
+     "t": "Returned MultiPolygon features can contain detached parts; their coverage depends on the source record. The map preview fits only the first outer ring."
     }
    ]
   }
@@ -114,7 +114,7 @@
   ],
   [
    "Why does the outline look simplified on the map?",
-   "Previews may generalise dense outlines for speed; the downloaded geometry follows the source data’s detail. Zoom in before judging a coastline."
+   "The map preview fits the first outer ring only. The export contains the returned geometry, including other polygon parts where present."
   ],
   [
    "Does it include ZIP code boundaries?",

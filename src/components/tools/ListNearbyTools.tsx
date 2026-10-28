@@ -62,10 +62,10 @@ const CATS: Record<Mode, CatDef> = {
     query: (r, p) => `[out:json][timeout:60];nwr["amenity"="fuel"](${around(r, p)});out center 200;`,
     nameOf: (t) => t.name ?? t.brand ?? t.operator ?? "Fuel station",
     defaultRadiusMi: 10, maxRadiusMi: 50,
-    note: "Station locations are live OpenStreetMap data. Live fuel prices are not published by any free source we can use, so this tool does not invent prices — check the station or a price app for today's price.",
+    note: "Station locations come from OpenStreetMap. This tool does not provide fuel prices or live availability; check with the station.",
   },
   tube: {
-    label: "London Underground stations",
+    label: "Underground-tagged stations and subway entrances",
     query: (r, p) => `[out:json][timeout:60];(node["railway"="station"]["network"~"Underground"](${around(r, p)});node["railway"="subway_entrance"](${around(r, p)}););out 300;`,
     nameOf: (t) => t.name ?? "Station entrance",
     defaultRadiusMi: 2, maxRadiusMi: 15,
@@ -73,7 +73,7 @@ const CATS: Record<Mode, CatDef> = {
   peaks: {
     label: "mountain peaks",
     query: (r, p) => `[out:json][timeout:60];node["natural"="peak"](${around(r, p)});out 200;`,
-    nameOf: (t) => (t.name ? `${t.name}${t.ele ? ` — ${fmt(Number(t.ele) * 3.28084, 0)} ft` : ""}` : "Unnamed peak"),
+    nameOf: (t) => `${t.name ?? "Unnamed peak"}${t.ele && Number.isFinite(Number(t.ele)) ? ` — ${fmt(Number(t.ele) * 3.28084, 0)} ft` : ""}`,
     defaultRadiusMi: 50, maxRadiusMi: 100,
   },
   trails: {
@@ -102,6 +102,8 @@ export default function ListNearbyTools({ params }: { params?: Record<string, un
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [pois, setPois] = useState<Poi[] | null>(null);
+  const searchId = useRef(0);
+  const invalidateResults = () => { searchId.current++; setPois(null); setBusy(false); setError(null); };
   const mapRef = useRef<MLMap | null>(null);
   const libRef = useRef<any>(null);
   const markerRef = useRef<any>(null);
@@ -121,15 +123,18 @@ export default function ListNearbyTools({ params }: { params?: Record<string, un
 
   const search = async (c: LatLng = center as LatLng) => {
     if (!c) { setError("Pick a location first — search, click the map, or use GPS."); return; }
-    setBusy(true); setError(null);
+    const id = ++searchId.current;
+    setBusy(true); setError(null); setPois(null);
     try {
       const r = Math.round(Math.min(radiusMi, cat.maxRadiusMi) * 1609.344);
       const res = await fetch("https://overpass-api.de/api/interpreter", {
         method: "POST", body: new URLSearchParams({ data: cat.query(r, c) }),
       });
+      if (id !== searchId.current) return;
       if (res.status === 429) { setError("The OpenStreetMap query service is rate-limiting right now. Wait a few seconds and try again."); setBusy(false); return; }
       if (!res.ok) throw new Error();
       const data = await res.json();
+      if (id !== searchId.current) return;
       const list: Poi[] = (data.elements ?? [])
         .map((e: any) => {
           const p = { lat: e.lat ?? e.center?.lat, lng: e.lon ?? e.center?.lon };
@@ -140,6 +145,7 @@ export default function ListNearbyTools({ params }: { params?: Record<string, un
         .slice(0, 100);
       setPois(list);
     } catch {
+      if (id !== searchId.current) return;
       setError("The OpenStreetMap query service is temporarily unavailable. Please try again in a moment.");
     }
     setBusy(false);
@@ -160,10 +166,10 @@ export default function ListNearbyTools({ params }: { params?: Record<string, un
   return (
     <div className="grid gap-4 lg:grid-cols-[400px,1fr]">
       <div className="card order-2 space-y-4 p-4 lg:order-1">
-        <PlaceField label="Search from" value={center} onChange={(v) => { setCenter(v); setPois(null); if (v) mapRef.current?.flyTo({ center: [v.lng, v.lat], zoom: 12, essential: true }); }} />
+        <PlaceField label="Search from" value={center} onChange={(v) => { setCenter(v); invalidateResults(); if (v) mapRef.current?.flyTo({ center: [v.lng, v.lat], zoom: 12, essential: true }); }} />
         <div className="flex gap-2">
           <button type="button" className="btn btn-ghost btn-sm" onClick={async () => {
-            try { const p = await geolocation(); setCenter({ ...p, label: "My location" }); setPois(null); mapRef.current?.flyTo({ center: [p.lng, p.lat], zoom: 12, essential: true }); }
+            try { const p = await geolocation(); setCenter({ ...p, label: "My location" }); invalidateResults(); mapRef.current?.flyTo({ center: [p.lng, p.lat], zoom: 12, essential: true }); }
             catch (e: any) { setError(e?.message ?? "Geolocation failed."); }
           }}>📍 Use my location</button>
         </div>
@@ -176,16 +182,18 @@ export default function ListNearbyTools({ params }: { params?: Record<string, un
           </Field>
         )}
         <Field label={`Search radius: ${radiusMi} miles`}>
-          <input type="range" min={1} max={cat.maxRadiusMi} step={1} className="w-full" value={radiusMi} onChange={(e) => setRadiusMi(Number(e.target.value))} />
+          <input type="range" min={1} max={cat.maxRadiusMi} step={1} className="w-full" value={radiusMi} onChange={(e) => { setRadiusMi(Number(e.target.value)); invalidateResults(); }} />
         </Field>
         <button type="button" className="btn btn-primary w-full" onClick={() => center && search()} disabled={busy || !center}>
           {busy ? <Spinner label={`Searching for ${cat.label}…`} /> : `Find ${cat.label}`}
         </button>
         {error && <ErrorBox>{error}</ErrorBox>}
+        {(mode === "hospital" || mode === "uk-hospital") && <p className="rounded-lg bg-amber-50 p-3 text-sm font-semibold text-amber-900">For an emergency, contact your local emergency services. This map is not an emergency directory.</p>}
+        <p className="text-xs leading-relaxed text-mute">Results are sorted by straight-line distance among returned records, not a guarantee of the nearest facility. Queries can return at most 200 records (300 for subway mode, 100 for trails), and the list shows at most 100. Coverage, access and opening status may be incomplete or outdated; confirm with the operator.</p>
         {cat.note && <p className="text-xs leading-relaxed text-mute">{cat.note}</p>}
         {pois && (
           <div className="border-t border-line pt-3">
-            <div className="label">{pois.length} result{pois.length !== 1 ? "s" : ""}, nearest first (live OpenStreetMap data)</div>
+            <div className="label">{pois.length} result{pois.length !== 1 ? "s" : ""}, sorted by distance among returned records (OpenStreetMap)</div>
             <ul className="max-h-96 space-y-1 overflow-y-auto">
               {pois.map((p, i) => (
                 <li key={i}>
@@ -210,7 +218,7 @@ export default function ListNearbyTools({ params }: { params?: Record<string, un
           mapRef.current = map; libRef.current = lib;
           map.addSource("nb", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
           map.addLayer({ id: "nb-dots", type: "circle", source: "nb", paint: { "circle-color": "#8a4f9e", "circle-radius": 7, "circle-stroke-color": "#fff", "circle-stroke-width": 2 } });
-          map.on("click", (e: any) => { setCenter({ lat: e.lngLat.lat, lng: e.lngLat.lng }); setPois(null); });
+          map.on("click", (e: any) => { setCenter({ lat: e.lngLat.lat, lng: e.lngLat.lng }); invalidateResults(); });
         }} />
       </div>
     </div>

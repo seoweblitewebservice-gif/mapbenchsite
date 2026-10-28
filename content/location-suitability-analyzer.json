@@ -10,8 +10,8 @@
  "title": "Location Suitability Analyzer: Rank Places",
  "description": "Rank candidate places against weighted criteria with the Location Suitability Analyzer — a transparent score for homes, depots and trips. Free.",
  "updated": "October 2026",
- "summary_sentence": "For example, three candidate towns scored against one anchor with your weights produce a ranking you can argue with — every number in it is visible, which is the difference between analysis and vibes.",
- "quick_answer": "The Location Suitability Analyzer scores and ranks candidate places against an anchor using criteria you weight — closeness to the anchor, lower elevation, nearness to a city and more. List the candidates, set the weights, and read a transparent ranking whose arithmetic you can inspect and rerun with different priorities.",
+ "summary_sentence": "Scores are relative to up to 10 candidates and use neutral 50-point values for missing data.",
+ "quick_answer": "Compare 2–10 geocoded candidates using weighted anchor distance, lower elevation and distance to a sampled city node. Scores are relative; missing elevation or city distance receives 50 points and the city sample may not contain the nearest city.",
  "steps_intro": "Rankings are opinions with arithmetic. Make yours explicit:",
  "use_cases": [
   {
@@ -107,11 +107,11 @@
  "faq": [
   [
    "Are the scores absolute?",
-   "No — they are relative to your candidate list, anchor and weights. A score means 'best of these, by these priorities', which is the honest claim for any such tool."
+   "Scores use min–max scaling among the candidate list and normalized weights. Missing data gets 50; equal observed values get 100. They are not absolute recommendations."
   ],
   [
    "What data feeds it?",
-   "Distances computed from coordinates, elevation from open elevation data, and city proximity from map data — all visible in the criteria table on this page."
+   "Photon geocoding, Open-Meteo elevation and up to 40 OSM city nodes within 80 km per candidate. City proximity is not guaranteed to be the true nearest."
   ],
   [
    "Can I use the tool without sharing my precise location?",
@@ -143,7 +143,7 @@
   ],
   [
    "Can I save a run?",
-   "The ranking is computed live from your inputs; note the weights beside the result in your own records and any run is reproducible exactly."
+   "No saved run is provided. External geocoding and source data can change, so an identical future result is not guaranteed."
   ],
   [
    "Ties between candidates?",

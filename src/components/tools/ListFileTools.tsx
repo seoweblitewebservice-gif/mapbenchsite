@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Map as MLMap, GeoJSONSource } from "maplibre-gl";
-import { distanceKm, fmt, fmtCoords, fmtDist, type LatLng } from "@/lib/geo";
+import { distanceKm, fmt, fmtCoords, fmtDist, isValidLat, isValidLng, type LatLng } from "@/lib/geo";
 import { downloadText, geojsonToGpx, geojsonToKml, toCsv } from "@/lib/formats";
 import { ErrorBox, Field, FileDropzone, Spinner, Stat } from "@/components/ui";
 import { DynamicMap, PALETTE, pinElement } from "./shared";
@@ -42,7 +42,7 @@ function fmtClock(sec: number): string {
 
 // Mode 1: GPX heart-rate analyzer
 
-interface HrPoint { lat: number; lng: number; ele: number | null; time: Date | null; hr: number | null; cumKm: number }
+interface HrPoint { segment: number; lat: number; lng: number; ele: number | null; time: Date | null; hr: number | null; cumKm: number }
 interface HrZone { label: string; range: string; count: number; pct: number }
 interface HrResult {
   sourceName: string; points: HrPoint[]; totalKm: number; durationS: number | null;
@@ -51,11 +51,11 @@ interface HrResult {
 }
 
 const HR_ZONES: { label: string; range: string; test: (hr: number) => boolean }[] = [
-  { label: "Zone 1 · Easy", range: "Under 110", test: (h) => h < 110 },
-  { label: "Zone 2 · Fat burn", range: "110–129", test: (h) => h >= 110 && h < 130 },
-  { label: "Zone 3 · Aerobic", range: "130–149", test: (h) => h >= 130 && h < 150 },
-  { label: "Zone 4 · Threshold", range: "150–169", test: (h) => h >= 150 && h < 170 },
-  { label: "Zone 5 · Peak", range: "170+", test: (h) => h >= 170 },
+  { label: "Band 1", range: "Under 110", test: (h) => h < 110 },
+  { label: "Band 2", range: "110–129", test: (h) => h >= 110 && h < 130 },
+  { label: "Band 3", range: "130–149", test: (h) => h >= 130 && h < 150 },
+  { label: "Band 4", range: "150–169", test: (h) => h >= 150 && h < 170 },
+  { label: "Band 5", range: "170+", test: (h) => h >= 170 },
 ];
 
 /** Heart rate hides in <extensions> under names like <gpxtpx:hr> — match any descendant by localName. */
@@ -73,14 +73,16 @@ function parseGpxHr(text: string, sourceName: string): HrResult {
   const doc = new DOMParser().parseFromString(text, "application/xml");
   if (doc.querySelector("parsererror")) throw new Error("That file is not valid XML, so it could not be read as a GPX file.");
   if (!doc.getElementsByTagName("gpx").length) throw new Error("No GPX content found in this file. Export a .gpx track from your watch or app and try again.");
-  const trkpts = Array.from(doc.getElementsByTagName("trkpt"));
-  if (!trkpts.length) throw new Error("This GPX file has no track points (<trkpt>). Waypoint-only and route-only files have no heart-rate timeline to analyze.");
+  const segments = Array.from(doc.getElementsByTagName("trkseg"));
+  if (!segments.some((seg) => seg.getElementsByTagName("trkpt").length)) throw new Error("This GPX file has no track points (<trkpt>). Waypoint-only and route-only files have no heart-rate timeline to analyze.");
 
   const points: HrPoint[] = [];
   let totalKm = 0, gainM = 0, prev: LatLng | null = null, prevEle: number | null = null;
-  for (const pt of trkpts) {
+  for (const [segment, seg] of segments.entries()) {
+    prev = null; prevEle = null;
+    for (const pt of Array.from(seg.getElementsByTagName("trkpt"))) {
     const lat = parseFloat(pt.getAttribute("lat") ?? ""), lng = parseFloat(pt.getAttribute("lon") ?? "");
-    if (!Number.isFinite(lat) || !Number.isFinite(lng)) continue;
+    if (!isValidLat(lat) || !isValidLng(lng)) { prev = null; prevEle = null; continue; }
     const eleText = pt.getElementsByTagName("ele")[0]?.textContent;
     const eleParsed = eleText !== undefined && eleText !== "" ? parseFloat(eleText) : NaN;
     const ele = Number.isFinite(eleParsed) ? eleParsed : null;
@@ -90,18 +92,18 @@ function parseGpxHr(text: string, sourceName: string): HrResult {
     const cur: LatLng = { lat, lng };
     if (prev) totalKm += distanceKm(prev, cur);
     if (ele !== null && prevEle !== null && ele > prevEle) gainM += ele - prevEle;
-    if (ele !== null) prevEle = ele;
+    prevEle = ele;
     prev = cur;
-    points.push({ lat, lng, ele, time, hr: findHr(pt), cumKm: totalKm });
+    points.push({ segment, lat, lng, ele, time, hr: findHr(pt), cumKm: totalKm });
+    }
   }
   if (points.length < 2) throw new Error("This GPX file has fewer than two usable track points, so there is no track to analyze.");
 
   const times = points.map((p) => p.time).filter((t): t is Date => t !== null);
   const durationS = times.length >= 2 ? (times[times.length - 1].getTime() - times[0].getTime()) / 1000 : null;
   const hrs = points.map((p) => p.hr).filter((h): h is number => h !== null);
-  // Zone share is measured over samples that carry both a timestamp and a heart rate when possible.
-  const timedHr = points.filter((p) => p.hr !== null && p.time !== null);
-  const zoneBase = timedHr.length ? timedHr : points.filter((p) => p.hr !== null);
+  // These are sample shares, not time-weighted or personalized training zones.
+  const zoneBase = points.filter((p) => p.hr !== null);
   const zones: HrZone[] = HR_ZONES.map((z) => {
     const count = zoneBase.filter((p) => z.test(p.hr as number)).length;
     return { label: z.label, range: z.range, count, pct: zoneBase.length ? (count / zoneBase.length) * 100 : 0 };
@@ -151,8 +153,12 @@ function GpxHeartRateAnalyzer() {
   useEffect(() => {
     const map = mapRef.current;
     if (!map || !mapReady) return;
-    const coords = (result?.points ?? []).map((p) => [p.lng, p.lat]);
-    (map.getSource("route") as GeoJSONSource | undefined)?.setData(routeFc(coords));
+    const groups = new Map<number, number[][]>();
+    for (const p of result?.points ?? []) {
+      const line = groups.get(p.segment) ?? []; line.push([p.lng, p.lat]); groups.set(p.segment, line);
+    }
+    const features: GeoJSON.Feature[] = [...groups.values()].filter((line) => line.length > 1).map((line) => ({ type: "Feature", properties: {}, geometry: { type: "LineString", coordinates: line } }));
+    (map.getSource("route") as GeoJSONSource | undefined)?.setData({ type: "FeatureCollection", features });
     if (result) fitMap(map, result.points);
   }, [result, mapReady]);
 
@@ -181,7 +187,7 @@ function GpxHeartRateAnalyzer() {
     <div className="grid gap-4 lg:grid-cols-[400px,1fr]">
       <div className="card order-2 space-y-4 p-4 lg:order-1">
         <p className="text-sm leading-relaxed text-mute">
-          Analyze a workout GPX from a GPS watch or an app like Strava or Garmin Connect: distance, duration, average and peak heart rate, time in each heart-rate zone, and elevation gain. The file is read locally in your browser — it is never uploaded.
+          Analyze a workout GPX from a GPS watch or an app like Strava or Garmin Connect: distance, duration, average and peak heart rate, sample counts in fixed BPM bands, and approximate elevation gain. The file is read locally; map tile requests can reveal the viewed area.
         </p>
 
         {!result && (
@@ -228,7 +234,7 @@ function GpxHeartRateAnalyzer() {
 
             {result.hrCount > 0 && (
               <div>
-                <div className="label">Time in heart-rate zones</div>
+                <div className="label">Heart-rate sample bands</div>
                 <div className="overflow-x-auto">
                   <table className="tbl">
                     <thead><tr><th>Zone</th><th>BPM</th><th className="text-right">Samples</th><th className="text-right">Share</th></tr></thead>
@@ -239,7 +245,7 @@ function GpxHeartRateAnalyzer() {
                     </tbody>
                   </table>
                 </div>
-                <p className="mt-1 text-xs text-mute">Share of samples that carry both a timestamp and a heart-rate reading.</p>
+                <p className="mt-1 text-xs text-mute">Share of heart-rate samples, not time in zone. Bands are fixed BPM ranges and are not personalised medical or training zones. Irregular sampling can bias the percentages.</p>
               </div>
             )}
 
@@ -449,10 +455,10 @@ function PhotoRouteMapper() {
     <div className="grid gap-4 lg:grid-cols-[400px,1fr]">
       <div className="card order-2 space-y-4 p-4 lg:order-1">
         <p className="text-sm leading-relaxed text-mute">
-          Turn a set of geotagged JPEG photos into a route on the map — handy for hikes, road trips, and site surveys. Photos are ordered by capture time and joined in that order.
+          Turn a set of geotagged JPEG photos into a route on the map — handy for hikes, road trips, and site surveys. Photos are ordered by EXIF time where available, otherwise file modification time, and joined by straight segments. This is not necessarily the route travelled.
         </p>
         <p className="rounded-lg border border-line bg-well/50 px-3 py-2 text-xs leading-relaxed text-mute">
-          Privacy: your photos are read locally in your browser and never uploaded. Only the GPS coordinates and capture time stored inside each file are used.
+          Photos are read locally. GPS, timestamps and file names are used; modification time is a fallback. Map tiles are fetched from a provider and can reveal the viewed area. Exports contain location data and may contain names and times.
         </p>
 
         <Field label="Choose JPEG photos">
@@ -477,12 +483,12 @@ function PhotoRouteMapper() {
             <div className="grid grid-cols-2 gap-2">
               <Stat label="Photos mapped" value={photos.length.toLocaleString("en-US")} sub={`of ${total.toLocaleString("en-US")} selected`} />
               <Stat label="Skipped (no GPS)" value={skipped.toLocaleString("en-US")} />
-              <Stat label="Route distance" value={fmtDist(totalKm, "mi")} sub={fmtDist(totalKm, "km")} />
+              <Stat label="Straight-line photo-to-photo distance" value={fmtDist(totalKm, "mi")} sub={fmtDist(totalKm, "km")} />
               <Stat label="Time span" value={spanS > 0 ? fmtDurationS(spanS) : "Single moment"} sub="first to last photo" />
             </div>
 
             <div>
-              <div className="label">Route order (by capture time)</div>
+              <div className="label">Photo order (EXIF or file modification time)</div>
               <ol className="max-h-80 space-y-1 overflow-y-auto">
                 {photos.map((p, i) => (
                   <li key={`${p.name}-${i}`}>

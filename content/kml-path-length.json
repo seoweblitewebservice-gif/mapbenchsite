@@ -7,17 +7,17 @@
   "kml path length online"
  ],
  "title": "KML Path Length: Distance of a Drawn Path",
- "description": "Measure the length of paths drawn in a KML file with the KML Path Length tool — LineString geometry summed locally, point by point. Free.",
+ "description": "Measure supported KML LineString length from spherical segment distances. Extract KMZ archives before opening.",
  "updated": "October 2026",
- "summary_sentence": "For example, a four-point riverside path in a KML — segments of 0.739, 0.838 and 0.794 km along the Thames — totals 2.371 km of drawn geometry, computed from the file's own coordinates.",
- "quick_answer": "The KML Path Length tool reads a KML file locally, extracts its LineString paths and sums the great-circle distance between consecutive coordinates, in kilometres and miles. Drop the file and read how long the drawn paths really are — from the geometry itself, not the file's description of it.",
+ "summary_sentence": "LineString lengths are summed separately; polygon boundaries are excluded and KMZ archives must be extracted first.",
+ "quick_answer": "Open an uncompressed KML file to display supported placemarks and sum the spherical lengths of LineStrings in kilometres and miles. Separate lines are not joined; polygons are excluded.",
  "steps_intro": "The path is in the file. Measure the file:",
  "use_cases": [
   {
    "title": "Verifying a published trail KML",
    "body": [
     {
-     "t": "A walking site claims 14 km; the file's LineString sums to 11.8. Believe the geometry — descriptions outlive edits, coordinates do not lie politely. The GPX sibling is the "
+     "t": "Compare a published trail distance with the drawn LineString; differences may reflect sampling, route changes or measurement methods. For GPX tracks, try the "
     },
     {
      "t": "GPX Track Distance Calculator",
@@ -40,7 +40,7 @@
    "title": "Utility and boundary work",
    "body": [
     {
-     "t": "Cable runs, fence lines and patrol paths stored as KML get budget-grade lengths from their drawn geometry."
+     "t": "Estimate lengths of cable runs or fence lines drawn as LineStrings. These are surface estimates, not survey measurements."
     }
    ]
   },
@@ -48,7 +48,7 @@
    "title": "Comparing route variants",
    "body": [
     {
-     "t": "Two KMLs, two variants of a course — lengths side by side settle the 'shorter option' argument with arithmetic."
+     "t": "Open each route variant separately and compare the displayed LineString totals."
     }
    ]
   }
@@ -58,7 +58,7 @@
    "label": "Example · The Thames sample",
    "body": [
     {
-     "t": "Four points from Westminster downstream: hops of 0.739 + 0.838 + 0.794 km = 2.371 km. KML stores coordinates as lon,lat — the tool reads them in KML's own order, which is the bug this example exists to pre-empt in your own scripts."
+     "t": "A path with several coordinates is measured as the sum of spherical distances between consecutive points. KML tuples use longitude,latitude order."
     }
    ]
   },
@@ -66,7 +66,7 @@
    "label": "Example · Drawn versus walked",
    "body": [
     {
-     "t": "A hand-drawn path cuts every corner its author smoothed with the mouse — drawn lengths run a few percent under walked truth on winding ground, the same chord bias as sparse GPS, in a cheaper suit."
+     "t": "A hand-drawn path or sparsely sampled track can miss bends. The result measures the supplied geometry, not necessarily the route travelled."
     }
    ]
   }
@@ -86,9 +86,9 @@
     "Consecutive tuples summed by haversine"
    ],
    [
-    "LinearRing (Polygon edge)",
-    "Perimeter on request of the geometry",
-    "The ring's closed loop summed"
+    "Polygon boundary",
+    "No",
+    "Polygon rings are excluded"
    ],
    [
     "Point",
@@ -106,7 +106,7 @@
  "faq": [
   [
    "Are Polygon boundaries measured?",
-   "Ring geometry is measurable and reported as perimeter where the file's structure presents it; open LineStrings are the primary path case. Points contribute nothing, correctly."
+   "No. The total includes supported LineStrings only; polygon rings are excluded."
   ],
   [
    "KML coordinates are lon,lat — really?",
@@ -114,7 +114,7 @@
   ],
   [
    "Drawn in Google Earth versus recorded by GPS?",
-   "Both are polylines to this tool. Drawn paths carry the corner-smoothing bias; recorded dense tracks carry almost none — the number is the file's, the interpretation is yours."
+   "Both are measured from their supplied coordinates. Drawing, GPS noise and sampling can all affect the result."
   ],
   [
    "Closed paths (loops)?",
@@ -130,7 +130,7 @@
   ],
   [
    "Empty or single-point LineStrings?",
-   "They sum to zero, reported as such — a degenerate path is a finding, not a failure."
+   "A single-point or empty LineString is not rendered or counted as a line. If the file contains no supported visible placemarks, it will not open."
   ]
  ],
  "related_prose": [

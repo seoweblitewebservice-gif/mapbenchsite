@@ -7,17 +7,17 @@
   "us state plane coordinates"
  ],
  "title": "US State Plane Helper: Zones and Workflow",
- "description": "Start State Plane work from GPS coordinates with the US State Plane Helper — zones, NAD83 and survey feet, workflow first. Free.",
+ "description": "Understand State Plane zones and units; this coordinate workspace does not identify zones or convert State Plane values.",
  "updated": "October 2026",
  "summary_sentence": "For example, a Denver GPS point belongs to Colorado Central (zone 0502) — and knowing the zone, the datum and the unit before touching a converter is ninety percent of State Plane competence.",
- "quick_answer": "The US State Plane Helper starts you from GPS latitude/longitude toward State Plane work: the zone system, the NAD83 datum and the feet-versus-metres reality of American surveying. Use it to identify your zone and prepare coordinates properly before a full State Plane conversion in survey software.",
- "steps_intro": "State Plane is a workflow before it is a formula:",
+ "quick_answer": "State Plane coordinates depend on a zone, datum and unit. This workspace does not identify State Plane zones or convert State Plane coordinates.",
+ "steps_intro": "Use the workspace for supported global formats; determine the zone, datum and unit using authoritative documentation before using validated GIS or NGS tools.",
  "use_cases": [
   {
    "title": "Survey and GIS intake",
    "body": [
     {
-     "t": "A deliverable arrives 'in State Plane' with no zone named. The helper's zone-first workflow identifies what you are holding — the "
+     "t": "A deliverable labelled State Plane needs its zone, datum and units identified from reliable metadata or authoritative sources. This workspace cannot identify the zone. The "
     },
     {
      "t": "UTM Converter",
@@ -40,7 +40,7 @@
    "title": "Preparing coordinates for conversion",
    "body": [
     {
-     "t": "Full SPC conversion belongs in validated survey/GIS tools; this helper gets the zone, datum and input hygiene right so the conversion cannot silently fail."
+     "t": "Full State Plane conversion belongs in validated survey or GIS tools. Identify the zone, datum and units separately; this workspace does not determine them."
     }
    ]
   },
@@ -100,7 +100,7 @@
     "Zones carry FIPS codes (Colorado Central is FIPS zone 0502) and EPSG codes per datum and unit"
    ]
   ],
-  "note": "This helper is the orientation layer — zone identification and preparation. Deliverable-grade conversion uses NGS tools (NCAT) or validated GIS with the exact realisation and unit declared."
+  "note": "This page provides background only. It does not identify zones or perform State Plane conversion. Use NGS tools or validated GIS with the exact realisation and unit declared."
  },
  "faq": [
   [
@@ -121,11 +121,11 @@
   ],
   [
    "Can I convert fully here?",
-   "This helper identifies zones and prepares inputs; full conversion belongs in NGS NCAT or your GIS, where the realisation and unit are explicit settings — the professional route, stated plainly."
+   "No. This workspace neither identifies State Plane zones nor converts State Plane coordinates. Use NGS NCAT or validated GIS with the correct zone, datum and unit."
   ],
   [
    "Hawaii and Alaska?",
-   "Hawaii has its own zones (on an older datum heritage — care advised) and Alaska spans ten zones including an oblique Mercator for the panhandle. The helper's zone logic introduces them."
+   "Hawaii and Alaska have multiple State Plane zones. Consult authoritative zone documentation; this workspace does not select zones."
   ],
   [
    "Why not just use UTM?",

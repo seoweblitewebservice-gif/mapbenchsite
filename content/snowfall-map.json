@@ -9,10 +9,10 @@
   "historical snowfall"
  ],
  "title": "Snowfall Totals Map (Season Archive) Explorer",
- "description": "Explore a full winter's snowfall totals around any point with the Snowfall Totals Map (Season Archive) — ERA5 weather-archive data, mapped. Free.",
+ "description": "Explore modelled snowfall totals for a December–March season using the Open-Meteo archive.",
  "updated": "October 2026",
- "summary_sentence": "For example, lake-effect country near Buffalo, New York averages roughly 95 inches (241 cm) of snow a season in published climate records — the kind of total this archive map lets you compare winter by winter.",
- "quick_answer": "The Snowfall Totals Map (Season Archive) maps the total snowfall for a winter season around your point, summed from the ERA5 weather archive rather than measured live. Pick a point and a season and read the totals cell by cell — last winter against the famous ones.",
+ "summary_sentence": "The fixed season excludes snowfall outside December through March.",
+ "quick_answer": "The tool sums complete daily Open-Meteo archive snowfall values for December 1 through March 31 at 25 sample points around a chosen location. Results are model estimates, not snow depth, live conditions or certified observations.",
  "steps_intro": "Not today's snow — a whole season's, from the archive:",
  "use_cases": [
   {
@@ -42,7 +42,7 @@
    "title": "Plowing, roofing and operations planning",
    "body": [
     {
-     "t": "Seasonal totals size contracts, roof-load expectations and salt budgets better than any single storm headline."
+     "t": "Do not use this modelled seasonal total to determine roof loads, engineering requirements or insurance claims. Consult qualified professionals and official records."
     }
    ]
   },
@@ -68,46 +68,42 @@
    "label": "Example · Lake effect in numbers",
    "body": [
     {
-     "t": "Published climate averages put Syracuse, New York near 127 inches (323 cm) in a typical season — among the snowiest US cities — driven by Lake Ontario. Archive maps show the narrow bands that produce those averages."
+     "t": "Local snow bands may be narrower than the model resolution. Compare archived model estimates with official station observations, not as a replacement for them."
     }
    ]
   }
  ],
  "popular_table": {
-  "title": "How to read the season totals",
-  "intro": "The archive's terms, stated plainly.",
+  "title": "Reading the archive grid",
+  "intro": "The displayed cells are based on modelled values at sample points.",
   "columns": [
    "Item",
-   "What it is"
+   "Meaning"
   ],
   "rows": [
    [
-    "Source",
-    "ERA5 reanalysis archive (Open-Meteo archive API)"
-   ],
-   [
-    "Season window",
-    "December 1 to March 31 totals"
+    "Provider",
+    "Open-Meteo historical weather archive"
    ],
    [
     "Grid",
-    "5×5 cells spanning roughly 25 miles around your point"
+    "25 sample points over an area about 25 miles wide"
    ],
    [
-    "Units",
-    "Centimetres and inches of snowfall"
+    "Daily values",
+    "Summed over the inclusive selected dates; incomplete data is rejected"
    ],
    [
     "Not this",
-    "Live conditions, snow depth on the ground, or a forecast"
+    "Live conditions, an exact gauge record or a certified decision tool"
    ]
   ],
-  "note": "Reanalysis blends observations into a model grid (roughly 25–30 km cells), so a single valley or ridge can differ from its cell. Treat totals as regional truth, not fence-post truth."
+  "note": "Model selection, archive coverage and spatial resolution depend on the provider and dates. Data can differ from local measurements."
  },
  "faq": [
   [
    "Which winters can I look up?",
-   "Any season the ERA5 archive covers — the reanalysis reaches back decades, so famous historical winters and last winter sit in the same dataset, computed the same way."
+   "The year control permits completed seasons starting from 1980, but actual archive availability varies by location and provider. Incomplete daily data is rejected."
   ],
   [
    "Why does my town's official total differ?",
@@ -123,7 +119,7 @@
   ],
   [
    "How far back does the archive go?",
-   "ERA5 reanalysis extends back to 1940 in its current form, with the densest observation support in recent decades. Early seasons carry wider uncertainty."
+   "The year control permits completed seasons starting from 1980, but actual archive availability varies by location and provider. Incomplete daily data is rejected."
   ],
   [
    "Can I use this for a roof-load or insurance decision?",

@@ -7,11 +7,11 @@
   "ngr converter"
  ],
  "title": "National Grid Reference Converter: OS Grid",
- "description": "Convert coordinates to an Ordnance Survey grid reference with the National Grid Reference Converter — letters, digits and precision. Free.",
+ "description": "Convert between grid references and approximate coordinates; no WGS84–OSGB36 datum transformation is applied.",
  "updated": "October 2026",
- "summary_sentence": "For example, a GPS point anywhere in London falls in the TQ 100-kilometre square — the National Grid Reference Converter then refines it digit by digit, from a 1 km square down to a single metre.",
- "quick_answer": "The National Grid Reference Converter turns a GPS coordinate pair into its Ordnance Survey National Grid reference — the two-letter square plus digits used on every British paper map. Enter latitude and longitude and read the reference at the precision you choose, from a 1-kilometre square to a metre.",
- "steps_intro": "From GPS numbers to the reference a paper map understands:",
+ "summary_sentence": "The workspace displays six- and ten-figure references rather than a selectable precision.",
+ "quick_answer": "This converter projects coordinates using the National Grid equations and can decode a reference to its square centre. It does not apply a WGS84–OSGB36 datum shift; results may have substantial error and are not suitable for surveying or safety-critical navigation.",
+ "steps_intro": "Enter separate decimal coordinates, use a grid reference, or click the map. Results are approximate without a datum shift.",
  "use_cases": [
   {
    "title": "Quoting locations the British way",
@@ -118,7 +118,7 @@
   ],
   [
    "Does it cover Northern Ireland?",
-   "No — Northern Ireland uses the Irish Grid, a separate system with its own letter squares, covered by the Irish Grid Helper on this site."
+   "No. Northern Ireland uses the Irish Grid. The linked Irish Grid Helper does not currently calculate Irish Grid conversions; use an authoritative transformation service."
   ],
   [
    "Can a reference name a point offshore?",
