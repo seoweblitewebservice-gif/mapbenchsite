@@ -180,9 +180,10 @@ export const CORE_MORE = [
     category: "network",
     scope: "Worldwide",
     component: "iplookup",
+    method: "When you select Detect my public IP, the browser requests the IP and available network metadata from ipwho.is. The result reflects the connection to that provider and may differ across networks, address families or VPN routes; geographic fields are approximate.",
     keywords: ["what is my ip", "public ip", "my ip address"],
     faq: [["VPN?", "Shows the exit IP of the VPN or proxy, not your physical street address."]],
-    howTo: ["Open the tool.", "Read IP, ISP and approximate location."],
+    howTo: ["Select Detect my public IP.", "Read the returned IP, ISP and approximate location if available."],
     related: ["ip-address-lookup", "find-my-location"],
   },
   {

@@ -195,6 +195,7 @@ const CORE_BASE = [
     short: "Approximate location, ISP and network details for a public IP.",
     intro: "Enter an IP or detect yours for network geolocation details.",
     category: "network", scope: "Worldwide", component: "iplookup",
+    method: "The browser requests IP metadata from ipwho.is for the entered address, or for the connection making the request when the input is blank. Returned geographic and network fields depend on the provider and are approximate; VPNs, proxies and mobile gateways can affect them.",
     keywords: ["ip lookup", "ip geolocation"],
     faq: [["Exact location?", "No — network exit, not street address."]],
     howTo: ["Enter IP or detect yours.", "Read city, region, country, org."],

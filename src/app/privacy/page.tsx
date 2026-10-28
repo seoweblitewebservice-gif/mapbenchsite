@@ -32,11 +32,12 @@ export default function PrivacyPage() {
           <li><strong>Routing &amp; isochrones</strong> — FOSSGIS Valhalla, with OSRM used as a driving fallback where configured. Route coordinates are sent.</li>
           <li><strong>Elevation</strong> — Open-Meteo. Sampled coordinates are sent.</li>
           <li><strong>Nearby places</strong> — Overpass API. The relevant centre point, radius or geographic query is sent.</li>
+          <li><strong>IP-based location</strong> — ipwho.is and, for some location features if needed, ipapi.co. The provider receives the request and the network address it comes from; an IP lookup may also send the address you enter.</li>
         </ul>
         <p>These requests are subject to the provider&apos;s own terms and privacy practices. See the Data Sources page for provider references and attribution.</p>
 
         <h2>Geolocation</h2>
-        <p>&quot;Use my location&quot; uses your browser&apos;s Geolocation API and only runs after the browser&apos;s permission flow. MapBench does not build a personal location history from that feature. When a location-based tool needs an address, route, elevation or nearby-place result, the relevant coordinates may be sent to the external service documented for that function.</p>
+        <p>Some &quot;Use my location&quot; controls use your browser&apos;s Geolocation API, which asks for permission. Others use an approximate IP-based location without a browser location-permission prompt, or fall back to IP location if device location fails. The IP provider receives your network address and may return an approximate location that differs from your device location. MapBench does not build a personal location history from that feature. When a location-based tool needs an address, route, elevation or nearby-place result, the relevant coordinates may be sent to the external service documented for that function.</p>
 
         <h2>Local storage</h2>
         <p>MapBench may store lightweight browser preferences such as your light/dark theme choice in <code>localStorage</code>. Some tools may also represent their state in the page URL so a setup can be shared or reopened.</p>

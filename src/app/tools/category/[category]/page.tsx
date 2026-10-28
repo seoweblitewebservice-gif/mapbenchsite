@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!category) return {};
   return {
     title: `${category.label} Map Tools & Geographic Calculators`,
-    description: `${category.short} Explore free ${category.label.toLowerCase()} tools with documented methods, practical guidance, limitations and related geographic resources.`,
+    description: `${category.short} Explore free ${category.label.toLowerCase()} tools with practical guidance, limitations and related geographic resources.`,
     alternates: { canonical: `/tools/category/${category.id}` },
     robots: { index: true, follow: true },
   };
@@ -77,7 +77,7 @@ export default async function CategoryPage({ params }: Props) {
       <header className="max-w-3xl">
         <p className="font-sans text-[11px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">MapBench tool category</p>
         <h1 className="mt-2 font-display text-4xl font-bold tracking-tight">{category.label} Map Tools</h1>
-        <p className="mt-4 text-lg leading-relaxed text-mute">{category.short} This hub groups {tools.length} tools that answer related geographic questions while keeping the underlying method, data source and limitations visible.</p>
+        <p className="mt-4 text-lg leading-relaxed text-mute">{category.short} This hub groups {tools.length} tools that answer related geographic questions. Review each page’s available method, data-source and limitation notes before using its results.</p>
       </header>
 
       <nav aria-label="On this page" className="contents-nav mt-8"><div className="flex flex-wrap gap-5 text-sm font-semibold text-brand-strong"><a href="#featured-category-tools">Popular tools</a>{remaining.length > 0 && <a href="#all-category-tools">Full directory</a>}<a href="#category-method">Choosing a method</a><a href="#category-terms">Key terms</a></div></nav>
@@ -89,7 +89,7 @@ export default async function CategoryPage({ params }: Props) {
         </div>
       </section>
 
-      {remaining.length > 0 && <section className="mt-12 border-t border-line pt-10" aria-labelledby="all-category-tools"><h2 id="all-category-tools" className="sect-h">All {category.label.toLowerCase()} tools</h2><p className="mt-2 max-w-3xl">Browse every tool in this category from this canonical hub. Each link opens a dedicated indexable tool page with its own method, examples, limitations and related resources.</p><div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{remaining.map((tool) => <Link key={tool.slug} href={`/tools/${tool.slug}`} className="rounded-xl border border-line bg-white p-4 transition-colors hover:border-brand"><h3 className="font-display text-base font-bold text-ink">{tool.name}</h3><p className="mt-1.5 text-sm leading-relaxed text-mute">{tool.short}</p><span className="mt-3 block text-xs font-extrabold text-brand-strong">Open tool →</span></Link>)}</div></section>}
+      {remaining.length > 0 && <section className="mt-12 border-t border-line pt-10" aria-labelledby="all-category-tools"><h2 id="all-category-tools" className="sect-h">All {category.label.toLowerCase()} tools</h2><p className="mt-2 max-w-3xl">Browse every tool in this category from this canonical hub. Each link opens a dedicated tool page with instructions and supporting context. Method detail and resources vary by tool.</p><div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{remaining.map((tool) => <Link key={tool.slug} href={`/tools/${tool.slug}`} className="rounded-xl border border-line bg-white p-4 transition-colors hover:border-brand"><h3 className="font-display text-base font-bold text-ink">{tool.name}</h3><p className="mt-1.5 text-sm leading-relaxed text-mute">{tool.short}</p><span className="mt-3 block text-xs font-extrabold text-brand-strong">Open tool →</span></Link>)}</div></section>}
 
       <section className="mt-12 border-t border-line pt-10" aria-labelledby="category-method">
         <h2 id="category-method" className="sect-h">How to use this category well</h2>

@@ -44,16 +44,12 @@ export const RESOURCE_CLUSTERS: Record<string, ResourceLink[]> = {
   ],
   location: [
     { href: "/guides/understanding-gps-coordinates", label: "Understanding GPS Coordinates: Formats, Datums and Precision", note: "Understand the coordinate conventions behind location results and GPS fixes.", kind: "Guide" },
-    { href: "/guides/how-to-choose-a-meeting-point-between-places", label: "How to Choose a Meeting Point Between Places", note: "Combine location context with distance and routing when choosing a practical place.", kind: "Guide" },
   ],
   sun: [],
   lines: [
     { href: "/guides/understanding-gps-coordinates", label: "Understanding GPS Coordinates: Formats, Datums and Precision", note: "Useful background for latitude, longitude, hemispheres and geographic reference lines.", kind: "Guide" },
-    { href: "/guides/how-to-measure-land-area-on-a-map", label: "How to Measure Land Area on a Map", note: "Useful context for tracing boundaries and interpreting drawn geometry.", kind: "Guide" },
   ],
-  network: [
-    { href: "/guides/radius-vs-drive-time-vs-straight-line-distance", label: "Radius vs. Drive Time vs. Straight-Line Distance", note: "Choose the network or geometric model that actually matches the question.", kind: "Guide" },
-  ],
+  network: [],
 };
 
 export const TOOL_RESOURCE_OVERRIDES: Record<string, ResourceLink[]> = {
