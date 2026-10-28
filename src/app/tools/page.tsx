@@ -40,6 +40,12 @@ export default async function ToolsPage({ searchParams }: ToolsPageProps) {
         Every tool is free, works worldwide unless marked otherwise, and runs in your browser. Search by keyword, filter the full directory, or start with an editorial category hub that explains the method and common mistakes.
       </p>
 
+      <div id="search-directory" className="mt-6">
+        <Suspense fallback={<div className="card p-10 text-center text-sm text-mute">Loading directory…</div>}>
+          <ToolsDirectory />
+        </Suspense>
+      </div>
+
       <section className="mt-8" aria-labelledby="tool-category-hubs">
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
@@ -65,11 +71,7 @@ export default async function ToolsPage({ searchParams }: ToolsPageProps) {
         </div>
       </section>
 
-      <div className="mt-10 border-t border-line pt-8">
-        <Suspense fallback={<div className="card p-10 text-center text-sm text-mute">Loading directory…</div>}>
-          <ToolsDirectory />
-        </Suspense>
-      </div>
+
     </div>
   );
 }

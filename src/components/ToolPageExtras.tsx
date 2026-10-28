@@ -1,4 +1,5 @@
 import Link from "next/link";
+import RadiusFieldGuide from "./RadiusFieldGuide";
 import { distanceKm, fmt } from "@/lib/geo";
 
 const PAIRS = [
@@ -158,6 +159,7 @@ function CensusZipExtras() {
 }
 
 export default function ToolPageExtras({ slug }: { slug: string }) {
+  if (slug === "map-radius") return <RadiusFieldGuide />;
   if (slug === "distance-between-two-places") return <DistanceExtras />;
   if (slug === "magnetic-declination") return <MagneticExtras />;
   if (slug === "moonrise-moonset") return <MoonRiseSetExtras />;
