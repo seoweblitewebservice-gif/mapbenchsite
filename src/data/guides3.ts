@@ -14,7 +14,7 @@ export const GUIDES3: Guide[] = [
       { t: "h2", text: "The curve nobody plans with" },
       { t: "p", text: "The annual daylight chart is useful because the Sun's path changes through the year. Near solstices, low-angle light can linger much longer at some latitudes than it does around the equinoxes. That difference matters when you are comparing seasons, scouting locations or deciding how much usable light a session may actually have." },
       { t: "p", text: "Moon phase can add another planning layer after sunset, especially for landscapes or blue-hour work, but it should be treated as context rather than a guarantee of usable illumination. The practical lesson is simple: use the calculator to narrow the window, then use the location itself to make the final call." },
-      { t: "toolbox", slugs: ["golden-hour-calculator", "sunrise-sunset-calculator", "daylight-hours-calculator", "horizon-distance-calculator", "what-timezone-am-i-in"] },
+      { t: "toolbox", slugs: ["golden-hour-calculator", "sunrise-sunset-calculator", "day-length-calculator", "horizon-distance", "what-timezone-am-i-in"] },
     ],
   },
   {
@@ -54,7 +54,7 @@ export const GUIDES3: Guide[] = [
         "Treat zone and climate maps as starting points, not guarantees for a specific plant or property.",
       ] },
       { t: "p", text: "For a practical decision, combine the climate or hardiness reference with daylight, elevation, local weather history and the plant's own requirements. If the decision matters financially, use a local agricultural or horticultural source rather than relying on a single online zone lookup." },
-      { t: "toolbox", slugs: ["hardiness-zone-finder", "climate-zone-finder", "daylight-hours-calculator", "elevation-finder"] },
+      { t: "toolbox", slugs: ["plant-hardiness-zone", "climate-zone-finder", "day-length-calculator", "elevation-finder"] },
     ],
   },
   {
@@ -69,7 +69,7 @@ export const GUIDES3: Guide[] = [
       { t: "h2", text: "When terrain joins the conversation" },
       { t: "p", text: "Over land, a line-of-sight tool can sample an elevation model between observer and target and compare the terrain profile with the sight line. A 90 m DEM cannot see individual buildings, trees or small ridges, so the result is terrain planning guidance rather than a guaranteed visibility verdict." },
       { t: "p", text: "Use horizon math to understand curvature, then use terrain data for a more realistic check. For engineering, radio licensing or safety-critical siting, use professional propagation or survey tools and local measurements." },
-      { t: "toolbox", slugs: ["how-far-can-i-see", "horizon-distance-calculator", "line-of-sight-calculator", "elevation-finder"] },
+      { t: "toolbox", slugs: ["horizon-distance", "horizon-distance", "line-of-sight-helper", "elevation-finder"] },
     ],
   },
   {
@@ -89,7 +89,7 @@ export const GUIDES3: Guide[] = [
       ] },
       { t: "p", text: "The discipline is in the fine print. Cost indices are snapshots, density figures depend on the geographic boundary used, and daylight is precise geometry but not a quality-of-life score. Ratios are useful only when both inputs were measured on the same basis." },
       { t: "p", text: "Once the table narrows the options, investigate the street-level questions: housing, transport, healthcare, schools, climate and the neighbourhoods you would actually use. A comparison tool helps organise the decision; it does not make the decision for you." },
-      { t: "toolbox", slugs: ["cost-of-living-calculator", "city-comparison", "population-density-comparison", "daylight-hours-calculator", "meeting-time-planner"] },
+      { t: "toolbox", slugs: ["cost-of-living-compare", "city-comparison-tool", "population-density-compare", "day-length-calculator", "meeting-time-planner"] },
     ],
   },
 ];

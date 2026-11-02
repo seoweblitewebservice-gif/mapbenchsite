@@ -140,7 +140,7 @@ export const GUIDES5: Guide[] = [
         "For communication, choose the projection whose preserved property matches the story you are telling."
       ] },
       { t: "note", text: "Projection distortion is unavoidable; unexplained projection choice is avoidable. Good maps make the trade-off clear." },
-      { t: "toolbox", slugs: ["distance-between-two-places", "great-circle-calculator", "map-area-calculator"] }
+      { t: "toolbox", slugs: ["distance-between-two-places", "crow-flies-distance", "map-area-calculator"] }
     ]
   }
 ];

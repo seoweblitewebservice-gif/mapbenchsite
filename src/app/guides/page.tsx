@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ALL_GUIDES } from "@/data/allGuides";
+import { HUB_NAV } from "@/lib/hubNav";
 
 export const metadata: Metadata = {
   title: "Mapping Guides, Geographic Methods & Field Notes",
@@ -88,6 +89,23 @@ export default function GuidesPage() {
             </Link>
           ))}
         </div>
+      </section>
+
+      <section className="mx-auto mt-12 max-w-3xl border-t border-line pt-8" aria-labelledby="guides-hubs">
+        <h2 id="guides-hubs" className="font-display text-xl font-bold">Go from reading to measuring</h2>
+        <p className="mt-2 text-sm leading-relaxed text-mute">
+          Every guide belongs to a tool cluster. The hub has the calculators, the method notes and the limits; the guide explains why the choice matters.
+        </p>
+        <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+          {HUB_NAV.map((hub) => (
+            <li key={hub.id}>
+              <Link href={hub.href} className="flex items-center justify-between gap-3 rounded-xl border border-line bg-white px-4 py-2.5 text-sm font-semibold transition-colors hover:border-brand hover:text-brand-strong">
+                <span>{hub.label}</span>
+                <span className="text-xs font-bold text-mute">{hub.count} tools</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="mx-auto mt-12 max-w-3xl border-t border-line pt-8">

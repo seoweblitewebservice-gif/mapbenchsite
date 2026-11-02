@@ -52,7 +52,7 @@ export const GUIDES: Guide[] = [
         "Watch for swapped lat/lng — GeoJSON uses [longitude, latitude] order.",
         "When copying coordinates from another service, verify the format and datum instead of assuming all systems use the same convention.",
       ] },
-      { t: "toolbox", slugs: ["latitude-longitude-finder", "coordinate-converter", "gps-coordinate-lookup", "dms-to-decimal"] },
+      { t: "toolbox", slugs: ["latitude-longitude-finder", "coordinate-converter", "latitude-longitude-finder", "dms-to-decimal"] },
     ],
   },
   {
@@ -110,7 +110,7 @@ export const GUIDES: Guide[] = [
       ] },
       { t: "note", text: "Avoid applying Pythagoras directly to raw latitude/longitude for global distances. Local planar approximations can be useful over small areas when the projection and scale are appropriate." },
       { t: "p", text: "Area calculations need the same care. For larger regions, use a geodesic or projection-aware method rather than assuming a latitude/longitude polygon is flat." },
-      { t: "toolbox", slugs: ["distance-between-two-places", "great-circle-calculator", "map-area-calculator", "crow-flies-distance"] },
+      { t: "toolbox", slugs: ["distance-between-two-places", "crow-flies-distance", "map-area-calculator", "crow-flies-distance"] },
     ],
   },
 ];

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { TOOLS } from "@/lib/registry";
+import { HUB_NAV } from "@/lib/hubNav";
+import { BEST_OF_LINKS } from "@/data/bestOf";
 
 const POPULAR: [string, string][] = [
   ["/tools/find-my-location", "Find My Location"],
@@ -40,6 +42,64 @@ const RESOURCES: [string, string][] = [
 export default function Footer() {
   return (
     <footer className="mt-16 bg-[#221d15] text-[#d9d2c0]">
+      <div className="border-b border-[#3a3428]">
+        <div className="container-sf py-8">
+          <div className="mb-3 text-[10px] font-extrabold uppercase tracking-widest text-[#8d8574]">Tool hubs</div>
+          <div className="grid gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-4">
+            <nav aria-label="Tool hubs (first half)">
+              <ul className="space-y-1.5">
+                {HUB_NAV.slice(0, Math.ceil(HUB_NAV.length / 2)).map((hub) => (
+                  <li key={hub.id}>
+                    <Link href={hub.href} className="font-serif text-sm text-[#c9c1ad] transition-colors hover:text-[#7cc39d] hover:underline">
+                      {hub.label} <span className="text-[#8d8574]">({hub.count})</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <nav aria-label="Tool hubs (second half)">
+              <ul className="space-y-1.5">
+                {HUB_NAV.slice(Math.ceil(HUB_NAV.length / 2)).map((hub) => (
+                  <li key={hub.id}>
+                    <Link href={hub.href} className="font-serif text-sm text-[#c9c1ad] transition-colors hover:text-[#7cc39d] hover:underline">
+                      {hub.label} <span className="text-[#8d8574]">({hub.count})</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <nav aria-label="Best free map tools lists">
+              <div className="mb-2 text-[10px] font-extrabold uppercase tracking-widest text-[#8d8574]">Best of</div>
+              <ul className="space-y-1.5">
+                {BEST_OF_LINKS.map((page) => (
+                  <li key={page.href}>
+                    <Link href={page.href} className="font-serif text-sm text-[#c9c1ad] transition-colors hover:text-[#7cc39d] hover:underline">
+                      {page.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <nav aria-label="Method and policy">
+              <div className="mb-2 text-[10px] font-extrabold uppercase tracking-widest text-[#8d8574]">How it works</div>
+              <ul className="space-y-1.5">
+                {[
+                  ["/tools", "Complete tool directory"],
+                  ["/guides", "Mapping guides"],
+                  ["/methodology", "Methodology"],
+                  ["/data-sources", "Data sources & licences"],
+                  ["/editorial-policy", "Editorial policy"],
+                  ["/corrections", "Corrections"],
+                ].map(([href, label]) => (
+                  <li key={href}>
+                    <Link href={href} className="font-serif text-sm text-[#c9c1ad] transition-colors hover:text-[#7cc39d] hover:underline">{label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
       <div className="container-sf grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-5">
         <div className="lg:col-span-1">
           <div className="font-display text-lg font-bold text-[#f3edda]">map<span className="text-[#7cc39d]">bench</span></div>

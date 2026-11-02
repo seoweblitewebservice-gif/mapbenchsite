@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CATEGORIES, TOOLS } from "@/lib/registry";
+import HubNavLinks from "@/components/HubNavLinks";
+import { HUB_NAV } from "@/lib/hubNav";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export function Logo() {
@@ -116,6 +118,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-canvas/95 backdrop-blur">
       <a href="#main" className="skip-link">Skip to content</a>
+      <div className="hidden md:block"><HubNavLinks /></div>
       <div className="container-sf flex h-12 items-center gap-4">
         <Link href="/" aria-label="MapBench home"><Logo /></Link>
         <nav className="ml-auto hidden items-center gap-1 md:flex" aria-label="Main">
@@ -142,6 +145,17 @@ export default function Header() {
                     <div className="flex flex-wrap gap-2">
                       <button type="button" className="btn btn-ghost btn-sm" onClick={() => { setToolsOpen(false); window.dispatchEvent(new CustomEvent("sf-open-search")); }}>Search tools</button>
                       <Link href="/tools" className="btn btn-primary btn-sm">View all tools →</Link>
+                    </div>
+                  </div>
+
+                  <div className="mb-7">
+                    <div className="mb-2 text-[10px] font-extrabold uppercase tracking-[0.16em] text-mute">Task hubs</div>
+                    <div className="flex flex-wrap gap-x-3 gap-y-1.5">
+                      {HUB_NAV.map((hub) => (
+                        <Link key={hub.id} href={hub.href} className="rounded-full border border-line bg-well/40 px-2.5 py-1 text-[12px] font-semibold text-ink hover:border-brand hover:text-brand-strong">
+                          {hub.label} <span className="text-mute">{hub.count}</span>
+                        </Link>
+                      ))}
                     </div>
                   </div>
 
@@ -199,6 +213,7 @@ export default function Header() {
           <Link href="/states" className="rounded px-2.5 py-1.5 text-[13px] font-bold hover:text-brand-strong">States</Link>
           <Link href="/studies" className="rounded px-2.5 py-1.5 text-[13px] font-bold hover:text-brand-strong">Studies</Link>
           <Link href="/guides" className="rounded px-2.5 py-1.5 text-[13px] font-bold hover:text-brand-strong">Guides</Link>
+          <Link href="/best" className="rounded px-2.5 py-1.5 text-[13px] font-bold hover:text-brand-strong">Best of</Link>
           <Link href="/about" className="rounded px-2.5 py-1.5 text-[13px] font-bold hover:text-brand-strong">About</Link>
           <button type="button" className="ml-2 rounded border border-line px-2.5 py-1 text-[12px] font-bold text-mute hover:border-brand hover:text-brand-strong" onClick={() => window.dispatchEvent(new CustomEvent("sf-open-search"))}>Search <kbd className="ml-1 text-[10px]">⌘K</kbd></button>
           <LanguageSwitcher />
@@ -223,7 +238,15 @@ export default function Header() {
               <Link href="/states" className="text-brand-strong">States</Link>
               <Link href="/studies" className="text-brand-strong">Studies</Link>
               <Link href="/guides" className="text-brand-strong">Guides</Link>
+              <Link href="/best" className="text-brand-strong">Best of</Link>
               <Link href="/about" className="text-brand-strong">About</Link>
+            </div>
+            <div>
+              <div className="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-mute">Task hubs</div>
+              <ul className="grid grid-cols-2 gap-2">
+                {HUB_NAV.map((hub) => <li key={hub.id}><Link href={hub.href} className="text-sm font-semibold text-brand-strong hover:underline">{hub.label}</Link></li>)}
+                <li><Link href="/best" className="text-sm font-semibold text-brand-strong hover:underline">Best of</Link></li>
+              </ul>
             </div>
             <button type="button" className="btn btn-ghost btn-sm w-full" onClick={() => window.dispatchEvent(new CustomEvent("sf-open-search"))}>Search tools…</button>
 

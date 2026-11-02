@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ResourceToolLinks from "@/components/ResourceToolLinks";
+import HubGuideLinks from "@/components/hubs/HubGuideLinks";
 import { notFound } from "next/navigation";
 import { type GuideBlock } from "@/data/guides";
 import { ALL_GUIDES, allGuideBySlug } from "@/data/allGuides";
@@ -179,6 +180,10 @@ export default async function GuidePage({ params }: Props) {
             )}
           </div>
         </header>
+
+        <div className="mx-auto mt-8 max-w-4xl">
+          <HubGuideLinks slug={g.slug} />
+        </div>
 
         <div className="mx-auto mt-9 grid max-w-6xl gap-12 lg:grid-cols-[minmax(0,760px)_260px] lg:justify-center">
           <div className="min-w-0">

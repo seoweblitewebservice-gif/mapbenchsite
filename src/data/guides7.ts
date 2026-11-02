@@ -1589,6 +1589,7 @@ export const GUIDES7: Guide[] = [
       { t: "p", text: "No \\u2014 none of the months in this window contain two full moons." },
       { t: "p", text: "Q: Do I need to adjust for daylight saving time?" },
       { t: "p", text: "No. Every time is already rendered in the city\\u2019s local timezone with DST applied." },
+      { t: "toolbox", slugs: ["moonrise-moonset", "moon-phase-calculator", "next-full-moon-calculator", "moon-illumination-calculator"] },
     ],
   },
 ];

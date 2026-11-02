@@ -1,213 +1,216 @@
 {
- "slug": "drive-time-map",
- "primary_keyword": "Drive Time Map",
- "secondary_keywords": [
-  "isochrone",
-  "drive time map online",
-  "free drive time map"
- ],
- "title": "Drive Time Map: How Far in 10–120 Minutes",
- "description": "See how far you can drive, walk or cycle in 10 to 120 minutes with the Drive Time Map — real road-network areas in up to four time bands. Free.",
- "updated": "October 2026",
- "summary_sentence": "A 30-minute travel area follows the available network. It can extend along faster roads and contract around barriers; it is not a fixed-radius circle or a guarantee of arrival time.",
- "quick_answer": "A Drive Time Map shows how far you can travel in a set number of minutes, following the road, path or cycle network instead of a straight line. Choose 10 to 120 minutes, add up to four bands, and compare driving, walking and cycling reach from one start point.",
- "steps_intro": "Choose a starting point, travel mode and time budget. Inspect the returned shape alongside the roads: the routing model and network determine the result, not a universal miles-per-minute rule.",
- "use_cases": [
-  {
-   "title": "Compare candidate shop locations",
-   "body": [
+  "slug": "drive-time-map",
+  "primary_keyword": "Drive Time Map",
+  "secondary_keywords": [
+    "isochrone",
+    "drive time map online",
+    "free drive time map"
+  ],
+  "title": "Drive Time Map: How Far in 10–120 Minutes",
+  "description": "See how far you can drive, walk or cycle in 10 to 120 minutes with the Drive Time Map — real road-network areas in up to four time bands. Free.",
+  "updated": "October 2026",
+  "summary_sentence": "A 30-minute travel area follows the available network. It can extend along faster roads and contract around barriers; it is not a fixed-radius circle or a guarantee of arrival time.",
+  "quick_answer": "A Drive Time Map shows how far you can travel in a set number of minutes, following the road, path or cycle network instead of a straight line. Choose 10 to 120 minutes, add up to four bands, and compare driving, walking and cycling reach from one start point.",
+  "steps_intro": "Choose a starting point, travel mode and time budget. Inspect the returned shape alongside the roads: the routing model and network determine the result, not a universal miles-per-minute rule.",
+  "use_cases": [
     {
-     "t": "Draw the same time band from each candidate site using the same travel mode. Inspect which neighbourhoods are reachable before bringing in demographic data. A travel-area polygon alone does not count customers; the "
+      "title": "Compare candidate shop locations",
+      "body": [
+        {
+          "t": "Draw the same time band from each candidate site using the same travel mode. Inspect which neighbourhoods are reachable before bringing in demographic data. A travel-area polygon alone does not count customers; the "
+        },
+        {
+          "t": "population-radius tool",
+          "l": "/tools/population-within-radius"
+        },
+        {
+          "t": " uses a different, circular boundary and should not be presented as the population of this polygon."
+        }
+      ]
     },
     {
-     "t": "population-radius tool",
-     "l": "/tools/population-within-radius"
+      "title": "Build a realistic commute shortlist",
+      "body": [
+        {
+          "t": "Use a time band as an initial filter, then inspect a specific home-to-work journey with the "
+        },
+        {
+          "t": "Driving Distance Calculator",
+          "l": "/tools/driving-distance-calculator"
+        },
+        {
+          "t": ". Direction, congestion and route restrictions can affect the actual journey. Do not treat an outbound area as proof of the same inbound commute."
+        }
+      ]
     },
     {
-     "t": " uses a different, circular boundary and should not be presented as the population of this polygon."
+      "title": "Explore a service territory before making promises",
+      "body": [
+        {
+          "t": "Compare a time-based area with a "
+        },
+        {
+          "t": "radius map",
+          "l": "/tools/map-radius"
+        },
+        {
+          "t": " to see where simple distance rules differ from road access. Dispatch delays, parking and on-site work are not included in the mapped travel budget; operational commitments need separate evidence."
+        }
+      ]
+    },
+    {
+      "title": "Compare walking and cycling access",
+      "body": [
+        {
+          "t": "Keep the origin and time budget constant when switching modes. Each mode follows the network available to the routing service, not every path visible on a basemap. Check local access restrictions before using a suggested area for a real journey."
+        }
+      ]
     }
-   ]
+  ],
+  "examples": [
+    {
+      "label": "Worked example · Distance is not a time polygon",
+      "body": [
+        {
+          "t": "In a hypothetical constant-speed model, 30 minutes at 30 mph gives 15 miles of travel. This arithmetic is not a universal ceiling for a real 30-minute area: a routing service may use higher or lower speeds on different roads. The modelled polygon must be read from the routing result, not inferred from this example."
+        }
+      ]
+    },
+    {
+      "label": "Worked example · Walking budget",
+      "body": [
+        {
+          "t": "Assuming a constant 3 mph pace, 15 minutes corresponds to 0.75 miles along a route. A crossing delay or an indirect path reduces how far you can get in practice. This is a simple distance-time illustration, not a measured walking catchment for a particular location."
+        }
+      ]
+    }
+  ],
+  "popular_table": {
+    "title": "Illustrative distance at assumed constant speeds",
+    "intro": "Arithmetic examples only: distance = speed × time. These figures are not limits or predictions for the routing engine. Actual network speeds vary.",
+    "columns": [
+      "Time band",
+      "Driving illustration at 30 mph avg",
+      "Walking illustration at 3 mph",
+      "Often used for"
+    ],
+    "rows": [
+      [
+        "10 minutes",
+        "5.0 mi (8.0 km)",
+        "0.50 mi (0.8 km)",
+        "Immediate neighbourhood trips"
+      ],
+      [
+        "15 minutes",
+        "7.5 mi (12.1 km)",
+        "0.75 mi (1.2 km)",
+        "School and station catchments"
+      ],
+      [
+        "20 minutes",
+        "10.0 mi (16.1 km)",
+        "1.00 mi (1.6 km)",
+        "Local shopping and services"
+      ],
+      [
+        "30 minutes",
+        "15.0 mi (24.1 km)",
+        "1.50 mi (2.4 km)",
+        "Standard retail catchment, commuting"
+      ],
+      [
+        "45 minutes",
+        "22.5 mi (36.2 km)",
+        "2.25 mi (3.6 km)",
+        "Service response promises"
+      ],
+      [
+        "60 minutes",
+        "30.0 mi (48.3 km)",
+        "3.00 mi (4.8 km)",
+        "Regional day reach"
+      ],
+      [
+        "90 minutes",
+        "45.0 mi (72.4 km)",
+        "4.50 mi (7.2 km)",
+        "Day-trip planning"
+      ],
+      [
+        "120 minutes",
+        "60.0 mi (96.6 km)",
+        "6.00 mi (9.7 km)",
+        "Maximum single-leg planning"
+      ]
+    ],
+    "note": "Do not use this table to draw a drive-time boundary. Compare the returned routing area and verify real journeys when timing matters."
   },
-  {
-   "title": "Build a realistic commute shortlist",
-   "body": [
+  "faq": [
+    [
+      "Does the Drive Time Map include live traffic?",
+      "No. Times are computed from the road network and its typical speeds, without live congestion. Treat the bands as planning estimates: a Friday-evening commute will eat into the band that a quiet Sunday morning gives you in full."
+    ],
+    [
+      "Where does the road data come from?",
+      "The areas are computed by the Valhalla routing engine running on OpenStreetMap data — the same public network data the routing tools on this site use. New roads appear when the community maps them; a very new estate road may not route yet."
+    ],
+    [
+      "How many time bands can I draw at once?",
+      "Up to four contours on one map (for example 15, 30, 45 and 60 minutes), chosen from 10, 15, 20, 30, 45, 60, 90 and 120 minutes. Nested bands make it easy to show a client or a colleague exactly where one promise ends and the next begins."
+    ],
+    [
+      "Why is the shape so irregular compared with a circle?",
+      "Because roads are irregular. The polygon reaches along fast, direct routes and stops short where the network is slow, indirect or interrupted by water and terrain. A radius circle is the geometric ideal; this shape is the network's honest answer."
+    ],
+    [
+      "Can I use walking or cycling instead of driving?",
+      "Yes — the same contours can be computed for walking and cycling profiles, which follow paths, cycleways and streets open to those modes. The areas are much smaller and often shaped very differently from the driving version of the same minutes."
+    ],
+    [
+      "Is a drive-time area the same as a service area guarantee?",
+      "No. It is a planning sketch based on network speeds, not a promise about any particular day's traffic, weather or roadworks. Use it to design territories and test promises before you make them, then sanity-check critical journeys close to the day."
+    ],
+    [
+      "Why does the polygon stop at the coast or a border?",
+      "Because the network does. Ferries and crossings are handled according to the routing data; where no routable connection exists within the time budget, the area honestly ends — which is exactly the information a catchment decision needs."
+    ]
+  ],
+  "related_prose": [
     {
-     "t": "Use a time band as an initial filter, then inspect a specific home-to-work journey with the "
+      "t": "Start with the geometric ideal in the "
     },
     {
-     "t": "Driving Distance Calculator",
-     "l": "/tools/driving-distance-calculator"
+      "t": "Map Radius Tool",
+      "l": "/tools/map-radius"
     },
     {
-     "t": ". Direction, congestion and route restrictions can affect the actual journey. Do not treat an outbound area as proof of the same inbound commute."
-    }
-   ]
-  },
-  {
-   "title": "Explore a service territory before making promises",
-   "body": [
-    {
-     "t": "Compare a time-based area with a "
+      "t": " when you need a simple boundary, then use this map to see what the network does to it. For a single journey's road distance and duration, the "
     },
     {
-     "t": "radius map",
-     "l": "/tools/map-radius"
+      "t": "Driving Distance Calculator",
+      "l": "/tools/driving-distance-calculator"
     },
     {
-     "t": " to see where simple distance rules differ from road access. Dispatch delays, parking and on-site work are not included in the mapped travel budget; operational commitments need separate evidence."
-    }
-   ]
-  },
-  {
-   "title": "Compare walking and cycling access",
-   "body": [
+      "t": " is the direct tool; for several stops in sequence, plan the order in the "
+    },
     {
-     "t": "Keep the origin and time budget constant when switching modes. Each mode follows the network available to the routing service, not every path visible on a basemap. Check local access restrictions before using a suggested area for a real journey."
-    }
-   ]
-  }
- ],
- "examples": [
-  {
-   "label": "Worked example · Distance is not a time polygon",
-   "body": [
+      "t": "Multi-Stop Route Planner",
+      "l": "/tools/multi-stop-route-planner"
+    },
     {
-     "t": "In a hypothetical constant-speed model, 30 minutes at 30 mph gives 15 miles of travel. This arithmetic is not a universal ceiling for a real 30-minute area: a routing service may use higher or lower speeds on different roads. The modelled polygon must be read from the routing result, not inferred from this example."
+      "t": "."
     }
-   ]
-  },
-  {
-   "label": "Worked example · Walking budget",
-   "body": [
-    {
-     "t": "Assuming a constant 3 mph pace, 15 minutes corresponds to 0.75 miles along a route. A crossing delay or an indirect path reduces how far you can get in practice. This is a simple distance-time illustration, not a measured walking catchment for a particular location."
-    }
-   ]
-  }
- ],
- "popular_table": {
-  "title": "Illustrative distance at assumed constant speeds",
-  "intro": "Arithmetic examples only: distance = speed × time. These figures are not limits or predictions for the routing engine. Actual network speeds vary.",
-  "columns": [
-   "Time band",
-   "Driving illustration at 30 mph avg",
-   "Walking illustration at 3 mph",
-   "Often used for"
   ],
-  "rows": [
-   [
-    "10 minutes",
-    "5.0 mi (8.0 km)",
-    "0.50 mi (0.8 km)",
-    "Immediate neighbourhood trips"
-   ],
-   [
-    "15 minutes",
-    "7.5 mi (12.1 km)",
-    "0.75 mi (1.2 km)",
-    "School and station catchments"
-   ],
-   [
-    "20 minutes",
-    "10.0 mi (16.1 km)",
-    "1.00 mi (1.6 km)",
-    "Local shopping and services"
-   ],
-   [
-    "30 minutes",
-    "15.0 mi (24.1 km)",
-    "1.50 mi (2.4 km)",
-    "Standard retail catchment, commuting"
-   ],
-   [
-    "45 minutes",
-    "22.5 mi (36.2 km)",
-    "2.25 mi (3.6 km)",
-    "Service response promises"
-   ],
-   [
-    "60 minutes",
-    "30.0 mi (48.3 km)",
-    "3.00 mi (4.8 km)",
-    "Regional day reach"
-   ],
-   [
-    "90 minutes",
-    "45.0 mi (72.4 km)",
-    "4.50 mi (7.2 km)",
-    "Day-trip planning"
-   ],
-   [
-    "120 minutes",
-    "60.0 mi (96.6 km)",
-    "6.00 mi (9.7 km)",
-    "Maximum single-leg planning"
-   ]
+  "more_tools": [
+    "branch-travel-cost-calculator",
+    "cost-per-kilometer-calculator",
+    "cost-per-mile-calculator",
+    "courier-distance-charge-calculator",
+    "cycling-calories-distance",
+    "cycling-route-planner"
   ],
-  "note": "Do not use this table to draw a drive-time boundary. Compare the returned routing area and verify real journeys when timing matters."
- },
- "faq": [
-  [
-   "Does the Drive Time Map include live traffic?",
-   "No. Times are computed from the road network and its typical speeds, without live congestion. Treat the bands as planning estimates: a Friday-evening commute will eat into the band that a quiet Sunday morning gives you in full."
-  ],
-  [
-   "Where does the road data come from?",
-   "The areas are computed by the Valhalla routing engine running on OpenStreetMap data — the same public network data the routing tools on this site use. New roads appear when the community maps them; a very new estate road may not route yet."
-  ],
-  [
-   "How many time bands can I draw at once?",
-   "Up to four contours on one map (for example 15, 30, 45 and 60 minutes), chosen from 10, 15, 20, 30, 45, 60, 90 and 120 minutes. Nested bands make it easy to show a client or a colleague exactly where one promise ends and the next begins."
-  ],
-  [
-   "Why is the shape so irregular compared with a circle?",
-   "Because roads are irregular. The polygon reaches along fast, direct routes and stops short where the network is slow, indirect or interrupted by water and terrain. A radius circle is the geometric ideal; this shape is the network's honest answer."
-  ],
-  [
-   "Can I use walking or cycling instead of driving?",
-   "Yes — the same contours can be computed for walking and cycling profiles, which follow paths, cycleways and streets open to those modes. The areas are much smaller and often shaped very differently from the driving version of the same minutes."
-  ],
-  [
-   "Is a drive-time area the same as a service area guarantee?",
-   "No. It is a planning sketch based on network speeds, not a promise about any particular day's traffic, weather or roadworks. Use it to design territories and test promises before you make them, then sanity-check critical journeys close to the day."
-  ],
-  [
-   "Why does the polygon stop at the coast or a border?",
-   "Because the network does. Ferries and crossings are handled according to the routing data; where no routable connection exists within the time budget, the area honestly ends — which is exactly the information a catchment decision needs."
+  "related": [
+    "isochrone-map"
   ]
- ],
- "related_prose": [
-  {
-   "t": "Start with the geometric ideal in the "
-  },
-  {
-   "t": "Map Radius Tool",
-   "l": "/tools/map-radius"
-  },
-  {
-   "t": " when you need a simple boundary, then use this map to see what the network does to it. For a single journey's road distance and duration, the "
-  },
-  {
-   "t": "Driving Distance Calculator",
-   "l": "/tools/driving-distance-calculator"
-  },
-  {
-   "t": " is the direct tool; for several stops in sequence, plan the order in the "
-  },
-  {
-   "t": "Multi-Stop Route Planner",
-   "l": "/tools/multi-stop-route-planner"
-  },
-  {
-   "t": "."
-  }
- ],
- "more_tools": [
-  "branch-travel-cost-calculator",
-  "cost-per-kilometer-calculator",
-  "cost-per-mile-calculator",
-  "courier-distance-charge-calculator",
-  "cycling-calories-distance",
-  "cycling-route-planner"
- ]
 }
