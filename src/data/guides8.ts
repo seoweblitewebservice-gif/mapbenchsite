@@ -100,7 +100,8 @@ export const GUIDES8: Guide[] = [
       { t: "h2", text: "The numbers, one more time" },
       { t: "table", headers: ["Region", "Land area (sq mi)"], rows: [["Greenland", "836,330"], ["Africa", "11,440,827.4"]] },
       { t: "p", text: "Africa is about 14 times the size of Greenland. Next time someone shows you a Mercator world map, you'll know exactly how deep the illusion goes." },
-      { t: "p", text: "*Sources: Greenland and country areas from the World Bank (indicator AG.LND.TOTL.K2, 2024); Africa total summed over 53 African countries. See the full methodology.*" }
+      { t: "p", text: "*Sources: Greenland and country areas from the World Bank (indicator AG.LND.TOTL.K2, 2024); Africa total summed over 53 African countries. See the full methodology.*" },
+      { t: "toolbox", slugs: ["country-size-comparison", "map-area-calculator", "county-choropleth"] },
     ],
   },
   {

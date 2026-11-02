@@ -32,7 +32,7 @@ export const GUIDES2: Guide[] = [
       { t: "h2", text: "The tax collectors" },
       { t: "p", text: "Roads add their tax in three currencies: topology (rivers, ridges, one missing bridge), law (borders, one-way systems, roads your vehicle class can't use) and speed (a straight 100 km/h line versus a winding valley road). In flat, gridded places the tax may be modest; in fjord or mountain country it can be dramatically larger. The driving distance calculator shows the road-network figure, and comparing the two is a fast lesson in how landscape and infrastructure shape travel." },
       { t: "p", text: "My rule of thumb after years of this: quotes for humans get the road number with the crow's number in parentheses; quotes for physics get the crow alone; and anything with a schedule attached gets the travel-time tool, because time is distance plus the road network. When a tool prints all three rungs of that ladder, use all three — and when someone forwards you a single mysterious number, ask first which distance they measured." },
-      { t: "toolbox", slugs: ["crow-flies-distance", "driving-distance-calculator", "distance-between-two-places", "travel-time-calculator"] },
+      { t: "toolbox", slugs: ["crow-flies-distance", "driving-distance-calculator", "distance-between-two-places", "travel-time-estimator"] },
     ],
   },
   {
@@ -90,7 +90,7 @@ export const GUIDES2: Guide[] = [
       ] },
       { t: "p", text: "A practical storage choice is signed decimal degrees on WGS84 with five or six decimals, then convert at the display edge for whoever needs DMS or another grid reference. The map preview is just as important as the digits: it catches swapped coordinates and missing minus signs quickly." },
       { t: "p", text: "The useful habit is simple: paste the coordinates, inspect the pin, and compare it with what you know about the source measurement. A plausible pin does not make a coordinate legally or survey-accurate, but it catches many everyday mistakes before they spread into a dataset." },
-      { t: "toolbox", slugs: ["latitude-longitude-finder", "coordinate-converter", "find-my-location", "gps-coordinate-lookup"] },
+      { t: "toolbox", slugs: ["latitude-longitude-finder", "coordinate-converter", "find-my-location", "latitude-longitude-finder"] },
     ],
   },
 ];

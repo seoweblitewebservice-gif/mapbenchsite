@@ -6,6 +6,8 @@ import { ALL_GUIDES } from "@/data/allGuides";
 import { STUDIES } from "@/data/studies";
 import { REFERENCE_COUNTRIES } from "@/data/referenceCountries";
 import { US_BLANK_MAP_STATES } from "@/data/usBlankMapStates";
+import { HUBS, SUBHUBS } from "@/data/hubs";
+import { BEST_OF } from "@/data/bestOf";
 
 const BASE = "https://www.mapbench.site";
 const STRUCTURE_UPDATE = new Date("2026-10-14T00:00:00Z");
@@ -13,6 +15,8 @@ const STRUCTURE_UPDATE = new Date("2026-10-14T00:00:00Z");
 const STATIC_PATHS = [
   "",
   "/tools",
+  "/best",
+  "/map-maker/blank-maps",
   "/maps",
   "/states",
   "/guides",
@@ -33,6 +37,8 @@ const STATIC_PATHS = [
 const UPDATED_STATIC_PATHS = new Set([
   "",
   "/tools",
+  "/best",
+  "/map-maker/blank-maps",
   "/maps",
   "/states",
   "/studies",
@@ -86,7 +92,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE}${path || "/"}`,
     ...(UPDATED_STATIC_PATHS.has(path) ? { lastModified: STRUCTURE_UPDATE } : {}),
     changeFrequency: path === "" ? "weekly" : "monthly",
-    priority: path === "" ? 1 : ["/tools", "/maps", "/states", "/guides", "/studies", "/reference"].includes(path) ? 0.9 : path === "/studies/state-capital-radius" ? 0.84 : 0.6,
+    priority: path === "" ? 1 : ["/tools", "/maps", "/states", "/guides", "/studies", "/reference", "/best"].includes(path) ? 0.9 : path === "/studies/state-capital-radius" ? 0.84 : 0.6,
   }));
 
   const categoryEntries: MetadataRoute.Sitemap = CATEGORIES.map((category) => ({
@@ -94,6 +100,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: STRUCTURE_UPDATE,
     changeFrequency: "monthly",
     priority: 0.82,
+  }));
+
+  const hubEntries: MetadataRoute.Sitemap = [
+    ...HUBS.map((hub) => ({
+      url: `${BASE}${hub.slug}`,
+      lastModified: STRUCTURE_UPDATE,
+      changeFrequency: "weekly" as const,
+      priority: 0.93,
+    })),
+    ...SUBHUBS.map((sub) => ({
+      url: `${BASE}${sub.slug}`,
+      lastModified: STRUCTURE_UPDATE,
+      changeFrequency: "weekly" as const,
+      priority: 0.86,
+    })),
+  ];
+
+  const bestOfEntries: MetadataRoute.Sitemap = BEST_OF.map((page) => ({
+    url: `${BASE}${page.slug}`,
+    lastModified: STRUCTURE_UPDATE,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
   }));
 
   const orderedTools = [...TOOLS].sort((a, b) => {
@@ -155,6 +183,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticEntries,
+    ...hubEntries,
+    ...bestOfEntries,
     ...categoryEntries,
     ...toolEntries,
     ...stateCountyEntries,

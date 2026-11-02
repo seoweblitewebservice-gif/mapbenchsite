@@ -7,6 +7,8 @@ import BlankMapsHomeGrid from "@/components/BlankMapsHomeGrid";
 import HomeToolIndex from "@/components/HomeToolIndex";
 import HomeToolFinder from "@/components/HomeToolFinder";
 import HomeGlobe from "@/components/HomeGlobe";
+import { HUB_NAV } from "@/lib/hubNav";
+import { BEST_OF_LINKS } from "@/data/bestOf";
 
 export const metadata: Metadata = {
   title: "Free Map Tools, Geographic Calculators & Blank Maps",
@@ -61,8 +63,36 @@ export default function HomePage() {
         </div>
       </section>
 
-      <HomeToolIndex />
+      <section className="mx-auto max-w-5xl px-4 pb-12" aria-labelledby="home-hubs">
+        <div className="home-category-heading">
+          <div>
+            <h2 id="home-hubs" className="home-category-title">Find the right hub for the question</h2>
+            <p className="home-category-intro">
+              One hub per job. Each lists every tool in its cluster with the method and limits stated, so you can tell which page answers your question.
+            </p>
+          </div>
+          <Link href="/tools" className="home-all-tools">View all tools <span aria-hidden>→</span></Link>
+        </div>
+        <div className="home-category-grid">
+          {HUB_NAV.map((hub) => (
+            <Link key={hub.id} href={hub.href} className="home-category-card" style={{ borderColor: undefined }}>
+              <span className="home-category-copy">
+                <span className="home-category-name">{hub.label}</span>
+                <span className="home-category-description">{hub.short}</span>
+                <span className="home-category-count">{hub.count} tools</span>
+              </span>
+              <span className="home-category-arrow" aria-hidden>›</span>
+            </Link>
+          ))}
+        </div>
+        <p className="mt-4 font-sans text-sm">
+          <Link href="/best" className="font-extrabold text-brand-strong hover:underline">Best free map tools by task →</Link>
+          <span className="mx-2 text-mute">·</span>
+          <Link href="/tools" className="font-extrabold text-brand-strong hover:underline">Complete tool directory →</Link>
+        </p>
+      </section>
 
+      <HomeToolIndex />
       <section aria-labelledby="blank-maps" className="home-maps border-t border-line bg-well/50 py-10">
         <div className="container-sf">
           <h2 id="blank-maps" className="sect-h">Free Printable Blank Maps</h2>
@@ -92,6 +122,30 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="home-best" className="border-t border-line bg-well/40 py-10">
+        <div className="mx-auto max-w-5xl px-4">
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <h2 id="home-best" className="sect-h">Best free tools by task</h2>
+              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-mute">
+                Short, ordered lists where each pick has a reason. No sponsored placements, no tools that need an account.
+              </p>
+            </div>
+            <Link href="/best" className="font-sans text-sm font-extrabold text-brand-strong hover:underline">All lists →</Link>
+          </div>
+          <ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {BEST_OF_LINKS.slice(0, 6).map((page) => (
+              <li key={page.href}>
+                <Link href={page.href} className="card group block h-full p-4 transition-colors hover:border-brand">
+                  <span className="block font-display text-[15px] font-bold leading-snug group-hover:text-brand-strong">{page.label}</span>
+                  <span className="mt-1.5 block text-sm leading-6 text-mute">{page.short}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

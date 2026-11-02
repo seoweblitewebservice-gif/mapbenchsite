@@ -3,3 +3,5 @@ node_modules/
 *.tsbuildinfo
 public/maplibre/
 next-env.d.ts
+# The project has no committed lockfile; npm install is not authoritative here.
+package-lock.json

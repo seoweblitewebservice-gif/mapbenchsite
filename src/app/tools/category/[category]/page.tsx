@@ -5,6 +5,7 @@ import { CATEGORIES, toolsByCategory, type CategoryId } from "@/lib/registry";
 import { CATEGORY_DATA_NOTE, CATEGORY_GLOSSARY, CATEGORY_TIPS } from "@/data/categoryExtras";
 import { SUPPLEMENT } from "@/data/categorySupplement";
 import { RESOURCE_CLUSTERS } from "@/data/resourceClusters";
+import { HUB_NAV } from "@/lib/hubNav";
 
 interface Props { params: Promise<{ category: string }> }
 const BASE = "https://www.mapbench.site";
@@ -65,14 +66,22 @@ export default async function CategoryPage({ params }: Props) {
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "MapBench", item: BASE },
         { "@type": "ListItem", position: 2, name: "Tools", item: `${BASE}/tools` },
-        { "@type": "ListItem", position: 3, name: category.label },
+        { "@type": "ListItem", position: 3, name: category.label, item: `${BASE}/tools/category/${category.id}` },
       ],
     },
   ];
 
   return (
     <div className="doc mx-auto max-w-5xl">
-      <nav className="mb-5 font-sans text-xs text-mute"><Link href="/" className="hover:text-brand-strong">Home</Link> / <Link href="/tools" className="hover:text-brand-strong">Tools</Link> / <span>{category.label}</span></nav>
+      <nav aria-label="Breadcrumb" className="mb-5 font-sans text-xs text-mute">
+        <ol className="flex flex-wrap items-center gap-1.5">
+          <li><Link href="/" className="hover:text-brand-strong">Home</Link></li>
+          <li aria-hidden>/</li>
+          <li><Link href="/tools" className="hover:text-brand-strong">Tools</Link></li>
+          <li aria-hidden>/</li>
+          <li aria-current="page" className="font-semibold text-ink">{category.label}</li>
+        </ol>
+      </nav>
 
       <header className="max-w-3xl">
         <p className="font-sans text-[11px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">MapBench tool category</p>
@@ -105,6 +114,23 @@ export default async function CategoryPage({ params }: Props) {
       </section>
 
       {resources.length > 0 && <section className="mt-12 border-t border-line pt-10" aria-labelledby="category-reading"><h2 id="category-reading" className="sect-h">Related guides & original research</h2><div className="mt-5 grid gap-4 sm:grid-cols-2">{resources.map((r) => <Link key={r.href} href={r.href} className="card p-5 hover:border-brand"><div className="text-[10px] font-extrabold uppercase tracking-wide text-mute">{r.kind}</div><h3 className="mt-2 font-display text-lg font-bold text-brand-strong">{r.label}</h3><p className="mt-2 text-sm leading-relaxed text-mute">{r.note}</p></Link>)}</div></section>}
+
+      <section className="mt-12" aria-labelledby="task-hubs">
+        <h2 id="task-hubs" className="sect-h">Browse by task instead</h2>
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-mute">
+          Categories group tools by the dataset behind them. Task hubs group them by the question you are asking, and each hub links every tool in its cluster.
+        </p>
+        <ul className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+          {HUB_NAV.map((hub) => (
+            <li key={hub.id}>
+              <Link href={hub.href} className="flex items-center justify-between gap-3 rounded-xl border border-line bg-white px-4 py-2.5 text-sm font-semibold transition-colors hover:border-brand hover:text-brand-strong">
+                <span>{hub.label}</span>
+                <span className="text-xs font-bold text-mute">{hub.count}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
 
       <section className="mt-12 rounded-xl border border-line bg-well/50 p-5"><h2 className="font-display text-xl font-bold">When to verify with an official source</h2><p className="mt-2 text-sm leading-relaxed text-mute">MapBench is designed for analysis, learning and planning. If the result affects a legal boundary, surveying, emergency response, engineering, regulated eligibility, official statistics or a financial commitment, verify the underlying information with the responsible authority or qualified professional.</p></section>
 

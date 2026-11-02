@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { toolBySlug, TOOLS, CATEGORIES } from "@/lib/registry";
+import { hubById } from "@/lib/hubNav";
+import { hubForTool } from "@/data/hubs";
 import ToolClient from "@/components/ToolClient";
 import { getEnhancedFaqs } from "@/lib/toolFaqs";
 import { loadPageContent } from "@/lib/pageContent";
@@ -77,6 +79,7 @@ export default async function ToolPage({ params }: Props) {
   const tool = toolBySlug.get(slug);
   if (!tool) notFound();
   const category = CATEGORIES.find((c) => c.id === tool.category);
+  const clusterHub = hubById.get(hubForTool(tool));
   const absoluteUrl = `https://www.mapbench.site/tools/${tool.slug}`;
   const author = { "@type": "Person", "@id": "https://www.mapbench.site/author/aryan-khan#person", name: "Aryan Khan", url: "https://www.mapbench.site/author/aryan-khan", sameAs: ["https://www.linkedin.com/in/aryan-khan-b77438438/"] };
   const pc = await loadPageContent(slug);
@@ -115,11 +118,13 @@ export default async function ToolPage({ params }: Props) {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "@id": `${absoluteUrl}#breadcrumbs`,
+      // Mirrors the visible breadcrumb in ToolClient: Home / Tools / Hub / Tool.
+      // The hub (topic pillar) is the parent that the page links up to.
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mapbench.site/" },
         { "@type": "ListItem", position: 2, name: "Tools", item: "https://www.mapbench.site/tools" },
-        ...(category ? [{ "@type": "ListItem", position: 3, name: category.label, item: `https://www.mapbench.site/tools/category/${category.id}` }] : []),
-        { "@type": "ListItem", position: category ? 4 : 3, name: tool.name, item: absoluteUrl },
+        ...(clusterHub ? [{ "@type": "ListItem", position: 3, name: clusterHub.label, item: `https://www.mapbench.site${clusterHub.slug}` }] : []),
+        { "@type": "ListItem", position: clusterHub ? 4 : 3, name: tool.name, item: absoluteUrl },
       ],
     },
     ...(faqs.length ? [{

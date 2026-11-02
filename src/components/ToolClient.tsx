@@ -3,10 +3,14 @@ import { Suspense } from "react";
 import Link from "next/link";
 import { toolBySlug, CATEGORIES, type ToolDef } from "@/lib/registry";
 import ToolContentsNav from "./ToolContentsNav";
-import RelatedReading from "./RelatedReading";
 import ToolContent from "./ToolContent";
 import ToolMethod from "./ToolMethod";
 import ToolPageExtras from "./ToolPageExtras";
+import ToolClusterLinks from "./hubs/ToolClusterLinks";
+import { hubForTool } from "@/data/hubs";
+import { hubById, ringNeighbours } from "@/lib/hubNav";
+
+const hubDefForTool = (tool: ToolDef) => hubById.get(hubForTool(tool));
 import { toolComponents } from "./tools";
 import { Spinner } from "./ui";
 import { getLocalizedTool } from "@/data/localizedTools";
@@ -31,16 +35,26 @@ export default function ToolClient({ slug, locale, pageContent, faqsOverride }: 
   const toolsLabel = locale ? ({ es: "Herramientas", de: "Werkzeuge", fr: "Outils", it: "Strumenti", pt: "Ferramentas", nl: "Tools", pl: "Narzędzia", ru: "Инструменты", sv: "Verktyg", da: "Værktøjer", no: "Verktøy", fi: "Työkalut", cs: "Nástroje", ro: "Instrumente", el: "Εργαλεία", hu: "Eszközök", tr: "Araçlar", uk: "Інструменти", ar: "الأدوات", ja: "ツール", ko: "도구", zh: "工具", hi: "टूल्स" } as Record<Locale, string>)[locale] : "Tools";
   if (!tool) return null;
   const category = CATEGORIES.find((c) => c.id === tool.category);
+  const clusterHub = hubDefForTool(tool);
   const Component = toolComponents[tool.component];
   const relatedSlugs = !locale && pageContent?.related?.length ? pageContent.related : tool.related;
-  const related = relatedSlugs.map((s) => toolBySlug.get(s)).filter((t): t is ToolDef => !!t && t.slug !== slug).slice(0, 6);
+  // The curated list is the editorial answer; when it is shorter than the
+  // three-link floor it is topped up from the tool's own hub, so no page ends up
+  // with a one-link "related" grid. Cross-hub curated links are preserved.
+  const curated = relatedSlugs.map((s) => toolBySlug.get(s)).filter((t): t is ToolDef => !!t && t.slug !== slug).slice(0, 6);
+  const curatedSlugSet = new Set(curated.map((item) => item.slug));
+  // Memoised per render is fine: the hub lookup is a static array scan.
+  const related = (!locale
+    ? [...curated, ...ringNeighbours(slug, 4).filter((item) => !curatedSlugSet.has(item.slug))].slice(0, 6)
+    : curated);
+  const relatedGridSlugs = related.map((item) => item.slug);
   const pc = locale ? null : pageContent ?? null;
   const faqs: [string, string][] = faqsOverride && !locale ? faqsOverride : localized ? localized.faq : getEnhancedFaqs(tool);
   const visibleRelated = locale ? related.filter((r) => !!getLocalizedTool(locale, r.slug)) : related;
 
   return (
     <div className="tool-editorial tool-page-layout">
-      <nav aria-label="Breadcrumb" className="mb-4 text-xs text-mute"><ol className="flex flex-wrap items-center gap-1.5"><li><Link href={prefix || "/"} className="hover:text-brand-strong">{homeLabel}</Link></li><li aria-hidden>/</li><li><Link href={prefix + "/tools"} className="hover:text-brand-strong">{toolsLabel}</Link></li>{category && (<><li aria-hidden>/</li><li><Link href={prefix + "/tools/category/" + category.id} className="hover:text-brand-strong">{locale ? CATEGORY_LABELS[locale][category.id] ?? category.label : category.label}</Link></li></>)}<li aria-hidden>/</li><li aria-current="page" className="font-semibold text-ink">{localized?.name ?? tool.name}</li></ol></nav>
+      <nav aria-label="Breadcrumb" className="mb-4 text-xs text-mute"><ol className="flex flex-wrap items-center gap-1.5"><li><Link href={prefix || "/"} className="hover:text-brand-strong">{homeLabel}</Link></li><li aria-hidden>/</li><li><Link href={prefix + "/tools"} className="hover:text-brand-strong">{toolsLabel}</Link></li>{clusterHub && (<><li aria-hidden>/</li><li><Link href={prefix + clusterHub.slug} className="hover:text-brand-strong">{clusterHub.label}</Link></li></>)}<li aria-hidden>/</li><li aria-current="page" className="font-semibold text-ink">{localized?.name ?? tool.name}</li></ol></nav>
 
       <section className="relative mb-5 overflow-hidden rounded-2xl border border-line bg-gradient-to-br from-white via-white to-brand-soft/35 p-5 shadow-[0_12px_36px_rgba(15,23,42,0.06)] sm:p-7"><div className="pointer-events-none absolute -right-16 -top-20 h-56 w-56 rounded-full bg-brand-soft/70 blur-3xl" /><div className="relative flex flex-wrap items-start justify-between gap-5"><div className="max-w-3xl"><div className="mb-3 flex flex-wrap items-center gap-2"><span className="rounded-full border border-brand/20 bg-brand-soft px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">Interactive tool</span>{category && <span className="rounded-full border border-line bg-white/80 px-2.5 py-1 text-[10px] font-bold text-mute">{locale ? CATEGORY_LABELS[locale][category.id] ?? category.label : category.label}</span>}</div><h1 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">{localized?.name ?? tool.name}</h1><p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-mute">{localized?.intro ?? tool.intro}</p>{!locale && <div className="tool-page-jumps">{Component && <a href="#tool-workspace">Open tool ↓</a>}<a href="#how-to-use">How to use</a></div>}{pc && <p className="mt-3 text-xs text-mute">By <Link href="/author/aryan-khan" className="font-semibold text-brand-strong hover:underline">Aryan Khan</Link>, Founder &amp; Editor · Updated {pc.updated}</p>}<div className="mt-4 flex flex-wrap gap-2 text-xs text-mute"><span className="rounded-lg border border-line bg-white/80 px-2.5 py-1.5">✓ No account required</span><span className="rounded-lg border border-line bg-white/80 px-2.5 py-1.5">✓ {tool.scope}</span><span className="rounded-lg border border-line bg-white/80 px-2.5 py-1.5">✓ No installation required</span></div></div><div className="flex shrink-0 flex-wrap gap-2"><ShareControls locale={locale} /></div></div></section>
 
@@ -77,7 +91,6 @@ export default function ToolClient({ slug, locale, pageContent, faqsOverride }: 
         {faqs.length > 0 && <section id="faq" aria-labelledby="faq-heading" className="mt-10"><div className="max-w-3xl"><div className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">Common questions</div><h2 id="faq-heading" className="mt-1 font-display text-2xl font-bold">{ui?.faq ?? "Frequently asked questions"}</h2><p className="mt-2 text-sm leading-relaxed text-mute">Clear answers about the calculation, accuracy and appropriate use.</p></div><div className="mt-4 divide-y divide-line overflow-hidden rounded-2xl border border-line bg-white shadow-sm">{faqs.map(([q, a]) => <details key={q} className="group px-5 py-4 open:bg-well/30"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-bold marker:hidden"><span>{q}</span><span className="text-xl font-light text-brand-strong transition-transform group-open:rotate-45" aria-hidden>+</span></summary><p className="max-w-3xl pt-3 text-sm leading-7 text-mute">{a}</p></details>)}</div></section>}
 
         {pc?.related_prose && <section aria-labelledby="relres-h" className="mt-10"><h2 id="relres-h" className="font-display text-2xl font-bold tracking-tight">Related tools and resources</h2><p className="mt-3 leading-7 text-mute"><Segs parts={pc.related_prose} /></p></section>}
-        {!locale && <div className="mt-10"><RelatedReading tool={tool} /></div>}
 
 
 
@@ -85,6 +98,7 @@ export default function ToolClient({ slug, locale, pageContent, faqsOverride }: 
 
         {visibleRelated.length > 0 && <section id="related-tools" className="mt-10" aria-labelledby="related"><div className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">Continue your workflow</div><h2 id="related" className="mt-1 font-display text-2xl font-bold">{ui?.relatedTools ?? `Related tools for ${tool.name}`}</h2><p className="mt-2 max-w-3xl text-sm leading-relaxed text-mute">These tools answer adjacent geographic questions with a different method or dataset, so you can compare results instead of forcing one calculator to answer every question.</p><div className="mt-4 grid gap-3 sm:grid-cols-2">{visibleRelated.map((r) => { const localizedRelated = locale ? getLocalizedTool(locale, r.slug) : undefined; return <Link key={r.slug} href={prefix + "/tools/" + r.slug} className="card group rounded-xl p-4 transition-all hover:-translate-y-0.5 hover:border-brand hover:shadow-md"><div className="text-sm font-bold group-hover:text-brand-strong">{localizedRelated?.name ?? r.name}</div><div className="mt-1 text-sm leading-relaxed text-mute">{localizedRelated?.short ?? r.short}</div><span className="mt-2 block text-xs font-extrabold text-brand-strong">Open tool →</span></Link>; })}</div></section>}
         <section id="trust" className="mt-10"><div className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-brand-strong">How this page is maintained</div><h2 className="mt-1 font-display text-2xl font-bold">Sources, methodology &amp; editorial trust</h2><div className="mt-4 grid gap-3 md:grid-cols-3"><div className="rounded-2xl border border-line bg-white p-5 shadow-sm"><div className="label">Data &amp; privacy</div><ul className="mt-3 space-y-2 text-sm leading-relaxed text-mute">{locale ? <li>✓ {ui?.dataPrivacy}</li> : <><li>✓ Browser-first processing where supported</li><li>✓ External sources are documented</li><li>✓ No account required for public tools</li><li>✓ <Link href="/data-sources" className="font-semibold text-brand-strong hover:underline">Review data sources</Link></li></>}</ul></div><div className="rounded-2xl border border-line bg-white p-5 shadow-sm"><div className="label">Method &amp; review</div>{locale ? <p className="mt-3 text-sm leading-relaxed text-mute">Use the methodology notes on this page to understand assumptions and limits.</p> : <><p className="mt-3 text-sm leading-relaxed text-mute">Calculations are documented with their assumptions, limitations and source context rather than presented as unexplained answers.</p><div className="mt-3 flex flex-wrap gap-x-3 gap-y-2 text-sm"><Link href="/methodology" className="font-semibold text-brand-strong hover:underline">Methodology</Link><Link href="/editorial-policy" className="font-semibold text-brand-strong hover:underline">Editorial policy</Link></div></>}</div><div className="rounded-2xl border border-line bg-white p-5 shadow-sm"><div className="label">Editor &amp; category</div>{!locale && <p className="mt-3 text-sm leading-relaxed text-mute">Reviewed and maintained by <Link href="/author/aryan-khan" className="font-semibold text-brand-strong hover:underline">Aryan Khan</Link>, Founder &amp; Editor of MapBench.</p>}{category && <><div className="mt-3 flex items-center gap-2 text-sm font-bold"><span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ background: category.tone }} />{locale ? CATEGORY_LABELS[locale][category.id] ?? category.label : category.label}</div><Link href={prefix + "/tools/category/" + category.id} className="mt-3 inline-block text-sm font-bold text-brand-strong hover:underline">{ui?.browseAll ?? "Browse all"} {locale ? CATEGORY_LABELS[locale][category.id] ?? category.label : category.label} →</Link></>}</div></div></section>
+        {!locale && <ToolClusterLinks tool={tool} contentRelated={relatedGridSlugs} />}
       </div>
     </div>
   );
