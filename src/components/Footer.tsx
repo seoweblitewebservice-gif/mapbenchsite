@@ -45,8 +45,15 @@ export default function Footer() {
       <div className="border-b border-[#3a3428]">
         <div className="container-sf py-8">
           <div className="mb-3 text-[10px] font-extrabold uppercase tracking-widest text-[#8d8574]">Tool hubs</div>
-          <div className="grid gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-4">
+          {/*
+            Four columns, each column stacked top-to-bottom so the hub list,
+            the best-of list and the method links balance in height. The old
+            layout put all 14 hubs in two columns and all 12 best-of pages in
+            one, which left ~230px of dead space under the short hub columns.
+          */}
+          <div className="grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
             <nav aria-label="Tool hubs (first half)">
+              <div className="mb-2 text-[10px] font-extrabold uppercase tracking-widest text-[#8d8574]">Tool hubs</div>
               <ul className="space-y-1.5">
                 {HUB_NAV.slice(0, Math.ceil(HUB_NAV.length / 2)).map((hub) => (
                   <li key={hub.id}>
@@ -58,6 +65,7 @@ export default function Footer() {
               </ul>
             </nav>
             <nav aria-label="Tool hubs (second half)">
+              <div className="mb-2 text-[10px] font-extrabold uppercase tracking-widest text-[#8d8574]">&nbsp;</div>
               <ul className="space-y-1.5">
                 {HUB_NAV.slice(Math.ceil(HUB_NAV.length / 2)).map((hub) => (
                   <li key={hub.id}>
@@ -71,7 +79,7 @@ export default function Footer() {
             <nav aria-label="Best free map tools lists">
               <div className="mb-2 text-[10px] font-extrabold uppercase tracking-widest text-[#8d8574]">Best of</div>
               <ul className="space-y-1.5">
-                {BEST_OF_LINKS.map((page) => (
+                {BEST_OF_LINKS.slice(0, Math.ceil(BEST_OF_LINKS.length / 2)).map((page) => (
                   <li key={page.href}>
                     <Link href={page.href} className="font-serif text-sm text-[#c9c1ad] transition-colors hover:text-[#7cc39d] hover:underline">
                       {page.label}
@@ -80,23 +88,37 @@ export default function Footer() {
                 ))}
               </ul>
             </nav>
-            <nav aria-label="Method and policy">
-              <div className="mb-2 text-[10px] font-extrabold uppercase tracking-widest text-[#8d8574]">How it works</div>
-              <ul className="space-y-1.5">
-                {[
-                  ["/tools", "Complete tool directory"],
-                  ["/guides", "Mapping guides"],
-                  ["/methodology", "Methodology"],
-                  ["/data-sources", "Data sources & licences"],
-                  ["/editorial-policy", "Editorial policy"],
-                  ["/corrections", "Corrections"],
-                ].map(([href, label]) => (
-                  <li key={href}>
-                    <Link href={href} className="font-serif text-sm text-[#c9c1ad] transition-colors hover:text-[#7cc39d] hover:underline">{label}</Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+            <div>
+              <nav aria-label="Best free map tools lists (continued)">
+                <div className="mb-2 text-[10px] font-extrabold uppercase tracking-widest text-[#8d8574]">&nbsp;</div>
+                <ul className="space-y-1.5">
+                  {BEST_OF_LINKS.slice(Math.ceil(BEST_OF_LINKS.length / 2)).map((page) => (
+                    <li key={page.href}>
+                      <Link href={page.href} className="font-serif text-sm text-[#c9c1ad] transition-colors hover:text-[#7cc39d] hover:underline">
+                        {page.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+              <nav aria-label="Method and policy" className="mt-6">
+                <div className="mb-2 text-[10px] font-extrabold uppercase tracking-widest text-[#8d8574]">How it works</div>
+                <ul className="space-y-1.5">
+                  {[
+                    ["/tools", "Complete tool directory"],
+                    ["/guides", "Mapping guides"],
+                    ["/methodology", "Methodology"],
+                    ["/data-sources", "Data sources & licences"],
+                    ["/editorial-policy", "Editorial policy"],
+                    ["/corrections", "Corrections"],
+                  ].map(([href, label]) => (
+                    <li key={href}>
+                      <Link href={href} className="font-serif text-sm text-[#c9c1ad] transition-colors hover:text-[#7cc39d] hover:underline">{label}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
